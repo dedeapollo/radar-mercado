@@ -1,87 +1,185 @@
 {
-  "generated_at": "2026-07-14T02:31:10.539726+00:00",
+  "generated_at": "2026-07-14T03:58:26.470948+00:00",
   "items": [
     {
       "competitor_group": "XP/Clear/Rico",
-      "matched_alias": "Clear corretora",
-      "title": "Clear relança plataforma com execução abaixo de 50ms e alavancagem intraday de até 300x",
-      "link": "https://exemplo.com/clear-relancamento",
+      "matched_alias": "XP Investimentos",
+      "title": "Renda Fixa Hoje: conheça as taxas de CDBs, LCIs e LCAs nesta segunda (13) na XP - InfoMoney",
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1CUVE1TV9MWHZuX0ZfYVBlR0N6dG9mNFU1OFJSVXRIblJ3Y1NFTFpIRzJrQmNhRDBOZkhMRlpxZld6MXE1YWg4bTJlYXctT1B4SGxPcUhuekpEVDhxZEZEaXMtUnZCNllfMHZQcFZFTU93NXJBVVA40gF8QVVfeXFMT2N2QTNkTVhiU2kybmtyMDVHWHdvWFlIMXlfVjUyZlBXY3VYMFU2WVdnakFEdjVzV0tGQ3Q1Z1QxakpRM2lUSEUwd3ZQY0Zxc2xkZFNIeHV3YVNXT3Y3cWJtV0ludERDWVVDTDVLZWo4TkM1QW1fTllkODRyTQ?oc=5",
       "source": "InfoMoney",
-      "published_at": "2026-07-08T12:00:00+00:00",
-      "summary": "Nova campanha de marca, app reformulado, Click Trade e assistente virtual AIA.",
+      "published_at": "2026-07-13T14:00:50+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTE1CUVE1TV9MWHZuX0ZfYVBlR0N6dG9mNFU1OFJSVXRIblJ3Y1NFTFpIRzJrQmNhRDBOZkhMRlpxZld6MXE1YWg4bTJlYXctT1B4SGxPcUhuekpEVDhxZEZEaXMtUnZCNllfMHZQcFZFTU93NXJBVVA40gF8QVVfeXFMT2N2QTNkTVhiU2kybmtyMDVHWHdvWFlIMXlfVjUyZlBXY3VYMFU2WVdnakFEdjVzV0tGQ3Q1Z1QxakpRM2lUSEUwd3ZQY0Zxc2xkZFNIeHV3YVNXT3Y3cWJtV0ludERDWVVDTDVLZWo4TkM1QW1fTllkODRyTQ?oc=5\" target=\"_blank\">Renda Fixa Hoje: conheça as taxas de CDBs, LCIs e LCAs nesta segunda (13) na XP</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">InfoMoney</font>",
       "axes": [
-        "RV/Trading",
-        "Tecnologia",
-        "Produtos Novos",
-        "Risco/Regulação"
+        "Produtos Novos"
       ],
       "daily_trigger": true,
-      "why_it_matters": "A Clear eleva o padrão de velocidade e alavancagem, pressionando concorrentes a acompanharem ou perderem traders de alta frequência.",
-      "relevance": "alta"
-    },
-    {
-      "competitor_group": "BTG Pactual",
-      "matched_alias": "BTG Trends",
-      "title": "BTG Pactual lança BTG Trends, plataforma de mercados de previsão",
-      "link": "https://exemplo.com/btg-trends",
-      "source": "Money Times",
-      "published_at": "2026-07-09T09:00:00+00:00",
-      "summary": "Contratos derivativos binários sobre variáveis macro, sem alavancagem.",
-      "axes": [
-        "Produtos Novos",
-        "Risco/Regulação"
-      ],
-      "daily_trigger": true,
-      "why_it_matters": "O BTG inova com derivativos binários, produto novo que pode atrair clientes sofisticados.",
-      "relevance": "alta"
-    },
-    {
-      "competitor_group": "Genial",
-      "matched_alias": "Genial Investimentos",
-      "title": "Genial eleva alavancagem para até 312x e lança assistente de IA QINV",
-      "link": "https://exemplo.com/genial-alavancagem",
-      "source": "Seu Dinheiro",
-      "published_at": "2026-07-10T15:00:00+00:00",
-      "summary": "Alavancagem via RLP; app ganha IA QINV e Combo Trader.",
-      "axes": [
-        "RV/Trading",
-        "Tecnologia",
-        "Produtos Novos",
-        "Risco/Regulação"
-      ],
-      "daily_trigger": true,
-      "why_it_matters": "Genial supera a concorrência em alavancagem máxima, atraindo day traders agressivos.",
-      "relevance": "alta"
-    },
-    {
-      "competitor_group": "Múltiplos/Setor",
-      "matched_alias": "CVM alavancagem",
-      "title": "CVM publica Ofício-Circular esclarecendo regras de alavancagem em fundos de investimento",
-      "link": "https://exemplo.com/cvm-oficio-1-2026",
-      "source": "gov.br/CVM",
-      "published_at": "2026-07-11T10:00:00+00:00",
-      "summary": "Margem de garantia se aplica apenas a operações com finalidade de alavancagem.",
-      "axes": [
-        "Risco/Regulação"
-      ],
-      "daily_trigger": true,
-      "why_it_matters": "Reduz incertezas sobre margens, beneficiando corretoras que oferecem alavancagem.",
-      "relevance": "alta"
+      "why_it_matters": "A XP divulga taxas de renda fixa, o que é uma comunicação direta ao cliente sobre produtos. Isso pode atrair investidores e pressionar concorrentes a oferecerem taxas competitivas.",
+      "relevance": "média"
     },
     {
       "competitor_group": "XP/Clear/Rico",
       "matched_alias": "XP Investimentos",
-      "title": "Relatório do BTG aponta pivô estratégico da XP para crédito corporativo; CFO é trocado",
-      "link": "https://exemplo.com/xp-pivo-credito",
-      "source": "Finsiders Brasil",
-      "published_at": "2026-07-06T18:50:00+00:00",
-      "summary": "Victor Mansur sai, entra Gustavo Alejo, ex-Santander.",
+      "title": "Guia completo dos benefícios do cartão XP Visa Infinite ONE - Pontos pra Voar",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQR25ZZ3poUk5VeWQ3My1LUmltWjZqX2pBZnd2ZzdXcVRZV1VFS3h4a0NtRnppSEtGYmx4NEVRR1ZJVDlkQ21ZbmZYYmhtSTItdHFrbUZSZ01LM0dHOXNNTUxjTVY4bWg3MmZtem94ajZ0aTdmMzllU2xvSDRwUm5NVi1KWDFNZw?oc=5",
+      "source": "Pontos pra Voar",
+      "published_at": "2026-07-11T12:00:33+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxQR25ZZ3poUk5VeWQ3My1LUmltWjZqX2pBZnd2ZzdXcVRZV1VFS3h4a0NtRnppSEtGYmx4NEVRR1ZJVDlkQ21ZbmZYYmhtSTItdHFrbUZSZ01LM0dHOXNNTUxjTVY4bWg3MmZtem94ajZ0aTdmMzllU2xvSDRwUm5NVi1KWDFNZw?oc=5\" target=\"_blank\">Guia completo dos benefícios do cartão XP Visa Infinite ONE</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Pontos pra Voar</font>",
       "axes": [
         "Produtos Novos"
       ],
-      "daily_trigger": false,
-      "why_it_matters": "A troca de CFO e o foco em crédito corporativo indicam reorientação estratégica da XP.",
+      "daily_trigger": true,
+      "why_it_matters": "A XP promove os benefícios de seu cartão de crédito, um produto financeiro. Isso pode fidelizar clientes e atrair novos, pressionando concorrentes a melhorarem suas ofertas.",
       "relevance": "média"
+    },
+    {
+      "competitor_group": "XP/Clear/Rico",
+      "matched_alias": "XP Investimentos",
+      "title": "Expert XP 2026 reúne líderes de diversas marcas e participantes de peso - Live MKT News",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPN3doM0JLWFltWlZyTU53THh5LVBpN1A5Q0RoNDZuZl9xM3NkaElQTWw1RWl0MjBIdlRwdWV4bEZveG1WT2x3dkJBUG9PbWFRYWY1Zm1ZR0lZSVU3eTgtMzVDSzFzbUFjbUpfTUpHQ3pIcUhGemVodk1oNEZJUkJqdXk4MEhBb2xWNG1lTFVNTG5OVDA?oc=5",
+      "source": "Live MKT News",
+      "published_at": "2026-07-13T14:03:33+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxPN3doM0JLWFltWlZyTU53THh5LVBpN1A5Q0RoNDZuZl9xM3NkaElQTWw1RWl0MjBIdlRwdWV4bEZveG1WT2x3dkJBUG9PbWFRYWY1Zm1ZR0lZSVU3eTgtMzVDSzFzbUFjbUpfTUpHQ3pIcUhGemVodk1oNEZJUkJqdXk4MEhBb2xWNG1lTFVNTG5OVDA?oc=5\" target=\"_blank\">Expert XP 2026 reúne líderes de diversas marcas e participantes de peso</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Live MKT News</font>",
+      "axes": [
+        "Produtos Novos"
+      ],
+      "daily_trigger": true,
+      "why_it_matters": "A XP realiza um evento que reúne líderes de mercado, fortalecendo sua marca e relacionamento com clientes. Isso pode aumentar sua vantagem competitiva.",
+      "relevance": "média"
+    },
+    {
+      "competitor_group": "XP/Clear/Rico",
+      "matched_alias": "XP Investimentos",
+      "title": "Consórcio XP oferece bônus de até 60 mil pontos Livelo em nova campanha - InfoMoney",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQTFlkSlNFeGw3a1poNW9fM09qdW9OTmEwSmNNdTFnZTRkSGRrQWlLT01ZWmtUZm1IRlYzdkEtWEJ3LUZhYjVRRE9vZEd5T2RWdTNZZnNVaFJMWEs0ZVI1NW9kdmR0Q0ZhTnUyZ254R0FDTmFLOElpNFkzUXpVblEtRVlpbW9MQlJNaERxV0dzQmJZU1Bubkw4blY2eUNMMkJ3a015UmtB0gGrAUFVX3lxTE03OERIUThBd1REQ2dmbDN1cTBqb1M5WjE0a0wwbWc0RXo4VTVPQmVOQWNidWppWi1vMjJaSmgwRzNKMzVxMFZlVDlMQjlsR2dkVmFPMV83eFZrUnVBdThFVE15SVNUbWszUVZTZHVWeHhCM1FQVlFXcUo2VTNSY09USkQzUHdUemN4cWt1ZVVCU3FXRjR2MTF2MnNEbm1LVGhGVkh3d0RxMmc1SQ?oc=5",
+      "source": "InfoMoney",
+      "published_at": "2026-07-13T18:00:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxQTFlkSlNFeGw3a1poNW9fM09qdW9OTmEwSmNNdTFnZTRkSGRrQWlLT01ZWmtUZm1IRlYzdkEtWEJ3LUZhYjVRRE9vZEd5T2RWdTNZZnNVaFJMWEs0ZVI1NW9kdmR0Q0ZhTnUyZ254R0FDTmFLOElpNFkzUXpVblEtRVlpbW9MQlJNaERxV0dzQmJZU1Bubkw4blY2eUNMMkJ3a015UmtB0gGrAUFVX3lxTE03OERIUThBd1REQ2dmbDN1cTBqb1M5WjE0a0wwbWc0RXo4VTVPQmVOQWNidWppWi1vMjJaSmgwRzNKMzVxMFZlVDlMQjlsR2dkVmFPMV83eFZrUnVBdThFVE15SVNUbWszUVZTZHVWeHhCM1FQVlFXcUo2VTNSY09USkQzUHdUemN4cWt1ZVVCU3FXRjR2MTF2MnNEbm1LVGhGVkh3d0RxMmc1SQ?oc=5\" target=\"_blank\">Consórcio XP oferece bônus de até 60 mil pontos Livelo em nova campanha</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">InfoMoney</font>",
+      "axes": [
+        "Produtos Novos"
+      ],
+      "daily_trigger": true,
+      "why_it_matters": "Campanha de bônus em pontos de fidelidade é uma ação de marketing para atrair clientes. Concorrentes podem precisar reagir com ofertas similares.",
+      "relevance": "média"
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "BTG Pactual (BPAC11) desembarca em mais um país da América Latina após compra do HSBC Uruguai - Seu Dinheiro",
+      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNdWFHeW1wSGNLZ190TXNDSmRQdFR1alNjYTZQSV9NY3FfMWxQZ2R1aTdxM1Z0ZXdSSFAzT2pEemRKVUs1clI2Z1RWS1pKQks0RFRSSHRvRHJXa0VzanVaMDJVRXVQQkV3ejVuX3MzaUw4YUdkSHBYUERmRjJSMmExSnNuZ2NXUU9tTEVGcFNWaEg2a3NjTF8wSDBmcWlrSV8xd3hKVXZ0c3loeEJCNFNSSzA1TTdLTlNCM2U1VURFQ1VhSHEtTVBMcWt6X1p1SzR3NXRaeENieTAxal9lUTNiTTd4R2g?oc=5",
+      "source": "Seu Dinheiro",
+      "published_at": "2026-07-13T19:22:54+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi5AFBVV95cUxNdWFHeW1wSGNLZ190TXNDSmRQdFR1alNjYTZQSV9NY3FfMWxQZ2R1aTdxM1Z0ZXdSSFAzT2pEemRKVUs1clI2Z1RWS1pKQks0RFRSSHRvRHJXa0VzanVaMDJVRXVQQkV3ejVuX3MzaUw4YUdkSHBYUERmRjJSMmExSnNuZ2NXUU9tTEVGcFNWaEg2a3NjTF8wSDBmcWlrSV8xd3hKVXZ0c3loeEJCNFNSSzA1TTdLTlNCM2U1VURFQ1VhSHEtTVBMcWt6X1p1SzR3NXRaeENieTAxal9lUTNiTTd4R2g?oc=5\" target=\"_blank\">BTG Pactual (BPAC11) desembarca em mais um país da América Latina após compra do HSBC Uruguai</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seu Dinheiro</font>",
+      "axes": [
+        "Produtos Novos"
+      ],
+      "daily_trigger": true,
+      "why_it_matters": "O BTG expande sua presença internacional com aquisição no Uruguai, aumentando sua base de clientes e receitas. Isso pressiona concorrentes a buscarem expansão similar.",
+      "relevance": "alta"
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "BTG avança sobre três usinas da Rio Alto em execução de garantias - MegaWhat",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNYU93WXBrV0FhZWJyb2xzS1VZSFJxTmhCZEJ6Ml9veTFVWTJiMFAzeXRKU0ZtRjdPRUlZN0dkT3FjU3ZhRTY2UzhhaEREbGxhdGd4UHd1R2dpWVhfZmlVYmtGTkdsTE1GZExPNzhBQ2xzMGJqRUZQX1pwYmgwZUNhMWdyTkxublhYLUJYeDJ3LTYzZjhBS3ZBWGljM1JWQlVCREpfd0Y4OHhXMnUxWmNkcjl5enFwVy1XdnNvT2xXM1Q?oc=5",
+      "source": "MegaWhat",
+      "published_at": "2026-07-13T16:27:28+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxNYU93WXBrV0FhZWJyb2xzS1VZSFJxTmhCZEJ6Ml9veTFVWTJiMFAzeXRKU0ZtRjdPRUlZN0dkT3FjU3ZhRTY2UzhhaEREbGxhdGd4UHd1R2dpWVhfZmlVYmtGTkdsTE1GZExPNzhBQ2xzMGJqRUZQX1pwYmgwZUNhMWdyTkxublhYLUJYeDJ3LTYzZjhBS3ZBWGljM1JWQlVCREpfd0Y4OHhXMnUxWmNkcjl5enFwVy1XdnNvT2xXM1Q?oc=5\" target=\"_blank\">BTG avança sobre três usinas da Rio Alto em execução de garantias</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MegaWhat</font>",
+      "axes": [
+        "Risco/Regulação"
+      ],
+      "daily_trigger": true,
+      "why_it_matters": "Execução de garantias indica exposição a risco de crédito. Pode afetar a percepção de risco do BTG e exigir maior provisionamento, impactando resultados.",
+      "relevance": "alta"
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "BTG Pactual desembarca no Uruguai após concluir compra do HSBC por US$ 211 mi - Investidor10",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQUUF4OUkzV2RLRG5adDB3cnZFeDVpbHVUVEFmUTJGenpHekQxZlAzNXo3YUhBYU1FeTJHTXVzMzVxUkIwaFFJc0ZLdU9ya2Qwamt5Q0NLNWZJTTNXRnltV21icl8wQ2g1T01yQVlwUDBVWHA0c1FNYjhZSmVfU2Zia3Y5cmVKc0hYei1aMjV6U3d1OEM3M1pTZl9aZWNrWlJyZ21tOHRVeUREM0REVHFMaXZ6elo1MjlXWFdlVlU4M284RDjSAcMBQVVfeXFMUFFBeDlJM1dkS0RuWnQwd3J2RXg1aWx1VFRBZlEyRnp6R3pEMWZQMzV6N2FIQWFNRXkyR011czM1cVJCMGhRSXNGS3VPcmtkMGpreUNDSzVmSU0zV0Z5bVdtYnJfMENoNU9NckFZcFAwVVhwNHNRTWI4WUplX1NmYmt2OXJlSnNIWHotWjI1elN3dThDNzNaU2ZfWmVja1pScmdtbTh0VXlERDNERFRxTGl2enpaNTI5V1hXZVZVODNvOEQ4?oc=5",
+      "source": "Investidor10",
+      "published_at": "2026-07-13T21:35:35+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxQUUF4OUkzV2RLRG5adDB3cnZFeDVpbHVUVEFmUTJGenpHekQxZlAzNXo3YUhBYU1FeTJHTXVzMzVxUkIwaFFJc0ZLdU9ya2Qwamt5Q0NLNWZJTTNXRnltV21icl8wQ2g1T01yQVlwUDBVWHA0c1FNYjhZSmVfU2Zia3Y5cmVKc0hYei1aMjV6U3d1OEM3M1pTZl9aZWNrWlJyZ21tOHRVeUREM0REVHFMaXZ6elo1MjlXWFdlVlU4M284RDjSAcMBQVVfeXFMUFFBeDlJM1dkS0RuWnQwd3J2RXg1aWx1VFRBZlEyRnp6R3pEMWZQMzV6N2FIQWFNRXkyR011czM1cVJCMGhRSXNGS3VPcmtkMGpreUNDSzVmSU0zV0Z5bVdtYnJfMENoNU9NckFZcFAwVVhwNHNRTWI4WUplX1NmYmt2OXJlSnNIWHotWjI1elN3dThDNzNaU2ZfWmVja1pScmdtbTh0VXlERDNERFRxTGl2enpaNTI5V1hXZVZVODNvOEQ4?oc=5\" target=\"_blank\">BTG Pactual desembarca no Uruguai após concluir compra do HSBC por US$ 211 mi</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Investidor10</font>",
+      "axes": [
+        "Produtos Novos"
+      ],
+      "daily_trigger": true,
+      "why_it_matters": "Expansão internacional do BTG fortalece sua marca e receitas, pressionando concorrentes a buscarem crescimento similar.",
+      "relevance": "alta"
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "BTG executa garantias e Rio Alto perde parte de ativos solares em meio ao curtailment - Canal Solar",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5TenVLSGFDWlFkVmNESk1yRThkemlMaWIwdEtsV3JiWGNBVlhiWmg5c1JEeExCbkl1UWVTbWVNTnVHU2RqcHVsOEJGLVo0R1pjdnBXWk5nSVFyb2RLWW1mM3N4S2VyZXMxWDhfRm41MGwtSkhxYWdTeHU3dEk4LXc?oc=5",
+      "source": "Canal Solar",
+      "published_at": "2026-07-13T14:27:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE5TenVLSGFDWlFkVmNESk1yRThkemlMaWIwdEtsV3JiWGNBVlhiWmg5c1JEeExCbkl1UWVTbWVNTnVHU2RqcHVsOEJGLVo0R1pjdnBXWk5nSVFyb2RLWW1mM3N4S2VyZXMxWDhfRm41MGwtSkhxYWdTeHU3dEk4LXc?oc=5\" target=\"_blank\">BTG executa garantias e Rio Alto perde parte de ativos solares em meio ao curtailment</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Canal Solar</font>",
+      "axes": [
+        "Risco/Regulação"
+      ],
+      "daily_trigger": true,
+      "why_it_matters": "Execução de garantias expõe risco de crédito e pode impactar resultados do BTG. Concorrentes devem monitorar exposições similares.",
+      "relevance": "alta"
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "Dívida da Rio Alto aciona R$ 785,9 milhões em garantias bancárias - Economic News Brasil",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQNDFibTdXSU1ETTF6ejBTMlhtdHNuaWpzR0UtYXRqck4wTTFlOUZ6RndPRDFJU0NBQmFVWl9PeWg1X1FfLVk2bW1vQVhBWFdWWlh5TDFwcThqdzU0YUUtb1cwdWxyU2VadEhlYVdjeVc2N3hNOHVGZ2hZblpIWTBETmk0R0JxeXJC?oc=5",
+      "source": "Economic News Brasil",
+      "published_at": "2026-07-13T20:44:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxQNDFibTdXSU1ETTF6ejBTMlhtdHNuaWpzR0UtYXRqck4wTTFlOUZ6RndPRDFJU0NBQmFVWl9PeWg1X1FfLVk2bW1vQVhBWFdWWlh5TDFwcThqdzU0YUUtb1cwdWxyU2VadEhlYVdjeVc2N3hNOHVGZ2hZblpIWTBETmk0R0JxeXJC?oc=5\" target=\"_blank\">Dívida da Rio Alto aciona R$ 785,9 milhões em garantias bancárias</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Economic News Brasil</font>",
+      "axes": [
+        "Risco/Regulação"
+      ],
+      "daily_trigger": true,
+      "why_it_matters": "Execução de garantias de dívida expõe risco de crédito e pode impactar resultados do BTG. Concorrentes devem monitorar exposições similares.",
+      "relevance": "alta"
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "Nem Tesouro Direto nem CDB: BTG aposta em fundos listados com isenção de IR, que pagam até 19,8% ao ano - Seu Dinheiro",
+      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNV1N5RlFaSmdFaVE2S3hwMTdfMHdFX29iQXNvMkh3XzF0VHZSRkJjRkliOVMyZzNtQmd6UzRKZVgtQ0tkZVItMmFEVGI4YndXVkpHbkV3S1R0YlhuQV9ZQ3dROUctUEkwY1ZlUHA3WTRNWGQxWTZzVW42QVZqaEN4YmNnMmFUYnNjNmhHWTZZdkdQMlJsaG05cmNHUFd5Q3JqSUxzSlFid2k3dVRPMDR6VTNQWFBLcWs0VFNhXzAyMGMwNnhhaGZva3N1OUQyR2tTUHVNNXJQNFZxbVlFX19Zai1hR1o?oc=5",
+      "source": "Seu Dinheiro",
+      "published_at": "2026-07-11T20:07:44+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi5AFBVV95cUxNV1N5RlFaSmdFaVE2S3hwMTdfMHdFX29iQXNvMkh3XzF0VHZSRkJjRkliOVMyZzNtQmd6UzRKZVgtQ0tkZVItMmFEVGI4YndXVkpHbkV3S1R0YlhuQV9ZQ3dROUctUEkwY1ZlUHA3WTRNWGQxWTZzVW42QVZqaEN4YmNnMmFUYnNjNmhHWTZZdkdQMlJsaG05cmNHUFd5Q3JqSUxzSlFid2k3dVRPMDR6VTNQWFBLcWs0VFNhXzAyMGMwNnhhaGZva3N1OUQyR2tTUHVNNXJQNFZxbVlFX19Zai1hR1o?oc=5\" target=\"_blank\">Nem Tesouro Direto nem CDB: BTG aposta em fundos listados com isenção de IR, que pagam até 19,8% ao ano</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seu Dinheiro</font>",
+      "axes": [
+        "Produtos Novos"
+      ],
+      "daily_trigger": true,
+      "why_it_matters": "O BTG promove fundos listados com isenção de IR, um produto atrativo para investidores. Isso pode pressionar concorrentes a oferecerem produtos similares.",
+      "relevance": "média"
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "FIIs e FI-Infra: Os melhores fundos para investir em julho, segundo o BTG - Money Times",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQd1NPUWg3TnhlTi1aQ04tY0MyaWhNUnExR0stdnFOVG4xRFBFNUxYei1qbGpFNHRrWXlZZERYbFgwN1AzY0NPWDVrN1R4TlZIRDd0TjFwUWQ1eS01cFR4bFRLOE1oRlRCYVpTYkNCUWJUalRieFppbkE5c0ticzBORTRrd3M5R2V5SGdKYl81ejhUbTJGRS1PWGktdUdFNm1pMlpxb2FNWTJJZVU?oc=5",
+      "source": "Money Times",
+      "published_at": "2026-07-11T16:00:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxQd1NPUWg3TnhlTi1aQ04tY0MyaWhNUnExR0stdnFOVG4xRFBFNUxYei1qbGpFNHRrWXlZZERYbFgwN1AzY0NPWDVrN1R4TlZIRDd0TjFwUWQ1eS01cFR4bFRLOE1oRlRCYVpTYkNCUWJUalRieFppbkE5c0ticzBORTRrd3M5R2V5SGdKYl81ejhUbTJGRS1PWGktdUdFNm1pMlpxb2FNWTJJZVU?oc=5\" target=\"_blank\">FIIs e FI-Infra: Os melhores fundos para investir em julho, segundo o BTG</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Money Times</font>",
+      "axes": [
+        "Produtos Novos"
+      ],
+      "daily_trigger": true,
+      "why_it_matters": "Recomendação de fundos pelo BTG pode influenciar investidores e pressionar concorrentes a melhorarem suas ofertas.",
+      "relevance": "média"
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "O banqueiro Daniel Vorcaro encomendou dossiês e monitoramento de André Esteves, do BTG Pactual - Rádio Pampa",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNYlgzNWN0STZJZlcyRWhrYm91MHNhbmpIbWZZUDduVENoNTE2cjNzS3hTZXA4b2IxR01aYmZITmwySTVZZjJQODVMUWxJYUhzU3hYd2szeWk3aTZJX19LZTEyY3dFQlQzZ2Znb2p3TUZ2M0lZUk1QcHFoS0xKSV8yS0lLLUk5MEFuR1JGSVBGdlM2N0ptT1VPVDN3Y2xzSDFoTlN2ZWdOUmZNODhTb0ZPcTR5QkUteXVFYkdzV2dISW5nUQ?oc=5",
+      "source": "Rádio Pampa",
+      "published_at": "2026-07-12T01:33:23+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxNYlgzNWN0STZJZlcyRWhrYm91MHNhbmpIbWZZUDduVENoNTE2cjNzS3hTZXA4b2IxR01aYmZITmwySTVZZjJQODVMUWxJYUhzU3hYd2szeWk3aTZJX19LZTEyY3dFQlQzZ2Znb2p3TUZ2M0lZUk1QcHFoS0xKSV8yS0lLLUk5MEFuR1JGSVBGdlM2N0ptT1VPVDN3Y2xzSDFoTlN2ZWdOUmZNODhTb0ZPcTR5QkUteXVFYkdzV2dISW5nUQ?oc=5\" target=\"_blank\">O banqueiro Daniel Vorcaro encomendou dossiês e monitoramento de André Esteves, do BTG Pactual</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Rádio Pampa</font>",
+      "axes": [
+        "Risco/Regulação"
+      ],
+      "daily_trigger": true,
+      "why_it_matters": "Notícia sobre monitoramento de executivo pode gerar riscos reputacionais e regulatórios para o BTG, afetando a confiança dos clientes.",
+      "relevance": "alta"
     }
   ]
 }
