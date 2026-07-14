@@ -1,0 +1,87 @@
+{
+  "generated_at": "2026-07-14T02:31:10.539726+00:00",
+  "items": [
+    {
+      "competitor_group": "XP/Clear/Rico",
+      "matched_alias": "Clear corretora",
+      "title": "Clear relança plataforma com execução abaixo de 50ms e alavancagem intraday de até 300x",
+      "link": "https://exemplo.com/clear-relancamento",
+      "source": "InfoMoney",
+      "published_at": "2026-07-08T12:00:00+00:00",
+      "summary": "Nova campanha de marca, app reformulado, Click Trade e assistente virtual AIA.",
+      "axes": [
+        "RV/Trading",
+        "Tecnologia",
+        "Produtos Novos",
+        "Risco/Regulação"
+      ],
+      "daily_trigger": true,
+      "why_it_matters": "A Clear eleva o padrão de velocidade e alavancagem, pressionando concorrentes a acompanharem ou perderem traders de alta frequência.",
+      "relevance": "alta"
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Trends",
+      "title": "BTG Pactual lança BTG Trends, plataforma de mercados de previsão",
+      "link": "https://exemplo.com/btg-trends",
+      "source": "Money Times",
+      "published_at": "2026-07-09T09:00:00+00:00",
+      "summary": "Contratos derivativos binários sobre variáveis macro, sem alavancagem.",
+      "axes": [
+        "Produtos Novos",
+        "Risco/Regulação"
+      ],
+      "daily_trigger": true,
+      "why_it_matters": "O BTG inova com derivativos binários, produto novo que pode atrair clientes sofisticados.",
+      "relevance": "alta"
+    },
+    {
+      "competitor_group": "Genial",
+      "matched_alias": "Genial Investimentos",
+      "title": "Genial eleva alavancagem para até 312x e lança assistente de IA QINV",
+      "link": "https://exemplo.com/genial-alavancagem",
+      "source": "Seu Dinheiro",
+      "published_at": "2026-07-10T15:00:00+00:00",
+      "summary": "Alavancagem via RLP; app ganha IA QINV e Combo Trader.",
+      "axes": [
+        "RV/Trading",
+        "Tecnologia",
+        "Produtos Novos",
+        "Risco/Regulação"
+      ],
+      "daily_trigger": true,
+      "why_it_matters": "Genial supera a concorrência em alavancagem máxima, atraindo day traders agressivos.",
+      "relevance": "alta"
+    },
+    {
+      "competitor_group": "Múltiplos/Setor",
+      "matched_alias": "CVM alavancagem",
+      "title": "CVM publica Ofício-Circular esclarecendo regras de alavancagem em fundos de investimento",
+      "link": "https://exemplo.com/cvm-oficio-1-2026",
+      "source": "gov.br/CVM",
+      "published_at": "2026-07-11T10:00:00+00:00",
+      "summary": "Margem de garantia se aplica apenas a operações com finalidade de alavancagem.",
+      "axes": [
+        "Risco/Regulação"
+      ],
+      "daily_trigger": true,
+      "why_it_matters": "Reduz incertezas sobre margens, beneficiando corretoras que oferecem alavancagem.",
+      "relevance": "alta"
+    },
+    {
+      "competitor_group": "XP/Clear/Rico",
+      "matched_alias": "XP Investimentos",
+      "title": "Relatório do BTG aponta pivô estratégico da XP para crédito corporativo; CFO é trocado",
+      "link": "https://exemplo.com/xp-pivo-credito",
+      "source": "Finsiders Brasil",
+      "published_at": "2026-07-06T18:50:00+00:00",
+      "summary": "Victor Mansur sai, entra Gustavo Alejo, ex-Santander.",
+      "axes": [
+        "Produtos Novos"
+      ],
+      "daily_trigger": false,
+      "why_it_matters": "A troca de CFO e o foco em crédito corporativo indicam reorientação estratégica da XP.",
+      "relevance": "média"
+    }
+  ]
+}
