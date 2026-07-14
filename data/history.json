@@ -178,5 +178,20 @@
     "daily_trigger": true,
     "why_it_matters": "Notícia sobre monitoramento de executivo pode gerar riscos reputacionais e regulatórios para o BTG, afetando a confiança dos clientes.",
     "relevance": "alta"
+  },
+  {
+    "competitor_group": "XP/Clear/Rico",
+    "matched_alias": "XP Investimentos",
+    "title": "Expert XP 2026 debate economia global e investimentos - Poder360",
+    "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOVURXaThlMzI0Tko5cVBPLUlhRE53OWRLNk84TldhanZUdzVMV0RCT296Zm1TUHNJYUxNdTFoZ3hDV1BoY2g2NHY5V3JNVEoxM25leVlleUVnbVZGZmVuZXBJSjM2ejJBcHhDbll5RzhoS01xSXc5dHhKQW55V2Q2cW13bmh1cU9MUFZEQW5Pbm1XYllWZ1F2cjJMbFdPN3RJRXJwcjFn?oc=5",
+    "source": "Poder360",
+    "published_at": "2026-07-14T09:04:16+00:00",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxOVURXaThlMzI0Tko5cVBPLUlhRE53OWRLNk84TldhanZUdzVMV0RCT296Zm1TUHNJYUxNdTFoZ3hDV1BoY2g2NHY5V3JNVEoxM25leVlleUVnbVZGZmVuZXBJSjM2ejJBcHhDbll5RzhoS01xSXc5dHhKQW55V2Q2cW13bmh1cU9MUFZEQW5Pbm1XYllWZ1F2cjJMbFdPN3RJRXJwcjFn?oc=5\" target=\"_blank\">Expert XP 2026 debate economia global e investimentos</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Poder360</font>",
+    "axes": [
+      "Produtos Novos"
+    ],
+    "daily_trigger": false,
+    "why_it_matters": "Evento de debate sobre economia e investimentos reforça a marca XP, mas não é um lançamento de produto ou mudança de risco.",
+    "relevance": "média"
   }
 ]
