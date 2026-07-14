@@ -95,6 +95,7 @@ def main():
     items = collect_all()
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     out_path = Path(__file__).parent.parent / "data" / f"raw_items_{today}.json"
+    out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(items, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Coletados {len(items)} itens únicos → {out_path}")
 
