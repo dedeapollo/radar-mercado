@@ -44,6 +44,13 @@ jobs:
       - name: Exporta dados para o dashboard
         run: python src/export_dashboard.py
 
+      - name: Publica dashboard no Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy docs --project-name=radar-mercado
+
       - name: Salva histórico e dashboard no repositório
         run: |
           git config user.name "radar-bot"

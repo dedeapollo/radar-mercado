@@ -14,7 +14,7 @@ Tecnologia, Produtos Novos, Risco/Regulação) e entregue em 3 tranches:
 ```
 collect.py  →  synthesize.py  →  report.py  →  e-mail (Resend)
 (RSS grátis)   (classifica c/     (decide a tranche          ↘
-                DeepSeek)          e monta o conteúdo)    export_dashboard.py → docs/data.json (GitHub Pages)
+                DeepSeek)          e monta o conteúdo)    export_dashboard.py → docs/data.json (Cloudflare Pages)
 ```
 
 O GitHub Actions roda essa cadeia todo dia sozinho, sem você precisar abrir
@@ -70,15 +70,58 @@ exige acesso ao DNS (pode precisar de TI só pra esse passo específico).
 Até lá, use seu próprio e-mail em `EMAIL_RECIPIENTS` pra validar o fluxo
 inteiro.
 
-### 4. Ativar o dashboard (GitHub Pages)
+### 4. Ativar o dashboard — Cloudflare Pages + Access (não GitHub Pages)
 
-No GitHub: **Settings → Pages → Build and deployment → Source: Deploy from
-a branch → Branch: `main`, pasta `/docs` → Save**. Em alguns minutos o
-dashboard fica acessível em `https://SEU-USUARIO.github.io/radar-mercado/`.
+**Por quê não GitHub Pages**: no plano gratuito, só funciona com repositório
+público. E mesmo pagando o GitHub Pro pra manter o repo privado, o site
+publicado continua acessível por qualquer pessoa com o link — sem login.
+Não é o que queremos (só você + lideranças escolhidas).
 
-Antes do primeiro run do workflow, o dashboard mostra dados de exemplo
-(com um aviso "dados de exemplo" no canto) — assim que `docs/data.json`
-for gerado pela primeira vez, ele passa a refletir dados reais.
+**Caminho gratuito que restringe de verdade**:
+
+**4a. Cloudflare Pages via GitHub Actions** (evita a integração Git do
+Cloudflare, que costuma travar no "cloning" por permissão do app do GitHub —
+se você já tentou "Connect to Git" e deu erro nesse passo, pode ignorar
+esse projeto quebrado, vamos publicar por outro caminho)
+
+1. Criar conta grátis em cloudflare.com (se ainda não tiver)
+2. Pegar seu **Account ID**: dashboard do Cloudflare → barra lateral direita
+   da página inicial, ou em `dash.cloudflare.com` → qualquer domínio →
+   "Account ID" aparece na barra lateral
+3. Criar um **API Token**: dashboard → ícone de usuário → **My Profile →
+   API Tokens → Create Token** → template **Edit Cloudflare Workers**
+   (esse token também cobre Pages) → Continue → Create Token → copia o
+   valor (só aparece uma vez)
+4. No GitHub, adiciona dois novos secrets (mesmo lugar dos outros três):
+
+| Nome | Valor |
+|---|---|
+| `CLOUDFLARE_API_TOKEN` | o token que você acabou de criar |
+| `CLOUDFLARE_ACCOUNT_ID` | o Account ID do passo 2 |
+
+5. Pronto — o workflow já tem a etapa `Publica dashboard no Cloudflare
+   Pages`, que cria o projeto `radar-mercado` no Cloudflare automaticamente
+   na primeira execução (não precisa criar nada manualmente no dashboard
+   do Cloudflare antes). A URL fica em `radar-mercado.pages.dev` (ou
+   similar — o Cloudflare avisa o endereço exato no log dessa etapa,
+   dentro da aba Actions do GitHub).
+
+**4b. Cloudflare Access** (restringe quem pode abrir essa URL)
+1. No mesmo painel: **Zero Trust** (ativa de graça na primeira vez)
+2. **Access → Applications → Add an application → Self-hosted**
+3. Aponta pro domínio `radar-mercado.pages.dev`
+4. Cria uma política: regra **Include → Emails** → lista seu e-mail e o das
+   lideranças que vão acompanhar
+5. Salvar
+
+A partir daí, só quem está nessa lista de e-mails consegue abrir o
+dashboard — ao acessar, recebe um código de uso único por e-mail pra
+entrar. Sem senha, sem conta, e ninguém fora da lista consegue ver nada.
+
+Toda vez que o GitHub Actions rodar, ele já publica a versão mais nova
+direto no Cloudflare Pages como parte do próprio workflow — não depende
+de o Cloudflare "perceber" um push, é uma etapa explícita (`wrangler pages
+deploy`) que roda sempre.
 
 ### 5. Testar manualmente
 
