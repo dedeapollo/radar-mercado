@@ -1,5 +1,0 @@
-__pycache__/
-*.pyc
-.env
-data/raw_items_*.json
-data/classified_items_*.json
