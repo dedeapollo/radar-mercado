@@ -40,7 +40,7 @@ já que o conteúdo é estratégia de concorrentes), sem README/gitignore
 (vamos usar os que já existem aqui). Depois:
 
 ```bash
-git remote add origin https://github.com/dedeapollo/radar-mercado.git
+git remote add origin https://github.com/SEU-USUARIO/radar-mercado.git
 git branch -M main
 git push -u origin main
 ```

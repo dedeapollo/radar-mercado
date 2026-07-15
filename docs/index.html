@@ -264,6 +264,76 @@
     font-size:14px;
   }
 
+  /* ---------- alertas fixos ---------- */
+  .alerts-section{margin-bottom:28px;}
+  .alerts-section h2{
+    font-family:var(--serif);
+    font-size:18px;
+    font-weight:600;
+    margin:0 0 10px;
+    display:flex;
+    align-items:center;
+    gap:9px;
+  }
+  .pulse-dot{
+    width:8px;height:8px;border-radius:50%;
+    background:var(--axis-risco);
+    flex:none;
+    animation:pulse 1.8s infinite;
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(161,61,43,0.45);}
+    70%{box-shadow:0 0 0 7px rgba(161,61,43,0);}
+    100%{box-shadow:0 0 0 0 rgba(161,61,43,0);}
+  }
+
+  /* ---------- badges extra ---------- */
+  .relevance-badge{
+    font-family:var(--mono);
+    font-size:10.5px;
+    padding:1px 7px;
+    border-radius:10px;
+  }
+  .relevance-badge.alta{background:var(--ink);color:#fff;}
+  .relevance-badge.media{border:1px solid var(--muted);color:var(--muted);}
+  .source-badge{
+    font-family:var(--mono);
+    font-size:10.5px;
+    padding:1px 7px;
+    border-radius:10px;
+    background:rgba(30,138,122,0.14);
+    color:var(--axis-tech);
+  }
+
+  /* ---------- cards colapsáveis ---------- */
+  details.item-card summary{
+    list-style:none;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+  details.item-card summary::-webkit-details-marker{display:none;}
+  details.item-card summary::after{
+    content:'+';
+    font-family:var(--mono);
+    color:var(--muted);
+    font-size:16px;
+    flex:none;
+    margin-left:8px;
+  }
+  details.item-card[open] summary::after{content:'–';}
+  .item-summary-main{display:flex;align-items:center;gap:8px;min-width:0;flex:1;}
+  .item-summary-meta{
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--muted);
+    white-space:nowrap;
+  }
+  details.item-card .item-body{margin-top:10px;}
+
   footer{
     max-width:1280px;
     margin:0 auto;
@@ -327,7 +397,17 @@
 </header>
 
 <main>
+  <section class="alerts-section" id="alerts-section" style="display:none;">
+    <h2><span class="pulse-dot"></span>Últimos Alertas</h2>
+    <div id="alerts-feed"></div>
+  </section>
+
   <section class="kpi-row" id="kpi-row"></section>
+
+  <section class="chart-card" style="margin-bottom:16px;">
+    <h3>Itens ao longo do tempo (todo o histórico, por semana)</h3>
+    <canvas id="trend-chart"></canvas>
+  </section>
 
   <section class="chart-row">
     <div class="chart-card">
@@ -366,18 +446,18 @@ const AXIS_COLORS = {
 const SAMPLE_DATA = {
   generated_at: null,
   items: [
-    {competitor_group:"XP/Clear/Rico", title:"Clear relança plataforma com execução abaixo de 50ms e alavancagem intraday de até 300x", link:"#", source:"InfoMoney", published_at:"2026-07-08T12:00:00+00:00", why_it_matters:"A Clear eleva o padrão de velocidade e alavancagem, pressionando concorrentes a acompanharem ou perderem traders de alta frequência.", axes:["RV/Trading","Tecnologia","Produtos Novos","Risco/Regulação"], daily_trigger:true},
-    {competitor_group:"BTG Pactual", title:"BTG Pactual lança BTG Trends, plataforma de mercados de previsão", link:"#", source:"Money Times", published_at:"2026-07-09T09:00:00+00:00", why_it_matters:"O BTG inova com derivativos binários, produto novo que pode atrair clientes sofisticados, com alcance inicial limitado por restrição a investidores qualificados.", axes:["Produtos Novos","Risco/Regulação"], daily_trigger:true},
-    {competitor_group:"Genial", title:"Genial eleva alavancagem para até 312x e lança assistente de IA QINV", link:"#", source:"Seu Dinheiro", published_at:"2026-07-10T15:00:00+00:00", why_it_matters:"Genial supera a concorrência em alavancagem máxima, atraindo day traders agressivos e aumentando o risco de escrutínio regulatório.", axes:["RV/Trading","Tecnologia","Produtos Novos","Risco/Regulação"], daily_trigger:true},
-    {competitor_group:"Múltiplos/Setor", title:"CVM publica Ofício-Circular esclarecendo regras de alavancagem em fundos de investimento", link:"#", source:"gov.br/CVM", published_at:"2026-07-11T10:00:00+00:00", why_it_matters:"Reduz incertezas sobre margens, beneficiando corretoras que oferecem alavancagem, mas exige compliance mais rigoroso.", axes:["Risco/Regulação"], daily_trigger:true},
-    {competitor_group:"XP/Clear/Rico", title:"Relatório do BTG aponta pivô estratégico da XP para crédito corporativo; CFO é trocado", link:"#", source:"Finsiders Brasil", published_at:"2026-07-06T18:50:00+00:00", why_it_matters:"A troca de CFO e o foco em crédito corporativo indicam reorientação estratégica que pode abrir espaço para concorrentes focados em varejo.", axes:["Produtos Novos"], daily_trigger:false},
+    {competitor_group:"XP/Clear/Rico", title:"Clear relança plataforma com execução abaixo de 50ms e alavancagem intraday de até 300x", link:"#", source:"InfoMoney", published_at:"2026-07-08T12:00:00+00:00", why_it_matters:"A Clear eleva o padrão de velocidade e alavancagem, pressionando concorrentes a acompanharem ou perderem traders de alta frequência.", axes:["RV/Trading","Tecnologia","Produtos Novos","Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[]},
+    {competitor_group:"BTG Pactual", title:"BTG Pactual lança BTG Trends, plataforma de mercados de previsão", link:"#", source:"Money Times", published_at:"2026-07-09T09:00:00+00:00", why_it_matters:"O BTG inova com derivativos binários, produto novo que pode atrair clientes sofisticados, com alcance inicial limitado por restrição a investidores qualificados.", axes:["Produtos Novos","Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[{source:"Seu Dinheiro", link:"#"}]},
+    {competitor_group:"Genial", title:"Genial eleva alavancagem para até 312x e lança assistente de IA QINV", link:"#", source:"Seu Dinheiro", published_at:"2026-07-10T15:00:00+00:00", why_it_matters:"Genial supera a concorrência em alavancagem máxima, atraindo day traders agressivos e aumentando o risco de escrutínio regulatório.", axes:["RV/Trading","Tecnologia","Produtos Novos","Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[]},
+    {competitor_group:"Múltiplos/Setor", title:"CVM publica Ofício-Circular esclarecendo regras de alavancagem em fundos de investimento", link:"#", source:"gov.br/CVM", published_at:"2026-07-11T10:00:00+00:00", why_it_matters:"Reduz incertezas sobre margens, beneficiando corretoras que oferecem alavancagem, mas exige compliance mais rigoroso.", axes:["Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[]},
+    {competitor_group:"XP/Clear/Rico", title:"Relatório do BTG aponta pivô estratégico da XP para crédito corporativo; CFO é trocado", link:"#", source:"Finsiders Brasil", published_at:"2026-07-06T18:50:00+00:00", why_it_matters:"A troca de CFO e o foco em crédito corporativo indicam reorientação estratégica que pode abrir espaço para concorrentes focados em varejo.", axes:["Produtos Novos"], daily_trigger:false, relevance:"média", also_reported_by:[]},
   ]
 };
 
 let RAW_ITEMS = [];
 let ACTIVE_AXES = new Set();
 let ACTIVE_COMPETITORS = new Set();
-let axisChart, competitorChart;
+let axisChart, competitorChart, trendChart;
 
 function fmtDate(iso){
   const d = new Date(iso);
@@ -451,6 +531,41 @@ function renderKPIs(items){
   `).join('');
 }
 
+function trendItems(){
+  return RAW_ITEMS.filter(item => {
+    if(ACTIVE_AXES.size && !item.axes.some(a => ACTIVE_AXES.has(a))) return false;
+    if(ACTIVE_COMPETITORS.size && !ACTIVE_COMPETITORS.has(item.competitor_group)) return false;
+    return true;
+  });
+}
+
+function mondayOf(dateObj){
+  const d = new Date(dateObj);
+  const day = d.getDay();
+  d.setDate(d.getDate() + (day === 0 ? -6 : 1) - day);
+  d.setHours(0,0,0,0);
+  return d;
+}
+
+function renderTrendChart(){
+  const items = trendItems();
+  const buckets = {};
+  items.forEach(item => {
+    const key = mondayOf(new Date(item.published_at)).toISOString().slice(0,10);
+    buckets[key] = (buckets[key]||0) + 1;
+  });
+  const labels = Object.keys(buckets).sort();
+  const data = labels.map(k => buckets[k]);
+  const displayLabels = labels.map(k => 'sem. ' + fmtDate(k + 'T00:00:00Z'));
+
+  if(trendChart) trendChart.destroy();
+  trendChart = new Chart(document.getElementById('trend-chart'), {
+    type:'bar',
+    data:{labels:displayLabels, datasets:[{data, backgroundColor:'#1B2C46', borderRadius:4}]},
+    options:{plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true, ticks:{precision:0}}}, animation:false}
+  });
+}
+
 function renderCharts(items){
   const axisCounts = AXES.map(a => items.filter(i => i.axes.includes(a)).length);
   const competitors = [...new Set(RAW_ITEMS.map(i => i.competitor_group))];
@@ -471,6 +586,58 @@ function renderCharts(items){
   });
 }
 
+function sourceHtml(item){
+  const extra = item.also_reported_by || [];
+  const primary = `<a href="${item.link}" target="_blank" rel="noopener">${item.source}</a>`;
+  if(!extra.length) return `${primary} · ${fmtDate(item.published_at)}`;
+  const extraLinks = extra.map(s => `<a href="${s.link}" target="_blank" rel="noopener">${s.source}</a>`).join(', ');
+  return `${primary} <span style="color:var(--muted)">também:</span> ${extraLinks} · ${fmtDate(item.published_at)}`;
+}
+
+function itemCardHtml(item, defaultOpen){
+  const borderColor = item.daily_trigger ? 'var(--axis-risco)' : AXIS_COLORS[item.axes[0]];
+  const relClass = item.relevance === 'alta' ? 'alta' : 'media';
+  const sourceCount = 1 + (item.also_reported_by || []).length;
+  return `
+    <details ${defaultOpen ? 'open' : ''} class="item-card ${item.daily_trigger ? 'trigger' : ''}" style="border-left-color:${borderColor}">
+      <summary class="item-summary">
+        <span class="item-summary-main">
+          <span class="axis-dot" style="background:${AXIS_COLORS[item.axes[0]]}"></span>
+          <span class="item-title">${item.title}</span>
+        </span>
+        <span class="item-summary-meta">${item.competitor_group} · ${fmtDate(item.published_at)}</span>
+      </summary>
+      <div class="item-body">
+        <div class="item-why">${item.why_it_matters}</div>
+        <div class="item-foot">
+          <div class="item-tags">
+            ${item.axes.map(a => `<span class="tag" style="background:${AXIS_COLORS[a]}">${a}</span>`).join('')}
+            ${item.daily_trigger ? '<span class="trigger-badge">gatilho diário</span>' : ''}
+            ${item.relevance ? `<span class="relevance-badge ${relClass}">relevância ${item.relevance}</span>` : ''}
+            ${sourceCount > 1 ? `<span class="source-badge">${sourceCount} fontes</span>` : ''}
+          </div>
+          <div>${sourceHtml(item)}</div>
+        </div>
+      </div>
+    </details>
+  `;
+}
+
+function alertItems(){
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - 7);
+  return RAW_ITEMS.filter(i => i.daily_trigger && new Date(i.published_at) >= cutoff)
+    .sort((a,b) => new Date(b.published_at) - new Date(a.published_at));
+}
+
+function renderAlerts(){
+  const items = alertItems();
+  const section = document.getElementById('alerts-section');
+  if(!items.length){ section.style.display = 'none'; return; }
+  section.style.display = '';
+  document.getElementById('alerts-feed').innerHTML = items.map(i => itemCardHtml(i, true)).join('');
+}
+
 function renderFeed(items){
   document.getElementById('feed-count').textContent = `${items.length} itens`;
   const feed = document.getElementById('feed');
@@ -480,34 +647,14 @@ function renderFeed(items){
     return;
   }
 
-  // Lista única, sem repetir o card por eixo — um item multi-eixo (ex: Clear
-  // em RV/Trading + Tecnologia + Produtos Novos + Risco/Regulação) aparece
-  // UMA vez só, com todas as tags visíveis. A cor da borda é a do primeiro
-  // eixo (ou vermelho, se for gatilho diário).
-  feed.innerHTML = items.map(item => {
-    const borderColor = item.daily_trigger ? 'var(--axis-risco)' : AXIS_COLORS[item.axes[0]];
-    return `
-      <div class="item-card ${item.daily_trigger ? 'trigger' : ''}" style="border-left-color:${borderColor}">
-        <div class="item-top">
-          <div class="item-title">${item.title}</div>
-          <div class="item-group">${item.competitor_group}</div>
-        </div>
-        <div class="item-why">${item.why_it_matters}</div>
-        <div class="item-foot">
-          <div class="item-tags">
-            ${item.axes.map(a => `<span class="tag" style="background:${AXIS_COLORS[a]}">${a}</span>`).join('')}
-            ${item.daily_trigger ? '<span class="trigger-badge">gatilho diário</span>' : ''}
-          </div>
-          <div><a href="${item.link}" target="_blank" rel="noopener">${item.source}</a> · ${fmtDate(item.published_at)}</div>
-        </div>
-      </div>
-    `;
-  }).join('');
+  feed.innerHTML = items.map(item => itemCardHtml(item, false)).join('');
 }
 
 function render(){
   const items = filteredItems();
+  renderAlerts();
   renderKPIs(items);
+  renderTrendChart();
   renderCharts(items);
   renderFeed(items);
 }
