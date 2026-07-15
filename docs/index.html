@@ -464,6 +464,12 @@ function fmtDate(iso){
   return d.toLocaleDateString('pt-BR', {day:'2-digit', month:'2-digit', year:'numeric'});
 }
 
+function escapeHtml(str){
+  const div = document.createElement('div');
+  div.textContent = str ?? '';
+  return div.innerHTML;
+}
+
 async function loadData(){
   try{
     const res = await fetch('./data.json', {cache:'no-store'});
@@ -588,9 +594,9 @@ function renderCharts(items){
 
 function sourceHtml(item){
   const extra = item.also_reported_by || [];
-  const primary = `<a href="${item.link}" target="_blank" rel="noopener">${item.source}</a>`;
+  const primary = `<a href="${item.link}" target="_blank" rel="noopener">${escapeHtml(item.source)}</a>`;
   if(!extra.length) return `${primary} · ${fmtDate(item.published_at)}`;
-  const extraLinks = extra.map(s => `<a href="${s.link}" target="_blank" rel="noopener">${s.source}</a>`).join(', ');
+  const extraLinks = extra.map(s => `<a href="${s.link}" target="_blank" rel="noopener">${escapeHtml(s.source)}</a>`).join(', ');
   return `${primary} <span style="color:var(--muted)">também:</span> ${extraLinks} · ${fmtDate(item.published_at)}`;
 }
 
@@ -603,12 +609,12 @@ function itemCardHtml(item, defaultOpen){
       <summary class="item-summary">
         <span class="item-summary-main">
           <span class="axis-dot" style="background:${AXIS_COLORS[item.axes[0]]}"></span>
-          <span class="item-title">${item.title}</span>
+          <span class="item-title">${escapeHtml(item.title)}</span>
         </span>
-        <span class="item-summary-meta">${item.competitor_group} · ${fmtDate(item.published_at)}</span>
+        <span class="item-summary-meta">${escapeHtml(item.competitor_group)} · ${fmtDate(item.published_at)}</span>
       </summary>
       <div class="item-body">
-        <div class="item-why">${item.why_it_matters}</div>
+        <div class="item-why">${escapeHtml(item.why_it_matters)}</div>
         <div class="item-foot">
           <div class="item-tags">
             ${item.axes.map(a => `<span class="tag" style="background:${AXIS_COLORS[a]}">${a}</span>`).join('')}
