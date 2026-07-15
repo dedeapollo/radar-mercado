@@ -1,0 +1,60 @@
+name: Radar de Mercado
+
+on:
+  schedule:
+    # 10:00 UTC = 07:00 no horário de Brasília (sem horário de verão desde 2019)
+    - cron: "0 10 * * *"
+  workflow_dispatch: {} # permite rodar manualmente pelo botão "Run workflow" na aba Actions
+
+permissions:
+  contents: write # necessário pra commitar data/history.json de volta no repo
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instala dependências
+        run: pip install -r requirements.txt
+
+      - name: Coleta notícias
+        run: python src/collect.py
+
+      - name: Classifica e sintetiza
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+          python src/synthesize.py "data/raw_items_${TODAY}.json"
+
+      - name: Monta e envia relatório
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          EMAIL_RECIPIENTS: ${{ secrets.EMAIL_RECIPIENTS }}
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+          python src/report.py "data/classified_items_${TODAY}.json"
+
+      - name: Exporta dados para o dashboard
+        run: python src/export_dashboard.py
+
+      - name: Publica dashboard no Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy docs --project-name=radar-mercado
+
+      - name: Salva histórico e dashboard no repositório
+        run: |
+          git config user.name "radar-bot"
+          git config user.email "radar-bot@users.noreply.github.com"
+          git add data/history.json docs/data.json
+          git diff --cached --quiet || git commit -m "Atualiza radar ($(date -u +%Y-%m-%d))"
+          git push
