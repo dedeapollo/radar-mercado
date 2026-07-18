@@ -25,12 +25,30 @@ jobs:
       - name: Coleta notícias
         run: python src/collect.py
 
+      - name: Coleta app stores (patch notes e nota)
+        run: python src/collect_appstore.py
+
+      - name: Coleta sinais de incidente
+        run: python src/collect_incidents.py
+
+      - name: Coleta sinais sociais (Reddit + Google Trends)
+        env:
+          # Opcionais — se os secrets não existirem, chegam vazios e o
+          # coletor usa o endpoint público do Reddit automaticamente.
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+        run: python src/collect_social.py
+
       - name: Classifica e sintetiza
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: |
           TODAY=$(date -u +%Y-%m-%d)
-          python src/synthesize.py "data/raw_items_${TODAY}.json"
+          python src/synthesize.py \
+            "data/raw_items_${TODAY}.json" \
+            "data/raw_appstore_items_${TODAY}.json" \
+            "data/raw_incident_items_${TODAY}.json" \
+            "data/raw_social_items_${TODAY}.json"
 
       - name: Monta e envia relatório
         env:
@@ -51,10 +69,10 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy docs --project-name=radar-mercado
 
-      - name: Salva histórico e dashboard no repositório
+      - name: Salva histórico, estados e dashboard no repositório
         run: |
           git config user.name "radar-bot"
           git config user.email "radar-bot@users.noreply.github.com"
-          git add data/history.json docs/data.json
+          git add data/history.json data/appstore_state.json data/incidents_state.json data/social_state.json docs/data.json
           git diff --cached --quiet || git commit -m "Atualiza radar ($(date -u +%Y-%m-%d))"
           git push
