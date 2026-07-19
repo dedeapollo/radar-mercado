@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T02:45:54.079872+00:00",
+  "generated_at": "2026-07-19T11:01:09.148878+00:00",
   "items": [
     {
       "competitor_group": "XP/Clear/Rico",
@@ -678,6 +678,28 @@
           "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQWUlSaXA5ZFB5bHdIbnFCZEw0Q2REa1N0VUU3U1FDcUpCMlpCRy01RTNkU20wd0w1aTlMZUhuWnJzMWFiNHpuLUZPR05ZX2xObjVraTl1LUdQc3VJTG1sX3RBZ2JaYzZmR2FNQlhRdnhoUFpMcGotd0JYTW1YVVRoNTBhZEV3NHplVGcxWHdKOE4yTWl2dWEyMHo4MWwzUlUzcnc2NW1laF9rMGJlbjVJSUczNW43UzdXRjdvX3R2OV9uaGdjVkVETmNBN3FvTFNBcmlLSVA2c1FtNXMyNGlPWVF3?oc=5"
         }
       ]
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "BTG Pactual (BPAC11) abre ao mercado plataforma de securitização e inicia nova fase da BSec - Money Times",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQdW9ZNU83SmpielRCak1UUzczMjJEODFkYW1WSVRrNllaX0ZPSHNQZDdkak9hMExyOVVKblpsZ0FnVG1kMGtjd05NZ0RLOWdjWmtzeUNFa2tyM01MTFhSZV84SlB3cm00dFZ4OGdSaTQ3YUZlZUlCR1U3ZTgtTHRXSTNhUlpXNXFsQTNfb09tV2JXUDlNLTV0S0dwTmRLdjRaRGw4MFJWRmsySVFpN093SXptVDk1ZHh0OW1NUGVqTGZGN2s?oc=5",
+      "source": "Money Times",
+      "published_at": "2026-07-16T20:15:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxQdW9ZNU83SmpielRCak1UUzczMjJEODFkYW1WSVRrNllaX0ZPSHNQZDdkak9hMExyOVVKblpsZ0FnVG1kMGtjd05NZ0RLOWdjWmtzeUNFa2tyM01MTFhSZV84SlB3cm00dFZ4OGdSaTQ3YUZlZUlCR1U3ZTgtTHRXSTNhUlpXNXFsQTNfb09tV2JXUDlNLTV0S0dwTmRLdjRaRGw4MFJWRmsySVFpN093SXptVDk1ZHh0OW1NUGVqTGZGN2s?oc=5\" target=\"_blank\">BTG Pactual (BPAC11) abre ao mercado plataforma de securitização e inicia nova fase da BSec</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Money Times</font>",
+      "source_indices": [
+        39
+      ],
+      "primary_index": 39,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "LANC",
+      "why_it_matters": "O BTG Pactual abriu ao mercado sua plataforma de securitização BSec, iniciando nova fase que pode atrair clientes de renda fixa e estruturar novos produtos para investidores.",
+      "relevance": "alta",
+      "also_reported_by": []
     }
   ]
 }
