@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T10:54:07.779744+00:00",
+  "generated_at": "2026-07-19T02:39:54.286234+00:00",
   "items": [
     {
       "competitor_group": "XP/Clear/Rico",
@@ -777,6 +777,32 @@
       "why_it_matters": "Fundo imobiliário do BTG (BTLG11) captou R$ 1,8 bilhão em nova emissão, indicando forte demanda e expansão de produto.",
       "relevance": "média",
       "also_reported_by": []
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "CADE aprova controle do BTG sobre usinas solares da Rio Alto - Canal Solar",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQUFhtY2htOVk1QmZZRkpwRlV3dWFEeWRKTDlmd2Q5bVlzX3EwQmNXVG1UcEx1cUVvMUFUd1FlbzRjaWJVckRwd1Y5aEdQZ21UQi0zdmFHVjFIQlpDSFE4dGs5azY5VFNhNzVPVmNRX24zYjkyZGtuRkd4NkdkOFd0NA?oc=5",
+      "source": "Canal Solar",
+      "published_at": "2026-07-17T16:49:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxQUFhtY2htOVk1QmZZRkpwRlV3dWFEeWRKTDlmd2Q5bVlzX3EwQmNXVG1UcEx1cUVvMUFUd1FlbzRjaWJVckRwd1Y5aEdQZ21UQi0zdmFHVjFIQlpDSFE4dGs5azY5VFNhNzVPVmNRX24zYjkyZGtuRkd4NkdkOFd0NA?oc=5\" target=\"_blank\">CADE aprova controle do BTG sobre usinas solares da Rio Alto</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Canal Solar</font>",
+      "source_indices": [
+        42,
+        52
+      ],
+      "primary_index": 42,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "daily_trigger": true,
+      "why_it_matters": "CADE aprova controle do BTG sobre usinas solares da Rio Alto, expandindo atuação em energia renovável.",
+      "relevance": "alta",
+      "also_reported_by": [
+        {
+          "source": "Cenário Energia",
+          "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQWUlSaXA5ZFB5bHdIbnFCZEw0Q2REa1N0VUU3U1FDcUpCMlpCRy01RTNkU20wd0w1aTlMZUhuWnJzMWFiNHpuLUZPR05ZX2xObjVraTl1LUdQc3VJTG1sX3RBZ2JaYzZmR2FNQlhRdnhoUFpMcGotd0JYTW1YVVRoNTBhZEV3NHplVGcxWHdKOE4yTWl2dWEyMHo4MWwzUlUzcnc2NW1laF9rMGJlbjVJSUczNW43UzdXRjdvX3R2OV9uaGdjVkVETmNBN3FvTFNBcmlLSVA2c1FtNXMyNGlPWVF3?oc=5"
+        }
+      ]
     }
   ]
 }
