@@ -35,12 +35,13 @@
     -webkit-font-smoothing:antialiased;
   }
   a{color:inherit;}
+  :focus-visible{outline:2px solid var(--axis-rv);outline-offset:2px;}
 
   /* ---------- header ---------- */
   header{
     background:linear-gradient(180deg, var(--navy) 0%, var(--navy-soft) 100%);
     color:#EDEFF4;
-    padding:28px 32px 24px;
+    padding:24px 32px 18px;
   }
   .header-top{
     display:flex;
@@ -62,7 +63,7 @@
   }
   .brand p{
     margin:2px 0 0;
-    font-size:13px;
+    font-size:12.5px;
     color:#9AA7BD;
     font-family:var(--mono);
     letter-spacing:0.3px;
@@ -83,26 +84,36 @@
     font-size:11px;
   }
 
+  /* ---------- filtros ---------- */
   .filters{
     max-width:1280px;
-    margin:20px auto 0;
+    margin:16px auto 0;
     display:flex;
-    gap:22px;
+    gap:10px 22px;
     align-items:center;
     flex-wrap:wrap;
-    padding-top:18px;
+    padding-top:14px;
     border-top:1px solid rgba(255,255,255,0.12);
   }
-  .filter-block{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .filter-block{display:flex;align-items:center;gap:8px;min-width:0;}
+  .chip-track{
+    display:flex;gap:6px;align-items:center;
+    overflow-x:auto;
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+    padding:2px 0;
+  }
+  .chip-track::-webkit-scrollbar{display:none;}
   .filter-label{
     font-family:var(--mono);
     font-size:11px;
     text-transform:uppercase;
     letter-spacing:0.6px;
     color:#8B97AD;
+    flex:none;
   }
   .chip{
-    border:1px solid rgba(255,255,255,0.22);
+    border:1px solid rgba(255,255,255,0.25);
     background:transparent;
     color:#D7DCE6;
     padding:5px 12px;
@@ -111,12 +122,21 @@
     font-family:var(--sans);
     cursor:pointer;
     transition:all .15s ease;
+    white-space:nowrap;
+    flex:none;
   }
-  .chip:hover{border-color:rgba(255,255,255,0.5);}
-  .chip.active{background:#EDEFF4;color:var(--navy);border-color:#EDEFF4;font-weight:600;}
+  .chip:hover{border-color:rgba(255,255,255,0.55);}
+  /* estado ativo PRESERVA a cor do eixo (definida inline via --chip-c) */
+  .chip.active{
+    background:var(--chip-c, #EDEFF4);
+    border-color:var(--chip-c, #EDEFF4);
+    color:#fff;
+    font-weight:600;
+  }
+  .chip.active.neutral{background:#EDEFF4;color:var(--navy);border-color:#EDEFF4;}
   select#period-select{
     background:transparent;
-    border:1px solid rgba(255,255,255,0.22);
+    border:1px solid rgba(255,255,255,0.25);
     color:#D7DCE6;
     padding:5px 10px;
     border-radius:6px;
@@ -124,22 +144,51 @@
     font-size:12.5px;
   }
   select#period-select option{color:var(--ink);}
+  #search-input{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.25);
+    color:#EDEFF4;
+    padding:5px 12px;
+    border-radius:20px;
+    font-family:var(--sans);
+    font-size:12.5px;
+    width:180px;
+  }
+  #search-input::placeholder{color:#8B97AD;}
+  #clear-filters{
+    display:none;
+    background:none;border:none;
+    color:#E8B25C;
+    font-family:var(--mono);
+    font-size:11.5px;
+    cursor:pointer;
+    text-decoration:underline;
+    padding:4px 0;
+  }
+  #clear-filters.visible{display:inline;}
 
   /* ---------- layout ---------- */
-  main{max-width:1280px;margin:0 auto;padding:28px 32px 64px;}
+  main{max-width:1280px;margin:0 auto;padding:24px 32px 64px;}
 
   .kpi-row{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:16px;
-    margin-bottom:20px;
+    gap:14px;
+    margin-bottom:26px;
   }
   .kpi-card{
     background:var(--paper-card);
     border:1px solid var(--line);
     border-radius:var(--radius);
-    padding:18px 20px;
+    padding:16px 18px;
+    text-align:left;
+    font-family:var(--sans);
+    cursor:pointer;
+    transition:border-color .15s ease, transform .1s ease;
   }
+  .kpi-card:hover{border-color:var(--navy-soft);}
+  .kpi-card:active{transform:scale(0.99);}
+  .kpi-card.filter-on{border-color:var(--navy);box-shadow:inset 0 0 0 1px var(--navy);}
   .kpi-label{
     font-family:var(--mono);
     font-size:11px;
@@ -150,130 +199,34 @@
   }
   .kpi-value{
     font-family:var(--serif);
-    font-size:32px;
+    font-size:30px;
     font-weight:600;
-    line-height:1;
+    line-height:1.05;
   }
-  .kpi-sub{font-size:12.5px;color:var(--muted);margin-top:6px;}
+  .kpi-sub{font-size:12px;color:var(--muted);margin-top:6px;}
 
-  .chart-row{
-    display:grid;
-    grid-template-columns:1.3fr 1fr;
-    gap:16px;
-    margin-bottom:28px;
-  }
-  @media (max-width:860px){.chart-row{grid-template-columns:1fr;}}
-  .chart-card{
-    background:var(--paper-card);
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    padding:18px 20px;
-  }
-  .chart-card h3{
-    font-family:var(--sans);
-    font-size:13px;
-    font-weight:600;
-    margin:0 0 14px;
-    color:var(--ink);
-  }
-  .chart-card canvas{max-height:220px;}
-
-  /* ---------- feed ---------- */
-  .feed-header{
+  /* ---------- camadas de leitura ---------- */
+  .tier{margin-bottom:30px;}
+  .tier-heading{
     display:flex;
-    justify-content:space-between;
     align-items:baseline;
-    margin-bottom:6px;
+    gap:10px;
+    margin-bottom:4px;
   }
-  .feed-header h2{
+  .tier-heading h2{
     font-family:var(--serif);
     font-size:20px;
     font-weight:600;
     margin:0;
-  }
-  .feed-count{font-family:var(--mono);font-size:12px;color:var(--muted);}
-
-  .axis-section{margin-top:26px;}
-  .axis-heading{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:12px;
-  }
-  .axis-dot{width:9px;height:9px;border-radius:50%;flex:none;}
-  .axis-heading h3{
-    font-family:var(--sans);
-    font-size:14px;
-    font-weight:600;
-    margin:0;
-  }
-  .axis-heading .count{font-family:var(--mono);font-size:12px;color:var(--muted);}
-
-  .item-card{
-    background:var(--paper-card);
-    border:1px solid var(--line);
-    border-left:3px solid var(--line);
-    border-radius:8px;
-    padding:14px 16px;
-    margin-bottom:10px;
-  }
-  .item-card.trigger{border-left-color:var(--axis-risco);}
-  .item-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    gap:12px;
-    flex-wrap:wrap;
-  }
-  .item-title{font-size:14.5px;font-weight:600;line-height:1.4;}
-  .item-group{
-    font-family:var(--mono);
-    font-size:11px;
-    color:var(--muted);
-    white-space:nowrap;
-  }
-  .item-why{font-size:13.5px;color:#3A3F49;margin-top:6px;line-height:1.5;}
-  .item-foot{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-top:10px;
-    font-size:12px;
-    color:var(--muted);
-  }
-  .item-tags{display:flex;gap:6px;flex-wrap:wrap;}
-  .tag{
-    font-family:var(--mono);
-    font-size:10.5px;
-    padding:2px 7px;
-    border-radius:10px;
-    color:#fff;
-  }
-  .trigger-badge{
-    font-family:var(--mono);
-    font-size:10.5px;
-    color:var(--axis-risco);
-    border:1px solid var(--axis-risco);
-    padding:1px 7px;
-    border-radius:10px;
-  }
-  .empty-state{
-    text-align:center;
-    padding:60px 20px;
-    color:var(--muted);
-    font-size:14px;
-  }
-
-  /* ---------- alertas fixos ---------- */
-  .alerts-section{margin-bottom:28px;}
-  .alerts-section h2{
-    font-family:var(--serif);
-    font-size:18px;
-    font-weight:600;
-    margin:0 0 10px;
     display:flex;
     align-items:center;
     gap:9px;
+  }
+  .tier-heading .count{font-family:var(--mono);font-size:12px;color:var(--muted);}
+  .tier-desc{
+    font-size:12.5px;
+    color:var(--muted);
+    margin:0 0 12px;
   }
   .pulse-dot{
     width:8px;height:8px;border-radius:50%;
@@ -286,8 +239,106 @@
     70%{box-shadow:0 0 0 7px rgba(161,61,43,0);}
     100%{box-shadow:0 0 0 0 rgba(161,61,43,0);}
   }
+  @media (prefers-reduced-motion: reduce){
+    .pulse-dot{animation:none;}
+  }
+  .tier-empty{
+    font-size:13px;
+    color:var(--muted);
+    padding:14px 16px;
+    background:var(--paper-card);
+    border:1px dashed var(--line);
+    border-radius:8px;
+  }
+  .tier-empty.quiet{background:transparent;border:none;padding:6px 0;}
 
-  /* ---------- badges extra ---------- */
+  /* ---------- cards ---------- */
+  .item-card{
+    background:var(--paper-card);
+    border:1px solid var(--line);
+    border-left:3px solid var(--line);
+    border-radius:8px;
+    padding:13px 16px;
+    margin-bottom:10px;
+  }
+  .item-card.trigger{
+    border-left-color:var(--axis-risco);
+    background:#FDF9F7;
+  }
+  .item-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:12px;
+  }
+  .item-title{
+    font-size:14.5px;
+    font-weight:600;
+    line-height:1.4;
+    display:flex;
+    align-items:flex-start;
+    gap:8px;
+  }
+  .axis-dot{width:9px;height:9px;border-radius:50%;flex:none;margin-top:5px;}
+  .item-title a{text-decoration:none;}
+  .item-title a:hover{text-decoration:underline;}
+  .item-meta{
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--muted);
+    white-space:nowrap;
+    flex:none;
+    padding-top:2px;
+  }
+  .item-why{
+    font-size:13.5px;
+    color:#3A3F49;
+    margin-top:6px;
+    line-height:1.55;
+  }
+  .item-foot{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+    margin-top:10px;
+    font-size:12px;
+    color:var(--muted);
+    flex-wrap:wrap;
+  }
+  .item-tags{display:flex;gap:6px;flex-wrap:wrap;align-items:center;}
+  .tag{
+    font-family:var(--mono);
+    font-size:10.5px;
+    padding:2px 7px;
+    border-radius:10px;
+    color:#fff;
+  }
+  .trigger-badge{
+    font-family:var(--mono);
+    font-size:10.5px;
+    font-weight:500;
+    color:#fff;
+    background:var(--axis-risco);
+    padding:2px 8px;
+    border-radius:10px;
+  }
+  .spec-badge{
+    font-family:var(--mono);
+    font-size:10.5px;
+    color:var(--axis-prod);
+    border:1px dashed var(--axis-prod);
+    padding:1px 7px;
+    border-radius:10px;
+  }
+  .channel-badge{
+    font-family:var(--mono);
+    font-size:10.5px;
+    padding:2px 8px;
+    border-radius:10px;
+    background:var(--navy);
+    color:#BFE9DF;
+  }
   .relevance-badge{
     font-family:var(--mono);
     font-size:10.5px;
@@ -296,43 +347,115 @@
   }
   .relevance-badge.alta{background:var(--ink);color:#fff;}
   .relevance-badge.media{border:1px solid var(--muted);color:var(--muted);}
-  .source-badge{
-    font-family:var(--mono);
-    font-size:10.5px;
-    padding:1px 7px;
-    border-radius:10px;
-    background:rgba(30,138,122,0.14);
-    color:var(--axis-tech);
-  }
+  .source-line a{color:var(--muted);}
 
-  /* ---------- cards colapsáveis ---------- */
-  details.item-card summary{
+  /* ---------- contexto: linhas compactas agrupadas por dia ---------- */
+  .day-label{
+    font-family:var(--mono);
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    color:var(--muted);
+    margin:16px 0 8px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .day-label::after{content:'';flex:1;height:1px;background:var(--line);}
+  .ctx-row{
+    background:var(--paper-card);
+    border:1px solid var(--line);
+    border-left:3px solid var(--line);
+    border-radius:8px;
+    padding:10px 14px;
+    margin-bottom:6px;
+  }
+  .ctx-row summary{
     list-style:none;
     cursor:pointer;
     display:flex;
     justify-content:space-between;
-    align-items:center;
+    align-items:flex-start;
     gap:12px;
-    flex-wrap:wrap;
   }
-  details.item-card summary::-webkit-details-marker{display:none;}
-  details.item-card summary::after{
-    content:'+';
-    font-family:var(--mono);
+  .ctx-row summary::-webkit-details-marker{display:none;}
+  .ctx-main{display:flex;align-items:flex-start;gap:8px;min-width:0;flex:1;}
+  .ctx-title{font-size:13.5px;font-weight:600;line-height:1.4;}
+  .ctx-why{
+    font-size:12.5px;
     color:var(--muted);
-    font-size:16px;
-    flex:none;
-    margin-left:8px;
+    line-height:1.5;
+    margin-top:3px;
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
   }
-  details.item-card[open] summary::after{content:'–';}
-  .item-summary-main{display:flex;align-items:center;gap:8px;min-width:0;flex:1;}
-  .item-summary-meta{
+  .ctx-row[open] .ctx-why{display:block;color:#3A3F49;}
+  .ctx-row .item-foot{margin-top:8px;display:none;}
+  .ctx-row[open] .item-foot{display:flex;}
+
+  #load-more{
+    display:block;
+    margin:14px auto 0;
+    background:var(--paper-card);
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:8px 22px;
+    font-family:var(--sans);
+    font-size:13px;
+    cursor:pointer;
+  }
+  #load-more:hover{border-color:var(--navy-soft);}
+
+  /* ---------- gráficos ---------- */
+  .charts-note{
     font-family:var(--mono);
     font-size:11px;
     color:var(--muted);
-    white-space:nowrap;
+    margin:-6px 0 12px;
   }
-  details.item-card .item-body{margin-top:10px;}
+  .chart-row{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:14px;
+    margin-bottom:8px;
+  }
+  @media (max-width:860px){.chart-row{grid-template-columns:1fr;}}
+  .chart-card{
+    background:var(--paper-card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:16px 18px;
+  }
+  .chart-card h3{
+    font-family:var(--sans);
+    font-size:13px;
+    font-weight:600;
+    margin:0 0 12px;
+  }
+  .chart-card canvas{max-height:200px;}
+  .chart-full{margin-bottom:14px;}
+
+  /* ---------- estado vazio diagnóstico ---------- */
+  .empty-state{
+    text-align:center;
+    padding:44px 20px;
+    color:var(--muted);
+    font-size:14px;
+    background:var(--paper-card);
+    border:1px dashed var(--line);
+    border-radius:var(--radius);
+    line-height:1.7;
+  }
+  .empty-state button{
+    background:none;border:none;
+    color:var(--axis-rv);
+    font-size:14px;
+    cursor:pointer;
+    text-decoration:underline;
+    padding:0;
+  }
 
   footer{
     max-width:1280px;
@@ -342,6 +465,16 @@
     color:var(--muted);
     font-family:var(--mono);
   }
+
+  @media (max-width:700px){
+    header{padding:18px 16px 14px;}
+    main{padding:18px 16px 48px;}
+    .filters{gap:8px 14px;}
+    .filter-block{width:100%;}
+    #search-input{width:100%;}
+    .item-top{flex-direction:column;gap:4px;}
+    .item-meta{padding-top:0;}
+  }
 </style>
 </head>
 <body>
@@ -349,7 +482,7 @@
 <header>
   <div class="header-top">
     <div class="brand">
-      <svg class="radar-mark" viewBox="0 0 100 100">
+      <svg class="radar-mark" viewBox="0 0 100 100" aria-hidden="true">
         <circle cx="50" cy="50" r="46" fill="none" stroke="#3A4A65" stroke-width="1.5"/>
         <circle cx="50" cy="50" r="31" fill="none" stroke="#3A4A65" stroke-width="1.5"/>
         <circle cx="50" cy="50" r="16" fill="none" stroke="#3A4A65" stroke-width="1.5"/>
@@ -378,11 +511,11 @@
   <div class="filters">
     <div class="filter-block">
       <span class="filter-label">Eixo</span>
-      <div id="axis-chips"></div>
+      <div class="chip-track" id="axis-chips"></div>
     </div>
     <div class="filter-block">
       <span class="filter-label">Concorrente</span>
-      <div id="competitor-chips"></div>
+      <div class="chip-track" id="competitor-chips"></div>
     </div>
     <div class="filter-block">
       <span class="filter-label">Período</span>
@@ -393,42 +526,68 @@
         <option value="99999">Tudo</option>
       </select>
     </div>
+    <div class="filter-block">
+      <input type="search" id="search-input" placeholder="Buscar no radar…" aria-label="Buscar itens">
+    </div>
+    <button id="clear-filters">limpar filtros</button>
   </div>
 </header>
 
 <main>
-  <section class="alerts-section" id="alerts-section" style="display:none;">
-    <h2><span class="pulse-dot"></span>Últimos Alertas</h2>
-    <div id="alerts-feed"></div>
-  </section>
-
   <section class="kpi-row" id="kpi-row"></section>
 
-  <section class="chart-card" style="margin-bottom:16px;">
-    <h3>Itens ao longo do tempo (todo o histórico, por semana)</h3>
-    <canvas id="trend-chart"></canvas>
+  <section class="tier" id="tier-trigger">
+    <div class="tier-heading">
+      <h2><span class="pulse-dot"></span>Exige atenção</h2>
+      <span class="count" id="count-trigger"></span>
+    </div>
+    <p class="tier-desc">Gatilhos do período — fatos que pedem leitura hoje. O código no selo diz o motivo: LANC lançamento · PRICE preço/alavancagem · REG regulação · INC incidente · MA aquisição · LID liderança · TERMS termos.</p>
+    <div id="feed-trigger"></div>
   </section>
 
-  <section class="chart-row">
-    <div class="chart-card">
-      <h3>Itens por eixo</h3>
-      <canvas id="axis-chart"></canvas>
+  <section class="tier" id="tier-alta">
+    <div class="tier-heading">
+      <h2>Alta relevância</h2>
+      <span class="count" id="count-alta"></span>
     </div>
-    <div class="chart-card">
-      <h3>Itens por concorrente</h3>
-      <canvas id="competitor-chart"></canvas>
+    <p class="tier-desc">Movimentos concretos dos concorrentes que não exigem ação imediata, mas moldam o jogo.</p>
+    <div id="feed-alta"></div>
+  </section>
+
+  <section class="tier" id="tier-charts">
+    <div class="tier-heading"><h2>Panorama</h2></div>
+    <p class="charts-note">Os gráficos refletem os filtros ativos.</p>
+    <div class="chart-card chart-full">
+      <h3>Itens ao longo do tempo (por semana)</h3>
+      <canvas id="trend-chart"></canvas>
+    </div>
+    <div class="chart-row">
+      <div class="chart-card">
+        <h3>Itens por eixo</h3>
+        <canvas id="axis-chart"></canvas>
+      </div>
+      <div class="chart-card">
+        <h3>Itens por concorrente</h3>
+        <canvas id="competitor-chart"></canvas>
+      </div>
     </div>
   </section>
 
-  <div class="feed-header">
-    <h2>Itens monitorados</h2>
-    <span class="feed-count" id="feed-count"></span>
-  </div>
-  <div id="feed"></div>
+  <section class="tier" id="tier-ctx">
+    <div class="tier-heading">
+      <h2>Contexto</h2>
+      <span class="count" id="count-ctx"></span>
+    </div>
+    <p class="tier-desc">Sinais de acompanhamento, por dia. Clique numa linha para ver fontes e detalhes.</p>
+    <div id="feed-ctx"></div>
+    <button id="load-more" style="display:none;">Mostrar mais 30</button>
+  </section>
+
+  <div id="empty-holder"></div>
 </main>
 
 <footer>
-  Radar de Mercado — inteligência competitiva interna · dados coletados via portais de notícia e fontes públicas · não é aconselhamento de investimento
+  Radar de Mercado — inteligência competitiva interna · notícias, app stores, sinais de incidente e sociais · não é aconselhamento de investimento
 </footer>
 
 <script>
@@ -439,35 +598,48 @@ const AXIS_COLORS = {
   "Produtos Novos": "#B8842E",
   "Risco/Regulação": "#A13D2B",
 };
+const CHANNEL_LABELS = {
+  "Google Play": "app store",
+  "Google Play (reviews)": "reviews",
+  "Reddit": "reddit",
+  "Google Trends": "trends",
+  "Reclame Aqui": "reclame aqui",
+};
+const CTX_PAGE = 30;
 
-// Dados de exemplo — usados quando data.json ainda não existe (antes do
-// primeiro run do GitHub Actions) ou não pôde ser carregado. Baseados em
-// itens reais validados durante a construção do radar.
+// Dados de exemplo — usados quando data.json ainda não existe.
 const SAMPLE_DATA = {
   generated_at: null,
   items: [
-    {competitor_group:"XP/Clear/Rico", title:"Clear relança plataforma com execução abaixo de 50ms e alavancagem intraday de até 300x", link:"#", source:"InfoMoney", published_at:"2026-07-08T12:00:00+00:00", why_it_matters:"A Clear eleva o padrão de velocidade e alavancagem, pressionando concorrentes a acompanharem ou perderem traders de alta frequência.", axes:["RV/Trading","Tecnologia","Produtos Novos","Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[]},
-    {competitor_group:"BTG Pactual", title:"BTG Pactual lança BTG Trends, plataforma de mercados de previsão", link:"#", source:"Money Times", published_at:"2026-07-09T09:00:00+00:00", why_it_matters:"O BTG inova com derivativos binários, produto novo que pode atrair clientes sofisticados, com alcance inicial limitado por restrição a investidores qualificados.", axes:["Produtos Novos","Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[{source:"Seu Dinheiro", link:"#"}]},
-    {competitor_group:"Genial", title:"Genial eleva alavancagem para até 312x e lança assistente de IA QINV", link:"#", source:"Seu Dinheiro", published_at:"2026-07-10T15:00:00+00:00", why_it_matters:"Genial supera a concorrência em alavancagem máxima, atraindo day traders agressivos e aumentando o risco de escrutínio regulatório.", axes:["RV/Trading","Tecnologia","Produtos Novos","Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[]},
-    {competitor_group:"Múltiplos/Setor", title:"CVM publica Ofício-Circular esclarecendo regras de alavancagem em fundos de investimento", link:"#", source:"gov.br/CVM", published_at:"2026-07-11T10:00:00+00:00", why_it_matters:"Reduz incertezas sobre margens, beneficiando corretoras que oferecem alavancagem, mas exige compliance mais rigoroso.", axes:["Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[]},
-    {competitor_group:"XP/Clear/Rico", title:"Relatório do BTG aponta pivô estratégico da XP para crédito corporativo; CFO é trocado", link:"#", source:"Finsiders Brasil", published_at:"2026-07-06T18:50:00+00:00", why_it_matters:"A troca de CFO e o foco em crédito corporativo indicam reorientação estratégica que pode abrir espaço para concorrentes focados em varejo.", axes:["Produtos Novos"], daily_trigger:false, relevance:"média", also_reported_by:[]},
+    {competitor_group:"Genial", title:"Genial eleva alavancagem para até 312x e lança assistente de IA QINV", link:"#", source:"Seu Dinheiro", published_at:"2026-07-10T15:00:00+00:00", why_it_matters:"Genial supera a concorrência em alavancagem máxima, atraindo day traders agressivos.", axes:["RV/Trading","Tecnologia"], daily_trigger:true, trigger_reason:"PRICE", relevance:"alta", confirmation:"confirmado", also_reported_by:[]},
+    {competitor_group:"XP/Clear/Rico", title:"Clear relança plataforma com execução abaixo de 50ms", link:"#", source:"InfoMoney", published_at:"2026-07-08T12:00:00+00:00", why_it_matters:"A Clear eleva o padrão de velocidade, pressionando concorrentes.", axes:["RV/Trading","Tecnologia"], daily_trigger:true, trigger_reason:"LANC", relevance:"alta", confirmation:"confirmado", also_reported_by:[]},
+    {competitor_group:"BTG Pactual", title:"BTG conclui aquisição do HSBC Uruguai", link:"#", source:"Estadão", published_at:"2026-07-14T17:00:00+00:00", why_it_matters:"Expansão internacional fortalece a marca — contexto estratégico, não sinal de campo.", axes:["Produtos Novos"], daily_trigger:false, relevance:"média", confirmation:"confirmado", also_reported_by:[]},
   ]
 };
 
 let RAW_ITEMS = [];
 let ACTIVE_AXES = new Set();
 let ACTIVE_COMPETITORS = new Set();
+let QUERY = "";
+let TRIGGER_ONLY = false;
+let CTX_SHOWN = CTX_PAGE;
 let axisChart, competitorChart, trendChart;
 
 function fmtDate(iso){
   const d = new Date(iso);
   return d.toLocaleDateString('pt-BR', {day:'2-digit', month:'2-digit', year:'numeric'});
 }
-
+function fmtDayLabel(iso){
+  const d = new Date(iso);
+  return d.toLocaleDateString('pt-BR', {weekday:'long', day:'2-digit', month:'2-digit'});
+}
 function escapeHtml(str){
   const div = document.createElement('div');
   div.textContent = str ?? '';
   return div.innerHTML;
+}
+function escapeAttr(str){
+  return String(str ?? '').replace(/"/g, '&quot;');
 }
 
 async function loadData(){
@@ -482,38 +654,89 @@ async function loadData(){
   }
 }
 
+/* ---------------- filtros ---------------- */
+
+function periodDays(){
+  return parseInt(document.getElementById('period-select').value, 10);
+}
+
+function matchesFilters(item, opts){
+  opts = opts || {};
+  if(!opts.ignorePeriod){
+    const cutoff = new Date();
+    cutoff.setDate(cutoff.getDate() - periodDays());
+    if(new Date(item.published_at) < cutoff) return false;
+  }
+  const axes = item.axes || [];
+  if(!opts.ignoreAxes && ACTIVE_AXES.size && !axes.some(a => ACTIVE_AXES.has(a))) return false;
+  if(!opts.ignoreComp && ACTIVE_COMPETITORS.size && !ACTIVE_COMPETITORS.has(item.competitor_group)) return false;
+  if(!opts.ignoreTrigger && TRIGGER_ONLY && !item.daily_trigger) return false;
+  if(!opts.ignoreQuery && QUERY){
+    const hay = (item.title + ' ' + (item.why_it_matters || '') + ' ' + item.competitor_group + ' ' + (item.source || '')).toLowerCase();
+    if(!hay.includes(QUERY)) return false;
+  }
+  return true;
+}
+
+function filteredItems(){
+  return RAW_ITEMS
+    .filter(item => matchesFilters(item))
+    .sort((a,b) => new Date(b.published_at) - new Date(a.published_at));
+}
+
+function anyFilterActive(){
+  return ACTIVE_AXES.size || ACTIVE_COMPETITORS.size || QUERY || TRIGGER_ONLY;
+}
+
+/* ---------------- chips ---------------- */
+
 function buildChips(container, values, activeSet, colorFn, onToggle){
   container.innerHTML = '';
   values.forEach(v => {
     const chip = document.createElement('button');
-    chip.className = 'chip' + (activeSet.has(v) ? ' active' : '');
+    const active = activeSet.has(v);
+    chip.className = 'chip' + (active ? ' active' : '') + (colorFn ? '' : ' neutral');
     chip.textContent = v;
+    chip.setAttribute('aria-pressed', active ? 'true' : 'false');
     if(colorFn){
-      chip.style.borderColor = colorFn(v);
+      const c = colorFn(v);
+      chip.style.borderColor = c;
+      chip.style.setProperty('--chip-c', c);
     }
     chip.onclick = () => { onToggle(v); render(); };
     container.appendChild(chip);
   });
 }
 
-function filteredItems(){
-  const periodDays = parseInt(document.getElementById('period-select').value, 10);
-  const cutoff = new Date();
-  cutoff.setDate(cutoff.getDate() - periodDays);
-
-  return RAW_ITEMS.filter(item => {
-    if(new Date(item.published_at) < cutoff) return false;
-    if(ACTIVE_AXES.size && !item.axes.some(a => ACTIVE_AXES.has(a))) return false;
-    if(ACTIVE_COMPETITORS.size && !ACTIVE_COMPETITORS.has(item.competitor_group)) return false;
-    return true;
-  }).sort((a,b) => new Date(b.published_at) - new Date(a.published_at));
+function rebuildChips(){
+  const competitors = [...new Set(RAW_ITEMS.map(i => i.competitor_group))];
+  buildChips(document.getElementById('axis-chips'), AXES, ACTIVE_AXES, a => AXIS_COLORS[a], v => {
+    ACTIVE_AXES.has(v) ? ACTIVE_AXES.delete(v) : ACTIVE_AXES.add(v);
+  });
+  buildChips(document.getElementById('competitor-chips'), competitors, ACTIVE_COMPETITORS, null, v => {
+    ACTIVE_COMPETITORS.has(v) ? ACTIVE_COMPETITORS.delete(v) : ACTIVE_COMPETITORS.add(v);
+  });
+  document.getElementById('clear-filters').classList.toggle('visible', !!anyFilterActive());
 }
+
+function clearAllFilters(){
+  ACTIVE_AXES.clear();
+  ACTIVE_COMPETITORS.clear();
+  TRIGGER_ONLY = false;
+  QUERY = "";
+  document.getElementById('search-input').value = "";
+  document.getElementById('period-select').value = "30";
+  CTX_SHOWN = CTX_PAGE;
+  render();
+}
+
+/* ---------------- KPIs (clicáveis) ---------------- */
 
 function renderKPIs(items){
   const triggers = items.filter(i => i.daily_trigger).length;
   const axisCounts = {};
   AXES.forEach(a => axisCounts[a] = 0);
-  items.forEach(i => i.axes.forEach(a => { if(axisCounts[a] !== undefined) axisCounts[a]++; }));
+  items.forEach(i => (i.axes || []).forEach(a => { if(axisCounts[a] !== undefined) axisCounts[a]++; }));
   const topAxis = Object.entries(axisCounts).sort((a,b) => b[1]-a[1])[0];
 
   const compCounts = {};
@@ -521,29 +744,192 @@ function renderKPIs(items){
   const topComp = Object.entries(compCounts).sort((a,b) => b[1]-a[1])[0];
 
   const kpis = [
-    {label:'Itens no período', value: items.length, sub: `${document.getElementById('period-select').value} dias`},
-    {label:'Alertas de gatilho', value: triggers, sub: 'risco, comunicado, lançamento ou regulação'},
-    {label:'Eixo mais ativo', value: topAxis ? topAxis[0] : '—', sub: topAxis ? `${topAxis[1]} itens` : ''},
-    {label:'Concorrente mais ativo', value: topComp ? topComp[0] : '—', sub: topComp ? `${topComp[1]} itens` : ''},
+    {id:'kpi-total', label:'Itens no período', value: items.length, sub: anyFilterActive() ? 'com filtros ativos · clique para limpar' : ('últimos ' + periodDays() + ' dias'), on: anyFilterActive()},
+    {id:'kpi-trigger', label:'Exigem atenção', value: triggers, sub: TRIGGER_ONLY ? 'filtrando só gatilhos · clique para desfazer' : 'gatilhos · clique para ver só eles', on: TRIGGER_ONLY},
+    {id:'kpi-axis', label:'Eixo mais ativo', value: topAxis && topAxis[1] ? topAxis[0] : '—', sub: topAxis && topAxis[1] ? (topAxis[1] + ' itens · clique para filtrar') : '', on: !!(topAxis && ACTIVE_AXES.has(topAxis[0]))},
+    {id:'kpi-comp', label:'Concorrente mais ativo', value: topComp ? topComp[0] : '—', sub: topComp ? (topComp[1] + ' itens · clique para filtrar') : '', on: !!(topComp && ACTIVE_COMPETITORS.has(topComp[0]))},
   ];
 
   const row = document.getElementById('kpi-row');
   row.innerHTML = kpis.map(k => `
-    <div class="kpi-card">
+    <button class="kpi-card ${k.on ? 'filter-on' : ''}" id="${k.id}">
       <div class="kpi-label">${k.label}</div>
-      <div class="kpi-value" style="font-size:${k.value.toString().length > 12 ? '18px' : '32px'}">${k.value}</div>
+      <div class="kpi-value" style="font-size:${String(k.value).length > 12 ? '17px' : '30px'}">${escapeHtml(String(k.value))}</div>
       <div class="kpi-sub">${k.sub}</div>
-    </div>
+    </button>
   `).join('');
+
+  document.getElementById('kpi-total').onclick = clearAllFilters;
+  document.getElementById('kpi-trigger').onclick = () => { TRIGGER_ONLY = !TRIGGER_ONLY; render(); };
+  if(topAxis && topAxis[1]){
+    document.getElementById('kpi-axis').onclick = () => {
+      ACTIVE_AXES.has(topAxis[0]) ? ACTIVE_AXES.delete(topAxis[0]) : ACTIVE_AXES.add(topAxis[0]);
+      render();
+    };
+  }
+  if(topComp){
+    document.getElementById('kpi-comp').onclick = () => {
+      ACTIVE_COMPETITORS.has(topComp[0]) ? ACTIVE_COMPETITORS.delete(topComp[0]) : ACTIVE_COMPETITORS.add(topComp[0]);
+      render();
+    };
+  }
 }
 
-function trendItems(){
-  return RAW_ITEMS.filter(item => {
-    if(ACTIVE_AXES.size && !item.axes.some(a => ACTIVE_AXES.has(a))) return false;
-    if(ACTIVE_COMPETITORS.size && !ACTIVE_COMPETITORS.has(item.competitor_group)) return false;
-    return true;
-  });
+/* ---------------- cards ---------------- */
+
+function channelBadge(item){
+  const label = CHANNEL_LABELS[item.source];
+  return label ? `<span class="channel-badge">${label}</span>` : '';
 }
+
+function badgesHtml(item){
+  const parts = [];
+  if(item.daily_trigger){
+    const code = item.trigger_reason ? (' · ' + escapeHtml(item.trigger_reason)) : '';
+    parts.push(`<span class="trigger-badge">gatilho${code}</span>`);
+  }
+  (item.axes || []).forEach(a => parts.push(`<span class="tag" style="background:${AXIS_COLORS[a] || '#6B7280'}">${escapeHtml(a)}</span>`));
+  if(item.confirmation === 'especulativo') parts.push(`<span class="spec-badge">especulativo</span>`);
+  const cb = channelBadge(item);
+  if(cb) parts.push(cb);
+  if(item.relevance) parts.push(`<span class="relevance-badge ${item.relevance === 'alta' ? 'alta' : 'media'}">relevância ${escapeHtml(item.relevance)}</span>`);
+  return parts.join('');
+}
+
+function sourceHtml(item){
+  const extra = item.also_reported_by || [];
+  const primary = `<a href="${escapeAttr(item.link)}" target="_blank" rel="noopener">${escapeHtml(item.source)}</a>`;
+  if(!extra.length) return primary;
+  const extraLinks = extra.map(s => `<a href="${escapeAttr(s.link)}" target="_blank" rel="noopener">${escapeHtml(s.source)}</a>`).join(', ');
+  return `${primary} <span style="color:var(--muted)">também:</span> ${extraLinks}`;
+}
+
+function itemCardHtml(item){
+  const axes = item.axes || [];
+  const borderColor = item.daily_trigger ? 'var(--axis-risco)' : (AXIS_COLORS[axes[0]] || 'var(--line)');
+  return `
+    <article class="item-card ${item.daily_trigger ? 'trigger' : ''}" style="border-left-color:${borderColor}">
+      <div class="item-top">
+        <div class="item-title">
+          <span class="axis-dot" style="background:${AXIS_COLORS[axes[0]] || '#6B7280'}"></span>
+          <a href="${escapeAttr(item.link)}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a>
+        </div>
+        <div class="item-meta">${escapeHtml(item.competitor_group)} · ${fmtDate(item.published_at)}</div>
+      </div>
+      <div class="item-why">${escapeHtml(item.why_it_matters || '')}</div>
+      <div class="item-foot">
+        <div class="item-tags">${badgesHtml(item)}</div>
+        <div class="source-line">${sourceHtml(item)}</div>
+      </div>
+    </article>
+  `;
+}
+
+function ctxRowHtml(item){
+  const axes = item.axes || [];
+  return `
+    <details class="ctx-row" style="border-left-color:${AXIS_COLORS[axes[0]] || 'var(--line)'}">
+      <summary>
+        <div class="ctx-main">
+          <span class="axis-dot" style="background:${AXIS_COLORS[axes[0]] || '#6B7280'}"></span>
+          <div style="min-width:0;">
+            <div class="ctx-title">${escapeHtml(item.title)}</div>
+            <div class="ctx-why">${escapeHtml(item.why_it_matters || '')}</div>
+          </div>
+        </div>
+        <div class="item-meta">${escapeHtml(item.competitor_group)} · ${fmtDate(item.published_at)}</div>
+      </summary>
+      <div class="item-foot">
+        <div class="item-tags">${badgesHtml(item)}</div>
+        <div class="source-line">${sourceHtml(item)}</div>
+      </div>
+    </details>
+  `;
+}
+
+/* ---------------- camadas ---------------- */
+
+function renderTiers(items){
+  const triggers = items.filter(i => i.daily_trigger);
+  const alta = items.filter(i => !i.daily_trigger && i.relevance === 'alta');
+  const ctx = items.filter(i => !i.daily_trigger && i.relevance !== 'alta');
+
+  document.getElementById('count-trigger').textContent = triggers.length + (triggers.length === 1 ? ' item' : ' itens');
+  document.getElementById('count-alta').textContent = alta.length + (alta.length === 1 ? ' item' : ' itens');
+  document.getElementById('count-ctx').textContent = ctx.length + (ctx.length === 1 ? ' item' : ' itens');
+
+  const feedTrigger = document.getElementById('feed-trigger');
+  feedTrigger.innerHTML = triggers.length
+    ? triggers.map(itemCardHtml).join('')
+    : `<div class="tier-empty quiet">Nenhum gatilho no período com esses filtros — dia calmo é o comportamento esperado do radar.</div>`;
+
+  const feedAlta = document.getElementById('feed-alta');
+  feedAlta.innerHTML = alta.length
+    ? alta.map(itemCardHtml).join('')
+    : `<div class="tier-empty quiet">Nada de alta relevância no recorte atual.</div>`;
+
+  // contexto: agrupado por dia, paginado
+  const feedCtx = document.getElementById('feed-ctx');
+  const visible = ctx.slice(0, CTX_SHOWN);
+  const groups = new Map();
+  visible.forEach(item => {
+    const key = item.published_at.slice(0, 10);
+    if(!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(item);
+  });
+  let html = '';
+  for(const [day, dayItems] of groups){
+    html += `<div class="day-group"><div class="day-label">${fmtDayLabel(day + 'T12:00:00Z')}</div>`;
+    html += dayItems.map(ctxRowHtml).join('');
+    html += `</div>`;
+  }
+  feedCtx.innerHTML = html || `<div class="tier-empty quiet">Sem itens de contexto no recorte atual.</div>`;
+
+  const loadBtn = document.getElementById('load-more');
+  if(ctx.length > CTX_SHOWN){
+    loadBtn.style.display = 'block';
+    loadBtn.textContent = 'Mostrar mais ' + Math.min(CTX_PAGE, ctx.length - CTX_SHOWN) + ' (' + (ctx.length - CTX_SHOWN) + ' restantes)';
+  }else{
+    loadBtn.style.display = 'none';
+  }
+}
+
+/* ---------------- estado vazio diagnóstico ---------------- */
+
+function renderEmptyDiagnostic(items){
+  const holder = document.getElementById('empty-holder');
+  const tiers = ['tier-trigger','tier-alta','tier-charts','tier-ctx'];
+  if(items.length){
+    holder.innerHTML = '';
+    tiers.forEach(id => document.getElementById(id).style.display = '');
+    return;
+  }
+  tiers.forEach(id => document.getElementById(id).style.display = 'none');
+
+  // descobre qual dimensão está zerando o resultado
+  const tests = [
+    {label:'o período', count: RAW_ITEMS.filter(i => matchesFilters(i, {ignorePeriod:true})).length, fix: () => { document.getElementById('period-select').value = '99999'; }},
+    {label:'o filtro de eixo', count: ACTIVE_AXES.size ? RAW_ITEMS.filter(i => matchesFilters(i, {ignoreAxes:true})).length : 0, fix: () => ACTIVE_AXES.clear()},
+    {label:'o filtro de concorrente', count: ACTIVE_COMPETITORS.size ? RAW_ITEMS.filter(i => matchesFilters(i, {ignoreComp:true})).length : 0, fix: () => ACTIVE_COMPETITORS.clear()},
+    {label:'a busca', count: QUERY ? RAW_ITEMS.filter(i => matchesFilters(i, {ignoreQuery:true})).length : 0, fix: () => { QUERY = ''; document.getElementById('search-input').value = ''; }},
+    {label:'o filtro de gatilhos', count: TRIGGER_ONLY ? RAW_ITEMS.filter(i => matchesFilters(i, {ignoreTrigger:true})).length : 0, fix: () => { TRIGGER_ONLY = false; }},
+  ];
+  const best = tests.filter(t => t.count > 0).sort((a,b) => b.count - a.count)[0];
+
+  let msg;
+  if(best){
+    msg = 'Nenhum item com essa combinação. Removendo <strong>' + best.label + '</strong>, haveria <strong>' + best.count + '</strong> ' + (best.count === 1 ? 'item' : 'itens') + '. <button id="empty-fix">Remover ' + best.label + '</button> ou <button id="empty-clear">limpar tudo</button>.';
+  }else{
+    msg = 'Nenhum item no radar ainda com qualquer combinação de filtros. <button id="empty-clear">Limpar filtros</button>';
+  }
+  holder.innerHTML = '<div class="empty-state">' + msg + '</div>';
+  const fixBtn = document.getElementById('empty-fix');
+  if(fixBtn && best) fixBtn.onclick = () => { best.fix(); render(); };
+  const clearBtn = document.getElementById('empty-clear');
+  if(clearBtn) clearBtn.onclick = clearAllFilters;
+}
+
+/* ---------------- gráficos ---------------- */
 
 function mondayOf(dateObj){
   const d = new Date(dateObj);
@@ -554,7 +940,8 @@ function mondayOf(dateObj){
 }
 
 function renderTrendChart(){
-  const items = trendItems();
+  // tendência ignora o período (mostra o histórico), mas respeita os demais filtros
+  const items = RAW_ITEMS.filter(i => matchesFilters(i, {ignorePeriod:true}));
   const buckets = {};
   items.forEach(item => {
     const key = mondayOf(new Date(item.published_at)).toISOString().slice(0,10);
@@ -573,7 +960,7 @@ function renderTrendChart(){
 }
 
 function renderCharts(items){
-  const axisCounts = AXES.map(a => items.filter(i => i.axes.includes(a)).length);
+  const axisCounts = AXES.map(a => items.filter(i => (i.axes || []).includes(a)).length);
   const competitors = [...new Set(RAW_ITEMS.map(i => i.competitor_group))];
   const compCounts = competitors.map(c => items.filter(i => i.competitor_group === c).length);
 
@@ -592,77 +979,16 @@ function renderCharts(items){
   });
 }
 
-function sourceHtml(item){
-  const extra = item.also_reported_by || [];
-  const primary = `<a href="${item.link}" target="_blank" rel="noopener">${escapeHtml(item.source)}</a>`;
-  if(!extra.length) return `${primary} · ${fmtDate(item.published_at)}`;
-  const extraLinks = extra.map(s => `<a href="${s.link}" target="_blank" rel="noopener">${escapeHtml(s.source)}</a>`).join(', ');
-  return `${primary} <span style="color:var(--muted)">também:</span> ${extraLinks} · ${fmtDate(item.published_at)}`;
-}
-
-function itemCardHtml(item, defaultOpen){
-  const borderColor = item.daily_trigger ? 'var(--axis-risco)' : AXIS_COLORS[item.axes[0]];
-  const relClass = item.relevance === 'alta' ? 'alta' : 'media';
-  const sourceCount = 1 + (item.also_reported_by || []).length;
-  return `
-    <details ${defaultOpen ? 'open' : ''} class="item-card ${item.daily_trigger ? 'trigger' : ''}" style="border-left-color:${borderColor}">
-      <summary class="item-summary">
-        <span class="item-summary-main">
-          <span class="axis-dot" style="background:${AXIS_COLORS[item.axes[0]]}"></span>
-          <span class="item-title">${escapeHtml(item.title)}</span>
-        </span>
-        <span class="item-summary-meta">${escapeHtml(item.competitor_group)} · ${fmtDate(item.published_at)}</span>
-      </summary>
-      <div class="item-body">
-        <div class="item-why">${escapeHtml(item.why_it_matters)}</div>
-        <div class="item-foot">
-          <div class="item-tags">
-            ${item.axes.map(a => `<span class="tag" style="background:${AXIS_COLORS[a]}">${a}</span>`).join('')}
-            ${item.daily_trigger ? '<span class="trigger-badge">gatilho diário</span>' : ''}
-            ${item.relevance ? `<span class="relevance-badge ${relClass}">relevância ${item.relevance}</span>` : ''}
-            ${sourceCount > 1 ? `<span class="source-badge">${sourceCount} fontes</span>` : ''}
-          </div>
-          <div>${sourceHtml(item)}</div>
-        </div>
-      </div>
-    </details>
-  `;
-}
-
-function alertItems(){
-  const cutoff = new Date();
-  cutoff.setDate(cutoff.getDate() - 7);
-  return RAW_ITEMS.filter(i => i.daily_trigger && new Date(i.published_at) >= cutoff)
-    .sort((a,b) => new Date(b.published_at) - new Date(a.published_at));
-}
-
-function renderAlerts(){
-  const items = alertItems();
-  const section = document.getElementById('alerts-section');
-  if(!items.length){ section.style.display = 'none'; return; }
-  section.style.display = '';
-  document.getElementById('alerts-feed').innerHTML = items.map(i => itemCardHtml(i, true)).join('');
-}
-
-function renderFeed(items){
-  document.getElementById('feed-count').textContent = `${items.length} itens`;
-  const feed = document.getElementById('feed');
-
-  if(!items.length){
-    feed.innerHTML = `<div class="empty-state">Nenhum item encontrado com esses filtros. Tente ampliar o período ou limpar os filtros de eixo/concorrente.</div>`;
-    return;
-  }
-
-  feed.innerHTML = items.map(item => itemCardHtml(item, false)).join('');
-}
+/* ---------------- render ---------------- */
 
 function render(){
   const items = filteredItems();
-  renderAlerts();
+  rebuildChips();
   renderKPIs(items);
+  renderTiers(items);
   renderTrendChart();
   renderCharts(items);
-  renderFeed(items);
+  renderEmptyDiagnostic(items);
 }
 
 async function init(){
@@ -670,30 +996,36 @@ async function init(){
   RAW_ITEMS = items;
 
   document.getElementById('updated-at').textContent = generatedAt
-    ? `Atualizado em ${fmtDate(generatedAt)}`
+    ? 'Atualizado em ' + fmtDate(generatedAt)
     : 'Ainda sem execução automática';
 
   if(sample){
     document.getElementById('sample-flag-holder').innerHTML = '<span class="sample-flag">dados de exemplo</span>';
   }
 
-  const competitors = [...new Set(RAW_ITEMS.map(i => i.competitor_group))];
-  buildChips(document.getElementById('axis-chips'), AXES, ACTIVE_AXES, a => AXIS_COLORS[a], v => {
-    ACTIVE_AXES.has(v) ? ACTIVE_AXES.delete(v) : ACTIVE_AXES.add(v);
+  document.getElementById('period-select').addEventListener('change', () => { CTX_SHOWN = CTX_PAGE; render(); });
+  document.getElementById('search-input').addEventListener('input', (e) => {
+    QUERY = e.target.value.trim().toLowerCase();
+    CTX_SHOWN = CTX_PAGE;
+    render();
   });
-  buildChips(document.getElementById('competitor-chips'), competitors, ACTIVE_COMPETITORS, null, v => {
-    ACTIVE_COMPETITORS.has(v) ? ACTIVE_COMPETITORS.delete(v) : ACTIVE_COMPETITORS.add(v);
+  document.getElementById('clear-filters').addEventListener('click', clearAllFilters);
+  document.getElementById('load-more').addEventListener('click', () => {
+    CTX_SHOWN += CTX_PAGE;
+    render();
   });
-  document.getElementById('period-select').addEventListener('change', render);
 
   render();
 }
 
 // animação sutil do sweep do radar
-document.getElementById('sweep').animate(
-  [{transform:'rotate(0deg)'},{transform:'rotate(360deg)'}],
-  {duration:6000, iterations:Infinity, easing:'linear'}
-);
+const sweepEl = document.getElementById('sweep');
+if(sweepEl && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  sweepEl.animate(
+    [{transform:'rotate(0deg)'},{transform:'rotate(360deg)'}],
+    {duration:6000, iterations:Infinity, easing:'linear'}
+  );
+}
 
 init();
 </script>
