@@ -36,7 +36,6 @@ PLAY_STORE_APPS = {
         "XP Trader": "br.com.tecfinance.xpmobile",
         "Rico": "br.com.rico.mobile",
         "Clear (novo app)": "br.com.xpinc.clear.app.android",
-        "Clear (app legado)": "br.com.clear.app.android",
     },
     "BTG Pactual": {
         "BTG Investimentos": "com.btg.pactual.digital.mobile",

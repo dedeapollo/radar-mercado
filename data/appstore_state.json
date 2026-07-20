@@ -1,0 +1,112 @@
+{
+  "br.com.xp.carteira": {
+    "version": "4.169.0",
+    "recent_changes": "",
+    "score": 3.87,
+    "ratings": 313202,
+    "updated_at": "2026-07-10T14:25:57+00:00",
+    "app_title": "XP Investimentos",
+    "checked_at": "2026-07-20T02:16:09.221698+00:00",
+    "group": "XP/Clear/Rico",
+    "app_name": "XP (app principal)"
+  },
+  "br.com.tecfinance.xpmobile": {
+    "version": "3.0.16",
+    "recent_changes": "",
+    "score": 2.53,
+    "ratings": 9198,
+    "updated_at": "2025-10-27T20:16:00+00:00",
+    "app_title": "XP Trader",
+    "checked_at": "2026-07-20T02:16:09.221698+00:00",
+    "group": "XP/Clear/Rico",
+    "app_name": "XP Trader"
+  },
+  "br.com.rico.mobile": {
+    "version": "4.169.0",
+    "recent_changes": "",
+    "score": 3.94,
+    "ratings": 270169,
+    "updated_at": "2026-07-10T14:31:20+00:00",
+    "app_title": "Rico: só vantagem pra investir",
+    "checked_at": "2026-07-20T02:16:09.221698+00:00",
+    "group": "XP/Clear/Rico",
+    "app_name": "Rico"
+  },
+  "br.com.xpinc.clear.app.android": {
+    "version": "4.169.0",
+    "recent_changes": "",
+    "score": 3.26,
+    "ratings": 10498,
+    "updated_at": "2026-07-10T14:27:07+00:00",
+    "app_title": "Clear",
+    "checked_at": "2026-07-20T02:16:09.221698+00:00",
+    "group": "XP/Clear/Rico",
+    "app_name": "Clear (novo app)"
+  },
+  "com.btg.pactual.digital.mobile": {
+    "version": "9.6.131",
+    "recent_changes": "",
+    "score": 4.61,
+    "ratings": 83675,
+    "updated_at": "2026-07-13T22:42:23+00:00",
+    "app_title": "BTG Pactual Investimentos",
+    "checked_at": "2026-07-20T02:16:09.221698+00:00",
+    "group": "BTG Pactual",
+    "app_name": "BTG Investimentos"
+  },
+  "com.btg.pactual.homebroker.mobile": {
+    "version": "10.5.1",
+    "recent_changes": "",
+    "score": 4.12,
+    "ratings": 6613,
+    "updated_at": "2026-07-17T21:02:49+00:00",
+    "app_title": "BTG Pactual Trader",
+    "checked_at": "2026-07-20T02:16:09.221698+00:00",
+    "group": "BTG Pactual",
+    "app_name": "BTG Pactual Trader"
+  },
+  "com.itau.investimentos": {
+    "version": "3.15.0",
+    "recent_changes": "",
+    "score": 4.34,
+    "ratings": 47958,
+    "updated_at": "2026-07-13T12:51:53+00:00",
+    "app_title": "íon Itaú: investir com taxa 0",
+    "checked_at": "2026-07-20T02:16:09.221698+00:00",
+    "group": "Itaú/Íon",
+    "app_name": "íon Itaú"
+  },
+  "br.com.valemobi.agora": {
+    "version": "1.305",
+    "recent_changes": "",
+    "score": 4.78,
+    "ratings": 50235,
+    "updated_at": "2026-07-15T00:07:40+00:00",
+    "app_title": "Ágora Investimentos",
+    "checked_at": "2026-07-20T02:16:09.221698+00:00",
+    "group": "Bradesco/Ágora",
+    "app_name": "Ágora Investimentos"
+  },
+  "com.br.GeraTech.Genial.NovaPlataforma": {
+    "version": "7.21.0",
+    "recent_changes": "",
+    "score": 3.75,
+    "ratings": 19035,
+    "updated_at": "2026-07-03T20:23:42+00:00",
+    "app_title": "Genial Investimentos",
+    "checked_at": "2026-07-20T02:16:09.221698+00:00",
+    "group": "Genial",
+    "app_name": "Genial Investimentos"
+  },
+  "com.br.GeraTech.Genial.HB.Nelogica": {
+    "version": "1.20.310",
+    "recent_changes": "",
+    "score": 3.04,
+    "ratings": 355,
+    "updated_at": "2025-05-13T14:50:36+00:00",
+    "app_title": "Genial HB",
+    "checked_at": "2026-07-20T02:16:09.221698+00:00",
+    "group": "Genial",
+    "app_name": "Genial HB"
+  }
+}

@@ -245,7 +245,7 @@ def fetch_trends_interest() -> dict[str, dict] | None:
         return None
     try:
         terms = list(SOCIAL_TRENDS_TERMS.values())[:5]
-        pt = TrendReq(hl="pt-BR", tz=180)
+        pt = TrendReq(hl="pt-BR", tz=180, timeout=(10, 25), retries=3, backoff_factor=2)
         pt.build_payload(terms, timeframe="now 7-d", geo="BR")
         df = pt.interest_over_time()
         if df is None or df.empty:
