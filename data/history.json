@@ -268,5 +268,27 @@
     "why_it_matters": "BTG avalia aquisição do Digimais, banco digital ligado à Igreja Universal, o que poderia expandir sua base de clientes de varejo, mas ainda é rumor.",
     "relevance": "média",
     "also_reported_by": []
+  },
+  {
+    "competitor_group": "BTG Pactual",
+    "matched_alias": "BTG Pactual",
+    "title": "2ª Copa BTG Trader: Após reunir 60 mil inscritos, campeonato ganha nova edição com prêmio de R$ 1 milhão - Money Times",
+    "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPVlpKQ3BTaE50SWJOcDZGQ1JUa3BEemhiSVZZUjU4dVV3V2lYUHlhdkhEVnBLbnFNYXA2cnl5VDR3UlFJZTMtUm9xRElzdFpTVXROZDYxVVU1TGlZWEpNS0xTZlZkZGl6bUhKc1l3ck0xZW9ycENUcFIwWHJaZmg1S3Rya1Jpd250N0I2QTlnNGhGdnYzb2p0LUJHZXpnckNXcWtZbmtLelQ3YTlOZ2tnbHNFcHdjWGctWmtENFluY1VqODZiS0draUtzSUE?oc=5",
+    "source": "Money Times",
+    "published_at": "2026-07-20T10:00:00+00:00",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxPVlpKQ3BTaE50SWJOcDZGQ1JUa3BEemhiSVZZUjU4dVV3V2lYUHlhdkhEVnBLbnFNYXA2cnl5VDR3UlFJZTMtUm9xRElzdFpTVXROZDYxVVU1TGlZWEpNS0xTZlZkZGl6bUhKc1l3ck0xZW9ycENUcFIwWHJaZmg1S3Rya1Jpd250N0I2QTlnNGhGdnYzb2p0LUJHZXpnckNXcWtZbmtLelQ3YTlOZ2tnbHNFcHdjWGctWmtENFluY1VqODZiS0draUtzSUE?oc=5\" target=\"_blank\">2ª Copa BTG Trader: Após reunir 60 mil inscritos, campeonato ganha nova edição com prêmio de R$ 1 milhão</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Money Times</font>",
+    "source_indices": [
+      22
+    ],
+    "primary_index": 22,
+    "axes": [
+      "RV/Trading"
+    ],
+    "confirmation": "confirmado",
+    "daily_trigger": false,
+    "trigger_reason": null,
+    "why_it_matters": "A 2ª Copa BTG Trader com prêmio de R$ 1 milhão é uma ação de marketing para atrair traders, mas não altera pricing ou produto estruturalmente.",
+    "relevance": "média",
+    "also_reported_by": []
   }
 ]
