@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T12:07:12.854751+00:00",
+  "generated_at": "2026-07-21T11:40:13.261342+00:00",
   "items": [
     {
       "competitor_group": "BTG Pactual",
@@ -290,6 +290,72 @@
       "daily_trigger": false,
       "trigger_reason": null,
       "why_it_matters": "A 2ª Copa BTG Trader com prêmio de R$ 1 milhão é uma ação de marketing para atrair traders, mas não altera pricing ou produto estruturalmente.",
+      "relevance": "média",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "XP/Clear/Rico",
+      "matched_alias": "XP Investimentos",
+      "title": "XP e Icatu se associam para novo tipo de seguro de vida exclusivo - O GLOBO",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxORkt5U1ozb3hUekJEeVhVZmkwaFl4R3JvOHFHVHY1czZvcDJ3TXpDaVpyUHg1dk55S010QWtETHBGNzZvY2FNaXBOWlpfb1U2ZkVETllFMmtBLWF4dVZJZnFKd1BOX3hqZTdJSlF2LS1xOFM0STRIZEEyeDk0ZE5tV3BBZlJJSDNuS3dESGhjMzB2SlpISklrcXNQUlpCRHNNcWhibS1UVHF2Wjkzd2dCdENCazFBeGtxdUE3R0t0Nk7SAc8BQVVfeXFMUHNSeGwxLVF3RGhpdjFhT1dOdEJBTGVOOHFfR2dmMzQ2T3k2RFBva01GWkh6elNiVWtXeXN3dEJpdE5ESEhSdFF4WkhsRW9pSGI3dTRGYVBWYmNzaEV1czF1TkY5Z3V4X3pwbG1UTFZ0NFlHancyYmVDRkFQLWY2a1RVbGtUdXNFRWlHWmhIdUt3MlVqN1VmbXRaVjdiY1FxeDhUVlJXbTl3TTZrcVpjdng0cU96Q3hCT2VjVEVjZlRiX0dJV3ZsTHhDM2dwLTdn?oc=5",
+      "source": "O GLOBO",
+      "published_at": "2026-07-20T16:01:27+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxORkt5U1ozb3hUekJEeVhVZmkwaFl4R3JvOHFHVHY1czZvcDJ3TXpDaVpyUHg1dk55S010QWtETHBGNzZvY2FNaXBOWlpfb1U2ZkVETllFMmtBLWF4dVZJZnFKd1BOX3hqZTdJSlF2LS1xOFM0STRIZEEyeDk0ZE5tV3BBZlJJSDNuS3dESGhjMzB2SlpISklrcXNQUlpCRHNNcWhibS1UVHF2Wjkzd2dCdENCazFBeGtxdUE3R0t0Nk7SAc8BQVVfeXFMUHNSeGwxLVF3RGhpdjFhT1dOdEJBTGVOOHFfR2dmMzQ2T3k2RFBva01GWkh6elNiVWtXeXN3dEJpdE5ESEhSdFF4WkhsRW9pSGI3dTRGYVBWYmNzaEV1czF1TkY5Z3V4X3pwbG1UTFZ0NFlHancyYmVDRkFQLWY2a1RVbGtUdXNFRWlHWmhIdUt3MlVqN1VmbXRaVjdiY1FxeDhUVlJXbTl3TTZrcVpjdng0cU96Q3hCT2VjVEVjZlRiX0dJV3ZsTHhDM2dwLTdn?oc=5\" target=\"_blank\">XP e Icatu se associam para novo tipo de seguro de vida exclusivo</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">O GLOBO</font>",
+      "source_indices": [
+        3
+      ],
+      "primary_index": 3,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "LANC",
+      "why_it_matters": "A XP está inovando em seguros de vida, o que pode atrair clientes de alta renda e aumentar o cross-sell com produtos de investimento, pressionando concorrentes a oferecerem soluções similares.",
+      "relevance": "alta",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "BTG Pactual amplia experiência Ultrablue com lançamento do cartão World Legend - Money Report",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPUVVnOWhZNFBRMTZTRUtnMk5ld1MwU0M2T29FdGhxbW1rcmJ1UURHTXVYVERjZEJQQWwzUm51U3dEbXFUTEpfaTlIYlRVQzYzdW0wT3R0MWUwWmxIbzA5RXg3VkY1YmdBN0VtV1pjdVpRamlEQ0ptSGc5UnI0WXE2R1o1SzJhNzlfVm1EYzd6aXZIbGJaSWdzTjhGcTduYmRiODlfcUhtSEFQWElhbVpjV3ZyOFFrWG14dFZCWA?oc=5",
+      "source": "Money Report",
+      "published_at": "2026-07-21T10:31:35+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxPUVVnOWhZNFBRMTZTRUtnMk5ld1MwU0M2T29FdGhxbW1rcmJ1UURHTXVYVERjZEJQQWwzUm51U3dEbXFUTEpfaTlIYlRVQzYzdW0wT3R0MWUwWmxIbzA5RXg3VkY1YmdBN0VtV1pjdVpRamlEQ0ptSGc5UnI0WXE2R1o1SzJhNzlfVm1EYzd6aXZIbGJaSWdzTjhGcTduYmRiODlfcUhtSEFQWElhbVpjV3ZyOFFrWG14dFZCWA?oc=5\" target=\"_blank\">BTG Pactual amplia experiência Ultrablue com lançamento do cartão World Legend</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Money Report</font>",
+      "source_indices": [
+        28
+      ],
+      "primary_index": 28,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "LANC",
+      "why_it_matters": "O lançamento do cartão World Legend pelo BTG amplia a experiência Ultrablue, atraindo clientes de alta renda e aumentando a concorrência no segmento premium de investimentos.",
+      "relevance": "alta",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "US$ 497 bilhões e um novo endereço: BTG Pactual cruza o Prata e inicia operações no Uruguai - Exame",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPdE9vTERVTWNKQWExd1dXdWh0ZmduMzE3SXQyU0M2Rk5DeVJSc2FiUkNaY0VINXFnendhendUSU5EZmZZUWdTYS0tSERjOVhTNU1JUEJMYV93T1ZxR3d4MXlWSndsdC0wdFByRGE3eW84NUZuVXEyUmw0RWRiWm42RHZRbG84NUhRS2hvSzVEeGVTWkpUcFFTMFV6RTkyc1RpaU9wVUd4RzVSUHFGenN2YWQ2eGZwMXQyZWtLQjVFcDZQYk5FYV9F?oc=5",
+      "source": "Exame",
+      "published_at": "2026-07-20T20:04:29+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxPdE9vTERVTWNKQWExd1dXdWh0ZmduMzE3SXQyU0M2Rk5DeVJSc2FiUkNaY0VINXFnendhendUSU5EZmZZUWdTYS0tSERjOVhTNU1JUEJMYV93T1ZxR3d4MXlWSndsdC0wdFByRGE3eW84NUZuVXEyUmw0RWRiWm42RHZRbG84NUhRS2hvSzVEeGVTWkpUcFFTMFV6RTkyc1RpaU9wVUd4RzVSUHFGenN2YWQ2eGZwMXQyZWtLQjVFcDZQYk5FYV9F?oc=5\" target=\"_blank\">US$ 497 bilhões e um novo endereço: BTG Pactual cruza o Prata e inicia operações no Uruguai</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Exame</font>",
+      "source_indices": [
+        29
+      ],
+      "primary_index": 29,
+      "axes": [
+        "Risco/Regulação"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "A expansão do BTG para o Uruguai é um movimento estratégico de internacionalização, mas não impacta diretamente o cliente investidor pessoa física no Brasil.",
       "relevance": "média",
       "also_reported_by": []
     }
