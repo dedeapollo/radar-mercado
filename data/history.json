@@ -136,5 +136,159 @@
     ],
     "confirmation": "confirmado",
     "trigger_reason": null
+  },
+  {
+    "competitor_group": "XP/Clear/Rico",
+    "matched_alias": "XP Investimentos",
+    "title": "A Nomos quer dobrar de tamanho sem abandonar o trader - NeoFeed",
+    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPb1NhTHQ5bXJZdUxvN29QeXFmV2xUV3RuTDFaSldoeEhUWG5OWFg0alVUN2I1LVlXZEp2TU5JY0xDVzA5Q0RoMzVpQWQzdVM0Zmt5ZjNwczhOdHFsbEtfc2VyQzhHeXVxTmpKWkVLRk5sS1RiVkhYUVBhZWtoYWZSMlI0TUVvcGpseGJTUg?oc=5",
+    "source": "NeoFeed",
+    "published_at": "2026-07-17T11:19:04+00:00",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxPb1NhTHQ5bXJZdUxvN29QeXFmV2xUV3RuTDFaSldoeEhUWG5OWFg0alVUN2I1LVlXZEp2TU5JY0xDVzA5Q0RoMzVpQWQzdVM0Zmt5ZjNwczhOdHFsbEtfc2VyQzhHeXVxTmpKWkVLRk5sS1RiVkhYUVBhZWtoYWZSMlI0TUVvcGpseGJTUg?oc=5\" target=\"_blank\">A Nomos quer dobrar de tamanho sem abandonar o trader</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NeoFeed</font>",
+    "source_indices": [
+      16,
+      18,
+      19
+    ],
+    "primary_index": 16,
+    "axes": [
+      "Produtos Novos"
+    ],
+    "confirmation": "confirmado",
+    "daily_trigger": false,
+    "trigger_reason": null,
+    "why_it_matters": "A Nomos, corretora focada em traders, planeja dobrar de tamanho, indicando possível aumento de concorrência no segmento de alta frequência e day trade.",
+    "relevance": "média",
+    "also_reported_by": [
+      {
+        "source": "NeoFeed",
+        "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPVVRoNm9uZWhNNW5yOC1OU3ZOTmNWdW5yM2lIX01SNGhTWGtLZFhVbzJCb3pOcGR2OF9PNGtXWXZidk5BNE15NVlmRm1wMnEyRUQ5WEVwT2hEdE5BeC10U25xY0JtcnJpdWpZQlNROFc4SWhBMHZ1NjNjeHRnMFlLR054X3ZGOXVXeWswVXhHUHE?oc=5"
+      },
+      {
+        "source": "NeoFeed",
+        "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPWXVfOUV0WFpIc1pLb1VsZkFUSVhvUFN2amRUUDRxNkV5U2NTbTRjT3FUYzNmeDI5NDZlRmFwSmZTdms3Rk5wVW14RXZ6ZmZwMVp4YWJudXE4ZnBzaGJJWEIzV0VjVkpWLTRfNTZHQ2dfNUdqSjUxMGdVOHpPVkhfNnhJM1ctdU5DaDh2SHg0VTQ?oc=5"
+      }
+    ]
+  },
+  {
+    "competitor_group": "XP/Clear/Rico",
+    "matched_alias": "XP Investimentos",
+    "title": "Lynk Markets na Expert XP: investimentos offshore em alta - Valor Econômico",
+    "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQWFlDSXVYREQteUZtbmZiS1lLN2tkVmxUbmNOM3VvWlVqSncxWUd0cEFrcHlrWDVkZHJYRUFJekFCdHdmTWFVcUZudjZEUTBTTDhxNG9qeEw1Q0ljSi1Tb3BobzR1ZDhDT0N4aU4zRFhnRXA1d2lzQnc4LVZXUGJwV0dsRGRIc1R1QzZabHFUbEpVbi1kOWpTOU1IR0JvRThPRk8yQk5hRktqVFFaTC10TE1tYWxwREVza1YwOWNfb09Ed9IB0AFBVV95cUxQbl9lRGppZlBBbnd0WVAyblhvNEZwa0tIUXBnS2dOcnlzRC0wZm1KR3lvelNaNnJOSkxTNklvMlctaDNNNG5VVjhPZVlqV25HaGt5VEVoWFF0Nk5yaFdtQTBibWNOMFVFNjZSZzB0aVVqcl9CdkZnZi1SdlBEbEFkOVZ6SGtxTEhnYmI1Z05MMlFqeXIxc29vaTlsUXVyT0d0cC1Id0FVNVBtcVdFVV81c19KQ2VHT1hEaVZlT2RXcWdSRldjbHBERTZEdGFiS251?oc=5",
+    "source": "Valor Econômico",
+    "published_at": "2026-07-17T17:39:21+00:00",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxQWFlDSXVYREQteUZtbmZiS1lLN2tkVmxUbmNOM3VvWlVqSncxWUd0cEFrcHlrWDVkZHJYRUFJekFCdHdmTWFVcUZudjZEUTBTTDhxNG9qeEw1Q0ljSi1Tb3BobzR1ZDhDT0N4aU4zRFhnRXA1d2lzQnc4LVZXUGJwV0dsRGRIc1R1QzZabHFUbEpVbi1kOWpTOU1IR0JvRThPRk8yQk5hRktqVFFaTC10TE1tYWxwREVza1YwOWNfb09Ed9IB0AFBVV95cUxQbl9lRGppZlBBbnd0WVAyblhvNEZwa0tIUXBnS2dOcnlzRC0wZm1KR3lvelNaNnJOSkxTNklvMlctaDNNNG5VVjhPZVlqV25HaGt5VEVoWFF0Nk5yaFdtQTBibWNOMFVFNjZSZzB0aVVqcl9CdkZnZi1SdlBEbEFkOVZ6SGtxTEhnYmI1Z05MMlFqeXIxc29vaTlsUXVyT0d0cC1Id0FVNVBtcVdFVV81c19KQ2VHT1hEaVZlT2RXcWdSRldjbHBERTZEdGFiS251?oc=5\" target=\"_blank\">Lynk Markets na Expert XP: investimentos offshore em alta</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Valor Econômico</font>",
+    "source_indices": [
+      10,
+      17,
+      20
+    ],
+    "primary_index": 10,
+    "axes": [
+      "Produtos Novos"
+    ],
+    "confirmation": "confirmado",
+    "daily_trigger": false,
+    "trigger_reason": null,
+    "why_it_matters": "Lynk Markets, plataforma de investimentos offshore, ganha destaque na Expert XP, sinalizando crescente oferta de produtos internacionais no varejo.",
+    "relevance": "média",
+    "also_reported_by": [
+      {
+        "source": "Terra",
+        "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPZklWeEwyN1RUaHZ0VFdzQ3BIcW5TYXhrc2g0Y0s1Zmt1OVpjN2VIZllZd0gyQ2ZVMlBHb2NNMGpETWNxTGJUTG40eU8zbk1VMG9FcmZra25FV3kzemhoVGVSSHFjT0c4VFVWRThFWVBoYzc5ZV9TZVlRdXMwZW85Tnl0U2RiTWJ2dkZUbTNHN3dwQ3YwUjlmZDg5bTNoUFlkSHJlN0V5RENTdEFTakh2RFRJTlRsY1c2SkM4WHd6T1dvakdMcHM4ZlY2aTZCWHh0UGc?oc=5"
+      },
+      {
+        "source": "RADAR DIGITAL BRASÍLIA",
+        "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNNFhnWDI2Qlk1cDhaT05pZ0lyZl9udXZrTkY1OUpfaUgzTzF6NjNyRmZfVEtxSVFyOUhSV2Z3T0hhNUZWSG9zMVFZUmNqdjdPb0UtU3BmdjF1WG9RcU9EWkJ4aHVoY0hlQUtxcjVHRlEwdnRzR0dYQ3FVdzhQN0drZjIwbkpzS1Z5dzJicXBCeVVCRGhIekJoM0JKaXBsUUE5eUIxM3ZYVkVKdHk3TGJsODRhSmliZ25XWWVQczRWMGtpOG52ZXc?oc=5"
+      }
+    ]
+  },
+  {
+    "competitor_group": "BTG Pactual",
+    "matched_alias": "BTG Pactual",
+    "title": "Execução virou a \"mercadoria\" mais valiosa do varejo brasileiro, defende BTG Pactual - NeoFeed",
+    "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcEIwNW5rZlF4ekgyME9ZU3FHWXVaY2xaZ1FmVUN3NG4zYzlHN19oaDgwbmpkNXFmQl9lV0pUc0RuemhkOU1JQXZQSEdYY3NVVG9LeVVPcllXbmdsRXRYbW1HcVJKV2EzdHAxNU9UcDg2R0pMWFphbm53MU5TbnFzVkNFSEdwbmljYXkxdXMxQjh1SFRkZGJUX3JnaXktaWpRRjMxS0Z1eVN1STdaNTVSc0dVRHM?oc=5",
+    "source": "NeoFeed",
+    "published_at": "2026-07-17T16:22:00+00:00",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxNcEIwNW5rZlF4ekgyME9ZU3FHWXVaY2xaZ1FmVUN3NG4zYzlHN19oaDgwbmpkNXFmQl9lV0pUc0RuemhkOU1JQXZQSEdYY3NVVG9LeVVPcllXbmdsRXRYbW1HcVJKV2EzdHAxNU9UcDg2R0pMWFphbm53MU5TbnFzVkNFSEdwbmljYXkxdXMxQjh1SFRkZGJUX3JnaXktaWpRRjMxS0Z1eVN1STdaNTVSc0dVRHM?oc=5\" target=\"_blank\">Execução virou a \"mercadoria\" mais valiosa do varejo brasileiro, defende BTG Pactual</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NeoFeed</font>",
+    "source_indices": [
+      22
+    ],
+    "primary_index": 22,
+    "axes": [
+      "Tecnologia"
+    ],
+    "confirmation": "confirmado",
+    "daily_trigger": false,
+    "trigger_reason": null,
+    "why_it_matters": "BTG Pactual destaca execução como mercadoria valiosa no varejo, reforçando a importância de tecnologia e eficiência operacional para corretoras.",
+    "relevance": "média",
+    "also_reported_by": []
+  },
+  {
+    "competitor_group": "BTG Pactual",
+    "matched_alias": "BTG Pactual",
+    "title": "Longe dos holofotes, escritório de Vila Velha atinge R$ 600 mi em 7 meses de parceria com o BTG Pactual e mira R$ 1 bi até o fim do ano - Seu Dinheiro",
+    "link": "https://news.google.com/rss/articles/CBMikwJBVV95cUxNYnM2bnd4WHRyUlFLSnFyTEROYmdKakhmbU51Z2dHUDRqRXNWRDA3cnREQksyRXpIZG4xVll1MlJPTEZwZ0ltT0lXcEdxamNkZk5tS0c2SnM2WnFOWG0xc3JvQ3FtNklfSGJIR09LLTQ5eVREejJURnRuaHJpOGFQRDNjTlFILTI5RWp1WXZSZTZmVFNFWTVHaWVDVXRTZ29iaDRYVXh6bzV1R3N0TkdEMHl6aHhDMEstQVU3ZFN6Rl9aQ3Rua01USTlNMmNOYlhYaGFzLWQtd0k3LXVpdmVzbmNfVjB1WkRyMGN4YlAtV1NWeEJZLUt3MUdETFJZc050elVrcjZRNWVCemVCUXdTUUJVcw?oc=5",
+    "source": "Seu Dinheiro",
+    "published_at": "2026-07-17T18:51:52+00:00",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMikwJBVV95cUxNYnM2bnd4WHRyUlFLSnFyTEROYmdKakhmbU51Z2dHUDRqRXNWRDA3cnREQksyRXpIZG4xVll1MlJPTEZwZ0ltT0lXcEdxamNkZk5tS0c2SnM2WnFOWG0xc3JvQ3FtNklfSGJIR09LLTQ5eVREejJURnRuaHJpOGFQRDNjTlFILTI5RWp1WXZSZTZmVFNFWTVHaWVDVXRTZ29iaDRYVXh6bzV1R3N0TkdEMHl6aHhDMEstQVU3ZFN6Rl9aQ3Rua01USTlNMmNOYlhYaGFzLWQtd0k3LXVpdmVzbmNfVjB1WkRyMGN4YlAtV1NWeEJZLUt3MUdETFJZc050elVrcjZRNWVCemVCUXdTUUJVcw?oc=5\" target=\"_blank\">Longe dos holofotes, escritório de Vila Velha atinge R$ 600 mi em 7 meses de parceria com o BTG Pactual e mira R$ 1 bi até o fim do ano</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seu Dinheiro</font>",
+    "source_indices": [
+      28
+    ],
+    "primary_index": 28,
+    "axes": [
+      "Produtos Novos"
+    ],
+    "confirmation": "confirmado",
+    "daily_trigger": false,
+    "trigger_reason": null,
+    "why_it_matters": "Escritório parceiro do BTG atinge R$ 600 mi em 7 meses, demonstrando crescimento da rede de agentes autônomos, modelo que concorrentes podem replicar.",
+    "relevance": "média",
+    "also_reported_by": []
+  },
+  {
+    "competitor_group": "BTG Pactual",
+    "matched_alias": "BTG Pactual",
+    "title": "Edir Macedo injeta R$ 1,5 bilhão no Digimais enquanto BTG e Safra avaliam aquisição - BPMoney",
+    "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPNWNZTjViQXZ6ZTJpc1R1MGd6SmVZMWVCbTVQZUVQRERDU1dUN0M1VFJldGJpaTFlMjlnTERDSWs0emlkU2FIb0VGdm1YSE1mclVfWlRtRmxPVUJGa1BObTVVRk00Y21uV1ZPc1Y3MUs2T2hjNUU2dUZYMFFUSy11QlFIbVZqQVNwZGp4Tmd0LVllR1NBQy1YUkxjOVVaclRnQ0dtR3ZtVzJZT2FyMWphcFo2QVo?oc=5",
+    "source": "BPMoney",
+    "published_at": "2026-07-19T18:44:04+00:00",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPNWNZTjViQXZ6ZTJpc1R1MGd6SmVZMWVCbTVQZUVQRERDU1dUN0M1VFJldGJpaTFlMjlnTERDSWs0emlkU2FIb0VGdm1YSE1mclVfWlRtRmxPVUJGa1BObTVVRk00Y21uV1ZPc1Y3MUs2T2hjNUU2dUZYMFFUSy11QlFIbVZqQVNwZGp4Tmd0LVllR1NBQy1YUkxjOVVaclRnQ0dtR3ZtVzJZT2FyMWphcFo2QVo?oc=5\" target=\"_blank\">Edir Macedo injeta R$ 1,5 bilhão no Digimais enquanto BTG e Safra avaliam aquisição</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BPMoney</font>",
+    "source_indices": [
+      31
+    ],
+    "primary_index": 31,
+    "axes": [
+      "Risco/Regulação"
+    ],
+    "confirmation": "especulativo",
+    "daily_trigger": false,
+    "trigger_reason": null,
+    "why_it_matters": "BTG avalia aquisição do Digimais, banco digital ligado à Igreja Universal, o que poderia expandir sua base de clientes de varejo, mas ainda é rumor.",
+    "relevance": "média",
+    "also_reported_by": []
+  },
+  {
+    "competitor_group": "BTG Pactual",
+    "matched_alias": "BTG Pactual",
+    "title": "2ª Copa BTG Trader: Após reunir 60 mil inscritos, campeonato ganha nova edição com prêmio de R$ 1 milhão - Money Times",
+    "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPVlpKQ3BTaE50SWJOcDZGQ1JUa3BEemhiSVZZUjU4dVV3V2lYUHlhdkhEVnBLbnFNYXA2cnl5VDR3UlFJZTMtUm9xRElzdFpTVXROZDYxVVU1TGlZWEpNS0xTZlZkZGl6bUhKc1l3ck0xZW9ycENUcFIwWHJaZmg1S3Rya1Jpd250N0I2QTlnNGhGdnYzb2p0LUJHZXpnckNXcWtZbmtLelQ3YTlOZ2tnbHNFcHdjWGctWmtENFluY1VqODZiS0draUtzSUE?oc=5",
+    "source": "Money Times",
+    "published_at": "2026-07-20T10:00:00+00:00",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxPVlpKQ3BTaE50SWJOcDZGQ1JUa3BEemhiSVZZUjU4dVV3V2lYUHlhdkhEVnBLbnFNYXA2cnl5VDR3UlFJZTMtUm9xRElzdFpTVXROZDYxVVU1TGlZWEpNS0xTZlZkZGl6bUhKc1l3ck0xZW9ycENUcFIwWHJaZmg1S3Rya1Jpd250N0I2QTlnNGhGdnYzb2p0LUJHZXpnckNXcWtZbmtLelQ3YTlOZ2tnbHNFcHdjWGctWmtENFluY1VqODZiS0draUtzSUE?oc=5\" target=\"_blank\">2ª Copa BTG Trader: Após reunir 60 mil inscritos, campeonato ganha nova edição com prêmio de R$ 1 milhão</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Money Times</font>",
+    "source_indices": [
+      22
+    ],
+    "primary_index": 22,
+    "axes": [
+      "RV/Trading"
+    ],
+    "confirmation": "confirmado",
+    "daily_trigger": false,
+    "trigger_reason": null,
+    "why_it_matters": "A 2ª Copa BTG Trader com prêmio de R$ 1 milhão é uma ação de marketing para atrair traders, mas não altera pricing ou produto estruturalmente.",
+    "relevance": "média",
+    "also_reported_by": []
   }
 ]
