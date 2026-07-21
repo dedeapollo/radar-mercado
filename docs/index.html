@@ -6,455 +6,331 @@
 <title>Radar de Mercado</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1"></script>
 <style>
+  /* ============================================================
+     TOKENS — paleta corporativa (Vermelho Santander EC0000, preto,
+     branco e cinzas). Vermelho é usado com disciplina: apenas para
+     o eixo Risco/Regulação, gatilhos, estado ativo e destaques —
+     nunca como cor decorativa de fundo.
+  ============================================================ */
   :root{
-    --ink:#12151C;
-    --paper:#F5F6F3;
-    --paper-card:#FFFFFF;
-    --navy:#0F1B2E;
-    --navy-soft:#1B2C46;
-    --line:#E3E1DA;
-    --muted:#6B7280;
-    --axis-rv:#2A5C8A;
-    --axis-tech:#1E8A7A;
-    --axis-prod:#B8842E;
-    --axis-risco:#A13D2B;
-    --radius:10px;
-    --serif:'Newsreader', Georgia, serif;
-    --sans:'Inter', -apple-system, sans-serif;
-    --mono:'IBM Plex Mono', ui-monospace, monospace;
+    --red:#EC0000;
+    --red-soft:#FBE8E8;
+    --black:#1A1A1A;
+    --grey-900:#2B2B2B;
+    --grey-700:#4A4A4A;
+    --grey-500:#6D6D6D;
+    --grey-300:#C7C7C7;
+    --grey-200:#E1E1E1;
+    --grey-100:#F0F0F0;
+    --grey-50:#F7F7F6;
+    --sky:#DEEDF2;
+    --white:#FFFFFF;
+    --radius:6px;
+    --radius-sm:4px;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
   *{box-sizing:border-box;}
   body{
     margin:0;
-    background:var(--paper);
-    color:var(--ink);
+    background:var(--grey-50);
+    color:var(--black);
     font-family:var(--sans);
     -webkit-font-smoothing:antialiased;
+    font-variant-numeric:tabular-nums;
   }
-  a{color:inherit;}
-  :focus-visible{outline:2px solid var(--axis-rv);outline-offset:2px;}
+  a{color:var(--black); text-decoration:underline; text-decoration-color:var(--grey-300);}
+  a:hover{color:var(--red); text-decoration-color:var(--red);}
 
   /* ---------- header ---------- */
   header{
-    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-soft) 100%);
-    color:#EDEFF4;
-    padding:24px 32px 18px;
+    background:var(--white);
+    border-bottom:3px solid var(--red);
   }
   .header-top{
     display:flex;
     justify-content:space-between;
-    align-items:flex-start;
+    align-items:center;
     gap:20px;
     flex-wrap:wrap;
     max-width:1280px;
     margin:0 auto;
+    padding:22px 32px 18px;
   }
   .brand{display:flex;align-items:center;gap:14px;}
-  .radar-mark{width:44px;height:44px;flex:none;}
+  .brand-mark{
+    width:36px;height:36px;flex:none;
+    background:var(--black);
+    border-radius:var(--radius-sm);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .brand-mark span{
+    width:10px;height:10px;background:var(--red);border-radius:2px;
+  }
   .brand h1{
-    font-family:var(--serif);
-    font-weight:600;
-    font-size:26px;
+    font-family:var(--sans);
+    font-weight:800;
+    font-size:19px;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
     margin:0;
-    letter-spacing:0.2px;
+    color:var(--black);
   }
   .brand p{
-    margin:2px 0 0;
+    margin:3px 0 0;
     font-size:12.5px;
-    color:#9AA7BD;
-    font-family:var(--mono);
-    letter-spacing:0.3px;
+    color:var(--grey-500);
+    font-weight:500;
   }
   .meta{
     text-align:right;
-    font-size:12px;
-    color:#9AA7BD;
-    font-family:var(--mono);
+    font-size:12.5px;
+    color:var(--grey-500);
+    font-weight:500;
   }
   .meta .sample-flag{
     display:inline-block;
     margin-top:6px;
-    padding:3px 8px;
-    background:rgba(184,132,46,0.18);
-    color:#E8B25C;
+    padding:3px 9px;
+    background:var(--grey-100);
+    color:var(--red);
+    border:1px solid var(--red);
     border-radius:20px;
     font-size:11px;
-  }
-
-  /* ---------- filtros ---------- */
-  .filters{
-    max-width:1280px;
-    margin:16px auto 0;
-    display:flex;
-    gap:10px 22px;
-    align-items:center;
-    flex-wrap:wrap;
-    padding-top:14px;
-    border-top:1px solid rgba(255,255,255,0.12);
-  }
-  .filter-block{display:flex;align-items:center;gap:8px;min-width:0;}
-  .chip-track{
-    display:flex;gap:6px;align-items:center;
-    overflow-x:auto;
-    scrollbar-width:none;
-    -webkit-overflow-scrolling:touch;
-    padding:2px 0;
-  }
-  .chip-track::-webkit-scrollbar{display:none;}
-  .filter-label{
-    font-family:var(--mono);
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:0.6px;
-    color:#8B97AD;
-    flex:none;
-  }
-  .chip{
-    border:1px solid rgba(255,255,255,0.25);
-    background:transparent;
-    color:#D7DCE6;
-    padding:5px 12px;
-    border-radius:20px;
-    font-size:12.5px;
-    font-family:var(--sans);
-    cursor:pointer;
-    transition:all .15s ease;
-    white-space:nowrap;
-    flex:none;
-  }
-  .chip:hover{border-color:rgba(255,255,255,0.55);}
-  /* estado ativo PRESERVA a cor do eixo (definida inline via --chip-c) */
-  .chip.active{
-    background:var(--chip-c, #EDEFF4);
-    border-color:var(--chip-c, #EDEFF4);
-    color:#fff;
     font-weight:600;
   }
-  .chip.active.neutral{background:#EDEFF4;color:var(--navy);border-color:#EDEFF4;}
-  select#period-select{
-    background:transparent;
-    border:1px solid rgba(255,255,255,0.25);
-    color:#D7DCE6;
-    padding:5px 10px;
-    border-radius:6px;
-    font-family:var(--sans);
-    font-size:12.5px;
+
+  .filters{
+    max-width:1280px;
+    margin:0 auto;
+    display:flex;
+    gap:24px;
+    align-items:center;
+    flex-wrap:wrap;
+    padding:14px 32px;
+    background:var(--grey-50);
+    border-top:1px solid var(--grey-200);
   }
-  select#period-select option{color:var(--ink);}
-  #search-input{
-    background:rgba(255,255,255,0.08);
-    border:1px solid rgba(255,255,255,0.25);
-    color:#EDEFF4;
+  .filter-block{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .filter-label{
+    font-size:11px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.6px;
+    color:var(--grey-500);
+  }
+  .chip{
+    border:1px solid var(--grey-300);
+    background:var(--white);
+    color:var(--grey-700);
     padding:5px 12px;
     border-radius:20px;
+    font-size:12.5px;
+    font-weight:500;
+    font-family:var(--sans);
+    cursor:pointer;
+    transition:all .12s ease;
+  }
+  .chip:hover{border-color:var(--red);color:var(--red);}
+  .chip.active{background:var(--red);color:var(--white);border-color:var(--red);font-weight:600;}
+  select#period-select{
+    background:var(--white);
+    border:1px solid var(--grey-300);
+    color:var(--grey-900);
+    padding:5px 10px;
+    border-radius:var(--radius-sm);
     font-family:var(--sans);
     font-size:12.5px;
-    width:180px;
   }
-  #search-input::placeholder{color:#8B97AD;}
-  #clear-filters{
-    display:none;
-    background:none;border:none;
-    color:#E8B25C;
-    font-family:var(--mono);
-    font-size:11.5px;
-    cursor:pointer;
-    text-decoration:underline;
-    padding:4px 0;
-  }
-  #clear-filters.visible{display:inline;}
 
   /* ---------- layout ---------- */
-  main{max-width:1280px;margin:0 auto;padding:24px 32px 64px;}
+  main{max-width:1280px;margin:0 auto;padding:28px 32px 64px;}
 
   .kpi-row{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
     gap:14px;
-    margin-bottom:26px;
+    margin-bottom:20px;
   }
   .kpi-card{
-    background:var(--paper-card);
-    border:1px solid var(--line);
+    background:var(--white);
+    border:1px solid var(--grey-200);
+    border-top:3px solid var(--grey-300);
     border-radius:var(--radius);
     padding:16px 18px;
-    text-align:left;
-    font-family:var(--sans);
-    cursor:pointer;
-    transition:border-color .15s ease, transform .1s ease;
   }
-  .kpi-card:hover{border-color:var(--navy-soft);}
-  .kpi-card:active{transform:scale(0.99);}
-  .kpi-card.filter-on{border-color:var(--navy);box-shadow:inset 0 0 0 1px var(--navy);}
+  .kpi-card.accent{border-top-color:var(--red);}
   .kpi-label{
-    font-family:var(--mono);
     font-size:11px;
+    font-weight:700;
     text-transform:uppercase;
     letter-spacing:0.5px;
-    color:var(--muted);
+    color:var(--grey-500);
     margin-bottom:8px;
   }
   .kpi-value{
-    font-family:var(--serif);
-    font-size:30px;
-    font-weight:600;
-    line-height:1.05;
-  }
-  .kpi-sub{font-size:12px;color:var(--muted);margin-top:6px;}
-
-  /* ---------- camadas de leitura ---------- */
-  .tier{margin-bottom:30px;}
-  .tier-heading{
-    display:flex;
-    align-items:baseline;
-    gap:10px;
-    margin-bottom:4px;
-  }
-  .tier-heading h2{
-    font-family:var(--serif);
-    font-size:20px;
-    font-weight:600;
-    margin:0;
-    display:flex;
-    align-items:center;
-    gap:9px;
-  }
-  .tier-heading .count{font-family:var(--mono);font-size:12px;color:var(--muted);}
-  .tier-desc{
-    font-size:12.5px;
-    color:var(--muted);
-    margin:0 0 12px;
-  }
-  .pulse-dot{
-    width:8px;height:8px;border-radius:50%;
-    background:var(--axis-risco);
-    flex:none;
-    animation:pulse 1.8s infinite;
-  }
-  @keyframes pulse{
-    0%{box-shadow:0 0 0 0 rgba(161,61,43,0.45);}
-    70%{box-shadow:0 0 0 7px rgba(161,61,43,0);}
-    100%{box-shadow:0 0 0 0 rgba(161,61,43,0);}
-  }
-  @media (prefers-reduced-motion: reduce){
-    .pulse-dot{animation:none;}
-  }
-  .tier-empty{
-    font-size:13px;
-    color:var(--muted);
-    padding:14px 16px;
-    background:var(--paper-card);
-    border:1px dashed var(--line);
-    border-radius:8px;
-  }
-  .tier-empty.quiet{background:transparent;border:none;padding:6px 0;}
-
-  /* ---------- cards ---------- */
-  .item-card{
-    background:var(--paper-card);
-    border:1px solid var(--line);
-    border-left:3px solid var(--line);
-    border-radius:8px;
-    padding:13px 16px;
-    margin-bottom:10px;
-  }
-  .item-card.trigger{
-    border-left-color:var(--axis-risco);
-    background:#FDF9F7;
-  }
-  .item-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    gap:12px;
-  }
-  .item-title{
-    font-size:14.5px;
-    font-weight:600;
-    line-height:1.4;
-    display:flex;
-    align-items:flex-start;
-    gap:8px;
-  }
-  .axis-dot{width:9px;height:9px;border-radius:50%;flex:none;margin-top:5px;}
-  .item-title a{text-decoration:none;}
-  .item-title a:hover{text-decoration:underline;}
-  .item-meta{
-    font-family:var(--mono);
-    font-size:11px;
-    color:var(--muted);
-    white-space:nowrap;
-    flex:none;
-    padding-top:2px;
-  }
-  .item-why{
-    font-size:13.5px;
-    color:#3A3F49;
-    margin-top:6px;
-    line-height:1.55;
-  }
-  .item-foot{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:12px;
-    margin-top:10px;
-    font-size:12px;
-    color:var(--muted);
-    flex-wrap:wrap;
-  }
-  .item-tags{display:flex;gap:6px;flex-wrap:wrap;align-items:center;}
-  .tag{
-    font-family:var(--mono);
-    font-size:10.5px;
-    padding:2px 7px;
-    border-radius:10px;
-    color:#fff;
-  }
-  .trigger-badge{
-    font-family:var(--mono);
-    font-size:10.5px;
-    font-weight:500;
-    color:#fff;
-    background:var(--axis-risco);
-    padding:2px 8px;
-    border-radius:10px;
-  }
-  .spec-badge{
-    font-family:var(--mono);
-    font-size:10.5px;
-    color:var(--axis-prod);
-    border:1px dashed var(--axis-prod);
-    padding:1px 7px;
-    border-radius:10px;
-  }
-  .channel-badge{
-    font-family:var(--mono);
-    font-size:10.5px;
-    padding:2px 8px;
-    border-radius:10px;
-    background:var(--navy);
-    color:#BFE9DF;
-  }
-  .relevance-badge{
-    font-family:var(--mono);
-    font-size:10.5px;
-    padding:1px 7px;
-    border-radius:10px;
-  }
-  .relevance-badge.alta{background:var(--ink);color:#fff;}
-  .relevance-badge.media{border:1px solid var(--muted);color:var(--muted);}
-  .source-line a{color:var(--muted);}
-
-  /* ---------- contexto: linhas compactas agrupadas por dia ---------- */
-  .day-label{
-    font-family:var(--mono);
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:0.5px;
-    color:var(--muted);
-    margin:16px 0 8px;
-    display:flex;
-    align-items:center;
-    gap:10px;
-  }
-  .day-label::after{content:'';flex:1;height:1px;background:var(--line);}
-  .ctx-row{
-    background:var(--paper-card);
-    border:1px solid var(--line);
-    border-left:3px solid var(--line);
-    border-radius:8px;
-    padding:10px 14px;
-    margin-bottom:6px;
-  }
-  .ctx-row summary{
-    list-style:none;
-    cursor:pointer;
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    gap:12px;
-  }
-  .ctx-row summary::-webkit-details-marker{display:none;}
-  .ctx-main{display:flex;align-items:flex-start;gap:8px;min-width:0;flex:1;}
-  .ctx-title{font-size:13.5px;font-weight:600;line-height:1.4;}
-  .ctx-why{
-    font-size:12.5px;
-    color:var(--muted);
-    line-height:1.5;
-    margin-top:3px;
-    display:-webkit-box;
-    -webkit-line-clamp:2;
-    -webkit-box-orient:vertical;
-    overflow:hidden;
-  }
-  .ctx-row[open] .ctx-why{display:block;color:#3A3F49;}
-  .ctx-row .item-foot{margin-top:8px;display:none;}
-  .ctx-row[open] .item-foot{display:flex;}
-
-  #load-more{
-    display:block;
-    margin:14px auto 0;
-    background:var(--paper-card);
-    border:1px solid var(--line);
-    border-radius:20px;
-    padding:8px 22px;
     font-family:var(--sans);
-    font-size:13px;
-    cursor:pointer;
+    font-size:30px;
+    font-weight:800;
+    line-height:1;
+    color:var(--black);
   }
-  #load-more:hover{border-color:var(--navy-soft);}
+  .kpi-card.accent .kpi-value{color:var(--red);}
+  .kpi-sub{font-size:12.5px;color:var(--grey-500);margin-top:6px;}
 
-  /* ---------- gráficos ---------- */
-  .charts-note{
-    font-family:var(--mono);
-    font-size:11px;
-    color:var(--muted);
-    margin:-6px 0 12px;
-  }
   .chart-row{
     display:grid;
     grid-template-columns:1.3fr 1fr;
     gap:14px;
-    margin-bottom:8px;
+    margin-bottom:28px;
   }
   @media (max-width:860px){.chart-row{grid-template-columns:1fr;}}
   .chart-card{
-    background:var(--paper-card);
-    border:1px solid var(--line);
+    background:var(--white);
+    border:1px solid var(--grey-200);
     border-radius:var(--radius);
-    padding:16px 18px;
+    padding:18px 20px;
   }
   .chart-card h3{
     font-family:var(--sans);
     font-size:13px;
-    font-weight:600;
-    margin:0 0 12px;
+    font-weight:700;
+    margin:0 0 14px;
+    color:var(--black);
   }
-  .chart-card canvas{max-height:200px;}
-  .chart-full{margin-bottom:14px;}
+  .chart-card canvas{max-height:220px;}
 
-  /* ---------- estado vazio diagnóstico ---------- */
+  /* ---------- feed ---------- */
+  .feed-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    margin-bottom:6px;
+  }
+  .feed-header h2{
+    font-family:var(--sans);
+    font-size:18px;
+    font-weight:800;
+    margin:0;
+    color:var(--black);
+  }
+  .feed-count{font-size:12px;color:var(--grey-500);font-weight:500;}
+
+  .item-card{
+    background:var(--white);
+    border:1px solid var(--grey-200);
+    border-left:3px solid var(--grey-300);
+    border-radius:var(--radius-sm);
+    padding:14px 16px;
+    margin-bottom:8px;
+  }
+  .item-card.trigger{border-left-color:var(--red);}
+  .item-summary{
+    list-style:none;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+  .item-summary::-webkit-details-marker{display:none;}
+  .item-summary::after{
+    content:'+';
+    color:var(--grey-500);
+    font-size:16px;
+    font-weight:700;
+    flex:none;
+    margin-left:8px;
+  }
+  details.item-card[open] .item-summary::after{content:'–';}
+  .item-title{font-size:14px;font-weight:600;line-height:1.4;color:var(--black);}
+  .item-summary-meta{
+    font-size:11.5px;
+    color:var(--grey-500);
+    white-space:nowrap;
+    font-weight:500;
+  }
+  details.item-card .item-body{margin-top:10px;}
+  .item-why{font-size:13.5px;color:var(--grey-700);margin-top:2px;line-height:1.55;}
+  .item-foot{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:10px;
+    flex-wrap:wrap;
+    gap:8px;
+    font-size:12px;
+    color:var(--grey-500);
+  }
+  .item-tags{display:flex;gap:6px;flex-wrap:wrap;}
+  .tag{
+    font-size:10.5px;
+    font-weight:600;
+    padding:2px 8px;
+    border-radius:10px;
+    background:var(--grey-100);
+    color:var(--grey-700);
+    border:1px solid var(--grey-200);
+  }
+  .tag.risk{background:var(--red-soft);color:var(--red);border-color:var(--red);}
+  .trigger-badge{
+    font-size:10.5px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.3px;
+    color:var(--white);
+    background:var(--red);
+    padding:2px 8px;
+    border-radius:10px;
+  }
+  .relevance-badge{
+    font-size:10.5px;
+    font-weight:600;
+    padding:1px 8px;
+    border-radius:10px;
+  }
+  .relevance-badge.alta{border:1px solid var(--red);color:var(--red);}
+  .relevance-badge.media{border:1px solid var(--grey-300);color:var(--grey-500);}
+  .source-badge{
+    font-size:10.5px;
+    font-weight:600;
+    padding:1px 8px;
+    border-radius:10px;
+    background:var(--grey-100);
+    color:var(--grey-700);
+  }
   .empty-state{
     text-align:center;
-    padding:44px 20px;
-    color:var(--muted);
+    padding:60px 20px;
+    color:var(--grey-500);
     font-size:14px;
-    background:var(--paper-card);
-    border:1px dashed var(--line);
-    border-radius:var(--radius);
-    line-height:1.7;
   }
-  .empty-state button{
-    background:none;border:none;
-    color:var(--axis-rv);
-    font-size:14px;
-    cursor:pointer;
-    text-decoration:underline;
-    padding:0;
+
+  /* ---------- alertas fixos ---------- */
+  .alerts-section{margin-bottom:28px;}
+  .alerts-section h2{
+    font-family:var(--sans);
+    font-size:16px;
+    font-weight:800;
+    margin:0 0 10px;
+    display:flex;
+    align-items:center;
+    gap:9px;
+    color:var(--black);
+  }
+  .pulse-dot{
+    width:8px;height:8px;border-radius:50%;
+    background:var(--red);
+    flex:none;
+    animation:pulse 1.8s infinite;
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(236,0,0,0.4);}
+    70%{box-shadow:0 0 0 7px rgba(236,0,0,0);}
+    100%{box-shadow:0 0 0 0 rgba(236,0,0,0);}
   }
 
   footer{
@@ -462,18 +338,7 @@
     margin:0 auto;
     padding:0 32px 40px;
     font-size:12px;
-    color:var(--muted);
-    font-family:var(--mono);
-  }
-
-  @media (max-width:700px){
-    header{padding:18px 16px 14px;}
-    main{padding:18px 16px 48px;}
-    .filters{gap:8px 14px;}
-    .filter-block{width:100%;}
-    #search-input{width:100%;}
-    .item-top{flex-direction:column;gap:4px;}
-    .item-meta{padding-top:0;}
+    color:var(--grey-500);
   }
 </style>
 </head>
@@ -482,21 +347,7 @@
 <header>
   <div class="header-top">
     <div class="brand">
-      <svg class="radar-mark" viewBox="0 0 100 100" aria-hidden="true">
-        <circle cx="50" cy="50" r="46" fill="none" stroke="#3A4A65" stroke-width="1.5"/>
-        <circle cx="50" cy="50" r="31" fill="none" stroke="#3A4A65" stroke-width="1.5"/>
-        <circle cx="50" cy="50" r="16" fill="none" stroke="#3A4A65" stroke-width="1.5"/>
-        <g id="sweep" style="transform-origin:50px 50px;">
-          <path d="M50 50 L50 4 A46 46 0 0 1 78 15 Z" fill="url(#sweepGrad)"/>
-        </g>
-        <defs>
-          <linearGradient id="sweepGrad" x1="50" y1="4" x2="78" y2="15" gradientUnits="userSpaceOnUse">
-            <stop offset="0" stop-color="#6FE0C8" stop-opacity="0.85"/>
-            <stop offset="1" stop-color="#6FE0C8" stop-opacity="0"/>
-          </linearGradient>
-        </defs>
-        <circle cx="50" cy="50" r="2.5" fill="#6FE0C8"/>
-      </svg>
+      <div class="brand-mark"><span></span></div>
       <div>
         <h1>Radar de Mercado</h1>
         <p>XP · Clear · Rico &nbsp;·&nbsp; BTG &nbsp;·&nbsp; Itaú · Íon &nbsp;·&nbsp; Bradesco · Ágora &nbsp;·&nbsp; Genial</p>
@@ -511,11 +362,11 @@
   <div class="filters">
     <div class="filter-block">
       <span class="filter-label">Eixo</span>
-      <div class="chip-track" id="axis-chips"></div>
+      <div id="axis-chips"></div>
     </div>
     <div class="filter-block">
       <span class="filter-label">Concorrente</span>
-      <div class="chip-track" id="competitor-chips"></div>
+      <div id="competitor-chips"></div>
     </div>
     <div class="filter-block">
       <span class="filter-label">Período</span>
@@ -526,120 +377,79 @@
         <option value="99999">Tudo</option>
       </select>
     </div>
-    <div class="filter-block">
-      <input type="search" id="search-input" placeholder="Buscar no radar…" aria-label="Buscar itens">
-    </div>
-    <button id="clear-filters">limpar filtros</button>
   </div>
 </header>
 
 <main>
+  <section class="alerts-section" id="alerts-section" style="display:none;">
+    <h2><span class="pulse-dot"></span>Últimos Alertas</h2>
+    <div id="alerts-feed"></div>
+  </section>
+
   <section class="kpi-row" id="kpi-row"></section>
 
-  <section class="tier" id="tier-trigger">
-    <div class="tier-heading">
-      <h2><span class="pulse-dot"></span>Exige atenção</h2>
-      <span class="count" id="count-trigger"></span>
-    </div>
-    <p class="tier-desc">Gatilhos do período — fatos que pedem leitura hoje. O código no selo diz o motivo: LANC lançamento · PRICE preço/alavancagem · REG regulação · INC incidente · MA aquisição · LID liderança · TERMS termos.</p>
-    <div id="feed-trigger"></div>
+  <section class="chart-card" style="margin-bottom:14px;">
+    <h3>Itens ao longo do tempo (todo o histórico, por semana)</h3>
+    <canvas id="trend-chart"></canvas>
   </section>
 
-  <section class="tier" id="tier-alta">
-    <div class="tier-heading">
-      <h2>Alta relevância</h2>
-      <span class="count" id="count-alta"></span>
+  <section class="chart-row">
+    <div class="chart-card">
+      <h3>Itens por eixo</h3>
+      <canvas id="axis-chart"></canvas>
     </div>
-    <p class="tier-desc">Movimentos concretos dos concorrentes que não exigem ação imediata, mas moldam o jogo.</p>
-    <div id="feed-alta"></div>
-  </section>
-
-  <section class="tier" id="tier-charts">
-    <div class="tier-heading"><h2>Panorama</h2></div>
-    <p class="charts-note">Os gráficos refletem os filtros ativos.</p>
-    <div class="chart-card chart-full">
-      <h3>Itens ao longo do tempo (por semana)</h3>
-      <canvas id="trend-chart"></canvas>
-    </div>
-    <div class="chart-row">
-      <div class="chart-card">
-        <h3>Itens por eixo</h3>
-        <canvas id="axis-chart"></canvas>
-      </div>
-      <div class="chart-card">
-        <h3>Itens por concorrente</h3>
-        <canvas id="competitor-chart"></canvas>
-      </div>
+    <div class="chart-card">
+      <h3>Itens por concorrente</h3>
+      <canvas id="competitor-chart"></canvas>
     </div>
   </section>
 
-  <section class="tier" id="tier-ctx">
-    <div class="tier-heading">
-      <h2>Contexto</h2>
-      <span class="count" id="count-ctx"></span>
-    </div>
-    <p class="tier-desc">Sinais de acompanhamento, por dia. Clique numa linha para ver fontes e detalhes.</p>
-    <div id="feed-ctx"></div>
-    <button id="load-more" style="display:none;">Mostrar mais 30</button>
-  </section>
-
-  <div id="empty-holder"></div>
+  <div class="feed-header">
+    <h2>Itens monitorados</h2>
+    <span class="feed-count" id="feed-count"></span>
+  </div>
+  <div id="feed"></div>
 </main>
 
 <footer>
-  Radar de Mercado — inteligência competitiva interna · notícias, app stores, sinais de incidente e sociais · não é aconselhamento de investimento
+  Radar de Mercado — inteligência competitiva interna · dados coletados via portais de notícia e fontes públicas · não é aconselhamento de investimento
 </footer>
 
 <script>
 const AXES = ["RV/Trading", "Tecnologia", "Produtos Novos", "Risco/Regulação"];
-const AXIS_COLORS = {
-  "RV/Trading": "#2A5C8A",
-  "Tecnologia": "#1E8A7A",
-  "Produtos Novos": "#B8842E",
-  "Risco/Regulação": "#A13D2B",
-};
-const CHANNEL_LABELS = {
-  "Google Play": "app store",
-  "Google Play (reviews)": "reviews",
-  "Reddit": "reddit",
-  "Google Trends": "trends",
-  "Reclame Aqui": "reclame aqui",
-};
-const CTX_PAGE = 30;
+const RISK_AXIS = "Risco/Regulação";
+const COLOR_RED = "#EC0000";
+const COLOR_DARK = "#1A1A1A";
+const COLOR_GREY = "#8A8A8A";
 
-// Dados de exemplo — usados quando data.json ainda não existe.
+// Dados de exemplo — usados quando data.json ainda não existe (antes do
+// primeiro run do GitHub Actions) ou não pôde ser carregado. Baseados em
+// itens reais validados durante a construção do radar.
 const SAMPLE_DATA = {
   generated_at: null,
   items: [
-    {competitor_group:"Genial", title:"Genial eleva alavancagem para até 312x e lança assistente de IA QINV", link:"#", source:"Seu Dinheiro", published_at:"2026-07-10T15:00:00+00:00", why_it_matters:"Genial supera a concorrência em alavancagem máxima, atraindo day traders agressivos.", axes:["RV/Trading","Tecnologia"], daily_trigger:true, trigger_reason:"PRICE", relevance:"alta", confirmation:"confirmado", also_reported_by:[]},
-    {competitor_group:"XP/Clear/Rico", title:"Clear relança plataforma com execução abaixo de 50ms", link:"#", source:"InfoMoney", published_at:"2026-07-08T12:00:00+00:00", why_it_matters:"A Clear eleva o padrão de velocidade, pressionando concorrentes.", axes:["RV/Trading","Tecnologia"], daily_trigger:true, trigger_reason:"LANC", relevance:"alta", confirmation:"confirmado", also_reported_by:[]},
-    {competitor_group:"BTG Pactual", title:"BTG conclui aquisição do HSBC Uruguai", link:"#", source:"Estadão", published_at:"2026-07-14T17:00:00+00:00", why_it_matters:"Expansão internacional fortalece a marca — contexto estratégico, não sinal de campo.", axes:["Produtos Novos"], daily_trigger:false, relevance:"média", confirmation:"confirmado", also_reported_by:[]},
+    {competitor_group:"XP/Clear/Rico", title:"Clear relança plataforma com execução abaixo de 50ms e alavancagem intraday de até 300x", link:"#", source:"InfoMoney", published_at:"2026-07-08T12:00:00+00:00", why_it_matters:"A Clear eleva o padrão de velocidade e alavancagem, pressionando concorrentes a acompanharem ou perderem traders de alta frequência.", axes:["RV/Trading","Tecnologia","Produtos Novos","Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[]},
+    {competitor_group:"BTG Pactual", title:"BTG Pactual lança BTG Trends, plataforma de mercados de previsão", link:"#", source:"Money Times", published_at:"2026-07-09T09:00:00+00:00", why_it_matters:"O BTG inova com derivativos binários, produto novo que pode atrair clientes sofisticados, com alcance inicial limitado por restrição a investidores qualificados.", axes:["Produtos Novos","Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[{source:"Seu Dinheiro", link:"#"}]},
+    {competitor_group:"Genial", title:"Genial eleva alavancagem para até 312x e lança assistente de IA QINV", link:"#", source:"Seu Dinheiro", published_at:"2026-07-10T15:00:00+00:00", why_it_matters:"Genial supera a concorrência em alavancagem máxima, atraindo day traders agressivos e aumentando o risco de escrutínio regulatório.", axes:["RV/Trading","Tecnologia","Produtos Novos","Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[]},
+    {competitor_group:"Múltiplos/Setor", title:"CVM publica Ofício-Circular esclarecendo regras de alavancagem em fundos de investimento", link:"#", source:"gov.br/CVM", published_at:"2026-07-11T10:00:00+00:00", why_it_matters:"Reduz incertezas sobre margens, beneficiando corretoras que oferecem alavancagem, mas exige compliance mais rigoroso.", axes:["Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[]},
+    {competitor_group:"XP/Clear/Rico", title:"Relatório do BTG aponta pivô estratégico da XP para crédito corporativo; CFO é trocado", link:"#", source:"Finsiders Brasil", published_at:"2026-07-06T18:50:00+00:00", why_it_matters:"A troca de CFO e o foco em crédito corporativo indicam reorientação estratégica que pode abrir espaço para concorrentes focados em varejo.", axes:["Produtos Novos"], daily_trigger:false, relevance:"média", also_reported_by:[]},
   ]
 };
 
 let RAW_ITEMS = [];
 let ACTIVE_AXES = new Set();
 let ACTIVE_COMPETITORS = new Set();
-let QUERY = "";
-let TRIGGER_ONLY = false;
-let CTX_SHOWN = CTX_PAGE;
 let axisChart, competitorChart, trendChart;
 
 function fmtDate(iso){
   const d = new Date(iso);
   return d.toLocaleDateString('pt-BR', {day:'2-digit', month:'2-digit', year:'numeric'});
 }
-function fmtDayLabel(iso){
-  const d = new Date(iso);
-  return d.toLocaleDateString('pt-BR', {weekday:'long', day:'2-digit', month:'2-digit'});
-}
+
 function escapeHtml(str){
   const div = document.createElement('div');
   div.textContent = str ?? '';
   return div.innerHTML;
-}
-function escapeAttr(str){
-  return String(str ?? '').replace(/"/g, '&quot;');
 }
 
 async function loadData(){
@@ -654,89 +464,35 @@ async function loadData(){
   }
 }
 
-/* ---------------- filtros ---------------- */
-
-function periodDays(){
-  return parseInt(document.getElementById('period-select').value, 10);
-}
-
-function matchesFilters(item, opts){
-  opts = opts || {};
-  if(!opts.ignorePeriod){
-    const cutoff = new Date();
-    cutoff.setDate(cutoff.getDate() - periodDays());
-    if(new Date(item.published_at) < cutoff) return false;
-  }
-  const axes = item.axes || [];
-  if(!opts.ignoreAxes && ACTIVE_AXES.size && !axes.some(a => ACTIVE_AXES.has(a))) return false;
-  if(!opts.ignoreComp && ACTIVE_COMPETITORS.size && !ACTIVE_COMPETITORS.has(item.competitor_group)) return false;
-  if(!opts.ignoreTrigger && TRIGGER_ONLY && !item.daily_trigger) return false;
-  if(!opts.ignoreQuery && QUERY){
-    const hay = (item.title + ' ' + (item.why_it_matters || '') + ' ' + item.competitor_group + ' ' + (item.source || '')).toLowerCase();
-    if(!hay.includes(QUERY)) return false;
-  }
-  return true;
-}
-
-function filteredItems(){
-  return RAW_ITEMS
-    .filter(item => matchesFilters(item))
-    .sort((a,b) => new Date(b.published_at) - new Date(a.published_at));
-}
-
-function anyFilterActive(){
-  return ACTIVE_AXES.size || ACTIVE_COMPETITORS.size || QUERY || TRIGGER_ONLY;
-}
-
-/* ---------------- chips ---------------- */
-
-function buildChips(container, values, activeSet, colorFn, onToggle){
+function buildChips(container, values, activeSet, onToggle){
   container.innerHTML = '';
   values.forEach(v => {
     const chip = document.createElement('button');
-    const active = activeSet.has(v);
-    chip.className = 'chip' + (active ? ' active' : '') + (colorFn ? '' : ' neutral');
+    chip.className = 'chip' + (activeSet.has(v) ? ' active' : '');
     chip.textContent = v;
-    chip.setAttribute('aria-pressed', active ? 'true' : 'false');
-    if(colorFn){
-      const c = colorFn(v);
-      chip.style.borderColor = c;
-      chip.style.setProperty('--chip-c', c);
-    }
     chip.onclick = () => { onToggle(v); render(); };
     container.appendChild(chip);
   });
 }
 
-function rebuildChips(){
-  const competitors = [...new Set(RAW_ITEMS.map(i => i.competitor_group))];
-  buildChips(document.getElementById('axis-chips'), AXES, ACTIVE_AXES, a => AXIS_COLORS[a], v => {
-    ACTIVE_AXES.has(v) ? ACTIVE_AXES.delete(v) : ACTIVE_AXES.add(v);
-  });
-  buildChips(document.getElementById('competitor-chips'), competitors, ACTIVE_COMPETITORS, null, v => {
-    ACTIVE_COMPETITORS.has(v) ? ACTIVE_COMPETITORS.delete(v) : ACTIVE_COMPETITORS.add(v);
-  });
-  document.getElementById('clear-filters').classList.toggle('visible', !!anyFilterActive());
-}
+function filteredItems(){
+  const periodDays = parseInt(document.getElementById('period-select').value, 10);
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - periodDays);
 
-function clearAllFilters(){
-  ACTIVE_AXES.clear();
-  ACTIVE_COMPETITORS.clear();
-  TRIGGER_ONLY = false;
-  QUERY = "";
-  document.getElementById('search-input').value = "";
-  document.getElementById('period-select').value = "30";
-  CTX_SHOWN = CTX_PAGE;
-  render();
+  return RAW_ITEMS.filter(item => {
+    if(new Date(item.published_at) < cutoff) return false;
+    if(ACTIVE_AXES.size && !item.axes.some(a => ACTIVE_AXES.has(a))) return false;
+    if(ACTIVE_COMPETITORS.size && !ACTIVE_COMPETITORS.has(item.competitor_group)) return false;
+    return true;
+  }).sort((a,b) => new Date(b.published_at) - new Date(a.published_at));
 }
-
-/* ---------------- KPIs (clicáveis) ---------------- */
 
 function renderKPIs(items){
   const triggers = items.filter(i => i.daily_trigger).length;
   const axisCounts = {};
   AXES.forEach(a => axisCounts[a] = 0);
-  items.forEach(i => (i.axes || []).forEach(a => { if(axisCounts[a] !== undefined) axisCounts[a]++; }));
+  items.forEach(i => i.axes.forEach(a => { if(axisCounts[a] !== undefined) axisCounts[a]++; }));
   const topAxis = Object.entries(axisCounts).sort((a,b) => b[1]-a[1])[0];
 
   const compCounts = {};
@@ -744,192 +500,29 @@ function renderKPIs(items){
   const topComp = Object.entries(compCounts).sort((a,b) => b[1]-a[1])[0];
 
   const kpis = [
-    {id:'kpi-total', label:'Itens no período', value: items.length, sub: anyFilterActive() ? 'com filtros ativos · clique para limpar' : ('últimos ' + periodDays() + ' dias'), on: anyFilterActive()},
-    {id:'kpi-trigger', label:'Exigem atenção', value: triggers, sub: TRIGGER_ONLY ? 'filtrando só gatilhos · clique para desfazer' : 'gatilhos · clique para ver só eles', on: TRIGGER_ONLY},
-    {id:'kpi-axis', label:'Eixo mais ativo', value: topAxis && topAxis[1] ? topAxis[0] : '—', sub: topAxis && topAxis[1] ? (topAxis[1] + ' itens · clique para filtrar') : '', on: !!(topAxis && ACTIVE_AXES.has(topAxis[0]))},
-    {id:'kpi-comp', label:'Concorrente mais ativo', value: topComp ? topComp[0] : '—', sub: topComp ? (topComp[1] + ' itens · clique para filtrar') : '', on: !!(topComp && ACTIVE_COMPETITORS.has(topComp[0]))},
+    {label:'Itens no período', value: items.length, sub: `${document.getElementById('period-select').value} dias`, accent:false},
+    {label:'Alertas de gatilho', value: triggers, sub: 'risco, comunicado, lançamento ou regulação', accent:true},
+    {label:'Eixo mais ativo', value: topAxis ? topAxis[0] : '—', sub: topAxis ? `${topAxis[1]} itens` : '', accent:false},
+    {label:'Concorrente mais ativo', value: topComp ? topComp[0] : '—', sub: topComp ? `${topComp[1]} itens` : '', accent:false},
   ];
 
   const row = document.getElementById('kpi-row');
   row.innerHTML = kpis.map(k => `
-    <button class="kpi-card ${k.on ? 'filter-on' : ''}" id="${k.id}">
+    <div class="kpi-card ${k.accent ? 'accent' : ''}">
       <div class="kpi-label">${k.label}</div>
-      <div class="kpi-value" style="font-size:${String(k.value).length > 12 ? '17px' : '30px'}">${escapeHtml(String(k.value))}</div>
+      <div class="kpi-value" style="font-size:${k.value.toString().length > 12 ? '18px' : '30px'}">${k.value}</div>
       <div class="kpi-sub">${k.sub}</div>
-    </button>
+    </div>
   `).join('');
-
-  document.getElementById('kpi-total').onclick = clearAllFilters;
-  document.getElementById('kpi-trigger').onclick = () => { TRIGGER_ONLY = !TRIGGER_ONLY; render(); };
-  if(topAxis && topAxis[1]){
-    document.getElementById('kpi-axis').onclick = () => {
-      ACTIVE_AXES.has(topAxis[0]) ? ACTIVE_AXES.delete(topAxis[0]) : ACTIVE_AXES.add(topAxis[0]);
-      render();
-    };
-  }
-  if(topComp){
-    document.getElementById('kpi-comp').onclick = () => {
-      ACTIVE_COMPETITORS.has(topComp[0]) ? ACTIVE_COMPETITORS.delete(topComp[0]) : ACTIVE_COMPETITORS.add(topComp[0]);
-      render();
-    };
-  }
 }
 
-/* ---------------- cards ---------------- */
-
-function channelBadge(item){
-  const label = CHANNEL_LABELS[item.source];
-  return label ? `<span class="channel-badge">${label}</span>` : '';
-}
-
-function badgesHtml(item){
-  const parts = [];
-  if(item.daily_trigger){
-    const code = item.trigger_reason ? (' · ' + escapeHtml(item.trigger_reason)) : '';
-    parts.push(`<span class="trigger-badge">gatilho${code}</span>`);
-  }
-  (item.axes || []).forEach(a => parts.push(`<span class="tag" style="background:${AXIS_COLORS[a] || '#6B7280'}">${escapeHtml(a)}</span>`));
-  if(item.confirmation === 'especulativo') parts.push(`<span class="spec-badge">especulativo</span>`);
-  const cb = channelBadge(item);
-  if(cb) parts.push(cb);
-  if(item.relevance) parts.push(`<span class="relevance-badge ${item.relevance === 'alta' ? 'alta' : 'media'}">relevância ${escapeHtml(item.relevance)}</span>`);
-  return parts.join('');
-}
-
-function sourceHtml(item){
-  const extra = item.also_reported_by || [];
-  const primary = `<a href="${escapeAttr(item.link)}" target="_blank" rel="noopener">${escapeHtml(item.source)}</a>`;
-  if(!extra.length) return primary;
-  const extraLinks = extra.map(s => `<a href="${escapeAttr(s.link)}" target="_blank" rel="noopener">${escapeHtml(s.source)}</a>`).join(', ');
-  return `${primary} <span style="color:var(--muted)">também:</span> ${extraLinks}`;
-}
-
-function itemCardHtml(item){
-  const axes = item.axes || [];
-  const borderColor = item.daily_trigger ? 'var(--axis-risco)' : (AXIS_COLORS[axes[0]] || 'var(--line)');
-  return `
-    <article class="item-card ${item.daily_trigger ? 'trigger' : ''}" style="border-left-color:${borderColor}">
-      <div class="item-top">
-        <div class="item-title">
-          <span class="axis-dot" style="background:${AXIS_COLORS[axes[0]] || '#6B7280'}"></span>
-          <a href="${escapeAttr(item.link)}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a>
-        </div>
-        <div class="item-meta">${escapeHtml(item.competitor_group)} · ${fmtDate(item.published_at)}</div>
-      </div>
-      <div class="item-why">${escapeHtml(item.why_it_matters || '')}</div>
-      <div class="item-foot">
-        <div class="item-tags">${badgesHtml(item)}</div>
-        <div class="source-line">${sourceHtml(item)}</div>
-      </div>
-    </article>
-  `;
-}
-
-function ctxRowHtml(item){
-  const axes = item.axes || [];
-  return `
-    <details class="ctx-row" style="border-left-color:${AXIS_COLORS[axes[0]] || 'var(--line)'}">
-      <summary>
-        <div class="ctx-main">
-          <span class="axis-dot" style="background:${AXIS_COLORS[axes[0]] || '#6B7280'}"></span>
-          <div style="min-width:0;">
-            <div class="ctx-title">${escapeHtml(item.title)}</div>
-            <div class="ctx-why">${escapeHtml(item.why_it_matters || '')}</div>
-          </div>
-        </div>
-        <div class="item-meta">${escapeHtml(item.competitor_group)} · ${fmtDate(item.published_at)}</div>
-      </summary>
-      <div class="item-foot">
-        <div class="item-tags">${badgesHtml(item)}</div>
-        <div class="source-line">${sourceHtml(item)}</div>
-      </div>
-    </details>
-  `;
-}
-
-/* ---------------- camadas ---------------- */
-
-function renderTiers(items){
-  const triggers = items.filter(i => i.daily_trigger);
-  const alta = items.filter(i => !i.daily_trigger && i.relevance === 'alta');
-  const ctx = items.filter(i => !i.daily_trigger && i.relevance !== 'alta');
-
-  document.getElementById('count-trigger').textContent = triggers.length + (triggers.length === 1 ? ' item' : ' itens');
-  document.getElementById('count-alta').textContent = alta.length + (alta.length === 1 ? ' item' : ' itens');
-  document.getElementById('count-ctx').textContent = ctx.length + (ctx.length === 1 ? ' item' : ' itens');
-
-  const feedTrigger = document.getElementById('feed-trigger');
-  feedTrigger.innerHTML = triggers.length
-    ? triggers.map(itemCardHtml).join('')
-    : `<div class="tier-empty quiet">Nenhum gatilho no período com esses filtros — dia calmo é o comportamento esperado do radar.</div>`;
-
-  const feedAlta = document.getElementById('feed-alta');
-  feedAlta.innerHTML = alta.length
-    ? alta.map(itemCardHtml).join('')
-    : `<div class="tier-empty quiet">Nada de alta relevância no recorte atual.</div>`;
-
-  // contexto: agrupado por dia, paginado
-  const feedCtx = document.getElementById('feed-ctx');
-  const visible = ctx.slice(0, CTX_SHOWN);
-  const groups = new Map();
-  visible.forEach(item => {
-    const key = item.published_at.slice(0, 10);
-    if(!groups.has(key)) groups.set(key, []);
-    groups.get(key).push(item);
+function trendItems(){
+  return RAW_ITEMS.filter(item => {
+    if(ACTIVE_AXES.size && !item.axes.some(a => ACTIVE_AXES.has(a))) return false;
+    if(ACTIVE_COMPETITORS.size && !ACTIVE_COMPETITORS.has(item.competitor_group)) return false;
+    return true;
   });
-  let html = '';
-  for(const [day, dayItems] of groups){
-    html += `<div class="day-group"><div class="day-label">${fmtDayLabel(day + 'T12:00:00Z')}</div>`;
-    html += dayItems.map(ctxRowHtml).join('');
-    html += `</div>`;
-  }
-  feedCtx.innerHTML = html || `<div class="tier-empty quiet">Sem itens de contexto no recorte atual.</div>`;
-
-  const loadBtn = document.getElementById('load-more');
-  if(ctx.length > CTX_SHOWN){
-    loadBtn.style.display = 'block';
-    loadBtn.textContent = 'Mostrar mais ' + Math.min(CTX_PAGE, ctx.length - CTX_SHOWN) + ' (' + (ctx.length - CTX_SHOWN) + ' restantes)';
-  }else{
-    loadBtn.style.display = 'none';
-  }
 }
-
-/* ---------------- estado vazio diagnóstico ---------------- */
-
-function renderEmptyDiagnostic(items){
-  const holder = document.getElementById('empty-holder');
-  const tiers = ['tier-trigger','tier-alta','tier-charts','tier-ctx'];
-  if(items.length){
-    holder.innerHTML = '';
-    tiers.forEach(id => document.getElementById(id).style.display = '');
-    return;
-  }
-  tiers.forEach(id => document.getElementById(id).style.display = 'none');
-
-  // descobre qual dimensão está zerando o resultado
-  const tests = [
-    {label:'o período', count: RAW_ITEMS.filter(i => matchesFilters(i, {ignorePeriod:true})).length, fix: () => { document.getElementById('period-select').value = '99999'; }},
-    {label:'o filtro de eixo', count: ACTIVE_AXES.size ? RAW_ITEMS.filter(i => matchesFilters(i, {ignoreAxes:true})).length : 0, fix: () => ACTIVE_AXES.clear()},
-    {label:'o filtro de concorrente', count: ACTIVE_COMPETITORS.size ? RAW_ITEMS.filter(i => matchesFilters(i, {ignoreComp:true})).length : 0, fix: () => ACTIVE_COMPETITORS.clear()},
-    {label:'a busca', count: QUERY ? RAW_ITEMS.filter(i => matchesFilters(i, {ignoreQuery:true})).length : 0, fix: () => { QUERY = ''; document.getElementById('search-input').value = ''; }},
-    {label:'o filtro de gatilhos', count: TRIGGER_ONLY ? RAW_ITEMS.filter(i => matchesFilters(i, {ignoreTrigger:true})).length : 0, fix: () => { TRIGGER_ONLY = false; }},
-  ];
-  const best = tests.filter(t => t.count > 0).sort((a,b) => b.count - a.count)[0];
-
-  let msg;
-  if(best){
-    msg = 'Nenhum item com essa combinação. Removendo <strong>' + best.label + '</strong>, haveria <strong>' + best.count + '</strong> ' + (best.count === 1 ? 'item' : 'itens') + '. <button id="empty-fix">Remover ' + best.label + '</button> ou <button id="empty-clear">limpar tudo</button>.';
-  }else{
-    msg = 'Nenhum item no radar ainda com qualquer combinação de filtros. <button id="empty-clear">Limpar filtros</button>';
-  }
-  holder.innerHTML = '<div class="empty-state">' + msg + '</div>';
-  const fixBtn = document.getElementById('empty-fix');
-  if(fixBtn && best) fixBtn.onclick = () => { best.fix(); render(); };
-  const clearBtn = document.getElementById('empty-clear');
-  if(clearBtn) clearBtn.onclick = clearAllFilters;
-}
-
-/* ---------------- gráficos ---------------- */
 
 function mondayOf(dateObj){
   const d = new Date(dateObj);
@@ -940,8 +533,7 @@ function mondayOf(dateObj){
 }
 
 function renderTrendChart(){
-  // tendência ignora o período (mostra o histórico), mas respeita os demais filtros
-  const items = RAW_ITEMS.filter(i => matchesFilters(i, {ignorePeriod:true}));
+  const items = trendItems();
   const buckets = {};
   items.forEach(item => {
     const key = mondayOf(new Date(item.published_at)).toISOString().slice(0,10);
@@ -954,41 +546,99 @@ function renderTrendChart(){
   if(trendChart) trendChart.destroy();
   trendChart = new Chart(document.getElementById('trend-chart'), {
     type:'bar',
-    data:{labels:displayLabels, datasets:[{data, backgroundColor:'#1B2C46', borderRadius:4}]},
+    data:{labels:displayLabels, datasets:[{data, backgroundColor:COLOR_DARK, borderRadius:3}]},
     options:{plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true, ticks:{precision:0}}}, animation:false}
   });
 }
 
 function renderCharts(items){
-  const axisCounts = AXES.map(a => items.filter(i => (i.axes || []).includes(a)).length);
+  const axisCounts = AXES.map(a => items.filter(i => i.axes.includes(a)).length);
+  const axisColors = AXES.map(a => a === RISK_AXIS ? COLOR_RED : COLOR_DARK);
   const competitors = [...new Set(RAW_ITEMS.map(i => i.competitor_group))];
   const compCounts = competitors.map(c => items.filter(i => i.competitor_group === c).length);
 
   if(axisChart) axisChart.destroy();
   axisChart = new Chart(document.getElementById('axis-chart'), {
     type:'bar',
-    data:{labels:AXES, datasets:[{data:axisCounts, backgroundColor:AXES.map(a=>AXIS_COLORS[a]), borderRadius:4}]},
+    data:{labels:AXES, datasets:[{data:axisCounts, backgroundColor:axisColors, borderRadius:3}]},
     options:{plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true, ticks:{precision:0}}}, animation:false}
   });
 
   if(competitorChart) competitorChart.destroy();
   competitorChart = new Chart(document.getElementById('competitor-chart'), {
     type:'bar',
-    data:{labels:competitors, datasets:[{data:compCounts, backgroundColor:'#0F1B2E', borderRadius:4}]},
+    data:{labels:competitors, datasets:[{data:compCounts, backgroundColor:COLOR_DARK, borderRadius:3}]},
     options:{indexAxis:'y', plugins:{legend:{display:false}}, scales:{x:{beginAtZero:true, ticks:{precision:0}}}, animation:false}
   });
 }
 
-/* ---------------- render ---------------- */
+function sourceHtml(item){
+  const extra = item.also_reported_by || [];
+  const primary = `<a href="${item.link}" target="_blank" rel="noopener">${escapeHtml(item.source)}</a>`;
+  if(!extra.length) return `${primary} · ${fmtDate(item.published_at)}`;
+  const extraLinks = extra.map(s => `<a href="${s.link}" target="_blank" rel="noopener">${escapeHtml(s.source)}</a>`).join(', ');
+  return `${primary} <span style="color:var(--grey-500)">também:</span> ${extraLinks} · ${fmtDate(item.published_at)}`;
+}
+
+function itemCardHtml(item, defaultOpen){
+  const relClass = item.relevance === 'alta' ? 'alta' : 'media';
+  const sourceCount = 1 + (item.also_reported_by || []).length;
+  return `
+    <details ${defaultOpen ? 'open' : ''} class="item-card ${item.daily_trigger ? 'trigger' : ''}">
+      <summary class="item-summary">
+        <span class="item-title">${escapeHtml(item.title)}</span>
+        <span class="item-summary-meta">${escapeHtml(item.competitor_group)} · ${fmtDate(item.published_at)}</span>
+      </summary>
+      <div class="item-body">
+        <div class="item-why">${escapeHtml(item.why_it_matters)}</div>
+        <div class="item-foot">
+          <div class="item-tags">
+            ${item.axes.map(a => `<span class="tag ${a === RISK_AXIS ? 'risk' : ''}">${a}</span>`).join('')}
+            ${item.daily_trigger ? '<span class="trigger-badge">gatilho diário</span>' : ''}
+            ${item.relevance ? `<span class="relevance-badge ${relClass}">relevância ${item.relevance}</span>` : ''}
+            ${sourceCount > 1 ? `<span class="source-badge">${sourceCount} fontes</span>` : ''}
+          </div>
+          <div>${sourceHtml(item)}</div>
+        </div>
+      </div>
+    </details>
+  `;
+}
+
+function alertItems(){
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - 7);
+  return RAW_ITEMS.filter(i => i.daily_trigger && new Date(i.published_at) >= cutoff)
+    .sort((a,b) => new Date(b.published_at) - new Date(a.published_at));
+}
+
+function renderAlerts(){
+  const items = alertItems();
+  const section = document.getElementById('alerts-section');
+  if(!items.length){ section.style.display = 'none'; return; }
+  section.style.display = '';
+  document.getElementById('alerts-feed').innerHTML = items.map(i => itemCardHtml(i, true)).join('');
+}
+
+function renderFeed(items){
+  document.getElementById('feed-count').textContent = `${items.length} itens`;
+  const feed = document.getElementById('feed');
+
+  if(!items.length){
+    feed.innerHTML = `<div class="empty-state">Nenhum item encontrado com esses filtros. Tente ampliar o período ou limpar os filtros de eixo/concorrente.</div>`;
+    return;
+  }
+
+  feed.innerHTML = items.map(item => itemCardHtml(item, false)).join('');
+}
 
 function render(){
   const items = filteredItems();
-  rebuildChips();
+  renderAlerts();
   renderKPIs(items);
-  renderTiers(items);
   renderTrendChart();
   renderCharts(items);
-  renderEmptyDiagnostic(items);
+  renderFeed(items);
 }
 
 async function init(){
@@ -996,35 +646,23 @@ async function init(){
   RAW_ITEMS = items;
 
   document.getElementById('updated-at').textContent = generatedAt
-    ? 'Atualizado em ' + fmtDate(generatedAt)
+    ? `Atualizado em ${fmtDate(generatedAt)}`
     : 'Ainda sem execução automática';
 
   if(sample){
     document.getElementById('sample-flag-holder').innerHTML = '<span class="sample-flag">dados de exemplo</span>';
   }
 
-  document.getElementById('period-select').addEventListener('change', () => { CTX_SHOWN = CTX_PAGE; render(); });
-  document.getElementById('search-input').addEventListener('input', (e) => {
-    QUERY = e.target.value.trim().toLowerCase();
-    CTX_SHOWN = CTX_PAGE;
-    render();
+  const competitors = [...new Set(RAW_ITEMS.map(i => i.competitor_group))];
+  buildChips(document.getElementById('axis-chips'), AXES, ACTIVE_AXES, v => {
+    ACTIVE_AXES.has(v) ? ACTIVE_AXES.delete(v) : ACTIVE_AXES.add(v);
   });
-  document.getElementById('clear-filters').addEventListener('click', clearAllFilters);
-  document.getElementById('load-more').addEventListener('click', () => {
-    CTX_SHOWN += CTX_PAGE;
-    render();
+  buildChips(document.getElementById('competitor-chips'), competitors, ACTIVE_COMPETITORS, v => {
+    ACTIVE_COMPETITORS.has(v) ? ACTIVE_COMPETITORS.delete(v) : ACTIVE_COMPETITORS.add(v);
   });
+  document.getElementById('period-select').addEventListener('change', render);
 
   render();
-}
-
-// animação sutil do sweep do radar
-const sweepEl = document.getElementById('sweep');
-if(sweepEl && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-  sweepEl.animate(
-    [{transform:'rotate(0deg)'},{transform:'rotate(360deg)'}],
-    {duration:6000, iterations:Infinity, easing:'linear'}
-  );
 }
 
 init();

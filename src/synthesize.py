@@ -74,7 +74,10 @@ PASSO 0 — TRIAGEM. NÃO INCLUA NA SAÍDA (descarte silenciosamente) itens que 
 - Guias, comparativos e conteúdo de afiliado/SEO sobre produtos existentes
   (ex.: guia de benefícios de cartão)
 - Cobertura de eventos, palestras, patrocínios e ações de marca SEM anúncio de
-  produto, funcionalidade ou preço novo
+  produto, funcionalidade ou preço novo. ATENÇÃO: anúncio de produto novo feito
+  DURANTE um evento (ex: lançamento de ETF, plataforma ou funcionalidade
+  anunciado na Expert XP) É um lançamento — mantenha e classifique pelo
+  anúncio, descartando apenas matérias sobre o evento em si
 - Campanhas promocionais de rotina (bônus de pontos, cashback temporário), exceto
   se alterarem pricing estrutural do serviço
 - Menções superficiais do concorrente dentro de pauta mais ampla do mercado
