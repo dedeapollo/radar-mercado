@@ -91,7 +91,14 @@ jobs:
         run: |
           git config user.name "radar-bot"
           git config user.email "radar-bot@users.noreply.github.com"
-          git add data/history.json data/appstore_state.json data/incidents_state.json data/social_state.json data/results_state.json data/results_history.json docs/data.json
+          # Adiciona só os arquivos de estado que já existem — os de resultado
+          # (results_state / results_history) só passam a existir depois da
+          # primeira varredura semanal, então um add direto abortaria com exit 128.
+          for f in data/history.json data/appstore_state.json data/incidents_state.json \
+                   data/social_state.json data/results_state.json data/results_history.json \
+                   docs/data.json; do
+            [ -f "$f" ] && git add "$f"
+          done
           git diff --cached --quiet || git commit -m "Atualiza radar ($(date -u +%Y-%m-%d))"
           git pull origin main --no-rebase --no-edit
           git push
