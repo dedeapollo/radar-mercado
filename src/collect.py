@@ -11,6 +11,13 @@ IMPORTANTE: este script precisa de acesso real à internet (news.google.com).
 Não roda dentro do sandbox do Claude (rede restrita) — foi testado aqui
 apenas com um feed RSS mock, de forma isolada. Vai funcionar normalmente
 no GitHub Actions ou rodando localmente na sua máquina.
+
+Nota sobre a query: por padrão cada alias vira uma busca por FRASE EXATA
+("XP Investimentos"). Para grupos listados em NEWS_GROUP_QUALIFIERS (ex.:
+Nubank, que não tem marca de investimento própria no noticiário), a query
+passa a ser o alias-base combinado com qualificadores de investimento —
+"Nubank" ("corretora" OR "renda variável" OR ...) — para separar a pauta de
+investimentos do ruído de cartão/conta.
 """
 
 import json
@@ -23,20 +30,32 @@ import feedparser
 import requests
 
 sys.path.insert(0, str(Path(__file__).parent))
-from sources import COMPETITOR_GROUPS
+from sources import COMPETITOR_GROUPS, NEWS_GROUP_QUALIFIERS
 
 GOOGLE_NEWS_RSS = "https://news.google.com/rss/search?q={query}&hl=pt-BR&gl=BR&ceid=BR:pt-BR"
 LOOKBACK_DAYS = 3  # margem de segurança para não perder itens entre execuções
 REQUEST_TIMEOUT = 15
 
 
-def build_query(alias: str) -> str:
-    return urllib.parse.quote(f'"{alias}"')
+def build_query(group: str, alias: str) -> str:
+    """Monta a query do Google News para um grupo/alias.
+
+    - Grupo sem qualificadores: busca a frase exata do alias.
+    - Grupo com qualificadores (ex.: Nubank): alias-base + (q1 OR q2 OR ...),
+      para restringir ao recorte de investimentos.
+    """
+    qualifiers = NEWS_GROUP_QUALIFIERS.get(group)
+    if qualifiers:
+        terms = " OR ".join(f'"{q}"' if " " in q else q for q in qualifiers)
+        raw = f'"{alias}" ({terms})'
+    else:
+        raw = f'"{alias}"'
+    return urllib.parse.quote(raw)
 
 
-def fetch_feed(alias: str) -> list[dict]:
-    """Busca e faz parse do feed RSS do Google News para um alias."""
-    url = GOOGLE_NEWS_RSS.format(query=build_query(alias))
+def fetch_feed(group: str, alias: str) -> list[dict]:
+    """Busca e faz parse do feed RSS do Google News para um grupo/alias."""
+    url = GOOGLE_NEWS_RSS.format(query=build_query(group, alias))
     resp = requests.get(url, timeout=REQUEST_TIMEOUT, headers={"User-Agent": "Mozilla/5.0"})
     resp.raise_for_status()
     parsed = feedparser.parse(resp.content)
@@ -72,7 +91,7 @@ def collect_all() -> list[dict]:
     for group, aliases in COMPETITOR_GROUPS.items():
         for alias in aliases:
             try:
-                entries = fetch_feed(alias)
+                entries = fetch_feed(group, alias)
             except requests.RequestException as e:
                 print(f"[aviso] falha ao buscar '{alias}': {e}", file=sys.stderr)
                 continue
