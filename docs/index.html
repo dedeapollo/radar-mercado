@@ -1,698 +1,678 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Radar de Mercado · Santander Corretora</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radar de Mercado</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1"></script>
 <style>
-  :root {
-    --red: #EC0000;          /* Santander */
-    --red-dark: #B30000;
-    --red-tint: #FDECEC;
-    --red-tint-2: #FFF6F6;
-    --ink: #16181D;
-    --ink-2: #4A515C;
-    --ink-3: #838B96;
-    --line: #E6E8EC;
-    --line-2: #EFF1F4;
-    --canvas: #F4F6F8;
-    --surface: #FFFFFF;
-    --green: #1E874B;
-    --green-tint: #E7F4EC;
-    --amber: #B5720A;
-    --amber-tint: #FBF0DC;
-    --sidebar-w: 244px;
-    --radius: 10px;
-    --shadow: 0 1px 2px rgba(20,24,34,.04), 0 4px 16px rgba(20,24,34,.05);
-    font-synthesis: none;
+  /* ============================================================
+     TOKENS — paleta corporativa (Vermelho Santander EC0000, preto,
+     branco e cinzas). Vermelho é usado com disciplina: apenas para
+     o eixo Risco/Regulação, gatilhos, estado ativo e destaques —
+     nunca como cor decorativa de fundo.
+  ============================================================ */
+  :root{
+    --red:#EC0000;
+    --red-soft:#FBE8E8;
+    --black:#1A1A1A;
+    --grey-900:#2B2B2B;
+    --grey-700:#4A4A4A;
+    --grey-500:#6D6D6D;
+    --grey-300:#C7C7C7;
+    --grey-200:#E1E1E1;
+    --grey-100:#F0F0F0;
+    --grey-50:#F7F7F6;
+    --sky:#DEEDF2;
+    --white:#FFFFFF;
+    --radius:6px;
+    --radius-sm:4px;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; }
-  body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    background: var(--canvas);
-    color: var(--ink);
-    -webkit-font-smoothing: antialiased;
-    font-feature-settings: 'cv05' 1, 'ss01' 1;
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--grey-50);
+    color:var(--black);
+    font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;
+    font-variant-numeric:tabular-nums;
   }
-  a { color: inherit; }
-  h1,h2,h3,h4 { margin: 0; font-weight: 700; letter-spacing: -.01em; }
-  .tnum { font-variant-numeric: tabular-nums; }
+  a{color:var(--black); text-decoration:underline; text-decoration-color:var(--grey-300);}
+  a:hover{color:var(--red); text-decoration-color:var(--red);}
 
-  /* ---------- Shell ---------- */
-  .app { display: flex; min-height: 100vh; }
-
-  .sidebar {
-    width: var(--sidebar-w); flex: 0 0 var(--sidebar-w);
-    background: var(--surface); border-right: 1px solid var(--line);
-    position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column;
+  /* ---------- header ---------- */
+  header{
+    background:var(--white);
+    border-bottom:3px solid var(--red);
   }
-  .brand {
-    background: var(--red); color: #fff; padding: 20px 20px 18px;
+  .header-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+    max-width:1280px;
+    margin:0 auto;
+    padding:22px 32px 18px;
   }
-  .brand-mark {
-    display: inline-flex; align-items: center; gap: 10px; margin-bottom: 12px;
+  .brand{display:flex;align-items:center;gap:14px;}
+  .brand-mark{
+    width:40px;height:40px;flex:none;
+    display:flex;align-items:center;justify-content:center;
   }
-  .brand-logo {
-    width: 26px; height: 26px; border-radius: 6px; background: #fff;
-    display: grid; place-items: center;
+  .brand-mark svg{width:36px;height:auto;display:block;}
+  .brand h1{
+    font-family:var(--sans);
+    font-weight:800;
+    font-size:19px;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+    margin:0;
+    color:var(--black);
   }
-  .brand-logo span { width: 11px; height: 11px; border-radius: 2px; background: var(--red); display:block; }
-  .brand-name { font-weight: 800; font-size: 15px; letter-spacing: .01em; }
-  .brand-sub { font-size: 12px; font-weight: 600; opacity: .92; line-height: 1.3; }
-  .brand-sub strong { font-weight: 800; }
-
-  .nav { padding: 12px 12px; display: flex; flex-direction: column; gap: 2px; flex: 1; }
-  .nav-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3); padding: 12px 12px 6px; }
-  .nav-item {
-    display: flex; align-items: center; gap: 11px; padding: 10px 12px;
-    border-radius: 8px; color: var(--ink-2); font-size: 14px; font-weight: 600;
-    cursor: pointer; border: none; background: none; width: 100%; text-align: left;
-    border-left: 3px solid transparent; transition: background .12s, color .12s;
+  .brand p{
+    margin:3px 0 0;
+    font-size:12.5px;
+    color:var(--grey-500);
+    font-weight:500;
   }
-  .nav-item:hover { background: var(--line-2); color: var(--ink); }
-  .nav-item.active { background: var(--red-tint); color: var(--red-dark); border-left-color: var(--red); }
-  .nav-item svg { width: 18px; height: 18px; flex: 0 0 18px; }
-  .nav-item .count { margin-left: auto; font-size: 12px; font-weight: 700; background: var(--line-2); color: var(--ink-2); padding: 1px 7px; border-radius: 20px; }
-  .nav-item.active .count { background: #fff; color: var(--red-dark); }
-  .nav-foot { padding: 14px 18px; border-top: 1px solid var(--line); font-size: 11px; color: var(--ink-3); line-height: 1.5; }
-
-  .main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
-
-  .topbar {
-    position: sticky; top: 0; z-index: 20; background: rgba(244,246,248,.86);
-    backdrop-filter: saturate(1.4) blur(8px); border-bottom: 1px solid var(--line);
-    padding: 18px 28px 0;
+  .meta{
+    text-align:right;
+    font-size:12.5px;
+    color:var(--grey-500);
+    font-weight:500;
   }
-  .topbar-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; }
-  .view-title { font-size: 22px; font-weight: 800; }
-  .view-desc { font-size: 13px; color: var(--ink-2); margin-top: 3px; }
-  .updated { font-size: 12px; color: var(--ink-3); white-space: nowrap; }
-  .updated strong { color: var(--ink-2); font-weight: 700; }
-
-  /* ---------- Filter toolbar ---------- */
-  .filters { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; padding: 16px 0 15px; }
-  .filter-grp { display: flex; align-items: center; gap: 9px; }
-  .filter-cap { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-3); }
-  .seg { display: inline-flex; background: var(--surface); border: 1px solid var(--line); border-radius: 9px; padding: 3px; gap: 2px; }
-  .seg button {
-    border: none; background: none; font: inherit; font-size: 13px; font-weight: 600;
-    color: var(--ink-2); padding: 6px 12px; border-radius: 6px; cursor: pointer; white-space: nowrap;
-    transition: background .12s, color .12s;
+  .meta .sample-flag{
+    display:inline-block;
+    margin-top:6px;
+    padding:3px 9px;
+    background:var(--grey-100);
+    color:var(--red);
+    border:1px solid var(--red);
+    border-radius:20px;
+    font-size:11px;
+    font-weight:600;
   }
-  .seg button:hover { color: var(--ink); }
-  .seg button.on { background: var(--red); color: #fff; }
-  select.pick {
-    font: inherit; font-size: 13px; font-weight: 600; color: var(--ink);
-    background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
-    padding: 8px 30px 8px 12px; cursor: pointer; appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23838B96' stroke-width='2'%3E%3Cpath d='M3 4.5l3 3 3-3'/%3E%3C/svg%3E");
-    background-repeat: no-repeat; background-position: right 11px center;
+
+  .filters{
+    max-width:1280px;
+    margin:0 auto;
+    display:flex;
+    gap:24px;
+    align-items:center;
+    flex-wrap:wrap;
+    padding:14px 32px;
+    background:var(--grey-50);
+    border-top:1px solid var(--grey-200);
   }
-  select.pick:focus, .seg button:focus-visible, .nav-item:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
-
-  .content { padding: 8px 28px 48px; }
-
-  /* ---------- KPIs ---------- */
-  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0 8px; }
-  .kpi {
-    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
-    padding: 16px 18px; cursor: pointer; text-align: left; transition: box-shadow .14s, transform .14s, border-color .14s;
+  .filter-block{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .filter-label{
+    font-size:11px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.6px;
+    color:var(--grey-500);
   }
-  .kpi:hover { box-shadow: var(--shadow); transform: translateY(-1px); border-color: #DADDE2; }
-  .kpi:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
-  .kpi-val { font-size: 30px; font-weight: 800; letter-spacing: -.02em; line-height: 1; }
-  .kpi-val.alert { color: var(--red); }
-  .kpi-val.warn { color: var(--amber); }
-  .kpi-cap { font-size: 13px; color: var(--ink-2); margin-top: 8px; font-weight: 600; }
-  .kpi-hint { font-size: 11px; color: var(--ink-3); margin-top: 2px; }
-
-  /* ---------- Sections ---------- */
-  .sec { margin-top: 26px; }
-  .sec-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px; }
-  .sec-title { font-size: 15px; font-weight: 800; }
-  .sec-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
-  .sec-note { font-size: 12px; color: var(--ink-3); }
-
-  .grid-2 { display: grid; grid-template-columns: 1.6fr 1fr; gap: 18px; align-items: start; }
-  .panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; }
-  .panel-title { font-size: 13px; font-weight: 700; color: var(--ink-2); margin-bottom: 14px; }
-
-  /* ---------- Cards (news) ---------- */
-  .card {
-    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
-    padding: 15px 17px; margin-bottom: 11px; border-left: 3px solid var(--line);
+  .chip{
+    border:1px solid var(--grey-300);
+    background:var(--white);
+    color:var(--grey-700);
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:12.5px;
+    font-weight:500;
+    font-family:var(--sans);
+    cursor:pointer;
+    transition:all .12s ease;
   }
-  .card.tier-attn { border-left-color: var(--red); }
-  .card.tier-high { border-left-color: #F3A0A0; }
-  .card-top { display: flex; justify-content: space-between; gap: 16px; }
-  .card-title { font-size: 15.5px; font-weight: 700; line-height: 1.34; }
-  .card-title a { text-decoration: none; }
-  .card-title a:hover { color: var(--red-dark); }
-  .card-meta { font-size: 12px; color: var(--ink-3); white-space: nowrap; font-weight: 600; }
-  .card-sum { font-size: 13.5px; color: var(--ink-2); line-height: 1.5; margin: 8px 0 0; }
-  .card-foot { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 11px; }
-  .also { margin-left: auto; font-size: 12px; color: var(--ink-3); }
-  .also a { color: var(--ink-2); text-decoration: none; }
-  .also a:hover { color: var(--red-dark); text-decoration: underline; }
-
-  .tag { font-size: 11.5px; font-weight: 600; padding: 3px 9px; border-radius: 6px; background: var(--line-2); color: var(--ink-2); white-space: nowrap; }
-  .badge { font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 20px; text-transform: uppercase; letter-spacing: .03em; white-space: nowrap; }
-  .badge-trigger { background: var(--red); color: #fff; }
-  .badge-high { background: var(--red-tint); color: var(--red-dark); }
-
-  /* compact context rows */
-  .row {
-    display: flex; align-items: center; gap: 12px; padding: 11px 15px;
-    background: var(--surface); border: 1px solid var(--line); border-radius: 8px; margin-bottom: 7px;
+  .chip:hover{border-color:var(--red);color:var(--red);}
+  .chip.active{background:var(--red);color:var(--white);border-color:var(--red);font-weight:600;}
+  select#period-select{
+    background:var(--white);
+    border:1px solid var(--grey-300);
+    color:var(--grey-900);
+    padding:5px 10px;
+    border-radius:var(--radius-sm);
+    font-family:var(--sans);
+    font-size:12.5px;
   }
-  .row-grp { font-size: 11px; font-weight: 700; color: var(--red-dark); background: var(--red-tint); padding: 2px 8px; border-radius: 5px; white-space: nowrap; }
-  .row-title { font-size: 13.5px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; }
-  .row-title a { text-decoration: none; }
-  .row-title a:hover { color: var(--red-dark); }
-  .row-date { font-size: 12px; color: var(--ink-3); white-space: nowrap; }
 
-  /* ---------- Status board ---------- */
-  .health { display: flex; gap: 10px; flex-wrap: wrap; }
-  .health-pill {
-    display: flex; align-items: center; gap: 8px; background: var(--surface);
-    border: 1px solid var(--line); border-radius: 30px; padding: 7px 14px 7px 11px; font-size: 13px; font-weight: 600;
+  /* ---------- layout ---------- */
+  main{max-width:1280px;margin:0 auto;padding:28px 32px 64px;}
+
+  .kpi-row{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:14px;
+    margin-bottom:20px;
   }
-  .dot { width: 9px; height: 9px; border-radius: 50%; flex: 0 0 9px; }
-  .dot-ok { background: var(--green); }
-  .dot-warn { background: var(--red); box-shadow: 0 0 0 3px var(--red-tint); }
-  .status-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-  .status-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; }
-  .status-card.warn { border-color: #F3C4C4; background: linear-gradient(180deg, var(--red-tint-2), #fff 60%); }
-  .status-head { display: flex; align-items: center; justify-content: space-between; }
-  .status-name { font-size: 15px; font-weight: 700; }
-  .state { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; font-weight: 700; }
-  .state-ok { color: var(--green); }
-  .state-warn { color: var(--red); }
-  .status-meta { font-size: 12.5px; color: var(--ink-2); margin-top: 10px; line-height: 1.5; }
-  .status-meta b { color: var(--ink); }
-  .incident-list { margin-top: 12px; border-top: 1px solid var(--line-2); padding-top: 10px; display: none; }
-  .incident-list.open { display: block; }
-  .incident { font-size: 12.5px; padding: 8px 0; border-bottom: 1px solid var(--line-2); }
-  .incident:last-child { border-bottom: none; }
-  .incident .idate { color: var(--ink-3); font-weight: 600; }
-  .incident .ititle { font-weight: 600; }
-  .incident .iwhy { color: var(--ink-2); margin-top: 2px; }
-  .toggle { font-size: 12px; font-weight: 700; color: var(--red-dark); background: none; border: none; cursor: pointer; padding: 8px 0 0; }
-  .toggle:hover { text-decoration: underline; }
-
-  /* ---------- Results ---------- */
-  .result-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 22px; margin-bottom: 16px; border-top: 3px solid var(--red); }
-  .result-head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-  .result-name { font-size: 17px; font-weight: 800; }
-  .result-period { font-size: 13px; color: var(--ink-3); font-weight: 600; }
-  .move { margin-left: auto; }
-  .move-copiar { background: var(--red); color: #fff; }
-  .move-observar { background: var(--red-tint); color: var(--red-dark); }
-  .move-ignorar { background: var(--line-2); color: var(--ink-3); }
-  .result-lead { font-size: 14.5px; color: var(--ink); line-height: 1.55; margin: 12px 0 4px; }
-  .rgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 26px; margin-top: 8px; }
-  .rblock-cap { font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-3); margin: 12px 0 4px; }
-  .rlist { margin: 0; padding-left: 18px; }
-  .rlist li { font-size: 13.5px; color: var(--ink-2); line-height: 1.55; margin-bottom: 3px; }
-  .rnone { font-size: 13px; color: var(--ink-3); }
-  .opp { margin-top: 14px; padding: 13px 15px; background: var(--red-tint-2); border: 1px solid #F6DADA; border-radius: 8px; }
-  .opp-cap { font-size: 11.5px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; color: var(--red-dark); }
-  .opp-txt { font-size: 13.5px; color: var(--ink); line-height: 1.5; margin-top: 3px; }
-  .read-cap { font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-3); margin-top: 12px; }
-  .read-txt { font-size: 13.5px; color: var(--ink-2); line-height: 1.5; margin-top: 3px; }
-  .result-src { font-size: 12px; color: var(--ink-3); margin-top: 12px; }
-  .result-src a { color: var(--red-dark); text-decoration: none; }
-
-  /* ---------- Competitor tiles ---------- */
-  .comp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-  .comp-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; display: flex; flex-direction: column; gap: 12px; }
-  .comp-name { font-size: 16px; font-weight: 800; }
-  .comp-stats { display: flex; gap: 20px; }
-  .comp-stat .v { font-size: 22px; font-weight: 800; line-height: 1; }
-  .comp-stat .v.alert { color: var(--red); }
-  .comp-stat .l { font-size: 11.5px; color: var(--ink-3); margin-top: 4px; font-weight: 600; }
-  .comp-btn { margin-top: auto; align-self: flex-start; font-size: 13px; font-weight: 700; color: var(--red-dark); background: var(--red-tint); border: none; border-radius: 7px; padding: 8px 13px; cursor: pointer; }
-  .comp-btn:hover { background: #FBDCDC; }
-
-  /* ---------- Misc ---------- */
-  .empty { text-align: center; padding: 46px 20px; color: var(--ink-3); background: var(--surface); border: 1px dashed var(--line); border-radius: var(--radius); }
-  .empty b { display: block; color: var(--ink-2); font-size: 15px; margin-bottom: 5px; }
-  .more { display: block; margin: 14px auto 0; font-size: 13px; font-weight: 700; color: var(--red-dark); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 9px 18px; cursor: pointer; }
-  .more:hover { border-color: var(--red); }
-  .view { display: none; }
-  .view.active { display: block; }
-  .legend { display: flex; gap: 16px; font-size: 12px; color: var(--ink-2); margin-top: 4px; }
-  .legend span { display: inline-flex; align-items: center; gap: 6px; }
-
-  @media (max-width: 920px) {
-    .app { flex-direction: column; }
-    .sidebar { width: 100%; height: auto; position: static; flex-direction: column; }
-    .nav { flex-direction: row; overflow-x: auto; padding: 8px; gap: 4px; }
-    .nav-label { display: none; }
-    .nav-item { width: auto; border-left: none; border-bottom: 3px solid transparent; white-space: nowrap; }
-    .nav-item.active { border-left: none; border-bottom-color: var(--red); }
-    .nav-item .count { display: none; }
-    .nav-foot { display: none; }
-    .kpis { grid-template-columns: repeat(2, 1fr); }
-    .grid-2, .status-grid, .comp-grid, .rgrid { grid-template-columns: 1fr; }
-    .content, .topbar { padding-left: 16px; padding-right: 16px; }
+  .kpi-card{
+    background:var(--white);
+    border:1px solid var(--grey-200);
+    border-top:3px solid var(--grey-300);
+    border-radius:var(--radius);
+    padding:16px 18px;
   }
-  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+  .kpi-card.accent{border-top-color:var(--red);}
+  .kpi-label{
+    font-size:11px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    color:var(--grey-500);
+    margin-bottom:8px;
+  }
+  .kpi-value{
+    font-family:var(--sans);
+    font-size:30px;
+    font-weight:800;
+    line-height:1;
+    color:var(--black);
+  }
+  .kpi-card.accent .kpi-value{color:var(--red);}
+  .kpi-sub{font-size:12.5px;color:var(--grey-500);margin-top:6px;}
+
+  .chart-row{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:14px;
+    margin-bottom:28px;
+  }
+  @media (max-width:860px){.chart-row{grid-template-columns:1fr;}}
+  .chart-card{
+    background:var(--white);
+    border:1px solid var(--grey-200);
+    border-radius:var(--radius);
+    padding:18px 20px;
+  }
+  .chart-card h3{
+    font-family:var(--sans);
+    font-size:13px;
+    font-weight:700;
+    margin:0 0 14px;
+    color:var(--black);
+  }
+  /* ---------- gráficos ----------
+     A altura é travada AQUI, no contêiner, e os charts rodam com
+     maintainAspectRatio:false. Sem isso, o Chart.js entra em loop de
+     "responsive resize": o canvas cresce a cada frame porque o pai não
+     tem altura definida, empurrando a página pra baixo infinitamente
+     (era o bug do "Itens por concorrente", que por ser barra horizontal
+     era o mais afetado). */
+  .chart-box{position:relative; width:100%; height:240px;}
+  .chart-box.tall{height:260px;}
+  .chart-box canvas{position:absolute; inset:0; width:100% !important; height:100% !important;}
+
+  /* ---------- feed ---------- */
+  .feed-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    margin-bottom:6px;
+  }
+  .feed-header h2{
+    font-family:var(--sans);
+    font-size:18px;
+    font-weight:800;
+    margin:0;
+    color:var(--black);
+  }
+  .feed-count{font-size:12px;color:var(--grey-500);font-weight:500;}
+
+  .item-card{
+    background:var(--white);
+    border:1px solid var(--grey-200);
+    border-left:3px solid var(--grey-300);
+    border-radius:var(--radius-sm);
+    padding:14px 16px;
+    margin-bottom:8px;
+  }
+  .item-card.trigger{border-left-color:var(--red);}
+  .item-summary{
+    list-style:none;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+  .item-summary::-webkit-details-marker{display:none;}
+  .item-summary::after{
+    content:'+';
+    color:var(--grey-500);
+    font-size:16px;
+    font-weight:700;
+    flex:none;
+    margin-left:8px;
+  }
+  details.item-card[open] .item-summary::after{content:'–';}
+  .item-title{font-size:14px;font-weight:600;line-height:1.4;color:var(--black);}
+  .item-summary-meta{
+    font-size:11.5px;
+    color:var(--grey-500);
+    white-space:nowrap;
+    font-weight:500;
+  }
+  details.item-card .item-body{margin-top:10px;}
+  .item-why{font-size:13.5px;color:var(--grey-700);margin-top:2px;line-height:1.55;}
+  .item-foot{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:10px;
+    flex-wrap:wrap;
+    gap:8px;
+    font-size:12px;
+    color:var(--grey-500);
+  }
+  .item-tags{display:flex;gap:6px;flex-wrap:wrap;}
+  .tag{
+    font-size:10.5px;
+    font-weight:600;
+    padding:2px 8px;
+    border-radius:10px;
+    background:var(--grey-100);
+    color:var(--grey-700);
+    border:1px solid var(--grey-200);
+  }
+  .tag.risk{background:var(--red-soft);color:var(--red);border-color:var(--red);}
+  .trigger-badge{
+    font-size:10.5px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.3px;
+    color:var(--white);
+    background:var(--red);
+    padding:2px 8px;
+    border-radius:10px;
+  }
+  .relevance-badge{
+    font-size:10.5px;
+    font-weight:600;
+    padding:1px 8px;
+    border-radius:10px;
+  }
+  .relevance-badge.alta{border:1px solid var(--red);color:var(--red);}
+  .relevance-badge.media{border:1px solid var(--grey-300);color:var(--grey-500);}
+  .source-badge{
+    font-size:10.5px;
+    font-weight:600;
+    padding:1px 8px;
+    border-radius:10px;
+    background:var(--grey-100);
+    color:var(--grey-700);
+  }
+  .empty-state{
+    text-align:center;
+    padding:60px 20px;
+    color:var(--grey-500);
+    font-size:14px;
+  }
+
+  /* ---------- alertas fixos ---------- */
+  .alerts-section{margin-bottom:28px;}
+  .alerts-section h2{
+    font-family:var(--sans);
+    font-size:16px;
+    font-weight:800;
+    margin:0 0 10px;
+    display:flex;
+    align-items:center;
+    gap:9px;
+    color:var(--black);
+  }
+  .pulse-dot{
+    width:8px;height:8px;border-radius:50%;
+    background:var(--red);
+    flex:none;
+    animation:pulse 1.8s infinite;
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(236,0,0,0.4);}
+    70%{box-shadow:0 0 0 7px rgba(236,0,0,0);}
+    100%{box-shadow:0 0 0 0 rgba(236,0,0,0);}
+  }
+
+  footer{
+    max-width:1280px;
+    margin:0 auto;
+    padding:0 32px 40px;
+    font-size:12px;
+    color:var(--grey-500);
+  }
 </style>
 </head>
 <body>
-<div class="app">
-  <aside class="sidebar">
+
+<header>
+  <div class="header-top">
     <div class="brand">
-      <div class="brand-mark">
-        <span class="brand-logo"><span></span></span>
-        <span class="brand-name">Santander</span>
+      <div class="brand-mark" aria-label="Santander">
+        <svg viewBox="0 0 43.9 41.9" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><path fill="#EC0000" d="M 31.5,19.5 C 31.4,18 31,16.5 30.2,15.2 L 23.4,3.3 C 22.9,2.4 22.5,1.4 22.3,0.4 L 22,0.9 c -1.7,2.9 -1.7,6.6 0,9.5 l 5.5,9.5 c 1.7,2.9 1.7,6.6 0,9.5 l -0.3,0.5 c -0.2,-1 -0.6,-2 -1.1,-2.9 l -5,-8.7 -3.2,-5.6 C 17.4,11.8 17,10.8 16.8,9.8 l -0.3,0.5 c -1.7,2.9 -1.7,6.5 0,9.5 v 0 l 5.5,9.5 c 1.7,2.9 1.7,6.6 0,9.5 l -0.3,0.5 c -0.2,-1 -0.6,-2 -1.1,-2.9 L 13.7,24.5 C 12.8,22.9 12.4,21.1 12.4,19.3 5.1,21.2 0,25.3 0,30 0,36.6 9.8,41.9 21.9,41.9 34,41.9 43.8,36.6 43.8,30 43.9,25.5 38.9,21.4 31.5,19.5 Z"/></svg>
       </div>
-      <div class="brand-sub"><strong>Corretora</strong> · Radar de Mercado</div>
+      <div>
+        <h1>Radar de Mercado</h1>
+        <p>XP · Clear · Rico &nbsp;·&nbsp; BTG &nbsp;·&nbsp; Itaú · Íon &nbsp;·&nbsp; Bradesco · Ágora &nbsp;·&nbsp; Genial</p>
+      </div>
     </div>
-    <nav class="nav" id="nav">
-      <div class="nav-label">Inteligência</div>
-      <button class="nav-item active" data-view="overview">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
-        <span>Visão geral</span>
-      </button>
-      <button class="nav-item" data-view="concorrentes">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        <span>Concorrentes</span>
-      </button>
-      <button class="nav-item" data-view="status">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-        <span>Status &amp; intercorrências</span>
-        <span class="count" id="nav-status">0</span>
-      </button>
-      <button class="nav-item" data-view="resultados">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 9l-5 5-3-3-4 4"/></svg>
-        <span>Resultados &amp; estratégia</span>
-        <span class="count" id="nav-results">0</span>
-      </button>
-      <button class="nav-item" data-view="historico">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-        <span>Histórico</span>
-      </button>
-    </nav>
-    <div class="nav-foot">Uso interno · Santander Corretora.<br/>Monitora XP·Clear·Rico, BTG, Itaú·Íon, Bradesco·Ágora, Genial e Nubank.</div>
-  </aside>
-
-  <main class="main">
-    <header class="topbar">
-      <div class="topbar-row">
-        <div>
-          <h1 class="view-title" id="view-title">Visão geral</h1>
-          <div class="view-desc" id="view-desc">O que mudou no mercado hoje, no recorte que interessa à sua mesa.</div>
-        </div>
-        <div class="updated" id="updated">—</div>
-      </div>
-      <div class="filters">
-        <div class="filter-grp">
-          <span class="filter-cap">Eixo</span>
-          <div class="seg" id="seg-eixo"></div>
-        </div>
-        <div class="filter-grp">
-          <span class="filter-cap">Concorrente</span>
-          <select class="pick" id="pick-grupo"></select>
-        </div>
-        <div class="filter-grp">
-          <span class="filter-cap">Período</span>
-          <select class="pick" id="pick-periodo">
-            <option value="7">7 dias</option>
-            <option value="30" selected>30 dias</option>
-            <option value="90">90 dias</option>
-            <option value="all">Tudo</option>
-          </select>
-        </div>
-      </div>
-    </header>
-
-    <div class="content">
-      <section class="view active" id="view-overview"></section>
-      <section class="view" id="view-concorrentes"></section>
-      <section class="view" id="view-status"></section>
-      <section class="view" id="view-resultados"></section>
-      <section class="view" id="view-historico"></section>
+    <div class="meta">
+      <div id="updated-at">carregando…</div>
+      <div id="sample-flag-holder"></div>
     </div>
-  </main>
-</div>
+  </div>
+
+  <div class="filters">
+    <div class="filter-block">
+      <span class="filter-label">Eixo</span>
+      <div id="axis-chips"></div>
+    </div>
+    <div class="filter-block">
+      <span class="filter-label">Concorrente</span>
+      <div id="competitor-chips"></div>
+    </div>
+    <div class="filter-block">
+      <span class="filter-label">Período</span>
+      <select id="period-select">
+        <option value="7">7 dias</option>
+        <option value="30" selected>30 dias</option>
+        <option value="90">90 dias</option>
+        <option value="99999">Tudo</option>
+      </select>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="alerts-section" id="alerts-section" style="display:none;">
+    <h2><span class="pulse-dot"></span>Últimos Alertas</h2>
+    <div id="alerts-feed"></div>
+  </section>
+
+  <section class="kpi-row" id="kpi-row"></section>
+
+  <section class="chart-card" style="margin-bottom:14px;">
+    <h3>Itens ao longo do tempo (todo o histórico, por semana)</h3>
+    <div class="chart-box tall"><canvas id="trend-chart"></canvas></div>
+  </section>
+
+  <section class="chart-row">
+    <div class="chart-card">
+      <h3>Itens por eixo</h3>
+      <div class="chart-box"><canvas id="axis-chart"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <h3>Itens por concorrente</h3>
+      <div class="chart-box"><canvas id="competitor-chart"></canvas></div>
+    </div>
+  </section>
+
+  <div class="feed-header">
+    <h2>Itens monitorados</h2>
+    <span class="feed-count" id="feed-count"></span>
+  </div>
+  <div id="feed"></div>
+</main>
+
+<footer>
+  Radar de Mercado — inteligência competitiva interna · dados coletados via portais de notícia e fontes públicas · não é aconselhamento de investimento
+</footer>
 
 <script>
-"use strict";
-
 const AXES = ["RV/Trading", "Tecnologia", "Produtos Novos", "Risco/Regulação"];
-const GROUP_ORDER = ["XP/Clear/Rico", "BTG Pactual", "Itaú/Íon", "Bradesco/Ágora", "Genial", "Nubank/NuInvest"];
-const TRIGGER_LABELS = { PRICE: "Preço/Taxa", LANC: "Lançamento", REG: "Regulação", INC: "Incidente", MA: "M&A", LID: "Liderança", TERMS: "Termos" };
-const VIEW_META = {
-  overview:     { title: "Visão geral", desc: "O que mudou no mercado hoje, no recorte que interessa à sua mesa." },
-  concorrentes: { title: "Concorrentes", desc: "Cada grupo monitorado, com atividade e saúde recentes." },
-  status:       { title: "Status & intercorrências", desc: "Situação segundo o último incidente conhecido — não é verificação em tempo real." },
-  resultados:   { title: "Resultados & estratégia", desc: "Leitura estratégica dos resultados divulgados. Varredura semanal." },
-  historico:    { title: "Histórico", desc: "Tudo que o radar registrou na janela selecionada." },
+const RISK_AXIS = "Risco/Regulação";
+const COLOR_RED = "#EC0000";
+const COLOR_DARK = "#1A1A1A";
+const COLOR_GREY = "#8A8A8A";
+
+// Dados de exemplo — usados quando data.json ainda não existe (antes do
+// primeiro run do GitHub Actions) ou não pôde ser carregado. Baseados em
+// itens reais validados durante a construção do radar.
+const SAMPLE_DATA = {
+  generated_at: null,
+  items: [
+    {competitor_group:"XP/Clear/Rico", title:"Clear relança plataforma com execução abaixo de 50ms e alavancagem intraday de até 300x", link:"#", source:"InfoMoney", published_at:"2026-07-08T12:00:00+00:00", why_it_matters:"A Clear eleva o padrão de velocidade e alavancagem, pressionando concorrentes a acompanharem ou perderem traders de alta frequência.", axes:["RV/Trading","Tecnologia","Produtos Novos","Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[]},
+    {competitor_group:"BTG Pactual", title:"BTG Pactual lança BTG Trends, plataforma de mercados de previsão", link:"#", source:"Money Times", published_at:"2026-07-09T09:00:00+00:00", why_it_matters:"O BTG inova com derivativos binários, produto novo que pode atrair clientes sofisticados, com alcance inicial limitado por restrição a investidores qualificados.", axes:["Produtos Novos","Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[{source:"Seu Dinheiro", link:"#"}]},
+    {competitor_group:"Genial", title:"Genial eleva alavancagem para até 312x e lança assistente de IA QINV", link:"#", source:"Seu Dinheiro", published_at:"2026-07-10T15:00:00+00:00", why_it_matters:"Genial supera a concorrência em alavancagem máxima, atraindo day traders agressivos e aumentando o risco de escrutínio regulatório.", axes:["RV/Trading","Tecnologia","Produtos Novos","Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[]},
+    {competitor_group:"Múltiplos/Setor", title:"CVM publica Ofício-Circular esclarecendo regras de alavancagem em fundos de investimento", link:"#", source:"gov.br/CVM", published_at:"2026-07-11T10:00:00+00:00", why_it_matters:"Reduz incertezas sobre margens, beneficiando corretoras que oferecem alavancagem, mas exige compliance mais rigoroso.", axes:["Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[]},
+    {competitor_group:"XP/Clear/Rico", title:"Relatório do BTG aponta pivô estratégico da XP para crédito corporativo; CFO é trocado", link:"#", source:"Finsiders Brasil", published_at:"2026-07-06T18:50:00+00:00", why_it_matters:"A troca de CFO e o foco em crédito corporativo indicam reorientação estratégica que pode abrir espaço para concorrentes focados em varejo.", axes:["Produtos Novos"], daily_trigger:false, relevance:"média", also_reported_by:[]},
+  ]
 };
 
-let DATA = { items: [], results: [], status: {}, generated_at: null };
-const state = { view: "overview", eixo: "all", grupo: "all", periodo: 30, triggersOnly: false, chart: null };
+let RAW_ITEMS = [];
+let ACTIVE_AXES = new Set();
+let ACTIVE_COMPETITORS = new Set();
+let axisChart, competitorChart, trendChart;
 
-/* ---------- utils ---------- */
-function esc(v) {
-  return (v == null ? "" : String(v))
-    .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-}
-function parseDate(s) { const d = new Date(s); return isNaN(d) ? null : d; }
-function fmtDate(s) { const d = parseDate(s); return d ? d.toLocaleDateString("pt-BR") : ""; }
-function fmtDateTime(s) { const d = parseDate(s); return d ? d.toLocaleString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" }) : "—"; }
-function daysSince(s) { const d = parseDate(s); return d ? (Date.now() - d.getTime()) / 86400000 : Infinity; }
-function link(href, text, cls) { return `<a href="${esc(href)}" target="_blank" rel="noopener"${cls ? ` class="${cls}"` : ""}>${esc(text)}</a>`; }
-
-function normalize(raw) {
-  if (Array.isArray(raw)) return { items: raw, results: [], status: {}, generated_at: null };
-  return {
-    items: raw.items || [],
-    results: raw.results || [],
-    status: raw.status_by_competitor || {},
-    generated_at: raw.generated_at || null,
-  };
-}
-function groupsPresent() {
-  const seen = new Set();
-  DATA.items.forEach(i => seen.add(i.competitor_group));
-  DATA.results.forEach(r => seen.add(r.competitor_group));
-  Object.keys(DATA.status).forEach(g => seen.add(g));
-  const ordered = GROUP_ORDER.filter(g => seen.has(g));
-  [...seen].forEach(g => { if (g && !ordered.includes(g)) ordered.push(g); });
-  return ordered;
+function fmtDate(iso){
+  const d = new Date(iso);
+  return d.toLocaleDateString('pt-BR', {day:'2-digit', month:'2-digit', year:'numeric'});
 }
 
-/* ---------- filtering ---------- */
-function inPeriod(s) { return state.periodo === "all" ? true : daysSince(s) <= Number(state.periodo); }
-function matchItem(i) {
-  if (!inPeriod(i.published_at)) return false;
-  if (state.grupo !== "all" && i.competitor_group !== state.grupo) return false;
-  if (state.eixo !== "all" && !(i.axes || []).includes(state.eixo)) return false;
-  return true;
+function escapeHtml(str){
+  const div = document.createElement('div');
+  div.textContent = str ?? '';
+  return div.innerHTML;
 }
-function matchResult(r) {
-  if (!inPeriod(r.published_at)) return false;
-  if (state.grupo !== "all" && r.competitor_group !== state.grupo) return false;
-  if (state.eixo !== "all" && !(r.eixos || []).includes(state.eixo)) return false;
-  return true;
-}
-function sortDesc(a, b) { return (parseDate(b.published_at) || 0) - (parseDate(a.published_at) || 0); }
 
-/* ---------- news card ---------- */
-function alsoHtml(item) {
-  const also = item.also_reported_by || [];
-  if (!also.length) return "";
-  const links = also.slice(0, 4).map(s => link(s.link, s.source)).join(", ");
-  return `<span class="also">${also.length + 1} fontes · ${links}</span>`;
-}
-function newsCard(item, tier) {
-  const badges = [];
-  if (item.daily_trigger) {
-    const lbl = TRIGGER_LABELS[item.trigger_reason] || "Gatilho";
-    badges.push(`<span class="badge badge-trigger">${esc(lbl)}</span>`);
-  } else if (item.relevance === "alta") {
-    badges.push(`<span class="badge badge-high">Alta relevância</span>`);
+async function loadData(){
+  try{
+    const res = await fetch('./data.json', {cache:'no-store'});
+    if(!res.ok) throw new Error('sem data.json');
+    const json = await res.json();
+    if(!json.items || !json.items.length) throw new Error('data.json vazio');
+    return {items:json.items, generatedAt:json.generated_at, sample:false};
+  }catch(e){
+    return {items:SAMPLE_DATA.items, generatedAt:null, sample:true};
   }
-  const axes = (item.axes || []).map(a => `<span class="tag">${esc(a)}</span>`).join("");
-  return `
-    <article class="card tier-${tier}">
-      <div class="card-top">
-        <h3 class="card-title">${link(item.link, item.title)}</h3>
-        <span class="card-meta">${esc(item.competitor_group)} · ${fmtDate(item.published_at)}</span>
-      </div>
-      ${item.why_it_matters ? `<p class="card-sum">${esc(item.why_it_matters)}</p>` : (item.summary ? `<p class="card-sum">${esc(item.summary)}</p>` : "")}
-      <div class="card-foot">${badges.join("")}${axes}${alsoHtml(item)}</div>
-    </article>`;
-}
-function contextRow(item) {
-  return `
-    <div class="row">
-      <span class="row-grp">${esc(item.competitor_group)}</span>
-      <span class="row-title">${link(item.link, item.title)}</span>
-      <span class="row-date">${fmtDate(item.published_at)}</span>
-    </div>`;
 }
 
-/* ---------- views ---------- */
-function renderOverview() {
-  const items = DATA.items.filter(matchItem).sort(sortDesc);
-  const attn = items.filter(i => i.daily_trigger);
-  const high = items.filter(i => i.relevance === "alta" && !i.daily_trigger);
-  const ctx  = items.filter(i => i.relevance !== "alta");
-  const results = DATA.results.filter(matchResult);
-  const unstable = Object.values(DATA.status).filter(s => s.status === "instavel_recente").length;
+function buildChips(container, values, activeSet, onToggle){
+  container.innerHTML = '';
+  values.forEach(v => {
+    const chip = document.createElement('button');
+    chip.className = 'chip' + (activeSet.has(v) ? ' active' : '');
+    chip.textContent = v;
+    chip.onclick = () => { onToggle(v); render(); };
+    container.appendChild(chip);
+  });
+}
 
-  const el = document.getElementById("view-overview");
-  el.innerHTML = `
-    <div class="kpis">
-      <button class="kpi" data-jump="attn"><div class="kpi-val alert tnum">${attn.length}</div><div class="kpi-cap">Exige atenção</div><div class="kpi-hint">gatilhos na janela</div></button>
-      <button class="kpi" data-jump="high"><div class="kpi-val tnum">${high.length}</div><div class="kpi-cap">Alta relevância</div><div class="kpi-hint">sem gatilho</div></button>
-      <button class="kpi" data-goto="status"><div class="kpi-val ${unstable ? "warn" : ""} tnum">${unstable}</div><div class="kpi-cap">Concorrentes instáveis</div><div class="kpi-hint">incidente recente</div></button>
-      <button class="kpi" data-goto="resultados"><div class="kpi-val tnum">${results.length}</div><div class="kpi-cap">Resultados na janela</div><div class="kpi-hint">leitura estratégica</div></button>
+function filteredItems(){
+  const periodDays = parseInt(document.getElementById('period-select').value, 10);
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - periodDays);
+
+  return RAW_ITEMS.filter(item => {
+    if(new Date(item.published_at) < cutoff) return false;
+    if(ACTIVE_AXES.size && !item.axes.some(a => ACTIVE_AXES.has(a))) return false;
+    if(ACTIVE_COMPETITORS.size && !ACTIVE_COMPETITORS.has(item.competitor_group)) return false;
+    return true;
+  }).sort((a,b) => new Date(b.published_at) - new Date(a.published_at));
+}
+
+function renderKPIs(items){
+  const triggers = items.filter(i => i.daily_trigger).length;
+  const axisCounts = {};
+  AXES.forEach(a => axisCounts[a] = 0);
+  items.forEach(i => i.axes.forEach(a => { if(axisCounts[a] !== undefined) axisCounts[a]++; }));
+  const topAxis = Object.entries(axisCounts).sort((a,b) => b[1]-a[1])[0];
+
+  const compCounts = {};
+  items.forEach(i => compCounts[i.competitor_group] = (compCounts[i.competitor_group]||0)+1);
+  const topComp = Object.entries(compCounts).sort((a,b) => b[1]-a[1])[0];
+
+  const kpis = [
+    {label:'Itens no período', value: items.length, sub: `${document.getElementById('period-select').value} dias`, accent:false},
+    {label:'Alertas de gatilho', value: triggers, sub: 'risco, comunicado, lançamento ou regulação', accent:true},
+    {label:'Eixo mais ativo', value: topAxis ? topAxis[0] : '—', sub: topAxis ? `${topAxis[1]} itens` : '', accent:false},
+    {label:'Concorrente mais ativo', value: topComp ? topComp[0] : '—', sub: topComp ? `${topComp[1]} itens` : '', accent:false},
+  ];
+
+  const row = document.getElementById('kpi-row');
+  row.innerHTML = kpis.map(k => `
+    <div class="kpi-card ${k.accent ? 'accent' : ''}">
+      <div class="kpi-label">${k.label}</div>
+      <div class="kpi-value" style="font-size:${k.value.toString().length > 12 ? '18px' : '30px'}">${k.value}</div>
+      <div class="kpi-sub">${k.sub}</div>
     </div>
-
-    <div class="grid-2">
-      <div>
-        <div class="sec" id="tier-attn">
-          <div class="sec-head"><span class="sec-dot" style="background:var(--red)"></span><span class="sec-title">Exige atenção</span><span class="sec-note">${attn.length} item(ns)</span></div>
-          ${attn.length ? attn.map(i => newsCard(i, "attn")).join("") : emptyBox("Nada exigindo atenção", "Nenhum gatilho para estes filtros. Amplie o período ou troque o eixo.")}
-        </div>
-        <div class="sec" id="tier-high">
-          <div class="sec-head"><span class="sec-dot" style="background:#F3A0A0"></span><span class="sec-title">Alta relevância</span><span class="sec-note">${high.length} item(ns)</span></div>
-          ${high.length ? high.slice(0, 8).map(i => newsCard(i, "high")).join("") : `<div class="rnone">Sem itens de alta relevância na janela.</div>`}
-        </div>
-      </div>
-      <div>
-        <div class="panel">
-          <div class="panel-title">Itens por concorrente</div>
-          <canvas id="chart" height="200"></canvas>
-        </div>
-        <div class="sec" id="tier-ctx">
-          <div class="sec-head"><span class="sec-dot" style="background:var(--ink-3)"></span><span class="sec-title">Contexto</span><span class="sec-note">${ctx.length}</span></div>
-          ${ctx.length ? ctx.slice(0, 10).map(contextRow).join("") : `<div class="rnone">Sem itens de contexto.</div>`}
-        </div>
-      </div>
-    </div>`;
-
-  drawChart(items);
+  `).join('');
 }
 
-function drawChart(items) {
-  const canvas = document.getElementById("chart");
-  if (!canvas || typeof Chart === "undefined") return;
-  if (state.chart) { state.chart.destroy(); state.chart = null; }
-  const groups = groupsPresent();
-  const counts = groups.map(g => items.filter(i => i.competitor_group === g).length);
-  state.chart = new Chart(canvas, {
-    type: "bar",
-    data: { labels: groups.map(g => g.replace("/", " / ")), datasets: [{ data: counts, backgroundColor: "#EC0000", borderRadius: 5, barThickness: 16 }] },
-    options: {
-      indexAxis: "y", responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { display: false }, tooltip: { backgroundColor: "#16181D" } },
-      scales: {
-        x: { beginAtZero: true, ticks: { precision: 0, color: "#838B96" }, grid: { color: "#EFF1F4" } },
-        y: { ticks: { color: "#4A515C", font: { size: 11, weight: "600" } }, grid: { display: false } },
-      },
-    },
+function trendItems(){
+  return RAW_ITEMS.filter(item => {
+    if(ACTIVE_AXES.size && !item.axes.some(a => ACTIVE_AXES.has(a))) return false;
+    if(ACTIVE_COMPETITORS.size && !ACTIVE_COMPETITORS.has(item.competitor_group)) return false;
+    return true;
   });
 }
 
-function renderConcorrentes() {
-  const groups = groupsPresent();
-  const cards = groups.map(g => {
-    const items = DATA.items.filter(i => i.competitor_group === g && inPeriod(i.published_at));
-    const alerts = items.filter(i => i.daily_trigger).length;
-    const st = DATA.status[g] || {};
-    const warn = st.status === "instavel_recente";
-    return `
-      <div class="comp-card">
-        <div>
-          <div class="comp-name">${esc(g)}</div>
-          <div class="state ${warn ? "state-warn" : "state-ok"}" style="margin-top:6px"><span class="dot ${warn ? "dot-warn" : "dot-ok"}"></span>${warn ? "Instável recentemente" : "Estável"}</div>
-        </div>
-        <div class="comp-stats">
-          <div class="comp-stat"><div class="v tnum">${items.length}</div><div class="l">itens na janela</div></div>
-          <div class="comp-stat"><div class="v alert tnum">${alerts}</div><div class="l">gatilhos</div></div>
-        </div>
-        <button class="comp-btn" data-grupo="${esc(g)}">Ver itens →</button>
-      </div>`;
-  }).join("");
-  document.getElementById("view-concorrentes").innerHTML = `<div class="comp-grid">${cards}</div>`;
+function mondayOf(dateObj){
+  const d = new Date(dateObj);
+  const day = d.getDay();
+  d.setDate(d.getDate() + (day === 0 ? -6 : 1) - day);
+  d.setHours(0,0,0,0);
+  return d;
 }
 
-function renderStatus() {
-  const groups = groupsPresent();
-  const pills = groups.map(g => {
-    const st = DATA.status[g] || {};
-    const warn = st.status === "instavel_recente";
-    return `<div class="health-pill"><span class="dot ${warn ? "dot-warn" : "dot-ok"}"></span>${esc(g)}</div>`;
-  }).join("");
+function renderTrendChart(){
+  const items = trendItems();
+  const buckets = {};
+  items.forEach(item => {
+    const key = mondayOf(new Date(item.published_at)).toISOString().slice(0,10);
+    buckets[key] = (buckets[key]||0) + 1;
+  });
+  const labels = Object.keys(buckets).sort();
+  const data = labels.map(k => buckets[k]);
+  const displayLabels = labels.map(k => 'sem. ' + fmtDate(k + 'T00:00:00Z'));
 
-  const cards = groups.map(g => {
-    const st = DATA.status[g] || { incidents: [] };
-    const warn = st.status === "instavel_recente";
-    const incs = st.incidents || [];
-    const incHtml = incs.map(i => `
-      <div class="incident">
-        <div class="idate">${fmtDate(i.published_at)}</div>
-        <div class="ititle">${link(i.link, i.title)}</div>
-        ${i.why_it_matters ? `<div class="iwhy">${esc(i.why_it_matters)}</div>` : ""}
-      </div>`).join("");
-    return `
-      <div class="status-card ${warn ? "warn" : ""}">
-        <div class="status-head">
-          <span class="status-name">${esc(g)}</span>
-          <span class="state ${warn ? "state-warn" : "state-ok"}"><span class="dot ${warn ? "dot-warn" : "dot-ok"}"></span>${warn ? "Instável recentemente" : "Estável"}</span>
-        </div>
-        <div class="status-meta">
-          ${st.last_incident_at
-            ? `Último incidente: <b>${fmtDate(st.last_incident_at)}</b> — ${esc(st.last_incident_title || "")}.<br/><b>${st.incident_count_window || 0}</b> intercorrência(s) nos últimos 180 dias.`
-            : "Nenhuma intercorrência registrada na janela."}
-        </div>
-        ${incs.length ? `<button class="toggle" data-toggle-inc>Ver histórico de intercorrências (${incs.length})</button><div class="incident-list">${incHtml}</div>` : ""}
-      </div>`;
-  }).join("");
-
-  document.getElementById("view-status").innerHTML = `
-    <div class="legend"><span><span class="dot dot-ok"></span>Estável</span><span><span class="dot dot-warn"></span>Incidente nos últimos 3 dias</span></div>
-    <div class="sec"><div class="health">${pills}</div></div>
-    <div class="sec"><div class="status-grid">${cards}</div></div>`;
+  if(trendChart) trendChart.destroy();
+  trendChart = new Chart(document.getElementById('trend-chart'), {
+    type:'bar',
+    data:{labels:displayLabels, datasets:[{data, backgroundColor:COLOR_DARK, borderRadius:3}]},
+    options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true, ticks:{precision:0}}}, animation:false}
+  });
 }
 
-function resultCard(r) {
-  const move = (r.copiar_ou_observar || "observar").toLowerCase();
-  const moveTxt = { copiar: "Copiar", observar: "Observar", ignorar: "Ignorar" }[move] || "Observar";
-  const listOr = (arr, none) => (arr && arr.length) ? `<ul class="rlist">${arr.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : `<div class="rnone">${none}</div>`;
-  const per = r.periodo && r.periodo !== "não informado" ? `<span class="result-period">${esc(r.periodo)}</span>` : "";
+function renderCharts(items){
+  const axisCounts = AXES.map(a => items.filter(i => i.axes.includes(a)).length);
+  const axisColors = AXES.map(a => a === RISK_AXIS ? COLOR_RED : COLOR_DARK);
+  const competitors = [...new Set(RAW_ITEMS.map(i => i.competitor_group))];
+  const compCounts = competitors.map(c => items.filter(i => i.competitor_group === c).length);
+
+  if(axisChart) axisChart.destroy();
+  axisChart = new Chart(document.getElementById('axis-chart'), {
+    type:'bar',
+    data:{labels:AXES, datasets:[{data:axisCounts, backgroundColor:axisColors, borderRadius:3}]},
+    options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true, ticks:{precision:0}}}, animation:false}
+  });
+
+  if(competitorChart) competitorChart.destroy();
+  competitorChart = new Chart(document.getElementById('competitor-chart'), {
+    type:'bar',
+    data:{labels:competitors, datasets:[{data:compCounts, backgroundColor:COLOR_DARK, borderRadius:3}]},
+    options:{indexAxis:'y', responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{x:{beginAtZero:true, ticks:{precision:0}}}, animation:false}
+  });
+}
+
+function sourceHtml(item){
+  const extra = item.also_reported_by || [];
+  const primary = `<a href="${item.link}" target="_blank" rel="noopener">${escapeHtml(item.source)}</a>`;
+  if(!extra.length) return `${primary} · ${fmtDate(item.published_at)}`;
+  const extraLinks = extra.map(s => `<a href="${s.link}" target="_blank" rel="noopener">${escapeHtml(s.source)}</a>`).join(', ');
+  return `${primary} <span style="color:var(--grey-500)">também:</span> ${extraLinks} · ${fmtDate(item.published_at)}`;
+}
+
+function itemCardHtml(item, defaultOpen){
+  const relClass = item.relevance === 'alta' ? 'alta' : 'media';
+  const sourceCount = 1 + (item.also_reported_by || []).length;
   return `
-    <div class="result-card">
-      <div class="result-head">
-        <span class="result-name">${esc(r.competitor_group)}</span>${per}
-        <span class="badge move move-${move}">${esc(moveTxt)}</span>
+    <details ${defaultOpen ? 'open' : ''} class="item-card ${item.daily_trigger ? 'trigger' : ''}">
+      <summary class="item-summary">
+        <span class="item-title">${escapeHtml(item.title)}</span>
+        <span class="item-summary-meta">${escapeHtml(item.competitor_group)} · ${fmtDate(item.published_at)}</span>
+      </summary>
+      <div class="item-body">
+        <div class="item-why">${escapeHtml(item.why_it_matters)}</div>
+        <div class="item-foot">
+          <div class="item-tags">
+            ${item.axes.map(a => `<span class="tag ${a === RISK_AXIS ? 'risk' : ''}">${a}</span>`).join('')}
+            ${item.daily_trigger ? '<span class="trigger-badge">gatilho diário</span>' : ''}
+            ${item.relevance ? `<span class="relevance-badge ${relClass}">relevância ${item.relevance}</span>` : ''}
+            ${sourceCount > 1 ? `<span class="source-badge">${sourceCount} fontes</span>` : ''}
+          </div>
+          <div>${sourceHtml(item)}</div>
+        </div>
       </div>
-      <p class="result-lead">${esc(r.resumo_estrategico || "")}</p>
-      <div class="rgrid">
-        <div><div class="rblock-cap">Onde colocam energia</div>${listOr(r.onde_colocam_energia, "—")}</div>
-        <div><div class="rblock-cap">Movimentos concretos</div>${listOr(r.movimentos_concretos, "—")}</div>
-      </div>
-      <div class="rblock-cap">Onde deixam a desejar</div>${listOr(r.onde_deixam_a_desejar, "Nada evidente no material.")}
-      <div class="opp">
-        <div class="opp-cap">Oportunidade para nós</div>
-        <div class="opp-txt">${esc(r.oportunidade_para_nos || "nenhuma clara")}</div>
-      </div>
-      <div class="read-cap">Leitura para o Santander</div>
-      <div class="read-txt">${esc(r.leitura_para_o_santander || "")}</div>
-      <div class="result-src">Fonte: ${link(r.link, r.source || "matéria")} · ${fmtDate(r.published_at)}</div>
-    </div>`;
-}
-function renderResultados() {
-  const results = DATA.results.filter(matchResult).sort(sortDesc);
-  document.getElementById("view-resultados").innerHTML = results.length
-    ? results.map(resultCard).join("")
-    : emptyBox("Sem resultados extraídos ainda", "A varredura de resultados roda toda segunda-feira. Assim que um concorrente divulgar, a leitura estratégica aparece aqui.");
+    </details>
+  `;
 }
 
-let histShown = 20;
-function renderHistorico() {
-  const items = DATA.items.filter(matchItem).sort(sortDesc);
-  const shown = items.slice(0, histShown);
-  const rows = shown.map(i => `
-    <div class="row">
-      <span class="row-grp">${esc(i.competitor_group)}</span>
-      <span class="row-title">${link(i.link, i.title)}</span>
-      ${i.daily_trigger ? `<span class="badge badge-trigger">${esc(TRIGGER_LABELS[i.trigger_reason] || "Gatilho")}</span>` : ""}
-      <span class="row-date">${fmtDate(i.published_at)}</span>
-    </div>`).join("");
-  document.getElementById("view-historico").innerHTML = items.length
-    ? `<div class="sec">${rows}</div>${items.length > histShown ? `<button class="more" id="more-hist">Mostrar mais (${items.length - histShown})</button>` : ""}`
-    : emptyBox("Nada no histórico", "Nenhum item para estes filtros. Amplie o período ou limpe o filtro de concorrente.");
+function alertItems(){
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - 7);
+  return RAW_ITEMS.filter(i => i.daily_trigger && new Date(i.published_at) >= cutoff)
+    .sort((a,b) => new Date(b.published_at) - new Date(a.published_at));
 }
 
-function emptyBox(title, msg) { return `<div class="empty"><b>${esc(title)}</b>${esc(msg)}</div>`; }
-
-/* ---------- render dispatch ---------- */
-function render() {
-  document.querySelectorAll(".view").forEach(v => v.classList.remove("active"));
-  document.getElementById("view-" + state.view).classList.add("active");
-  document.querySelectorAll(".nav-item").forEach(b => b.classList.toggle("active", b.dataset.view === state.view));
-  const meta = VIEW_META[state.view];
-  document.getElementById("view-title").textContent = meta.title;
-  document.getElementById("view-desc").textContent = meta.desc;
-
-  if (state.view === "overview") renderOverview();
-  else if (state.view === "concorrentes") renderConcorrentes();
-  else if (state.view === "status") renderStatus();
-  else if (state.view === "resultados") renderResultados();
-  else if (state.view === "historico") { histShown = 20; renderHistorico(); }
+function renderAlerts(){
+  const items = alertItems();
+  const section = document.getElementById('alerts-section');
+  if(!items.length){ section.style.display = 'none'; return; }
+  section.style.display = '';
+  document.getElementById('alerts-feed').innerHTML = items.map(i => itemCardHtml(i, true)).join('');
 }
 
-/* ---------- filters UI ---------- */
-function buildFilters() {
-  const seg = document.getElementById("seg-eixo");
-  const opts = [["all", "Todos"], ...AXES.map(a => [a, a])];
-  seg.innerHTML = opts.map(([v, l]) => `<button data-eixo="${esc(v)}" class="${v === state.eixo ? "on" : ""}">${esc(l)}</button>`).join("");
+function renderFeed(items){
+  document.getElementById('feed-count').textContent = `${items.length} itens`;
+  const feed = document.getElementById('feed');
 
-  const grupoSel = document.getElementById("pick-grupo");
-  grupoSel.innerHTML = `<option value="all">Todos</option>` + groupsPresent().map(g => `<option value="${esc(g)}">${esc(g)}</option>`).join("");
-}
-
-function setNavCounts() {
-  const unstable = Object.values(DATA.status).filter(s => s.status === "instavel_recente").length;
-  document.getElementById("nav-status").textContent = unstable;
-  document.getElementById("nav-results").textContent = DATA.results.length;
-}
-
-/* ---------- events ---------- */
-function wire() {
-  document.getElementById("nav").addEventListener("click", e => {
-    const b = e.target.closest(".nav-item"); if (!b) return;
-    state.view = b.dataset.view; render();
-  });
-  document.getElementById("seg-eixo").addEventListener("click", e => {
-    const b = e.target.closest("button"); if (!b) return;
-    state.eixo = b.dataset.eixo;
-    document.querySelectorAll("#seg-eixo button").forEach(x => x.classList.toggle("on", x === b));
-    render();
-  });
-  document.getElementById("pick-grupo").addEventListener("change", e => { state.grupo = e.target.value; render(); });
-  document.getElementById("pick-periodo").addEventListener("change", e => { state.periodo = e.target.value; render(); });
-
-  document.querySelector(".content").addEventListener("click", e => {
-    const jump = e.target.closest("[data-jump]");
-    if (jump) { const t = document.getElementById("tier-" + jump.dataset.jump); if (t) t.scrollIntoView({ behavior: "smooth", block: "start" }); return; }
-    const goto = e.target.closest("[data-goto]");
-    if (goto) { state.view = goto.dataset.goto; render(); return; }
-    const comp = e.target.closest("[data-grupo]");
-    if (comp) { state.grupo = comp.dataset.grupo; document.getElementById("pick-grupo").value = comp.dataset.grupo; state.view = "overview"; render(); return; }
-    const inc = e.target.closest("[data-toggle-inc]");
-    if (inc) { const list = inc.nextElementSibling; const open = list.classList.toggle("open"); inc.textContent = (open ? "Ocultar histórico" : `Ver histórico de intercorrências (${list.children.length})`); return; }
-    if (e.target.id === "more-hist") { histShown += 30; renderHistorico(); }
-  });
-}
-
-/* ---------- boot ---------- */
-async function boot() {
-  buildFilters(); wire();
-  try {
-    const res = await fetch("data.json", { cache: "no-store" });
-    DATA = normalize(await res.json());
-  } catch (err) {
-    DATA = normalize([]);
+  if(!items.length){
+    feed.innerHTML = `<div class="empty-state">Nenhum item encontrado com esses filtros. Tente ampliar o período ou limpar os filtros de eixo/concorrente.</div>`;
+    return;
   }
-  document.getElementById("updated").innerHTML = DATA.generated_at
-    ? `Atualizado em <strong>${fmtDateTime(DATA.generated_at)}</strong>`
-    : "Sem dados carregados";
-  buildFilters(); setNavCounts(); render();
+
+  feed.innerHTML = items.map(item => itemCardHtml(item, false)).join('');
 }
-boot();
+
+function render(){
+  const items = filteredItems();
+  renderAlerts();
+  renderKPIs(items);
+  renderTrendChart();
+  renderCharts(items);
+  renderFeed(items);
+}
+
+async function init(){
+  const {items, generatedAt, sample} = await loadData();
+  RAW_ITEMS = items;
+
+  document.getElementById('updated-at').textContent = generatedAt
+    ? `Atualizado em ${fmtDate(generatedAt)}`
+    : 'Ainda sem execução automática';
+
+  if(sample){
+    document.getElementById('sample-flag-holder').innerHTML = '<span class="sample-flag">dados de exemplo</span>';
+  }
+
+  const competitors = [...new Set(RAW_ITEMS.map(i => i.competitor_group))];
+  buildChips(document.getElementById('axis-chips'), AXES, ACTIVE_AXES, v => {
+    ACTIVE_AXES.has(v) ? ACTIVE_AXES.delete(v) : ACTIVE_AXES.add(v);
+  });
+  buildChips(document.getElementById('competitor-chips'), competitors, ACTIVE_COMPETITORS, v => {
+    ACTIVE_COMPETITORS.has(v) ? ACTIVE_COMPETITORS.delete(v) : ACTIVE_COMPETITORS.add(v);
+  });
+  document.getElementById('period-select').addEventListener('change', render);
+
+  render();
+}
+
+init();
 </script>
 </body>
 </html>
