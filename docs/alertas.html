@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radar de Mercado — Últimos Alertas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <div>
+      <div class="brand-strip">
+        <div class="brand-mark" aria-label="Santander">
+          <svg viewBox="0 0 43.9 41.9" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><path fill="#EC0000" d="M 31.5,19.5 C 31.4,18 31,16.5 30.2,15.2 L 23.4,3.3 C 22.9,2.4 22.5,1.4 22.3,0.4 L 22,0.9 c -1.7,2.9 -1.7,6.6 0,9.5 l 5.5,9.5 c 1.7,2.9 1.7,6.6 0,9.5 l -0.3,0.5 c -0.2,-1 -0.6,-2 -1.1,-2.9 l -5,-8.7 -3.2,-5.6 C 17.4,11.8 17,10.8 16.8,9.8 l -0.3,0.5 c -1.7,2.9 -1.7,6.5 0,9.5 v 0 l 5.5,9.5 c 1.7,2.9 1.7,6.6 0,9.5 l -0.3,0.5 c -0.2,-1 -0.6,-2 -1.1,-2.9 L 13.7,24.5 C 12.8,22.9 12.4,21.1 12.4,19.3 5.1,21.2 0,25.3 0,30 0,36.6 9.8,41.9 21.9,41.9 34,41.9 43.8,36.6 43.8,30 43.9,25.5 38.9,21.4 31.5,19.5 Z"/></svg>
+        </div>
+        <div class="brand-divider"></div>
+        <div class="brand-microlabel">Radar de Mercado &nbsp;·&nbsp; Inteligência Competitiva</div>
+      </div>
+      <nav class="page-nav">
+        <a href="./index.html">Painel de mercado</a><span class="sep">·</span><a href="./alertas.html" class="active">Últimos Alertas</a><span class="sep">·</span><a href="./resultados.html">Resultados &amp; Estratégia</a>
+      </nav>
+      <h1 class="page-title">Últimos Alertas</h1>
+      <div class="title-accent"></div>
+    </div>
+    <div class="meta">
+      <div id="updated-at">carregando…</div>
+      <div class="period-tabs" id="period-tabs"></div>
+      <div id="sample-flag-holder"></div>
+    </div>
+  </div>
+</header>
+
+<div class="page-shell">
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-title">Eixo</div>
+      <div class="sidebar-list" id="axis-chips"></div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Concorrente</div>
+      <div class="sidebar-list" id="competitor-chips"></div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <p class="page-lede">Só itens com gatilho de ação (mudança de preço/risco, lançamento confirmado, ação regulatória ou incidente) — os mesmos critérios usados pro alerta diário por e-mail.</p>
+
+    <div class="feed-header">
+      <h2>Alertas</h2>
+      <span class="feed-count" id="feed-count"></span>
+    </div>
+    <div id="feed"></div>
+  </main>
+</div>
+
+<footer>
+  Radar de Mercado — inteligência competitiva interna · dados coletados via portais de notícia e fontes públicas · não é aconselhamento de investimento
+</footer>
+
+<script src="./common.js"></script>
+<script>
+let RAW_ITEMS = [];
+let ACTIVE_AXES = new Set();
+let ACTIVE_COMPETITORS = new Set();
+let PERIOD_DAYS = 30;
+let COMPETITOR_LIST = [];
+
+function filteredAlerts(){
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - PERIOD_DAYS);
+
+  return RAW_ITEMS.filter(item => {
+    if(!item.daily_trigger) return false;
+    if(new Date(item.published_at) < cutoff) return false;
+    if(ACTIVE_AXES.size && !item.axes.some(a => ACTIVE_AXES.has(a))) return false;
+    if(ACTIVE_COMPETITORS.size && !ACTIVE_COMPETITORS.has(item.competitor_group)) return false;
+    return true;
+  }).sort((a,b) => new Date(b.published_at) - new Date(a.published_at));
+}
+
+function renderPeriodTabs(){
+  const el = document.getElementById('period-tabs');
+  el.innerHTML = PERIOD_OPTIONS.map((o, idx) => `${idx > 0 ? '<span class="sep">·</span>' : ''}<button type="button" class="${o.value === PERIOD_DAYS ? 'active' : ''}" data-value="${o.value}">${o.label}</button>`).join('');
+  el.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      PERIOD_DAYS = parseInt(btn.dataset.value, 10);
+      renderPeriodTabs();
+      refreshSidebarCounts();
+      render();
+    });
+  });
+}
+
+function render(){
+  const items = filteredAlerts();
+  document.getElementById('feed-count').textContent = `${items.length} ${items.length === 1 ? 'alerta' : 'alertas'}`;
+  const feed = document.getElementById('feed');
+  feed.innerHTML = items.length
+    ? items.map(itemCardHtml).join('')
+    : `<div class="empty-state">Nenhum alerta de gatilho no período/filtro selecionado.</div>`;
+}
+window.render = render;
+
+function alertAxisCountsInPeriod(){
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - PERIOD_DAYS);
+  const inPeriod = RAW_ITEMS.filter(i => i.daily_trigger && new Date(i.published_at) >= cutoff);
+  const counts = {};
+  AXES.forEach(a => counts[a] = 0);
+  inPeriod.forEach(i => i.axes.forEach(a => { if(counts[a] !== undefined) counts[a]++; }));
+  return counts;
+}
+
+function alertCompetitorCountsInPeriod(){
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - PERIOD_DAYS);
+  const inPeriod = RAW_ITEMS.filter(i => i.daily_trigger && new Date(i.published_at) >= cutoff);
+  const counts = {};
+  inPeriod.forEach(i => counts[i.competitor_group] = (counts[i.competitor_group]||0) + 1);
+  return counts;
+}
+
+function refreshSidebarCounts(){
+  buildSidebarList(document.getElementById('axis-chips'), AXES, ACTIVE_AXES, v => {
+    ACTIVE_AXES.has(v) ? ACTIVE_AXES.delete(v) : ACTIVE_AXES.add(v);
+  }, alertAxisCountsInPeriod());
+  buildSidebarList(document.getElementById('competitor-chips'), COMPETITOR_LIST, ACTIVE_COMPETITORS, v => {
+    ACTIVE_COMPETITORS.has(v) ? ACTIVE_COMPETITORS.delete(v) : ACTIVE_COMPETITORS.add(v);
+  }, alertCompetitorCountsInPeriod());
+}
+
+async function init(){
+  const {items, generatedAt, sample} = await loadData();
+  RAW_ITEMS = items;
+
+  document.getElementById('updated-at').textContent = generatedAt
+    ? `Atualizado em ${fmtUpdated(generatedAt)}`
+    : 'Ainda sem execução automática';
+
+  if(sample){
+    document.getElementById('sample-flag-holder').innerHTML = '<span class="sample-flag">dados de exemplo</span>';
+  }
+
+  const competitorsSeen = [...new Set(RAW_ITEMS.map(i => i.competitor_group))];
+  COMPETITOR_LIST = COMPETITOR_ORDER.filter(c => competitorsSeen.includes(c))
+    .concat(competitorsSeen.filter(c => !COMPETITOR_ORDER.includes(c)));
+
+  refreshSidebarCounts();
+  renderPeriodTabs();
+  render();
+}
+
+init();
+</script>
+</body>
+</html>

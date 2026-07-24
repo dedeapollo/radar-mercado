@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radar de Mercado — Resultados &amp; Estratégia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <div>
+      <div class="brand-strip">
+        <div class="brand-mark" aria-label="Santander">
+          <svg viewBox="0 0 43.9 41.9" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><path fill="#EC0000" d="M 31.5,19.5 C 31.4,18 31,16.5 30.2,15.2 L 23.4,3.3 C 22.9,2.4 22.5,1.4 22.3,0.4 L 22,0.9 c -1.7,2.9 -1.7,6.6 0,9.5 l 5.5,9.5 c 1.7,2.9 1.7,6.6 0,9.5 l -0.3,0.5 c -0.2,-1 -0.6,-2 -1.1,-2.9 l -5,-8.7 -3.2,-5.6 C 17.4,11.8 17,10.8 16.8,9.8 l -0.3,0.5 c -1.7,2.9 -1.7,6.5 0,9.5 v 0 l 5.5,9.5 c 1.7,2.9 1.7,6.6 0,9.5 l -0.3,0.5 c -0.2,-1 -0.6,-2 -1.1,-2.9 L 13.7,24.5 C 12.8,22.9 12.4,21.1 12.4,19.3 5.1,21.2 0,25.3 0,30 0,36.6 9.8,41.9 21.9,41.9 34,41.9 43.8,36.6 43.8,30 43.9,25.5 38.9,21.4 31.5,19.5 Z"/></svg>
+        </div>
+        <div class="brand-divider"></div>
+        <div class="brand-microlabel">Radar de Mercado &nbsp;·&nbsp; Inteligência Competitiva</div>
+      </div>
+      <nav class="page-nav">
+        <a href="./index.html">Painel de mercado</a><span class="sep">·</span><a href="./alertas.html">Últimos Alertas</a><span class="sep">·</span><a href="./resultados.html" class="active">Resultados &amp; Estratégia</a>
+      </nav>
+      <h1 class="page-title">Resultados &amp; Estratégia</h1>
+      <div class="title-accent"></div>
+    </div>
+    <div class="meta">
+      <div id="updated-at">carregando…</div>
+      <div id="sample-flag-holder"></div>
+    </div>
+  </div>
+</header>
+
+<div class="page-shell">
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-title">Concorrente</div>
+      <div class="sidebar-list" id="competitor-chips"></div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Leitura</div>
+      <div class="sidebar-list" id="copy-chips"></div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <p class="page-lede">Leitura estratégica dos resultados trimestrais divulgados pelos concorrentes, no recorte do negócio de investimentos/corretagem de varejo — não é análise fundamentalista nem valuation. Varredura roda semanalmente (segundas-feiras); só aparece aqui quando há resultado novo.</p>
+
+    <div class="feed-header">
+      <h2>Resultados</h2>
+      <span class="feed-count" id="feed-count"></span>
+    </div>
+    <div id="feed"></div>
+  </main>
+</div>
+
+<footer>
+  Radar de Mercado — inteligência competitiva interna · dados coletados via portais de notícia e fontes públicas · não é aconselhamento de investimento
+</footer>
+
+<script src="./common.js"></script>
+<script>
+let RAW_RESULTS = [];
+let ACTIVE_COMPETITORS = new Set();
+let ACTIVE_COPY = new Set();
+let COMPETITOR_LIST = [];
+const COPY_OPTIONS = ["copiar", "observar", "ignorar"];
+
+function filteredResults(){
+  return RAW_RESULTS.filter(item => {
+    if(ACTIVE_COMPETITORS.size && !ACTIVE_COMPETITORS.has(item.competitor_group)) return false;
+    if(ACTIVE_COPY.size && !ACTIVE_COPY.has(item.copiar_ou_observar)) return false;
+    return true;
+  }).sort((a,b) => new Date(b.published_at) - new Date(a.published_at));
+}
+
+function render(){
+  const items = filteredResults();
+  document.getElementById('feed-count').textContent = `${items.length} ${items.length === 1 ? 'resultado' : 'resultados'}`;
+  const feed = document.getElementById('feed');
+  feed.innerHTML = items.length
+    ? items.map(resultCardHtml).join('')
+    : `<div class="empty-state">Nenhum resultado classificado ainda para esse filtro. A varredura semanal (toda segunda-feira) só entra aqui quando alguma divulgação nova é encontrada.</div>`;
+}
+window.render = render;
+
+function competitorCounts(){
+  const counts = {};
+  RAW_RESULTS.forEach(i => counts[i.competitor_group] = (counts[i.competitor_group]||0) + 1);
+  return counts;
+}
+
+function copyCounts(){
+  const counts = {};
+  COPY_OPTIONS.forEach(c => counts[c] = 0);
+  RAW_RESULTS.forEach(i => { if(counts[i.copiar_ou_observar] !== undefined) counts[i.copiar_ou_observar]++; });
+  return counts;
+}
+
+function refreshSidebar(){
+  buildSidebarList(document.getElementById('competitor-chips'), COMPETITOR_LIST, ACTIVE_COMPETITORS, v => {
+    ACTIVE_COMPETITORS.has(v) ? ACTIVE_COMPETITORS.delete(v) : ACTIVE_COMPETITORS.add(v);
+  }, competitorCounts());
+  buildSidebarList(document.getElementById('copy-chips'), COPY_OPTIONS, ACTIVE_COPY, v => {
+    ACTIVE_COPY.has(v) ? ACTIVE_COPY.delete(v) : ACTIVE_COPY.add(v);
+  }, copyCounts());
+}
+
+async function init(){
+  const {results, generatedAt, sample} = await loadData();
+  RAW_RESULTS = results || [];
+
+  document.getElementById('updated-at').textContent = generatedAt
+    ? `Atualizado em ${fmtUpdated(generatedAt)}`
+    : 'Ainda sem execução automática';
+
+  if(sample && RAW_RESULTS.length){
+    document.getElementById('sample-flag-holder').innerHTML = '<span class="sample-flag">dados de exemplo</span>';
+  }
+
+  const competitorsSeen = [...new Set(RAW_RESULTS.map(i => i.competitor_group))];
+  COMPETITOR_LIST = COMPETITOR_ORDER.filter(c => competitorsSeen.includes(c))
+    .concat(competitorsSeen.filter(c => !COMPETITOR_ORDER.includes(c)));
+
+  refreshSidebar();
+  render();
+}
+
+init();
+</script>
+</body>
+</html>

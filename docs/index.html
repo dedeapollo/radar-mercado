@@ -7,357 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-  /* ============================================================
-     TOKENS — paleta corporativa (Vermelho Santander EC0000, preto,
-     branco e cinzas). Vermelho é usado com disciplina: apenas para
-     o eixo Risco/Regulação, gatilhos, estado ativo e destaques —
-     nunca como cor decorativa de fundo.
-  ============================================================ */
-  :root{
-    --red:#EC0000;
-    --red-soft:#FBE8E8;
-    --black:#1A1A1A;
-    --grey-900:#2B2B2B;
-    --grey-700:#4A4A4A;
-    --grey-500:#6D6D6D;
-    --grey-300:#C7C7C7;
-    --grey-200:#E1E1E1;
-    --grey-100:#F0F0F0;
-    --grey-50:#F7F7F6;
-    --sky:#DEEDF2;
-    --white:#FFFFFF;
-    --radius:6px;
-    --radius-sm:4px;
-    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  }
-  *{box-sizing:border-box;}
-  body{
-    margin:0;
-    background:var(--grey-50);
-    color:var(--black);
-    font-family:var(--sans);
-    -webkit-font-smoothing:antialiased;
-    font-variant-numeric:tabular-nums;
-  }
-  a{color:var(--black); text-decoration:underline; text-decoration-color:var(--grey-300);}
-  a:hover{color:var(--red); text-decoration-color:var(--red);}
-
-  /* ---------- header ---------- */
-  header{
-    background:var(--white);
-    border-bottom:3px solid var(--red);
-  }
-  .header-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    gap:24px;
-    flex-wrap:wrap;
-    max-width:1280px;
-    margin:0 auto;
-    padding:26px 32px 20px;
-  }
-  .brand-strip{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
-  .brand-mark{width:36px;height:36px;flex:none;display:flex;align-items:center;justify-content:center;}
-  .brand-mark svg{width:32px;height:auto;display:block;}
-  .brand-divider{width:1px;height:20px;background:var(--grey-200);flex:none;}
-  .brand-microlabel{
-    font-size:11px;
-    font-weight:600;
-    letter-spacing:1.6px;
-    color:var(--grey-500);
-    text-transform:uppercase;
-  }
-  .page-title{
-    font-family:var(--sans);
-    font-weight:600;
-    font-size:32px;
-    line-height:1.1;
-    margin:0;
-    color:var(--black);
-  }
-  .title-accent{width:56px;height:3px;background:var(--red);margin-top:14px;}
-
-  .meta{
-    text-align:right;
-    font-size:12.5px;
-    color:var(--grey-500);
-    font-weight:500;
-  }
-  .period-tabs{margin-top:6px;}
-  .period-tabs button{
-    border:none;
-    background:none;
-    padding:0;
-    font:inherit;
-    font-size:12.5px;
-    color:var(--grey-300);
-    cursor:pointer;
-  }
-  .period-tabs button.active{color:var(--black);font-weight:700;}
-  .period-tabs .sep{color:var(--grey-300);margin:0 6px;}
-  .meta .sample-flag{
-    display:inline-block;
-    margin-top:8px;
-    padding:3px 9px;
-    background:var(--grey-100);
-    color:var(--red);
-    border:1px solid var(--red);
-    border-radius:20px;
-    font-size:11px;
-    font-weight:600;
-  }
-
-  .filters{
-    max-width:1280px;
-    margin:0 auto;
-    display:flex;
-    gap:24px;
-    align-items:center;
-    flex-wrap:wrap;
-    padding:14px 32px;
-    background:var(--grey-50);
-    border-top:1px solid var(--grey-200);
-  }
-  .filter-block{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
-  .filter-label{
-    font-size:11px;
-    font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:0.6px;
-    color:var(--grey-500);
-  }
-  .chip{
-    border:1px solid var(--grey-300);
-    background:var(--white);
-    color:var(--grey-700);
-    padding:5px 12px;
-    border-radius:20px;
-    font-size:12.5px;
-    font-weight:500;
-    font-family:var(--sans);
-    cursor:pointer;
-    transition:all .12s ease;
-  }
-  .chip:hover{border-color:var(--red);color:var(--red);}
-  .chip.active{background:var(--red);color:var(--white);border-color:var(--red);font-weight:600;}
-
-  /* ---------- layout ---------- */
-  main{max-width:1280px;margin:0 auto;padding:28px 32px 64px;}
-
-  .exec-summary{
-    font-size:16px;
-    line-height:1.65;
-    color:var(--grey-900);
-    max-width:900px;
-    margin:0 0 30px;
-  }
-
-  .section-title{
-    font-size:11px;
-    font-weight:700;
-    letter-spacing:1.2px;
-    text-transform:uppercase;
-    color:var(--grey-500);
-    margin:0 0 12px;
-  }
-
-  .kpi-row{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:14px;
-    margin-bottom:32px;
-  }
-  .kpi-card{
-    background:var(--white);
-    border:1px solid var(--grey-200);
-    border-top:3px solid var(--grey-300);
-    border-radius:var(--radius);
-    padding:16px 18px;
-  }
-  .kpi-card.accent{border-top-color:var(--red);}
-  .kpi-label{
-    font-size:11px;
-    font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:0.5px;
-    color:var(--grey-500);
-    margin-bottom:8px;
-  }
-  .kpi-value{
-    font-family:var(--sans);
-    font-size:30px;
-    font-weight:800;
-    line-height:1;
-    color:var(--black);
-  }
-  .kpi-card.accent .kpi-value{color:var(--red);}
-  .kpi-sub{font-size:12.5px;color:var(--grey-500);margin-top:6px;}
-
-  /* ---------- quadro por concorrente ---------- */
-  .competitor-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:14px;
-    margin-bottom:36px;
-  }
-  @media (max-width:860px){.competitor-grid{grid-template-columns:1fr;}}
-  .competitor-card{
-    background:var(--white);
-    border:1px solid var(--grey-200);
-    border-radius:var(--radius);
-    padding:16px 18px;
-  }
-  .competitor-card-head{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    gap:8px;
-    margin-bottom:9px;
-  }
-  .competitor-name{font-size:15px;font-weight:600;color:var(--black);}
-  .status-pill{
-    font-size:10px;
-    font-weight:600;
-    letter-spacing:0.4px;
-    text-transform:uppercase;
-    padding:2px 8px;
-    border-radius:9px;
-    border:1px solid;
-    white-space:nowrap;
-    flex:none;
-  }
-  .status-pill.ativo{color:var(--black);border-color:var(--black);}
-  .status-pill.estavel{color:var(--grey-300);border-color:var(--grey-300);}
-  .competitor-bar{height:4px;background:var(--grey-100);margin-bottom:11px;}
-  .competitor-bar > span{display:block;height:4px;}
-  .competitor-count{font-size:11.5px;color:var(--grey-500);margin-bottom:9px;}
-  .competitor-highlight{
-    font-size:12.5px;
-    line-height:1.5;
-    color:var(--grey-900);
-    margin-bottom:4px;
-    padding-left:12px;
-    position:relative;
-  }
-  .competitor-highlight::before{content:'—';position:absolute;left:0;color:var(--grey-300);}
-  .competitor-empty{font-size:12.5px;font-style:italic;color:var(--grey-300);}
-
-  /* ---------- linha do tempo ---------- */
-  .timeline{margin-bottom:40px;}
-  .timeline-row{
-    display:flex;
-    gap:14px;
-    padding:10px 0;
-    border-top:1px solid var(--grey-100);
-    align-items:flex-start;
-  }
-  .timeline-date{width:56px;flex:none;font-size:11.5px;font-weight:500;color:var(--grey-500);padding-top:2px;}
-  .timeline-bullet-wrap{width:8px;flex:none;padding-top:5px;}
-  .timeline-bullet{display:block;width:7px;height:7px;}
-  .timeline-body{flex:1;min-width:0;display:flex;align-items:baseline;gap:6px;flex-wrap:wrap;}
-  .timeline-icon{flex:none;display:inline-flex;transform:translateY(1px);gap:2px;}
-  .timeline-comp{font-size:11.5px;font-weight:600;color:var(--grey-700);}
-  .timeline-title{font-size:13.5px;color:var(--black);}
-  .timeline-title a{color:inherit;text-decoration:none;}
-  .timeline-title a:hover{color:var(--red);}
-  .timeline-source{flex:none;font-size:11px;font-weight:500;color:var(--grey-500);padding-top:2px;}
-
-  /* ---------- sinais do período ---------- */
-  .feed-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:baseline;
-    margin-bottom:6px;
-  }
-  .feed-header h2{
-    font-family:var(--sans);
-    font-size:18px;
-    font-weight:800;
-    margin:0;
-    color:var(--black);
-  }
-  .feed-count{font-size:12px;color:var(--grey-500);font-weight:500;}
-
-  .signal-card{
-    display:flex;
-    gap:16px;
-    border-top:1px solid var(--grey-200);
-    border-left:3px solid var(--grey-200);
-    padding:14px 0 14px 14px;
-    flex-wrap:wrap;
-  }
-  .signal-card.risk{border-left-color:var(--red);}
-  .signal-main{flex:1;min-width:240px;}
-  .signal-competitor{
-    font-size:10.5px;
-    font-weight:600;
-    letter-spacing:0.5px;
-    text-transform:uppercase;
-    color:var(--grey-500);
-    margin-bottom:3px;
-  }
-  .signal-title{font-size:16px;font-weight:500;line-height:1.4;color:var(--black);}
-  .signal-title a{color:inherit;text-decoration:none;}
-  .signal-title a:hover{color:var(--red);}
-  .signal-why{font-size:13px;line-height:1.55;color:var(--grey-700);margin-top:5px;max-width:760px;}
-  .signal-meta{flex:none;width:190px;text-align:right;}
-  .signal-date{font-size:12px;color:var(--grey-500);}
-  .signal-badges{margin-top:8px;display:flex;gap:6px;justify-content:flex-end;flex-wrap:wrap;}
-  .action-badge{font-size:10px;font-weight:700;letter-spacing:0.4px;color:var(--red);text-transform:uppercase;}
-  .axis-pill{
-    display:inline-flex;
-    align-items:center;
-    gap:4px;
-    font-size:10.5px;
-    font-weight:600;
-    padding:2px 9px 2px 6px;
-    border-radius:9px;
-    border:1px solid var(--grey-200);
-    color:var(--grey-700);
-  }
-  .axis-pill.risk{color:var(--red);}
-
-  .empty-state{
-    text-align:center;
-    padding:60px 20px;
-    color:var(--grey-500);
-    font-size:14px;
-  }
-
-  /* ---------- alertas fixos ---------- */
-  .alerts-section{margin-bottom:30px;}
-  .alerts-section h2{
-    font-family:var(--sans);
-    font-size:16px;
-    font-weight:800;
-    margin:0 0 10px;
-    display:flex;
-    align-items:center;
-    gap:9px;
-    color:var(--black);
-  }
-  .pulse-dot{
-    width:8px;height:8px;border-radius:50%;
-    background:var(--red);
-    flex:none;
-    animation:pulse 1.8s infinite;
-  }
-  @keyframes pulse{
-    0%{box-shadow:0 0 0 0 rgba(236,0,0,0.4);}
-    70%{box-shadow:0 0 0 7px rgba(236,0,0,0);}
-    100%{box-shadow:0 0 0 0 rgba(236,0,0,0);}
-  }
-
-  footer{
-    max-width:1280px;
-    margin:0 auto;
-    padding:0 32px 40px;
-    font-size:12px;
-    color:var(--grey-500);
-  }
-</style>
+<link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
@@ -371,6 +21,9 @@
         <div class="brand-divider"></div>
         <div class="brand-microlabel">Radar de Mercado &nbsp;·&nbsp; Inteligência Competitiva</div>
       </div>
+      <nav class="page-nav">
+        <a href="./index.html" class="active">Painel de mercado</a><span class="sep">·</span><a href="./alertas.html">Últimos Alertas</a><span class="sep">·</span><a href="./resultados.html">Resultados &amp; Estratégia</a>
+      </nav>
       <h1 class="page-title">Painel de mercado</h1>
       <div class="title-accent"></div>
     </div>
@@ -380,141 +33,49 @@
       <div id="sample-flag-holder"></div>
     </div>
   </div>
-
-  <div class="filters">
-    <div class="filter-block">
-      <span class="filter-label">Eixo</span>
-      <div id="axis-chips"></div>
-    </div>
-    <div class="filter-block">
-      <span class="filter-label">Concorrente</span>
-      <div id="competitor-chips"></div>
-    </div>
-  </div>
 </header>
 
-<main>
-  <p class="exec-summary" id="exec-summary"></p>
+<div class="page-shell">
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-title">Eixo</div>
+      <div class="sidebar-list" id="axis-chips"></div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Concorrente</div>
+      <div class="sidebar-list" id="competitor-chips"></div>
+    </div>
+  </aside>
 
-  <section class="alerts-section" id="alerts-section" style="display:none;">
-    <h2><span class="pulse-dot"></span>Últimos Alertas</h2>
-    <div id="alerts-feed"></div>
-  </section>
+  <main class="content">
+    <p class="exec-summary" id="exec-summary"></p>
 
-  <section class="kpi-row" id="kpi-row"></section>
+    <section class="kpi-row" id="kpi-row"></section>
 
-  <div class="section-title">Quadro por concorrente</div>
-  <section class="competitor-grid" id="competitor-grid"></section>
+    <div class="section-title">Quadro por concorrente</div>
+    <section class="competitor-grid" id="competitor-grid"></section>
 
-  <div class="section-title">Linha do tempo</div>
-  <div class="timeline" id="timeline"></div>
+    <div class="section-title">Linha do tempo</div>
+    <div class="timeline" id="timeline"></div>
 
-  <div class="feed-header">
-    <h2>Sinais do período</h2>
-    <span class="feed-count" id="feed-count"></span>
-  </div>
-  <div id="feed"></div>
-</main>
+    <div class="feed-header">
+      <h2>Sinais do período</h2>
+      <span class="feed-count" id="feed-count"></span>
+    </div>
+    <div id="feed"></div>
+  </main>
+</div>
 
 <footer>
   Radar de Mercado — inteligência competitiva interna · dados coletados via portais de notícia e fontes públicas · não é aconselhamento de investimento
 </footer>
 
+<script src="./common.js"></script>
 <script>
-const AXES = ["RV/Trading", "Tecnologia", "Produtos Novos", "Risco/Regulação"];
-const RISK_AXIS = "Risco/Regulação";
-const COLOR_RED = "#EC0000";
-const COLOR_DARK = "#1A1A1A";
-const COMPETITOR_ORDER = ["XP/Clear/Rico", "BTG Pactual", "Itaú/Íon", "Bradesco/Ágora", "Genial", "Nubank/NuInvest"];
-const AXIS_LABEL = {"RV/Trading":"RV/Trading", "Tecnologia":"Tecnologia", "Produtos Novos":"Produtos Novos", "Risco/Regulação":"Risco/Reg."};
-const MONTHS_PT = ["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"];
-
-const AXIS_ICON = {
-  "RV/Trading": (c) => `<svg viewBox="0 0 16 16" width="12" height="12" style="display:block;"><rect x="2" y="8" width="3" height="6" fill="${c}"></rect><rect x="6.5" y="4" width="3" height="10" fill="${c}"></rect><rect x="11" y="6" width="3" height="8" fill="${c}"></rect></svg>`,
-  "Tecnologia": (c) => `<svg viewBox="0 0 16 16" width="12" height="12" style="display:block;"><rect x="4" y="4" width="8" height="8" rx="1" fill="none" stroke="${c}" stroke-width="1.3"></rect><line x1="8" y1="1" x2="8" y2="4" stroke="${c}" stroke-width="1.3"></line><line x1="8" y1="12" x2="8" y2="15" stroke="${c}" stroke-width="1.3"></line><line x1="1" y1="8" x2="4" y2="8" stroke="${c}" stroke-width="1.3"></line><line x1="12" y1="8" x2="15" y2="8" stroke="${c}" stroke-width="1.3"></line></svg>`,
-  "Produtos Novos": (c) => `<svg viewBox="0 0 16 16" width="12" height="12" style="display:block;"><circle cx="8" cy="8" r="6.2" fill="none" stroke="${c}" stroke-width="1.3"></circle><line x1="8" y1="5" x2="8" y2="11" stroke="${c}" stroke-width="1.3"></line><line x1="5" y1="8" x2="11" y2="8" stroke="${c}" stroke-width="1.3"></line></svg>`,
-  "Risco/Regulação": (c) => `<svg viewBox="0 0 16 16" width="12" height="12" style="display:block;"><path d="M8 2 L14.5 13.5 L1.5 13.5 Z" fill="none" stroke="${c}" stroke-width="1.3" stroke-linejoin="round"></path><line x1="8" y1="6.5" x2="8" y2="9.5" stroke="${c}" stroke-width="1.3"></line><circle cx="8" cy="11.3" r="0.6" fill="${c}"></circle></svg>`,
-};
-
-const PERIOD_OPTIONS = [{value:7, label:"7d"}, {value:30, label:"30d"}, {value:90, label:"90d"}, {value:99999, label:"tudo"}];
-
-// Dados de exemplo — usados quando data.json ainda não existe (antes do
-// primeiro run do GitHub Actions) ou não pôde ser carregado. Baseados em
-// itens reais validados durante a construção do radar.
-const SAMPLE_DATA = {
-  generated_at: null,
-  items: [
-    {competitor_group:"XP/Clear/Rico", title:"Clear relança plataforma com execução abaixo de 50ms e alavancagem intraday de até 300x", link:"#", source:"InfoMoney", published_at:"2026-07-08T12:00:00+00:00", why_it_matters:"A Clear eleva o padrão de velocidade e alavancagem, pressionando concorrentes a acompanharem ou perderem traders de alta frequência.", axes:["RV/Trading","Tecnologia","Produtos Novos","Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[]},
-    {competitor_group:"BTG Pactual", title:"BTG Pactual lança BTG Trends, plataforma de mercados de previsão", link:"#", source:"Money Times", published_at:"2026-07-09T09:00:00+00:00", why_it_matters:"O BTG inova com derivativos binários, produto novo que pode atrair clientes sofisticados, com alcance inicial limitado por restrição a investidores qualificados.", axes:["Produtos Novos","Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[{source:"Seu Dinheiro", link:"#"}]},
-    {competitor_group:"Genial", title:"Genial eleva alavancagem para até 312x e lança assistente de IA QINV", link:"#", source:"Seu Dinheiro", published_at:"2026-07-10T15:00:00+00:00", why_it_matters:"Genial supera a concorrência em alavancagem máxima, atraindo day traders agressivos e aumentando o risco de escrutínio regulatório.", axes:["RV/Trading","Tecnologia","Produtos Novos","Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[]},
-    {competitor_group:"Itaú/Íon", title:"CVM publica Ofício-Circular esclarecendo regras de alavancagem em fundos de investimento", link:"#", source:"gov.br/CVM", published_at:"2026-07-11T10:00:00+00:00", why_it_matters:"Reduz incertezas sobre margens, beneficiando corretoras que oferecem alavancagem, mas exige compliance mais rigoroso.", axes:["Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[]},
-    {competitor_group:"XP/Clear/Rico", title:"Relatório do BTG aponta pivô estratégico da XP para crédito corporativo; CFO é trocado", link:"#", source:"Finsiders Brasil", published_at:"2026-07-06T18:50:00+00:00", why_it_matters:"A troca de CFO e o foco em crédito corporativo indicam reorientação estratégica que pode abrir espaço para concorrentes focados em varejo.", axes:["Produtos Novos"], daily_trigger:false, relevance:"média", also_reported_by:[]},
-  ]
-};
-
 let RAW_ITEMS = [];
 let ACTIVE_AXES = new Set();
 let ACTIVE_COMPETITORS = new Set();
 let PERIOD_DAYS = 30;
-
-function fmtShort(iso){
-  const d = new Date(iso);
-  const day = String(d.getDate()).padStart(2, '0');
-  return `${day} ${MONTHS_PT[d.getMonth()]}`;
-}
-
-function fmtUpdated(iso){
-  const d = new Date(iso);
-  return `${fmtShort(iso)} ${d.getFullYear()}`;
-}
-
-function escapeHtml(str){
-  const div = document.createElement('div');
-  div.textContent = str ?? '';
-  return div.innerHTML;
-}
-
-function escapeAttr(str){
-  return String(str ?? '')
-    .replace(/&/g, '&amp;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
-}
-
-function axisIconsHtml(item, baseColor){
-  return AXES.filter(a => item.axes.includes(a))
-    .map(a => AXIS_ICON[a](a === RISK_AXIS ? COLOR_RED : baseColor))
-    .join('');
-}
-
-async function loadData(){
-  try{
-    const res = await fetch('./data.json', {cache:'no-store'});
-    if(!res.ok) throw new Error('sem data.json');
-    const json = await res.json();
-    if(!json.items || !json.items.length) throw new Error('data.json vazio');
-    return {items:json.items, generatedAt:json.generated_at, sample:false};
-  }catch(e){
-    return {items:SAMPLE_DATA.items, generatedAt:null, sample:true};
-  }
-}
-
-function buildChips(container, values, activeSet, onToggle){
-  container.innerHTML = '';
-  values.forEach(v => {
-    const chip = document.createElement('button');
-    chip.className = 'chip' + (activeSet.has(v) ? ' active' : '');
-    chip.textContent = v;
-    chip.onclick = () => {
-      onToggle(v);
-      chip.classList.toggle('active', activeSet.has(v));
-      render();
-    };
-    container.appendChild(chip);
-  });
-}
 
 function filteredItems(){
   const cutoff = new Date();
@@ -535,6 +96,7 @@ function renderPeriodTabs(){
     btn.addEventListener('click', () => {
       PERIOD_DAYS = parseInt(btn.dataset.value, 10);
       renderPeriodTabs();
+      refreshSidebarCounts();
       render();
     });
   });
@@ -608,29 +170,6 @@ function buildExecSummary(items){
   return `${sentence1}${sentence2}${sentence3}`.trim();
 }
 
-function buildCompetitorSummaries(items){
-  const counts = {};
-  const byComp = {};
-  COMPETITOR_ORDER.forEach(c => { counts[c] = 0; byComp[c] = []; });
-  items.forEach(i => {
-    if(counts[i.competitor_group] === undefined) return;
-    counts[i.competitor_group]++;
-    byComp[i.competitor_group].push(i);
-  });
-  const maxCount = Math.max(...Object.values(counts), 1);
-
-  return COMPETITOR_ORDER.map(name => {
-    const its = byComp[name].slice().sort((a,b) => new Date(b.published_at) - new Date(a.published_at));
-    return {
-      name,
-      count: its.length,
-      active: its.length > 0,
-      barWidth: Math.round((its.length / maxCount) * 100),
-      highlights: its.slice(0, 2),
-    };
-  });
-}
-
 function renderCompetitorGrid(items){
   const summaries = buildCompetitorSummaries(items);
   const grid = document.getElementById('competitor-grid');
@@ -675,50 +214,6 @@ function renderTimeline(items){
   }).join('');
 }
 
-function sourceHtml(item){
-  const extra = item.also_reported_by || [];
-  const primary = `<a href="${escapeAttr(item.link)}" target="_blank" rel="noopener">${escapeHtml(item.source)}</a>`;
-  if(!extra.length) return `${primary} · ${fmtShort(item.published_at)}`;
-  const extraLinks = extra.map(s => `<a href="${escapeAttr(s.link)}" target="_blank" rel="noopener">${escapeHtml(s.source)}</a>`).join(', ');
-  return `${primary} <span style="color:var(--grey-500)">também:</span> ${extraLinks} · ${fmtShort(item.published_at)}`;
-}
-
-function itemCardHtml(item){
-  const isRisk = item.axes.includes(RISK_AXIS);
-  const axisLabel = AXIS_LABEL[item.axes[0]] || item.axes[0];
-  return `
-    <div class="signal-card ${isRisk ? 'risk' : ''}">
-      <div class="signal-main">
-        <div class="signal-competitor">${escapeHtml(item.competitor_group)}</div>
-        <div class="signal-title"><a href="${escapeAttr(item.link)}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a></div>
-        <div class="signal-why">${escapeHtml(item.why_it_matters)}</div>
-      </div>
-      <div class="signal-meta">
-        <div class="signal-date">${sourceHtml(item)}</div>
-        <div class="signal-badges">
-          ${item.daily_trigger ? '<span class="action-badge">AÇÃO</span>' : ''}
-          <span class="axis-pill ${isRisk ? 'risk' : ''}">${axisIconsHtml(item, '#4A4A4A')}${escapeHtml(axisLabel)}</span>
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-function alertItems(){
-  const cutoff = new Date();
-  cutoff.setDate(cutoff.getDate() - 7);
-  return RAW_ITEMS.filter(i => i.daily_trigger && new Date(i.published_at) >= cutoff)
-    .sort((a,b) => new Date(b.published_at) - new Date(a.published_at));
-}
-
-function renderAlerts(){
-  const items = alertItems();
-  const section = document.getElementById('alerts-section');
-  if(!items.length){ section.style.display = 'none'; return; }
-  section.style.display = '';
-  document.getElementById('alerts-feed').innerHTML = items.map(itemCardHtml).join('');
-}
-
 function renderFeed(items){
   document.getElementById('feed-count').textContent = `${items.length} ${items.length === 1 ? 'item' : 'itens'}`;
   const feed = document.getElementById('feed');
@@ -735,11 +230,41 @@ function renderFeed(items){
 function render(){
   const items = filteredItems();
   document.getElementById('exec-summary').textContent = buildExecSummary(items);
-  renderAlerts();
   renderKPIs(items);
   renderCompetitorGrid(items);
   renderTimeline(items);
   renderFeed(items);
+}
+window.render = render;
+
+function axisCountsInPeriod(){
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - PERIOD_DAYS);
+  const inPeriod = RAW_ITEMS.filter(i => new Date(i.published_at) >= cutoff);
+  const counts = {};
+  AXES.forEach(a => counts[a] = 0);
+  inPeriod.forEach(i => i.axes.forEach(a => { if(counts[a] !== undefined) counts[a]++; }));
+  return counts;
+}
+
+function competitorCountsInPeriod(){
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - PERIOD_DAYS);
+  const inPeriod = RAW_ITEMS.filter(i => new Date(i.published_at) >= cutoff);
+  const counts = {};
+  inPeriod.forEach(i => counts[i.competitor_group] = (counts[i.competitor_group]||0) + 1);
+  return counts;
+}
+
+let COMPETITOR_LIST = [];
+
+function refreshSidebarCounts(){
+  buildSidebarList(document.getElementById('axis-chips'), AXES, ACTIVE_AXES, v => {
+    ACTIVE_AXES.has(v) ? ACTIVE_AXES.delete(v) : ACTIVE_AXES.add(v);
+  }, axisCountsInPeriod());
+  buildSidebarList(document.getElementById('competitor-chips'), COMPETITOR_LIST, ACTIVE_COMPETITORS, v => {
+    ACTIVE_COMPETITORS.has(v) ? ACTIVE_COMPETITORS.delete(v) : ACTIVE_COMPETITORS.add(v);
+  }, competitorCountsInPeriod());
 }
 
 async function init(){
@@ -755,16 +280,10 @@ async function init(){
   }
 
   const competitorsSeen = [...new Set(RAW_ITEMS.map(i => i.competitor_group))];
-  const competitorChipList = COMPETITOR_ORDER.filter(c => competitorsSeen.includes(c))
+  COMPETITOR_LIST = COMPETITOR_ORDER.filter(c => competitorsSeen.includes(c))
     .concat(competitorsSeen.filter(c => !COMPETITOR_ORDER.includes(c)));
 
-  buildChips(document.getElementById('axis-chips'), AXES, ACTIVE_AXES, v => {
-    ACTIVE_AXES.has(v) ? ACTIVE_AXES.delete(v) : ACTIVE_AXES.add(v);
-  });
-  buildChips(document.getElementById('competitor-chips'), competitorChipList, ACTIVE_COMPETITORS, v => {
-    ACTIVE_COMPETITORS.has(v) ? ACTIVE_COMPETITORS.delete(v) : ACTIVE_COMPETITORS.add(v);
-  });
-
+  refreshSidebarCounts();
   renderPeriodTabs();
   render();
 }
