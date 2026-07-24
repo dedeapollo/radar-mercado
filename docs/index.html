@@ -7,7 +7,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1"></script>
 <style>
   /* ============================================================
      TOKENS — paleta corporativa (Vermelho Santander EC0000, preto,
@@ -52,43 +51,55 @@
   .header-top{
     display:flex;
     justify-content:space-between;
-    align-items:center;
-    gap:20px;
+    align-items:flex-start;
+    gap:24px;
     flex-wrap:wrap;
     max-width:1280px;
     margin:0 auto;
-    padding:22px 32px 18px;
+    padding:26px 32px 20px;
   }
-  .brand{display:flex;align-items:center;gap:14px;}
-  .brand-mark{
-    width:40px;height:40px;flex:none;
-    display:flex;align-items:center;justify-content:center;
-  }
-  .brand-mark svg{width:36px;height:auto;display:block;}
-  .brand h1{
-    font-family:var(--sans);
-    font-weight:800;
-    font-size:19px;
-    letter-spacing:0.5px;
+  .brand-strip{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+  .brand-mark{width:36px;height:36px;flex:none;display:flex;align-items:center;justify-content:center;}
+  .brand-mark svg{width:32px;height:auto;display:block;}
+  .brand-divider{width:1px;height:20px;background:var(--grey-200);flex:none;}
+  .brand-microlabel{
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:1.6px;
+    color:var(--grey-500);
     text-transform:uppercase;
+  }
+  .page-title{
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:32px;
+    line-height:1.1;
     margin:0;
     color:var(--black);
   }
-  .brand p{
-    margin:3px 0 0;
-    font-size:12.5px;
-    color:var(--grey-500);
-    font-weight:500;
-  }
+  .title-accent{width:56px;height:3px;background:var(--red);margin-top:14px;}
+
   .meta{
     text-align:right;
     font-size:12.5px;
     color:var(--grey-500);
     font-weight:500;
   }
+  .period-tabs{margin-top:6px;}
+  .period-tabs button{
+    border:none;
+    background:none;
+    padding:0;
+    font:inherit;
+    font-size:12.5px;
+    color:var(--grey-300);
+    cursor:pointer;
+  }
+  .period-tabs button.active{color:var(--black);font-weight:700;}
+  .period-tabs .sep{color:var(--grey-300);margin:0 6px;}
   .meta .sample-flag{
     display:inline-block;
-    margin-top:6px;
+    margin-top:8px;
     padding:3px 9px;
     background:var(--grey-100);
     color:var(--red);
@@ -131,24 +142,32 @@
   }
   .chip:hover{border-color:var(--red);color:var(--red);}
   .chip.active{background:var(--red);color:var(--white);border-color:var(--red);font-weight:600;}
-  select#period-select{
-    background:var(--white);
-    border:1px solid var(--grey-300);
-    color:var(--grey-900);
-    padding:5px 10px;
-    border-radius:var(--radius-sm);
-    font-family:var(--sans);
-    font-size:12.5px;
-  }
 
   /* ---------- layout ---------- */
   main{max-width:1280px;margin:0 auto;padding:28px 32px 64px;}
+
+  .exec-summary{
+    font-size:16px;
+    line-height:1.65;
+    color:var(--grey-900);
+    max-width:900px;
+    margin:0 0 30px;
+  }
+
+  .section-title{
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1.2px;
+    text-transform:uppercase;
+    color:var(--grey-500);
+    margin:0 0 12px;
+  }
 
   .kpi-row{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
     gap:14px;
-    margin-bottom:20px;
+    margin-bottom:32px;
   }
   .kpi-card{
     background:var(--white);
@@ -176,38 +195,76 @@
   .kpi-card.accent .kpi-value{color:var(--red);}
   .kpi-sub{font-size:12.5px;color:var(--grey-500);margin-top:6px;}
 
-  .chart-row{
+  /* ---------- quadro por concorrente ---------- */
+  .competitor-grid{
     display:grid;
-    grid-template-columns:1.3fr 1fr;
+    grid-template-columns:repeat(3,1fr);
     gap:14px;
-    margin-bottom:28px;
+    margin-bottom:36px;
   }
-  @media (max-width:860px){.chart-row{grid-template-columns:1fr;}}
-  .chart-card{
+  @media (max-width:860px){.competitor-grid{grid-template-columns:1fr;}}
+  .competitor-card{
     background:var(--white);
     border:1px solid var(--grey-200);
     border-radius:var(--radius);
-    padding:18px 20px;
+    padding:16px 18px;
   }
-  .chart-card h3{
-    font-family:var(--sans);
-    font-size:13px;
-    font-weight:700;
-    margin:0 0 14px;
-    color:var(--black);
+  .competitor-card-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:8px;
+    margin-bottom:9px;
   }
-  /* ---------- gráficos ----------
-     A altura é travada AQUI, no contêiner, e os charts rodam com
-     maintainAspectRatio:false. Sem isso, o Chart.js entra em loop de
-     "responsive resize": o canvas cresce a cada frame porque o pai não
-     tem altura definida, empurrando a página pra baixo infinitamente
-     (era o bug do "Itens por concorrente", que por ser barra horizontal
-     era o mais afetado). */
-  .chart-box{position:relative; width:100%; height:240px;}
-  .chart-box.tall{height:260px;}
-  .chart-box canvas{position:absolute; inset:0; width:100% !important; height:100% !important;}
+  .competitor-name{font-size:15px;font-weight:600;color:var(--black);}
+  .status-pill{
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:0.4px;
+    text-transform:uppercase;
+    padding:2px 8px;
+    border-radius:9px;
+    border:1px solid;
+    white-space:nowrap;
+    flex:none;
+  }
+  .status-pill.ativo{color:var(--black);border-color:var(--black);}
+  .status-pill.estavel{color:var(--grey-300);border-color:var(--grey-300);}
+  .competitor-bar{height:4px;background:var(--grey-100);margin-bottom:11px;}
+  .competitor-bar > span{display:block;height:4px;}
+  .competitor-count{font-size:11.5px;color:var(--grey-500);margin-bottom:9px;}
+  .competitor-highlight{
+    font-size:12.5px;
+    line-height:1.5;
+    color:var(--grey-900);
+    margin-bottom:4px;
+    padding-left:12px;
+    position:relative;
+  }
+  .competitor-highlight::before{content:'—';position:absolute;left:0;color:var(--grey-300);}
+  .competitor-empty{font-size:12.5px;font-style:italic;color:var(--grey-300);}
 
-  /* ---------- feed ---------- */
+  /* ---------- linha do tempo ---------- */
+  .timeline{margin-bottom:40px;}
+  .timeline-row{
+    display:flex;
+    gap:14px;
+    padding:10px 0;
+    border-top:1px solid var(--grey-100);
+    align-items:flex-start;
+  }
+  .timeline-date{width:56px;flex:none;font-size:11.5px;font-weight:500;color:var(--grey-500);padding-top:2px;}
+  .timeline-bullet-wrap{width:8px;flex:none;padding-top:5px;}
+  .timeline-bullet{display:block;width:7px;height:7px;}
+  .timeline-body{flex:1;min-width:0;display:flex;align-items:baseline;gap:6px;flex-wrap:wrap;}
+  .timeline-icon{flex:none;display:inline-flex;transform:translateY(1px);gap:2px;}
+  .timeline-comp{font-size:11.5px;font-weight:600;color:var(--grey-700);}
+  .timeline-title{font-size:13.5px;color:var(--black);}
+  .timeline-title a{color:inherit;text-decoration:none;}
+  .timeline-title a:hover{color:var(--red);}
+  .timeline-source{flex:none;font-size:11px;font-weight:500;color:var(--grey-500);padding-top:2px;}
+
+  /* ---------- sinais do período ---------- */
   .feed-header{
     display:flex;
     justify-content:space-between;
@@ -223,90 +280,45 @@
   }
   .feed-count{font-size:12px;color:var(--grey-500);font-weight:500;}
 
-  .item-card{
-    background:var(--white);
-    border:1px solid var(--grey-200);
-    border-left:3px solid var(--grey-300);
-    border-radius:var(--radius-sm);
-    padding:14px 16px;
-    margin-bottom:8px;
-  }
-  .item-card.trigger{border-left-color:var(--red);}
-  .item-summary{
-    list-style:none;
-    cursor:pointer;
+  .signal-card{
     display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:12px;
+    gap:16px;
+    border-top:1px solid var(--grey-200);
+    border-left:3px solid var(--grey-200);
+    padding:14px 0 14px 14px;
     flex-wrap:wrap;
   }
-  .item-summary::-webkit-details-marker{display:none;}
-  .item-summary::after{
-    content:'+';
-    color:var(--grey-500);
-    font-size:16px;
-    font-weight:700;
-    flex:none;
-    margin-left:8px;
-  }
-  details.item-card[open] .item-summary::after{content:'–';}
-  .item-title{font-size:14px;font-weight:600;line-height:1.4;color:var(--black);}
-  .item-summary-meta{
-    font-size:11.5px;
-    color:var(--grey-500);
-    white-space:nowrap;
-    font-weight:500;
-  }
-  details.item-card .item-body{margin-top:10px;}
-  .item-why{font-size:13.5px;color:var(--grey-700);margin-top:2px;line-height:1.55;}
-  .item-foot{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-top:10px;
-    flex-wrap:wrap;
-    gap:8px;
-    font-size:12px;
-    color:var(--grey-500);
-  }
-  .item-tags{display:flex;gap:6px;flex-wrap:wrap;}
-  .tag{
+  .signal-card.risk{border-left-color:var(--red);}
+  .signal-main{flex:1;min-width:240px;}
+  .signal-competitor{
     font-size:10.5px;
     font-weight:600;
-    padding:2px 8px;
-    border-radius:10px;
-    background:var(--grey-100);
-    color:var(--grey-700);
-    border:1px solid var(--grey-200);
-  }
-  .tag.risk{background:var(--red-soft);color:var(--red);border-color:var(--red);}
-  .trigger-badge{
-    font-size:10.5px;
-    font-weight:700;
+    letter-spacing:0.5px;
     text-transform:uppercase;
-    letter-spacing:0.3px;
-    color:var(--white);
-    background:var(--red);
-    padding:2px 8px;
-    border-radius:10px;
+    color:var(--grey-500);
+    margin-bottom:3px;
   }
-  .relevance-badge{
+  .signal-title{font-size:16px;font-weight:500;line-height:1.4;color:var(--black);}
+  .signal-title a{color:inherit;text-decoration:none;}
+  .signal-title a:hover{color:var(--red);}
+  .signal-why{font-size:13px;line-height:1.55;color:var(--grey-700);margin-top:5px;max-width:760px;}
+  .signal-meta{flex:none;width:190px;text-align:right;}
+  .signal-date{font-size:12px;color:var(--grey-500);}
+  .signal-badges{margin-top:8px;display:flex;gap:6px;justify-content:flex-end;flex-wrap:wrap;}
+  .action-badge{font-size:10px;font-weight:700;letter-spacing:0.4px;color:var(--red);text-transform:uppercase;}
+  .axis-pill{
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
     font-size:10.5px;
     font-weight:600;
-    padding:1px 8px;
-    border-radius:10px;
-  }
-  .relevance-badge.alta{border:1px solid var(--red);color:var(--red);}
-  .relevance-badge.media{border:1px solid var(--grey-300);color:var(--grey-500);}
-  .source-badge{
-    font-size:10.5px;
-    font-weight:600;
-    padding:1px 8px;
-    border-radius:10px;
-    background:var(--grey-100);
+    padding:2px 9px 2px 6px;
+    border-radius:9px;
+    border:1px solid var(--grey-200);
     color:var(--grey-700);
   }
+  .axis-pill.risk{color:var(--red);}
+
   .empty-state{
     text-align:center;
     padding:60px 20px;
@@ -315,7 +327,7 @@
   }
 
   /* ---------- alertas fixos ---------- */
-  .alerts-section{margin-bottom:28px;}
+  .alerts-section{margin-bottom:30px;}
   .alerts-section h2{
     font-family:var(--sans);
     font-size:16px;
@@ -351,17 +363,20 @@
 
 <header>
   <div class="header-top">
-    <div class="brand">
-      <div class="brand-mark" aria-label="Santander">
-        <svg viewBox="0 0 43.9 41.9" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><path fill="#EC0000" d="M 31.5,19.5 C 31.4,18 31,16.5 30.2,15.2 L 23.4,3.3 C 22.9,2.4 22.5,1.4 22.3,0.4 L 22,0.9 c -1.7,2.9 -1.7,6.6 0,9.5 l 5.5,9.5 c 1.7,2.9 1.7,6.6 0,9.5 l -0.3,0.5 c -0.2,-1 -0.6,-2 -1.1,-2.9 l -5,-8.7 -3.2,-5.6 C 17.4,11.8 17,10.8 16.8,9.8 l -0.3,0.5 c -1.7,2.9 -1.7,6.5 0,9.5 v 0 l 5.5,9.5 c 1.7,2.9 1.7,6.6 0,9.5 l -0.3,0.5 c -0.2,-1 -0.6,-2 -1.1,-2.9 L 13.7,24.5 C 12.8,22.9 12.4,21.1 12.4,19.3 5.1,21.2 0,25.3 0,30 0,36.6 9.8,41.9 21.9,41.9 34,41.9 43.8,36.6 43.8,30 43.9,25.5 38.9,21.4 31.5,19.5 Z"/></svg>
+    <div>
+      <div class="brand-strip">
+        <div class="brand-mark" aria-label="Santander">
+          <svg viewBox="0 0 43.9 41.9" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><path fill="#EC0000" d="M 31.5,19.5 C 31.4,18 31,16.5 30.2,15.2 L 23.4,3.3 C 22.9,2.4 22.5,1.4 22.3,0.4 L 22,0.9 c -1.7,2.9 -1.7,6.6 0,9.5 l 5.5,9.5 c 1.7,2.9 1.7,6.6 0,9.5 l -0.3,0.5 c -0.2,-1 -0.6,-2 -1.1,-2.9 l -5,-8.7 -3.2,-5.6 C 17.4,11.8 17,10.8 16.8,9.8 l -0.3,0.5 c -1.7,2.9 -1.7,6.5 0,9.5 v 0 l 5.5,9.5 c 1.7,2.9 1.7,6.6 0,9.5 l -0.3,0.5 c -0.2,-1 -0.6,-2 -1.1,-2.9 L 13.7,24.5 C 12.8,22.9 12.4,21.1 12.4,19.3 5.1,21.2 0,25.3 0,30 0,36.6 9.8,41.9 21.9,41.9 34,41.9 43.8,36.6 43.8,30 43.9,25.5 38.9,21.4 31.5,19.5 Z"/></svg>
+        </div>
+        <div class="brand-divider"></div>
+        <div class="brand-microlabel">Radar de Mercado &nbsp;·&nbsp; Inteligência Competitiva</div>
       </div>
-      <div>
-        <h1>Radar de Mercado</h1>
-        <p>XP · Clear · Rico &nbsp;·&nbsp; BTG &nbsp;·&nbsp; Itaú · Íon &nbsp;·&nbsp; Bradesco · Ágora &nbsp;·&nbsp; Genial</p>
-      </div>
+      <h1 class="page-title">Painel de mercado</h1>
+      <div class="title-accent"></div>
     </div>
     <div class="meta">
       <div id="updated-at">carregando…</div>
+      <div class="period-tabs" id="period-tabs"></div>
       <div id="sample-flag-holder"></div>
     </div>
   </div>
@@ -375,19 +390,12 @@
       <span class="filter-label">Concorrente</span>
       <div id="competitor-chips"></div>
     </div>
-    <div class="filter-block">
-      <span class="filter-label">Período</span>
-      <select id="period-select">
-        <option value="7">7 dias</option>
-        <option value="30" selected>30 dias</option>
-        <option value="90">90 dias</option>
-        <option value="99999">Tudo</option>
-      </select>
-    </div>
   </div>
 </header>
 
 <main>
+  <p class="exec-summary" id="exec-summary"></p>
+
   <section class="alerts-section" id="alerts-section" style="display:none;">
     <h2><span class="pulse-dot"></span>Últimos Alertas</h2>
     <div id="alerts-feed"></div>
@@ -395,24 +403,14 @@
 
   <section class="kpi-row" id="kpi-row"></section>
 
-  <section class="chart-card" style="margin-bottom:14px;">
-    <h3>Itens ao longo do tempo (todo o histórico, por semana)</h3>
-    <div class="chart-box tall"><canvas id="trend-chart"></canvas></div>
-  </section>
+  <div class="section-title">Quadro por concorrente</div>
+  <section class="competitor-grid" id="competitor-grid"></section>
 
-  <section class="chart-row">
-    <div class="chart-card">
-      <h3>Itens por eixo</h3>
-      <div class="chart-box"><canvas id="axis-chart"></canvas></div>
-    </div>
-    <div class="chart-card">
-      <h3>Itens por concorrente</h3>
-      <div class="chart-box"><canvas id="competitor-chart"></canvas></div>
-    </div>
-  </section>
+  <div class="section-title">Linha do tempo</div>
+  <div class="timeline" id="timeline"></div>
 
   <div class="feed-header">
-    <h2>Itens monitorados</h2>
+    <h2>Sinais do período</h2>
     <span class="feed-count" id="feed-count"></span>
   </div>
   <div id="feed"></div>
@@ -427,7 +425,18 @@ const AXES = ["RV/Trading", "Tecnologia", "Produtos Novos", "Risco/Regulação"]
 const RISK_AXIS = "Risco/Regulação";
 const COLOR_RED = "#EC0000";
 const COLOR_DARK = "#1A1A1A";
-const COLOR_GREY = "#8A8A8A";
+const COMPETITOR_ORDER = ["XP/Clear/Rico", "BTG Pactual", "Itaú/Íon", "Bradesco/Ágora", "Genial", "Nubank/NuInvest"];
+const AXIS_LABEL = {"RV/Trading":"RV/Trading", "Tecnologia":"Tecnologia", "Produtos Novos":"Produtos Novos", "Risco/Regulação":"Risco/Reg."};
+const MONTHS_PT = ["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"];
+
+const AXIS_ICON = {
+  "RV/Trading": (c) => `<svg viewBox="0 0 16 16" width="12" height="12" style="display:block;"><rect x="2" y="8" width="3" height="6" fill="${c}"></rect><rect x="6.5" y="4" width="3" height="10" fill="${c}"></rect><rect x="11" y="6" width="3" height="8" fill="${c}"></rect></svg>`,
+  "Tecnologia": (c) => `<svg viewBox="0 0 16 16" width="12" height="12" style="display:block;"><rect x="4" y="4" width="8" height="8" rx="1" fill="none" stroke="${c}" stroke-width="1.3"></rect><line x1="8" y1="1" x2="8" y2="4" stroke="${c}" stroke-width="1.3"></line><line x1="8" y1="12" x2="8" y2="15" stroke="${c}" stroke-width="1.3"></line><line x1="1" y1="8" x2="4" y2="8" stroke="${c}" stroke-width="1.3"></line><line x1="12" y1="8" x2="15" y2="8" stroke="${c}" stroke-width="1.3"></line></svg>`,
+  "Produtos Novos": (c) => `<svg viewBox="0 0 16 16" width="12" height="12" style="display:block;"><circle cx="8" cy="8" r="6.2" fill="none" stroke="${c}" stroke-width="1.3"></circle><line x1="8" y1="5" x2="8" y2="11" stroke="${c}" stroke-width="1.3"></line><line x1="5" y1="8" x2="11" y2="8" stroke="${c}" stroke-width="1.3"></line></svg>`,
+  "Risco/Regulação": (c) => `<svg viewBox="0 0 16 16" width="12" height="12" style="display:block;"><path d="M8 2 L14.5 13.5 L1.5 13.5 Z" fill="none" stroke="${c}" stroke-width="1.3" stroke-linejoin="round"></path><line x1="8" y1="6.5" x2="8" y2="9.5" stroke="${c}" stroke-width="1.3"></line><circle cx="8" cy="11.3" r="0.6" fill="${c}"></circle></svg>`,
+};
+
+const PERIOD_OPTIONS = [{value:7, label:"7d"}, {value:30, label:"30d"}, {value:90, label:"90d"}, {value:99999, label:"tudo"}];
 
 // Dados de exemplo — usados quando data.json ainda não existe (antes do
 // primeiro run do GitHub Actions) ou não pôde ser carregado. Baseados em
@@ -438,7 +447,7 @@ const SAMPLE_DATA = {
     {competitor_group:"XP/Clear/Rico", title:"Clear relança plataforma com execução abaixo de 50ms e alavancagem intraday de até 300x", link:"#", source:"InfoMoney", published_at:"2026-07-08T12:00:00+00:00", why_it_matters:"A Clear eleva o padrão de velocidade e alavancagem, pressionando concorrentes a acompanharem ou perderem traders de alta frequência.", axes:["RV/Trading","Tecnologia","Produtos Novos","Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[]},
     {competitor_group:"BTG Pactual", title:"BTG Pactual lança BTG Trends, plataforma de mercados de previsão", link:"#", source:"Money Times", published_at:"2026-07-09T09:00:00+00:00", why_it_matters:"O BTG inova com derivativos binários, produto novo que pode atrair clientes sofisticados, com alcance inicial limitado por restrição a investidores qualificados.", axes:["Produtos Novos","Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[{source:"Seu Dinheiro", link:"#"}]},
     {competitor_group:"Genial", title:"Genial eleva alavancagem para até 312x e lança assistente de IA QINV", link:"#", source:"Seu Dinheiro", published_at:"2026-07-10T15:00:00+00:00", why_it_matters:"Genial supera a concorrência em alavancagem máxima, atraindo day traders agressivos e aumentando o risco de escrutínio regulatório.", axes:["RV/Trading","Tecnologia","Produtos Novos","Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[]},
-    {competitor_group:"Múltiplos/Setor", title:"CVM publica Ofício-Circular esclarecendo regras de alavancagem em fundos de investimento", link:"#", source:"gov.br/CVM", published_at:"2026-07-11T10:00:00+00:00", why_it_matters:"Reduz incertezas sobre margens, beneficiando corretoras que oferecem alavancagem, mas exige compliance mais rigoroso.", axes:["Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[]},
+    {competitor_group:"Itaú/Íon", title:"CVM publica Ofício-Circular esclarecendo regras de alavancagem em fundos de investimento", link:"#", source:"gov.br/CVM", published_at:"2026-07-11T10:00:00+00:00", why_it_matters:"Reduz incertezas sobre margens, beneficiando corretoras que oferecem alavancagem, mas exige compliance mais rigoroso.", axes:["Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[]},
     {competitor_group:"XP/Clear/Rico", title:"Relatório do BTG aponta pivô estratégico da XP para crédito corporativo; CFO é trocado", link:"#", source:"Finsiders Brasil", published_at:"2026-07-06T18:50:00+00:00", why_it_matters:"A troca de CFO e o foco em crédito corporativo indicam reorientação estratégica que pode abrir espaço para concorrentes focados em varejo.", axes:["Produtos Novos"], daily_trigger:false, relevance:"média", also_reported_by:[]},
   ]
 };
@@ -446,17 +455,38 @@ const SAMPLE_DATA = {
 let RAW_ITEMS = [];
 let ACTIVE_AXES = new Set();
 let ACTIVE_COMPETITORS = new Set();
-let axisChart, competitorChart, trendChart;
+let PERIOD_DAYS = 30;
 
-function fmtDate(iso){
+function fmtShort(iso){
   const d = new Date(iso);
-  return d.toLocaleDateString('pt-BR', {day:'2-digit', month:'2-digit', year:'numeric'});
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${day} ${MONTHS_PT[d.getMonth()]}`;
+}
+
+function fmtUpdated(iso){
+  const d = new Date(iso);
+  return `${fmtShort(iso)} ${d.getFullYear()}`;
 }
 
 function escapeHtml(str){
   const div = document.createElement('div');
   div.textContent = str ?? '';
   return div.innerHTML;
+}
+
+function escapeAttr(str){
+  return String(str ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+function axisIconsHtml(item, baseColor){
+  return AXES.filter(a => item.axes.includes(a))
+    .map(a => AXIS_ICON[a](a === RISK_AXIS ? COLOR_RED : baseColor))
+    .join('');
 }
 
 async function loadData(){
@@ -477,22 +507,37 @@ function buildChips(container, values, activeSet, onToggle){
     const chip = document.createElement('button');
     chip.className = 'chip' + (activeSet.has(v) ? ' active' : '');
     chip.textContent = v;
-    chip.onclick = () => { onToggle(v); render(); };
+    chip.onclick = () => {
+      onToggle(v);
+      chip.classList.toggle('active', activeSet.has(v));
+      render();
+    };
     container.appendChild(chip);
   });
 }
 
 function filteredItems(){
-  const periodDays = parseInt(document.getElementById('period-select').value, 10);
   const cutoff = new Date();
-  cutoff.setDate(cutoff.getDate() - periodDays);
+  cutoff.setDate(cutoff.getDate() - PERIOD_DAYS);
 
   return RAW_ITEMS.filter(item => {
     if(new Date(item.published_at) < cutoff) return false;
     if(ACTIVE_AXES.size && !item.axes.some(a => ACTIVE_AXES.has(a))) return false;
     if(ACTIVE_COMPETITORS.size && !ACTIVE_COMPETITORS.has(item.competitor_group)) return false;
     return true;
-  }).sort((a,b) => new Date(b.published_at) - new Date(a.published_at));
+  });
+}
+
+function renderPeriodTabs(){
+  const el = document.getElementById('period-tabs');
+  el.innerHTML = PERIOD_OPTIONS.map((o, idx) => `${idx > 0 ? '<span class="sep">·</span>' : ''}<button type="button" class="${o.value === PERIOD_DAYS ? 'active' : ''}" data-value="${o.value}">${o.label}</button>`).join('');
+  el.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      PERIOD_DAYS = parseInt(btn.dataset.value, 10);
+      renderPeriodTabs();
+      render();
+    });
+  });
 }
 
 function renderKPIs(items){
@@ -506,10 +551,12 @@ function renderKPIs(items){
   items.forEach(i => compCounts[i.competitor_group] = (compCounts[i.competitor_group]||0)+1);
   const topComp = Object.entries(compCounts).sort((a,b) => b[1]-a[1])[0];
 
+  const periodLabel = PERIOD_DAYS >= 99999 ? 'todo o histórico' : `${PERIOD_DAYS} dias`;
+
   const kpis = [
-    {label:'Itens no período', value: items.length, sub: `${document.getElementById('period-select').value} dias`, accent:false},
+    {label:'Itens no período', value: items.length, sub: periodLabel, accent:false},
     {label:'Alertas de gatilho', value: triggers, sub: 'risco, comunicado, lançamento ou regulação', accent:true},
-    {label:'Eixo mais ativo', value: topAxis ? topAxis[0] : '—', sub: topAxis ? `${topAxis[1]} itens` : '', accent:false},
+    {label:'Eixo mais ativo', value: topAxis && topAxis[1] > 0 ? topAxis[0] : '—', sub: topAxis && topAxis[1] > 0 ? `${topAxis[1]} itens` : '', accent:false},
     {label:'Concorrente mais ativo', value: topComp ? topComp[0] : '—', sub: topComp ? `${topComp[1]} itens` : '', accent:false},
   ];
 
@@ -517,98 +564,143 @@ function renderKPIs(items){
   row.innerHTML = kpis.map(k => `
     <div class="kpi-card ${k.accent ? 'accent' : ''}">
       <div class="kpi-label">${k.label}</div>
-      <div class="kpi-value" style="font-size:${k.value.toString().length > 12 ? '18px' : '30px'}">${k.value}</div>
-      <div class="kpi-sub">${k.sub}</div>
+      <div class="kpi-value" style="font-size:${k.value.toString().length > 12 ? '18px' : '30px'}">${escapeHtml(k.value)}</div>
+      <div class="kpi-sub">${escapeHtml(k.sub)}</div>
     </div>
   `).join('');
 }
 
-function trendItems(){
-  return RAW_ITEMS.filter(item => {
-    if(ACTIVE_AXES.size && !item.axes.some(a => ACTIVE_AXES.has(a))) return false;
-    if(ACTIVE_COMPETITORS.size && !ACTIVE_COMPETITORS.has(item.competitor_group)) return false;
-    return true;
+function buildExecSummary(items){
+  if(!items.length) return 'Nenhum sinal relevante identificado no período selecionado.';
+
+  const counts = {};
+  COMPETITOR_ORDER.forEach(c => counts[c] = 0);
+  items.forEach(i => { if(counts[i.competitor_group] !== undefined) counts[i.competitor_group]++; });
+
+  const active = COMPETITOR_ORDER.filter(c => counts[c] > 0).sort((a,b) => counts[b]-counts[a]);
+  const inactive = COMPETITOR_ORDER.filter(c => counts[c] === 0);
+
+  let sentence1 = '';
+  if(active.length){
+    const topCount = counts[active[0]];
+    const top = active.filter(c => counts[c] === topCount).slice(0, 2);
+    const names = top.length > 1 ? `${top[0]} e ${top[1]}` : top[0];
+    const verb = top.length > 1 ? 'concentraram' : 'concentrou';
+    const total = top.reduce((s,c) => s + counts[c], 0);
+    sentence1 = `${names} ${verb} a maior atividade do período, com ${total} ${total === 1 ? 'sinal monitorado' : 'sinais monitorados'}.`;
+  }
+
+  let sentence2 = '';
+  const highlight = items
+    .filter(i => i.daily_trigger && i.relevance === 'alta')
+    .sort((a,b) => new Date(b.published_at) - new Date(a.published_at))[0]
+    || items.filter(i => i.daily_trigger).sort((a,b) => new Date(b.published_at) - new Date(a.published_at))[0];
+  if(highlight){
+    sentence2 = ` O evento de maior destaque foi do ${highlight.competitor_group}: "${highlight.title}".`;
+  }
+
+  let sentence3 = '';
+  if(inactive.length){
+    const list = inactive.length === 1 ? inactive[0] : `${inactive.slice(0,-1).join(', ')} e ${inactive[inactive.length-1]}`;
+    sentence3 = ` ${list} ${inactive.length === 1 ? 'não registrou' : 'não registraram'} sinais relevantes no período.`;
+  }
+
+  return `${sentence1}${sentence2}${sentence3}`.trim();
+}
+
+function buildCompetitorSummaries(items){
+  const counts = {};
+  const byComp = {};
+  COMPETITOR_ORDER.forEach(c => { counts[c] = 0; byComp[c] = []; });
+  items.forEach(i => {
+    if(counts[i.competitor_group] === undefined) return;
+    counts[i.competitor_group]++;
+    byComp[i.competitor_group].push(i);
+  });
+  const maxCount = Math.max(...Object.values(counts), 1);
+
+  return COMPETITOR_ORDER.map(name => {
+    const its = byComp[name].slice().sort((a,b) => new Date(b.published_at) - new Date(a.published_at));
+    return {
+      name,
+      count: its.length,
+      active: its.length > 0,
+      barWidth: Math.round((its.length / maxCount) * 100),
+      highlights: its.slice(0, 2),
+    };
   });
 }
 
-function mondayOf(dateObj){
-  const d = new Date(dateObj);
-  const day = d.getDay();
-  d.setDate(d.getDate() + (day === 0 ? -6 : 1) - day);
-  d.setHours(0,0,0,0);
-  return d;
+function renderCompetitorGrid(items){
+  const summaries = buildCompetitorSummaries(items);
+  const grid = document.getElementById('competitor-grid');
+  grid.innerHTML = summaries.map(c => `
+    <div class="competitor-card">
+      <div class="competitor-card-head">
+        <span class="competitor-name">${escapeHtml(c.name)}</span>
+        <span class="status-pill ${c.active ? 'ativo' : 'estavel'}">${c.active ? 'ativo' : 'estável'}</span>
+      </div>
+      <div class="competitor-bar"><span style="width:${c.barWidth}%;background:${c.active ? COLOR_DARK : '#C7C7C7'}"></span></div>
+      <div class="competitor-count">${c.count} ${c.count === 1 ? 'sinal' : 'sinais'} no período</div>
+      ${c.active
+        ? c.highlights.map(h => `<div class="competitor-highlight">${escapeHtml(h.title)}</div>`).join('')
+        : `<div class="competitor-empty">Sem sinais relevantes no período.</div>`}
+    </div>
+  `).join('');
 }
 
-function renderTrendChart(){
-  const items = trendItems();
-  const buckets = {};
-  items.forEach(item => {
-    const key = mondayOf(new Date(item.published_at)).toISOString().slice(0,10);
-    buckets[key] = (buckets[key]||0) + 1;
-  });
-  const labels = Object.keys(buckets).sort();
-  const data = labels.map(k => buckets[k]);
-  const displayLabels = labels.map(k => 'sem. ' + fmtDate(k + 'T00:00:00Z'));
-
-  if(trendChart) trendChart.destroy();
-  trendChart = new Chart(document.getElementById('trend-chart'), {
-    type:'bar',
-    data:{labels:displayLabels, datasets:[{data, backgroundColor:COLOR_DARK, borderRadius:3}]},
-    options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true, ticks:{precision:0}}}, animation:false}
-  });
-}
-
-function renderCharts(items){
-  const axisCounts = AXES.map(a => items.filter(i => i.axes.includes(a)).length);
-  const axisColors = AXES.map(a => a === RISK_AXIS ? COLOR_RED : COLOR_DARK);
-  const competitors = [...new Set(RAW_ITEMS.map(i => i.competitor_group))];
-  const compCounts = competitors.map(c => items.filter(i => i.competitor_group === c).length);
-
-  if(axisChart) axisChart.destroy();
-  axisChart = new Chart(document.getElementById('axis-chart'), {
-    type:'bar',
-    data:{labels:AXES, datasets:[{data:axisCounts, backgroundColor:axisColors, borderRadius:3}]},
-    options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true, ticks:{precision:0}}}, animation:false}
-  });
-
-  if(competitorChart) competitorChart.destroy();
-  competitorChart = new Chart(document.getElementById('competitor-chart'), {
-    type:'bar',
-    data:{labels:competitors, datasets:[{data:compCounts, backgroundColor:COLOR_DARK, borderRadius:3}]},
-    options:{indexAxis:'y', responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{x:{beginAtZero:true, ticks:{precision:0}}}, animation:false}
-  });
+function renderTimeline(items){
+  const el = document.getElementById('timeline');
+  if(!items.length){
+    el.innerHTML = `<div class="empty-state">Nenhum item no período.</div>`;
+    return;
+  }
+  const sorted = items.slice().sort((a,b) => new Date(b.published_at) - new Date(a.published_at));
+  el.innerHTML = sorted.map(it => {
+    const trigger = !!it.daily_trigger;
+    const bulletColor = trigger ? COLOR_RED : '#C7C7C7';
+    const bulletRadius = trigger ? '1px' : '50%';
+    return `
+      <div class="timeline-row">
+        <div class="timeline-date">${fmtShort(it.published_at)}</div>
+        <div class="timeline-bullet-wrap"><span class="timeline-bullet" style="background:${bulletColor};border-radius:${bulletRadius};"></span></div>
+        <div class="timeline-body">
+          <span class="timeline-icon">${axisIconsHtml(it, '#6D6D6D')}</span>
+          <span class="timeline-comp">${escapeHtml(it.competitor_group)}</span>
+          <span class="timeline-title">— <a href="${escapeAttr(it.link)}" target="_blank" rel="noopener">${escapeHtml(it.title)}</a></span>
+        </div>
+        <div class="timeline-source">${escapeHtml(it.source)}</div>
+      </div>
+    `;
+  }).join('');
 }
 
 function sourceHtml(item){
   const extra = item.also_reported_by || [];
-  const primary = `<a href="${item.link}" target="_blank" rel="noopener">${escapeHtml(item.source)}</a>`;
-  if(!extra.length) return `${primary} · ${fmtDate(item.published_at)}`;
-  const extraLinks = extra.map(s => `<a href="${s.link}" target="_blank" rel="noopener">${escapeHtml(s.source)}</a>`).join(', ');
-  return `${primary} <span style="color:var(--grey-500)">também:</span> ${extraLinks} · ${fmtDate(item.published_at)}`;
+  const primary = `<a href="${escapeAttr(item.link)}" target="_blank" rel="noopener">${escapeHtml(item.source)}</a>`;
+  if(!extra.length) return `${primary} · ${fmtShort(item.published_at)}`;
+  const extraLinks = extra.map(s => `<a href="${escapeAttr(s.link)}" target="_blank" rel="noopener">${escapeHtml(s.source)}</a>`).join(', ');
+  return `${primary} <span style="color:var(--grey-500)">também:</span> ${extraLinks} · ${fmtShort(item.published_at)}`;
 }
 
-function itemCardHtml(item, defaultOpen){
-  const relClass = item.relevance === 'alta' ? 'alta' : 'media';
-  const sourceCount = 1 + (item.also_reported_by || []).length;
+function itemCardHtml(item){
+  const isRisk = item.axes.includes(RISK_AXIS);
+  const axisLabel = AXIS_LABEL[item.axes[0]] || item.axes[0];
   return `
-    <details ${defaultOpen ? 'open' : ''} class="item-card ${item.daily_trigger ? 'trigger' : ''}">
-      <summary class="item-summary">
-        <span class="item-title">${escapeHtml(item.title)}</span>
-        <span class="item-summary-meta">${escapeHtml(item.competitor_group)} · ${fmtDate(item.published_at)}</span>
-      </summary>
-      <div class="item-body">
-        <div class="item-why">${escapeHtml(item.why_it_matters)}</div>
-        <div class="item-foot">
-          <div class="item-tags">
-            ${item.axes.map(a => `<span class="tag ${a === RISK_AXIS ? 'risk' : ''}">${a}</span>`).join('')}
-            ${item.daily_trigger ? '<span class="trigger-badge">gatilho diário</span>' : ''}
-            ${item.relevance ? `<span class="relevance-badge ${relClass}">relevância ${item.relevance}</span>` : ''}
-            ${sourceCount > 1 ? `<span class="source-badge">${sourceCount} fontes</span>` : ''}
-          </div>
-          <div>${sourceHtml(item)}</div>
+    <div class="signal-card ${isRisk ? 'risk' : ''}">
+      <div class="signal-main">
+        <div class="signal-competitor">${escapeHtml(item.competitor_group)}</div>
+        <div class="signal-title"><a href="${escapeAttr(item.link)}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a></div>
+        <div class="signal-why">${escapeHtml(item.why_it_matters)}</div>
+      </div>
+      <div class="signal-meta">
+        <div class="signal-date">${sourceHtml(item)}</div>
+        <div class="signal-badges">
+          ${item.daily_trigger ? '<span class="action-badge">AÇÃO</span>' : ''}
+          <span class="axis-pill ${isRisk ? 'risk' : ''}">${axisIconsHtml(item, '#4A4A4A')}${escapeHtml(axisLabel)}</span>
         </div>
       </div>
-    </details>
+    </div>
   `;
 }
 
@@ -624,11 +716,11 @@ function renderAlerts(){
   const section = document.getElementById('alerts-section');
   if(!items.length){ section.style.display = 'none'; return; }
   section.style.display = '';
-  document.getElementById('alerts-feed').innerHTML = items.map(i => itemCardHtml(i, true)).join('');
+  document.getElementById('alerts-feed').innerHTML = items.map(itemCardHtml).join('');
 }
 
 function renderFeed(items){
-  document.getElementById('feed-count').textContent = `${items.length} itens`;
+  document.getElementById('feed-count').textContent = `${items.length} ${items.length === 1 ? 'item' : 'itens'}`;
   const feed = document.getElementById('feed');
 
   if(!items.length){
@@ -636,15 +728,17 @@ function renderFeed(items){
     return;
   }
 
-  feed.innerHTML = items.map(item => itemCardHtml(item, false)).join('');
+  const sorted = items.slice().sort((a,b) => new Date(b.published_at) - new Date(a.published_at));
+  feed.innerHTML = sorted.map(itemCardHtml).join('');
 }
 
 function render(){
   const items = filteredItems();
+  document.getElementById('exec-summary').textContent = buildExecSummary(items);
   renderAlerts();
   renderKPIs(items);
-  renderTrendChart();
-  renderCharts(items);
+  renderCompetitorGrid(items);
+  renderTimeline(items);
   renderFeed(items);
 }
 
@@ -653,22 +747,25 @@ async function init(){
   RAW_ITEMS = items;
 
   document.getElementById('updated-at').textContent = generatedAt
-    ? `Atualizado em ${fmtDate(generatedAt)}`
+    ? `Atualizado em ${fmtUpdated(generatedAt)}`
     : 'Ainda sem execução automática';
 
   if(sample){
     document.getElementById('sample-flag-holder').innerHTML = '<span class="sample-flag">dados de exemplo</span>';
   }
 
-  const competitors = [...new Set(RAW_ITEMS.map(i => i.competitor_group))];
+  const competitorsSeen = [...new Set(RAW_ITEMS.map(i => i.competitor_group))];
+  const competitorChipList = COMPETITOR_ORDER.filter(c => competitorsSeen.includes(c))
+    .concat(competitorsSeen.filter(c => !COMPETITOR_ORDER.includes(c)));
+
   buildChips(document.getElementById('axis-chips'), AXES, ACTIVE_AXES, v => {
     ACTIVE_AXES.has(v) ? ACTIVE_AXES.delete(v) : ACTIVE_AXES.add(v);
   });
-  buildChips(document.getElementById('competitor-chips'), competitors, ACTIVE_COMPETITORS, v => {
+  buildChips(document.getElementById('competitor-chips'), competitorChipList, ACTIVE_COMPETITORS, v => {
     ACTIVE_COMPETITORS.has(v) ? ACTIVE_COMPETITORS.delete(v) : ACTIVE_COMPETITORS.add(v);
   });
-  document.getElementById('period-select').addEventListener('change', render);
 
+  renderPeriodTabs();
   render();
 }
 
