@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-29T11:52:06.837672+00:00",
+  "generated_at": "2026-07-30T11:43:47.397904+00:00",
   "items": [
     {
       "competitor_group": "BTG Pactual",
@@ -979,6 +979,50 @@
           "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNXzFsMDBnWjhXU0lLak02ZGxKWVlwYncxM1E5VnUwLXZ5RENNZ1FVNXJaVUhycHRia0Z4SlJTNDBxQUpUbWRpdVRrOVp4VkQxMlN0X0dEYVVvMVNjZExFTnkyZlZPODdiVTJTX2ZJSFZlb1JRQWxHT0JJeFhtM2hvaWpIclltQdIBhgFBVV95cUxNXzFsMDBnWjhXU0lLak02ZGxKWVlwYncxM1E5VnUwLXZ5RENNZ1FVNXJaVUhycHRia0Z4SlJTNDBxQUpUbWRpdVRrOVp4VkQxMlN0X0dEYVVvMVNjZExFTnkyZlZPODdiVTJTX2ZJSFZlb1JRQWxHT0JJeFhtM2hvaWpIclltQQ?oc=5"
         }
       ]
+    },
+    {
+      "competitor_group": "XP/Clear/Rico",
+      "matched_alias": "XP Investimentos",
+      "title": "Justiça nega liminar contra XP, BTG e Nubank por venderem CDBs do Master - Metrópoles",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNRlc3alpkMmtVUkE1OEFHUWdFUUQ0dEtKZ0hvQUNJaW90MG52WnhBM19uWWhyNzd4bkZ0a1BMeGNNX1dHTzZ5SkRrNmo0ZVBENms1ckRPREdFT1VKdlFKWHpDUTF2RWhlYVhISzV3bldKRW44eEUtNUV5eXlpakZxZFRTQ0RuR1BaNF9PbmZYV1lDSk1aVEptYURtdGpsWjRqVHNTazZHM1NXNk12cDgwbC1QbFQ4RVAxdlNJ?oc=5",
+      "source": "Metrópoles",
+      "published_at": "2026-07-29T21:21:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxNRlc3alpkMmtVUkE1OEFHUWdFUUQ0dEtKZ0hvQUNJaW90MG52WnhBM19uWWhyNzd4bkZ0a1BMeGNNX1dHTzZ5SkRrNmo0ZVBENms1ckRPREdFT1VKdlFKWHpDUTF2RWhlYVhISzV3bldKRW44eEUtNUV5eXlpakZxZFRTQ0RuR1BaNF9PbmZYV1lDSk1aVEptYURtdGpsWjRqVHNTazZHM1NXNk12cDgwbC1QbFQ4RVAxdlNJ?oc=5\" target=\"_blank\">Justiça nega liminar contra XP, BTG e Nubank por venderem CDBs do Master</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Metrópoles</font>",
+      "source_indices": [
+        9
+      ],
+      "primary_index": 9,
+      "axes": [
+        "Risco/Regulação"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "A decisão judicial mantém a venda de CDBs do Master por XP, BTG e Nubank, mas o caso expõe risco de contágio reputacional e regulatório para as corretoras envolvidas.",
+      "relevance": "média",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "FI-Infra do BTG migra para a B3 e amplia oferta de fundos atrelados ao CDI - moneytimes.com.br",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOT3RfLVEzbU9udExHaEZmbFlka1RnMHIwZnMwQXY3Ty12TkpYZk03TGFyb0VuSm1ybUNIMUdWSThDOEFsMzl1NllybjVvTEk2c3BwSU9jX0hHbXF5RG04WTJZME92VW9FNW1TcEl6QWl1WEptMEVDOUNKTHFWck9NeGdsOXA3c2FJUEk1cDh6LUpJcUJiaWplZ1dvZkN0dEU5TzFDc3JRSWdQSmR0VWNz?oc=5",
+      "source": "moneytimes.com.br",
+      "published_at": "2026-07-29T13:36:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOT3RfLVEzbU9udExHaEZmbFlka1RnMHIwZnMwQXY3Ty12TkpYZk03TGFyb0VuSm1ybUNIMUdWSThDOEFsMzl1NllybjVvTEk2c3BwSU9jX0hHbXF5RG04WTJZME92VW9FNW1TcEl6QWl1WEptMEVDOUNKTHFWck9NeGdsOXA3c2FJUEk1cDh6LUpJcUJiaWplZ1dvZkN0dEU5TzFDc3JRSWdQSmR0VWNz?oc=5\" target=\"_blank\">FI-Infra do BTG migra para a B3 e amplia oferta de fundos atrelados ao CDI</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">moneytimes.com.br</font>",
+      "source_indices": [
+        44
+      ],
+      "primary_index": 44,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "LANC",
+      "why_it_matters": "A migração do FI-Infra do BTG para a B3 amplia a oferta de fundos atrelados ao CDI, atraindo investidores de varejo que buscam produtos de renda fixa com liquidez e tributação favorável.",
+      "relevance": "alta",
+      "also_reported_by": []
     }
   ],
   "results": [
