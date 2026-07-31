@@ -215,6 +215,13 @@ DAILY_TRIGGER_CRITERIA = [
     "TERMS — Alteração confirmada de termos de uso, contrato ou condições de serviço ao cliente",
 ]
 
+# Janela de "histórias já registradas" oferecida à LLM em synthesize.py pra
+# reconhecer reportagens tardias do mesmo fato (ex.: M&A que ganha cobertura
+# de outros veículos dias/semanas depois do anúncio original). 3 dias era
+# curto demais — cobertura de fusão/aquisição costuma se espalhar por 1-2
+# semanas. 60 dias cobre esse ciclo de vida com folga.
+NEWS_REALERT_LOOKBACK_DAYS = 60
+
 # ---------------------------------------------------------------------------
 # RESULTADOS TRIMESTRAIS / ESTRATÉGIA
 # (collect_results.py + synthesize_results.py — seção "Resultados e Estratégia")
