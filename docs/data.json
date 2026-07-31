@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T11:50:31.907935+00:00",
+  "generated_at": "2026-07-31T23:31:32.763591+00:00",
   "items": [
     {
       "competitor_group": "BTG Pactual",
@@ -1095,6 +1095,108 @@
       "why_it_matters": "Investigação do TCE-RJ sobre aportes do Rioprevidência no Genial pode gerar risco reputacional e regulatório, afetando a confiança dos clientes.",
       "relevance": "média",
       "also_reported_by": []
+    },
+    {
+      "competitor_group": "XP/Clear/Rico",
+      "matched_alias": "XP Investimentos",
+      "title": "XP nega vínculo com acusado de golpe milionário em MS - Campo Grande News",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQOTAyaFg4dmZqbGZISVZIVEQ4SldoWEtGdjR5eXp5aUNsS29OQnB4ME44UzgtVm5HVzNBTlo0bHZ6U25rVVJxSXFPdnFIZC00ZWFncGY0M2FfWjdXQmF2NjBNc2xVNWR0R1d5bDNPQnJMZ0Z3WVVkM1Q2SkM1UWNUY3V4ZjlheXJqaDc3YTZuSHZJU2h1RV9oOHNOdDFzNE9VZE5lWXR2THNnT09ZSGdjZjU3T3VGX3NxTmtkNXR3VE03VkJKV0pn0gHHAUFVX3lxTFBMUk9pN19sQmMxRDBjMHZpTEt3ZEl5Vm1IRUJVdWFmTUhFQnlhVzNHRGxuSko3WGxrRzdsY1lNWC1ncWtobG1BZ25tSTJZRHR1bnl4UERET2JoanYyMFRTTlY3cndzVzNxQWJhZUJZbjVjZHNINFFGVGxXNGRiSGxxLVVTenNpa0czdm1MNU1YX1JmQUtIa0ZHTGRYSXB0aG5TOVNUM0FwVUQ0ZXJhbjRpOEZ6SVlKYWRtLTh4NE5kWXhtdjJTejA?oc=5",
+      "source": "Campo Grande News",
+      "published_at": "2026-07-31T20:18:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxQOTAyaFg4dmZqbGZISVZIVEQ4SldoWEtGdjR5eXp5aUNsS29OQnB4ME44UzgtVm5HVzNBTlo0bHZ6U25rVVJxSXFPdnFIZC00ZWFncGY0M2FfWjdXQmF2NjBNc2xVNWR0R1d5bDNPQnJMZ0Z3WVVkM1Q2SkM1UWNUY3V4ZjlheXJqaDc3YTZuSHZJU2h1RV9oOHNOdDFzNE9VZE5lWXR2THNnT09ZSGdjZjU3T3VGX3NxTmtkNXR3VE03VkJKV0pn0gHHAUFVX3lxTFBMUk9pN19sQmMxRDBjMHZpTEt3ZEl5Vm1IRUJVdWFmTUhFQnlhVzNHRGxuSko3WGxrRzdsY1lNWC1ncWtobG1BZ25tSTJZRHR1bnl4UERET2JoanYyMFRTTlY3cndzVzNxQWJhZUJZbjVjZHNINFFGVGxXNGRiSGxxLVVTenNpa0czdm1MNU1YX1JmQUtIa0ZHTGRYSXB0aG5TOVNUM0FwVUQ0ZXJhbjRpOEZ6SVlKYWRtLTh4NE5kWXhtdjJTejA?oc=5\" target=\"_blank\">XP nega vínculo com acusado de golpe milionário em MS</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Campo Grande News</font>",
+      "source_indices": [
+        0,
+        43
+      ],
+      "primary_index": 0,
+      "axes": [
+        "Risco/Regulação"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "Notícia de possível envolvimento da XP em golpe pode gerar desconfiança e dano reputacional, impactando a confiança dos investidores na plataforma.",
+      "relevance": "média",
+      "also_reported_by": [
+        {
+          "source": "Folha MS",
+          "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQZVlzMmNlT3BHVzZ0ZnQ3cnQ2T2REU1M0OW81b2l1MXhvRTJDZjgzSmV0SVlWZGdvbVQ2c2h3UEw0c1FPVi1IbkVhQ0RzVTVkNWlDZkYwLWJnbEJtODdJWG1sVjE0UExIbm80M3NBNkpGdE5QRFVqM0FDQ0QxR2JJTl9zYXB4NDdxSlNJMFpXWDhLV3k3aUdn?oc=5"
+        }
+      ]
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "Juros Altos Mudam Disputa por Fortunas; BTG Chega a R$ 130 Bilhões no Family Office - forbes.com.br",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBOblBsbEFNRmRPT045R2JWVHJpNmI2TXQxTE1oWmM4aGJGSXR0QnVKNkRzNkFJdWpPU1lCLUxsV0QzcDlRQ1J3WjlUOWpSZTg5OHc0LXJYUjFjYmZiZ2cyMnZpWnFydzhRNWpHOE1BcGJYcWN6RTBpX3ZzaVUybWc?oc=5",
+      "source": "forbes.com.br",
+      "published_at": "2026-07-31T08:00:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTFBOblBsbEFNRmRPT045R2JWVHJpNmI2TXQxTE1oWmM4aGJGSXR0QnVKNkRzNkFJdWpPU1lCLUxsV0QzcDlRQ1J3WjlUOWpSZTg5OHc0LXJYUjFjYmZiZ2cyMnZpWnFydzhRNWpHOE1BcGJYcWN6RTBpX3ZzaVUybWc?oc=5\" target=\"_blank\">Juros Altos Mudam Disputa por Fortunas; BTG Chega a R$ 130 Bilhões no Family Office</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">forbes.com.br</font>",
+      "source_indices": [
+        44
+      ],
+      "primary_index": 44,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "O crescimento do family office do BTG para R$ 130 bilhões indica forte expansão no segmento de alta renda, pressionando concorrentes a aprimorarem suas ofertas para esse público.",
+      "relevance": "média",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "Nubank/NuInvest",
+      "matched_alias": "Nubank",
+      "title": "Nubank cria segmento intermediário para clientes abaixo do ultravioleta - Folha de S.Paulo",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOWXViZjc2THJCaEZnN3Q1amJtWWVUQ3J4Ql8tbE9WTUp0eWMzeUFvaG9Yb0NFdHF6YWgybTZ1MEhCR3VPMGoxQTVTRVdzVENXWHlrRTNVUXRQd2tGOFdWNHg0cXpGT2lqb2RGem1VSEswWTNBREtXWGt2WUt3b2sxLW9nN2ptR3lseHY1MlNLb2NTSU42Q0Z5LWwyNC14Si1yNHBYM21qMUg5VGprRjlKTk85MG1SWTg4aExQZHdxbm4?oc=5",
+      "source": "Folha de S.Paulo",
+      "published_at": "2026-07-29T15:43:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxOWXViZjc2THJCaEZnN3Q1amJtWWVUQ3J4Ql8tbE9WTUp0eWMzeUFvaG9Yb0NFdHF6YWgybTZ1MEhCR3VPMGoxQTVTRVdzVENXWHlrRTNVUXRQd2tGOFdWNHg0cXpGT2lqb2RGem1VSEswWTNBREtXWGt2WUt3b2sxLW9nN2ptR3lseHY1MlNLb2NTSU42Q0Z5LWwyNC14Si1yNHBYM21qMUg5VGprRjlKTk85MG1SWTg4aExQZHdxbm4?oc=5\" target=\"_blank\">Nubank cria segmento intermediário para clientes abaixo do ultravioleta</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Folha de S.Paulo</font>",
+      "source_indices": [
+        76,
+        78
+      ],
+      "primary_index": 76,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "LANC",
+      "why_it_matters": "O novo segmento intermediário do Nubank, com cashback e investimentos, visa capturar clientes de média renda, ampliando sua base e pressionando concorrentes a inovar em produtos e benefícios.",
+      "relevance": "alta",
+      "also_reported_by": [
+        {
+          "source": "Tribuna do Paraná",
+          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOTGpWd201NVNBNTJ5Vm9LSm9hamxkS2hBV3otRC1SMnRSQzl3LUtKQ0lQMjdPYjJGNGR2OEp3b3h4ZklSVFJHbDhjSVM3ZGNFX3JfMWhTcUVsVDRrRFhPRVF3QTVBRUpfTy15S0dMQy1QUnNNcXNQYkRfSWVkYjhsXy1PR29BLTJLUS1vX3dTbmhWVGIycGp1Szh5QXp0OVluREHSAacBQVVfeXFMT2NJNER6dkJhNUliWFcyVzM5YldZVnZjR05kVXFOazdFRFhjdmRFQlBGcjJQdjNEejRBNUhRMDNwRUE1bjQ5SGoxWW13Nk5ScGZLV3FMUDZxRWdkWFo3TDdDR21seWprSjQ2bDJUVVBEYWhXcFlfQ1h2eE9PaEJOd2Fnc3BjOWdMdzZlMmZBYVd6dHpwdG55ZzM1a01UZFMxZnNCYkhtSmM?oc=5"
+        }
+      ]
+    },
+    {
+      "competitor_group": "XP/Clear/Rico",
+      "matched_alias": "XP Investimentos",
+      "title": "B3 (B3SA3) retoma negociações após falha tecnológica; veja o que aconteceu - Acionista.com.br",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPdXpqbENNbTZfeXFHM0pXZjgxbGgzVG5BOW5tNjBYcGtxQWdKRE5HOFBfSFN4anZlRzRwN2hrbkJJS3ZtVlpkaXhIeXhOaUM0eks3RUJSWENKdUw4VTN0bGZEX0tXNlhra1JWQVc5Rk84STV2Q1pLNWNfUGMtSFZHWGNqQjZ6VFMzMWxIdXBuQkNjRXo2S2xud0RyNUpDdw?oc=5",
+      "source": "Acionista.com.br",
+      "published_at": "2026-07-31T17:32:52+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPdXpqbENNbTZfeXFHM0pXZjgxbGgzVG5BOW5tNjBYcGtxQWdKRE5HOFBfSFN4anZlRzRwN2hrbkJJS3ZtVlpkaXhIeXhOaUM0eks3RUJSWENKdUw4VTN0bGZEX0tXNlhra1JWQVc5Rk84STV2Q1pLNWNfUGMtSFZHWGNqQjZ6VFMzMWxIdXBuQkNjRXo2S2xud0RyNUpDdw?oc=5\" target=\"_blank\">B3 (B3SA3) retoma negociações após falha tecnológica; veja o que aconteceu</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Acionista.com.br</font>",
+      "channel": "incident",
+      "source_indices": [
+        83
+      ],
+      "primary_index": 83,
+      "axes": [
+        "Tecnologia",
+        "RV/Trading"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "INC",
+      "why_it_matters": "Falha tecnológica na B3 interrompeu negociações, afetando diretamente os investidores e as corretoras que dependem da bolsa para operar, gerando preocupação sobre a estabilidade do mercado.",
+      "relevance": "alta",
+      "also_reported_by": []
     }
   ],
   "results": [
@@ -1126,11 +1228,23 @@
   ],
   "status_by_competitor": {
     "XP/Clear/Rico": {
-      "status": "estavel",
-      "last_incident_at": null,
-      "last_incident_title": null,
-      "incident_count_window": 0,
-      "incidents": []
+      "status": "instavel_recente",
+      "last_incident_at": "2026-07-31T17:32:52+00:00",
+      "last_incident_title": "B3 (B3SA3) retoma negociações após falha tecnológica; veja o que aconteceu - Acionista.com.br",
+      "incident_count_window": 1,
+      "incidents": [
+        {
+          "published_at": "2026-07-31T17:32:52+00:00",
+          "title": "B3 (B3SA3) retoma negociações após falha tecnológica; veja o que aconteceu - Acionista.com.br",
+          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPdXpqbENNbTZfeXFHM0pXZjgxbGgzVG5BOW5tNjBYcGtxQWdKRE5HOFBfSFN4anZlRzRwN2hrbkJJS3ZtVlpkaXhIeXhOaUM0eks3RUJSWENKdUw4VTN0bGZEX0tXNlhra1JWQVc5Rk84STV2Q1pLNWNfUGMtSFZHWGNqQjZ6VFMzMWxIdXBuQkNjRXo2S2xud0RyNUpDdw?oc=5",
+          "source": "Acionista.com.br",
+          "why_it_matters": "Falha tecnológica na B3 interrompeu negociações, afetando diretamente os investidores e as corretoras que dependem da bolsa para operar, gerando preocupação sobre a estabilidade do mercado.",
+          "axes": [
+            "Tecnologia",
+            "RV/Trading"
+          ]
+        }
+      ]
     },
     "BTG Pactual": {
       "status": "estavel",
