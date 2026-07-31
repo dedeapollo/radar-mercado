@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T11:43:47.397904+00:00",
+  "generated_at": "2026-07-31T11:50:31.907935+00:00",
   "items": [
     {
       "competitor_group": "BTG Pactual",
@@ -1022,6 +1022,78 @@
       "trigger_reason": "LANC",
       "why_it_matters": "A migração do FI-Infra do BTG para a B3 amplia a oferta de fundos atrelados ao CDI, atraindo investidores de varejo que buscam produtos de renda fixa com liquidez e tributação favorável.",
       "relevance": "alta",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "BTG Pactual apresenta o Ultrablue World Legend: nova pontuação, seguro viagem e corridas grátis - Exame",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPbUtta3BUZkFFaXlUa2tIN2xFS0VZQTBwYzFVak1MQ3NLQlljVUdNd2RnVDdabmFvYXlrMXVKeXR1S0czQVUyX1E4dGJZM2tCOEswa1M0XzJuemRDd1ZWS0pzOWZBZ2ZKcjZ3VUJNbE5pb2dtSkRrS2VadGVhMW51MGlpVDVKYlZRQ3R3U2lGNzRTSE5GcWNrRHp2SzA1eHRXNUlBTzRhRmlvYWtZSmZ2WHZnN1NILTFsWFFBOHBSLXZpZTVfU0x6TGtUc0c?oc=5",
+      "source": "Exame",
+      "published_at": "2026-07-31T08:13:39+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxPbUtta3BUZkFFaXlUa2tIN2xFS0VZQTBwYzFVak1MQ3NLQlljVUdNd2RnVDdabmFvYXlrMXVKeXR1S0czQVUyX1E4dGJZM2tCOEswa1M0XzJuemRDd1ZWS0pzOWZBZ2ZKcjZ3VUJNbE5pb2dtSkRrS2VadGVhMW51MGlpVDVKYlZRQ3R3U2lGNzRTSE5GcWNrRHp2SzA1eHRXNUlBTzRhRmlvYWtZSmZ2WHZnN1NILTFsWFFBOHBSLXZpZTVfU0x6TGtUc0c?oc=5\" target=\"_blank\">BTG Pactual apresenta o Ultrablue World Legend: nova pontuação, seguro viagem e corridas grátis</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Exame</font>",
+      "source_indices": [
+        42
+      ],
+      "primary_index": 42,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "LANC",
+      "why_it_matters": "Novo cartão Ultrablue World Legend com benefícios de viagem pode atrair clientes de alta renda, aumentando a concorrência no segmento premium.",
+      "relevance": "alta",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "Confira como participar da Copa BTG Trader e concorrer a R$ 1 milhão sem arriscar o próprio dinheiro - Money Times",
+      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQREpfUlVlRDRIdU1hY0xDQ3dNOGVNVGF6aFJyVDlUTmQwYzZTSEZlTGJxTm81OXBFeE9ydXBFM0IyMWRRN2I3WkktY0ZmbXROWGlvSTVhQ1dkRHhfUzVQYldzNGVHaFZ2THRlLUJfdjJqcnRwa1ZsbENGVDE0eDlMd1d3YXc5UHRIUk9TdFNzY2RvZFBEUDZROUlNOW1OcF9LYmhZVFMyUXY5cGNRcFZMZnpjd2NHaU5yR1FWbGhiRTNBQmlMbUZ1TS1GZHM1V1pLTWRtcXJwNA?oc=5",
+      "source": "Money Times",
+      "published_at": "2026-07-30T17:00:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxQREpfUlVlRDRIdU1hY0xDQ3dNOGVNVGF6aFJyVDlUTmQwYzZTSEZlTGJxTm81OXBFeE9ydXBFM0IyMWRRN2I3WkktY0ZmbXROWGlvSTVhQ1dkRHhfUzVQYldzNGVHaFZ2THRlLUJfdjJqcnRwa1ZsbENGVDE0eDlMd1d3YXc5UHRIUk9TdFNzY2RvZFBEUDZROUlNOW1OcF9LYmhZVFMyUXY5cGNRcFZMZnpjd2NHaU5yR1FWbGhiRTNBQmlMbUZ1TS1GZHM1V1pLTWRtcXJwNA?oc=5\" target=\"_blank\">Confira como participar da Copa BTG Trader e concorrer a R$ 1 milhão sem arriscar o próprio dinheiro</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Money Times</font>",
+      "source_indices": [
+        44,
+        60
+      ],
+      "primary_index": 44,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "LANC",
+      "why_it_matters": "Copa BTG Trader é uma competição de trading que pode atrair novos clientes e aumentar o engajamento na plataforma, pressionando concorrentes a oferecerem incentivos similares.",
+      "relevance": "alta",
+      "also_reported_by": [
+        {
+          "source": "Exame",
+          "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNR1JaUUtIdlZQWUdkLW5hSXp6YlIwdHdiOEpIOTdDVjk1X1UzRko5amNMblZ0dkJSSGJRUDVZSTBKakl1aWl2M094R1hTVFhfQkZXZWMtUERmWEt5TWVsUkVwOEVoblplanBVbkJibFQ4Uk1XWmpFY1BueHZsUHVRUC00ZnpDZVB3Y2E4VC11UEdRWFpRWDNSaHRkUk0xeTBLQlhWelpkcXA0anNCVTFVQXdDWHc2VkNHSnFF?oc=5"
+        }
+      ]
+    },
+    {
+      "competitor_group": "Genial",
+      "matched_alias": "Genial Investimentos",
+      "title": "TCE-RJ investiga aportes do Rioprevidência no Genial após rejeitar contas de Castro - Times Brasil | CNBC",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPUkJwbjJoTEdXNHRHSWN4TlhtWjdwb1NCczVkT1hGbVJ6SHpxRERPMVN0SzMtUnZpYmVpTmpmOHptRGZzSTdmazQtMllNb0JLWnAxd0ZKN1FRQk5zS1Bic1FyMk5iYTRkNGR4SkRvSXlWRGpIdHBwd0dvbmhVejk3VGdPN2lBZkcxSHVVbDY5T3JPcXBNRWZ5Z3YwU081UF9CbUt0Vw?oc=5",
+      "source": "Times Brasil | CNBC",
+      "published_at": "2026-07-30T14:00:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxPUkJwbjJoTEdXNHRHSWN4TlhtWjdwb1NCczVkT1hGbVJ6SHpxRERPMVN0SzMtUnZpYmVpTmpmOHptRGZzSTdmazQtMllNb0JLWnAxd0ZKN1FRQk5zS1Bic1FyMk5iYTRkNGR4SkRvSXlWRGpIdHBwd0dvbmhVejk3VGdPN2lBZkcxSHVVbDY5T3JPcXBNRWZ5Z3YwU081UF9CbUt0Vw?oc=5\" target=\"_blank\">TCE-RJ investiga aportes do Rioprevidência no Genial após rejeitar contas de Castro</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Times Brasil | CNBC</font>",
+      "source_indices": [
+        69
+      ],
+      "primary_index": 69,
+      "axes": [
+        "Risco/Regulação"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "Investigação do TCE-RJ sobre aportes do Rioprevidência no Genial pode gerar risco reputacional e regulatório, afetando a confiança dos clientes.",
+      "relevance": "média",
       "also_reported_by": []
     }
   ],
