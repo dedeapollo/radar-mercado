@@ -21,7 +21,7 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).parent))
-from sources import DAILY_TRIGGER_CRITERIA
+from sources import DAILY_TRIGGER_CRITERIA, NEWS_REALERT_LOOKBACK_DAYS
 from history import get_items_since, load_history
 
 DEEPSEEK_API_URL = "https://api.deepseek.com/chat/completions"
@@ -100,8 +100,10 @@ Mesma história = mesmo fato central (mesma ação, mesmo ator, mesma janela de
 tempo), ainda que com manchetes, ângulos ou fontes diferentes. Anúncio,
 repercussão e análise do MESMO fato são UMA história. Mesmo concorrente ou mesmo
 tema geral NÃO bastam para agrupar. Cada história única aparece UMA vez na saída.
-Se receber uma lista de HISTÓRIAS JÁ REGISTRADAS em dias anteriores, descarte
-itens de hoje que sejam o mesmo fato de uma história já registrada.
+Se receber uma lista de HISTÓRIAS JÁ REGISTRADAS em dias anteriores (formato
+"[grupo, data] título"), descarte itens de hoje que sejam o mesmo fato de uma
+história já registrada do MESMO grupo — grupos diferentes nunca compartilham
+história.
 
 PASSO 2 — CLASSIFICAÇÃO (uma vez por história única):
 Para cada história, retorne um objeto JSON com:
@@ -278,9 +280,15 @@ def main():
             continue
         items.extend(json.loads(path.read_text(encoding="utf-8")))
 
-    # Títulos dos últimos 3 dias já registrados — mesmo lookback do collect.py,
-    # para o modelo descartar re-coletas do mesmo fato com link diferente.
-    known_titles = [item["title"] for item in get_items_since(load_history(), days=3)]
+    # Histórias já registradas dentro da janela de re-alerta — para o modelo
+    # descartar reportagens tardias do mesmo fato (veículo/manchete diferentes,
+    # link diferente). Inclui grupo e data pra evitar comparação cruzada entre
+    # concorrentes e ajudar o julgamento de "mesma janela de tempo".
+    recent_history = get_items_since(load_history(), days=NEWS_REALERT_LOOKBACK_DAYS)
+    known_titles = [
+        f"[{item['competitor_group']}, {item['published_at'][:10]}] {item['title']}"
+        for item in recent_history
+    ]
 
     classified = classify_batch(items, api_key, known_titles=known_titles)
     # Só mantém itens de relevância média/alta
