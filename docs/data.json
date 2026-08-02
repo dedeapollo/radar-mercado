@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-01T11:08:55.377538+00:00",
+  "generated_at": "2026-08-02T11:09:20.890515+00:00",
   "items": [
     {
       "competitor_group": "BTG Pactual",
@@ -1130,6 +1130,30 @@
       "why_it_matters": "Expansão de gestão patrimonial é contexto estratégico, sem mudança de produto para varejo.",
       "relevance": "média",
       "also_reported_by": []
+    },
+    {
+      "competitor_group": "XP/Clear/Rico",
+      "matched_alias": "Clear (novo app)",
+      "title": "Clear (novo app): pico de reclamações de mau funcionamento na Play Store (5 avaliações negativas citando indisponibilidade em 48h)",
+      "link": "https://play.google.com/store/apps/details?id=br.com.xpinc.clear.app.android&hl=pt_BR&gl=BR",
+      "source": "Google Play (reviews)",
+      "published_at": "2026-08-02T11:08:52.886174+00:00",
+      "summary": "16 avaliações de 1-2 estrelas na janela, 5 delas citando problemas de funcionamento. Amostras: \"não abre!!!!!\" | \"Aplicativo não funciona após atualização!!! E agora não estou mais conseguindo investir e ficando n…\" | \"erro atualização\"",
+      "channel": "incident",
+      "source_indices": [
+        51
+      ],
+      "primary_index": 51,
+      "axes": [
+        "Tecnologia",
+        "RV/Trading"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "INC",
+      "why_it_matters": "Pico de reclamações sobre mau funcionamento do app Clear, afetando negociação de clientes.",
+      "relevance": "alta",
+      "also_reported_by": []
     }
   ],
   "results": [
@@ -1162,10 +1186,21 @@
   "status_by_competitor": {
     "XP/Clear/Rico": {
       "status": "instavel_recente",
-      "last_incident_at": "2026-07-31T17:32:52+00:00",
-      "last_incident_title": "B3 (B3SA3) retoma negociações após falha tecnológica; veja o que aconteceu - Acionista.com.br",
-      "incident_count_window": 1,
+      "last_incident_at": "2026-08-02T11:08:52.886174+00:00",
+      "last_incident_title": "Clear (novo app): pico de reclamações de mau funcionamento na Play Store (5 avaliações negativas citando indisponibilidade em 48h)",
+      "incident_count_window": 2,
       "incidents": [
+        {
+          "published_at": "2026-08-02T11:08:52.886174+00:00",
+          "title": "Clear (novo app): pico de reclamações de mau funcionamento na Play Store (5 avaliações negativas citando indisponibilidade em 48h)",
+          "link": "https://play.google.com/store/apps/details?id=br.com.xpinc.clear.app.android&hl=pt_BR&gl=BR",
+          "source": "Google Play (reviews)",
+          "why_it_matters": "Pico de reclamações sobre mau funcionamento do app Clear, afetando negociação de clientes.",
+          "axes": [
+            "Tecnologia",
+            "RV/Trading"
+          ]
+        },
         {
           "published_at": "2026-07-31T17:32:52+00:00",
           "title": "B3 (B3SA3) retoma negociações após falha tecnológica; veja o que aconteceu - Acionista.com.br",
