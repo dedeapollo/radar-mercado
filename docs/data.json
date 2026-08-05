@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-04T11:52:41.200700+00:00",
+  "generated_at": "2026-08-05T11:49:23.171957+00:00",
   "items": [
     {
       "competitor_group": "BTG Pactual",
@@ -1275,7 +1275,7 @@
   ],
   "status_by_competitor": {
     "XP/Clear/Rico": {
-      "status": "instavel_recente",
+      "status": "estavel",
       "last_incident_at": "2026-08-02T11:08:52.886174+00:00",
       "last_incident_title": "Clear (novo app): pico de reclamações de mau funcionamento na Play Store (5 avaliações negativas citando indisponibilidade em 48h)",
       "incident_count_window": 2,
