@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05T11:49:23.171957+00:00",
+  "generated_at": "2026-08-06T11:54:41.758491+00:00",
   "items": [
     {
       "competitor_group": "BTG Pactual",
@@ -1244,6 +1244,56 @@
       "why_it_matters": "A pane na B3 afeta diretamente a negociação de todos os investidores, incluindo clientes de corretoras concorrentes; o incidente expõe risco reputacional para o ecossistema e pode gerar desconfiança no mercado, impactando a operação das corretoras.",
       "relevance": "alta",
       "also_reported_by": []
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "Painel S.A.: BTG Pactual e Jockey Club podem firmar parceria para injetar R$ 250 milhões no hipódromo - Folha de S.Paulo",
+      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPVFdpcmhkSWoyN2FkVVQzQzl0SnJTQ2tQd2JrU2daZnhybTBITVpXbFQwWkdLOU9TMjYzVkkwaEpRNklDaHJPSndmekdoRWpreGRKZUhBUnJvaEFvOVg4WVRMSG4yaDliOTJ2WUlzTzFqXzE2djBtdXV2OXhkZ1hJcm1XNFNJZzJUa1pEdWFQWTk1ZUwyNmppRkNDalE2OWNNTklZOXQxRUNrbkktanZBbTI4OVM5R0NLS0pNQmNnOFJ0YnBMVDhPNW5kT1dvQV9Lc1BjVHpPSW1FRmY3UXZ6UVB3?oc=5",
+      "source": "Folha de S.Paulo",
+      "published_at": "2026-08-06T00:00:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi4gFBVV95cUxPVFdpcmhkSWoyN2FkVVQzQzl0SnJTQ2tQd2JrU2daZnhybTBITVpXbFQwWkdLOU9TMjYzVkkwaEpRNklDaHJPSndmekdoRWpreGRKZUhBUnJvaEFvOVg4WVRMSG4yaDliOTJ2WUlzTzFqXzE2djBtdXV2OXhkZ1hJcm1XNFNJZzJUa1pEdWFQWTk1ZUwyNmppRkNDalE2OWNNTklZOXQxRUNrbkktanZBbTI4OVM5R0NLS0pNQmNnOFJ0YnBMVDhPNW5kT1dvQV9Lc1BjVHpPSW1FRmY3UXZ6UVB3?oc=5\" target=\"_blank\">Painel S.A.: BTG Pactual e Jockey Club podem firmar parceria para injetar R$ 250 milhões no hipódromo</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Folha de S.Paulo</font>",
+      "source_indices": [
+        60
+      ],
+      "primary_index": 60,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "especulativo",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "Uma possível parceria do BTG com o Jockey Club para injetar R$ 250 milhões pode abrir novas frentes de negócio, mas ainda é especulativa e não afeta diretamente o cliente investidor.",
+      "relevance": "média",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "BTG receberá R$ 732 milhões de tradings e terá exclusividade em Paranaguá - VEJA",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQaEIzZDctUnZ4RFIyc3c3NVBHX3lrVF93VGgtQUJPclpjQjhRaXBQVE1IRDFZNXF1TGVRMU9EdmgxVnFUNjNJazg4czRnUXpweHlScnpYbjVJdlNNVkZvOV9XdWtweEtDUGZOaDJCcWJWYmhfWnh6VEVkbUcwcVVUcUFtRHVEM1FsbWZnT1dEZEtBUE5HQ2tSSWI5RnlpYURzMTlNYWNQNnQ0dlg0S2ZQWUNDMTAwREFLb29pMUVaMA?oc=5",
+      "source": "VEJA",
+      "published_at": "2026-08-05T16:00:05+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxQaEIzZDctUnZ4RFIyc3c3NVBHX3lrVF93VGgtQUJPclpjQjhRaXBQVE1IRDFZNXF1TGVRMU9EdmgxVnFUNjNJazg4czRnUXpweHlScnpYbjVJdlNNVkZvOV9XdWtweEtDUGZOaDJCcWJWYmhfWnh6VEVkbUcwcVVUcUFtRHVEM1FsbWZnT1dEZEtBUE5HQ2tSSWI5RnlpYURzMTlNYWNQNnQ0dlg0S2ZQWUNDMTAwREFLb29pMUVaMA?oc=5\" target=\"_blank\">BTG receberá R$ 732 milhões de tradings e terá exclusividade em Paranaguá</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">VEJA</font>",
+      "source_indices": [
+        63,
+        97
+      ],
+      "primary_index": 63,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "LANC",
+      "why_it_matters": "O recebimento de R$ 732 milhões de tradings e a exclusividade em Paranaguá indicam expansão do BTG em infraestrutura, o que pode gerar novos produtos de investimento.",
+      "relevance": "alta",
+      "also_reported_by": [
+        {
+          "source": "atlaspublico.com.br",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxObF9EcXhEQ1IyV2RnNVZWcXBKcjBmM2hvekF5WFozQVBISWRwWXhJTEItWEpsZlJqbEg4NGpqRU5UOUlYejNxYmJOc0FSVVFHWUpVTjhTeW5yNVRzblA5NXkydVJuUFlwNzNhV3RvSXQyTGUwam13X0FMVHRoSmRyR2djQUVnb2pKLXdidUNsMnZVMjQxMERqSGQzNGF6cjFyS0Jj?oc=5"
+        }
+      ]
     }
   ],
   "results": [
