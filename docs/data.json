@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T11:54:41.758491+00:00",
+  "generated_at": "2026-08-07T10:39:25.886019+00:00",
   "items": [
     {
       "competitor_group": "BTG Pactual",
@@ -1294,6 +1294,118 @@
           "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxObF9EcXhEQ1IyV2RnNVZWcXBKcjBmM2hvekF5WFozQVBISWRwWXhJTEItWEpsZlJqbEg4NGpqRU5UOUlYejNxYmJOc0FSVVFHWUpVTjhTeW5yNVRzblA5NXkydVJuUFlwNzNhV3RvSXQyTGUwam13X0FMVHRoSmRyR2djQUVnb2pKLXdidUNsMnZVMjQxMERqSGQzNGF6cjFyS0Jj?oc=5"
         }
       ]
+    },
+    {
+      "competitor_group": "XP/Clear/Rico",
+      "matched_alias": "XP Investimentos",
+      "title": "XP e Samsung firmam parceria para pré-venda de novos Galaxy a partir de 6 de agosto - InfoMoney",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQeHZEOVlVa05nOThkRXQ2TnV1aDhwT2RUNGdudmdGa3RJbDhkYjBjd2xSdmRBcUJOUTRrNG0yZTNmRFNIWlkzSExPZVkyLTRIVlRJVVd5MUx5QmtPVUdqU2tBZmpzb25JZm5Yd2RmOXUxa0s5TnZiRmFwU3EwaGRyMlJBX1h2V3lnbFpBendsQ3pmMUIwZzB0aVNKZXp6cE1uT0ptYmJsOEdGSy1GQVpMZnhuakJsVVhIbEJvc0RRQ0hnblprZ2cxQWFzdjZRWERTU3B5eDQ1RGJWaDZU0gHiAUFVX3lxTE41WGc0QkhpMEJEYjkxWVpIaWRWd2tvc3A0MWhoMmxDOGQ5dFhGLUd2Sm55cTlDZEk1QWhLREh3YnQ2LTZwVnVITE1Bb1kzMzcwVUI4ZUNsS05SOU9sVm1nVHpkUG4yeWM0dEZldHBBTWdqSVBhY1Q0SmlKN0piY0d5LUdXX243VVVRZVM3dzV2OE0xVmgtcHhudmZHVDlrTTlWb0tXeFpxaTZyWGgzdVFiVml2cVRQblJ3NlBucFBCWVI5RFVVMURwcTVMYXVjSnFnVG9zX0w5WnI2UXltcTFtMUE?oc=5",
+      "source": "InfoMoney",
+      "published_at": "2026-08-06T14:11:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi3AFBVV95cUxQeHZEOVlVa05nOThkRXQ2TnV1aDhwT2RUNGdudmdGa3RJbDhkYjBjd2xSdmRBcUJOUTRrNG0yZTNmRFNIWlkzSExPZVkyLTRIVlRJVVd5MUx5QmtPVUdqU2tBZmpzb25JZm5Yd2RmOXUxa0s5TnZiRmFwU3EwaGRyMlJBX1h2V3lnbFpBendsQ3pmMUIwZzB0aVNKZXp6cE1uT0ptYmJsOEdGSy1GQVpMZnhuakJsVVhIbEJvc0RRQ0hnblprZ2cxQWFzdjZRWERTU3B5eDQ1RGJWaDZU0gHiAUFVX3lxTE41WGc0QkhpMEJEYjkxWVpIaWRWd2tvc3A0MWhoMmxDOGQ5dFhGLUd2Sm55cTlDZEk1QWhLREh3YnQ2LTZwVnVITE1Bb1kzMzcwVUI4ZUNsS05SOU9sVm1nVHpkUG4yeWM0dEZldHBBTWdqSVBhY1Q0SmlKN0piY0d5LUdXX243VVVRZVM3dzV2OE0xVmgtcHhudmZHVDlrTTlWb0tXeFpxaTZyWGgzdVFiVml2cVRQblJ3NlBucFBCWVI5RFVVMURwcTVMYXVjSnFnVG9zX0w5WnI2UXltcTFtMUE?oc=5\" target=\"_blank\">XP e Samsung firmam parceria para pré-venda de novos Galaxy a partir de 6 de agosto</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">InfoMoney</font>",
+      "source_indices": [
+        53
+      ],
+      "primary_index": 53,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "LANC",
+      "why_it_matters": "A parceria da XP com a Samsung para pré-venda de smartphones pode atrair novos clientes e aumentar o engajamento, pressionando as demais corretoras a buscarem parcerias semelhantes.",
+      "relevance": "alta",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "Com meta de CDI + 1,25% e isento de IR: BTG lança FI-Infra na B3 - ISTOÉ DINHEIRO",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQS0dwN3EtZTNNYnFSQmNLSEJsaF9oZlduQ240SExBSUgzRzBRam42VW03YUVnTDRJanEyM1hRWlhEb3ZzOUZLZ2NUWnpkSU5ETGx1SzQ0dTZRTnVVY2VSeGdMR0t5bTNsc3FialkyUGVVenFkNHhZQTdnVzJaLUhxRnRMNDd4TjZHZjE3VF9wTFlpZw?oc=5",
+      "source": "ISTOÉ DINHEIRO",
+      "published_at": "2026-08-06T13:21:18+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxQS0dwN3EtZTNNYnFSQmNLSEJsaF9oZlduQ240SExBSUgzRzBRam42VW03YUVnTDRJanEyM1hRWlhEb3ZzOUZLZ2NUWnpkSU5ETGx1SzQ0dTZRTnVVY2VSeGdMR0t5bTNsc3FialkyUGVVenFkNHhZQTdnVzJaLUhxRnRMNDd4TjZHZjE3VF9wTFlpZw?oc=5\" target=\"_blank\">Com meta de CDI + 1,25% e isento de IR: BTG lança FI-Infra na B3</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ISTOÉ DINHEIRO</font>",
+      "source_indices": [
+        65
+      ],
+      "primary_index": 65,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "LANC",
+      "why_it_matters": "O lançamento de um FI-Infra pelo BTG com meta de CDI+1,25% e isenção de IR amplia a oferta de produtos de renda fixa para o varejo, aumentando a competição por clientes investidores.",
+      "relevance": "alta",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "Adeus, Mynt: BTG Pactual (BPAC11) absorve a plataforma de criptomoedas - Investidor10",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPcC1CS1hnc3Y4Z01Gb2hSdVBtYnN5b20zOE9SREhXMGF3Tkdvckw1UEE5MHk4TUhvSEphM2UtcURsX0pnd2o3NUtLd3l5M1YtbWMwTzVtVDlGODdETXpoc205SHlORFN6d3hRTHcyYllpSm5XT3RXQXhWS2pHaDk1X0dVbXdCU2Rfbm9ZZmlIT0VUbXpBQXBjSGRDREZ0eUtndm9kbEltbFpOZFpBNkJKUdIBtgFBVV95cUxQQUJqS0dzZ1hCOVBUUmNOUFMyTkNjaE10R3p0SjhjVGM3SUhLb0dvQXVMR1o4eldyN00zM21UOWlIWFZkM3ZhaDFRLUYtZnBnUFp5dHQzN1N5NkdnYXlxTzI0Z3pEMHN3R09Id2NBOUV1WldGY0Z4VGRWZ2ZiTjU1MVdTYXhJSmJTVG45U2twRV9oeFd3MDdTT0tKZnVMYU5TV1M0cE1VaTVadzlHNVU3aVBqU3pCZw?oc=5",
+      "source": "Investidor10",
+      "published_at": "2026-08-04T20:00:53+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxPcC1CS1hnc3Y4Z01Gb2hSdVBtYnN5b20zOE9SREhXMGF3Tkdvckw1UEE5MHk4TUhvSEphM2UtcURsX0pnd2o3NUtLd3l5M1YtbWMwTzVtVDlGODdETXpoc205SHlORFN6d3hRTHcyYllpSm5XT3RXQXhWS2pHaDk1X0dVbXdCU2Rfbm9ZZmlIT0VUbXpBQXBjSGRDREZ0eUtndm9kbEltbFpOZFpBNkJKUdIBtgFBVV95cUxQQUJqS0dzZ1hCOVBUUmNOUFMyTkNjaE10R3p0SjhjVGM3SUhLb0dvQXVMR1o4eldyN00zM21UOWlIWFZkM3ZhaDFRLUYtZnBnUFp5dHQzN1N5NkdnYXlxTzI0Z3pEMHN3R09Id2NBOUV1WldGY0Z4VGRWZ2ZiTjU1MVdTYXhJSmJTVG45U2twRV9oeFd3MDdTT0tKZnVMYU5TV1M0cE1VaTVadzlHNVU3aVBqU3pCZw?oc=5\" target=\"_blank\">Adeus, Mynt: BTG Pactual (BPAC11) absorve a plataforma de criptomoedas</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Investidor10</font>",
+      "source_indices": [
+        77
+      ],
+      "primary_index": 77,
+      "axes": [
+        "Produtos Novos",
+        "Tecnologia"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "LANC",
+      "why_it_matters": "A absorção da plataforma de criptomoedas Mynt pelo BTG integra a oferta de cripto ao seu ecossistema, sinalizando uma tendência de consolidação que pode pressionar as concorrentes a expandirem seus produtos digitais.",
+      "relevance": "alta",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "BTG Pactual Empresas lança Simulador de Crédito Empresarial; conheça a ferramenta gratuita - Money Times",
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNMG41ZXNrX0Rfc3JMVGNlMVJ0NzA4blFNLXYzV0lfTjdmc1p1YkR6MVJkZ1BtMUdjcVJDV1o4TVFFcjFkSEJ4enZiOWY5OGswWjdGRGtpMTlBNW1XTG9WMlRTV3hmcVh0X2dKZDNSVUd2aGlxdFpZdDJPVU5SMFg5MXlRWkxvS0ZYTVp0R01rODRSUzlyNU1Oc082SXNPdi1LVDVBUEx4Wk9qWk1KYnczNHlHMXNMSW1KLVVveTFWb21lMnZNbHdIWmxn?oc=5",
+      "source": "Money Times",
+      "published_at": "2026-08-06T14:00:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxNMG41ZXNrX0Rfc3JMVGNlMVJ0NzA4blFNLXYzV0lfTjdmc1p1YkR6MVJkZ1BtMUdjcVJDV1o4TVFFcjFkSEJ4enZiOWY5OGswWjdGRGtpMTlBNW1XTG9WMlRTV3hmcVh0X2dKZDNSVUd2aGlxdFpZdDJPVU5SMFg5MXlRWkxvS0ZYTVp0R01rODRSUzlyNU1Oc082SXNPdi1LVDVBUEx4Wk9qWk1KYnczNHlHMXNMSW1KLVVveTFWb21lMnZNbHdIWmxn?oc=5\" target=\"_blank\">BTG Pactual Empresas lança Simulador de Crédito Empresarial; conheça a ferramenta gratuita</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Money Times</font>",
+      "source_indices": [
+        69
+      ],
+      "primary_index": 69,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "LANC",
+      "why_it_matters": "O lançamento do Simulador de Crédito Empresarial pelo BTG Pactual Empresas pode atrair PMEs para sua plataforma, aumentando a base de clientes e a receita potencial.",
+      "relevance": "alta",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "Itaú/Íon",
+      "matched_alias": "Itaú investimentos",
+      "title": "K3 traz líderes do Itaú e Safra e agrega R$ 3 bi em custódia; “movimento disruptivo” - InfoMoney",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNbHdYVmNvUlBwUzFVOS00Rm5KLXZuTnNxY0hpeHpMeS1iVWVnLVh3Q1VoSHA1Q2pRNFBPLU5vc0N1VkNTNHZNZlRFZkdqMWhPb0ZEUm9nTjFlRlVXX0pyR2x0eU5sVl83OUVYcTVuckk2c1EwQXBwdG9ySVhwSUVnYnQtOHVlMjhjMEtUZ1VHRGZXcGxJTHdMbWNuaWVKd2JEeUpCRDdIZTZPVnFrOFlHeVRReDVPNVZmR1HSAb8BQVVfeXFMTXF1OXEyOTJWVktqMF9nWTVfY2Raeko1MlpkblVJWGxpdEItcnlsSDE1LUY1NWNCc2hHLVg4VVpkRnl1MnFMTk1YTDQxanI2OVBhRUdMT2hJdU9tbUZuQnNQMmpBTkxlc0w2WjNqNVc0MVZDbGNLOXlKX3dGT21ZOXpHRGJhNVlZSGExVVltbGlickdaeTZ6alJGVWdSc1ZDLTRuVTJBMjFoWnppX0xxVGsyajhnaVdQUEFjM0NrbnM?oc=5",
+      "source": "InfoMoney",
+      "published_at": "2026-08-06T15:00:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxNbHdYVmNvUlBwUzFVOS00Rm5KLXZuTnNxY0hpeHpMeS1iVWVnLVh3Q1VoSHA1Q2pRNFBPLU5vc0N1VkNTNHZNZlRFZkdqMWhPb0ZEUm9nTjFlRlVXX0pyR2x0eU5sVl83OUVYcTVuckk2c1EwQXBwdG9ySVhwSUVnYnQtOHVlMjhjMEtUZ1VHRGZXcGxJTHdMbWNuaWVKd2JEeUpCRDdIZTZPVnFrOFlHeVRReDVPNVZmR1HSAb8BQVVfeXFMTXF1OXEyOTJWVktqMF9nWTVfY2Raeko1MlpkblVJWGxpdEItcnlsSDE1LUY1NWNCc2hHLVg4VVpkRnl1MnFMTk1YTDQxanI2OVBhRUdMT2hJdU9tbUZuQnNQMmpBTkxlc0w2WjNqNVc0MVZDbGNLOXlKX3dGT21ZOXpHRGJhNVlZSGExVVltbGlickdaeTZ6alJGVWdSc1ZDLTRuVTJBMjFoWnppX0xxVGsyajhnaVdQUEFjM0NrbnM?oc=5\" target=\"_blank\">K3 traz líderes do Itaú e Safra e agrega R$ 3 bi em custódia; “movimento disruptivo”</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">InfoMoney</font>",
+      "source_indices": [
+        106
+      ],
+      "primary_index": 106,
+      "axes": [
+        "Produtos Novos",
+        "Risco/Regulação"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "LANC",
+      "why_it_matters": "A entrada da K3, com líderes do Itaú e Safra, no mercado de custódia com R$ 3 bi pode intensificar a concorrência e forçar as corretoras a inovarem em serviços e tecnologia.",
+      "relevance": "alta",
+      "also_reported_by": []
     }
   ],
   "results": [
@@ -1355,7 +1467,7 @@
       ]
     },
     "BTG Pactual": {
-      "status": "instavel_recente",
+      "status": "estavel",
       "last_incident_at": "2026-08-03T14:51:58+00:00",
       "last_incident_title": "Pane na B3 expõe risco reputacional em meio à troca de comando - EuQueroInvestir",
       "incident_count_window": 1,
