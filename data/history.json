@@ -2096,5 +2096,27 @@
     "why_it_matters": "A multa do Banco Central e a inabilitação do CEO da Genial são um risco reputacional grave, podendo afetar a confiança dos clientes e a operação da corretora.",
     "relevance": "alta",
     "also_reported_by": []
+  },
+  {
+    "competitor_group": "Nubank/NuInvest",
+    "matched_alias": "Nubank",
+    "title": "Nubank lança fundo ligado ao Tesouro Selic; entenda como funciona - Estadão",
+    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPcDZ3dnBJblFFZm5XNmlmdmJrRXV1eFV0cHZnLWllb1EyY0JZVXNBZFU5YU9GZ1B1UzBCQ2hscG9iNVVEX2pZM3RnRmFwZm9nek9JeWREUHV4V1VJNDF4UnJhb1dhdzhZQjlXX2REQkVYNjd4SzhMU3hGZ3FKZFhFbHFyZmpzSVByM05QMFFwOTVTUExheXZ4NHo4cWlFUdIBowFBVV95cUxQc0xXc04tNUxibTVkTktuUDlHc0pWTGJIaHpZYTVJQTMyeTZBalNhTU9tYXJfbFN1X243d0tMdlY2MlE0dXc3VDZfMVF0NlBRSWVvUjR2X3B6ZEc3X3lJWXl6VEZBcGIybnlKRi1rWU9HLWluUklQT2UxN1RLMTllT3hzUk5GemZPcnVVYjJhZ3hFZEZMcm5CN1AyUmFQRVJENHZR?oc=5",
+    "source": "Estadão",
+    "published_at": "2026-08-14T07:41:38+00:00",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPcDZ3dnBJblFFZm5XNmlmdmJrRXV1eFV0cHZnLWllb1EyY0JZVXNBZFU5YU9GZ1B1UzBCQ2hscG9iNVVEX2pZM3RnRmFwZm9nek9JeWREUHV4V1VJNDF4UnJhb1dhdzhZQjlXX2REQkVYNjd4SzhMU3hGZ3FKZFhFbHFyZmpzSVByM05QMFFwOTVTUExheXZ4NHo4cWlFUdIBowFBVV95cUxQc0xXc04tNUxibTVkTktuUDlHc0pWTGJIaHpZYTVJQTMyeTZBalNhTU9tYXJfbFN1X243d0tMdlY2MlE0dXc3VDZfMVF0NlBRSWVvUjR2X3B6ZEc3X3lJWXl6VEZBcGIybnlKRi1rWU9HLWluUklQT2UxN1RLMTllT3hzUk5GemZPcnVVYjJhZ3hFZEZMcm5CN1AyUmFQRVJENHZR?oc=5\" target=\"_blank\">Nubank lança fundo ligado ao Tesouro Selic; entenda como funciona</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Estadão</font>",
+    "source_indices": [
+      135
+    ],
+    "primary_index": 135,
+    "axes": [
+      "Produtos Novos"
+    ],
+    "confirmation": "confirmado",
+    "daily_trigger": true,
+    "trigger_reason": "LANC",
+    "why_it_matters": "Lançamento de fundo ligado ao Tesouro Selic pelo Nubank amplia sua oferta de investimentos de renda fixa, atraindo clientes conservadores e aumentando a concorrência no varejo.",
+    "relevance": "alta",
+    "also_reported_by": []
   }
 ]
