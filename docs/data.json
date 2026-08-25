@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T10:24:58.581534+00:00",
+  "generated_at": "2026-08-25T10:18:25.712721+00:00",
   "items": [
     {
       "competitor_group": "BTG Pactual",
@@ -2885,6 +2885,28 @@
       "daily_trigger": true,
       "trigger_reason": "INC",
       "why_it_matters": "Indisponibilidade do Pix afeta a área de investimentos do Nubank, pois clientes podem ter dificuldade em transferir recursos para investir.",
+      "relevance": "alta",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "XP/Clear/Rico",
+      "matched_alias": "XP Investimentos",
+      "title": "Empresas controladas pela XP vão se fundir - Estadão",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQejdPbmdSNHVmWmJFTEdxTUxHUDdnV1FXNWtWMWktdjRVY085MXR0YUFtNVpxaDFHckJZRTk2WHlGa2VKTHZMX1NkeDBlNllsMURzZWJienhJRnBwOHF0TXNNVFg5Q3pJNVg0cDFwM2w3aUMzOVRZMFpnRjd5VTNIMklHM3FhZmJZUTVFcUpxbDlCNnpIbHdwN0MxNNIBoAFBVV95cUxPUHJxNk1mS2pSc0liQ3A1VEN4VkRDRUJ4czZUQVRiRGZMcll4YnFLUVlYUDN0N21hUEFkNmg2VlZTVTk2cFR1LWxkRWZ6cmxJbGowbi1RN0ZtcHpTc0RmejNiOTFfbk5zcnpqTlE4WXhNLUE2aWdvWVp4UHFHMmJBQTZFVFpGd09fUHZSaEpJejJyZ2h3RlhRZVZnaXB6TUFo?oc=5",
+      "source": "Estadão",
+      "published_at": "2026-08-25T00:59:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxQejdPbmdSNHVmWmJFTEdxTUxHUDdnV1FXNWtWMWktdjRVY085MXR0YUFtNVpxaDFHckJZRTk2WHlGa2VKTHZMX1NkeDBlNllsMURzZWJienhJRnBwOHF0TXNNVFg5Q3pJNVg0cDFwM2w3aUMzOVRZMFpnRjd5VTNIMklHM3FhZmJZUTVFcUpxbDlCNnpIbHdwN0MxNNIBoAFBVV95cUxPUHJxNk1mS2pSc0liQ3A1VEN4VkRDRUJ4czZUQVRiRGZMcll4YnFLUVlYUDN0N21hUEFkNmg2VlZTVTk2cFR1LWxkRWZ6cmxJbGowbi1RN0ZtcHpTc0RmejNiOTFfbk5zcnpqTlE4WXhNLUE2aWdvWVp4UHFHMmJBQTZFVFpGd09fUHZSaEpJejJyZ2h3RlhRZVZnaXB6TUFo?oc=5\" target=\"_blank\">Empresas controladas pela XP vão se fundir</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Estadão</font>",
+      "source_indices": [
+        12
+      ],
+      "primary_index": 12,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "MA",
+      "why_it_matters": "A fusão de empresas controladas pela XP pode consolidar operações e criar sinergias, potencialmente alterando a estrutura competitiva no mercado de investimentos.",
       "relevance": "alta",
       "also_reported_by": []
     }
