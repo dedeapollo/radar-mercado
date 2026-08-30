@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T14:43:52.946107+00:00",
+  "generated_at": "2026-08-30T14:32:50.200352+00:00",
   "items": [
     {
       "competitor_group": "BTG Pactual",
@@ -3146,6 +3146,50 @@
       "trigger_reason": "INC",
       "why_it_matters": "Perdas em fundo de renda fixa do Nubank devido a crédito da Americanas afetam diretamente clientes investidores, gerando risco reputacional e potencial resgate.",
       "relevance": "alta",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "Casas Bahia perde acesso às contas, busca a Justiça e BTG pode pagar multa diária de R$ 100 mil - NSC Total",
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNbUIyT3lrS19pTmtJUVpidTZWajVRMkZKc1dLMkcyUXpLMTJoREI3M0E2RUxPb3NlYk0zdVJBTWpoazR5MGRSTWhnNHJ6LVVOclFab3RLaUFfN2FJWUNTWUVtcjdqb055RjdKMjJoU3lBQWE5QXp1WWQ0VEFDT2UxQXc5aEVBSGdLMUFmLTlzNTBDX1hwQ195d2YzOFMxVkNacks4T0wtenVSVDY5M2lCc0ZZdWIybEY2OXktZDVKaURyb2dhdGpHRkNB?oc=5",
+      "source": "NSC Total",
+      "published_at": "2026-08-29T14:37:40+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxNbUIyT3lrS19pTmtJUVpidTZWajVRMkZKc1dLMkcyUXpLMTJoREI3M0E2RUxPb3NlYk0zdVJBTWpoazR5MGRSTWhnNHJ6LVVOclFab3RLaUFfN2FJWUNTWUVtcjdqb055RjdKMjJoU3lBQWE5QXp1WWQ0VEFDT2UxQXc5aEVBSGdLMUFmLTlzNTBDX1hwQ195d2YzOFMxVkNacks4T0wtenVSVDY5M2lCc0ZZdWIybEY2OXktZDVKaURyb2dhdGpHRkNB?oc=5\" target=\"_blank\">Casas Bahia perde acesso às contas, busca a Justiça e BTG pode pagar multa diária de R$ 100 mil</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NSC Total</font>",
+      "source_indices": [
+        18
+      ],
+      "primary_index": 18,
+      "axes": [
+        "Risco/Regulação"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "Disputa judicial com Casas Bahia pode gerar risco reputacional, mas não afeta diretamente o cliente investidor.",
+      "relevance": "média",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "Nubank/NuInvest",
+      "matched_alias": "Nubank",
+      "title": "Nubank (NUBR33) recebe sinal verde de regulador no México e vai investir mais no país - trademap.com.br",
+      "link": "https://news.google.com/rss/articles/CBMioAJBVV95cUxOa1VFU0xVMkFnR0U4TUhwajQ3dTl3RFNHSEx0SURtbDlhN0FNRVFBUEpUUHRUR28zclZzblhVZXRVNzBMNzgyVDFVQjR1N1Z4ZWVHODlGMm9tcWIxckxPWkU2NER1RkJYb3hPYnFod0hmUE1xVVZEcWIzbGhlMk5zdUVqRVk2ZVYxVEVER3RSdDJFTTEyTmR2VEJlMUNfeW9vaGlzN090a0Z2em4wMlBiemphWlU5dEdCSEdIRlhNc1hXWlJ5X3JHVnZMbzhzUEFpaDAxMmtBYWJYemNlNUU3UFVScWNJYVp5UmhNSUxhNHdwUV9naGpFSXFmbTdrQ21rcjh3c2FTSWxBeDdfb2ZJTXY2YV9KRXczVGY3RXpyYXM?oc=5",
+      "source": "trademap.com.br",
+      "published_at": "2026-08-28T21:02:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMioAJBVV95cUxOa1VFU0xVMkFnR0U4TUhwajQ3dTl3RFNHSEx0SURtbDlhN0FNRVFBUEpUUHRUR28zclZzblhVZXRVNzBMNzgyVDFVQjR1N1Z4ZWVHODlGMm9tcWIxckxPWkU2NER1RkJYb3hPYnFod0hmUE1xVVZEcWIzbGhlMk5zdUVqRVk2ZVYxVEVER3RSdDJFTTEyTmR2VEJlMUNfeW9vaGlzN090a0Z2em4wMlBiemphWlU5dEdCSEdIRlhNc1hXWlJ5X3JHVnZMbzhzUEFpaDAxMmtBYWJYemNlNUU3UFVScWNJYVp5UmhNSUxhNHdwUV9naGpFSXFmbTdrQ21rcjh3c2FTSWxBeDdfb2ZJTXY2YV9KRXczVGY3RXpyYXM?oc=5\" target=\"_blank\">Nubank (NUBR33) recebe sinal verde de regulador no México e vai investir mais no país</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">trademap.com.br</font>",
+      "source_indices": [
+        44
+      ],
+      "primary_index": 44,
+      "axes": [
+        "Tecnologia"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "Expansão internacional, sem impacto direto no cliente investidor.",
+      "relevance": "média",
       "also_reported_by": []
     }
   ],
