@@ -3239,5 +3239,49 @@
         "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOSDJER0tsdk9leWNkenM5VnlUSzgySXNFNlc5Mm1IY2FreHNjYjdPcDlxdVpvS3BUc3Nmd3VYQjdnb0x5Vi1oa2Fmb2JFTWFRTnZXS0lSNkZ2dWlCZXYtcEd0NG9ncHJqS2lrWHFGY0QwdWJsemczd2x0SjJlblAyRW1ZUVE0dHJ4Y0pIOEhzRWFHNHBjclkyTzRlcTljaUYtWnZUQnZpaVVPYnV6bHJMdVpUdU5ZMTZIbzUxdDRWS3o?oc=5"
       }
     ]
+  },
+  {
+    "competitor_group": "BTG Pactual",
+    "matched_alias": "BTG Pactual",
+    "title": "BTG Pactual fecha acordo para comprar banco Digimais - CNN Brasil",
+    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPOEhWejh5UU5qc1dPNk9ZNjVCbEE4QU5TV1FwVm1TZFNBaE1CVXdlN2xOZGxoUGlrcGZUNkNoZjVpSzFuamtSemV5V2JKUVFmNlZveUNKaWlMSUZIXzV0dEV2ZkJqUm5JOF9aTGZwWHMxbTdyaVlNbnQwX01YNGJUODlGbDdOaFU1TDE0OEx0TG1LWl9aMi1mV19UOHFLVURBMGRXb1BMTnRPZw?oc=5",
+    "source": "CNN Brasil",
+    "published_at": "2026-09-04T19:43:11+00:00",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxPOEhWejh5UU5qc1dPNk9ZNjVCbEE4QU5TV1FwVm1TZFNBaE1CVXdlN2xOZGxoUGlrcGZUNkNoZjVpSzFuamtSemV5V2JKUVFmNlZveUNKaWlMSUZIXzV0dEV2ZkJqUm5JOF9aTGZwWHMxbTdyaVlNbnQwX01YNGJUODlGbDdOaFU1TDE0OEx0TG1LWl9aMi1mV19UOHFLVURBMGRXb1BMTnRPZw?oc=5\" target=\"_blank\">BTG Pactual fecha acordo para comprar banco Digimais</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNN Brasil</font>",
+    "source_indices": [
+      22
+    ],
+    "primary_index": 22,
+    "axes": [
+      "Risco/Regulação"
+    ],
+    "confirmation": "confirmado",
+    "daily_trigger": true,
+    "trigger_reason": "MA",
+    "why_it_matters": "Aquisição do Digimais pelo BTG pode expandir sua base de clientes e potencialmente sua plataforma de investimentos, aumentando a concorrência no varejo.",
+    "relevance": "alta",
+    "also_reported_by": []
+  },
+  {
+    "competitor_group": "Genial",
+    "matched_alias": "Genial Investimentos",
+    "title": "IA da Genial já é usada por um em cada quatro clientes digitais - VEJA",
+    "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNMVdieWJHeWp0TDNDaXZuYnByRlF4ZmxDN0FPd0xSb05ZS0pqM2tTUXZjUHNzOTl2LVY0bGkwNUM1WE1YamM3aTVzLXNzRWlfVlNEZXdmeEpIWjhnaFB0RmZid2hBNGUwaEItZ2xnZ3FGbmJSaDRjcXZBb04wckFEdFVhT29SczN6S2V2dTlXalVCUkJvbXNURFhJMnh4cFJR?oc=5",
+    "source": "VEJA",
+    "published_at": "2026-09-05T15:24:49+00:00",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxNMVdieWJHeWp0TDNDaXZuYnByRlF4ZmxDN0FPd0xSb05ZS0pqM2tTUXZjUHNzOTl2LVY0bGkwNUM1WE1YamM3aTVzLXNzRWlfVlNEZXdmeEpIWjhnaFB0RmZid2hBNGUwaEItZ2xnZ3FGbmJSaDRjcXZBb04wckFEdFVhT29SczN6S2V2dTlXalVCUkJvbXNURFhJMnh4cFJR?oc=5\" target=\"_blank\">IA da Genial já é usada por um em cada quatro clientes digitais</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">VEJA</font>",
+    "source_indices": [
+      33
+    ],
+    "primary_index": 33,
+    "axes": [
+      "Tecnologia"
+    ],
+    "confirmation": "confirmado",
+    "daily_trigger": false,
+    "trigger_reason": null,
+    "why_it_matters": "Adoção de IA pela Genial é um sinal de inovação tecnológica, mas sem detalhes de produto novo para o cliente investidor.",
+    "relevance": "média",
+    "also_reported_by": []
   }
 ]
