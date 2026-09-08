@@ -3283,5 +3283,28 @@
     "why_it_matters": "Adoção de IA pela Genial é um sinal de inovação tecnológica, mas sem detalhes de produto novo para o cliente investidor.",
     "relevance": "média",
     "also_reported_by": []
+  },
+  {
+    "competitor_group": "Nubank/NuInvest",
+    "matched_alias": "Nubank",
+    "title": "Pix do Nubank fora do ar? Clientes relatam instabilidade nesta sexta-feira - GZH",
+    "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNQXNtcV9FWnBXWXpjWkQzeWduZ2Y0OVJtODhSQWhCYkFjV0ZmOF9iLXlVMEhlQlNRdXhRNERrX29hcEFZQnA4dXRvLVN2S3kwbUVSMVBWUW9uYWVhRS1oSi13VU5fMWFVYVdBb0ktX2R5VGdtLXZMWC1RVDRVXzhVUTdTZllGUHBjc2ctdWticlVqZWFSN1RaOVB0R1BUc2xlRWNzc0ZTQ0FSelVXS3VFbklyeWhLQVI3d0NFS0JMZzNuV3RqOU9sTWg3QXZQZk9FaXpvZzF3dE1QR1IwbXhnTHN3OG5nWEI2bmxVV2NSTTZiX0RzWHc?oc=5",
+    "source": "GZH",
+    "published_at": "2026-09-08T05:12:41+00:00",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMi9gFBVV95cUxNQXNtcV9FWnBXWXpjWkQzeWduZ2Y0OVJtODhSQWhCYkFjV0ZmOF9iLXlVMEhlQlNRdXhRNERrX29hcEFZQnA4dXRvLVN2S3kwbUVSMVBWUW9uYWVhRS1oSi13VU5fMWFVYVdBb0ktX2R5VGdtLXZMWC1RVDRVXzhVUTdTZllGUHBjc2ctdWticlVqZWFSN1RaOVB0R1BUc2xlRWNzc0ZTQ0FSelVXS3VFbklyeWhLQVI3d0NFS0JMZzNuV3RqOU9sTWg3QXZQZk9FaXpvZzF3dE1QR1IwbXhnTHN3OG5nWEI2bmxVV2NSTTZiX0RzWHc?oc=5\" target=\"_blank\">Pix do Nubank fora do ar? Clientes relatam instabilidade nesta sexta-feira</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">GZH</font>",
+    "channel": "incident",
+    "source_indices": [
+      47
+    ],
+    "primary_index": 47,
+    "axes": [
+      "Tecnologia"
+    ],
+    "confirmation": "confirmado",
+    "daily_trigger": true,
+    "trigger_reason": "INC",
+    "why_it_matters": "Instabilidade no Pix do Nubank, mesmo que fora do escopo de investimentos, pode gerar percepção negativa sobre a confiabilidade da plataforma, impactando indiretamente a confiança em seus serviços de investimento.",
+    "relevance": "alta",
+    "also_reported_by": []
   }
 ]
