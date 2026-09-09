@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T13:56:23.857379+00:00",
+  "generated_at": "2026-09-09T13:59:02.445926+00:00",
   "items": [
     {
       "competitor_group": "BTG Pactual",
@@ -3307,6 +3307,95 @@
       "trigger_reason": "INC",
       "why_it_matters": "Instabilidade no Pix do Nubank, mesmo que fora do escopo de investimentos, pode gerar percepção negativa sobre a confiabilidade da plataforma, impactando indiretamente a confiança em seus serviços de investimento.",
       "relevance": "alta",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "XP/Clear/Rico",
+      "matched_alias": "XP Investimentos",
+      "title": "XP Private põe o \"pé na estrada\" em busca de fortunas regionais e acirra a disputa em wealth - NeoFeed",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQMGk1WnlKYThQQVNYWk9KN2NyOThESDRNZEpGNENzWmI1aFdrcklNTUx5LXNiUVVncEJVU2hqbFNxWnhyblhwVHpIaS1Vd2lBUDYxdXZrTWJTY192bTZIMElPaG41SXluSmpTamFSNVZwQUVNV1BTb2NsOGI3SEtTY0IyVy1JaGpORmtpc1V1eV8tNUNmM0JWQnNHSEdTQ3owUGRjZUprZmF3bXFId2hrLVhEV1E4VzBhZVpMOFI4ZnJsWEdEWFRzT2NIYzM?oc=5",
+      "source": "NeoFeed",
+      "published_at": "2026-09-09T10:56:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxQMGk1WnlKYThQQVNYWk9KN2NyOThESDRNZEpGNENzWmI1aFdrcklNTUx5LXNiUVVncEJVU2hqbFNxWnhyblhwVHpIaS1Vd2lBUDYxdXZrTWJTY192bTZIMElPaG41SXluSmpTamFSNVZwQUVNV1BTb2NsOGI3SEtTY0IyVy1JaGpORmtpc1V1eV8tNUNmM0JWQnNHSEdTQ3owUGRjZUprZmF3bXFId2hrLVhEV1E4VzBhZVpMOFI4ZnJsWEdEWFRzT2NIYzM?oc=5\" target=\"_blank\">XP Private põe o \"pé na estrada\" em busca de fortunas regionais e acirra a disputa em wealth</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NeoFeed</font>",
+      "source_indices": [
+        0
+      ],
+      "primary_index": 0,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "A expansão da XP Private para regiões fora dos grandes centros intensifica a disputa por clientes de alta renda, pressionando as demais corretoras a reforçarem suas estratégias de wealth management.",
+      "relevance": "média",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "XP/Clear/Rico",
+      "matched_alias": "XP Investimentos",
+      "title": "CVM questiona compras de imóveis com emissão de cotas dos fundos imobiliários XPML11 e GGRC11 - Estadão",
+      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPdVF3SnBLR0FvRGJCVFlkNHRWVmNXakI0SUd3U0FQcXFZMm9UUXkzMVlJRVFVRlYxTTRCcE9TQkNvQ1l2RGs2WXQybGwxdUVybEtRS1Bwbno0V21rU1E5T2lIclpYeXpib29NdHJLMEMwQnFzQ0E2ZnJhR2NDd3JVUEJKcDZXNktZN2l2dHRZZHg1eXlmdkpXamNkQzdESVo5OW01VjRyV1JmV1BFRU5rdm1DcUtYTXNyYlVYUG5rOW9RcExGZzhTb0Rsa1NkampSRzdldzNWWFh3cWdRQUZ2NzgzZDBEVFE1Z1E?oc=5",
+      "source": "Estadão",
+      "published_at": "2026-09-09T12:43:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi6gFBVV95cUxPdVF3SnBLR0FvRGJCVFlkNHRWVmNXakI0SUd3U0FQcXFZMm9UUXkzMVlJRVFVRlYxTTRCcE9TQkNvQ1l2RGs2WXQybGwxdUVybEtRS1Bwbno0V21rU1E5T2lIclpYeXpib29NdHJLMEMwQnFzQ0E2ZnJhR2NDd3JVUEJKcDZXNktZN2l2dHRZZHg1eXlmdkpXamNkQzdESVo5OW01VjRyV1JmV1BFRU5rdm1DcUtYTXNyYlVYUG5rOW9RcExGZzhTb0Rsa1NkampSRzdldzNWWFh3cWdRQUZ2NzgzZDBEVFE1Z1E?oc=5\" target=\"_blank\">CVM questiona compras de imóveis com emissão de cotas dos fundos imobiliários XPML11 e GGRC11</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Estadão</font>",
+      "source_indices": [
+        5
+      ],
+      "primary_index": 5,
+      "axes": [
+        "Risco/Regulação"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "REG",
+      "why_it_matters": "O questionamento da CVM sobre a prática de compra de imóveis com emissão de cotas de FIIs pode gerar mudanças regulatórias que afetem a estruturação de produtos similares em outras corretoras.",
+      "relevance": "alta",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "Genial",
+      "matched_alias": "Genial Investimentos",
+      "title": "Genial alcança marca de 100 mil usuários em assistente de IA para serviços e investimentos - TI INSIDE Online",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNRU9uX3Q1dy1BZ2xOc2NYMnFtUnEwbXhQLW1zZE5YUTVVQlVUamdmcW9FVUZZVlhHX2NleWFRQW52X2dhbHcteGNDWEFmVnhhejJTVW5vTUFoRGtfbmdMRWtiMUUzeHFramNTN0o0WDVFZ0Y2TnpUOTRjX0dHWE9vNFlaekM2d0h4QnkzTFpRUEhGNEdPakhpdTVhQjFIYnhRRW9sQnJ0d3RWMEJmWWY5MlZ6dGRmM2ZISFpabndFZDM3ZDZr?oc=5",
+      "source": "TI INSIDE Online",
+      "published_at": "2026-09-08T21:19:30+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxNRU9uX3Q1dy1BZ2xOc2NYMnFtUnEwbXhQLW1zZE5YUTVVQlVUamdmcW9FVUZZVlhHX2NleWFRQW52X2dhbHcteGNDWEFmVnhhejJTVW5vTUFoRGtfbmdMRWtiMUUzeHFramNTN0o0WDVFZ0Y2TnpUOTRjX0dHWE9vNFlaekM2d0h4QnkzTFpRUEhGNEdPakhpdTVhQjFIYnhRRW9sQnJ0d3RWMEJmWWY5MlZ6dGRmM2ZISFpabndFZDM3ZDZr?oc=5\" target=\"_blank\">Genial alcança marca de 100 mil usuários em assistente de IA para serviços e investimentos</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TI INSIDE Online</font>",
+      "source_indices": [
+        65
+      ],
+      "primary_index": 65,
+      "axes": [
+        "Tecnologia",
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "LANC",
+      "why_it_matters": "Atingir 100 mil usuários no assistente de IA da Genial demonstra a adoção de tecnologia no atendimento a investidores, pressionando concorrentes a acelerarem suas próprias iniciativas de IA para não ficarem para trás.",
+      "relevance": "alta",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "Nubank/NuInvest",
+      "matched_alias": "Nubank",
+      "title": "Ex-Nubank querem levar serviço de milionários a quem tem R$ 250 mil; Bartunek entra no projeto - Estadão",
+      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOMkVTOTlKbVNrR0ZpeGtYSkU5WWRsdGlhS3ltaERzSUZnUUQ4LUxOYzRRSFJMQ3hzU3ZENUlPTl9UNzJyd2FVRy1ldlVUVGJrcm1SSFZPM0dSZkYxLXFxd19SdDJ5WFhXYWhEUUtERHI4UkU5UXFJVW9xN0JSeklMMmc3UUJYaTZ3U3RxaUFkckJqUGVoMXRSOVhJNEFKZHg1OTNveGhhd2VGZUdXdVhKc3BLcnNXbFVsdG95Vk92OHBxd2ZIZk1FY3VCNkxVc053dzJvNl9rdjVxMTJ6U183RkpKcXHSAeoBQVVfeXFMTXRBMlhIaU1KeTdOUE5hbHFMNnpGaTJzQ0dDQTBadTFfQTdXUGxtV0NuU0M2VS1JbVY4VlRuWjZNRVlNYzA0Y19pd3hNVFpOOHVmTzZXTkpCdDF0elVBTWl1Q3FVSTdFcTY1Q0FKOG9rcm5LaTQ0UXp3V19Zc0h5ODkzMjNqc0dKaDlIU2Y0dWxJakpjdG5HZXhLbC1JQklvdEMySG9jTElQdVF2emU1U2lucUtZcmRlSU5PMkt2dnl2R3BCaWlGMXNZZkdTY3NQQ2RCRzFaM3R4UnB4UkJxR1IxODZ4V1pMcDdB?oc=5",
+      "source": "Estadão",
+      "published_at": "2026-09-09T12:30:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi5AFBVV95cUxOMkVTOTlKbVNrR0ZpeGtYSkU5WWRsdGlhS3ltaERzSUZnUUQ4LUxOYzRRSFJMQ3hzU3ZENUlPTl9UNzJyd2FVRy1ldlVUVGJrcm1SSFZPM0dSZkYxLXFxd19SdDJ5WFhXYWhEUUtERHI4UkU5UXFJVW9xN0JSeklMMmc3UUJYaTZ3U3RxaUFkckJqUGVoMXRSOVhJNEFKZHg1OTNveGhhd2VGZUdXdVhKc3BLcnNXbFVsdG95Vk92OHBxd2ZIZk1FY3VCNkxVc053dzJvNl9rdjVxMTJ6U183RkpKcXHSAeoBQVVfeXFMTXRBMlhIaU1KeTdOUE5hbHFMNnpGaTJzQ0dDQTBadTFfQTdXUGxtV0NuU0M2VS1JbVY4VlRuWjZNRVlNYzA0Y19pd3hNVFpOOHVmTzZXTkpCdDF0elVBTWl1Q3FVSTdFcTY1Q0FKOG9rcm5LaTQ0UXp3V19Zc0h5ODkzMjNqc0dKaDlIU2Y0dWxJakpjdG5HZXhLbC1JQklvdEMySG9jTElQdVF2emU1U2lucUtZcmRlSU5PMkt2dnl2R3BCaWlGMXNZZkdTY3NQQ2RCRzFaM3R4UnB4UkJxR1IxODZ4V1pMcDdB?oc=5\" target=\"_blank\">Ex-Nubank querem levar serviço de milionários a quem tem R$ 250 mil; Bartunek entra no projeto</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Estadão</font>",
+      "source_indices": [
+        67
+      ],
+      "primary_index": 67,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "especulativo",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "A possível entrada de um novo player, formado por ex-Nubank, no segmento de alta renda com investimento mínimo de R$ 250 mil pode aumentar a competição por clientes wealth, desafiando as estratégias atuais das corretoras.",
+      "relevance": "média",
       "also_reported_by": []
     }
   ],
