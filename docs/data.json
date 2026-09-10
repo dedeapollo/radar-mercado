@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-09T13:59:02.445926+00:00",
+  "generated_at": "2026-09-10T13:54:21.588702+00:00",
   "items": [
     {
       "competitor_group": "BTG Pactual",
@@ -3397,6 +3397,147 @@
       "why_it_matters": "A possível entrada de um novo player, formado por ex-Nubank, no segmento de alta renda com investimento mínimo de R$ 250 mil pode aumentar a competição por clientes wealth, desafiando as estratégias atuais das corretoras.",
       "relevance": "média",
       "also_reported_by": []
+    },
+    {
+      "competitor_group": "XP/Clear/Rico",
+      "matched_alias": "XP Investimentos",
+      "title": "CVM questiona compras de imóveis com emissão de cotas dos fundos imobiliários XPML11 e GGRC11 - Estadão",
+      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPdVF3SnBLR0FvRGJCVFlkNHRWVmNXakI0SUd3U0FQcXFZMm9UUXkzMVlJRVFVRlYxTTRCcE9TQkNvQ1l2RGs2WXQybGwxdUVybEtRS1Bwbno0V21rU1E5T2lIclpYeXpib29NdHJLMEMwQnFzQ0E2ZnJhR2NDd3JVUEJKcDZXNktZN2l2dHRZZHg1eXlmdkpXamNkQzdESVo5OW01VjRyV1JmV1BFRU5rdm1DcUtYTXNyYlVYUG5rOW9RcExGZzhTb0Rsa1NkampSRzdldzNWWFh3cWdRQUZ2NzgzZDBEVFE1Z1HSAe8BQVVfeXFMTy1kNjlSdkl3YXZzMkFPT2k1eTBoUXA5ZFhWNG9acEVTUWFWN1RBb0h5Y0M5UzNER0dhdUZ2b0N5bmV5bHVMNUF6d0dITlJpSUNoc194cGxzRkVva3IwcVFsMl9JUGVpRjNOLS1OTzJRN01HVm83QllEdk1zOXFva2pNYlVVTW1SR1lId2RrRlhVa2dtLUpHYjVwTzRWZFp1SHRWRGxuMm9SQ0x3TDhsdUV4MEpmcGJYdGtzZVFwR2NkdWZGbVZkdDRfcloxY0xFMzYzY0J3QnUwWFZXSi0wUE1SYkdReGwwT3hWT0k4TzQ?oc=5",
+      "source": "Estadão",
+      "published_at": "2026-09-09T12:43:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi6gFBVV95cUxPdVF3SnBLR0FvRGJCVFlkNHRWVmNXakI0SUd3U0FQcXFZMm9UUXkzMVlJRVFVRlYxTTRCcE9TQkNvQ1l2RGs2WXQybGwxdUVybEtRS1Bwbno0V21rU1E5T2lIclpYeXpib29NdHJLMEMwQnFzQ0E2ZnJhR2NDd3JVUEJKcDZXNktZN2l2dHRZZHg1eXlmdkpXamNkQzdESVo5OW01VjRyV1JmV1BFRU5rdm1DcUtYTXNyYlVYUG5rOW9RcExGZzhTb0Rsa1NkampSRzdldzNWWFh3cWdRQUZ2NzgzZDBEVFE1Z1HSAe8BQVVfeXFMTy1kNjlSdkl3YXZzMkFPT2k1eTBoUXA5ZFhWNG9acEVTUWFWN1RBb0h5Y0M5UzNER0dhdUZ2b0N5bmV5bHVMNUF6d0dITlJpSUNoc194cGxzRkVva3IwcVFsMl9JUGVpRjNOLS1OTzJRN01HVm83QllEdk1zOXFva2pNYlVVTW1SR1lId2RrRlhVa2dtLUpHYjVwTzRWZFp1SHRWRGxuMm9SQ0x3TDhsdUV4MEpmcGJYdGtzZVFwR2NkdWZGbVZkdDRfcloxY0xFMzYzY0J3QnUwWFZXSi0wUE1SYkdReGwwT3hWT0k4TzQ?oc=5\" target=\"_blank\">CVM questiona compras de imóveis com emissão de cotas dos fundos imobiliários XPML11 e GGRC11</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Estadão</font>",
+      "source_indices": [
+        9
+      ],
+      "primary_index": 9,
+      "axes": [
+        "Risco/Regulação"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "Questionamento da CVM sobre compras de imóveis com emissão de cotas de FIIs geridos pela XP pode afetar a percepção de governança dos produtos de renda variável listados pela casa. É sinal regulatório relevante para quem distribui FIIs no varejo.",
+      "relevance": "média",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "PF manda intimar Galípolo, Campos Neto e André Esteves para dar depoimentos sobre Banco Master - G1",
+      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNYVhmNEVadWVpRDEwdW1VWXA4cWliamlTX3F5Rk02YTFvQ19Yd1Vsak5hZFR0REVqZnFuNGo0S21OUUZBS2MyR253NDBrYVo5WVI5M3E0ckF0ZXduM3p2UU9keDhqb2dwV1Y3bTlxQlQ0YWstc0U5U2RvVzdsSkxnNTV3dkpsdDBQN1Q3LWdFeDl5b0Q1OEtScUVNUlJYSjFDa3o5aUdSM3MxWGhnZkp1dUJ4cEFmTzI2dnlfeG1aU2pQYThPZnRVUDM4MzZOZ2ZCZEtKVi1PX0p4Vzh3dXI2QXBR0gHwAUFVX3lxTE1uZ2RVbEVBaE40U1l4RUpuVS1oMXFlVV9iWDF0dWtIMEhVdFdneGpybnczQU5HYUI5Z0lqWlRWS25sTllIUUlfVU43WGl5OWxUWHozbFA2Mmp6eWFpWmFwRWYxc20ycWFhT1V3cnd3c2FwcjRNVzJLRWpxanktSGRRTENYV1d0UUpncW9hd2pydDN0QlFnSmhLWkV1NWtJYmZhUmJqVWZNUUtxZG9Yek1sZ3FJbGlnM2EyZGpsdFM2Q255amw5Qk55bkJMWDNzUnBhUVhaaV9DMUpzcEt2N2lmc3lpeGxNYXlIOGNDVGhMeA?oc=5",
+      "source": "G1",
+      "published_at": "2026-09-09T21:43:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi4gFBVV95cUxNYVhmNEVadWVpRDEwdW1VWXA4cWliamlTX3F5Rk02YTFvQ19Yd1Vsak5hZFR0REVqZnFuNGo0S21OUUZBS2MyR253NDBrYVo5WVI5M3E0ckF0ZXduM3p2UU9keDhqb2dwV1Y3bTlxQlQ0YWstc0U5U2RvVzdsSkxnNTV3dkpsdDBQN1Q3LWdFeDl5b0Q1OEtScUVNUlJYSjFDa3o5aUdSM3MxWGhnZkp1dUJ4cEFmTzI2dnlfeG1aU2pQYThPZnRVUDM4MzZOZ2ZCZEtKVi1PX0p4Vzh3dXI2QXBR0gHwAUFVX3lxTE1uZ2RVbEVBaE40U1l4RUpuVS1oMXFlVV9iWDF0dWtIMEhVdFdneGpybnczQU5HYUI5Z0lqWlRWS25sTllIUUlfVU43WGl5OWxUWHozbFA2Mmp6eWFpWmFwRWYxc20ycWFhT1V3cnd3c2FwcjRNVzJLRWpxanktSGRRTENYV1d0UUpncW9hd2pydDN0QlFnSmhLWkV1NWtJYmZhUmJqVWZNUUtxZG9Yek1sZ3FJbGlnM2EyZGpsdFM2Q255amw5Qk55bkJMWDNzUnBhUVhaaV9DMUpzcEt2N2lmc3lpeGxNYXlIOGNDVGhMeA?oc=5\" target=\"_blank\">PF manda intimar Galípolo, Campos Neto e André Esteves para dar depoimentos sobre Banco Master</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">G1</font>",
+      "source_indices": [
+        32,
+        39,
+        47,
+        49,
+        51,
+        60,
+        69,
+        77,
+        80
+      ],
+      "primary_index": 49,
+      "axes": [
+        "Risco/Regulação"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "A intimação de André Esteves no caso Master mantém o BTG no noticiário de risco reputacional e regulatório, o que pode pesar na confiança de clientes investidores e na relação com o regulador. Não é mudança de produto ou preço, mas é risco de marca relevante.",
+      "relevance": "média",
+      "also_reported_by": [
+        {
+          "source": "Valor Econômico",
+          "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQdUtPN1FrTmRCVWdCMUdIMTRfM3dvZGFxZTdlQzNNYmQzdzRfWVRycDZLM3dVcVdXeEk1SDhKVllTWkJhdHBvd0dCZF9IMmMzUFJFY2kxYVBobHo3eE14ZTFyVVA0ckFjMzJZaTI3VXZvcTlYNVV1OU03dEJuMHRhV1RNakY0RVdhWVVWOXE5MmRrRWtwN2x4V3c1d0owVmlyWFpzekw0czlyY3pKMnl2ZFZkRW5WMUJQb3FfU0k0RmdJd2REdlUzRVpRU0ZScXfSAd4BQVVfeXFMT3MtVEdMUTFBTlg1MnR3UzVzRnNiX1czRWk0TGp5djBOdkpXcWxIVko0SEU0amRsb1lhVkRWdkJiODdnZmNQNXBmc213Sk5qbWJUTlp4ZEFHa25Tb3NQWmVjLTVBUUR3RElMR3NULTNtYTN5RkdUbkFvRXNuT2ttV0cxcl9NXzNud21fNEJiaHVXSnBzbjU2eV9RNUd1YmdLeGRMUnR1Q3dEd3I3cThNX3d6dTJHUmpmQ0xMazM1TnQzblFFOTVNbWJfdXhpNWpyQWFVck1BNnIxQ2RGVXJn?oc=5"
+        },
+        {
+          "source": "Poder360",
+          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQX0REci0zS1B4bUU2elFuWlNPcmJfVjVIaF9rc1BtRlJTa284Wmx2TDQ2ZGlJUzh4SlNXRUk0SDJyaVVLMUdTbEFhVUlCUGxTZmFVbTJHT2ZqTkxzS0hNTmw3X05ucU91WWlUeGJOdzczTnRxSVpmZTN4LXlkNWJNMzREVEYtTU9oaE1vYUZSMVVuUy1PT2pGSXZQVUR6dlF1R3puM0N0VQ?oc=5"
+        },
+        {
+          "source": "CartaCapital",
+          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQSGw3NEVtb28xc1hqTzhCd1N6czZPV2xfSWtMRVZPWFpOazYwNVc5V2JvNjU5M212ZF9rbTVVWTA2UlVMbjZJVTZhV1BydVRxTnV3c1MxVGg5M2xzeENsbHJ2VXBXTWxCMVZZeXdBWUJkcmtLWGFRLWU4M1YxVHBYaXZpOUFhSTVzR2oxZERvMXZZTGVjczJ0alUxNER4QXFKdHNUMUdMS2JVMGR4WEdYMlBZS1FYdw?oc=5"
+        },
+        {
+          "source": "Estadão",
+          "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNTzVaZEdyV0Z5a0EzWERSNmdGbWoya21sc20wSFFWOG1ZLXhGamY3WC1tUFJQanByWFEzLTkzNjVzVjVoVFU5RDhsU0lJYkdTcWFsZkowTW11bUk5S2lDMmZoVHJRdTlOelNjQjR3ZVlzWmNGdXZxbnZmaDR1TVZ4Rk1GNjBQYVdVUWVPWkpSNHlTWF95T0k4UGtYbnFnR3JkU2l0dVNueDZCMC1JemJGMWl6dlVsajFwYU9wOW4tSHJrd29FVm5wRGREZXJiQdIB0wFBVV95cUxPUWpRTUdXS2tnckVjQy1wcXJxRUxLdUdRM3RDTUV3a0Z4YWdsUjVmUm12MXAwTGo1UnZxcU9YQ0ZaejNHaVhpUG4zcUJMQnNWc2xocnpqSXNBR1U0U0NVOUVqd0tUTVloVENQMWo4RWJzVk1abnFybll5MWZScHdUREUxOGlNSHMxTXdGem40ZmtpLVE2TDZVMTRIZ0pqeFcycGlYRm5RWkUyaXdILWJyQkxDcUFYUXRjN0VpSk9Ndl9BRUVJczk0Q0dWLXp3b09XOTZN?oc=5"
+        },
+        {
+          "source": "Francês News",
+          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQdGlNNFNEV0gwUXBkWHNsZ1NBQjlTQ2ZHekR0RE9rQzM1X05QZ3JkbzlDdmxGaUlGLXdwbnNBcnBNWU9vWS0xRmFqSDU1dTNiVkpLaWdzZVI0bjJaOUxiaHU4WWtYbng4bmZOSC1Tc0w2ZXlGWnVzTGlMdG9Jczh0NGNQZ2s1dGJ5M05NZE9XcEsyTFVHUGhPY0J2dUF3VXlSc0IwU2d3dmp2S0VrZk9aZnZmV2ViQ2lpZWFocQ?oc=5"
+        },
+        {
+          "source": "Diario de Pernambuco",
+          "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOeHFRMEVoejNwTUxNbFlrVFNTVkJhNXVXSkQ1RnFEN3I3N20tQjg4eFFpQ19QWEpYSnlnZ0JrTVhaOTN5WkJDNFRLQUlFMFB6QW52c2xnNUxqSUh5MWVqcC1HeEc4eGdRR0xDREx3OWUzd1hOWlFSeldtcC1CWVJ4bzYzaUZtZ21PTzFrN1RJbFdJdXRIQU1odWlMMGpQSzBzVWhYVDNzZmlHLVVZQnhwdDhSUGlRRExJUzNFenJocVNzakFrbnFFSlBibmQzNXVzZlFoaWtqNA?oc=5"
+        },
+        {
+          "source": "GP1",
+          "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQczQ2YUE2S1B1Zk5aRjdNNndCVVFNUUFnWVBGaUxQa0QtaGhjMnhld1Ixdlo0WU9EZGwxUENkNEVlT2JDYXN5a2ZuUGtZS21fZDh5U09UZ0NzVmJ1Sm1SUGJEOW5qamVSTEZIRmdicXdmZ1k1aWtiMmNRYWloTnEwWWdXMDExSktmLVoxVU1ZVFRXa0NXNWZsdHN4clloVzQyNXI0blZIS1NJb0NYVmwtZFNNSl83cUV4RW1jcHNxdFhDZmlfZWpoYWhZUVRGdU9SeEM5Um1Lem_SAd4BQVVfeXFMUF84eXd2Z0djQWtoQjhPOEZnVzFPdWlLVmRsT1ZTRnJWdEFOTUYtVWpMdDMxeEdJbFRlNERIWHRDYzlBWm9aWVBqTUhYaWJZODFtWG1CQ1dWUnBRbUxQTnpadU1VOEF6YnFhcTJuT1lJcjB1eUg3Q0pnUzZjcEVqdVlCVktrcUoyRXVVcVdzeUdGT3F0YU5WR3Q2MmtMenl4YUFJck1zdm9sUTV1Q0lGNGlsZldTSDR0ZXJHbE85cUZXNlM2a21zSm9QNkstenJFc0NFc1RidndNemZTYW9B?oc=5"
+        },
+        {
+          "source": "BPMoney",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOUFJSWjFKMXRYcFUxWVBvcTJOZ3dQSXlpTzd2WWR4MmJ4MkJ0TVJlVVZ0Tlc0VnF0QVFtRnh6Y1p5cENiak9MajdobXVCWk1vSl9OUjU1SjFrdWoxTmpxR0JTQW9kbkZ4czY5c19EbE02d3NnV3JqdWljZndfamtFNVpIQi1IeURoNFFkQm9KUmx2QQ?oc=5"
+        }
+      ]
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "Juiz determina que BTG mantenha contrato com Apex - ES Hoje",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9qTnpJdWMxSkJhYUZ4OGdjRFB2RUplQ2R5NG5BUlIwRnViZmVjVmxHSFJNeU1hNmFxdzAyX0lxd0wxbDlQQzRnc3RXekVudWhETWdwNFNUYmVIcXc3d01GbC1MRTlONjR1OUNDRTFhTUd4U0lVRFgxNzBFOEo?oc=5",
+      "source": "ES Hoje",
+      "published_at": "2026-09-09T18:37:53+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTE9qTnpJdWMxSkJhYUZ4OGdjRFB2RUplQ2R5NG5BUlIwRnViZmVjVmxHSFJNeU1hNmFxdzAyX0lxd0wxbDlQQzRnc3RXekVudWhETWdwNFNUYmVIcXc3d01GbC1MRTlONjR1OUNDRTFhTUd4U0lVRFgxNzBFOEo?oc=5\" target=\"_blank\">Juiz determina que BTG mantenha contrato com Apex</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ES Hoje</font>",
+      "source_indices": [
+        37,
+        58,
+        63
+      ],
+      "primary_index": 58,
+      "axes": [
+        "Risco/Regulação"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "A disputa judicial entre BTG e Apex Partners envolve gestão de fundos e substituição de gestor, com potencial de afetar cotistas e a reputação da área de asset. É risco de negócio de investimentos, ainda que não toque diretamente o cliente de varejo.",
+      "relevance": "média",
+      "also_reported_by": [
+        {
+          "source": "A Gazeta",
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNSXNHbjlnSDFQXzdiYkI4UWs1ZjlERWI4V3NIWlRabVh4bm9nZkVjVksxT19PNnR0NnRvWXhDRXFjRFZJeWE5dUh5MXBHaHExSTZNRUVIbXZmX29ZV0RGQVplaG96ek81RmFUR3ZWSm1vcVRsWUZQTEFuTUFvX1BmWG1ONXI5d18zaEphdnM5Z0Jabm9PYUpmdF9PVUFyYkg4?oc=5"
+        },
+        {
+          "source": "Painel Político",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQYmNiR3Z1R0dYOEVVczU0ZVJpZFpBTWFuSl9vajdLQjJDeVRwaGFoUzI5YlY4WWdNLUhvdzRqUmFza3M2bnZBRFNFRnVsYWhQLWpHd0VaZnBCTUJzVVoyMkdkZEF4Rm5TWHc3VG15NGNRM3pjVTB1X3dsa01ZWFFwWExZTlhDTXV2?oc=5"
+        }
+      ]
+    },
+    {
+      "competitor_group": "Nubank/NuInvest",
+      "matched_alias": "Nubank",
+      "title": "App do Nubank fica 'fora do ar' no iOS nesta sexta-feira 10 - Estadão",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQMkcyV29uM3JIRGNHa1Q5R0NIcTk3MzlLWm5ic0d3YTZXcHNFVDRwZXZhZVp4OTNXdkJZSllsS1ZBX2FqYlBVbVB3N1d6VWhpZ3FLeU1weEVQejlKU1RiX3h5ejc1d0t0RjR1MzhCMWNMcWVOc3d3VVliRWhSOXBoLW92OVlEQmdzWS10aVR2QTJRaTFoNnhYTW9TbURjUmxJVDdXQ1hrcXNWZ9IBrwFBVV95cUxNbm1lSEhBSlVGN2k1cnMycVZjRm1XYkcwQVJiNm5sTS1Qd2tsa0lhTGxvVnkxTVVtY1BLX3pwenJWN21kdEg2cmRJbnU0WlhBQ2MzUzdXeVIyM3BzanRTMWE2WHlKZk5WX1l1Y2tTZ0ljSjhaTlV3TTVGTnVZN0t6UnpwS1loZ19QY1RSSWVEeXZJdDI1WDZSSi1wbTJtWFUtS3dQakZBbUVTYkItS2Nn?oc=5",
+      "source": "Estadão",
+      "published_at": "2026-09-09T23:15:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQMkcyV29uM3JIRGNHa1Q5R0NIcTk3MzlLWm5ic0d3YTZXcHNFVDRwZXZhZVp4OTNXdkJZSllsS1ZBX2FqYlBVbVB3N1d6VWhpZ3FLeU1weEVQejlKU1RiX3h5ejc1d0t0RjR1MzhCMWNMcWVOc3d3VVliRWhSOXBoLW92OVlEQmdzWS10aVR2QTJRaTFoNnhYTW9TbURjUmxJVDdXQ1hrcXNWZ9IBrwFBVV95cUxNbm1lSEhBSlVGN2k1cnMycVZjRm1XYkcwQVJiNm5sTS1Qd2tsa0lhTGxvVnkxTVVtY1BLX3pwenJWN21kdEg2cmRJbnU0WlhBQ2MzUzdXeVIyM3BzanRTMWE2WHlKZk5WX1l1Y2tTZ0ljSjhaTlV3TTVGTnVZN0t6UnpwS1loZ19QY1RSSWVEeXZJdDI1WDZSSi1wbTJtWFUtS3dQakZBbUVTYkItS2Nn?oc=5\" target=\"_blank\">App do Nubank fica 'fora do ar' no iOS nesta sexta-feira 10</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Estadão</font>",
+      "channel": "incident",
+      "source_indices": [
+        94
+      ],
+      "primary_index": 94,
+      "axes": [
+        "Tecnologia"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "INC",
+      "why_it_matters": "Indisponibilidade do app do Nubank no iOS atinge a experiência do cliente e, por extensão, o acesso à área de investimentos dentro do app. Incidente operacional atual com potencial de gerar pico de reclamações e migração temporária de usuários.",
+      "relevance": "alta",
+      "also_reported_by": []
     }
   ],
   "results": [
@@ -3592,10 +3733,20 @@
     },
     "Nubank/NuInvest": {
       "status": "instavel_recente",
-      "last_incident_at": "2026-09-08T05:12:41+00:00",
-      "last_incident_title": "Pix do Nubank fora do ar? Clientes relatam instabilidade nesta sexta-feira - GZH",
-      "incident_count_window": 4,
+      "last_incident_at": "2026-09-09T23:15:00+00:00",
+      "last_incident_title": "App do Nubank fica 'fora do ar' no iOS nesta sexta-feira 10 - Estadão",
+      "incident_count_window": 5,
       "incidents": [
+        {
+          "published_at": "2026-09-09T23:15:00+00:00",
+          "title": "App do Nubank fica 'fora do ar' no iOS nesta sexta-feira 10 - Estadão",
+          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQMkcyV29uM3JIRGNHa1Q5R0NIcTk3MzlLWm5ic0d3YTZXcHNFVDRwZXZhZVp4OTNXdkJZSllsS1ZBX2FqYlBVbVB3N1d6VWhpZ3FLeU1weEVQejlKU1RiX3h5ejc1d0t0RjR1MzhCMWNMcWVOc3d3VVliRWhSOXBoLW92OVlEQmdzWS10aVR2QTJRaTFoNnhYTW9TbURjUmxJVDdXQ1hrcXNWZ9IBrwFBVV95cUxNbm1lSEhBSlVGN2k1cnMycVZjRm1XYkcwQVJiNm5sTS1Qd2tsa0lhTGxvVnkxTVVtY1BLX3pwenJWN21kdEg2cmRJbnU0WlhBQ2MzUzdXeVIyM3BzanRTMWE2WHlKZk5WX1l1Y2tTZ0ljSjhaTlV3TTVGTnVZN0t6UnpwS1loZ19QY1RSSWVEeXZJdDI1WDZSSi1wbTJtWFUtS3dQakZBbUVTYkItS2Nn?oc=5",
+          "source": "Estadão",
+          "why_it_matters": "Indisponibilidade do app do Nubank no iOS atinge a experiência do cliente e, por extensão, o acesso à área de investimentos dentro do app. Incidente operacional atual com potencial de gerar pico de reclamações e migração temporária de usuários.",
+          "axes": [
+            "Tecnologia"
+          ]
+        },
         {
           "published_at": "2026-09-08T05:12:41+00:00",
           "title": "Pix do Nubank fora do ar? Clientes relatam instabilidade nesta sexta-feira - GZH",
