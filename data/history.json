@@ -3536,5 +3536,60 @@
     "why_it_matters": "Indisponibilidade do app do Nubank no iOS atinge a experiência do cliente e, por extensão, o acesso à área de investimentos dentro do app. Incidente operacional atual com potencial de gerar pico de reclamações e migração temporária de usuários.",
     "relevance": "alta",
     "also_reported_by": []
+  },
+  {
+    "competitor_group": "BTG Pactual",
+    "matched_alias": "BTG Pactual",
+    "title": "BTG Pactual bate recorde com lucro de R$ 4,8 bilhões e ROE de 26,6% - A Revista",
+    "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNTW0wTEZrYURxYkJGX3JrdW5HS0NMdG5Ub1JvalFqZThiZU5jcEh1N05JNHdwUXBUZWh5Y0dUWG0xSFkzVEhPMXR6NGQyTGtLdVdhX3FxSngzOC1sMXRTNnQtTXhOc2VZaWVnTldUbnVUTHNsaWN0ODJqLVJVQm82NUFWdmV3MkZyZ2R3YWh2eGxjYmhqY3YwYlFJTmVuR2Z1?oc=5",
+    "source": "A Revista",
+    "published_at": "2026-09-10T22:01:04+00:00",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxNTW0wTEZrYURxYkJGX3JrdW5HS0NMdG5Ub1JvalFqZThiZU5jcEh1N05JNHdwUXBUZWh5Y0dUWG0xSFkzVEhPMXR6NGQyTGtLdVdhX3FxSngzOC1sMXRTNnQtTXhOc2VZaWVnTldUbnVUTHNsaWN0ODJqLVJVQm82NUFWdmV3MkZyZ2R3YWh2eGxjYmhqY3YwYlFJTmVuR2Z1?oc=5\" target=\"_blank\">BTG Pactual bate recorde com lucro de R$ 4,8 bilhões e ROE de 26,6%</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">A Revista</font>",
+    "source_indices": [
+      58
+    ],
+    "primary_index": 58,
+    "axes": [
+      "Risco/Regulação"
+    ],
+    "confirmation": "confirmado",
+    "daily_trigger": false,
+    "trigger_reason": null,
+    "why_it_matters": "Resultado recorde do BTG é fato corporativo relevante como contexto estratégico, mas não toca o cliente investidor pessoa física nem o negócio de corretagem.",
+    "relevance": "média",
+    "also_reported_by": []
+  },
+  {
+    "competitor_group": "Nubank/NuInvest",
+    "matched_alias": "Nubank",
+    "title": "Nubank inicia operação nos EUA e anuncia conta global, em consolidação da expansão internacional - Folha de S.Paulo",
+    "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQRVI1MThrRjQ0UzZLdVk5Vm8tSXZvNnhGYUo0MnlBS0E3SllQelhEYjZpd1pYTjUtc1ZFTGwwbjc5TEJTZnVRdjZTU1lZc2kzUjc4dDhZb2JvNkVxU0lXYUpadktwTWx0U1hsaDZ6TjRqYWt6TkVOX2VzU3dYTkk4NkdTVDZlc25tajdkNjFndE13dG9oeEF3Q1lBVllJOUVhYkZfTTUwT1lCVU9iQWFEUnk0bnNHVGl0elJ3c2VnWHpqcmlTTFU3dTRuTkpUZw?oc=5",
+    "source": "Folha de S.Paulo",
+    "published_at": "2026-09-10T16:02:00+00:00",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMizgFBVV95cUxQRVI1MThrRjQ0UzZLdVk5Vm8tSXZvNnhGYUo0MnlBS0E3SllQelhEYjZpd1pYTjUtc1ZFTGwwbjc5TEJTZnVRdjZTU1lZc2kzUjc4dDhZb2JvNkVxU0lXYUpadktwTWx0U1hsaDZ6TjRqYWt6TkVOX2VzU3dYTkk4NkdTVDZlc25tajdkNjFndE13dG9oeEF3Q1lBVllJOUVhYkZfTTUwT1lCVU9iQWFEUnk0bnNHVGl0elJ3c2VnWHpqcmlTTFU3dTRuTkpUZw?oc=5\" target=\"_blank\">Nubank inicia operação nos EUA e anuncia conta global, em consolidação da expansão internacional</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Folha de S.Paulo</font>",
+    "source_indices": [
+      78,
+      79,
+      82
+    ],
+    "primary_index": 78,
+    "axes": [
+      "Produtos Novos"
+    ],
+    "confirmation": "confirmado",
+    "daily_trigger": false,
+    "trigger_reason": null,
+    "why_it_matters": "Expansão internacional do Nubank com conta global e cartão nos EUA é fato corporativo de grande porte, mas fora do escopo de investimentos no app — contexto estratégico, não sinal de campo para a corretora.",
+    "relevance": "média",
+    "also_reported_by": [
+      {
+        "source": "Investidor10",
+        "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNNFRHSk1heVB0akJTaGU1bzM1LW45a01lY3NJTnB6N043aVBCZGZjQ0ZESFZvdjRTR3c4N1NwTkNoOEltbjhVV2ZnSWRCZGs4YzBIMW5Mblp3dDF6U3FSNnJHRThNQ0xTbDgxS3YtNmk4dnhFbWpOYm04NHR1aGp1czlXZmVUTXdQZ250dERvWFNaZUNObUlNaUVvdzc5bE1VU0paZ1kxY2ZKelpXYzBVdlFzZ3hscFIx0gG4AUFVX3lxTE00VEdKTWF5UHRqQlNoZTVvMzUtbjlrTWVjc0lOcHo3TjdpUEJkZmNDRkRIVm92NFNHdzg3U3BOQ2g4SW1uOFVXZmdJZEJkazhjMEgxbkxuWnd0MXpTcVI2ckdFOE1DTFNsODFLdi02aTh2eEVtak5ibTg0dHVoanVzOVdmZVRNd1BnbnR0RG9YU1plQ05tSU1pRW93NzlsTVVTSlpnWTFjZkp6WldjMFV2UXNneGxwUjE?oc=5"
+      },
+      {
+        "source": "Acionista.com.br",
+        "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQMFVPUWcwaFM0WXo5WWM4cEtJYnpsYjRIdjhnZmtta19vcUxnemRZazhpYzVMWk4tTmpDeERmaENmRHhPTVhabkgyamlPUzd6UFdaVXJGd0RKUUNteV9TZVlhSlc3M2pkdko2b1lGdkpsWVNVUGVNYW1PUERBS0dHZmk5cWpzQzJzTGgwRXNkdUg3ajJtb1FkWklQV2ZhMGlnUE5STw?oc=5"
+      }
+    ]
   }
 ]
