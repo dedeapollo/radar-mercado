@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T13:11:26.634910+00:00",
+  "generated_at": "2026-09-13T13:56:57.289181+00:00",
   "items": [
     {
       "competitor_group": "BTG Pactual",
@@ -3966,7 +3966,7 @@
       "incidents": []
     },
     "Nubank/NuInvest": {
-      "status": "instavel_recente",
+      "status": "estavel",
       "last_incident_at": "2026-09-09T23:15:00+00:00",
       "last_incident_title": "App do Nubank fica 'fora do ar' no iOS nesta sexta-feira 10 - Estadão",
       "incident_count_window": 5,
