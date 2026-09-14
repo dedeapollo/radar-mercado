@@ -3759,5 +3759,72 @@
     "why_it_matters": "Pico de reclamações de mau funcionamento no app da XP, com menções a erros de cadastro e travamentos, pode indicar instabilidade operacional e afetar a experiência do investidor pessoa física.",
     "relevance": "alta",
     "also_reported_by": []
+  },
+  {
+    "competitor_group": "Nubank/NuInvest",
+    "matched_alias": "Nubank",
+    "title": "Rombo na Americanas (AMER3) afeta clientes do Nubank que aplicavam em fundo de renda fixa - trademap.com.br",
+    "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE91RUUwUnFyZ2RwbU45NUJwenRuQnBxTGxZRFBsQmFQSGllRUJsby1tNTN0UFFydDRfMDhQWWUyM3pTMDNJWE9qTmozcXZWZmZ5WUFJOFF1eHg?oc=5",
+    "source": "trademap.com.br",
+    "published_at": "2026-09-12T01:21:55+00:00",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE91RUUwUnFyZ2RwbU45NUJwenRuQnBxTGxZRFBsQmFQSGllRUJsby1tNTN0UFFydDRfMDhQWWUyM3pTMDNJWE9qTmozcXZWZmZ5WUFJOFF1eHg?oc=5\" target=\"_blank\">Rombo na Americanas (AMER3) afeta clientes do Nubank que aplicavam em fundo de renda fixa</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">trademap.com.br</font>",
+    "source_indices": [
+      57
+    ],
+    "primary_index": 57,
+    "axes": [
+      "Produtos Novos",
+      "Risco/Regulação"
+    ],
+    "confirmation": "confirmado",
+    "daily_trigger": false,
+    "trigger_reason": null,
+    "why_it_matters": "O caso Americanas afeta clientes do Nubank que investiam em fundo de renda fixa, expondo risco reputacional e de adequação de produtos de investimento oferecidos pela plataforma.",
+    "relevance": "média",
+    "also_reported_by": []
+  },
+  {
+    "competitor_group": "Nubank/NuInvest",
+    "matched_alias": "Nubank",
+    "title": "Nubank (NUBR33) anuncia nova forma de empréstimo para investidores - Estadão",
+    "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOaTc0MF82NmFGcG9IWUhYWEtDSEw1b3BfX0dwdW1tNHJ4ZmVoX2FZc0xCOE4welRZUzRZYWRjVVh1cTN0RExpNFdHd29UdmlGVlJ6RHNqMVNOdlF4aF84MGZEMjJ3ejMwWGdMT2dwUVk3SEJzeE02Q3d6ZVQxUUhrWWtpSUdrLVdwNlV2cVZ6WTNieHpSaVFYQ0twTVBOd2vSAaQBQVVfeXFMUGp0ZGk0blZnU2JEMEpCY1Vza3FiVWdzOWxUZEFINnVlVXRtM3Fjcm5POVBYZVBjNkx5OEtCMDVpSFZha2F2dWptY3YwbnZMZWVyaEtxLUJuQVRIenU4ODNpV0FuUWhfVjA0Q241djNXZ0lFYXVxLW40OGotd21zcHR6b0luZ3VKOTNIQmM3NFdudF95UjRGcGM1LVE4eUh2Wm9aVkM?oc=5",
+    "source": "Estadão",
+    "published_at": "2026-09-12T08:01:52+00:00",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxOaTc0MF82NmFGcG9IWUhYWEtDSEw1b3BfX0dwdW1tNHJ4ZmVoX2FZc0xCOE4welRZUzRZYWRjVVh1cTN0RExpNFdHd29UdmlGVlJ6RHNqMVNOdlF4aF84MGZEMjJ3ejMwWGdMT2dwUVk3SEJzeE02Q3d6ZVQxUUhrWWtpSUdrLVdwNlV2cVZ6WTNieHpSaVFYQ0twTVBOd2vSAaQBQVVfeXFMUGp0ZGk0blZnU2JEMEpCY1Vza3FiVWdzOWxUZEFINnVlVXRtM3Fjcm5POVBYZVBjNkx5OEtCMDVpSFZha2F2dWptY3YwbnZMZWVyaEtxLUJuQVRIenU4ODNpV0FuUWhfVjA0Q241djNXZ0lFYXVxLW40OGotd21zcHR6b0luZ3VKOTNIQmM3NFdudF95UjRGcGM1LVE4eUh2Wm9aVkM?oc=5\" target=\"_blank\">Nubank (NUBR33) anuncia nova forma de empréstimo para investidores</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Estadão</font>",
+    "source_indices": [
+      59
+    ],
+    "primary_index": 59,
+    "axes": [
+      "Produtos Novos"
+    ],
+    "confirmation": "confirmado",
+    "daily_trigger": true,
+    "trigger_reason": "LANC",
+    "why_it_matters": "O Nubank amplia sua oferta de crédito para investidores, um movimento que pode aumentar o engajamento e a retenção de clientes na plataforma de investimentos, pressionando concorrentes a oferecer produtos similares.",
+    "relevance": "alta",
+    "also_reported_by": []
+  },
+  {
+    "competitor_group": "Nubank/NuInvest",
+    "matched_alias": "Nubank",
+    "title": "O que esperar da expansão global do Nubank nos Estados Unidos - EuQueroInvestir",
+    "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOX2o3b1BhT3pFRFlnTnNiQjVrVE1FMG9Rd3FPMzNlZTlnajF2ajNLX0RlSF9CeGh0WWMtV29xT25HUjY3Q1l6R3A3Q3JhZTk3TmdkYy1iT0FfVXNaX0l4MkFma3JaT3hpbE1adnUwTEg0R2txSG9UVnVKaWZaeXVZY19FV0ljYlNtNmhlamt5em5hZk1WV0duXzc2MA?oc=5",
+    "source": "EuQueroInvestir",
+    "published_at": "2026-09-11T22:39:48+00:00",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxOX2o3b1BhT3pFRFlnTnNiQjVrVE1FMG9Rd3FPMzNlZTlnajF2ajNLX0RlSF9CeGh0WWMtV29xT25HUjY3Q1l6R3A3Q3JhZTk3TmdkYy1iT0FfVXNaX0l4MkFma3JaT3hpbE1adnUwTEg0R2txSG9UVnVKaWZaeXVZY19FV0ljYlNtNmhlamt5em5hZk1WV0duXzc2MA?oc=5\" target=\"_blank\">O que esperar da expansão global do Nubank nos Estados Unidos</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">EuQueroInvestir</font>",
+    "source_indices": [
+      61
+    ],
+    "primary_index": 61,
+    "axes": [
+      "Produtos Novos"
+    ],
+    "confirmation": "especulativo",
+    "daily_trigger": false,
+    "trigger_reason": null,
+    "why_it_matters": "A expansão global do Nubank nos EUA é um movimento estratégico de longo prazo, mas não impacta diretamente o cliente investidor brasileiro no curto prazo.",
+    "relevance": "média",
+    "also_reported_by": []
   }
 ]
