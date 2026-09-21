@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T16:02:48.656349+00:00",
+  "generated_at": "2026-09-21T23:45:02.725744+00:00",
   "items": [
     {
       "competitor_group": "BTG Pactual",
@@ -4303,6 +4303,51 @@
           "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPRl9TTU1RcnpSTHBpMkt1cHFqRlh6N3FGMnVmcE4tNHE3WjFXQ2JsQlVZVXJKYnZZQnBPOEh0WFIwWUpEeGUwSlc1b0E4Y2FwdGJ6OF9lYkJCYTl6YWRENWtVX2x2cFI4MGxuR09NMEtSN010RDVOcFJla3BNcXJzbHNFWmo2R3FRb3lRc2xYYVFsQzBMV0FTNzYtdERJUQ?oc=5"
         }
       ]
+    },
+    {
+      "competitor_group": "XP/Clear/Rico",
+      "matched_alias": "XP Investimentos",
+      "title": "XP suspende aportes em ETFs de renda fixa com dúvidas sobre Imposto de Renda - Valor Investe",
+      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNNmUta2JHN09fcEttTnFRejZJX3dLc0JRbmhFZzJnUzRQRjk3ZndkcFhoODhIMUFUdzJyWU1HcVp5OG1vV1BuNi11bEc5Q0ZGWkI4NEsxeEpTaFNxRU5ITy04dlAtZkZoYk1Xc04teDNkR2NzaGVLU1dmTm1MRVNabVFOR2FaYndrWkdKUGFFLU5sRW1kbGZyTWxJanlUVDhGeTQzVU9hZ1lIdDdSdHZDc29DUWFIaXVXS0J1VzdOdG1TWUpYZnFjQlZyTHE2eGkyb3JNaWF0TFQ5Tk50Y2R0X0tB0gHwAUFVX3lxTE5qNHM1aUNJWUtBU19WVFk2a0l6N0k2M2d4RU5EbC13eXllTGo0aDdTWXl2XzFxQ0F3d2NvT2tORDlXeXdCZlZZaDhtSkxldTlZbU9Id1JlbzdUZ29xSUZDZl9uN3lFb0JQYjBqX2lfZnpEREtuVmtVXzlSQlBic3dmUldQV1ZRb2Z4eXN6SW1iN1k0VjUzVFlIS09GVFVRNWcxNHhVYXNUS1hjMzlBM1ZINzRmeUdsZ0lqc1czdGd4UzQtMXhzOW9KNW9feDVPUU52dENfS2hHLTJIbDZmX2E3WnU4dzVMMDBuZUlWOElQQw?oc=5",
+      "source": "Valor Investe",
+      "published_at": "2026-09-21T19:00:08+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi4gFBVV95cUxNNmUta2JHN09fcEttTnFRejZJX3dLc0JRbmhFZzJnUzRQRjk3ZndkcFhoODhIMUFUdzJyWU1HcVp5OG1vV1BuNi11bEc5Q0ZGWkI4NEsxeEpTaFNxRU5ITy04dlAtZkZoYk1Xc04teDNkR2NzaGVLU1dmTm1MRVNabVFOR2FaYndrWkdKUGFFLU5sRW1kbGZyTWxJanlUVDhGeTQzVU9hZ1lIdDdSdHZDc29DUWFIaXVXS0J1VzdOdG1TWUpYZnFjQlZyTHE2eGkyb3JNaWF0TFQ5Tk50Y2R0X0tB0gHwAUFVX3lxTE5qNHM1aUNJWUtBU19WVFk2a0l6N0k2M2d4RU5EbC13eXllTGo0aDdTWXl2XzFxQ0F3d2NvT2tORDlXeXdCZlZZaDhtSkxldTlZbU9Id1JlbzdUZ29xSUZDZl9uN3lFb0JQYjBqX2lfZnpEREtuVmtVXzlSQlBic3dmUldQV1ZRb2Z4eXN6SW1iN1k0VjUzVFlIS09GVFVRNWcxNHhVYXNUS1hjMzlBM1ZINzRmeUdsZ0lqc1czdGd4UzQtMXhzOW9KNW9feDVPUU52dENfS2hHLTJIbDZmX2E3WnU4dzVMMDBuZUlWOElQQw?oc=5\" target=\"_blank\">XP suspende aportes em ETFs de renda fixa com dúvidas sobre Imposto de Renda</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Valor Investe</font>",
+      "source_indices": [
+        0
+      ],
+      "primary_index": 0,
+      "axes": [
+        "Produtos Novos",
+        "Risco/Regulação"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "LANC",
+      "why_it_matters": "A suspensão de aportes em ETFs de renda fixa pela XP, maior corretora do país, sinaliza insegurança regulatória sobre tributação desses produtos e pode abrir espaço para concorrentes que ofereçam alternativas com clareza fiscal.",
+      "relevance": "alta",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "BTG Pactual lança consórcio que pode gerar até 1 milhão de pontos - Exame",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOZktjRjZObVlzYmNoOFp4bnVCVGhmaEYtak8zV1RfZmUyQVRrNGQzNkJxRW1ZX1lwMl9lZlV4bFI1UFNTd094b3V6M3lxMjVUTEpLZlpGV1E0M3NzSTMzald1SmhFTHJaWkZ2aUFBY0owY19nYTJkOFROamhyOUhtbnVZVHRacDBOMTlRdmszYVpMN1JKb09Fcjc2bTBTYmZZY2pmQ0twdw?oc=5",
+      "source": "Exame",
+      "published_at": "2026-09-21T18:20:11+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxOZktjRjZObVlzYmNoOFp4bnVCVGhmaEYtak8zV1RfZmUyQVRrNGQzNkJxRW1ZX1lwMl9lZlV4bFI1UFNTd094b3V6M3lxMjVUTEpLZlpGV1E0M3NzSTMzald1SmhFTHJaWkZ2aUFBY0owY19nYTJkOFROamhyOUhtbnVZVHRacDBOMTlRdmszYVpMN1JKb09Fcjc2bTBTYmZZY2pmQ0twdw?oc=5\" target=\"_blank\">BTG Pactual lança consórcio que pode gerar até 1 milhão de pontos</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Exame</font>",
+      "source_indices": [
+        26
+      ],
+      "primary_index": 26,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "LANC",
+      "why_it_matters": "Lançamento de consórcio com pontuação pelo BTG amplia portfólio de produtos de varejo e pode atrair clientes que buscam alternativas de crédito com benefícios, pressionando concorrentes a oferecer produtos similares.",
+      "relevance": "alta",
+      "also_reported_by": []
     }
   ],
   "results": [
@@ -4426,7 +4471,7 @@
       ]
     },
     "BTG Pactual": {
-      "status": "instavel_recente",
+      "status": "estavel",
       "last_incident_at": "2026-09-18T20:42:44+00:00",
       "last_incident_title": "Aplicativo do BTG Pactual Empresas fica fora do ar e clientes inundam web de reclamações - ND Mais",
       "incident_count_window": 4,
