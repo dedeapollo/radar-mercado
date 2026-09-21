@@ -3,290 +3,1194 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Ferramenta interna: fora de buscadores e sem vazar a URL como Referer -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
 <title>Radar de Mercado</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./style.css">
+<!-- async + onload/onerror: se a CDN estiver bloqueada, a página (KPIs e feed) continua funcionando -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1" async
+        onload="window.__chartjs='ready';window.dispatchEvent(new Event('chartjs-ready'))"
+        onerror="window.__chartjs='failed';window.dispatchEvent(new Event('chartjs-failed'))"></script>
+<style>
+  /* ============================================================
+     TOKENS — paleta corporativa (Vermelho Santander EC0000, preto,
+     branco e cinzas). Vermelho é usado com disciplina: apenas para
+     o eixo Risco/Regulação, gatilhos, estado ativo e destaques —
+     nunca como cor decorativa de fundo.
+  ============================================================ */
+  :root{
+    --red:#EC0000;
+    --red-soft:#FBE8E8;
+    --red-ink:#B30000;      /* vermelho para TEXTO pequeno: contraste >= 4,5:1 sobre branco, cinza claro e red-soft */
+    --black:#1A1A1A;
+    --grey-900:#2B2B2B;
+    --grey-700:#4A4A4A;
+    --grey-500:#6D6D6D;
+    --grey-300:#C7C7C7;
+    --grey-200:#E1E1E1;
+    --grey-100:#F0F0F0;
+    --grey-50:#F7F7F6;
+    --sky:#DEEDF2;
+    --white:#FFFFFF;
+    --radius:6px;
+    --radius-sm:4px;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--grey-50);
+    color:var(--black);
+    font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;
+    font-variant-numeric:tabular-nums;
+  }
+  a{color:var(--black); text-decoration:underline; text-decoration-color:var(--grey-300);}
+  a:hover{color:var(--red); text-decoration-color:var(--red);}
+
+  /* ---------- header ---------- */
+  header{
+    background:var(--white);
+    border-bottom:3px solid var(--red);
+  }
+  .header-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+    max-width:1280px;
+    margin:0 auto;
+    padding:22px 32px 18px;
+  }
+  .brand{display:flex;align-items:center;gap:14px;}
+  .brand-mark{
+    width:40px;height:40px;flex:none;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .brand-mark svg{width:36px;height:auto;display:block;}
+  .brand h1{
+    font-family:var(--sans);
+    font-weight:800;
+    font-size:19px;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+    margin:0;
+    color:var(--black);
+  }
+  .brand p{
+    margin:3px 0 0;
+    font-size:12.5px;
+    color:var(--grey-500);
+    font-weight:500;
+  }
+  .meta{
+    text-align:right;
+    font-size:12.5px;
+    color:var(--grey-500);
+    font-weight:500;
+  }
+  .meta .sample-flag{
+    display:inline-block;
+    margin-top:6px;
+    padding:3px 9px;
+    background:var(--grey-100);
+    color:var(--red-ink);
+    border:1px solid var(--red);
+    border-radius:20px;
+    font-size:11px;
+    font-weight:600;
+  }
+
+  .filters{
+    max-width:1280px;
+    margin:0 auto;
+    display:flex;
+    gap:24px;
+    align-items:center;
+    flex-wrap:wrap;
+    padding:14px 32px;
+    background:var(--grey-50);
+    border-top:1px solid var(--grey-200);
+  }
+  .filter-block{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .filter-label{
+    font-size:11px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.6px;
+    color:var(--grey-500);
+  }
+  .chip{
+    border:1px solid var(--grey-300);
+    background:var(--white);
+    color:var(--grey-700);
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:12.5px;
+    font-weight:500;
+    font-family:var(--sans);
+    cursor:pointer;
+    transition:all .12s ease;
+  }
+  .chip:hover{border-color:var(--red);color:var(--red);}
+  .chip.active{background:var(--red);color:var(--white);border-color:var(--red);font-weight:600;}
+  select#period-select{
+    background:var(--white);
+    border:1px solid var(--grey-300);
+    color:var(--grey-900);
+    padding:5px 10px;
+    border-radius:var(--radius-sm);
+    font-family:var(--sans);
+    font-size:12.5px;
+  }
+
+  /* ---------- layout ---------- */
+  main{max-width:1280px;margin:0 auto;padding:28px 32px 64px;}
+
+  .kpi-row{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:14px;
+    margin-bottom:20px;
+  }
+  .kpi-card{
+    background:var(--white);
+    border:1px solid var(--grey-200);
+    border-top:3px solid var(--grey-300);
+    border-radius:var(--radius);
+    padding:16px 18px;
+  }
+  .kpi-card.accent{border-top-color:var(--red);}
+  .kpi-label{
+    font-size:11px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    color:var(--grey-500);
+    margin-bottom:8px;
+  }
+  .kpi-value{
+    font-family:var(--sans);
+    font-size:30px;
+    font-weight:800;
+    line-height:1;
+    color:var(--black);
+  }
+  .kpi-card.accent .kpi-value{color:var(--red);}
+  .kpi-sub{font-size:12.5px;color:var(--grey-500);margin-top:6px;}
+
+  .chart-row{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:14px;
+    margin-bottom:28px;
+  }
+  @media (max-width:860px){.chart-row{grid-template-columns:1fr;}}
+  .chart-card{
+    background:var(--white);
+    border:1px solid var(--grey-200);
+    border-radius:var(--radius);
+    padding:18px 20px;
+  }
+  .chart-card h3{
+    font-family:var(--sans);
+    font-size:13px;
+    font-weight:700;
+    margin:0 0 14px;
+    color:var(--black);
+  }
+  /* ---------- gráficos ----------
+     A altura é travada AQUI, no contêiner, e os charts rodam com
+     maintainAspectRatio:false. Sem isso, o Chart.js entra em loop de
+     "responsive resize": o canvas cresce a cada frame porque o pai não
+     tem altura definida, empurrando a página pra baixo infinitamente
+     (era o bug do "Itens por concorrente", que por ser barra horizontal
+     era o mais afetado). */
+  .chart-box{position:relative; width:100%; height:240px;}
+  .chart-box.tall{height:260px;}
+  .chart-box canvas{position:absolute; inset:0; width:100% !important; height:100% !important;}
+
+  /* ---------- feed ---------- */
+  .feed-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    margin-bottom:6px;
+  }
+  .feed-header h2{
+    font-family:var(--sans);
+    font-size:18px;
+    font-weight:800;
+    margin:0;
+    color:var(--black);
+  }
+  .feed-count{font-size:12px;color:var(--grey-500);font-weight:500;}
+
+  .item-card{
+    background:var(--white);
+    border:1px solid var(--grey-200);
+    border-left:3px solid var(--grey-300);
+    border-radius:var(--radius-sm);
+    padding:14px 16px;
+    margin-bottom:8px;
+  }
+  .item-card.trigger{border-left-color:var(--red);}
+  .item-summary{
+    list-style:none;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+  .item-summary::-webkit-details-marker{display:none;}
+  .item-summary::after{
+    content:'+';
+    color:var(--grey-500);
+    font-size:16px;
+    font-weight:700;
+    flex:none;
+    margin-left:8px;
+  }
+  details.item-card[open] .item-summary::after{content:'–';}
+  .item-title{font-size:14px;font-weight:600;line-height:1.4;color:var(--black);}
+  .item-summary-meta{
+    font-size:11.5px;
+    color:var(--grey-500);
+    white-space:nowrap;
+    font-weight:500;
+  }
+  details.item-card .item-body{margin-top:10px;}
+  .item-why{font-size:13.5px;color:var(--grey-700);margin-top:2px;line-height:1.55;}
+  .item-foot{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:10px;
+    flex-wrap:wrap;
+    gap:8px;
+    font-size:12px;
+    color:var(--grey-500);
+  }
+  .item-tags{display:flex;gap:6px;flex-wrap:wrap;}
+  .tag{
+    font-size:10.5px;
+    font-weight:600;
+    padding:2px 8px;
+    border-radius:10px;
+    background:var(--grey-100);
+    color:var(--grey-700);
+    border:1px solid var(--grey-200);
+  }
+  .tag.risk{background:var(--red-soft);color:var(--red-ink);border-color:var(--red);}
+  .trigger-badge{
+    font-size:10.5px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.3px;
+    color:var(--white);
+    background:var(--red);
+    padding:2px 8px;
+    border-radius:10px;
+  }
+  .relevance-badge{
+    font-size:10.5px;
+    font-weight:600;
+    padding:1px 8px;
+    border-radius:10px;
+  }
+  .relevance-badge.alta{border:1px solid var(--red);color:var(--red);}
+  .relevance-badge.media{border:1px solid var(--grey-300);color:var(--grey-500);}
+  .source-badge{
+    font-size:10.5px;
+    font-weight:600;
+    padding:1px 8px;
+    border-radius:10px;
+    background:var(--grey-100);
+    color:var(--grey-700);
+  }
+  .empty-state{
+    text-align:center;
+    padding:60px 20px;
+    color:var(--grey-500);
+    font-size:14px;
+  }
+
+  /* ---------- alertas fixos ---------- */
+  .alerts-section{margin-bottom:28px;}
+  .alerts-section h2{
+    font-family:var(--sans);
+    font-size:16px;
+    font-weight:800;
+    margin:0 0 10px;
+    display:flex;
+    align-items:center;
+    gap:9px;
+    color:var(--black);
+  }
+  .pulse-dot{
+    width:8px;height:8px;border-radius:50%;
+    background:var(--red);
+    flex:none;
+    animation:pulse 1.8s infinite;
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(236,0,0,0.4);}
+    70%{box-shadow:0 0 0 7px rgba(236,0,0,0);}
+    100%{box-shadow:0 0 0 0 rgba(236,0,0,0);}
+  }
+
+  footer{
+    max-width:1280px;
+    margin:0 auto;
+    padding:0 32px 40px;
+    font-size:12px;
+    color:var(--grey-500);
+  }
+
+  /* ============================================================
+     ETAPA 1 — fundação técnica (correções; sem mudança de identidade)
+  ============================================================ */
+
+  /* estados de carga / erro */
+  .banner{
+    background:var(--white);
+    border:1px solid var(--grey-200);
+    border-left:3px solid var(--grey-300);
+    border-radius:var(--radius);
+    padding:16px 18px;
+    margin-bottom:20px;
+    font-size:14px;
+    color:var(--grey-700);
+  }
+  .banner[hidden], #dashboard[hidden], .filters[hidden]{display:none;}
+  .banner-error{border-left-color:var(--red);}
+  .banner-error strong{display:block;color:var(--black);font-size:15px;margin-bottom:4px;}
+  .banner-error p{margin:0 0 12px;line-height:1.5;}
+
+  /* aviso de dados desatualizados / avisos de validação */
+  .meta .stale-flag{
+    display:inline-block;
+    margin-top:6px;
+    padding:3px 9px;
+    background:var(--red-soft);
+    color:var(--red-ink);
+    border:1px solid var(--red);
+    border-radius:20px;
+    font-size:11px;
+    font-weight:600;
+  }
+  .data-warning{margin-top:6px;font-size:11.5px;color:var(--grey-700);font-weight:500;}
+  .data-warning:empty{display:none;}
+
+  /* limpar filtros */
+  .chip-clear{
+    background:none;
+    border:none;
+    padding:5px 4px;
+    font-family:var(--sans);
+    font-size:12.5px;
+    font-weight:600;
+    color:var(--grey-700);
+    text-decoration:underline;
+    cursor:pointer;
+  }
+  .chip-clear:hover{color:var(--red-ink);}
+  .chip-clear[hidden]{display:none;}
+
+  /* KPI com valor longo (antes: font-size inline) */
+  .kpi-value.long{font-size:18px;}
+
+  /* gráfico: mensagem (vazio / carregando / biblioteca indisponível) */
+  .chart-note{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:12px 16px;
+    overflow:auto;
+    font-size:13px;
+    line-height:1.5;
+    color:var(--grey-700);
+    background:var(--grey-50);
+    border-radius:var(--radius-sm);
+  }
+  .chart-note[hidden]{display:none;}
+
+  /* foco visível para navegação por teclado */
+  .chip:focus-visible,
+  .chip-clear:focus-visible,
+  select#period-select:focus-visible,
+  .item-summary:focus-visible,
+  a:focus-visible{
+    outline:2px solid var(--black);
+    outline-offset:2px;
+  }
+
+  /* respeita a preferência do sistema por menos movimento */
+  @media (prefers-reduced-motion: reduce){
+    .pulse-dot{animation:none;}
+    .chip{transition:none;}
+  }
+</style>
 </head>
 <body>
 
 <header>
   <div class="header-top">
-    <div>
-      <div class="brand-strip">
-        <div class="brand-mark" aria-label="Santander">
-          <svg viewBox="0 0 43.9 41.9" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><path fill="#EC0000" d="M 31.5,19.5 C 31.4,18 31,16.5 30.2,15.2 L 23.4,3.3 C 22.9,2.4 22.5,1.4 22.3,0.4 L 22,0.9 c -1.7,2.9 -1.7,6.6 0,9.5 l 5.5,9.5 c 1.7,2.9 1.7,6.6 0,9.5 l -0.3,0.5 c -0.2,-1 -0.6,-2 -1.1,-2.9 l -5,-8.7 -3.2,-5.6 C 17.4,11.8 17,10.8 16.8,9.8 l -0.3,0.5 c -1.7,2.9 -1.7,6.5 0,9.5 v 0 l 5.5,9.5 c 1.7,2.9 1.7,6.6 0,9.5 l -0.3,0.5 c -0.2,-1 -0.6,-2 -1.1,-2.9 L 13.7,24.5 C 12.8,22.9 12.4,21.1 12.4,19.3 5.1,21.2 0,25.3 0,30 0,36.6 9.8,41.9 21.9,41.9 34,41.9 43.8,36.6 43.8,30 43.9,25.5 38.9,21.4 31.5,19.5 Z"/></svg>
-        </div>
-        <div class="brand-divider"></div>
-        <div class="brand-microlabel">Radar de Mercado &nbsp;·&nbsp; Inteligência Competitiva</div>
+    <div class="brand">
+      <div class="brand-mark" role="img" aria-label="Santander">
+        <svg viewBox="0 0 43.9 41.9" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path fill="#EC0000" d="M 31.5,19.5 C 31.4,18 31,16.5 30.2,15.2 L 23.4,3.3 C 22.9,2.4 22.5,1.4 22.3,0.4 L 22,0.9 c -1.7,2.9 -1.7,6.6 0,9.5 l 5.5,9.5 c 1.7,2.9 1.7,6.6 0,9.5 l -0.3,0.5 c -0.2,-1 -0.6,-2 -1.1,-2.9 l -5,-8.7 -3.2,-5.6 C 17.4,11.8 17,10.8 16.8,9.8 l -0.3,0.5 c -1.7,2.9 -1.7,6.5 0,9.5 v 0 l 5.5,9.5 c 1.7,2.9 1.7,6.6 0,9.5 l -0.3,0.5 c -0.2,-1 -0.6,-2 -1.1,-2.9 L 13.7,24.5 C 12.8,22.9 12.4,21.1 12.4,19.3 5.1,21.2 0,25.3 0,30 0,36.6 9.8,41.9 21.9,41.9 34,41.9 43.8,36.6 43.8,30 43.9,25.5 38.9,21.4 31.5,19.5 Z"/></svg>
       </div>
-      <nav class="page-nav">
-        <a href="./index.html" class="active">Painel de mercado</a><span class="sep">·</span><a href="./alertas.html">Últimos Alertas</a><span class="sep">·</span><a href="./resultados.html">Resultados &amp; Estratégia</a>
-      </nav>
-      <h1 class="page-title">Painel de mercado</h1>
-      <div class="title-accent"></div>
+      <div>
+        <h1>Radar de Mercado</h1>
+        <p id="brand-sub">Monitoramento de concorrentes</p>
+      </div>
     </div>
     <div class="meta">
       <div id="updated-at">carregando…</div>
-      <div class="period-tabs" id="period-tabs"></div>
+      <div id="stale-flag-holder"></div>
       <div id="sample-flag-holder"></div>
+      <div id="data-warning" class="data-warning" role="status"></div>
     </div>
+  </div>
+
+  <div class="filters" id="filters" hidden>
+    <div class="filter-block" role="group" aria-labelledby="axis-label">
+      <span class="filter-label" id="axis-label">Eixo</span>
+      <div id="axis-chips"></div>
+    </div>
+    <div class="filter-block" role="group" aria-labelledby="competitor-label">
+      <span class="filter-label" id="competitor-label">Concorrente</span>
+      <div id="competitor-chips"></div>
+    </div>
+    <div class="filter-block">
+      <label class="filter-label" for="period-select">Período</label>
+      <select id="period-select">
+        <option value="7">7 dias</option>
+        <option value="30" selected>30 dias</option>
+        <option value="90">90 dias</option>
+        <option value="99999" data-sub="todo o histórico">Tudo</option>
+      </select>
+    </div>
+    <button type="button" class="chip-clear" id="clear-filters" hidden>Limpar filtros</button>
   </div>
 </header>
 
-<div class="page-shell">
-  <aside class="sidebar">
-    <div class="sidebar-section">
-      <div class="sidebar-title">Eixo</div>
-      <div class="sidebar-list" id="axis-chips"></div>
+<main>
+  <div id="load-status" class="banner" role="status">Carregando dados…</div>
+  <div id="dashboard" hidden>
+  <section class="alerts-section" id="alerts-section" style="display:none;">
+    <h2><span class="pulse-dot"></span>Últimos Alertas</h2>
+    <div id="alerts-feed"></div>
+  </section>
+
+  <section class="kpi-row" id="kpi-row"></section>
+
+  <section class="chart-card" style="margin-bottom:14px;">
+    <h3>Itens ao longo do tempo (todo o histórico, por semana)</h3>
+    <div class="chart-box tall"><canvas id="trend-chart" role="img" aria-label="Itens ao longo do tempo, por semana"></canvas><div class="chart-note" id="trend-note" hidden></div></div>
+  </section>
+
+  <section class="chart-row">
+    <div class="chart-card">
+      <h3>Itens por eixo</h3>
+      <div class="chart-box"><canvas id="axis-chart" role="img" aria-label="Itens por eixo"></canvas><div class="chart-note" id="axis-note" hidden></div></div>
     </div>
-    <div class="sidebar-section">
-      <div class="sidebar-title">Concorrente</div>
-      <div class="sidebar-list" id="competitor-chips"></div>
+    <div class="chart-card">
+      <h3>Itens por concorrente</h3>
+      <div class="chart-box"><canvas id="competitor-chart" role="img" aria-label="Itens por concorrente"></canvas><div class="chart-note" id="competitor-note" hidden></div></div>
     </div>
-  </aside>
+  </section>
 
-  <main class="content">
-    <p class="exec-summary" id="exec-summary"></p>
-
-    <section class="kpi-row" id="kpi-row"></section>
-
-    <div class="section-title">Quadro por concorrente</div>
-    <section class="competitor-grid" id="competitor-grid"></section>
-
-    <div class="section-title">Linha do tempo</div>
-    <div class="timeline" id="timeline"></div>
-
-    <div class="feed-header">
-      <h2>Sinais do período</h2>
-      <span class="feed-count" id="feed-count"></span>
-    </div>
-    <div id="feed"></div>
-  </main>
-</div>
+  <div class="feed-header">
+    <h2>Itens monitorados</h2>
+    <span class="feed-count" id="feed-count" aria-live="polite"></span>
+  </div>
+  <div id="feed"></div>
+  </div><!-- /#dashboard -->
+</main>
 
 <footer>
   Radar de Mercado — inteligência competitiva interna · dados coletados via portais de notícia e fontes públicas · não é aconselhamento de investimento
 </footer>
 
-<script src="./common.js"></script>
 <script>
+/* ============================================================
+   CONFIGURAÇÃO
+   Tudo que é "regra de exibição" fica aqui. Taxonomia (eixos,
+   concorrentes) NÃO fica mais aqui: é derivada do data.json.
+============================================================ */
+const TZ = 'America/Sao_Paulo';        // fuso de referência para datas e semanas
+const STALE_HOURS = 30;                // pipeline roda 1x/dia (07:00 BRT); >30h = dado desatualizado
+const FETCH_TIMEOUT_MS = 15000;        // tempo máximo para baixar o data.json
+const CHART_LOAD_TIMEOUT_MS = 10000;   // tempo máximo esperando o Chart.js
+const MAX_TREND_WEEKS = 104;           // trava de segurança do gráfico de tendência
+const DAY_MS = 86400000;
+const DEMO = new URLSearchParams(location.search).get('demo') === '1';
+
+// Só estilo: o eixo Risco/Regulação é o único destacado em vermelho.
+const RISK_AXIS = "Risco/Regulação";
+// Ordem de exibição preferida. Eixos que aparecerem no data.json e não
+// estiverem aqui (ex.: um futuro eixo CX) entram depois, em ordem alfabética.
+const AXIS_ORDER = ["RV/Trading", "Tecnologia", "Produtos Novos", "Risco/Regulação"];
+const FALLBACK_GROUP = "Outros";
+const COLOR_RED = "#EC0000";
+const COLOR_DARK = "#1A1A1A";
+const COLOR_GREY = "#8A8A8A";
+
+let AXES = [];          // derivado do data.json
+let COMPETITORS = [];   // derivado do data.json
 let RAW_ITEMS = [];
 let ACTIVE_AXES = new Set();
 let ACTIVE_COMPETITORS = new Set();
-let PERIOD_DAYS = 30;
+let APP_READY = false;
+let LAST_GENERATED_AT = null;
+let LAST_DEMO = false;
+const CHARTS = {};
+const NOTICES = {};
+
+/* ============================================================
+   FORMATAÇÃO DE DATAS (sempre no fuso de Brasília, para o rótulo
+   de semana e a data do item nunca divergirem entre máquinas)
+============================================================ */
+const DATE_FMT = new Intl.DateTimeFormat('pt-BR', {timeZone:TZ, day:'2-digit', month:'2-digit', year:'numeric'});
+const TIME_FMT = new Intl.DateTimeFormat('pt-BR', {timeZone:TZ, hour:'2-digit', minute:'2-digit'});
+const UTC_DATE_FMT = new Intl.DateTimeFormat('pt-BR', {timeZone:'UTC', day:'2-digit', month:'2-digit', year:'numeric'});
+const YMD_FMT = new Intl.DateTimeFormat('en-CA', {timeZone:TZ, year:'numeric', month:'2-digit', day:'2-digit'});
+
+function fmtDate(v){
+  const d = new Date(v);
+  return isNaN(d) ? '—' : DATE_FMT.format(d);
+}
+
+/* ============================================================
+   SEGURANÇA: escape e URLs
+   escapeHtml serve para texto E para valores de atributo
+   (escapa também aspas — o escape via textContent/innerHTML não).
+============================================================ */
+const ESC_MAP = {'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'};
+function escapeHtml(v){
+  return String(v ?? '').replace(/[&<>"']/g, c => ESC_MAP[c]);
+}
+
+// Só http(s) absoluto. Qualquer outra coisa (javascript:, data:, //host, relativo) vira null.
+function safeUrl(v){
+  if(typeof v !== 'string') return null;
+  const s = v.trim();
+  if(!/^https?:\/\//i.test(s)) return null;
+  try{
+    const u = new URL(s);
+    return (u.protocol === 'http:' || u.protocol === 'https:') ? u.href : null;
+  }catch(e){
+    return null;
+  }
+}
+
+/* ============================================================
+   NORMALIZAÇÃO: nada do data.json chega ao render sem passar aqui.
+   Item sem título ou com data inválida é descartado (e contado).
+============================================================ */
+function text(v){
+  if(typeof v === 'string') return v.trim();
+  if(typeof v === 'number' && isFinite(v)) return String(v);
+  return '';
+}
+
+function normRelevance(v){
+  const s = text(v).toLowerCase();
+  if(s === 'alta') return 'alta';
+  if(s === 'media' || s === 'média') return 'média';
+  if(s === 'baixa') return 'baixa';
+  return '';
+}
+
+function normalizeItem(raw){
+  if(!raw || typeof raw !== 'object' || Array.isArray(raw)) return null;
+
+  const title = text(raw.title);
+  if(!title) return null;
+
+  // Data: precisa ser string ISO parseável, entre 2000 e "agora + 2 dias".
+  // O limite superior barra datas absurdas que distorceriam período e tendência.
+  const ts = typeof raw.published_at === 'string' ? Date.parse(raw.published_at) : NaN;
+  if(!isFinite(ts) || ts < Date.UTC(2000,0,1) || ts > Date.now() + 2*DAY_MS) return null;
+
+  const rawAxes = Array.isArray(raw.axes) ? raw.axes : (typeof raw.axes === 'string' ? [raw.axes] : []);
+  const axes = [...new Set(rawAxes.map(text).filter(Boolean))];
+
+  const also = (Array.isArray(raw.also_reported_by) ? raw.also_reported_by : [])
+    .map(s => (s && typeof s === 'object') ? {source: text(s.source), link: safeUrl(s.link)} : null)
+    .filter(s => s && s.source);
+
+  return {
+    title,
+    link: safeUrl(raw.link),
+    source: text(raw.source) || 'Fonte não informada',
+    competitor_group: text(raw.competitor_group) || FALLBACK_GROUP,
+    published_at: raw.published_at,
+    _ts: ts,
+    why_it_matters: text(raw.why_it_matters),
+    axes,
+    daily_trigger: raw.daily_trigger === true || raw.daily_trigger === 'true' || raw.daily_trigger === 1,
+    relevance: normRelevance(raw.relevance),
+    also_reported_by: also,
+  };
+}
+
+function normalizeAll(list){
+  const items = [];
+  let invalid = 0;
+  list.forEach(raw => {
+    const n = normalizeItem(raw);
+    if(n) items.push(n); else invalid++;
+  });
+  return {items, invalid};
+}
+
+/* ============================================================
+   CARGA DE DADOS
+   Produção: qualquer falha vira erro explícito (nunca dado fictício).
+   Dados de exemplo só existem com ?demo=1.
+============================================================ */
+class LoadError extends Error {}
+
+function demoItems(){
+  const at = d => new Date(Date.now() - d*DAY_MS).toISOString();
+  const base = [
+    {competitor_group:"XP/Clear/Rico", title:"Clear relança plataforma com execução abaixo de 50ms e alavancagem intraday de até 300x", source:"InfoMoney", published_at:at(4), why_it_matters:"A Clear eleva o padrão de velocidade e alavancagem, pressionando concorrentes a acompanharem ou perderem traders de alta frequência.", axes:["RV/Trading","Tecnologia","Produtos Novos","Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[]},
+    {competitor_group:"BTG Pactual", title:"BTG Pactual lança BTG Trends, plataforma de mercados de previsão", source:"Money Times", published_at:at(3), why_it_matters:"O BTG inova com derivativos binários, produto novo que pode atrair clientes sofisticados, com alcance inicial limitado por restrição a investidores qualificados.", axes:["Produtos Novos","Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[{source:"Seu Dinheiro"}]},
+    {competitor_group:"Genial", title:"Genial eleva alavancagem para até 312x e lança assistente de IA QINV", source:"Seu Dinheiro", published_at:at(2), why_it_matters:"Genial supera a concorrência em alavancagem máxima, atraindo day traders agressivos e aumentando o risco de escrutínio regulatório.", axes:["RV/Trading","Tecnologia","Produtos Novos","Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[]},
+    {competitor_group:"Múltiplos/Setor", title:"CVM publica Ofício-Circular esclarecendo regras de alavancagem em fundos de investimento", source:"gov.br/CVM", published_at:at(1), why_it_matters:"Reduz incertezas sobre margens, beneficiando corretoras que oferecem alavancagem, mas exige compliance mais rigoroso.", axes:["Risco/Regulação"], daily_trigger:true, relevance:"alta", also_reported_by:[]},
+    {competitor_group:"XP/Clear/Rico", title:"Relatório do BTG aponta pivô estratégico da XP para crédito corporativo; CFO é trocado", source:"Finsiders Brasil", published_at:at(9), why_it_matters:"A troca de CFO e o foco em crédito corporativo indicam reorientação estratégica que pode abrir espaço para concorrentes focados em varejo.", axes:["Produtos Novos"], daily_trigger:false, relevance:"média", also_reported_by:[]},
+  ];
+  return normalizeAll(base).items;
+}
+
+async function loadData(){
+  if(DEMO){
+    return {items: demoItems(), invalid: 0, generatedAt: new Date().toISOString(), demo: true};
+  }
+
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), FETCH_TIMEOUT_MS);
+  try{
+    let res;
+    try{
+      res = await fetch('./data.json', {cache:'no-store', signal: ctrl.signal});
+    }catch(e){
+      if(location.protocol === 'file:'){
+        throw new LoadError('A página foi aberta direto do disco (file://) e o navegador bloqueia a leitura do data.json. Sirva a pasta docs por um servidor local, por exemplo: python -m http.server -d docs');
+      }
+      throw new LoadError(e && e.name === 'AbortError' ? 'Tempo esgotado ao baixar o data.json.' : 'Falha de rede ao baixar o data.json.');
+    }
+    if(!res.ok) throw new LoadError(`O servidor respondeu ${res.status} ao buscar o data.json.`);
+
+    let json;
+    try{
+      json = await res.json();
+    }catch(e){
+      throw new LoadError('O data.json não é um JSON válido. Se a sessão de acesso expirou, recarregue a página.');
+    }
+    if(!json || typeof json !== 'object' || !Array.isArray(json.items)){
+      throw new LoadError("O data.json não contém a lista 'items'.");
+    }
+
+    const {items, invalid} = normalizeAll(json.items);
+    return {items, invalid, generatedAt: typeof json.generated_at === 'string' ? json.generated_at : null, demo: false};
+  }finally{
+    clearTimeout(timer);
+  }
+}
+
+/* ============================================================
+   TAXONOMIA DERIVADA DO data.json
+============================================================ */
+function deriveAxes(items){
+  const found = new Set(items.flatMap(i => i.axes));
+  const known = AXIS_ORDER.filter(a => found.has(a));
+  const extra = [...found].filter(a => !AXIS_ORDER.includes(a)).sort((a,b) => a.localeCompare(b, 'pt-BR'));
+  return [...known, ...extra];
+}
+
+function deriveCompetitors(items){
+  return [...new Set(items.map(i => i.competitor_group))];   // ordem de primeira aparição, como antes
+}
+
+/* ============================================================
+   FILTROS (chips)
+   A fonte da verdade são os Sets; a UI é sincronizada a cada render.
+============================================================ */
+function buildChips(container, values, activeSet){
+  container.textContent = '';
+  values.forEach(v => {
+    const chip = document.createElement('button');
+    chip.type = 'button';
+    chip.className = 'chip';
+    chip.textContent = v;
+    chip.dataset.value = v;
+    chip.setAttribute('aria-pressed', 'false');
+    chip.addEventListener('click', () => {
+      activeSet.has(v) ? activeSet.delete(v) : activeSet.add(v);
+      render();
+    });
+    container.appendChild(chip);
+  });
+}
+
+function syncChips(selector, activeSet){
+  document.querySelectorAll(selector).forEach(chip => {
+    const on = activeSet.has(chip.dataset.value);
+    chip.classList.toggle('active', on);
+    chip.setAttribute('aria-pressed', on ? 'true' : 'false');
+  });
+}
+
+function syncFilterUI(){
+  syncChips('#axis-chips .chip', ACTIVE_AXES);
+  syncChips('#competitor-chips .chip', ACTIVE_COMPETITORS);
+  document.getElementById('clear-filters').hidden = !(ACTIVE_AXES.size || ACTIVE_COMPETITORS.size);
+}
+
+function periodDays(){
+  const n = parseInt(document.getElementById('period-select').value, 10);
+  return isFinite(n) ? n : 30;
+}
+
+function periodLabel(){
+  const opt = document.getElementById('period-select').selectedOptions[0];
+  return opt ? (opt.dataset.sub || opt.textContent.trim()) : '';
+}
 
 function filteredItems(){
   const cutoff = new Date();
-  cutoff.setDate(cutoff.getDate() - PERIOD_DAYS);
+  cutoff.setDate(cutoff.getDate() - periodDays());
+  const cutoffTs = cutoff.getTime();
 
   return RAW_ITEMS.filter(item => {
-    if(new Date(item.published_at) < cutoff) return false;
+    if(item._ts < cutoffTs) return false;
     if(ACTIVE_AXES.size && !item.axes.some(a => ACTIVE_AXES.has(a))) return false;
     if(ACTIVE_COMPETITORS.size && !ACTIVE_COMPETITORS.has(item.competitor_group)) return false;
     return true;
-  });
+  }).sort((a,b) => b._ts - a._ts);
 }
 
-function renderPeriodTabs(){
-  const el = document.getElementById('period-tabs');
-  el.innerHTML = PERIOD_OPTIONS.map((o, idx) => `${idx > 0 ? '<span class="sep">·</span>' : ''}<button type="button" class="${o.value === PERIOD_DAYS ? 'active' : ''}" data-value="${o.value}">${o.label}</button>`).join('');
-  el.querySelectorAll('button').forEach(btn => {
-    btn.addEventListener('click', () => {
-      PERIOD_DAYS = parseInt(btn.dataset.value, 10);
-      renderPeriodTabs();
-      refreshSidebarCounts();
-      render();
-    });
-  });
-}
-
+/* ============================================================
+   KPIs
+============================================================ */
 function renderKPIs(items){
   const triggers = items.filter(i => i.daily_trigger).length;
+
   const axisCounts = {};
   AXES.forEach(a => axisCounts[a] = 0);
   items.forEach(i => i.axes.forEach(a => { if(axisCounts[a] !== undefined) axisCounts[a]++; }));
-  const topAxis = Object.entries(axisCounts).sort((a,b) => b[1]-a[1])[0];
+  const topAxisEntry = Object.entries(axisCounts).sort((a,b) => b[1]-a[1])[0];
+  const topAxis = topAxisEntry && topAxisEntry[1] > 0 ? topAxisEntry : null;   // 0 itens => "—"
 
   const compCounts = {};
   items.forEach(i => compCounts[i.competitor_group] = (compCounts[i.competitor_group]||0)+1);
   const topComp = Object.entries(compCounts).sort((a,b) => b[1]-a[1])[0];
 
-  const periodLabel = PERIOD_DAYS >= 99999 ? 'todo o histórico' : `${PERIOD_DAYS} dias`;
-
   const kpis = [
-    {label:'Itens no período', value: items.length, sub: periodLabel, accent:false},
+    {label:'Itens no período', value: items.length, sub: periodLabel(), accent:false},
     {label:'Alertas de gatilho', value: triggers, sub: 'risco, comunicado, lançamento ou regulação', accent:true},
-    {label:'Eixo mais ativo', value: topAxis && topAxis[1] > 0 ? topAxis[0] : '—', sub: topAxis && topAxis[1] > 0 ? `${topAxis[1]} itens` : '', accent:false},
+    {label:'Eixo mais ativo', value: topAxis ? topAxis[0] : '—', sub: topAxis ? `${topAxis[1]} itens` : '', accent:false},
     {label:'Concorrente mais ativo', value: topComp ? topComp[0] : '—', sub: topComp ? `${topComp[1]} itens` : '', accent:false},
   ];
 
   const row = document.getElementById('kpi-row');
   row.innerHTML = kpis.map(k => `
     <div class="kpi-card ${k.accent ? 'accent' : ''}">
-      <div class="kpi-label">${k.label}</div>
-      <div class="kpi-value" style="font-size:${k.value.toString().length > 12 ? '18px' : '30px'}">${escapeHtml(k.value)}</div>
+      <div class="kpi-label">${escapeHtml(k.label)}</div>
+      <div class="kpi-value ${String(k.value).length > 12 ? 'long' : ''}">${escapeHtml(k.value)}</div>
       <div class="kpi-sub">${escapeHtml(k.sub)}</div>
     </div>
   `).join('');
 }
 
-function buildExecSummary(items){
-  if(!items.length) return 'Nenhum sinal relevante identificado no período selecionado.';
-
-  const counts = {};
-  COMPETITOR_ORDER.forEach(c => counts[c] = 0);
-  items.forEach(i => { if(counts[i.competitor_group] !== undefined) counts[i.competitor_group]++; });
-
-  const active = COMPETITOR_ORDER.filter(c => counts[c] > 0).sort((a,b) => counts[b]-counts[a]);
-  const inactive = COMPETITOR_ORDER.filter(c => counts[c] === 0);
-
-  let sentence1 = '';
-  if(active.length){
-    const topCount = counts[active[0]];
-    const top = active.filter(c => counts[c] === topCount).slice(0, 2);
-    const names = top.length > 1 ? `${top[0]} e ${top[1]}` : top[0];
-    const verb = top.length > 1 ? 'concentraram' : 'concentrou';
-    const total = top.reduce((s,c) => s + counts[c], 0);
-    sentence1 = `${names} ${verb} a maior atividade do período, com ${total} ${total === 1 ? 'sinal monitorado' : 'sinais monitorados'}.`;
-  }
-
-  let sentence2 = '';
-  const highlight = items
-    .filter(i => i.daily_trigger && i.relevance === 'alta')
-    .sort((a,b) => new Date(b.published_at) - new Date(a.published_at))[0]
-    || items.filter(i => i.daily_trigger).sort((a,b) => new Date(b.published_at) - new Date(a.published_at))[0];
-  if(highlight){
-    sentence2 = ` O evento de maior destaque foi do ${highlight.competitor_group}: "${highlight.title}".`;
-  }
-
-  let sentence3 = '';
-  if(inactive.length){
-    const list = inactive.length === 1 ? inactive[0] : `${inactive.slice(0,-1).join(', ')} e ${inactive[inactive.length-1]}`;
-    sentence3 = ` ${list} ${inactive.length === 1 ? 'não registrou' : 'não registraram'} sinais relevantes no período.`;
-  }
-
-  return `${sentence1}${sentence2}${sentence3}`.trim();
+/* ============================================================
+   TENDÊNCIA SEMANAL
+   Semana = segunda a domingo, calculada no fuso de Brasília com
+   aritmética em UTC (sem depender do fuso do navegador). Semanas
+   sem itens entram com 0, até a semana atual.
+============================================================ */
+function trendItems(){
+  return RAW_ITEMS.filter(item => {
+    if(ACTIVE_AXES.size && !item.axes.some(a => ACTIVE_AXES.has(a))) return false;
+    if(ACTIVE_COMPETITORS.size && !ACTIVE_COMPETITORS.has(item.competitor_group)) return false;
+    return true;
+  });
 }
 
-function renderCompetitorGrid(items){
-  const summaries = buildCompetitorSummaries(items);
-  const grid = document.getElementById('competitor-grid');
-  grid.innerHTML = summaries.map(c => `
-    <div class="competitor-card">
-      <div class="competitor-card-head">
-        <span class="competitor-name">${escapeHtml(c.name)}</span>
-        <span class="status-pill ${c.active ? 'ativo' : 'estavel'}">${c.active ? 'ativo' : 'estável'}</span>
-      </div>
-      <div class="competitor-bar"><span style="width:${c.barWidth}%;background:${c.active ? COLOR_DARK : '#C7C7C7'}"></span></div>
-      <div class="competitor-count">${c.count} ${c.count === 1 ? 'sinal' : 'sinais'} no período</div>
-      ${c.active
-        ? c.highlights.map(h => `<div class="competitor-highlight">${escapeHtml(h.title)}</div>`).join('')
-        : `<div class="competitor-empty">Sem sinais relevantes no período.</div>`}
-    </div>
-  `).join('');
+// Segunda-feira (00:00 UTC, em ms) da semana em que o instante cai, no calendário de Brasília.
+function mondayOf(ms){
+  const p = {};
+  YMD_FMT.formatToParts(ms).forEach(x => { if(x.type !== 'literal') p[x.type] = x.value; });
+  const u = Date.UTC(+p.year, +p.month - 1, +p.day);
+  const dow = new Date(u).getUTCDay();   // 0 = domingo
+  return u + (dow === 0 ? -6 : 1 - dow) * DAY_MS;
 }
 
-function renderTimeline(items){
-  const el = document.getElementById('timeline');
-  if(!items.length){
-    el.innerHTML = `<div class="empty-state">Nenhum item no período.</div>`;
+function trendSeries(){
+  const buckets = new Map();
+  trendItems().forEach(i => {
+    const k = mondayOf(i._ts);
+    buckets.set(k, (buckets.get(k) || 0) + 1);
+  });
+  if(!buckets.size) return {labels:[], values:[]};
+
+  const keys = [...buckets.keys()];
+  let start = Math.min(...keys);
+  const end = Math.max(mondayOf(Date.now()), Math.max(...keys));
+  const maxSpan = (MAX_TREND_WEEKS - 1) * 7 * DAY_MS;
+  if(end - start > maxSpan) start = end - maxSpan;
+
+  const labels = [], values = [];
+  for(let t = start; t <= end; t += 7 * DAY_MS){
+    labels.push('sem. ' + UTC_DATE_FMT.format(t));
+    values.push(buckets.get(t) || 0);
+  }
+  return {labels, values};
+}
+
+/* ============================================================
+   GRÁFICOS — degradam para texto se o Chart.js não carregar
+============================================================ */
+function chartState(){
+  if(typeof window.Chart === 'function') return 'ready';
+  return window.__chartjs === 'failed' ? 'failed' : 'loading';
+}
+
+function showChartNote(canvas, note, msg){
+  canvas.hidden = true;
+  note.hidden = false;
+  note.textContent = msg;
+}
+
+function paintChart(key, spec){
+  const canvas = document.getElementById(spec.canvasId);
+  const note = document.getElementById(spec.noteId);
+  const summary = spec.summary || spec.labels.map((l,i) => `${l}: ${spec.values[i]}`).join(' · ');
+
+  canvas.setAttribute('aria-label', `${spec.title}. ${summary || 'Sem dados.'}`);
+
+  if(CHARTS[key]){ CHARTS[key].destroy(); CHARTS[key] = null; }
+
+  if(!spec.labels.length){ showChartNote(canvas, note, spec.emptyMsg); return; }
+  const state = chartState();
+  if(state === 'failed'){
+    showChartNote(canvas, note, `Gráfico indisponível (a biblioteca de gráficos não carregou). ${spec.title} — ${summary}`);
     return;
   }
-  const sorted = items.slice().sort((a,b) => new Date(b.published_at) - new Date(a.published_at));
-  el.innerHTML = sorted.map(it => {
-    const trigger = !!it.daily_trigger;
-    const bulletColor = trigger ? COLOR_RED : '#C7C7C7';
-    const bulletRadius = trigger ? '1px' : '50%';
-    return `
-      <div class="timeline-row">
-        <div class="timeline-date">${fmtShort(it.published_at)}</div>
-        <div class="timeline-bullet-wrap"><span class="timeline-bullet" style="background:${bulletColor};border-radius:${bulletRadius};"></span></div>
-        <div class="timeline-body">
-          <span class="timeline-icon">${axisIconsHtml(it, '#6D6D6D')}</span>
-          <span class="timeline-comp">${escapeHtml(it.competitor_group)}</span>
-          <span class="timeline-title">— <a href="${escapeAttr(it.link)}" target="_blank" rel="noopener">${escapeHtml(it.title)}</a></span>
+  if(state === 'loading'){ showChartNote(canvas, note, 'Carregando gráfico…'); return; }
+
+  canvas.hidden = false;
+  note.hidden = true;
+  CHARTS[key] = new Chart(canvas, spec.config);
+}
+
+function renderTrendChart(){
+  const {labels, values} = trendSeries();
+  const total = values.reduce((a,b) => a + b, 0);
+  const peak = Math.max(0, ...values);
+  const summary = labels.length
+    ? `${labels.length} semanas, ${total} itens no total; pico de ${peak} em ${labels[values.indexOf(peak)]}`
+    : '';
+  paintChart('trend', {
+    canvasId:'trend-chart', noteId:'trend-note',
+    title:'Itens ao longo do tempo, por semana', labels, values, summary,
+    emptyMsg:'Sem itens para exibir.',
+    config:{
+      type:'bar',
+      data:{labels, datasets:[{data:values, backgroundColor:COLOR_DARK, borderRadius:3}]},
+      options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true, ticks:{precision:0}}}, animation:false}
+    }
+  });
+}
+
+function renderCharts(items){
+  const axisCounts = AXES.map(a => items.filter(i => i.axes.includes(a)).length);
+  const axisColors = AXES.map(a => a === RISK_AXIS ? COLOR_RED : COLOR_DARK);
+  const compCounts = COMPETITORS.map(c => items.filter(i => i.competitor_group === c).length);
+
+  paintChart('axis', {
+    canvasId:'axis-chart', noteId:'axis-note',
+    title:'Itens por eixo', labels:AXES, values:axisCounts,
+    emptyMsg:'Sem eixos para exibir.',
+    config:{
+      type:'bar',
+      data:{labels:AXES, datasets:[{data:axisCounts, backgroundColor:axisColors, borderRadius:3}]},
+      options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true, ticks:{precision:0}}}, animation:false}
+    }
+  });
+
+  paintChart('competitor', {
+    canvasId:'competitor-chart', noteId:'competitor-note',
+    title:'Itens por concorrente', labels:COMPETITORS, values:compCounts,
+    emptyMsg:'Sem concorrentes para exibir.',
+    config:{
+      type:'bar',
+      data:{labels:COMPETITORS, datasets:[{data:compCounts, backgroundColor:COLOR_DARK, borderRadius:3}]},
+      options:{indexAxis:'y', responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{x:{beginAtZero:true, ticks:{precision:0}}}, animation:false}
+    }
+  });
+}
+
+// Cada gráfico é isolado: um erro em um não derruba os outros nem o feed.
+function renderChartsSafe(items){
+  [
+    ['tendência', renderTrendChart],
+    ['eixos e concorrentes', () => renderCharts(items)],
+  ].forEach(([name, fn]) => safeStep(name, fn));
+}
+
+/* ============================================================
+   FEED E ALERTAS
+============================================================ */
+function linkOrText(label, url){
+  const safe = safeUrl(url);
+  return safe
+    ? `<a href="${escapeHtml(safe)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a>`
+    : escapeHtml(label);
+}
+
+function sourceHtml(item){
+  const primary = linkOrText(item.source, item.link);
+  const extra = item.also_reported_by;
+  if(!extra.length) return `${primary} · ${fmtDate(item._ts)}`;
+  const extraLinks = extra.map(s => linkOrText(s.source, s.link)).join(', ');
+  return `${primary} <span style="color:var(--grey-500)">também:</span> ${extraLinks} · ${fmtDate(item._ts)}`;
+}
+
+function itemCardHtml(item, defaultOpen){
+  const relClass = item.relevance === 'alta' ? 'alta' : 'media';
+  const sourceCount = 1 + item.also_reported_by.length;
+  return `
+    <details ${defaultOpen ? 'open' : ''} class="item-card ${item.daily_trigger ? 'trigger' : ''}">
+      <summary class="item-summary">
+        <span class="item-title">${escapeHtml(item.title)}</span>
+        <span class="item-summary-meta">${escapeHtml(item.competitor_group)} · ${fmtDate(item._ts)}</span>
+      </summary>
+      <div class="item-body">
+        <div class="item-why">${escapeHtml(item.why_it_matters)}</div>
+        <div class="item-foot">
+          <div class="item-tags">
+            ${item.axes.map(a => `<span class="tag ${a === RISK_AXIS ? 'risk' : ''}">${escapeHtml(a)}</span>`).join('')}
+            ${item.daily_trigger ? '<span class="trigger-badge">gatilho diário</span>' : ''}
+            ${item.relevance ? `<span class="relevance-badge ${relClass}">relevância ${escapeHtml(item.relevance)}</span>` : ''}
+            ${sourceCount > 1 ? `<span class="source-badge">${sourceCount} fontes</span>` : ''}
+          </div>
+          <div>${sourceHtml(item)}</div>
         </div>
-        <div class="timeline-source">${escapeHtml(it.source)}</div>
       </div>
-    `;
-  }).join('');
+    </details>
+  `;
+}
+
+function alertItems(){
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - 7);
+  const cutoffTs = cutoff.getTime();
+  return RAW_ITEMS.filter(i => i.daily_trigger && i._ts >= cutoffTs)
+    .sort((a,b) => b._ts - a._ts);
+}
+
+function renderAlerts(){
+  const items = alertItems();
+  const section = document.getElementById('alerts-section');
+  if(!items.length){ section.style.display = 'none'; return; }
+  section.style.display = '';
+  document.getElementById('alerts-feed').innerHTML = items.map(i => itemCardHtml(i, true)).join('');
 }
 
 function renderFeed(items){
-  document.getElementById('feed-count').textContent = `${items.length} ${items.length === 1 ? 'item' : 'itens'}`;
+  document.getElementById('feed-count').textContent = `${items.length} itens`;
   const feed = document.getElementById('feed');
 
   if(!items.length){
-    feed.innerHTML = `<div class="empty-state">Nenhum item encontrado com esses filtros. Tente ampliar o período ou limpar os filtros de eixo/concorrente.</div>`;
+    const msg = RAW_ITEMS.length
+      ? 'Nenhum item encontrado com esses filtros. Tente ampliar o período ou limpar os filtros de eixo/concorrente.'
+      : 'O data.json foi carregado, mas não contém itens válidos para exibir.';
+    feed.innerHTML = `<div class="empty-state">${escapeHtml(msg)}</div>`;
     return;
   }
 
-  const sorted = items.slice().sort((a,b) => new Date(b.published_at) - new Date(a.published_at));
-  feed.innerHTML = sorted.map(itemCardHtml).join('');
+  feed.innerHTML = items.map(item => itemCardHtml(item, false)).join('');
 }
 
+/* ============================================================
+   CABEÇALHO: atualização, dados desatualizados, avisos
+============================================================ */
+function makeBadge(cls, msg){
+  const span = document.createElement('span');
+  span.className = cls;
+  span.setAttribute('role', 'status');
+  span.textContent = msg;
+  return span;
+}
+
+function humanAge(hours){
+  return hours < 48 ? `há ${Math.floor(hours)} h` : `há ${Math.floor(hours / 24)} dias`;
+}
+
+function updateMeta(){
+  const upd = document.getElementById('updated-at');
+  const stale = document.getElementById('stale-flag-holder');
+  const sample = document.getElementById('sample-flag-holder');
+  stale.textContent = '';
+  sample.textContent = '';
+
+  if(LAST_DEMO){
+    upd.textContent = 'Modo demonstração';
+    sample.appendChild(makeBadge('sample-flag', 'dados de exemplo'));
+    return;
+  }
+
+  const ts = LAST_GENERATED_AT ? Date.parse(LAST_GENERATED_AT) : NaN;
+  if(!isFinite(ts)){
+    upd.textContent = 'Data de atualização indisponível';
+    stale.appendChild(makeBadge('stale-flag', 'Não foi possível confirmar se os dados estão atualizados'));
+    return;
+  }
+
+  upd.textContent = `Atualizado em ${fmtDate(ts)} às ${TIME_FMT.format(ts)}`;
+  const ageHours = (Date.now() - ts) / 3600000;
+  if(ageHours > STALE_HOURS){
+    stale.appendChild(makeBadge('stale-flag', `Dados desatualizados · última atualização ${humanAge(ageHours)}`));
+  }
+}
+
+function setNotice(key, msg){
+  if(msg) NOTICES[key] = msg; else delete NOTICES[key];
+  document.getElementById('data-warning').textContent = Object.values(NOTICES).join(' · ');
+}
+
+function safeStep(name, fn){
+  try{
+    fn();
+    setNotice('render-' + name, '');
+  }catch(e){
+    console.error(`[radar] falha ao renderizar ${name}:`, e);
+    setNotice('render-' + name, `Falha ao exibir: ${name}.`);
+  }
+}
+
+/* ============================================================
+   ESTADOS DA PÁGINA: carregando / erro / painel
+============================================================ */
+function showLoading(){
+  const box = document.getElementById('load-status');
+  box.hidden = false;
+  box.className = 'banner';
+  box.setAttribute('role', 'status');
+  box.textContent = 'Carregando dados…';
+  document.getElementById('dashboard').hidden = true;
+  document.getElementById('filters').hidden = true;
+}
+
+function showLoadError(e){
+  const known = e instanceof LoadError;
+  if(!known) console.error('[radar] erro inesperado:', e);
+
+  const box = document.getElementById('load-status');
+  box.hidden = false;
+  box.className = 'banner banner-error';
+  box.setAttribute('role', 'alert');
+  box.textContent = '';
+
+  const h = document.createElement('strong');
+  h.textContent = 'Não foi possível carregar os dados do radar.';
+  const p = document.createElement('p');
+  p.textContent = known ? e.message : 'Ocorreu um erro inesperado ao montar o painel. Detalhes no console do navegador.';
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'chip';
+  btn.textContent = 'Tentar novamente';
+  btn.addEventListener('click', init);
+  box.append(h, p, btn);
+
+  document.getElementById('dashboard').hidden = true;
+  document.getElementById('filters').hidden = true;
+  document.getElementById('updated-at').textContent = 'Dados indisponíveis';
+  document.getElementById('stale-flag-holder').textContent = '';
+  document.getElementById('sample-flag-holder').textContent = '';
+}
+
+/* ============================================================
+   RENDER
+   Ordem: alertas, KPIs e feed primeiro; gráficos por último.
+   Cada etapa é isolada (safeStep).
+============================================================ */
 function render(){
   const items = filteredItems();
-  document.getElementById('exec-summary').textContent = buildExecSummary(items);
-  renderKPIs(items);
-  renderCompetitorGrid(items);
-  renderTimeline(items);
-  renderFeed(items);
-}
-window.render = render;
-
-function axisCountsInPeriod(){
-  const cutoff = new Date();
-  cutoff.setDate(cutoff.getDate() - PERIOD_DAYS);
-  const inPeriod = RAW_ITEMS.filter(i => new Date(i.published_at) >= cutoff);
-  const counts = {};
-  AXES.forEach(a => counts[a] = 0);
-  inPeriod.forEach(i => i.axes.forEach(a => { if(counts[a] !== undefined) counts[a]++; }));
-  return counts;
-}
-
-function competitorCountsInPeriod(){
-  const cutoff = new Date();
-  cutoff.setDate(cutoff.getDate() - PERIOD_DAYS);
-  const inPeriod = RAW_ITEMS.filter(i => new Date(i.published_at) >= cutoff);
-  const counts = {};
-  inPeriod.forEach(i => counts[i.competitor_group] = (counts[i.competitor_group]||0) + 1);
-  return counts;
-}
-
-let COMPETITOR_LIST = [];
-
-function refreshSidebarCounts(){
-  buildSidebarList(document.getElementById('axis-chips'), AXES, ACTIVE_AXES, v => {
-    ACTIVE_AXES.has(v) ? ACTIVE_AXES.delete(v) : ACTIVE_AXES.add(v);
-  }, axisCountsInPeriod());
-  buildSidebarList(document.getElementById('competitor-chips'), COMPETITOR_LIST, ACTIVE_COMPETITORS, v => {
-    ACTIVE_COMPETITORS.has(v) ? ACTIVE_COMPETITORS.delete(v) : ACTIVE_COMPETITORS.add(v);
-  }, competitorCountsInPeriod());
+  syncFilterUI();
+  safeStep('alertas', renderAlerts);
+  safeStep('KPIs', () => renderKPIs(items));
+  safeStep('feed', () => renderFeed(items));
+  renderChartsSafe(items);
 }
 
 async function init(){
-  const {items, generatedAt, sample} = await loadData();
-  RAW_ITEMS = items;
+  APP_READY = false;
+  showLoading();
+  try{
+    const {items, invalid, generatedAt, demo} = await loadData();
 
-  document.getElementById('updated-at').textContent = generatedAt
-    ? `Atualizado em ${fmtUpdated(generatedAt)}`
-    : 'Ainda sem execução automática';
+    RAW_ITEMS = items;
+    AXES = deriveAxes(items);
+    COMPETITORS = deriveCompetitors(items);
+    ACTIVE_AXES.clear();
+    ACTIVE_COMPETITORS.clear();
+    LAST_GENERATED_AT = generatedAt;
+    LAST_DEMO = demo;
 
-  if(sample){
-    document.getElementById('sample-flag-holder').innerHTML = '<span class="sample-flag">dados de exemplo</span>';
+    updateMeta();
+    document.getElementById('brand-sub').textContent = COMPETITORS.length
+      ? COMPETITORS.join(' · ')
+      : 'Monitoramento de concorrentes';
+    setNotice('invalid', invalid ? `${invalid} ${invalid === 1 ? 'item ignorado' : 'itens ignorados'} por dados inválidos.` : '');
+    if(invalid) console.warn(`[radar] ${invalid} item(ns) do data.json descartado(s) na validação.`);
+
+    buildChips(document.getElementById('axis-chips'), AXES, ACTIVE_AXES);
+    buildChips(document.getElementById('competitor-chips'), COMPETITORS, ACTIVE_COMPETITORS);
+
+    document.getElementById('load-status').hidden = true;
+    document.getElementById('dashboard').hidden = false;
+    document.getElementById('filters').hidden = false;
+    APP_READY = true;
+    render();
+  }catch(e){
+    showLoadError(e);
   }
-
-  const competitorsSeen = [...new Set(RAW_ITEMS.map(i => i.competitor_group))];
-  COMPETITOR_LIST = COMPETITOR_ORDER.filter(c => competitorsSeen.includes(c))
-    .concat(competitorsSeen.filter(c => !COMPETITOR_ORDER.includes(c)));
-
-  refreshSidebarCounts();
-  renderPeriodTabs();
-  render();
 }
+
+/* ============================================================
+   BOOTSTRAP (listeners globais registrados uma única vez)
+============================================================ */
+document.getElementById('period-select').addEventListener('change', render);
+document.getElementById('clear-filters').addEventListener('click', () => {
+  ACTIVE_AXES.clear();
+  ACTIVE_COMPETITORS.clear();
+  render();
+  const first = document.querySelector('#axis-chips .chip, #competitor-chips .chip');
+  if(first) first.focus();
+});
+window.addEventListener('chartjs-ready', () => { if(APP_READY) renderChartsSafe(filteredItems()); });
+window.addEventListener('chartjs-failed', () => { if(APP_READY) renderChartsSafe(filteredItems()); });
+setTimeout(() => {
+  if(chartState() === 'loading'){
+    window.__chartjs = 'failed';
+    if(APP_READY) renderChartsSafe(filteredItems());
+  }
+}, CHART_LOAD_TIMEOUT_MS);
+setInterval(() => { if(APP_READY) updateMeta(); }, 30 * 60 * 1000);   // aba aberta por horas também detecta dado velho
 
 init();
 </script>
