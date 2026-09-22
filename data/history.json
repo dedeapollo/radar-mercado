@@ -4346,5 +4346,27 @@
     "why_it_matters": "Lançamento de consórcio com pontuação pelo BTG amplia portfólio de produtos de varejo e pode atrair clientes que buscam alternativas de crédito com benefícios, pressionando concorrentes a oferecer produtos similares.",
     "relevance": "alta",
     "also_reported_by": []
+  },
+  {
+    "competitor_group": "BTG Pactual",
+    "matched_alias": "BTG Pactual",
+    "title": "Venda de carteira de crédito do BRB para o BTG trava registro de imóveis - Metrópoles",
+    "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOdzE5WDNTZVFDajluY2hVVWowYkVUSDUzbEZadWcxbDFDMU1yYjdFMjc5bWhrSEl3VzRTcUg5d1FxZ0I4MWNaZ0R1NDJDem10c1hfNjYyaGxQQjhtMVRMZ3NZejlXZ3A0ZzYyeXBmcmlZVDRsY1IwRXdTbUk2anEtSDJ5a0pqR2JmU0h6bjZIVUIzWXhmT0VrVUpHaGlPdlhwc1JpRnpWeDdJUnZ5RnZhaFJGOVBhNDNZeTdCZUp3WTZCOVVaaXc?oc=5",
+    "source": "Metrópoles",
+    "published_at": "2026-09-22T05:45:00+00:00",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxOdzE5WDNTZVFDajluY2hVVWowYkVUSDUzbEZadWcxbDFDMU1yYjdFMjc5bWhrSEl3VzRTcUg5d1FxZ0I4MWNaZ0R1NDJDem10c1hfNjYyaGxQQjhtMVRMZ3NZejlXZ3A0ZzYyeXBmcmlZVDRsY1IwRXdTbUk2anEtSDJ5a0pqR2JmU0h6bjZIVUIzWXhmT0VrVUpHaGlPdlhwc1JpRnpWeDdJUnZ5RnZhaFJGOVBhNDNZeTdCZUp3WTZCOVVaaXc?oc=5\" target=\"_blank\">Venda de carteira de crédito do BRB para o BTG trava registro de imóveis</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Metrópoles</font>",
+    "source_indices": [
+      35
+    ],
+    "primary_index": 35,
+    "axes": [
+      "Risco/Regulação"
+    ],
+    "confirmation": "confirmado",
+    "daily_trigger": false,
+    "trigger_reason": null,
+    "why_it_matters": "A operação de compra de carteira de crédito do BRB pelo BTG envolve crédito corporativo e não afeta diretamente o cliente investidor pessoa física, sendo contexto estratégico.",
+    "relevance": "média",
+    "also_reported_by": []
   }
 ]
