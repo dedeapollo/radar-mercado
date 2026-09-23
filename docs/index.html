@@ -123,48 +123,6 @@
   a{color:var(--black); text-decoration:underline; text-decoration-color:var(--grey-300);}
   a:hover{color:var(--red); text-decoration-color:var(--red);}
 
-  /* ---------- header ---------- */
-  header{
-    background:var(--white);
-    border-bottom:3px solid var(--red);
-  }
-  .header-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:20px;
-    flex-wrap:wrap;
-    max-width:1280px;
-    margin:0 auto;
-    padding:22px 32px 18px;
-  }
-  .brand{display:flex;align-items:center;gap:14px;}
-  .brand-mark{
-    width:40px;height:40px;flex:none;
-    display:flex;align-items:center;justify-content:center;
-  }
-  .brand-mark svg{width:36px;height:auto;display:block;}
-  .brand h1{
-    font-family:var(--sans);
-    font-weight:800;
-    font-size:19px;
-    letter-spacing:0.5px;
-    text-transform:uppercase;
-    margin:0;
-    color:var(--black);
-  }
-  .brand p{
-    margin:3px 0 0;
-    font-size:12.5px;
-    color:var(--grey-500);
-    font-weight:500;
-  }
-  .meta{
-    text-align:right;
-    font-size:12.5px;
-    color:var(--grey-500);
-    font-weight:500;
-  }
   .meta .sample-flag{
     display:inline-block;
     margin-top:6px;
@@ -177,17 +135,6 @@
     font-weight:600;
   }
 
-  .filters{
-    max-width:1280px;
-    margin:0 auto;
-    display:flex;
-    gap:24px;
-    align-items:center;
-    flex-wrap:wrap;
-    padding:14px 32px;
-    background:var(--grey-50);
-    border-top:1px solid var(--grey-200);
-  }
   .filter-block{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
   .filter-label{
     font-size:11px;
@@ -220,8 +167,6 @@
     font-size:12.5px;
   }
 
-  /* ---------- layout ---------- */
-  main{max-width:1280px;margin:0 auto;padding:28px 32px 64px;}
 
   .kpi-row{
     display:grid;
@@ -417,12 +362,122 @@
     100%{box-shadow:0 0 0 0 rgba(236,0,0,0);}
   }
 
-  footer{
-    max-width:1280px;
-    margin:0 auto;
-    padding:0 32px 40px;
-    font-size:12px;
-    color:var(--grey-500);
+
+  /* ============================================================
+     TRACE — SHELL: sidebar, topbar, visões
+  ============================================================ */
+  .skip-link{
+    position:absolute;left:var(--sp-4);top:-60px;z-index:100;
+    background:var(--ink);color:var(--white);padding:var(--sp-2) var(--sp-4);
+    font-size:var(--fs-small);font-weight:600;text-decoration:none;
+  }
+  .skip-link:focus{top:var(--sp-4);color:var(--white);}
+
+  .app{display:flex;min-height:100vh;}
+
+  .sidebar{
+    position:sticky;top:0;align-self:flex-start;
+    width:var(--sidebar-w);flex:none;height:100vh;
+    display:flex;flex-direction:column;
+    background:var(--white);
+    border-right:1px solid var(--line);
+    padding:var(--sp-6) var(--sp-5) var(--sp-5);
+  }
+  .brand{display:flex;align-items:flex-start;gap:var(--sp-3);padding:0 var(--sp-3);}
+  .brand-glyph{display:inline-flex;flex-direction:column;gap:4px;padding-top:6px;flex:none;}
+  .brand-glyph i{display:block;height:2px;background:var(--ink);border-radius:1px;}
+  .brand-glyph i:nth-child(1){width:18px;}
+  .brand-glyph i:nth-child(2){width:12px;}
+  .brand-glyph i:nth-child(3){width:18px;}
+  .brand-name{
+    margin:0;font-size:20px;font-weight:600;line-height:1.2;
+    letter-spacing:var(--tracking-brand);color:var(--ink);
+  }
+  .brand-tagline{margin:var(--sp-2) 0 0;font-size:12px;color:var(--gray-700);letter-spacing:.01em;}
+
+  .nav{margin-top:var(--sp-9);}
+  .nav ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:var(--sp-1);}
+  .nav-link{
+    display:flex;align-items:center;gap:var(--sp-3);
+    min-height:44px;padding:0 var(--sp-3);
+    font-size:14px;font-weight:500;color:var(--gray-700);
+    text-decoration:none;border-radius:var(--radius);
+  }
+  a.nav-link:hover{background:var(--gray-100);color:var(--ink);}
+  .nav-link[aria-current="page"]{background:var(--gray-100);color:var(--ink);font-weight:600;}
+  .nav-icon{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+  .nav-dot{margin-left:auto;width:6px;height:6px;border-radius:50%;background:var(--red);visibility:hidden;}
+  .nav-link.has-alert .nav-dot{visibility:visible;}
+  .nav-link.is-soon{color:var(--gray-500);cursor:default;}
+  .nav-soon{margin-left:auto;white-space:nowrap;font-size:11px;font-weight:500;color:var(--gray-500);}
+
+  .sidebar-foot{
+    margin-top:auto;padding:var(--sp-4) var(--sp-3) 0;
+    border-top:1px solid var(--line);
+    display:flex;align-items:center;gap:var(--sp-2);
+    font-size:12px;color:var(--gray-500);
+  }
+  .sant-mark svg{width:14px;height:auto;display:block;}
+
+  .app-main{flex:1;min-width:0;display:flex;flex-direction:column;}
+  .topbar,
+  main{width:100%;max-width:var(--content-max);margin:0 auto;padding-left:var(--sp-8);padding-right:var(--sp-8);}
+  .topbar{
+    display:flex;align-items:center;gap:var(--sp-4);
+    padding-top:var(--sp-5);padding-bottom:var(--sp-5);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar-title{margin:0;font-size:var(--fs-small);color:var(--gray-700);}
+  .menu-btn{
+    display:none;align-items:center;justify-content:center;
+    width:44px;height:44px;margin-left:calc(-1 * var(--sp-3));
+    background:none;border:0;cursor:pointer;border-radius:var(--radius);
+  }
+  .menu-btn .brand-glyph{padding-top:0;}
+  .meta{margin-left:auto;text-align:right;font-size:var(--fs-small);color:var(--gray-700);}
+  .meta-line{display:flex;align-items:center;justify-content:flex-end;gap:var(--sp-2);}
+  .status-dot{width:7px;height:7px;border-radius:50%;background:var(--gray-300);flex:none;}
+  .status-dot.is-ok{background:var(--ok);}
+  .status-dot.is-stale{background:var(--red);}
+
+  main{padding-top:var(--sp-8);padding-bottom:var(--sp-8);flex:1;}
+  main:focus{outline:none;}
+  .view[hidden]{display:none;}
+  .view-heading{margin-top:var(--sp-3);}
+  .view-heading:focus{outline:none;}
+  .view-sub{margin:var(--sp-3) 0 var(--sp-7);font-size:var(--fs-body);}
+  .view-placeholder{margin-top:var(--sp-5);max-width:60ch;}
+
+  .filters{
+    display:flex;gap:var(--sp-5);align-items:center;flex-wrap:wrap;
+    padding:var(--sp-4) 0;margin-bottom:var(--sp-6);
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  }
+
+  .app-foot{
+    margin-top:var(--sp-8);padding-top:var(--sp-5);
+    border-top:1px solid var(--line);
+    font-size:12px;color:var(--gray-500);
+  }
+
+  /* ---------- telas estreitas: sidebar vira gaveta ---------- */
+  @media (max-width:960px){
+    .sidebar{
+      position:fixed;left:0;top:0;z-index:50;
+      transform:translateX(-100%);transition:transform .2s ease;
+      box-shadow:none;
+    }
+    .sidebar.is-open{transform:none;box-shadow:0 0 40px rgba(23,23,23,.18);}
+    .scrim{position:fixed;inset:0;z-index:40;background:rgba(23,23,23,.28);}
+    .scrim[hidden]{display:none;}
+    .menu-btn{display:inline-flex;}
+    .topbar,main{padding-left:var(--sp-4);padding-right:var(--sp-4);}
+    main{padding-top:var(--sp-6);}
+    :root{--fs-display:30px;}
+  }
+  @media (max-width:560px){
+    .topbar-title{display:none;}
+    .meta{font-size:12px;}
   }
 
   /* ============================================================
@@ -441,6 +496,7 @@
     color:var(--grey-700);
   }
   .banner[hidden], #dashboard[hidden], .filters[hidden]{display:none;}
+  .banner{border-radius:var(--radius);}
   .banner-error{border-left-color:var(--red);}
   .banner-error strong{display:block;color:var(--black);font-size:15px;margin-bottom:4px;}
   .banner-error p{margin:0 0 12px;line-height:1.5;}
@@ -501,6 +557,8 @@
   .chip-clear:focus-visible,
   select#period-select:focus-visible,
   .item-summary:focus-visible,
+  .menu-btn:focus-visible,
+  .nav-link:focus-visible,
   a:focus-visible{
     outline:2px solid var(--black);
     outline-offset:2px;
@@ -510,55 +568,89 @@
   @media (prefers-reduced-motion: reduce){
     .pulse-dot{animation:none;}
     .chip{transition:none;}
+    .sidebar{transition:none;}
   }
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
 
-<header>
-  <div class="header-top">
+<div class="app">
+  <aside class="sidebar" id="sidebar" aria-label="TRACE">
     <div class="brand">
-      <div class="brand-mark" role="img" aria-label="Santander">
-        <svg viewBox="0 0 43.9 41.9" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path fill="#EC0000" d="M 31.5,19.5 C 31.4,18 31,16.5 30.2,15.2 L 23.4,3.3 C 22.9,2.4 22.5,1.4 22.3,0.4 L 22,0.9 c -1.7,2.9 -1.7,6.6 0,9.5 l 5.5,9.5 c 1.7,2.9 1.7,6.6 0,9.5 l -0.3,0.5 c -0.2,-1 -0.6,-2 -1.1,-2.9 l -5,-8.7 -3.2,-5.6 C 17.4,11.8 17,10.8 16.8,9.8 l -0.3,0.5 c -1.7,2.9 -1.7,6.5 0,9.5 v 0 l 5.5,9.5 c 1.7,2.9 1.7,6.6 0,9.5 l -0.3,0.5 c -0.2,-1 -0.6,-2 -1.1,-2.9 L 13.7,24.5 C 12.8,22.9 12.4,21.1 12.4,19.3 5.1,21.2 0,25.3 0,30 0,36.6 9.8,41.9 21.9,41.9 34,41.9 43.8,36.6 43.8,30 43.9,25.5 38.9,21.4 31.5,19.5 Z"/></svg>
-      </div>
+      <span class="brand-glyph" aria-hidden="true"><i></i><i></i><i></i></span>
       <div>
-        <h1>Radar de Mercado</h1>
-        <p id="brand-sub">Monitoramento de concorrentes</p>
+        <p class="brand-name">TRACE</p>
+        <p class="brand-tagline" lang="en">Tracing what matters.</p>
       </div>
     </div>
-    <div class="meta">
-      <div id="updated-at">carregando…</div>
-      <div id="stale-flag-holder"></div>
-      <div id="sample-flag-holder"></div>
-      <div id="data-warning" class="data-warning" role="status"></div>
-    </div>
-  </div>
 
-  <div class="filters" id="filters" hidden>
-    <div class="filter-block" role="group" aria-labelledby="axis-label">
-      <span class="filter-label" id="axis-label">Eixo</span>
-      <div id="axis-chips"></div>
-    </div>
-    <div class="filter-block" role="group" aria-labelledby="competitor-label">
-      <span class="filter-label" id="competitor-label">Concorrente</span>
-      <div id="competitor-chips"></div>
-    </div>
-    <div class="filter-block">
-      <label class="filter-label" for="period-select">Período</label>
-      <select id="period-select">
-        <option value="7">7 dias</option>
-        <option value="30" selected>30 dias</option>
-        <option value="90">90 dias</option>
-        <option value="99999" data-sub="todo o histórico">Tudo</option>
-      </select>
-    </div>
-    <button type="button" class="chip-clear" id="clear-filters" hidden>Limpar filtros</button>
-  </div>
-</header>
+    <nav class="nav" aria-label="Navegação principal">
+      <ul>
+        <li><a class="nav-link" href="#visao-geral" data-route="visao-geral"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3 3 7.5l9 4.5 9-4.5L12 3Z"/><path d="m3 12 9 4.5 9-4.5"/><path d="m3 16.5 9 4.5 9-4.5"/></svg><span>Visão geral</span><span class="nav-dot" aria-hidden="true"></span></a></li>
+        <li><a class="nav-link" href="#sinais" data-route="sinais"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="1.6"/><path d="M8.5 8.5a5 5 0 0 0 0 7M15.5 8.5a5 5 0 0 1 0 7M5.6 5.6a9 9 0 0 0 0 12.8M18.4 5.6a9 9 0 0 1 0 12.8"/></svg><span>Sinais</span><span class="nav-dot" aria-hidden="true"></span></a></li>
+        <li><span class="nav-link is-soon" aria-disabled="true"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M9 20v-4h6v4M8 8h2M14 8h2M8 12h2M14 12h2"/></svg><span>Concorrentes</span><span class="nav-soon">em breve</span></span></li>
+        <li><span class="nav-link is-soon" aria-disabled="true"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4v16h16"/><path d="m7 15 4-4 3 3 5-6"/></svg><span>Estratégia</span><span class="nav-soon">em breve</span></span></li>
+        <li><span class="nav-link is-soon" aria-disabled="true"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span>Histórico</span><span class="nav-soon">em breve</span></span></li>
+      </ul>
+    </nav>
 
-<main>
+    <div class="sidebar-foot">
+      <span class="sant-mark"><svg viewBox="0 0 43.9 41.9" aria-hidden="true" focusable="false"><path fill="#EC0000" d="M 31.5,19.5 C 31.4,18 31,16.5 30.2,15.2 L 23.4,3.3 C 22.9,2.4 22.5,1.4 22.3,0.4 L 22,0.9 c -1.7,2.9 -1.7,6.6 0,9.5 l 5.5,9.5 c 1.7,2.9 1.7,6.6 0,9.5 l -0.3,0.5 c -0.2,-1 -0.6,-2 -1.1,-2.9 l -5,-8.7 -3.2,-5.6 C 17.4,11.8 17,10.8 16.8,9.8 l -0.3,0.5 c -1.7,2.9 -1.7,6.5 0,9.5 v 0 l 5.5,9.5 c 1.7,2.9 1.7,6.6 0,9.5 l -0.3,0.5 c -0.2,-1 -0.6,-2 -1.1,-2.9 L 13.7,24.5 C 12.8,22.9 12.4,21.1 12.4,19.3 5.1,21.2 0,25.3 0,30 0,36.6 9.8,41.9 21.9,41.9 34,41.9 43.8,36.6 43.8,30 43.9,25.5 38.9,21.4 31.5,19.5 Z"/></svg></span>
+      <span>Uso interno · Santander</span>
+    </div>
+  </aside>
+  <div class="scrim" id="scrim" hidden></div>
+
+  <div class="app-main">
+    <header class="topbar">
+      <button type="button" class="menu-btn" id="menu-btn" aria-controls="sidebar" aria-expanded="false">
+        <span class="brand-glyph" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="visually-hidden">Abrir menu</span>
+      </button>
+      <p class="topbar-title" lang="en">Competitive Intelligence</p>
+      <div class="meta">
+        <div class="meta-line"><span class="status-dot" id="status-dot" aria-hidden="true"></span><span id="updated-at">carregando…</span></div>
+        <div id="stale-flag-holder"></div>
+        <div id="sample-flag-holder"></div>
+        <div id="data-warning" class="data-warning" role="status"></div>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
   <div id="load-status" class="banner" role="status">Carregando dados…</div>
+
+      <section class="view" id="view-visao-geral" data-view="visao-geral" aria-labelledby="h-visao-geral" hidden>
+        <p class="t-eyebrow" id="greeting">Visão geral</p>
+        <h1 class="t-display view-heading" id="h-visao-geral" tabindex="-1">Visão geral</h1>
+        <p class="view-placeholder t-muted">A leitura de sinais da Visão geral entra na próxima etapa. Enquanto isso, o feed completo está em <a href="#sinais">Sinais</a>.</p>
+      </section>
+
+      <section class="view" id="view-sinais" data-view="sinais" aria-labelledby="h-sinais" hidden>
+        <p class="t-eyebrow">Sinais</p>
+        <h1 class="t-display view-heading" id="h-sinais" tabindex="-1">Todos os movimentos</h1>
+        <p class="view-sub t-muted">Feed completo do monitoramento, com filtros por eixo, concorrente e período.</p>
   <div id="dashboard" hidden>
+  <div class="filters" id="filters" hidden>
+      <div class="filter-block" role="group" aria-labelledby="axis-label">
+        <span class="filter-label" id="axis-label">Eixo</span>
+        <div id="axis-chips"></div>
+      </div>
+      <div class="filter-block" role="group" aria-labelledby="competitor-label">
+        <span class="filter-label" id="competitor-label">Concorrente</span>
+        <div id="competitor-chips"></div>
+      </div>
+      <div class="filter-block">
+        <label class="filter-label" for="period-select">Período</label>
+        <select id="period-select">
+          <option value="7">7 dias</option>
+          <option value="30" selected>30 dias</option>
+          <option value="90">90 dias</option>
+          <option value="99999" data-sub="todo o histórico">Tudo</option>
+        </select>
+      </div>
+      <button type="button" class="chip-clear" id="clear-filters" hidden>Limpar filtros</button>
+    </div>
   <section class="alerts-section" id="alerts-section" style="display:none;">
     <h2><span class="pulse-dot"></span>Últimos Alertas</h2>
     <div id="alerts-feed"></div>
@@ -588,11 +680,14 @@
   </div>
   <div id="feed"></div>
   </div><!-- /#dashboard -->
-</main>
+      </section>
 
-<footer>
-  Radar de Mercado — inteligência competitiva interna · dados coletados via portais de notícia e fontes públicas · não é aconselhamento de investimento
-</footer>
+      <footer class="app-foot">
+        Dados coletados de portais de notícia e fontes públicas · não é aconselhamento de investimento
+      </footer>
+    </main>
+  </div>
+</div>
 
 <script>
 /* ============================================================
@@ -1112,7 +1207,14 @@ function humanAge(hours){
   return hours < 48 ? `há ${Math.floor(hours)} h` : `há ${Math.floor(hours / 24)} dias`;
 }
 
+function setStatusDot(cls){
+  const dot = document.getElementById('status-dot');
+  dot.classList.remove('is-ok', 'is-stale');
+  if(cls) dot.classList.add(cls);
+}
+
 function updateMeta(){
+  setStatusDot('');
   const upd = document.getElementById('updated-at');
   const stale = document.getElementById('stale-flag-holder');
   const sample = document.getElementById('sample-flag-holder');
@@ -1121,19 +1223,26 @@ function updateMeta(){
 
   if(LAST_DEMO){
     upd.textContent = 'Modo demonstração';
+    upd.title = '';
     sample.appendChild(makeBadge('sample-flag', 'dados de exemplo'));
     return;
   }
 
   const ts = LAST_GENERATED_AT ? Date.parse(LAST_GENERATED_AT) : NaN;
   if(!isFinite(ts)){
-    upd.textContent = 'Data de atualização indisponível';
+    upd.textContent = 'Última leitura indisponível';
+    upd.title = '';
     stale.appendChild(makeBadge('stale-flag', 'Não foi possível confirmar se os dados estão atualizados'));
     return;
   }
 
-  upd.textContent = `Atualizado em ${fmtDate(ts)} às ${TIME_FMT.format(ts)}`;
+  const sameDay = YMD_FMT.format(ts) === YMD_FMT.format(Date.now());
+  upd.textContent = sameDay
+    ? `Última leitura · ${TIME_FMT.format(ts)}`
+    : `Última leitura · ${fmtDate(ts)}, ${TIME_FMT.format(ts)}`;
+  upd.title = `Dados gerados em ${fmtDate(ts)} às ${TIME_FMT.format(ts)} (horário de Brasília)`;
   const ageHours = (Date.now() - ts) / 3600000;
+  setStatusDot(ageHours > STALE_HOURS ? 'is-stale' : 'is-ok');
   if(ageHours > STALE_HOURS){
     stale.appendChild(makeBadge('stale-flag', `Dados desatualizados · última atualização ${humanAge(ageHours)}`));
   }
@@ -1191,6 +1300,7 @@ function showLoadError(e){
   document.getElementById('dashboard').hidden = true;
   document.getElementById('filters').hidden = true;
   document.getElementById('updated-at').textContent = 'Dados indisponíveis';
+  setStatusDot('is-stale');
   document.getElementById('stale-flag-holder').textContent = '';
   document.getElementById('sample-flag-holder').textContent = '';
 }
@@ -1224,9 +1334,6 @@ async function init(){
     LAST_DEMO = demo;
 
     updateMeta();
-    document.getElementById('brand-sub').textContent = COMPETITORS.length
-      ? COMPETITORS.join(' · ')
-      : 'Monitoramento de concorrentes';
     setNotice('invalid', invalid ? `${invalid} ${invalid === 1 ? 'item ignorado' : 'itens ignorados'} por dados inválidos.` : '');
     if(invalid) console.warn(`[radar] ${invalid} item(ns) do data.json descartado(s) na validação.`);
 
@@ -1242,6 +1349,74 @@ async function init(){
     showLoadError(e);
   }
 }
+
+/* ============================================================
+   NAVEGAÇÃO (rotas por hash) e gaveta da sidebar
+   Só rotas conhecidas e prontas; qualquer outro hash cai na Visão geral.
+============================================================ */
+const ROUTES = {
+  'visao-geral': 'Visão geral',
+  'sinais': 'Sinais',
+};
+const DEFAULT_ROUTE = 'visao-geral';
+let CURRENT_ROUTE = null;
+
+function routeFromHash(){
+  const key = decodeURIComponent(location.hash.replace(/^#/, ''));
+  return Object.prototype.hasOwnProperty.call(ROUTES, key) ? key : DEFAULT_ROUTE;
+}
+
+function applyRoute(moveFocus){
+  const route = routeFromHash();
+  const changed = route !== CURRENT_ROUTE;
+  CURRENT_ROUTE = route;
+
+  document.querySelectorAll('[data-view]').forEach(v => { v.hidden = v.dataset.view !== route; });
+  document.querySelectorAll('.nav-link[data-route]').forEach(a => {
+    if(a.dataset.route === route) a.setAttribute('aria-current', 'page');
+    else a.removeAttribute('aria-current');
+  });
+  document.title = `${ROUTES[route]} · TRACE`;
+
+  // canvas criado em aba oculta fica sem tamanho: redesenha ao entrar em Sinais
+  if(changed && route === 'sinais' && APP_READY) renderChartsSafe(filteredItems());
+
+  if(moveFocus && changed){
+    const h = document.getElementById('h-' + route);
+    if(h) h.focus({preventScroll:true});
+    window.scrollTo(0, 0);
+  }
+}
+
+function setDrawer(open){
+  const sidebar = document.getElementById('sidebar');
+  const btn = document.getElementById('menu-btn');
+  sidebar.classList.toggle('is-open', open);
+  document.getElementById('scrim').hidden = !open;
+  btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  if(open){
+    const cur = sidebar.querySelector('[aria-current="page"]') || sidebar.querySelector('a');
+    if(cur) cur.focus();
+  }
+}
+
+function isDrawerOpen(){
+  return document.getElementById('sidebar').classList.contains('is-open');
+}
+
+document.getElementById('menu-btn').addEventListener('click', () => setDrawer(!isDrawerOpen()));
+document.getElementById('scrim').addEventListener('click', () => setDrawer(false));
+document.addEventListener('keydown', e => {
+  if(e.key === 'Escape' && isDrawerOpen()){
+    setDrawer(false);
+    document.getElementById('menu-btn').focus();
+  }
+});
+document.querySelectorAll('.nav-link[data-route]').forEach(a => {
+  a.addEventListener('click', () => { if(isDrawerOpen()) setDrawer(false); });
+});
+window.addEventListener('hashchange', () => applyRoute(true));
+applyRoute(false);
 
 /* ============================================================
    BOOTSTRAP (listeners globais registrados uma única vez)
