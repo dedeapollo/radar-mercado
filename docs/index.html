@@ -446,7 +446,20 @@
   .view-heading{margin-top:var(--sp-3);}
   .view-heading:focus{outline:none;}
   .view-sub{margin:var(--sp-3) 0 var(--sp-7);font-size:var(--fs-body);}
-  .view-placeholder{margin-top:var(--sp-5);max-width:60ch;}
+  /* ---------- Visão geral: abertura ---------- */
+  .ov-hero{
+    display:flex;align-items:flex-end;justify-content:space-between;
+    gap:var(--sp-3) var(--sp-6);flex-wrap:wrap;
+    margin-bottom:var(--sp-7);
+  }
+  .ov-hero .t-display{font-size:44px;}
+  .ov-hero .t-display .t-alert{font-weight:500;}
+  .ov-count{margin:0 0 6px;font-size:14px;color:var(--gray-700);}
+  .ov-count:empty{display:none;}
+  @media (max-width:960px){
+    .ov-hero .t-display{font-size:32px;}
+    .ov-count{margin-bottom:0;}
+  }
 
   .filters{
     display:flex;gap:var(--sp-5);align-items:center;flex-wrap:wrap;
@@ -621,9 +634,13 @@
   <div id="load-status" class="banner" role="status">Carregando dados…</div>
 
       <section class="view" id="view-visao-geral" data-view="visao-geral" aria-labelledby="h-visao-geral" hidden>
-        <p class="t-eyebrow" id="greeting">Visão geral</p>
-        <h1 class="t-display view-heading" id="h-visao-geral" tabindex="-1">Visão geral</h1>
-        <p class="view-placeholder t-muted">A leitura de sinais da Visão geral entra na próxima etapa. Enquanto isso, o feed completo está em <a href="#sinais">Sinais</a>.</p>
+        <div class="ov-hero">
+          <div>
+            <p class="t-eyebrow" id="ov-greeting">Visão geral</p>
+            <h1 class="t-display view-heading" id="h-visao-geral" tabindex="-1">Carregando leitura…</h1>
+          </div>
+          <p class="ov-count" id="ov-count"></p>
+        </div>
       </section>
 
       <section class="view" id="view-sinais" data-view="sinais" aria-labelledby="h-sinais" hidden>
@@ -702,6 +719,7 @@ const CHART_LOAD_TIMEOUT_MS = 10000;   // tempo máximo esperando o Chart.js
 const MAX_TREND_WEEKS = 104;           // trava de segurança do gráfico de tendência
 const DAY_MS = 86400000;
 const DEMO = new URLSearchParams(location.search).get('demo') === '1';
+const ATTENTION_DAYS = 7;              // janela da Visão geral: sinais e movimentos dos últimos N dias
 
 // Só estilo: o eixo Risco/Regulação é o único destacado em vermelho.
 const RISK_AXIS = "Risco/Regulação";
@@ -1193,6 +1211,67 @@ function renderFeed(items){
 }
 
 /* ============================================================
+   VISÃO GERAL
+   Sinal que merece atenção = daily_trigger + relevância alta, nos
+   últimos ATTENTION_DAYS dias (contados a partir de agora: dado velho
+   reduz a contagem em vez de inflar a urgência).
+============================================================ */
+const HOUR_FMT = new Intl.DateTimeFormat('pt-BR', {timeZone:TZ, hour:'numeric', hourCycle:'h23'});
+
+function greeting(){
+  const h = parseInt(HOUR_FMT.format(new Date()), 10);
+  if(h >= 5 && h < 12) return 'Bom dia';
+  if(h >= 12 && h < 18) return 'Boa tarde';
+  return 'Boa noite';
+}
+
+function attentionCutoff(){
+  return Date.now() - ATTENTION_DAYS * DAY_MS;
+}
+
+function attentionSignals(){
+  const cutoff = attentionCutoff();
+  return RAW_ITEMS
+    .filter(i => i.daily_trigger && i.relevance === 'alta' && i._ts >= cutoff)
+    .sort((a,b) => b._ts - a._ts);
+}
+
+function recentMovements(){
+  const cutoff = attentionCutoff();
+  return RAW_ITEMS.filter(i => i._ts >= cutoff);
+}
+
+function setOverviewHeadline(count){
+  const h = document.getElementById('h-visao-geral');
+  h.textContent = '';
+  if(count === null){ h.textContent = 'Leitura indisponível'; return; }
+  if(count === 0){ h.textContent = 'Nenhum sinal exige atenção agora'; return; }
+  const strong = document.createElement('span');
+  strong.className = 't-alert';
+  strong.textContent = count === 1 ? '1 sinal' : `${count} sinais`;
+  h.append(strong, count === 1 ? ' merece sua atenção' : ' merecem sua atenção');
+}
+
+function renderOverview(){
+  document.getElementById('ov-greeting').textContent = greeting();
+  const signals = attentionSignals();
+  const moves = recentMovements().length;
+  setOverviewHeadline(signals.length);
+  document.getElementById('ov-count').textContent =
+    `${moves} ${moves === 1 ? 'movimento analisado' : 'movimentos analisados'} nos últimos ${ATTENTION_DAYS} dias`;
+  const nav = document.querySelector('.nav-link[data-route="visao-geral"]');
+  if(nav) nav.classList.toggle('has-alert', signals.length > 0);
+}
+
+function renderOverviewUnavailable(){
+  document.getElementById('ov-greeting').textContent = greeting();
+  setOverviewHeadline(null);
+  document.getElementById('ov-count').textContent = '';
+  const nav = document.querySelector('.nav-link[data-route="visao-geral"]');
+  if(nav) nav.classList.remove('has-alert');
+}
+
+/* ============================================================
    CABEÇALHO: atualização, dados desatualizados, avisos
 ============================================================ */
 function makeBadge(cls, msg){
@@ -1274,6 +1353,9 @@ function showLoading(){
   box.textContent = 'Carregando dados…';
   document.getElementById('dashboard').hidden = true;
   document.getElementById('filters').hidden = true;
+  document.getElementById('ov-greeting').textContent = greeting();
+  document.getElementById('h-visao-geral').textContent = 'Carregando leitura…';
+  document.getElementById('ov-count').textContent = '';
 }
 
 function showLoadError(e){
@@ -1300,6 +1382,7 @@ function showLoadError(e){
   document.getElementById('dashboard').hidden = true;
   document.getElementById('filters').hidden = true;
   document.getElementById('updated-at').textContent = 'Dados indisponíveis';
+  renderOverviewUnavailable();
   setStatusDot('is-stale');
   document.getElementById('stale-flag-holder').textContent = '';
   document.getElementById('sample-flag-holder').textContent = '';
@@ -1344,6 +1427,7 @@ async function init(){
     document.getElementById('dashboard').hidden = false;
     document.getElementById('filters').hidden = false;
     APP_READY = true;
+    safeStep('visão geral', renderOverview);
     render();
   }catch(e){
     showLoadError(e);
@@ -1437,7 +1521,11 @@ setTimeout(() => {
     if(APP_READY) renderChartsSafe(filteredItems());
   }
 }, CHART_LOAD_TIMEOUT_MS);
-setInterval(() => { if(APP_READY) updateMeta(); }, 30 * 60 * 1000);   // aba aberta por horas também detecta dado velho
+setInterval(() => {
+  if(!APP_READY) return;
+  updateMeta();
+  safeStep('visão geral', renderOverview);   // saudação e janela de 7 dias andam com o relógio
+}, 30 * 60 * 1000);   // aba aberta por horas também detecta dado velho
 
 init();
 </script>
