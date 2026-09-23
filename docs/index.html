@@ -456,7 +456,55 @@
   .ov-hero .t-display .t-alert{font-weight:500;}
   .ov-count{margin:0 0 6px;font-size:14px;color:var(--gray-700);}
   .ov-count:empty{display:none;}
+  /* ---------- Visão geral: sinal principal ---------- */
+  .signal{
+    display:grid;grid-template-columns:minmax(0,1.9fr) minmax(0,1fr);
+    background:var(--white);
+    border:1px solid var(--line);
+    border-left:3px solid var(--red);
+    box-shadow:var(--shadow-card);
+    margin-bottom:var(--sp-8);
+  }
+  .signal-main{padding:var(--sp-7) var(--sp-7) var(--sp-6);}
+  .signal-side{
+    padding:var(--sp-7) var(--sp-6) var(--sp-6);
+    border-left:1px solid var(--line);
+    display:flex;flex-direction:column;
+  }
+  .signal-top{display:flex;align-items:center;gap:var(--sp-4);flex-wrap:wrap;}
+  .signal-rule{width:26px;height:1px;background:var(--red);flex:none;}
+  .signal-when{font-size:var(--fs-small);color:var(--gray-700);}
+  .signal-who{margin:var(--sp-6) 0 var(--sp-3);font-size:14px;color:var(--gray-700);}
+  .signal-who strong{color:var(--ink);font-weight:600;}
+  .signal-who .sep{margin:0 var(--sp-2);color:var(--gray-300);}
+  .signal-title{max-width:34ch;}
+  .signal-why{margin-top:var(--sp-6);padding-top:var(--sp-5);border-top:1px solid var(--line);}
+  .signal-why p:not(.t-eyebrow){margin:var(--sp-3) 0 0;font-size:var(--fs-body);line-height:1.75;color:var(--gray-900);max-width:68ch;}
+  .reading{margin:var(--sp-5) 0 0;}
+  .reading-row{display:flex;justify-content:space-between;gap:var(--sp-4);padding:var(--sp-2) 0;font-size:14px;}
+  .reading-row dt{color:var(--gray-700);}
+  .reading-row dd{margin:0;text-align:right;font-weight:500;color:var(--ink);}
+  .reading-row dd.is-high{color:var(--red-ink);}
+  .reading-row dd small{display:block;font-weight:400;font-size:12px;color:var(--gray-500);}
+  .signal-source{margin-top:auto;padding-top:var(--sp-5);border-top:1px solid var(--line);}
+  .signal-source-label{margin:0 0 var(--sp-2);font-size:12px;color:var(--gray-500);}
+  .signal-source-link{
+    display:flex;align-items:center;justify-content:space-between;gap:var(--sp-3);
+    font-size:14px;font-weight:500;color:var(--ink);text-decoration:none;
+  }
+  a.signal-source-link:hover{color:var(--red-ink);}
+  .signal-source-link .arrow{flex:none;width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.5;}
+  .signal-more{margin:var(--sp-2) 0 0;font-size:12px;color:var(--gray-500);}
+
+  @media (max-width:1100px){
+    .signal{grid-template-columns:1fr;}
+    .signal-side{border-left:0;border-top:1px solid var(--line);}
+    .signal-source{margin-top:var(--sp-5);}
+  }
   @media (max-width:960px){
+    .signal-main{padding:var(--sp-5);}
+    .signal-side{padding:var(--sp-5);}
+    .signal-title{font-size:23px;}
     .ov-hero .t-display{font-size:32px;}
     .ov-count{margin-bottom:0;}
   }
@@ -641,6 +689,8 @@
           </div>
           <p class="ov-count" id="ov-count"></p>
         </div>
+
+        <div id="ov-signal"></div>
       </section>
 
       <section class="view" id="view-sinais" data-view="sinais" aria-labelledby="h-sinais" hidden>
@@ -797,6 +847,26 @@ function normRelevance(v){
   return '';
 }
 
+// Códigos de gatilho definidos em src/sources.py (DAILY_TRIGGER_CRITERIA).
+// Código desconhecido vira '' e a linha "Gatilho" simplesmente não aparece.
+const TRIGGER_LABELS = {
+  PRICE: 'Preço e condições',
+  LANC:  'Lançamento',
+  REG:   'Regulação',
+  INC:   'Incidente',
+  MA:    'M&A',
+  LID:   'Liderança',
+  TERMS: 'Termos de serviço',
+};
+function normTrigger(v){
+  const code = text(v).toUpperCase();
+  return Object.prototype.hasOwnProperty.call(TRIGGER_LABELS, code) ? code : '';
+}
+function normConfirmation(v){
+  const s = text(v).toLowerCase();
+  return (s === 'confirmado' || s === 'especulativo') ? s : '';
+}
+
 function normalizeItem(raw){
   if(!raw || typeof raw !== 'object' || Array.isArray(raw)) return null;
 
@@ -827,6 +897,8 @@ function normalizeItem(raw){
     daily_trigger: raw.daily_trigger === true || raw.daily_trigger === 'true' || raw.daily_trigger === 1,
     relevance: normRelevance(raw.relevance),
     also_reported_by: also,
+    trigger_reason: normTrigger(raw.trigger_reason),
+    confirmation: normConfirmation(raw.confirmation),
   };
 }
 
@@ -1252,11 +1324,129 @@ function setOverviewHeadline(count){
   h.append(strong, count === 1 ? ' merece sua atenção' : ' merecem sua atenção');
 }
 
+/* ---------- sinal principal ---------- */
+function displayTitle(item){
+  // Google News anexa " - Veículo" ao título; só remove quando o sufixo é a própria fonte.
+  const m = item.title.match(/\s[-–—]\s([^-–—]+)$/);
+  if(m && m[1].trim().toLowerCase() === item.source.trim().toLowerCase()){
+    const t = item.title.slice(0, m.index).trim();
+    if(t) return t;
+  }
+  return item.title;
+}
+
+function dayLabel(ts){
+  const ymd = YMD_FMT.format(ts);
+  if(ymd === YMD_FMT.format(Date.now())) return 'Hoje';
+  if(ymd === YMD_FMT.format(Date.now() - DAY_MS)) return 'Ontem';
+  return new Intl.DateTimeFormat('pt-BR', {timeZone:TZ, day:'2-digit', month:'2-digit'}).format(ts);
+}
+
+function whenLabel(ts){
+  return `${dayLabel(ts)} · ${TIME_FMT.format(ts)}`;
+}
+
+function relativeAge(ts){
+  const h = (Date.now() - ts) / 3600000;
+  if(h < 1) return 'há menos de 1 h';
+  if(h < 24) return `há ${Math.floor(h)} h`;
+  const d = Math.floor(h / 24);
+  return d === 1 ? 'há 1 dia' : `há ${d} dias`;
+}
+
+// Mais recente primeiro; empate: confirmado antes de especulativo, depois mais fontes.
+function pickLeadSignal(signals){
+  const score = i => [i._ts, i.confirmation === 'confirmado' ? 1 : 0, otherOutlets(i).length];
+  return [...signals].sort((a,b) => {
+    const sa = score(a), sb = score(b);
+    for(let k = 0; k < sa.length; k++) if(sa[k] !== sb[k]) return sb[k] - sa[k];
+    return 0;
+  })[0] || null;
+}
+
+const ARROW_SVG = '<svg class="arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 11 11 5M6 5h5v5"/></svg>';
+
+function readingRow(label, valueHtml, cls){
+  return `<div class="reading-row"><dt>${escapeHtml(label)}</dt><dd${cls ? ` class="${cls}"` : ''}>${valueHtml}</dd></div>`;
+}
+
+// Outros veículos, sem repetir o principal nem duplicatas (o data.json às vezes
+// lista o mesmo veículo em also_reported_by).
+function otherOutlets(item){
+  const seen = new Set([item.source.trim().toLowerCase()]);
+  const out = [];
+  item.also_reported_by.forEach(s => {
+    const k = s.source.trim().toLowerCase();
+    if(!seen.has(k)){ seen.add(k); out.push(s.source); }
+  });
+  return out;
+}
+
+function signalCardHtml(item){
+  const axis = item.axes[0] || '';
+  const others = otherOutlets(item);
+  const sources = 1 + others.length;
+  const impact = item.relevance === 'alta' ? 'Alto' : item.relevance === 'média' ? 'Médio' : '';
+
+  const rows = [];
+  if(impact) rows.push(readingRow('Impacto', escapeHtml(impact), item.relevance === 'alta' ? 'is-high' : ''));
+  if(item.trigger_reason) rows.push(readingRow('Gatilho', escapeHtml(TRIGGER_LABELS[item.trigger_reason])));
+  if(item.confirmation){
+    const conf = item.confirmation === 'confirmado' ? 'Confirmado' : 'Especulativo';
+    rows.push(readingRow('Confiança',
+      `${escapeHtml(conf)}<small>${sources} ${sources === 1 ? 'veículo' : 'veículos'}</small>`));
+  }
+
+  const url = safeUrl(item.link);
+  const sourceText = `${escapeHtml(item.source)} · ${escapeHtml(relativeAge(item._ts))}`;
+  const sourceHtml = url
+    ? `<a class="signal-source-link" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">
+         <span>${sourceText}<span class="visually-hidden"> (abre em nova aba)</span></span>${ARROW_SVG}</a>`
+    : `<p class="signal-source-link">${sourceText}</p>`;
+  const more = others.length
+    ? `<p class="signal-more">Também em ${escapeHtml(others.slice(0, 3).join(', '))}${others.length > 3 ? ` e mais ${others.length - 3}` : ''}</p>`
+    : '';
+
+  return `
+    <article class="signal" aria-labelledby="signal-title">
+      <div class="signal-main">
+        <div class="signal-top">
+          <span class="t-eyebrow is-alert">Alta atenção</span>
+          <span class="signal-rule" aria-hidden="true"></span>
+          <span class="signal-when">${escapeHtml(whenLabel(item._ts))}</span>
+        </div>
+        <p class="signal-who"><strong>${escapeHtml(item.competitor_group)}</strong>${axis ? `<span class="sep" aria-hidden="true">/</span><span class="visually-hidden">, eixo </span>${escapeHtml(axis)}` : ''}</p>
+        <h2 class="t-h1 signal-title" id="signal-title">${escapeHtml(displayTitle(item))}</h2>
+        ${item.why_it_matters ? `
+        <div class="signal-why">
+          <p class="t-eyebrow">Por que importa</p>
+          <p>${escapeHtml(item.why_it_matters)}</p>
+        </div>` : ''}
+      </div>
+      <aside class="signal-side" aria-label="Leitura TRACE">
+        <p class="t-eyebrow">Leitura TRACE</p>
+        ${rows.length ? `<dl class="reading">${rows.join('')}</dl>` : ''}
+        <div class="signal-source">
+          <p class="signal-source-label">Fonte</p>
+          ${sourceHtml}
+          ${more}
+        </div>
+      </aside>
+    </article>`;
+}
+
+function renderLeadSignal(signals){
+  const box = document.getElementById('ov-signal');
+  const lead = pickLeadSignal(signals);
+  box.innerHTML = lead ? signalCardHtml(lead) : '';
+}
+
 function renderOverview(){
   document.getElementById('ov-greeting').textContent = greeting();
   const signals = attentionSignals();
   const moves = recentMovements().length;
   setOverviewHeadline(signals.length);
+  renderLeadSignal(signals);
   document.getElementById('ov-count').textContent =
     `${moves} ${moves === 1 ? 'movimento analisado' : 'movimentos analisados'} nos últimos ${ATTENTION_DAYS} dias`;
   const nav = document.querySelector('.nav-link[data-route="visao-geral"]');
@@ -1267,6 +1457,7 @@ function renderOverviewUnavailable(){
   document.getElementById('ov-greeting').textContent = greeting();
   setOverviewHeadline(null);
   document.getElementById('ov-count').textContent = '';
+  document.getElementById('ov-signal').textContent = '';
   const nav = document.querySelector('.nav-link[data-route="visao-geral"]');
   if(nav) nav.classList.remove('has-alert');
 }
@@ -1356,6 +1547,7 @@ function showLoading(){
   document.getElementById('ov-greeting').textContent = greeting();
   document.getElementById('h-visao-geral').textContent = 'Carregando leitura…';
   document.getElementById('ov-count').textContent = '';
+  document.getElementById('ov-signal').textContent = '';
 }
 
 function showLoadError(e){
