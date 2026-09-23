@@ -6,7 +6,7 @@
 <!-- Ferramenta interna: fora de buscadores e sem vazar a URL como Referer -->
 <meta name="robots" content="noindex, nofollow, noarchive">
 <meta name="referrer" content="no-referrer">
-<title>Radar de Mercado</title>
+<title>TRACE · Competitive Intelligence</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -16,37 +16,109 @@
         onerror="window.__chartjs='failed';window.dispatchEvent(new Event('chartjs-failed'))"></script>
 <style>
   /* ============================================================
-     TOKENS — paleta corporativa (Vermelho Santander EC0000, preto,
-     branco e cinzas). Vermelho é usado com disciplina: apenas para
-     o eixo Risco/Regulação, gatilhos, estado ativo e destaques —
-     nunca como cor decorativa de fundo.
+     TRACE — TOKENS VISUAIS
+     "Red is information, not decoration." O vermelho Santander marca
+     apenas alta atenção, estados críticos/ativos e a referência
+     institucional — nunca fundo ou enfeite.
   ============================================================ */
   :root{
-    --red:#EC0000;
-    --red-soft:#FBE8E8;
-    --red-ink:#B30000;      /* vermelho para TEXTO pequeno: contraste >= 4,5:1 sobre branco, cinza claro e red-soft */
-    --black:#1A1A1A;
-    --grey-900:#2B2B2B;
-    --grey-700:#4A4A4A;
-    --grey-500:#6D6D6D;
-    --grey-300:#C7C7C7;
-    --grey-200:#E1E1E1;
-    --grey-100:#F0F0F0;
-    --grey-50:#F7F7F6;
-    --sky:#DEEDF2;
+    /* cor — base neutra */
+    --ink:#171717;
     --white:#FFFFFF;
-    --radius:6px;
-    --radius-sm:4px;
+    --paper:#F7F7F5;
+    --gray-900:#2B2B2B;
+    --gray-700:#4A4A4A;
+    --gray-500:#6D6D6D;
+    --gray-300:#C7C7C7;
+    --gray-200:#E1E1E1;
+    --gray-100:#F0F0F0;
+
+    /* cor — informação */
+    --red:#EC0000;          /* Santander Red: alta atenção, estado ativo, institucional */
+    --red-ink:#B30000;      /* vermelho para TEXTO pequeno: contraste >= 4,5:1 sobre branco e paper */
+    --red-soft:#FBE8E8;     /* só como fundo de aviso crítico, nunca decorativo */
+    --ok:#1E8E3E;           /* ponto de status "leitura em dia" */
+
+    /* linhas e superfícies */
+    --line:var(--gray-200);
+    --line-strong:var(--gray-300);
+    --surface:var(--white);
+    --shadow-card:0 1px 2px rgba(23,23,23,.04), 0 8px 24px rgba(23,23,23,.04);
+
+    /* tipografia — Inter */
     --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --fs-display:40px;      /* manchete da Visão geral */
+    --fs-h1:28px;           /* headline do sinal principal */
+    --fs-h2:18px;           /* títulos de seção */
+    --fs-body:15px;
+    --fs-small:13px;
+    --fs-micro:11px;        /* eyebrows em caixa alta */
+    --tracking-eyebrow:.14em;
+    --tracking-brand:.18em;
+    --lh-tight:1.2;
+    --lh-body:1.6;
+
+    /* espaço (base 4) */
+    --sp-1:4px;  --sp-2:8px;  --sp-3:12px; --sp-4:16px;
+    --sp-5:24px; --sp-6:32px; --sp-7:40px; --sp-8:56px; --sp-9:72px;
+
+    /* forma: o TRACE é quase reto */
+    --radius:2px;
+    --radius-sm:2px;
+
+    /* layout */
+    --sidebar-w:256px;
+    --content-max:1240px;
+
+    /* ---- aliases legados (componentes ainda não migrados) ---- */
+    --black:var(--ink);
+    --grey-900:var(--gray-900);
+    --grey-700:var(--gray-700);
+    --grey-500:var(--gray-500);
+    --grey-300:var(--gray-300);
+    --grey-200:var(--gray-200);
+    --grey-100:var(--gray-100);
+    --grey-50:var(--paper);
   }
   *{box-sizing:border-box;}
   body{
     margin:0;
-    background:var(--grey-50);
-    color:var(--black);
+    background:var(--paper);
+    color:var(--ink);
     font-family:var(--sans);
+    font-size:var(--fs-body);
+    line-height:var(--lh-body);
     -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
     font-variant-numeric:tabular-nums;
+    font-feature-settings:"cv11","ss01";
+    text-rendering:optimizeLegibility;
+  }
+
+  /* ---------- primitivas tipográficas do TRACE ---------- */
+  .t-eyebrow{
+    font-size:var(--fs-micro);
+    font-weight:600;
+    letter-spacing:var(--tracking-eyebrow);
+    text-transform:uppercase;
+    color:var(--gray-900);
+  }
+  .t-eyebrow.is-alert{color:var(--red-ink);}
+  .t-display{
+    font-size:var(--fs-display);
+    font-weight:500;
+    line-height:var(--lh-tight);
+    letter-spacing:-.02em;
+    margin:0;
+  }
+  .t-h1{font-size:var(--fs-h1);font-weight:500;line-height:1.25;letter-spacing:-.015em;margin:0;}
+  .t-h2{font-size:var(--fs-h2);font-weight:600;line-height:1.3;letter-spacing:-.005em;margin:0;}
+  .t-muted{color:var(--gray-500);}
+  .t-small{font-size:var(--fs-small);}
+  .t-alert{color:var(--red);}
+  .visually-hidden{
+    position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;
+    overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;
   }
   a{color:var(--black); text-decoration:underline; text-decoration-color:var(--grey-300);}
   a:hover{color:var(--red); text-decoration-color:var(--red);}
