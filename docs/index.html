@@ -1599,17 +1599,29 @@ function renderActivity(){
     </li>`).join('');
 }
 
+// Dado velho não pode parecer "semana tranquila": a manchete assume o atraso.
+// Sem generated_at confiável, a manchete segue normal (o cabeçalho já avisa).
+function staleReading(){
+  if(LAST_DEMO || !LAST_GENERATED_AT) return null;
+  const ts = Date.parse(LAST_GENERATED_AT);
+  if(!isFinite(ts)) return null;
+  return (Date.now() - ts) / 3600000 > STALE_HOURS ? ts : null;
+}
+
 function renderOverview(){
   document.getElementById('ov-greeting').textContent = greeting();
   const signals = attentionSignals();
   const moves = recentMovements().length;
+  const staleTs = staleReading();
   setOverviewHeadline(signals.length);
+  if(staleTs !== null) document.getElementById('h-visao-geral').textContent = 'Leitura desatualizada';
   const lead = renderLeadSignal(signals);
   renderRecentMoves(lead);
   renderActivity();
   document.getElementById('ov-grid').hidden = false;
-  document.getElementById('ov-count').textContent =
-    `${moves} ${moves === 1 ? 'movimento analisado' : 'movimentos analisados'} nos últimos ${ATTENTION_DAYS} dias`;
+  document.getElementById('ov-count').textContent = staleTs !== null
+    ? `Última leitura em ${fmtDate(staleTs)}, ${TIME_FMT.format(staleTs)} · sinais e movimentos podem estar incompletos`
+    : `${moves} ${moves === 1 ? 'movimento analisado' : 'movimentos analisados'} nos últimos ${ATTENTION_DAYS} dias`;
   const nav = document.querySelector('.nav-link[data-route="visao-geral"]');
   if(nav) nav.classList.toggle('has-alert', signals.length > 0);
 }
