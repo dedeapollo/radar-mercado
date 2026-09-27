@@ -535,6 +535,14 @@
   .move-src{font-size:12px;color:var(--gray-700);}
   .move-src a{color:var(--ink);}
 
+  .activity{list-style:none;margin:0;padding:0;}
+  .activity li{padding:var(--sp-4) 0 0;}
+  .activity-row{display:flex;justify-content:space-between;gap:var(--sp-3);font-size:14px;}
+  .activity-name{color:var(--ink);font-weight:500;}
+  .activity-count{color:var(--gray-700);white-space:nowrap;}
+  .activity-track{position:relative;height:1px;margin-top:var(--sp-3);background:var(--line);}
+  .activity-bar{position:absolute;left:0;top:-0.5px;height:2px;background:var(--ink);}
+
   @media (max-width:1100px){
     .ov-grid{grid-template-columns:1fr;}
   }
@@ -753,7 +761,15 @@
             </div>
             <ul class="moves" id="ov-moves"></ul>
           </section>
-          <div id="ov-side"></div>
+          <section class="ov-block" aria-labelledby="h-activity">
+            <div class="ov-block-head">
+              <div>
+                <h2 class="t-h2" id="h-activity">Onde há mais movimento</h2>
+                <p class="ov-block-sub" id="ov-activity-sub">Eixos com mais atividade competitiva</p>
+              </div>
+            </div>
+            <ul class="activity" id="ov-activity"></ul>
+          </section>
         </div>
       </section>
 
@@ -1553,6 +1569,36 @@ function renderRecentMoves(excludeItem){
     : '<li class="ov-empty">Nenhum movimento registrado ainda.</li>';
 }
 
+/* ---------- onde há mais movimento ---------- */
+const ACTIVITY_DAYS = 30;
+
+function renderActivity(){
+  const list = document.getElementById('ov-activity');
+  const cutoff = Date.now() - ACTIVITY_DAYS * DAY_MS;
+  const counts = new Map(AXES.map(a => [a, 0]));
+  RAW_ITEMS.forEach(i => {
+    if(i._ts < cutoff) return;
+    i.axes.forEach(a => counts.set(a, (counts.get(a) || 0) + 1));
+  });
+  // desempate estável pela ordem padrão dos eixos (AXES já vem ordenado)
+  const rows = [...counts.entries()].sort((a,b) => b[1] - a[1]);
+  const max = Math.max(0, ...rows.map(r => r[1]));
+  document.getElementById('ov-activity-sub').textContent = `Movimentos por eixo nos últimos ${ACTIVITY_DAYS} dias`;
+
+  if(!rows.length || max === 0){
+    list.innerHTML = `<li class="ov-empty">Nenhum movimento nos últimos ${ACTIVITY_DAYS} dias.</li>`;
+    return;
+  }
+  list.innerHTML = rows.map(([axis, n]) => `
+    <li>
+      <div class="activity-row">
+        <span class="activity-name">${escapeHtml(axis)}</span>
+        <span class="activity-count">${n} ${n === 1 ? 'movimento' : 'movimentos'}</span>
+      </div>
+      <div class="activity-track" aria-hidden="true"><span class="activity-bar" style="width:${Math.round(n / max * 100)}%"></span></div>
+    </li>`).join('');
+}
+
 function renderOverview(){
   document.getElementById('ov-greeting').textContent = greeting();
   const signals = attentionSignals();
@@ -1560,6 +1606,7 @@ function renderOverview(){
   setOverviewHeadline(signals.length);
   const lead = renderLeadSignal(signals);
   renderRecentMoves(lead);
+  renderActivity();
   document.getElementById('ov-grid').hidden = false;
   document.getElementById('ov-count').textContent =
     `${moves} ${moves === 1 ? 'movimento analisado' : 'movimentos analisados'} nos últimos ${ATTENTION_DAYS} dias`;
