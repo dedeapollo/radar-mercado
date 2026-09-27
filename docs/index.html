@@ -123,245 +123,123 @@
   a{color:var(--black); text-decoration:underline; text-decoration-color:var(--grey-300);}
   a:hover{color:var(--red); text-decoration-color:var(--red);}
 
+  /* ============================================================
+     TRACE — SINAIS: filtros, KPIs, gráficos e feed
+  ============================================================ */
+  .meta .stale-flag,
   .meta .sample-flag{
-    display:inline-block;
-    margin-top:6px;
-    padding:3px 9px;
-    background:var(--grey-100);
-    color:var(--red-ink);
-    border:1px solid var(--red);
-    border-radius:20px;
-    font-size:11px;
-    font-weight:600;
+    display:inline-block;margin-top:var(--sp-1);
+    padding:2px 8px;border-radius:var(--radius);
+    font-size:11.5px;font-weight:500;
   }
+  .meta .stale-flag{background:var(--red-soft);color:var(--red-ink);}
+  .meta .sample-flag{background:var(--gray-100);color:var(--gray-900);border:1px solid var(--line-strong);}
 
-  .filter-block{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  /* filtros */
+  .filter-block{display:flex;align-items:center;gap:var(--sp-2);flex-wrap:wrap;}
+  #axis-chips,#competitor-chips{display:flex;flex-wrap:wrap;gap:6px;}
   .filter-label{
-    font-size:11px;
-    font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:0.6px;
-    color:var(--grey-500);
+    font-size:var(--fs-micro);font-weight:600;
+    letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;
+    color:var(--gray-700);margin-right:var(--sp-1);
   }
   .chip{
-    border:1px solid var(--grey-300);
-    background:var(--white);
-    color:var(--grey-700);
-    padding:5px 12px;
-    border-radius:20px;
-    font-size:12.5px;
-    font-weight:500;
-    font-family:var(--sans);
-    cursor:pointer;
-    transition:all .12s ease;
+    font-family:var(--sans);font-size:var(--fs-small);font-weight:500;
+    color:var(--gray-900);background:var(--white);
+    border:1px solid var(--line-strong);border-radius:var(--radius);
+    padding:5px 11px;min-height:32px;cursor:pointer;
+    transition:border-color .12s ease, background .12s ease;
   }
-  .chip:hover{border-color:var(--red);color:var(--red);}
-  .chip.active{background:var(--red);color:var(--white);border-color:var(--red);font-weight:600;}
+  .chip:hover{border-color:var(--ink);}
+  .chip.active{background:var(--ink);border-color:var(--ink);color:var(--white);}
   select#period-select{
-    background:var(--white);
-    border:1px solid var(--grey-300);
-    color:var(--grey-900);
-    padding:5px 10px;
-    border-radius:var(--radius-sm);
-    font-family:var(--sans);
-    font-size:12.5px;
+    font-family:var(--sans);font-size:var(--fs-small);color:var(--ink);
+    background:var(--white);border:1px solid var(--line-strong);border-radius:var(--radius);
+    padding:5px 8px;min-height:32px;
   }
 
+  /* seções da página Sinais */
+  .sg-section{margin-bottom:var(--sp-8);}
+  .sg-head{
+    display:flex;justify-content:space-between;align-items:flex-end;gap:var(--sp-4);flex-wrap:wrap;
+    padding-bottom:var(--sp-4);margin-bottom:var(--sp-4);border-bottom:1px solid var(--line);
+  }
+  .sg-section[hidden]{display:none;}
 
+  /* KPIs */
   .kpi-row{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:14px;
-    margin-bottom:20px;
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    border:1px solid var(--line);background:var(--white);
+    margin-bottom:var(--sp-8);
   }
-  .kpi-card{
-    background:var(--white);
-    border:1px solid var(--grey-200);
-    border-top:3px solid var(--grey-300);
-    border-radius:var(--radius);
-    padding:16px 18px;
-  }
-  .kpi-card.accent{border-top-color:var(--red);}
+  .kpi-card{padding:var(--sp-5);border-right:1px solid var(--line);min-width:0;}
+  .kpi-card:last-child{border-right:0;}
   .kpi-label{
-    font-size:11px;
-    font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:0.5px;
-    color:var(--grey-500);
-    margin-bottom:8px;
+    font-size:var(--fs-micro);font-weight:600;letter-spacing:var(--tracking-eyebrow);
+    text-transform:uppercase;color:var(--gray-700);margin-bottom:var(--sp-3);
   }
-  .kpi-value{
-    font-family:var(--sans);
-    font-size:30px;
-    font-weight:800;
-    line-height:1;
-    color:var(--black);
+  .kpi-value{font-size:32px;font-weight:500;line-height:1.1;letter-spacing:-.015em;color:var(--ink);overflow-wrap:anywhere;}
+  .kpi-value.long{font-size:20px;line-height:1.3;}
+  .kpi-card.accent .kpi-value{color:var(--red-ink);}
+  .kpi-sub{margin-top:var(--sp-2);font-size:12.5px;color:var(--gray-700);}
+  @media (max-width:900px){
+    .kpi-card{border-right:0;border-bottom:1px solid var(--line);}
+    .kpi-card:last-child{border-bottom:0;}
   }
-  .kpi-card.accent .kpi-value{color:var(--red);}
-  .kpi-sub{font-size:12.5px;color:var(--grey-500);margin-top:6px;}
 
-  .chart-row{
-    display:grid;
-    grid-template-columns:1.3fr 1fr;
-    gap:14px;
-    margin-bottom:28px;
-  }
+  /* gráficos */
+  .chart-row{display:grid;grid-template-columns:1.3fr 1fr;gap:var(--sp-5);}
   @media (max-width:860px){.chart-row{grid-template-columns:1fr;}}
-  .chart-card{
-    background:var(--white);
-    border:1px solid var(--grey-200);
-    border-radius:var(--radius);
-    padding:18px 20px;
-  }
-  .chart-card h3{
-    font-family:var(--sans);
-    font-size:13px;
-    font-weight:700;
-    margin:0 0 14px;
-    color:var(--black);
-  }
-  /* ---------- gráficos ----------
-     A altura é travada AQUI, no contêiner, e os charts rodam com
-     maintainAspectRatio:false. Sem isso, o Chart.js entra em loop de
-     "responsive resize": o canvas cresce a cada frame porque o pai não
-     tem altura definida, empurrando a página pra baixo infinitamente
-     (era o bug do "Itens por concorrente", que por ser barra horizontal
-     era o mais afetado). */
+  .chart-card{background:var(--white);border:1px solid var(--line);padding:var(--sp-5);margin-bottom:var(--sp-5);}
+  .chart-row .chart-card{margin-bottom:0;}
+  .chart-title{margin:0 0 var(--sp-4);font-size:14px;font-weight:600;color:var(--ink);}
+  .chart-title small{font-weight:400;color:var(--gray-700);}
+  /* altura travada no contêiner (charts com maintainAspectRatio:false); sem isso
+     o Chart.js entra em loop de resize e empurra a página para baixo */
   .chart-box{position:relative; width:100%; height:240px;}
   .chart-box.tall{height:260px;}
   .chart-box canvas{position:absolute; inset:0; width:100% !important; height:100% !important;}
 
-  /* ---------- feed ---------- */
-  .feed-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:baseline;
-    margin-bottom:6px;
-  }
-  .feed-header h2{
-    font-family:var(--sans);
-    font-size:18px;
-    font-weight:800;
-    margin:0;
-    color:var(--black);
-  }
-  .feed-count{font-size:12px;color:var(--grey-500);font-weight:500;}
-
+  /* feed */
+  .feed-count{font-size:var(--fs-small);color:var(--gray-700);}
   .item-card{
     background:var(--white);
-    border:1px solid var(--grey-200);
-    border-left:3px solid var(--grey-300);
-    border-radius:var(--radius-sm);
-    padding:14px 16px;
-    margin-bottom:8px;
+    border:1px solid var(--line);border-left:2px solid var(--line-strong);
+    margin-bottom:var(--sp-2);
   }
   .item-card.trigger{border-left-color:var(--red);}
   .item-summary{
-    list-style:none;
-    cursor:pointer;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:12px;
-    flex-wrap:wrap;
+    list-style:none;cursor:pointer;
+    display:grid;grid-template-columns:minmax(0,1fr) auto 16px;
+    gap:var(--sp-2) var(--sp-5);align-items:center;
+    padding:var(--sp-4) var(--sp-5);
   }
   .item-summary::-webkit-details-marker{display:none;}
-  .item-summary::after{
-    content:'+';
-    color:var(--grey-500);
-    font-size:16px;
-    font-weight:700;
-    flex:none;
-    margin-left:8px;
-  }
-  details.item-card[open] .item-summary::after{content:'–';}
-  .item-title{font-size:14px;font-weight:600;line-height:1.4;color:var(--black);}
-  .item-summary-meta{
-    font-size:11.5px;
-    color:var(--grey-500);
-    white-space:nowrap;
-    font-weight:500;
-  }
-  details.item-card .item-body{margin-top:10px;}
-  .item-why{font-size:13.5px;color:var(--grey-700);margin-top:2px;line-height:1.55;}
+  .item-summary:hover .item-title{text-decoration:underline;text-decoration-color:var(--gray-300);}
+  .item-title{display:block;font-size:var(--fs-body);font-weight:500;line-height:1.45;color:var(--ink);}
+  .item-summary-meta{font-size:12.5px;color:var(--gray-700);white-space:nowrap;}
+  details.item-card[open] .move-chevron{transform:rotate(90deg);}
+  .item-body{padding:0 var(--sp-5) var(--sp-5);}
+  .item-why{margin:0 0 var(--sp-4);font-size:14px;line-height:1.7;color:var(--gray-900);max-width:75ch;}
   .item-foot{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-top:10px;
-    flex-wrap:wrap;
-    gap:8px;
-    font-size:12px;
-    color:var(--grey-500);
+    display:flex;justify-content:space-between;align-items:baseline;gap:var(--sp-2) var(--sp-5);flex-wrap:wrap;
+    padding-top:var(--sp-3);border-top:1px solid var(--gray-100);
+    font-size:12.5px;color:var(--gray-700);
   }
-  .item-tags{display:flex;gap:6px;flex-wrap:wrap;}
-  .tag{
-    font-size:10.5px;
-    font-weight:600;
-    padding:2px 8px;
-    border-radius:10px;
-    background:var(--grey-100);
-    color:var(--grey-700);
-    border:1px solid var(--grey-200);
-  }
-  .tag.risk{background:var(--red-soft);color:var(--red-ink);border-color:var(--red);}
-  .trigger-badge{
-    font-size:10.5px;
-    font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:0.3px;
-    color:var(--white);
-    background:var(--red);
-    padding:2px 8px;
-    border-radius:10px;
-  }
-  .relevance-badge{
-    font-size:10.5px;
-    font-weight:600;
-    padding:1px 8px;
-    border-radius:10px;
-  }
-  .relevance-badge.alta{border:1px solid var(--red);color:var(--red);}
-  .relevance-badge.media{border:1px solid var(--grey-300);color:var(--grey-500);}
-  .source-badge{
-    font-size:10.5px;
-    font-weight:600;
-    padding:1px 8px;
-    border-radius:10px;
-    background:var(--grey-100);
-    color:var(--grey-700);
-  }
+  .item-tags{display:flex;flex-wrap:wrap;gap:var(--sp-1) 0;}
+  .item-tags > span + span::before{content:'·';margin:0 var(--sp-2);color:var(--gray-300);}
+  .item-tags .is-trigger{color:var(--red-ink);font-weight:500;}
+  .item-src a{color:var(--ink);}
   .empty-state{
-    text-align:center;
-    padding:60px 20px;
-    color:var(--grey-500);
-    font-size:14px;
+    padding:var(--sp-7) var(--sp-5);text-align:center;
+    background:var(--white);border:1px solid var(--line);
+    font-size:14px;color:var(--gray-700);
   }
-
-  /* ---------- alertas fixos ---------- */
-  .alerts-section{margin-bottom:28px;}
-  .alerts-section h2{
-    font-family:var(--sans);
-    font-size:16px;
-    font-weight:800;
-    margin:0 0 10px;
-    display:flex;
-    align-items:center;
-    gap:9px;
-    color:var(--black);
+  @media (max-width:560px){
+    .item-summary{grid-template-columns:minmax(0,1fr) 16px;padding:var(--sp-4);}
+    .item-summary-meta{grid-row:1;grid-column:1 / -1;}
+    .item-body{padding:0 var(--sp-4) var(--sp-4);}
   }
-  .pulse-dot{
-    width:8px;height:8px;border-radius:50%;
-    background:var(--red);
-    flex:none;
-    animation:pulse 1.8s infinite;
-  }
-  @keyframes pulse{
-    0%{box-shadow:0 0 0 0 rgba(236,0,0,0.4);}
-    70%{box-shadow:0 0 0 7px rgba(236,0,0,0);}
-    100%{box-shadow:0 0 0 0 rgba(236,0,0,0);}
-  }
-
 
   /* ============================================================
      TRACE — SHELL: sidebar, topbar, visões
@@ -618,38 +496,18 @@
   .banner-error strong{display:block;color:var(--black);font-size:15px;margin-bottom:4px;}
   .banner-error p{margin:0 0 12px;line-height:1.5;}
 
-  /* aviso de dados desatualizados / avisos de validação */
-  .meta .stale-flag{
-    display:inline-block;
-    margin-top:6px;
-    padding:3px 9px;
-    background:var(--red-soft);
-    color:var(--red-ink);
-    border:1px solid var(--red);
-    border-radius:20px;
-    font-size:11px;
-    font-weight:600;
-  }
+  /* avisos de validação */
   .data-warning{margin-top:6px;font-size:11.5px;color:var(--grey-700);font-weight:500;}
   .data-warning:empty{display:none;}
 
   /* limpar filtros */
   .chip-clear{
-    background:none;
-    border:none;
-    padding:5px 4px;
-    font-family:var(--sans);
-    font-size:12.5px;
-    font-weight:600;
-    color:var(--grey-700);
-    text-decoration:underline;
-    cursor:pointer;
+    background:none;border:none;padding:5px 4px;min-height:32px;
+    font-family:var(--sans);font-size:var(--fs-small);font-weight:500;
+    color:var(--gray-900);text-decoration:underline;text-underline-offset:3px;cursor:pointer;
   }
-  .chip-clear:hover{color:var(--red-ink);}
+  .chip-clear:hover{color:var(--ink);}
   .chip-clear[hidden]{display:none;}
-
-  /* KPI com valor longo (antes: font-size inline) */
-  .kpi-value.long{font-size:18px;}
 
   /* gráfico: mensagem (vazio / carregando / biblioteca indisponível) */
   .chart-note{
@@ -664,8 +522,7 @@
     font-size:13px;
     line-height:1.5;
     color:var(--grey-700);
-    background:var(--grey-50);
-    border-radius:var(--radius-sm);
+    background:var(--paper);
   }
   .chart-note[hidden]{display:none;}
 
@@ -684,7 +541,6 @@
 
   /* respeita a preferência do sistema por menos movimento */
   @media (prefers-reduced-motion: reduce){
-    .pulse-dot{animation:none;}
     .chip{transition:none;}
     .sidebar{transition:none;}
     .move-chevron{transition:none;}
@@ -798,34 +654,44 @@
       </div>
       <button type="button" class="chip-clear" id="clear-filters" hidden>Limpar filtros</button>
     </div>
-  <section class="alerts-section" id="alerts-section" style="display:none;">
-    <h2><span class="pulse-dot"></span>Últimos Alertas</h2>
+  <section class="sg-section" id="alerts-section" aria-labelledby="h-alerts" hidden>
+    <div class="sg-head">
+      <div>
+        <h2 class="t-h2" id="h-alerts">Gatilhos dos últimos 7 dias</h2>
+        <p class="ov-block-sub">Itens com gatilho diário, abertos para leitura · não mudam com os filtros</p>
+      </div>
+    </div>
     <div id="alerts-feed"></div>
   </section>
 
-  <section class="kpi-row" id="kpi-row"></section>
+  <section class="kpi-row" id="kpi-row" aria-label="Indicadores do período filtrado"></section>
 
-  <section class="chart-card" style="margin-bottom:14px;">
-    <h3>Itens ao longo do tempo (todo o histórico, por semana)</h3>
+  <section class="sg-section" aria-labelledby="h-dist">
+  <div class="sg-head"><h2 class="t-h2" id="h-dist">Distribuição</h2></div>
+  <div class="chart-card">
+    <h3 class="chart-title">Itens por semana <small>· todo o histórico</small></h3>
     <div class="chart-box tall"><canvas id="trend-chart" role="img" aria-label="Itens ao longo do tempo, por semana"></canvas><div class="chart-note" id="trend-note" hidden></div></div>
-  </section>
+  </div>
 
-  <section class="chart-row">
+  <div class="chart-row">
     <div class="chart-card">
-      <h3>Itens por eixo</h3>
+      <h3 class="chart-title">Itens por eixo <small>· período filtrado</small></h3>
       <div class="chart-box"><canvas id="axis-chart" role="img" aria-label="Itens por eixo"></canvas><div class="chart-note" id="axis-note" hidden></div></div>
     </div>
     <div class="chart-card">
-      <h3>Itens por concorrente</h3>
+      <h3 class="chart-title">Itens por concorrente <small>· período filtrado</small></h3>
       <div class="chart-box"><canvas id="competitor-chart" role="img" aria-label="Itens por concorrente"></canvas><div class="chart-note" id="competitor-note" hidden></div></div>
     </div>
+  </div>
   </section>
 
-  <div class="feed-header">
-    <h2>Itens monitorados</h2>
-    <span class="feed-count" id="feed-count" aria-live="polite"></span>
-  </div>
-  <div id="feed"></div>
+  <section class="sg-section" aria-labelledby="h-feed">
+    <div class="sg-head">
+      <h2 class="t-h2" id="h-feed">Itens monitorados</h2>
+      <span class="feed-count" id="feed-count" aria-live="polite"></span>
+    </div>
+    <div id="feed"></div>
+  </section>
   </div><!-- /#dashboard -->
       </section>
 
@@ -851,15 +717,11 @@ const DAY_MS = 86400000;
 const DEMO = new URLSearchParams(location.search).get('demo') === '1';
 const ATTENTION_DAYS = 7;              // janela da Visão geral: sinais e movimentos dos últimos N dias
 
-// Só estilo: o eixo Risco/Regulação é o único destacado em vermelho.
-const RISK_AXIS = "Risco/Regulação";
 // Ordem de exibição preferida. Eixos que aparecerem no data.json e não
 // estiverem aqui (ex.: um futuro eixo CX) entram depois, em ordem alfabética.
 const AXIS_ORDER = ["RV/Trading", "Tecnologia", "Produtos Novos", "Risco/Regulação"];
 const FALLBACK_GROUP = "Outros";
-const COLOR_RED = "#EC0000";
-const COLOR_DARK = "#1A1A1A";
-const COLOR_GREY = "#8A8A8A";
+const COLOR_DARK = "#171717";   /* Ink */
 
 let AXES = [];          // derivado do data.json
 let COMPETITORS = [];   // derivado do data.json
@@ -1137,7 +999,7 @@ function renderKPIs(items){
 
   const kpis = [
     {label:'Itens no período', value: items.length, sub: periodLabel(), accent:false},
-    {label:'Alertas de gatilho', value: triggers, sub: 'risco, comunicado, lançamento ou regulação', accent:true},
+    {label:'Gatilhos no período', value: triggers, sub: triggers === 1 ? 'item com gatilho diário' : 'itens com gatilho diário', accent: triggers > 0},
     {label:'Eixo mais ativo', value: topAxis ? topAxis[0] : '—', sub: topAxis ? `${topAxis[1]} itens` : '', accent:false},
     {label:'Concorrente mais ativo', value: topComp ? topComp[0] : '—', sub: topComp ? `${topComp[1]} itens` : '', accent:false},
   ];
@@ -1146,7 +1008,7 @@ function renderKPIs(items){
   row.innerHTML = kpis.map(k => `
     <div class="kpi-card ${k.accent ? 'accent' : ''}">
       <div class="kpi-label">${escapeHtml(k.label)}</div>
-      <div class="kpi-value ${String(k.value).length > 12 ? 'long' : ''}">${escapeHtml(k.value)}</div>
+      <div class="kpi-value ${typeof k.value === 'number' ? '' : 'long'}">${escapeHtml(k.value)}</div>
       <div class="kpi-sub">${escapeHtml(k.sub)}</div>
     </div>
   `).join('');
@@ -1230,6 +1092,9 @@ function paintChart(key, spec){
 
   canvas.hidden = false;
   note.hidden = true;
+  Chart.defaults.font.family = "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+  Chart.defaults.font.size = 12;
+  Chart.defaults.color = '#4A4A4A';
   CHARTS[key] = new Chart(canvas, spec.config);
 }
 
@@ -1246,15 +1111,15 @@ function renderTrendChart(){
     emptyMsg:'Sem itens para exibir.',
     config:{
       type:'bar',
-      data:{labels, datasets:[{data:values, backgroundColor:COLOR_DARK, borderRadius:3}]},
-      options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true, ticks:{precision:0}}}, animation:false}
+      data:{labels, datasets:[{data:values, backgroundColor:COLOR_DARK, borderRadius:0, maxBarThickness:18}]},
+      options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{x:{grid:{display:false}, ticks:{maxRotation:0, autoSkip:true, autoSkipPadding:16}}, y:{beginAtZero:true, ticks:{precision:0}, grid:{color:'#F0F0F0'}, border:{display:false}}}, animation:false}
     }
   });
 }
 
 function renderCharts(items){
   const axisCounts = AXES.map(a => items.filter(i => i.axes.includes(a)).length);
-  const axisColors = AXES.map(a => a === RISK_AXIS ? COLOR_RED : COLOR_DARK);
+  // TRACE: vermelho é informação, não categoria — todos os eixos em Ink.
   const compCounts = COMPETITORS.map(c => items.filter(i => i.competitor_group === c).length);
 
   paintChart('axis', {
@@ -1263,8 +1128,8 @@ function renderCharts(items){
     emptyMsg:'Sem eixos para exibir.',
     config:{
       type:'bar',
-      data:{labels:AXES, datasets:[{data:axisCounts, backgroundColor:axisColors, borderRadius:3}]},
-      options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true, ticks:{precision:0}}}, animation:false}
+      data:{labels:AXES, datasets:[{data:axisCounts, backgroundColor:COLOR_DARK, borderRadius:0, maxBarThickness:36}]},
+      options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{x:{grid:{display:false}}, y:{beginAtZero:true, ticks:{precision:0}, grid:{color:'#F0F0F0'}, border:{display:false}}}, animation:false}
     }
   });
 
@@ -1274,8 +1139,8 @@ function renderCharts(items){
     emptyMsg:'Sem concorrentes para exibir.',
     config:{
       type:'bar',
-      data:{labels:COMPETITORS, datasets:[{data:compCounts, backgroundColor:COLOR_DARK, borderRadius:3}]},
-      options:{indexAxis:'y', responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{x:{beginAtZero:true, ticks:{precision:0}}}, animation:false}
+      data:{labels:COMPETITORS, datasets:[{data:compCounts, backgroundColor:COLOR_DARK, borderRadius:0, maxBarThickness:18}]},
+      options:{indexAxis:'y', responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{x:{beginAtZero:true, ticks:{precision:0}, grid:{color:'#F0F0F0'}, border:{display:false}}, y:{grid:{display:false}}}, animation:false}
     }
   });
 }
@@ -1300,31 +1165,40 @@ function linkOrText(label, url){
 
 function sourceHtml(item){
   const primary = linkOrText(item.source, item.link);
-  const extra = item.also_reported_by;
-  if(!extra.length) return `${primary} · ${fmtDate(item._ts)}`;
-  const extraLinks = extra.map(s => linkOrText(s.source, s.link)).join(', ');
-  return `${primary} <span style="color:var(--grey-500)">também:</span> ${extraLinks} · ${fmtDate(item._ts)}`;
+  const seen = new Set([item.source.trim().toLowerCase()]);
+  const extra = item.also_reported_by.filter(o => {
+    const k = o.source.trim().toLowerCase();
+    if(seen.has(k)) return false;
+    seen.add(k); return true;
+  });
+  if(!extra.length) return primary;
+  return `${primary} <span class="t-muted">· também em</span> ${extra.map(o => linkOrText(o.source, o.link)).join(', ')}`;
 }
 
 function itemCardHtml(item, defaultOpen){
-  const relClass = item.relevance === 'alta' ? 'alta' : 'media';
-  const sourceCount = 1 + item.also_reported_by.length;
+  const outlets = 1 + otherOutlets(item).length;
+  const tags = [];
+  if(item.daily_trigger){
+    tags.push(`<span class="is-trigger">${item.trigger_reason ? `Gatilho · ${escapeHtml(TRIGGER_LABELS[item.trigger_reason])}` : 'Gatilho diário'}</span>`);
+  }
+  if(item.relevance) tags.push(`<span>Relevância ${escapeHtml(item.relevance)}</span>`);
+  if(item.confirmation === 'especulativo') tags.push('<span>Especulativo</span>');
+  if(outlets > 1) tags.push(`<span>${outlets} veículos</span>`);
   return `
     <details ${defaultOpen ? 'open' : ''} class="item-card ${item.daily_trigger ? 'trigger' : ''}">
       <summary class="item-summary">
-        <span class="item-title">${escapeHtml(item.title)}</span>
-        <span class="item-summary-meta">${escapeHtml(item.competitor_group)} · ${fmtDate(item._ts)}</span>
+        <span>
+          <span class="move-meta"><strong>${escapeHtml(item.competitor_group)}</strong>${item.axes.length ? `<span class="dot" aria-hidden="true">·</span><span class="visually-hidden">, eixos </span>${item.axes.map(escapeHtml).join(' · ')}` : ''}</span>
+          <span class="item-title">${escapeHtml(displayTitle(item))}</span>
+        </span>
+        <span class="item-summary-meta"><time datetime="${escapeHtml(new Date(item._ts).toISOString())}">${escapeHtml(fmtDate(item._ts))}</time></span>
+        ${CHEVRON_SVG}
       </summary>
       <div class="item-body">
-        <div class="item-why">${escapeHtml(item.why_it_matters)}</div>
+        ${item.why_it_matters ? `<p class="item-why">${escapeHtml(item.why_it_matters)}</p>` : ''}
         <div class="item-foot">
-          <div class="item-tags">
-            ${item.axes.map(a => `<span class="tag ${a === RISK_AXIS ? 'risk' : ''}">${escapeHtml(a)}</span>`).join('')}
-            ${item.daily_trigger ? '<span class="trigger-badge">gatilho diário</span>' : ''}
-            ${item.relevance ? `<span class="relevance-badge ${relClass}">relevância ${escapeHtml(item.relevance)}</span>` : ''}
-            ${sourceCount > 1 ? `<span class="source-badge">${sourceCount} fontes</span>` : ''}
-          </div>
-          <div>${sourceHtml(item)}</div>
+          <div class="item-tags">${tags.join('')}</div>
+          <div class="item-src">${sourceHtml(item)}</div>
         </div>
       </div>
     </details>
@@ -1342,8 +1216,8 @@ function alertItems(){
 function renderAlerts(){
   const items = alertItems();
   const section = document.getElementById('alerts-section');
-  if(!items.length){ section.style.display = 'none'; return; }
-  section.style.display = '';
+  if(!items.length){ section.hidden = true; return; }
+  section.hidden = false;
   document.getElementById('alerts-feed').innerHTML = items.map(i => itemCardHtml(i, true)).join('');
 }
 
