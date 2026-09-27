@@ -496,6 +496,54 @@
   .signal-source-link .arrow{flex:none;width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.5;}
   .signal-more{margin:var(--sp-2) 0 0;font-size:12px;color:var(--gray-500);}
 
+  /* ---------- Visão geral: blocos inferiores ---------- */
+  .ov-grid{
+    display:grid;grid-template-columns:minmax(0,1.9fr) minmax(0,1fr);
+    gap:var(--sp-8);align-items:start;
+  }
+  .ov-grid[hidden]{display:none;}
+  .ov-block-head{
+    display:flex;justify-content:space-between;align-items:flex-start;gap:var(--sp-4);
+    padding-bottom:var(--sp-4);border-bottom:1px solid var(--line);
+  }
+  .ov-block-sub{margin:var(--sp-1) 0 0;font-size:var(--fs-small);color:var(--gray-700);}
+  .ov-more{font-size:var(--fs-small);color:var(--gray-700);text-decoration:none;white-space:nowrap;padding-top:4px;}
+  .ov-more:hover{color:var(--ink);text-decoration:underline;}
+  .ov-empty{padding:var(--sp-5) 0;font-size:14px;color:var(--gray-700);}
+
+  .moves{list-style:none;margin:0;padding:0;}
+  .move{border-bottom:1px solid var(--line);}
+  .move > summary{
+    list-style:none;cursor:pointer;
+    display:grid;grid-template-columns:72px minmax(0,1fr) auto 16px;
+    gap:var(--sp-2) var(--sp-5);align-items:center;
+    padding:var(--sp-4) 0;
+  }
+  .move > summary::-webkit-details-marker{display:none;}
+  .move > summary:hover .move-title{text-decoration:underline;text-decoration-color:var(--gray-300);}
+  .move-when{font-size:var(--fs-small);color:var(--gray-700);}
+  .move-meta{display:block;font-size:12px;color:var(--gray-700);margin-bottom:2px;}
+  .move-meta strong{color:var(--ink);font-weight:600;}
+  .move-meta .dot{margin:0 6px;color:var(--gray-300);}
+  .move-title{display:block;font-size:var(--fs-body);line-height:1.45;color:var(--ink);}
+  .move-rel{font-size:12px;color:var(--gray-700);}
+  .move-rel.is-high{color:var(--red-ink);font-weight:500;}
+  .move-chevron{width:14px;height:14px;fill:none;stroke:var(--gray-700);stroke-width:1.5;transition:transform .15s ease;}
+  .move[open] .move-chevron{transform:rotate(90deg);}
+  .move-body{padding:0 0 var(--sp-5) calc(72px + var(--sp-5));}
+  .move-body p{margin:0 0 var(--sp-2);font-size:14px;line-height:1.65;color:var(--gray-900);max-width:70ch;}
+  .move-src{font-size:12px;color:var(--gray-700);}
+  .move-src a{color:var(--ink);}
+
+  @media (max-width:1100px){
+    .ov-grid{grid-template-columns:1fr;}
+  }
+  @media (max-width:560px){
+    .move > summary{grid-template-columns:minmax(0,1fr) auto 16px;}
+    .move-when{grid-column:1 / -1;font-size:12px;}
+    .move-body{padding-left:0;}
+  }
+
   @media (max-width:1100px){
     .signal{grid-template-columns:1fr;}
     .signal-side{border-left:0;border-top:1px solid var(--line);}
@@ -618,6 +666,7 @@
   .chip-clear:focus-visible,
   select#period-select:focus-visible,
   .item-summary:focus-visible,
+  .move > summary:focus-visible,
   .menu-btn:focus-visible,
   .nav-link:focus-visible,
   a:focus-visible{
@@ -630,6 +679,7 @@
     .pulse-dot{animation:none;}
     .chip{transition:none;}
     .sidebar{transition:none;}
+    .move-chevron{transition:none;}
   }
 </style>
 </head>
@@ -691,6 +741,20 @@
         </div>
 
         <div id="ov-signal"></div>
+
+        <div class="ov-grid" id="ov-grid" hidden>
+          <section class="ov-block" aria-labelledby="h-recent">
+            <div class="ov-block-head">
+              <div>
+                <h2 class="t-h2" id="h-recent">Movimentos recentes</h2>
+                <p class="ov-block-sub">Os mais recentes do monitoramento</p>
+              </div>
+              <a class="ov-more" href="#sinais">Ver todos</a>
+            </div>
+            <ul class="moves" id="ov-moves"></ul>
+          </section>
+          <div id="ov-side"></div>
+        </div>
       </section>
 
       <section class="view" id="view-sinais" data-view="sinais" aria-labelledby="h-sinais" hidden>
@@ -1439,6 +1503,54 @@ function renderLeadSignal(signals){
   const box = document.getElementById('ov-signal');
   const lead = pickLeadSignal(signals);
   box.innerHTML = lead ? signalCardHtml(lead) : '';
+  return lead;
+}
+
+/* ---------- movimentos recentes ---------- */
+const RECENT_LIMIT = 8;
+const CHEVRON_SVG = '<svg class="move-chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg>';
+
+function shortWhen(ts){
+  const d = dayLabel(ts);
+  return d === 'Hoje' ? TIME_FMT.format(ts) : d;
+}
+
+function moveHtml(item){
+  const axis = item.axes[0] || '';
+  const rel = item.relevance === 'alta' ? 'Alta' : item.relevance === 'média' ? 'Média' : '';
+  const url = safeUrl(item.link);
+  const src = url
+    ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.source)}<span class="visually-hidden"> (abre em nova aba)</span></a>`
+    : escapeHtml(item.source);
+  return `
+    <li>
+      <details class="move">
+        <summary>
+          <span class="move-when"><time datetime="${escapeHtml(new Date(item._ts).toISOString())}">${escapeHtml(shortWhen(item._ts))}</time></span>
+          <span>
+            <span class="move-meta"><strong>${escapeHtml(item.competitor_group)}</strong>${axis ? `<span class="dot" aria-hidden="true">·</span><span class="visually-hidden">, eixo </span>${escapeHtml(axis)}` : ''}</span>
+            <span class="move-title">${escapeHtml(displayTitle(item))}</span>
+          </span>
+          <span class="move-rel${item.relevance === 'alta' ? ' is-high' : ''}">${rel ? `<span class="visually-hidden">Relevância </span>${escapeHtml(rel)}` : ''}</span>
+          ${CHEVRON_SVG}
+        </summary>
+        <div class="move-body">
+          ${item.why_it_matters ? `<p>${escapeHtml(item.why_it_matters)}</p>` : ''}
+          <span class="move-src">${src} · ${escapeHtml(fmtDate(item._ts))}</span>
+        </div>
+      </details>
+    </li>`;
+}
+
+function renderRecentMoves(excludeItem){
+  const list = document.getElementById('ov-moves');
+  const items = [...RAW_ITEMS]
+    .filter(i => i !== excludeItem)
+    .sort((a,b) => b._ts - a._ts)
+    .slice(0, RECENT_LIMIT);
+  list.innerHTML = items.length
+    ? items.map(moveHtml).join('')
+    : '<li class="ov-empty">Nenhum movimento registrado ainda.</li>';
 }
 
 function renderOverview(){
@@ -1446,7 +1558,9 @@ function renderOverview(){
   const signals = attentionSignals();
   const moves = recentMovements().length;
   setOverviewHeadline(signals.length);
-  renderLeadSignal(signals);
+  const lead = renderLeadSignal(signals);
+  renderRecentMoves(lead);
+  document.getElementById('ov-grid').hidden = false;
   document.getElementById('ov-count').textContent =
     `${moves} ${moves === 1 ? 'movimento analisado' : 'movimentos analisados'} nos últimos ${ATTENTION_DAYS} dias`;
   const nav = document.querySelector('.nav-link[data-route="visao-geral"]');
@@ -1458,6 +1572,8 @@ function renderOverviewUnavailable(){
   setOverviewHeadline(null);
   document.getElementById('ov-count').textContent = '';
   document.getElementById('ov-signal').textContent = '';
+  document.getElementById('ov-moves').textContent = '';
+  document.getElementById('ov-grid').hidden = true;
   const nav = document.querySelector('.nav-link[data-route="visao-geral"]');
   if(nav) nav.classList.remove('has-alert');
 }
@@ -1548,6 +1664,8 @@ function showLoading(){
   document.getElementById('h-visao-geral').textContent = 'Carregando leitura…';
   document.getElementById('ov-count').textContent = '';
   document.getElementById('ov-signal').textContent = '';
+  document.getElementById('ov-moves').textContent = '';
+  document.getElementById('ov-grid').hidden = true;
 }
 
 function showLoadError(e){
