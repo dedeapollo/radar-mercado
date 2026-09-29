@@ -721,6 +721,25 @@ const ATTENTION_DAYS = 7;              // janela da Visão geral: sinais e movim
 // estiverem aqui (ex.: um futuro eixo CX) entram depois, em ordem alfabética.
 const AXIS_ORDER = ["RV/Trading", "Tecnologia", "Produtos Novos", "Risco/Regulação"];
 const FALLBACK_GROUP = "Outros";
+const SECTOR_GROUP = "Setor e regulação";   // itens de mercado/regulador, não um concorrente
+
+// Nome de exibição dos grupos do data.json (o data.json não muda).
+// Grupo novo sem entrada aqui: usa o trecho antes da primeira "/".
+const COMPETITOR_LABELS = {
+  "XP/Clear/Rico":   "XP",
+  "BTG Pactual":     "BTG Pactual",
+  "Itaú/Íon":        "Itaú",
+  "Bradesco/Ágora":  "Bradesco",
+  "Nubank/NuInvest": "Nubank",
+  "Genial":          "Genial",
+  "Múltiplos/Setor": SECTOR_GROUP,
+};
+function competitorLabel(raw){
+  const key = text(raw);
+  if(!key) return '';
+  if(Object.prototype.hasOwnProperty.call(COMPETITOR_LABELS, key)) return COMPETITOR_LABELS[key];
+  return key.split('/')[0].trim() || key;
+}
 const COLOR_DARK = "#171717";   /* Ink */
 
 let AXES = [];          // derivado do data.json
@@ -831,7 +850,7 @@ function normalizeItem(raw){
     title,
     link: safeUrl(raw.link),
     source: text(raw.source) || 'Fonte não informada',
-    competitor_group: text(raw.competitor_group) || FALLBACK_GROUP,
+    competitor_group: competitorLabel(raw.competitor_group) || FALLBACK_GROUP,
     published_at: raw.published_at,
     _ts: ts,
     why_it_matters: text(raw.why_it_matters),
