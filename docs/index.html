@@ -6,7 +6,7 @@
 <!-- Ferramenta interna: fora de buscadores e sem vazar a URL como Referer -->
 <meta name="robots" content="noindex, nofollow, noarchive">
 <meta name="referrer" content="no-referrer">
-<title>Radar de Mercado</title>
+<title>TRACE · Competitive Intelligence</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -16,341 +16,463 @@
         onerror="window.__chartjs='failed';window.dispatchEvent(new Event('chartjs-failed'))"></script>
 <style>
   /* ============================================================
-     TOKENS — paleta corporativa (Vermelho Santander EC0000, preto,
-     branco e cinzas). Vermelho é usado com disciplina: apenas para
-     o eixo Risco/Regulação, gatilhos, estado ativo e destaques —
-     nunca como cor decorativa de fundo.
+     TRACE — TOKENS VISUAIS
+     "Red is information, not decoration." O vermelho Santander marca
+     apenas alta atenção, estados críticos/ativos e a referência
+     institucional — nunca fundo ou enfeite.
   ============================================================ */
   :root{
-    --red:#EC0000;
-    --red-soft:#FBE8E8;
-    --red-ink:#B30000;      /* vermelho para TEXTO pequeno: contraste >= 4,5:1 sobre branco, cinza claro e red-soft */
-    --black:#1A1A1A;
-    --grey-900:#2B2B2B;
-    --grey-700:#4A4A4A;
-    --grey-500:#6D6D6D;
-    --grey-300:#C7C7C7;
-    --grey-200:#E1E1E1;
-    --grey-100:#F0F0F0;
-    --grey-50:#F7F7F6;
-    --sky:#DEEDF2;
+    /* cor — base neutra */
+    --ink:#171717;
     --white:#FFFFFF;
-    --radius:6px;
-    --radius-sm:4px;
+    --paper:#F7F7F5;
+    --gray-900:#2B2B2B;
+    --gray-700:#4A4A4A;
+    --gray-500:#6D6D6D;
+    --gray-300:#C7C7C7;
+    --gray-200:#E1E1E1;
+    --gray-100:#F0F0F0;
+
+    /* cor — informação */
+    --red:#EC0000;          /* Santander Red: alta atenção, estado ativo, institucional */
+    --red-ink:#B30000;      /* vermelho para TEXTO pequeno: contraste >= 4,5:1 sobre branco e paper */
+    --red-soft:#FBE8E8;     /* só como fundo de aviso crítico, nunca decorativo */
+    --ok:#1E8E3E;           /* ponto de status "leitura em dia" */
+
+    /* linhas e superfícies */
+    --line:var(--gray-200);
+    --line-strong:var(--gray-300);
+    --surface:var(--white);
+    --shadow-card:0 1px 2px rgba(23,23,23,.04), 0 8px 24px rgba(23,23,23,.04);
+
+    /* tipografia — Inter */
     --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --fs-display:40px;      /* manchete da Visão geral */
+    --fs-h1:28px;           /* headline do sinal principal */
+    --fs-h2:18px;           /* títulos de seção */
+    --fs-body:15px;
+    --fs-small:13px;
+    --fs-micro:11px;        /* eyebrows em caixa alta */
+    --tracking-eyebrow:.14em;
+    --tracking-brand:.18em;
+    --lh-tight:1.2;
+    --lh-body:1.6;
+
+    /* espaço (base 4) */
+    --sp-1:4px;  --sp-2:8px;  --sp-3:12px; --sp-4:16px;
+    --sp-5:24px; --sp-6:32px; --sp-7:40px; --sp-8:56px; --sp-9:72px;
+
+    /* forma: o TRACE é quase reto */
+    --radius:2px;
+    --radius-sm:2px;
+
+    /* layout */
+    --sidebar-w:256px;
+    --content-max:1240px;
+
+    /* ---- aliases legados (componentes ainda não migrados) ---- */
+    --black:var(--ink);
+    --grey-900:var(--gray-900);
+    --grey-700:var(--gray-700);
+    --grey-500:var(--gray-500);
+    --grey-300:var(--gray-300);
+    --grey-200:var(--gray-200);
+    --grey-100:var(--gray-100);
+    --grey-50:var(--paper);
   }
   *{box-sizing:border-box;}
   body{
     margin:0;
-    background:var(--grey-50);
-    color:var(--black);
+    background:var(--paper);
+    color:var(--ink);
     font-family:var(--sans);
+    font-size:var(--fs-body);
+    line-height:var(--lh-body);
     -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
     font-variant-numeric:tabular-nums;
+    font-feature-settings:"cv11","ss01";
+    text-rendering:optimizeLegibility;
+  }
+
+  /* ---------- primitivas tipográficas do TRACE ---------- */
+  .t-eyebrow{
+    font-size:var(--fs-micro);
+    font-weight:600;
+    letter-spacing:var(--tracking-eyebrow);
+    text-transform:uppercase;
+    color:var(--gray-900);
+  }
+  .t-eyebrow.is-alert{color:var(--red-ink);}
+  .t-display{
+    font-size:var(--fs-display);
+    font-weight:500;
+    line-height:var(--lh-tight);
+    letter-spacing:-.02em;
+    margin:0;
+  }
+  .t-h1{font-size:var(--fs-h1);font-weight:500;line-height:1.25;letter-spacing:-.015em;margin:0;}
+  .t-h2{font-size:var(--fs-h2);font-weight:600;line-height:1.3;letter-spacing:-.005em;margin:0;}
+  .t-muted{color:var(--gray-500);}
+  .t-small{font-size:var(--fs-small);}
+  .t-alert{color:var(--red);}
+  .visually-hidden{
+    position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;
+    overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;
   }
   a{color:var(--black); text-decoration:underline; text-decoration-color:var(--grey-300);}
   a:hover{color:var(--red); text-decoration-color:var(--red);}
 
-  /* ---------- header ---------- */
-  header{
-    background:var(--white);
-    border-bottom:3px solid var(--red);
-  }
-  .header-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:20px;
-    flex-wrap:wrap;
-    max-width:1280px;
-    margin:0 auto;
-    padding:22px 32px 18px;
-  }
-  .brand{display:flex;align-items:center;gap:14px;}
-  .brand-mark{
-    width:40px;height:40px;flex:none;
-    display:flex;align-items:center;justify-content:center;
-  }
-  .brand-mark svg{width:36px;height:auto;display:block;}
-  .brand h1{
-    font-family:var(--sans);
-    font-weight:800;
-    font-size:19px;
-    letter-spacing:0.5px;
-    text-transform:uppercase;
-    margin:0;
-    color:var(--black);
-  }
-  .brand p{
-    margin:3px 0 0;
-    font-size:12.5px;
-    color:var(--grey-500);
-    font-weight:500;
-  }
-  .meta{
-    text-align:right;
-    font-size:12.5px;
-    color:var(--grey-500);
-    font-weight:500;
-  }
+  /* ============================================================
+     TRACE — SINAIS: filtros, KPIs, gráficos e feed
+  ============================================================ */
+  .meta .stale-flag,
   .meta .sample-flag{
-    display:inline-block;
-    margin-top:6px;
-    padding:3px 9px;
-    background:var(--grey-100);
-    color:var(--red-ink);
-    border:1px solid var(--red);
-    border-radius:20px;
-    font-size:11px;
-    font-weight:600;
+    display:inline-block;margin-top:var(--sp-1);
+    padding:2px 8px;border-radius:var(--radius);
+    font-size:11.5px;font-weight:500;
   }
+  .meta .stale-flag{background:var(--red-soft);color:var(--red-ink);}
+  .meta .sample-flag{background:var(--gray-100);color:var(--gray-900);border:1px solid var(--line-strong);}
 
-  .filters{
-    max-width:1280px;
-    margin:0 auto;
-    display:flex;
-    gap:24px;
-    align-items:center;
-    flex-wrap:wrap;
-    padding:14px 32px;
-    background:var(--grey-50);
-    border-top:1px solid var(--grey-200);
-  }
-  .filter-block{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  /* filtros */
+  .filter-block{display:flex;align-items:center;gap:var(--sp-2);flex-wrap:wrap;}
+  #axis-chips,#competitor-chips{display:flex;flex-wrap:wrap;gap:6px;}
   .filter-label{
-    font-size:11px;
-    font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:0.6px;
-    color:var(--grey-500);
+    font-size:var(--fs-micro);font-weight:600;
+    letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;
+    color:var(--gray-700);margin-right:var(--sp-1);
   }
   .chip{
-    border:1px solid var(--grey-300);
-    background:var(--white);
-    color:var(--grey-700);
-    padding:5px 12px;
-    border-radius:20px;
-    font-size:12.5px;
-    font-weight:500;
-    font-family:var(--sans);
-    cursor:pointer;
-    transition:all .12s ease;
+    font-family:var(--sans);font-size:var(--fs-small);font-weight:500;
+    color:var(--gray-900);background:var(--white);
+    border:1px solid var(--line-strong);border-radius:var(--radius);
+    padding:5px 11px;min-height:32px;cursor:pointer;
+    transition:border-color .12s ease, background .12s ease;
   }
-  .chip:hover{border-color:var(--red);color:var(--red);}
-  .chip.active{background:var(--red);color:var(--white);border-color:var(--red);font-weight:600;}
+  .chip:hover{border-color:var(--ink);}
+  .chip.active{background:var(--ink);border-color:var(--ink);color:var(--white);}
   select#period-select{
-    background:var(--white);
-    border:1px solid var(--grey-300);
-    color:var(--grey-900);
-    padding:5px 10px;
-    border-radius:var(--radius-sm);
-    font-family:var(--sans);
-    font-size:12.5px;
+    font-family:var(--sans);font-size:var(--fs-small);color:var(--ink);
+    background:var(--white);border:1px solid var(--line-strong);border-radius:var(--radius);
+    padding:5px 8px;min-height:32px;
   }
 
-  /* ---------- layout ---------- */
-  main{max-width:1280px;margin:0 auto;padding:28px 32px 64px;}
+  /* seções da página Sinais */
+  .sg-section{margin-bottom:var(--sp-8);}
+  .sg-head{
+    display:flex;justify-content:space-between;align-items:flex-end;gap:var(--sp-4);flex-wrap:wrap;
+    padding-bottom:var(--sp-4);margin-bottom:var(--sp-4);border-bottom:1px solid var(--line);
+  }
+  .sg-section[hidden]{display:none;}
 
+  /* KPIs */
   .kpi-row{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:14px;
-    margin-bottom:20px;
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    border:1px solid var(--line);background:var(--white);
+    margin-bottom:var(--sp-8);
   }
-  .kpi-card{
-    background:var(--white);
-    border:1px solid var(--grey-200);
-    border-top:3px solid var(--grey-300);
-    border-radius:var(--radius);
-    padding:16px 18px;
-  }
-  .kpi-card.accent{border-top-color:var(--red);}
+  .kpi-card{padding:var(--sp-5);border-right:1px solid var(--line);min-width:0;}
+  .kpi-card:last-child{border-right:0;}
   .kpi-label{
-    font-size:11px;
-    font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:0.5px;
-    color:var(--grey-500);
-    margin-bottom:8px;
+    font-size:var(--fs-micro);font-weight:600;letter-spacing:var(--tracking-eyebrow);
+    text-transform:uppercase;color:var(--gray-700);margin-bottom:var(--sp-3);
   }
-  .kpi-value{
-    font-family:var(--sans);
-    font-size:30px;
-    font-weight:800;
-    line-height:1;
-    color:var(--black);
+  .kpi-value{font-size:32px;font-weight:500;line-height:1.1;letter-spacing:-.015em;color:var(--ink);overflow-wrap:anywhere;}
+  .kpi-value.long{font-size:20px;line-height:1.3;}
+  .kpi-card.accent .kpi-value{color:var(--red-ink);}
+  .kpi-sub{margin-top:var(--sp-2);font-size:12.5px;color:var(--gray-700);}
+  @media (max-width:900px){
+    .kpi-card{border-right:0;border-bottom:1px solid var(--line);}
+    .kpi-card:last-child{border-bottom:0;}
   }
-  .kpi-card.accent .kpi-value{color:var(--red);}
-  .kpi-sub{font-size:12.5px;color:var(--grey-500);margin-top:6px;}
 
-  .chart-row{
-    display:grid;
-    grid-template-columns:1.3fr 1fr;
-    gap:14px;
-    margin-bottom:28px;
-  }
+  /* gráficos */
+  .chart-row{display:grid;grid-template-columns:1.3fr 1fr;gap:var(--sp-5);}
   @media (max-width:860px){.chart-row{grid-template-columns:1fr;}}
-  .chart-card{
-    background:var(--white);
-    border:1px solid var(--grey-200);
-    border-radius:var(--radius);
-    padding:18px 20px;
-  }
-  .chart-card h3{
-    font-family:var(--sans);
-    font-size:13px;
-    font-weight:700;
-    margin:0 0 14px;
-    color:var(--black);
-  }
-  /* ---------- gráficos ----------
-     A altura é travada AQUI, no contêiner, e os charts rodam com
-     maintainAspectRatio:false. Sem isso, o Chart.js entra em loop de
-     "responsive resize": o canvas cresce a cada frame porque o pai não
-     tem altura definida, empurrando a página pra baixo infinitamente
-     (era o bug do "Itens por concorrente", que por ser barra horizontal
-     era o mais afetado). */
+  .chart-card{background:var(--white);border:1px solid var(--line);padding:var(--sp-5);margin-bottom:var(--sp-5);}
+  .chart-row .chart-card{margin-bottom:0;}
+  .chart-title{margin:0 0 var(--sp-4);font-size:14px;font-weight:600;color:var(--ink);}
+  .chart-title small{font-weight:400;color:var(--gray-700);}
+  /* altura travada no contêiner (charts com maintainAspectRatio:false); sem isso
+     o Chart.js entra em loop de resize e empurra a página para baixo */
   .chart-box{position:relative; width:100%; height:240px;}
   .chart-box.tall{height:260px;}
   .chart-box canvas{position:absolute; inset:0; width:100% !important; height:100% !important;}
 
-  /* ---------- feed ---------- */
-  .feed-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:baseline;
-    margin-bottom:6px;
-  }
-  .feed-header h2{
-    font-family:var(--sans);
-    font-size:18px;
-    font-weight:800;
-    margin:0;
-    color:var(--black);
-  }
-  .feed-count{font-size:12px;color:var(--grey-500);font-weight:500;}
-
+  /* feed */
+  .feed-count{font-size:var(--fs-small);color:var(--gray-700);}
   .item-card{
     background:var(--white);
-    border:1px solid var(--grey-200);
-    border-left:3px solid var(--grey-300);
-    border-radius:var(--radius-sm);
-    padding:14px 16px;
-    margin-bottom:8px;
+    border:1px solid var(--line);border-left:2px solid var(--line-strong);
+    margin-bottom:var(--sp-2);
   }
   .item-card.trigger{border-left-color:var(--red);}
   .item-summary{
-    list-style:none;
-    cursor:pointer;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:12px;
-    flex-wrap:wrap;
+    list-style:none;cursor:pointer;
+    display:grid;grid-template-columns:minmax(0,1fr) auto 16px;
+    gap:var(--sp-2) var(--sp-5);align-items:center;
+    padding:var(--sp-4) var(--sp-5);
   }
   .item-summary::-webkit-details-marker{display:none;}
-  .item-summary::after{
-    content:'+';
-    color:var(--grey-500);
-    font-size:16px;
-    font-weight:700;
-    flex:none;
-    margin-left:8px;
-  }
-  details.item-card[open] .item-summary::after{content:'–';}
-  .item-title{font-size:14px;font-weight:600;line-height:1.4;color:var(--black);}
-  .item-summary-meta{
-    font-size:11.5px;
-    color:var(--grey-500);
-    white-space:nowrap;
-    font-weight:500;
-  }
-  details.item-card .item-body{margin-top:10px;}
-  .item-why{font-size:13.5px;color:var(--grey-700);margin-top:2px;line-height:1.55;}
+  .item-summary:hover .item-title{text-decoration:underline;text-decoration-color:var(--gray-300);}
+  .item-title{display:block;font-size:var(--fs-body);font-weight:500;line-height:1.45;color:var(--ink);}
+  .item-summary-meta{font-size:12.5px;color:var(--gray-700);white-space:nowrap;}
+  details.item-card[open] .move-chevron{transform:rotate(90deg);}
+  .item-body{padding:0 var(--sp-5) var(--sp-5);}
+  .item-why{margin:0 0 var(--sp-4);font-size:14px;line-height:1.7;color:var(--gray-900);max-width:75ch;}
   .item-foot{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-top:10px;
-    flex-wrap:wrap;
-    gap:8px;
-    font-size:12px;
-    color:var(--grey-500);
+    display:flex;justify-content:space-between;align-items:baseline;gap:var(--sp-2) var(--sp-5);flex-wrap:wrap;
+    padding-top:var(--sp-3);border-top:1px solid var(--gray-100);
+    font-size:12.5px;color:var(--gray-700);
   }
-  .item-tags{display:flex;gap:6px;flex-wrap:wrap;}
-  .tag{
-    font-size:10.5px;
-    font-weight:600;
-    padding:2px 8px;
-    border-radius:10px;
-    background:var(--grey-100);
-    color:var(--grey-700);
-    border:1px solid var(--grey-200);
-  }
-  .tag.risk{background:var(--red-soft);color:var(--red-ink);border-color:var(--red);}
-  .trigger-badge{
-    font-size:10.5px;
-    font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:0.3px;
-    color:var(--white);
-    background:var(--red);
-    padding:2px 8px;
-    border-radius:10px;
-  }
-  .relevance-badge{
-    font-size:10.5px;
-    font-weight:600;
-    padding:1px 8px;
-    border-radius:10px;
-  }
-  .relevance-badge.alta{border:1px solid var(--red);color:var(--red);}
-  .relevance-badge.media{border:1px solid var(--grey-300);color:var(--grey-500);}
-  .source-badge{
-    font-size:10.5px;
-    font-weight:600;
-    padding:1px 8px;
-    border-radius:10px;
-    background:var(--grey-100);
-    color:var(--grey-700);
-  }
+  .item-tags{display:flex;flex-wrap:wrap;gap:var(--sp-1) 0;}
+  .item-tags > span + span::before{content:'·';margin:0 var(--sp-2);color:var(--gray-300);}
+  .item-tags .is-trigger{color:var(--red-ink);font-weight:500;}
+  .item-src a{color:var(--ink);}
   .empty-state{
-    text-align:center;
-    padding:60px 20px;
-    color:var(--grey-500);
-    font-size:14px;
+    padding:var(--sp-7) var(--sp-5);text-align:center;
+    background:var(--white);border:1px solid var(--line);
+    font-size:14px;color:var(--gray-700);
+  }
+  @media (max-width:560px){
+    .item-summary{grid-template-columns:minmax(0,1fr) 16px;padding:var(--sp-4);}
+    .item-summary-meta{grid-row:1;grid-column:1 / -1;}
+    .item-body{padding:0 var(--sp-4) var(--sp-4);}
   }
 
-  /* ---------- alertas fixos ---------- */
-  .alerts-section{margin-bottom:28px;}
-  .alerts-section h2{
-    font-family:var(--sans);
-    font-size:16px;
-    font-weight:800;
-    margin:0 0 10px;
-    display:flex;
-    align-items:center;
-    gap:9px;
-    color:var(--black);
+  /* ============================================================
+     TRACE — SHELL: sidebar, topbar, visões
+  ============================================================ */
+  .skip-link{
+    position:absolute;left:var(--sp-4);top:-60px;z-index:100;
+    background:var(--ink);color:var(--white);padding:var(--sp-2) var(--sp-4);
+    font-size:var(--fs-small);font-weight:600;text-decoration:none;
   }
-  .pulse-dot{
-    width:8px;height:8px;border-radius:50%;
-    background:var(--red);
-    flex:none;
-    animation:pulse 1.8s infinite;
+  .skip-link:focus{top:var(--sp-4);color:var(--white);}
+
+  .app{display:flex;min-height:100vh;}
+
+  .sidebar{
+    position:sticky;top:0;align-self:flex-start;
+    width:var(--sidebar-w);flex:none;height:100vh;
+    display:flex;flex-direction:column;
+    background:var(--white);
+    border-right:1px solid var(--line);
+    padding:var(--sp-6) var(--sp-5) var(--sp-5);
   }
-  @keyframes pulse{
-    0%{box-shadow:0 0 0 0 rgba(236,0,0,0.4);}
-    70%{box-shadow:0 0 0 7px rgba(236,0,0,0);}
-    100%{box-shadow:0 0 0 0 rgba(236,0,0,0);}
+  .brand{display:flex;align-items:flex-start;gap:var(--sp-3);padding:0 var(--sp-3);}
+  .brand-glyph{display:inline-flex;flex-direction:column;gap:4px;padding-top:6px;flex:none;}
+  .brand-glyph i{display:block;height:2px;background:var(--ink);border-radius:1px;}
+  .brand-glyph i:nth-child(1){width:18px;}
+  .brand-glyph i:nth-child(2){width:12px;}
+  .brand-glyph i:nth-child(3){width:18px;}
+  .brand-name{
+    margin:0;font-size:20px;font-weight:600;line-height:1.2;
+    letter-spacing:var(--tracking-brand);color:var(--ink);
+  }
+  .brand-tagline{margin:var(--sp-2) 0 0;font-size:12px;color:var(--gray-700);letter-spacing:.01em;}
+
+  .nav{margin-top:var(--sp-9);}
+  .nav ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:var(--sp-1);}
+  .nav-link{
+    display:flex;align-items:center;gap:var(--sp-3);
+    min-height:44px;padding:0 var(--sp-3);
+    font-size:14px;font-weight:500;color:var(--gray-700);
+    text-decoration:none;border-radius:var(--radius);
+  }
+  a.nav-link:hover{background:var(--gray-100);color:var(--ink);}
+  .nav-link[aria-current="page"]{background:var(--gray-100);color:var(--ink);font-weight:600;}
+  .nav-icon{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+  .nav-dot{margin-left:auto;width:6px;height:6px;border-radius:50%;background:var(--red);visibility:hidden;}
+  .nav-link.has-alert .nav-dot{visibility:visible;}
+  .nav-link.is-soon{color:var(--gray-500);cursor:default;}
+  .nav-soon{margin-left:auto;white-space:nowrap;font-size:11px;font-weight:500;color:var(--gray-500);}
+
+  .sidebar-foot{
+    margin-top:auto;padding:var(--sp-4) var(--sp-3) 0;
+    border-top:1px solid var(--line);
+    display:flex;align-items:center;gap:var(--sp-2);
+    font-size:12px;color:var(--gray-500);
+  }
+  .sant-mark svg{width:14px;height:auto;display:block;}
+
+  .app-main{flex:1;min-width:0;display:flex;flex-direction:column;}
+  .topbar,
+  main{width:100%;max-width:var(--content-max);margin:0 auto;padding-left:var(--sp-8);padding-right:var(--sp-8);}
+  .topbar{
+    display:flex;align-items:center;gap:var(--sp-4);
+    padding-top:var(--sp-5);padding-bottom:var(--sp-5);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar-title{margin:0;font-size:var(--fs-small);color:var(--gray-700);}
+  .menu-btn{
+    display:none;align-items:center;justify-content:center;
+    width:44px;height:44px;margin-left:calc(-1 * var(--sp-3));
+    background:none;border:0;cursor:pointer;border-radius:var(--radius);
+  }
+  .menu-btn .brand-glyph{padding-top:0;}
+  .meta{margin-left:auto;text-align:right;font-size:var(--fs-small);color:var(--gray-700);}
+  .meta-line{display:flex;align-items:center;justify-content:flex-end;gap:var(--sp-2);}
+  .status-dot{width:7px;height:7px;border-radius:50%;background:var(--gray-300);flex:none;}
+  .status-dot.is-ok{background:var(--ok);}
+  .status-dot.is-stale{background:var(--red);}
+
+  main{padding-top:var(--sp-8);padding-bottom:var(--sp-8);flex:1;}
+  main:focus{outline:none;}
+  .view[hidden]{display:none;}
+  .view-heading{margin-top:var(--sp-3);}
+  .view-heading:focus{outline:none;}
+  .view-sub{margin:var(--sp-3) 0 var(--sp-7);font-size:var(--fs-body);}
+  /* ---------- Visão geral: abertura ---------- */
+  .ov-hero{
+    display:flex;align-items:flex-end;justify-content:space-between;
+    gap:var(--sp-3) var(--sp-6);flex-wrap:wrap;
+    margin-bottom:var(--sp-7);
+  }
+  .ov-hero .t-display{font-size:44px;}
+  .ov-hero .t-display .t-alert{font-weight:500;}
+  .ov-count{margin:0 0 6px;font-size:14px;color:var(--gray-700);}
+  .ov-count:empty{display:none;}
+  /* ---------- Visão geral: sinal principal ---------- */
+  .signal{
+    display:grid;grid-template-columns:minmax(0,1.9fr) minmax(0,1fr);
+    background:var(--white);
+    border:1px solid var(--line);
+    border-left:3px solid var(--red);
+    box-shadow:var(--shadow-card);
+    margin-bottom:var(--sp-8);
+  }
+  .signal-main{padding:var(--sp-7) var(--sp-7) var(--sp-6);}
+  .signal-side{
+    padding:var(--sp-7) var(--sp-6) var(--sp-6);
+    border-left:1px solid var(--line);
+    display:flex;flex-direction:column;
+  }
+  .signal-top{display:flex;align-items:center;gap:var(--sp-4);flex-wrap:wrap;}
+  .signal-rule{width:26px;height:1px;background:var(--red);flex:none;}
+  .signal-when{font-size:var(--fs-small);color:var(--gray-700);}
+  .signal-who{margin:var(--sp-6) 0 var(--sp-3);font-size:14px;color:var(--gray-700);}
+  .signal-who strong{color:var(--ink);font-weight:600;}
+  .signal-who .sep{margin:0 var(--sp-2);color:var(--gray-300);}
+  .signal-title{max-width:34ch;}
+  .signal-why{margin-top:var(--sp-6);padding-top:var(--sp-5);border-top:1px solid var(--line);}
+  .signal-why p:not(.t-eyebrow){margin:var(--sp-3) 0 0;font-size:var(--fs-body);line-height:1.75;color:var(--gray-900);max-width:68ch;}
+  .reading{margin:var(--sp-5) 0 0;}
+  .reading-row{display:flex;justify-content:space-between;gap:var(--sp-4);padding:var(--sp-2) 0;font-size:14px;}
+  .reading-row dt{color:var(--gray-700);}
+  .reading-row dd{margin:0;text-align:right;font-weight:500;color:var(--ink);}
+  .reading-row dd.is-high{color:var(--red-ink);}
+  .reading-row dd small{display:block;font-weight:400;font-size:12px;color:var(--gray-500);}
+  .signal-source{margin-top:auto;padding-top:var(--sp-5);border-top:1px solid var(--line);}
+  .signal-source-label{margin:0 0 var(--sp-2);font-size:12px;color:var(--gray-500);}
+  .signal-source-link{
+    display:flex;align-items:center;justify-content:space-between;gap:var(--sp-3);
+    font-size:14px;font-weight:500;color:var(--ink);text-decoration:none;
+  }
+  a.signal-source-link:hover{color:var(--red-ink);}
+  .signal-source-link .arrow{flex:none;width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.5;}
+  .signal-more{margin:var(--sp-2) 0 0;font-size:12px;color:var(--gray-500);}
+
+  /* ---------- Visão geral: blocos inferiores ---------- */
+  .ov-grid{
+    display:grid;grid-template-columns:minmax(0,1.9fr) minmax(0,1fr);
+    gap:var(--sp-8);align-items:start;
+  }
+  .ov-grid[hidden]{display:none;}
+  .ov-block-head{
+    display:flex;justify-content:space-between;align-items:flex-start;gap:var(--sp-4);
+    padding-bottom:var(--sp-4);border-bottom:1px solid var(--line);
+  }
+  .ov-block-sub{margin:var(--sp-1) 0 0;font-size:var(--fs-small);color:var(--gray-700);}
+  .ov-more{font-size:var(--fs-small);color:var(--gray-700);text-decoration:none;white-space:nowrap;padding-top:4px;}
+  .ov-more:hover{color:var(--ink);text-decoration:underline;}
+  .ov-empty{padding:var(--sp-5) 0;font-size:14px;color:var(--gray-700);}
+
+  .moves{list-style:none;margin:0;padding:0;}
+  .move{border-bottom:1px solid var(--line);}
+  .move > summary{
+    list-style:none;cursor:pointer;
+    display:grid;grid-template-columns:72px minmax(0,1fr) auto 16px;
+    gap:var(--sp-2) var(--sp-5);align-items:center;
+    padding:var(--sp-4) 0;
+  }
+  .move > summary::-webkit-details-marker{display:none;}
+  .move > summary:hover .move-title{text-decoration:underline;text-decoration-color:var(--gray-300);}
+  .move-when{font-size:var(--fs-small);color:var(--gray-700);}
+  .move-meta{display:block;font-size:12px;color:var(--gray-700);margin-bottom:2px;}
+  .move-meta strong{color:var(--ink);font-weight:600;}
+  .move-meta .dot{margin:0 6px;color:var(--gray-300);}
+  .move-title{display:block;font-size:var(--fs-body);line-height:1.45;color:var(--ink);}
+  .move-rel{font-size:12px;color:var(--gray-700);}
+  .move-rel.is-high{color:var(--red-ink);font-weight:500;}
+  .move-chevron{width:14px;height:14px;fill:none;stroke:var(--gray-700);stroke-width:1.5;transition:transform .15s ease;}
+  .move[open] .move-chevron{transform:rotate(90deg);}
+  .move-body{padding:0 0 var(--sp-5) calc(72px + var(--sp-5));}
+  .move-body p{margin:0 0 var(--sp-2);font-size:14px;line-height:1.65;color:var(--gray-900);max-width:70ch;}
+  .move-src{font-size:12px;color:var(--gray-700);}
+  .move-src a{color:var(--ink);}
+
+  .activity{list-style:none;margin:0;padding:0;}
+  .activity li{padding:var(--sp-4) 0 0;}
+  .activity-row{display:flex;justify-content:space-between;gap:var(--sp-3);font-size:14px;}
+  .activity-name{color:var(--ink);font-weight:500;}
+  .activity-count{color:var(--gray-700);white-space:nowrap;}
+  .activity-track{position:relative;height:1px;margin-top:var(--sp-3);background:var(--line);}
+  .activity-bar{position:absolute;left:0;top:-0.5px;height:2px;background:var(--ink);}
+
+  @media (max-width:1100px){
+    .ov-grid{grid-template-columns:1fr;}
+  }
+  @media (max-width:560px){
+    .move > summary{grid-template-columns:minmax(0,1fr) auto 16px;}
+    .move-when{grid-column:1 / -1;font-size:12px;}
+    .move-body{padding-left:0;}
   }
 
-  footer{
-    max-width:1280px;
-    margin:0 auto;
-    padding:0 32px 40px;
-    font-size:12px;
-    color:var(--grey-500);
+  @media (max-width:1100px){
+    .signal{grid-template-columns:1fr;}
+    .signal-side{border-left:0;border-top:1px solid var(--line);}
+    .signal-source{margin-top:var(--sp-5);}
+  }
+  @media (max-width:960px){
+    .signal-main{padding:var(--sp-5);}
+    .signal-side{padding:var(--sp-5);}
+    .signal-title{font-size:23px;}
+    .ov-hero .t-display{font-size:32px;}
+    .ov-count{margin-bottom:0;}
+  }
+
+  .filters{
+    display:flex;gap:var(--sp-5);align-items:center;flex-wrap:wrap;
+    padding:var(--sp-4) 0;margin-bottom:var(--sp-6);
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  }
+
+  .app-foot{
+    margin-top:var(--sp-8);padding-top:var(--sp-5);
+    border-top:1px solid var(--line);
+    font-size:12px;color:var(--gray-500);
+  }
+
+  /* ---------- telas estreitas: sidebar vira gaveta ---------- */
+  @media (max-width:960px){
+    .sidebar{
+      position:fixed;left:0;top:0;z-index:50;
+      transform:translateX(-100%);transition:transform .2s ease;
+      box-shadow:none;
+    }
+    .sidebar.is-open{transform:none;box-shadow:0 0 40px rgba(23,23,23,.18);}
+    .scrim{position:fixed;inset:0;z-index:40;background:rgba(23,23,23,.28);}
+    .scrim[hidden]{display:none;}
+    .menu-btn{display:inline-flex;}
+    .topbar,main{padding-left:var(--sp-4);padding-right:var(--sp-4);}
+    main{padding-top:var(--sp-6);}
+    :root{--fs-display:30px;}
+  }
+  @media (max-width:560px){
+    .topbar-title{display:none;}
+    .meta{font-size:12px;}
   }
 
   /* ============================================================
@@ -369,42 +491,23 @@
     color:var(--grey-700);
   }
   .banner[hidden], #dashboard[hidden], .filters[hidden]{display:none;}
+  .banner{border-radius:var(--radius);}
   .banner-error{border-left-color:var(--red);}
   .banner-error strong{display:block;color:var(--black);font-size:15px;margin-bottom:4px;}
   .banner-error p{margin:0 0 12px;line-height:1.5;}
 
-  /* aviso de dados desatualizados / avisos de validação */
-  .meta .stale-flag{
-    display:inline-block;
-    margin-top:6px;
-    padding:3px 9px;
-    background:var(--red-soft);
-    color:var(--red-ink);
-    border:1px solid var(--red);
-    border-radius:20px;
-    font-size:11px;
-    font-weight:600;
-  }
+  /* avisos de validação */
   .data-warning{margin-top:6px;font-size:11.5px;color:var(--grey-700);font-weight:500;}
   .data-warning:empty{display:none;}
 
   /* limpar filtros */
   .chip-clear{
-    background:none;
-    border:none;
-    padding:5px 4px;
-    font-family:var(--sans);
-    font-size:12.5px;
-    font-weight:600;
-    color:var(--grey-700);
-    text-decoration:underline;
-    cursor:pointer;
+    background:none;border:none;padding:5px 4px;min-height:32px;
+    font-family:var(--sans);font-size:var(--fs-small);font-weight:500;
+    color:var(--gray-900);text-decoration:underline;text-underline-offset:3px;cursor:pointer;
   }
-  .chip-clear:hover{color:var(--red-ink);}
+  .chip-clear:hover{color:var(--ink);}
   .chip-clear[hidden]{display:none;}
-
-  /* KPI com valor longo (antes: font-size inline) */
-  .kpi-value.long{font-size:18px;}
 
   /* gráfico: mensagem (vazio / carregando / biblioteca indisponível) */
   .chart-note{
@@ -419,8 +522,7 @@
     font-size:13px;
     line-height:1.5;
     color:var(--grey-700);
-    background:var(--grey-50);
-    border-radius:var(--radius-sm);
+    background:var(--paper);
   }
   .chart-note[hidden]{display:none;}
 
@@ -429,6 +531,9 @@
   .chip-clear:focus-visible,
   select#period-select:focus-visible,
   .item-summary:focus-visible,
+  .move > summary:focus-visible,
+  .menu-btn:focus-visible,
+  .nav-link:focus-visible,
   a:focus-visible{
     outline:2px solid var(--black);
     outline-offset:2px;
@@ -436,91 +541,166 @@
 
   /* respeita a preferência do sistema por menos movimento */
   @media (prefers-reduced-motion: reduce){
-    .pulse-dot{animation:none;}
     .chip{transition:none;}
+    .sidebar{transition:none;}
+    .move-chevron{transition:none;}
   }
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
 
-<header>
-  <div class="header-top">
+<div class="app">
+  <aside class="sidebar" id="sidebar" aria-label="TRACE">
     <div class="brand">
-      <div class="brand-mark" role="img" aria-label="Santander">
-        <svg viewBox="0 0 43.9 41.9" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path fill="#EC0000" d="M 31.5,19.5 C 31.4,18 31,16.5 30.2,15.2 L 23.4,3.3 C 22.9,2.4 22.5,1.4 22.3,0.4 L 22,0.9 c -1.7,2.9 -1.7,6.6 0,9.5 l 5.5,9.5 c 1.7,2.9 1.7,6.6 0,9.5 l -0.3,0.5 c -0.2,-1 -0.6,-2 -1.1,-2.9 l -5,-8.7 -3.2,-5.6 C 17.4,11.8 17,10.8 16.8,9.8 l -0.3,0.5 c -1.7,2.9 -1.7,6.5 0,9.5 v 0 l 5.5,9.5 c 1.7,2.9 1.7,6.6 0,9.5 l -0.3,0.5 c -0.2,-1 -0.6,-2 -1.1,-2.9 L 13.7,24.5 C 12.8,22.9 12.4,21.1 12.4,19.3 5.1,21.2 0,25.3 0,30 0,36.6 9.8,41.9 21.9,41.9 34,41.9 43.8,36.6 43.8,30 43.9,25.5 38.9,21.4 31.5,19.5 Z"/></svg>
-      </div>
+      <span class="brand-glyph" aria-hidden="true"><i></i><i></i><i></i></span>
       <div>
-        <h1>Radar de Mercado</h1>
-        <p id="brand-sub">Monitoramento de concorrentes</p>
+        <p class="brand-name">TRACE</p>
+        <p class="brand-tagline" lang="en">Tracing what matters.</p>
       </div>
     </div>
-    <div class="meta">
-      <div id="updated-at">carregando…</div>
-      <div id="stale-flag-holder"></div>
-      <div id="sample-flag-holder"></div>
-      <div id="data-warning" class="data-warning" role="status"></div>
-    </div>
-  </div>
 
-  <div class="filters" id="filters" hidden>
-    <div class="filter-block" role="group" aria-labelledby="axis-label">
-      <span class="filter-label" id="axis-label">Eixo</span>
-      <div id="axis-chips"></div>
-    </div>
-    <div class="filter-block" role="group" aria-labelledby="competitor-label">
-      <span class="filter-label" id="competitor-label">Concorrente</span>
-      <div id="competitor-chips"></div>
-    </div>
-    <div class="filter-block">
-      <label class="filter-label" for="period-select">Período</label>
-      <select id="period-select">
-        <option value="7">7 dias</option>
-        <option value="30" selected>30 dias</option>
-        <option value="90">90 dias</option>
-        <option value="99999" data-sub="todo o histórico">Tudo</option>
-      </select>
-    </div>
-    <button type="button" class="chip-clear" id="clear-filters" hidden>Limpar filtros</button>
-  </div>
-</header>
+    <nav class="nav" aria-label="Navegação principal">
+      <ul>
+        <li><a class="nav-link" href="#visao-geral" data-route="visao-geral"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3 3 7.5l9 4.5 9-4.5L12 3Z"/><path d="m3 12 9 4.5 9-4.5"/><path d="m3 16.5 9 4.5 9-4.5"/></svg><span>Visão geral</span><span class="nav-dot" aria-hidden="true"></span></a></li>
+        <li><a class="nav-link" href="#sinais" data-route="sinais"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="1.6"/><path d="M8.5 8.5a5 5 0 0 0 0 7M15.5 8.5a5 5 0 0 1 0 7M5.6 5.6a9 9 0 0 0 0 12.8M18.4 5.6a9 9 0 0 1 0 12.8"/></svg><span>Sinais</span><span class="nav-dot" aria-hidden="true"></span></a></li>
+        <li><span class="nav-link is-soon" aria-disabled="true"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M9 20v-4h6v4M8 8h2M14 8h2M8 12h2M14 12h2"/></svg><span>Concorrentes</span><span class="nav-soon">em breve</span></span></li>
+        <li><span class="nav-link is-soon" aria-disabled="true"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4v16h16"/><path d="m7 15 4-4 3 3 5-6"/></svg><span>Estratégia</span><span class="nav-soon">em breve</span></span></li>
+        <li><span class="nav-link is-soon" aria-disabled="true"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span>Histórico</span><span class="nav-soon">em breve</span></span></li>
+      </ul>
+    </nav>
 
-<main>
+    <div class="sidebar-foot">
+      <span class="sant-mark"><svg viewBox="0 0 43.9 41.9" aria-hidden="true" focusable="false"><path fill="#EC0000" d="M 31.5,19.5 C 31.4,18 31,16.5 30.2,15.2 L 23.4,3.3 C 22.9,2.4 22.5,1.4 22.3,0.4 L 22,0.9 c -1.7,2.9 -1.7,6.6 0,9.5 l 5.5,9.5 c 1.7,2.9 1.7,6.6 0,9.5 l -0.3,0.5 c -0.2,-1 -0.6,-2 -1.1,-2.9 l -5,-8.7 -3.2,-5.6 C 17.4,11.8 17,10.8 16.8,9.8 l -0.3,0.5 c -1.7,2.9 -1.7,6.5 0,9.5 v 0 l 5.5,9.5 c 1.7,2.9 1.7,6.6 0,9.5 l -0.3,0.5 c -0.2,-1 -0.6,-2 -1.1,-2.9 L 13.7,24.5 C 12.8,22.9 12.4,21.1 12.4,19.3 5.1,21.2 0,25.3 0,30 0,36.6 9.8,41.9 21.9,41.9 34,41.9 43.8,36.6 43.8,30 43.9,25.5 38.9,21.4 31.5,19.5 Z"/></svg></span>
+      <span>Uso interno · Santander</span>
+    </div>
+  </aside>
+  <div class="scrim" id="scrim" hidden></div>
+
+  <div class="app-main">
+    <header class="topbar">
+      <button type="button" class="menu-btn" id="menu-btn" aria-controls="sidebar" aria-expanded="false">
+        <span class="brand-glyph" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="visually-hidden">Abrir menu</span>
+      </button>
+      <p class="topbar-title" lang="en">Competitive Intelligence</p>
+      <div class="meta">
+        <div class="meta-line"><span class="status-dot" id="status-dot" aria-hidden="true"></span><span id="updated-at">carregando…</span></div>
+        <div id="stale-flag-holder"></div>
+        <div id="sample-flag-holder"></div>
+        <div id="data-warning" class="data-warning" role="status"></div>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
   <div id="load-status" class="banner" role="status">Carregando dados…</div>
+
+      <section class="view" id="view-visao-geral" data-view="visao-geral" aria-labelledby="h-visao-geral" hidden>
+        <div class="ov-hero">
+          <div>
+            <p class="t-eyebrow" id="ov-greeting">Visão geral</p>
+            <h1 class="t-display view-heading" id="h-visao-geral" tabindex="-1">Carregando leitura…</h1>
+          </div>
+          <p class="ov-count" id="ov-count"></p>
+        </div>
+
+        <div id="ov-signal"></div>
+
+        <div class="ov-grid" id="ov-grid" hidden>
+          <section class="ov-block" aria-labelledby="h-recent">
+            <div class="ov-block-head">
+              <div>
+                <h2 class="t-h2" id="h-recent">Movimentos recentes</h2>
+                <p class="ov-block-sub">Os mais recentes do monitoramento</p>
+              </div>
+              <a class="ov-more" href="#sinais">Ver todos</a>
+            </div>
+            <ul class="moves" id="ov-moves"></ul>
+          </section>
+          <section class="ov-block" aria-labelledby="h-activity">
+            <div class="ov-block-head">
+              <div>
+                <h2 class="t-h2" id="h-activity">Onde há mais movimento</h2>
+                <p class="ov-block-sub" id="ov-activity-sub">Eixos com mais atividade competitiva</p>
+              </div>
+            </div>
+            <ul class="activity" id="ov-activity"></ul>
+          </section>
+        </div>
+      </section>
+
+      <section class="view" id="view-sinais" data-view="sinais" aria-labelledby="h-sinais" hidden>
+        <p class="t-eyebrow">Sinais</p>
+        <h1 class="t-display view-heading" id="h-sinais" tabindex="-1">Todos os movimentos</h1>
+        <p class="view-sub t-muted">Feed completo do monitoramento, com filtros por eixo, concorrente e período.</p>
   <div id="dashboard" hidden>
-  <section class="alerts-section" id="alerts-section" style="display:none;">
-    <h2><span class="pulse-dot"></span>Últimos Alertas</h2>
+  <div class="filters" id="filters" hidden>
+      <div class="filter-block" role="group" aria-labelledby="axis-label">
+        <span class="filter-label" id="axis-label">Eixo</span>
+        <div id="axis-chips"></div>
+      </div>
+      <div class="filter-block" role="group" aria-labelledby="competitor-label">
+        <span class="filter-label" id="competitor-label">Concorrente</span>
+        <div id="competitor-chips"></div>
+      </div>
+      <div class="filter-block">
+        <label class="filter-label" for="period-select">Período</label>
+        <select id="period-select">
+          <option value="7">7 dias</option>
+          <option value="30" selected>30 dias</option>
+          <option value="90">90 dias</option>
+          <option value="99999" data-sub="todo o histórico">Tudo</option>
+        </select>
+      </div>
+      <button type="button" class="chip-clear" id="clear-filters" hidden>Limpar filtros</button>
+    </div>
+  <section class="sg-section" id="alerts-section" aria-labelledby="h-alerts" hidden>
+    <div class="sg-head">
+      <div>
+        <h2 class="t-h2" id="h-alerts">Gatilhos dos últimos 7 dias</h2>
+        <p class="ov-block-sub">Itens com gatilho diário, abertos para leitura · não mudam com os filtros</p>
+      </div>
+    </div>
     <div id="alerts-feed"></div>
   </section>
 
-  <section class="kpi-row" id="kpi-row"></section>
+  <section class="kpi-row" id="kpi-row" aria-label="Indicadores do período filtrado"></section>
 
-  <section class="chart-card" style="margin-bottom:14px;">
-    <h3>Itens ao longo do tempo (todo o histórico, por semana)</h3>
+  <section class="sg-section" aria-labelledby="h-dist">
+  <div class="sg-head"><h2 class="t-h2" id="h-dist">Distribuição</h2></div>
+  <div class="chart-card">
+    <h3 class="chart-title">Itens por semana <small>· todo o histórico</small></h3>
     <div class="chart-box tall"><canvas id="trend-chart" role="img" aria-label="Itens ao longo do tempo, por semana"></canvas><div class="chart-note" id="trend-note" hidden></div></div>
-  </section>
+  </div>
 
-  <section class="chart-row">
+  <div class="chart-row">
     <div class="chart-card">
-      <h3>Itens por eixo</h3>
+      <h3 class="chart-title">Itens por eixo <small>· período filtrado</small></h3>
       <div class="chart-box"><canvas id="axis-chart" role="img" aria-label="Itens por eixo"></canvas><div class="chart-note" id="axis-note" hidden></div></div>
     </div>
     <div class="chart-card">
-      <h3>Itens por concorrente</h3>
+      <h3 class="chart-title">Itens por concorrente <small>· período filtrado</small></h3>
       <div class="chart-box"><canvas id="competitor-chart" role="img" aria-label="Itens por concorrente"></canvas><div class="chart-note" id="competitor-note" hidden></div></div>
     </div>
+  </div>
   </section>
 
-  <div class="feed-header">
-    <h2>Itens monitorados</h2>
-    <span class="feed-count" id="feed-count" aria-live="polite"></span>
-  </div>
-  <div id="feed"></div>
+  <section class="sg-section" aria-labelledby="h-feed">
+    <div class="sg-head">
+      <h2 class="t-h2" id="h-feed">Itens monitorados</h2>
+      <span class="feed-count" id="feed-count" aria-live="polite"></span>
+    </div>
+    <div id="feed"></div>
+  </section>
   </div><!-- /#dashboard -->
-</main>
+      </section>
 
-<footer>
-  Radar de Mercado — inteligência competitiva interna · dados coletados via portais de notícia e fontes públicas · não é aconselhamento de investimento
-</footer>
+      <footer class="app-foot">
+        Dados coletados de portais de notícia e fontes públicas · não é aconselhamento de investimento
+      </footer>
+    </main>
+  </div>
+</div>
 
 <script>
 /* ============================================================
@@ -535,16 +715,13 @@ const CHART_LOAD_TIMEOUT_MS = 10000;   // tempo máximo esperando o Chart.js
 const MAX_TREND_WEEKS = 104;           // trava de segurança do gráfico de tendência
 const DAY_MS = 86400000;
 const DEMO = new URLSearchParams(location.search).get('demo') === '1';
+const ATTENTION_DAYS = 7;              // janela da Visão geral: sinais e movimentos dos últimos N dias
 
-// Só estilo: o eixo Risco/Regulação é o único destacado em vermelho.
-const RISK_AXIS = "Risco/Regulação";
 // Ordem de exibição preferida. Eixos que aparecerem no data.json e não
 // estiverem aqui (ex.: um futuro eixo CX) entram depois, em ordem alfabética.
 const AXIS_ORDER = ["RV/Trading", "Tecnologia", "Produtos Novos", "Risco/Regulação"];
 const FALLBACK_GROUP = "Outros";
-const COLOR_RED = "#EC0000";
-const COLOR_DARK = "#1A1A1A";
-const COLOR_GREY = "#8A8A8A";
+const COLOR_DARK = "#171717";   /* Ink */
 
 let AXES = [];          // derivado do data.json
 let COMPETITORS = [];   // derivado do data.json
@@ -612,6 +789,26 @@ function normRelevance(v){
   return '';
 }
 
+// Códigos de gatilho definidos em src/sources.py (DAILY_TRIGGER_CRITERIA).
+// Código desconhecido vira '' e a linha "Gatilho" simplesmente não aparece.
+const TRIGGER_LABELS = {
+  PRICE: 'Preço e condições',
+  LANC:  'Lançamento',
+  REG:   'Regulação',
+  INC:   'Incidente',
+  MA:    'M&A',
+  LID:   'Liderança',
+  TERMS: 'Termos de serviço',
+};
+function normTrigger(v){
+  const code = text(v).toUpperCase();
+  return Object.prototype.hasOwnProperty.call(TRIGGER_LABELS, code) ? code : '';
+}
+function normConfirmation(v){
+  const s = text(v).toLowerCase();
+  return (s === 'confirmado' || s === 'especulativo') ? s : '';
+}
+
 function normalizeItem(raw){
   if(!raw || typeof raw !== 'object' || Array.isArray(raw)) return null;
 
@@ -642,6 +839,8 @@ function normalizeItem(raw){
     daily_trigger: raw.daily_trigger === true || raw.daily_trigger === 'true' || raw.daily_trigger === 1,
     relevance: normRelevance(raw.relevance),
     also_reported_by: also,
+    trigger_reason: normTrigger(raw.trigger_reason),
+    confirmation: normConfirmation(raw.confirmation),
   };
 }
 
@@ -800,7 +999,7 @@ function renderKPIs(items){
 
   const kpis = [
     {label:'Itens no período', value: items.length, sub: periodLabel(), accent:false},
-    {label:'Alertas de gatilho', value: triggers, sub: 'risco, comunicado, lançamento ou regulação', accent:true},
+    {label:'Gatilhos no período', value: triggers, sub: triggers === 1 ? 'item com gatilho diário' : 'itens com gatilho diário', accent: triggers > 0},
     {label:'Eixo mais ativo', value: topAxis ? topAxis[0] : '—', sub: topAxis ? `${topAxis[1]} itens` : '', accent:false},
     {label:'Concorrente mais ativo', value: topComp ? topComp[0] : '—', sub: topComp ? `${topComp[1]} itens` : '', accent:false},
   ];
@@ -809,7 +1008,7 @@ function renderKPIs(items){
   row.innerHTML = kpis.map(k => `
     <div class="kpi-card ${k.accent ? 'accent' : ''}">
       <div class="kpi-label">${escapeHtml(k.label)}</div>
-      <div class="kpi-value ${String(k.value).length > 12 ? 'long' : ''}">${escapeHtml(k.value)}</div>
+      <div class="kpi-value ${typeof k.value === 'number' ? '' : 'long'}">${escapeHtml(k.value)}</div>
       <div class="kpi-sub">${escapeHtml(k.sub)}</div>
     </div>
   `).join('');
@@ -893,6 +1092,9 @@ function paintChart(key, spec){
 
   canvas.hidden = false;
   note.hidden = true;
+  Chart.defaults.font.family = "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+  Chart.defaults.font.size = 12;
+  Chart.defaults.color = '#4A4A4A';
   CHARTS[key] = new Chart(canvas, spec.config);
 }
 
@@ -909,15 +1111,15 @@ function renderTrendChart(){
     emptyMsg:'Sem itens para exibir.',
     config:{
       type:'bar',
-      data:{labels, datasets:[{data:values, backgroundColor:COLOR_DARK, borderRadius:3}]},
-      options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true, ticks:{precision:0}}}, animation:false}
+      data:{labels, datasets:[{data:values, backgroundColor:COLOR_DARK, borderRadius:0, maxBarThickness:18}]},
+      options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{x:{grid:{display:false}, ticks:{maxRotation:0, autoSkip:true, autoSkipPadding:16}}, y:{beginAtZero:true, ticks:{precision:0}, grid:{color:'#F0F0F0'}, border:{display:false}}}, animation:false}
     }
   });
 }
 
 function renderCharts(items){
   const axisCounts = AXES.map(a => items.filter(i => i.axes.includes(a)).length);
-  const axisColors = AXES.map(a => a === RISK_AXIS ? COLOR_RED : COLOR_DARK);
+  // TRACE: vermelho é informação, não categoria — todos os eixos em Ink.
   const compCounts = COMPETITORS.map(c => items.filter(i => i.competitor_group === c).length);
 
   paintChart('axis', {
@@ -926,8 +1128,8 @@ function renderCharts(items){
     emptyMsg:'Sem eixos para exibir.',
     config:{
       type:'bar',
-      data:{labels:AXES, datasets:[{data:axisCounts, backgroundColor:axisColors, borderRadius:3}]},
-      options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true, ticks:{precision:0}}}, animation:false}
+      data:{labels:AXES, datasets:[{data:axisCounts, backgroundColor:COLOR_DARK, borderRadius:0, maxBarThickness:36}]},
+      options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{x:{grid:{display:false}}, y:{beginAtZero:true, ticks:{precision:0}, grid:{color:'#F0F0F0'}, border:{display:false}}}, animation:false}
     }
   });
 
@@ -937,8 +1139,8 @@ function renderCharts(items){
     emptyMsg:'Sem concorrentes para exibir.',
     config:{
       type:'bar',
-      data:{labels:COMPETITORS, datasets:[{data:compCounts, backgroundColor:COLOR_DARK, borderRadius:3}]},
-      options:{indexAxis:'y', responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{x:{beginAtZero:true, ticks:{precision:0}}}, animation:false}
+      data:{labels:COMPETITORS, datasets:[{data:compCounts, backgroundColor:COLOR_DARK, borderRadius:0, maxBarThickness:18}]},
+      options:{indexAxis:'y', responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{x:{beginAtZero:true, ticks:{precision:0}, grid:{color:'#F0F0F0'}, border:{display:false}}, y:{grid:{display:false}}}, animation:false}
     }
   });
 }
@@ -963,31 +1165,40 @@ function linkOrText(label, url){
 
 function sourceHtml(item){
   const primary = linkOrText(item.source, item.link);
-  const extra = item.also_reported_by;
-  if(!extra.length) return `${primary} · ${fmtDate(item._ts)}`;
-  const extraLinks = extra.map(s => linkOrText(s.source, s.link)).join(', ');
-  return `${primary} <span style="color:var(--grey-500)">também:</span> ${extraLinks} · ${fmtDate(item._ts)}`;
+  const seen = new Set([item.source.trim().toLowerCase()]);
+  const extra = item.also_reported_by.filter(o => {
+    const k = o.source.trim().toLowerCase();
+    if(seen.has(k)) return false;
+    seen.add(k); return true;
+  });
+  if(!extra.length) return primary;
+  return `${primary} <span class="t-muted">· também em</span> ${extra.map(o => linkOrText(o.source, o.link)).join(', ')}`;
 }
 
 function itemCardHtml(item, defaultOpen){
-  const relClass = item.relevance === 'alta' ? 'alta' : 'media';
-  const sourceCount = 1 + item.also_reported_by.length;
+  const outlets = 1 + otherOutlets(item).length;
+  const tags = [];
+  if(item.daily_trigger){
+    tags.push(`<span class="is-trigger">${item.trigger_reason ? `Gatilho · ${escapeHtml(TRIGGER_LABELS[item.trigger_reason])}` : 'Gatilho diário'}</span>`);
+  }
+  if(item.relevance) tags.push(`<span>Relevância ${escapeHtml(item.relevance)}</span>`);
+  if(item.confirmation === 'especulativo') tags.push('<span>Especulativo</span>');
+  if(outlets > 1) tags.push(`<span>${outlets} veículos</span>`);
   return `
     <details ${defaultOpen ? 'open' : ''} class="item-card ${item.daily_trigger ? 'trigger' : ''}">
       <summary class="item-summary">
-        <span class="item-title">${escapeHtml(item.title)}</span>
-        <span class="item-summary-meta">${escapeHtml(item.competitor_group)} · ${fmtDate(item._ts)}</span>
+        <span>
+          <span class="move-meta"><strong>${escapeHtml(item.competitor_group)}</strong>${item.axes.length ? `<span class="dot" aria-hidden="true">·</span><span class="visually-hidden">, eixos </span>${item.axes.map(escapeHtml).join(' · ')}` : ''}</span>
+          <span class="item-title">${escapeHtml(displayTitle(item))}</span>
+        </span>
+        <span class="item-summary-meta"><time datetime="${escapeHtml(new Date(item._ts).toISOString())}">${escapeHtml(fmtDate(item._ts))}</time></span>
+        ${CHEVRON_SVG}
       </summary>
       <div class="item-body">
-        <div class="item-why">${escapeHtml(item.why_it_matters)}</div>
+        ${item.why_it_matters ? `<p class="item-why">${escapeHtml(item.why_it_matters)}</p>` : ''}
         <div class="item-foot">
-          <div class="item-tags">
-            ${item.axes.map(a => `<span class="tag ${a === RISK_AXIS ? 'risk' : ''}">${escapeHtml(a)}</span>`).join('')}
-            ${item.daily_trigger ? '<span class="trigger-badge">gatilho diário</span>' : ''}
-            ${item.relevance ? `<span class="relevance-badge ${relClass}">relevância ${escapeHtml(item.relevance)}</span>` : ''}
-            ${sourceCount > 1 ? `<span class="source-badge">${sourceCount} fontes</span>` : ''}
-          </div>
-          <div>${sourceHtml(item)}</div>
+          <div class="item-tags">${tags.join('')}</div>
+          <div class="item-src">${sourceHtml(item)}</div>
         </div>
       </div>
     </details>
@@ -1005,8 +1216,8 @@ function alertItems(){
 function renderAlerts(){
   const items = alertItems();
   const section = document.getElementById('alerts-section');
-  if(!items.length){ section.style.display = 'none'; return; }
-  section.style.display = '';
+  if(!items.length){ section.hidden = true; return; }
+  section.hidden = false;
   document.getElementById('alerts-feed').innerHTML = items.map(i => itemCardHtml(i, true)).join('');
 }
 
@@ -1026,6 +1237,281 @@ function renderFeed(items){
 }
 
 /* ============================================================
+   VISÃO GERAL
+   Sinal que merece atenção = daily_trigger + relevância alta, nos
+   últimos ATTENTION_DAYS dias (contados a partir de agora: dado velho
+   reduz a contagem em vez de inflar a urgência).
+============================================================ */
+const HOUR_FMT = new Intl.DateTimeFormat('pt-BR', {timeZone:TZ, hour:'numeric', hourCycle:'h23'});
+
+function greeting(){
+  const h = parseInt(HOUR_FMT.format(new Date()), 10);
+  if(h >= 5 && h < 12) return 'Bom dia';
+  if(h >= 12 && h < 18) return 'Boa tarde';
+  return 'Boa noite';
+}
+
+function attentionCutoff(){
+  return Date.now() - ATTENTION_DAYS * DAY_MS;
+}
+
+function attentionSignals(){
+  const cutoff = attentionCutoff();
+  return RAW_ITEMS
+    .filter(i => i.daily_trigger && i.relevance === 'alta' && i._ts >= cutoff)
+    .sort((a,b) => b._ts - a._ts);
+}
+
+function recentMovements(){
+  const cutoff = attentionCutoff();
+  return RAW_ITEMS.filter(i => i._ts >= cutoff);
+}
+
+function setOverviewHeadline(count){
+  const h = document.getElementById('h-visao-geral');
+  h.textContent = '';
+  if(count === null){ h.textContent = 'Leitura indisponível'; return; }
+  if(count === 0){ h.textContent = 'Nenhum sinal exige atenção agora'; return; }
+  const strong = document.createElement('span');
+  strong.className = 't-alert';
+  strong.textContent = count === 1 ? '1 sinal' : `${count} sinais`;
+  h.append(strong, count === 1 ? ' merece sua atenção' : ' merecem sua atenção');
+}
+
+/* ---------- sinal principal ---------- */
+function displayTitle(item){
+  // Google News anexa " - Veículo" ao título; só remove quando o sufixo é a própria fonte.
+  const m = item.title.match(/\s[-–—]\s([^-–—]+)$/);
+  if(m && m[1].trim().toLowerCase() === item.source.trim().toLowerCase()){
+    const t = item.title.slice(0, m.index).trim();
+    if(t) return t;
+  }
+  return item.title;
+}
+
+function dayLabel(ts){
+  const ymd = YMD_FMT.format(ts);
+  if(ymd === YMD_FMT.format(Date.now())) return 'Hoje';
+  if(ymd === YMD_FMT.format(Date.now() - DAY_MS)) return 'Ontem';
+  return new Intl.DateTimeFormat('pt-BR', {timeZone:TZ, day:'2-digit', month:'2-digit'}).format(ts);
+}
+
+function whenLabel(ts){
+  return `${dayLabel(ts)} · ${TIME_FMT.format(ts)}`;
+}
+
+function relativeAge(ts){
+  const h = (Date.now() - ts) / 3600000;
+  if(h < 1) return 'há menos de 1 h';
+  if(h < 24) return `há ${Math.floor(h)} h`;
+  const d = Math.floor(h / 24);
+  return d === 1 ? 'há 1 dia' : `há ${d} dias`;
+}
+
+// Mais recente primeiro; empate: confirmado antes de especulativo, depois mais fontes.
+function pickLeadSignal(signals){
+  const score = i => [i._ts, i.confirmation === 'confirmado' ? 1 : 0, otherOutlets(i).length];
+  return [...signals].sort((a,b) => {
+    const sa = score(a), sb = score(b);
+    for(let k = 0; k < sa.length; k++) if(sa[k] !== sb[k]) return sb[k] - sa[k];
+    return 0;
+  })[0] || null;
+}
+
+const ARROW_SVG = '<svg class="arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 11 11 5M6 5h5v5"/></svg>';
+
+function readingRow(label, valueHtml, cls){
+  return `<div class="reading-row"><dt>${escapeHtml(label)}</dt><dd${cls ? ` class="${cls}"` : ''}>${valueHtml}</dd></div>`;
+}
+
+// Outros veículos, sem repetir o principal nem duplicatas (o data.json às vezes
+// lista o mesmo veículo em also_reported_by).
+function otherOutlets(item){
+  const seen = new Set([item.source.trim().toLowerCase()]);
+  const out = [];
+  item.also_reported_by.forEach(s => {
+    const k = s.source.trim().toLowerCase();
+    if(!seen.has(k)){ seen.add(k); out.push(s.source); }
+  });
+  return out;
+}
+
+function signalCardHtml(item){
+  const axis = item.axes[0] || '';
+  const others = otherOutlets(item);
+  const sources = 1 + others.length;
+  const impact = item.relevance === 'alta' ? 'Alto' : item.relevance === 'média' ? 'Médio' : '';
+
+  const rows = [];
+  if(impact) rows.push(readingRow('Impacto', escapeHtml(impact), item.relevance === 'alta' ? 'is-high' : ''));
+  if(item.trigger_reason) rows.push(readingRow('Gatilho', escapeHtml(TRIGGER_LABELS[item.trigger_reason])));
+  if(item.confirmation){
+    const conf = item.confirmation === 'confirmado' ? 'Confirmado' : 'Especulativo';
+    rows.push(readingRow('Confiança',
+      `${escapeHtml(conf)}<small>${sources} ${sources === 1 ? 'veículo' : 'veículos'}</small>`));
+  }
+
+  const url = safeUrl(item.link);
+  const sourceText = `${escapeHtml(item.source)} · ${escapeHtml(relativeAge(item._ts))}`;
+  const sourceHtml = url
+    ? `<a class="signal-source-link" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">
+         <span>${sourceText}<span class="visually-hidden"> (abre em nova aba)</span></span>${ARROW_SVG}</a>`
+    : `<p class="signal-source-link">${sourceText}</p>`;
+  const more = others.length
+    ? `<p class="signal-more">Também em ${escapeHtml(others.slice(0, 3).join(', '))}${others.length > 3 ? ` e mais ${others.length - 3}` : ''}</p>`
+    : '';
+
+  return `
+    <article class="signal" aria-labelledby="signal-title">
+      <div class="signal-main">
+        <div class="signal-top">
+          <span class="t-eyebrow is-alert">Alta atenção</span>
+          <span class="signal-rule" aria-hidden="true"></span>
+          <span class="signal-when">${escapeHtml(whenLabel(item._ts))}</span>
+        </div>
+        <p class="signal-who"><strong>${escapeHtml(item.competitor_group)}</strong>${axis ? `<span class="sep" aria-hidden="true">/</span><span class="visually-hidden">, eixo </span>${escapeHtml(axis)}` : ''}</p>
+        <h2 class="t-h1 signal-title" id="signal-title">${escapeHtml(displayTitle(item))}</h2>
+        ${item.why_it_matters ? `
+        <div class="signal-why">
+          <p class="t-eyebrow">Por que importa</p>
+          <p>${escapeHtml(item.why_it_matters)}</p>
+        </div>` : ''}
+      </div>
+      <aside class="signal-side" aria-label="Leitura TRACE">
+        <p class="t-eyebrow">Leitura TRACE</p>
+        ${rows.length ? `<dl class="reading">${rows.join('')}</dl>` : ''}
+        <div class="signal-source">
+          <p class="signal-source-label">Fonte</p>
+          ${sourceHtml}
+          ${more}
+        </div>
+      </aside>
+    </article>`;
+}
+
+function renderLeadSignal(signals){
+  const box = document.getElementById('ov-signal');
+  const lead = pickLeadSignal(signals);
+  box.innerHTML = lead ? signalCardHtml(lead) : '';
+  return lead;
+}
+
+/* ---------- movimentos recentes ---------- */
+const RECENT_LIMIT = 8;
+const CHEVRON_SVG = '<svg class="move-chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg>';
+
+function shortWhen(ts){
+  const d = dayLabel(ts);
+  return d === 'Hoje' ? TIME_FMT.format(ts) : d;
+}
+
+function moveHtml(item){
+  const axis = item.axes[0] || '';
+  const rel = item.relevance === 'alta' ? 'Alta' : item.relevance === 'média' ? 'Média' : '';
+  const url = safeUrl(item.link);
+  const src = url
+    ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.source)}<span class="visually-hidden"> (abre em nova aba)</span></a>`
+    : escapeHtml(item.source);
+  return `
+    <li>
+      <details class="move">
+        <summary>
+          <span class="move-when"><time datetime="${escapeHtml(new Date(item._ts).toISOString())}">${escapeHtml(shortWhen(item._ts))}</time></span>
+          <span>
+            <span class="move-meta"><strong>${escapeHtml(item.competitor_group)}</strong>${axis ? `<span class="dot" aria-hidden="true">·</span><span class="visually-hidden">, eixo </span>${escapeHtml(axis)}` : ''}</span>
+            <span class="move-title">${escapeHtml(displayTitle(item))}</span>
+          </span>
+          <span class="move-rel${item.relevance === 'alta' ? ' is-high' : ''}">${rel ? `<span class="visually-hidden">Relevância </span>${escapeHtml(rel)}` : ''}</span>
+          ${CHEVRON_SVG}
+        </summary>
+        <div class="move-body">
+          ${item.why_it_matters ? `<p>${escapeHtml(item.why_it_matters)}</p>` : ''}
+          <span class="move-src">${src} · ${escapeHtml(fmtDate(item._ts))}</span>
+        </div>
+      </details>
+    </li>`;
+}
+
+function renderRecentMoves(excludeItem){
+  const list = document.getElementById('ov-moves');
+  const items = [...RAW_ITEMS]
+    .filter(i => i !== excludeItem)
+    .sort((a,b) => b._ts - a._ts)
+    .slice(0, RECENT_LIMIT);
+  list.innerHTML = items.length
+    ? items.map(moveHtml).join('')
+    : '<li class="ov-empty">Nenhum movimento registrado ainda.</li>';
+}
+
+/* ---------- onde há mais movimento ---------- */
+const ACTIVITY_DAYS = 30;
+
+function renderActivity(){
+  const list = document.getElementById('ov-activity');
+  const cutoff = Date.now() - ACTIVITY_DAYS * DAY_MS;
+  const counts = new Map(AXES.map(a => [a, 0]));
+  RAW_ITEMS.forEach(i => {
+    if(i._ts < cutoff) return;
+    i.axes.forEach(a => counts.set(a, (counts.get(a) || 0) + 1));
+  });
+  // desempate estável pela ordem padrão dos eixos (AXES já vem ordenado)
+  const rows = [...counts.entries()].sort((a,b) => b[1] - a[1]);
+  const max = Math.max(0, ...rows.map(r => r[1]));
+  document.getElementById('ov-activity-sub').textContent = `Movimentos por eixo nos últimos ${ACTIVITY_DAYS} dias`;
+
+  if(!rows.length || max === 0){
+    list.innerHTML = `<li class="ov-empty">Nenhum movimento nos últimos ${ACTIVITY_DAYS} dias.</li>`;
+    return;
+  }
+  list.innerHTML = rows.map(([axis, n]) => `
+    <li>
+      <div class="activity-row">
+        <span class="activity-name">${escapeHtml(axis)}</span>
+        <span class="activity-count">${n} ${n === 1 ? 'movimento' : 'movimentos'}</span>
+      </div>
+      <div class="activity-track" aria-hidden="true"><span class="activity-bar" style="width:${Math.round(n / max * 100)}%"></span></div>
+    </li>`).join('');
+}
+
+// Dado velho não pode parecer "semana tranquila": a manchete assume o atraso.
+// Sem generated_at confiável, a manchete segue normal (o cabeçalho já avisa).
+function staleReading(){
+  if(LAST_DEMO || !LAST_GENERATED_AT) return null;
+  const ts = Date.parse(LAST_GENERATED_AT);
+  if(!isFinite(ts)) return null;
+  return (Date.now() - ts) / 3600000 > STALE_HOURS ? ts : null;
+}
+
+function renderOverview(){
+  document.getElementById('ov-greeting').textContent = greeting();
+  const signals = attentionSignals();
+  const moves = recentMovements().length;
+  const staleTs = staleReading();
+  setOverviewHeadline(signals.length);
+  if(staleTs !== null) document.getElementById('h-visao-geral').textContent = 'Leitura desatualizada';
+  const lead = renderLeadSignal(signals);
+  renderRecentMoves(lead);
+  renderActivity();
+  document.getElementById('ov-grid').hidden = false;
+  document.getElementById('ov-count').textContent = staleTs !== null
+    ? `Última leitura em ${fmtDate(staleTs)}, ${TIME_FMT.format(staleTs)} · sinais e movimentos podem estar incompletos`
+    : `${moves} ${moves === 1 ? 'movimento analisado' : 'movimentos analisados'} nos últimos ${ATTENTION_DAYS} dias`;
+  const nav = document.querySelector('.nav-link[data-route="visao-geral"]');
+  if(nav) nav.classList.toggle('has-alert', signals.length > 0);
+}
+
+function renderOverviewUnavailable(){
+  document.getElementById('ov-greeting').textContent = greeting();
+  setOverviewHeadline(null);
+  document.getElementById('ov-count').textContent = '';
+  document.getElementById('ov-signal').textContent = '';
+  document.getElementById('ov-moves').textContent = '';
+  document.getElementById('ov-grid').hidden = true;
+  const nav = document.querySelector('.nav-link[data-route="visao-geral"]');
+  if(nav) nav.classList.remove('has-alert');
+}
+
+/* ============================================================
    CABEÇALHO: atualização, dados desatualizados, avisos
 ============================================================ */
 function makeBadge(cls, msg){
@@ -1040,7 +1526,14 @@ function humanAge(hours){
   return hours < 48 ? `há ${Math.floor(hours)} h` : `há ${Math.floor(hours / 24)} dias`;
 }
 
+function setStatusDot(cls){
+  const dot = document.getElementById('status-dot');
+  dot.classList.remove('is-ok', 'is-stale');
+  if(cls) dot.classList.add(cls);
+}
+
 function updateMeta(){
+  setStatusDot('');
   const upd = document.getElementById('updated-at');
   const stale = document.getElementById('stale-flag-holder');
   const sample = document.getElementById('sample-flag-holder');
@@ -1049,19 +1542,26 @@ function updateMeta(){
 
   if(LAST_DEMO){
     upd.textContent = 'Modo demonstração';
+    upd.title = '';
     sample.appendChild(makeBadge('sample-flag', 'dados de exemplo'));
     return;
   }
 
   const ts = LAST_GENERATED_AT ? Date.parse(LAST_GENERATED_AT) : NaN;
   if(!isFinite(ts)){
-    upd.textContent = 'Data de atualização indisponível';
+    upd.textContent = 'Última leitura indisponível';
+    upd.title = '';
     stale.appendChild(makeBadge('stale-flag', 'Não foi possível confirmar se os dados estão atualizados'));
     return;
   }
 
-  upd.textContent = `Atualizado em ${fmtDate(ts)} às ${TIME_FMT.format(ts)}`;
+  const sameDay = YMD_FMT.format(ts) === YMD_FMT.format(Date.now());
+  upd.textContent = sameDay
+    ? `Última leitura · ${TIME_FMT.format(ts)}`
+    : `Última leitura · ${fmtDate(ts)}, ${TIME_FMT.format(ts)}`;
+  upd.title = `Dados gerados em ${fmtDate(ts)} às ${TIME_FMT.format(ts)} (horário de Brasília)`;
   const ageHours = (Date.now() - ts) / 3600000;
+  setStatusDot(ageHours > STALE_HOURS ? 'is-stale' : 'is-ok');
   if(ageHours > STALE_HOURS){
     stale.appendChild(makeBadge('stale-flag', `Dados desatualizados · última atualização ${humanAge(ageHours)}`));
   }
@@ -1093,6 +1593,12 @@ function showLoading(){
   box.textContent = 'Carregando dados…';
   document.getElementById('dashboard').hidden = true;
   document.getElementById('filters').hidden = true;
+  document.getElementById('ov-greeting').textContent = greeting();
+  document.getElementById('h-visao-geral').textContent = 'Carregando leitura…';
+  document.getElementById('ov-count').textContent = '';
+  document.getElementById('ov-signal').textContent = '';
+  document.getElementById('ov-moves').textContent = '';
+  document.getElementById('ov-grid').hidden = true;
 }
 
 function showLoadError(e){
@@ -1119,6 +1625,8 @@ function showLoadError(e){
   document.getElementById('dashboard').hidden = true;
   document.getElementById('filters').hidden = true;
   document.getElementById('updated-at').textContent = 'Dados indisponíveis';
+  renderOverviewUnavailable();
+  setStatusDot('is-stale');
   document.getElementById('stale-flag-holder').textContent = '';
   document.getElementById('sample-flag-holder').textContent = '';
 }
@@ -1152,9 +1660,6 @@ async function init(){
     LAST_DEMO = demo;
 
     updateMeta();
-    document.getElementById('brand-sub').textContent = COMPETITORS.length
-      ? COMPETITORS.join(' · ')
-      : 'Monitoramento de concorrentes';
     setNotice('invalid', invalid ? `${invalid} ${invalid === 1 ? 'item ignorado' : 'itens ignorados'} por dados inválidos.` : '');
     if(invalid) console.warn(`[radar] ${invalid} item(ns) do data.json descartado(s) na validação.`);
 
@@ -1165,11 +1670,80 @@ async function init(){
     document.getElementById('dashboard').hidden = false;
     document.getElementById('filters').hidden = false;
     APP_READY = true;
+    safeStep('visão geral', renderOverview);
     render();
   }catch(e){
     showLoadError(e);
   }
 }
+
+/* ============================================================
+   NAVEGAÇÃO (rotas por hash) e gaveta da sidebar
+   Só rotas conhecidas e prontas; qualquer outro hash cai na Visão geral.
+============================================================ */
+const ROUTES = {
+  'visao-geral': 'Visão geral',
+  'sinais': 'Sinais',
+};
+const DEFAULT_ROUTE = 'visao-geral';
+let CURRENT_ROUTE = null;
+
+function routeFromHash(){
+  const key = decodeURIComponent(location.hash.replace(/^#/, ''));
+  return Object.prototype.hasOwnProperty.call(ROUTES, key) ? key : DEFAULT_ROUTE;
+}
+
+function applyRoute(moveFocus){
+  const route = routeFromHash();
+  const changed = route !== CURRENT_ROUTE;
+  CURRENT_ROUTE = route;
+
+  document.querySelectorAll('[data-view]').forEach(v => { v.hidden = v.dataset.view !== route; });
+  document.querySelectorAll('.nav-link[data-route]').forEach(a => {
+    if(a.dataset.route === route) a.setAttribute('aria-current', 'page');
+    else a.removeAttribute('aria-current');
+  });
+  document.title = `${ROUTES[route]} · TRACE`;
+
+  // canvas criado em aba oculta fica sem tamanho: redesenha ao entrar em Sinais
+  if(changed && route === 'sinais' && APP_READY) renderChartsSafe(filteredItems());
+
+  if(moveFocus && changed){
+    const h = document.getElementById('h-' + route);
+    if(h) h.focus({preventScroll:true});
+    window.scrollTo(0, 0);
+  }
+}
+
+function setDrawer(open){
+  const sidebar = document.getElementById('sidebar');
+  const btn = document.getElementById('menu-btn');
+  sidebar.classList.toggle('is-open', open);
+  document.getElementById('scrim').hidden = !open;
+  btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  if(open){
+    const cur = sidebar.querySelector('[aria-current="page"]') || sidebar.querySelector('a');
+    if(cur) cur.focus();
+  }
+}
+
+function isDrawerOpen(){
+  return document.getElementById('sidebar').classList.contains('is-open');
+}
+
+document.getElementById('menu-btn').addEventListener('click', () => setDrawer(!isDrawerOpen()));
+document.getElementById('scrim').addEventListener('click', () => setDrawer(false));
+document.addEventListener('keydown', e => {
+  if(e.key === 'Escape' && isDrawerOpen()){
+    setDrawer(false);
+    document.getElementById('menu-btn').focus();
+  }
+});
+document.querySelectorAll('.nav-link[data-route]').forEach(a => {
+  a.addEventListener('click', () => { if(isDrawerOpen()) setDrawer(false); });
+});
+window.addEventListener('hashchange', () => applyRoute(true));
+applyRoute(false);
 
 /* ============================================================
    BOOTSTRAP (listeners globais registrados uma única vez)
@@ -1190,7 +1764,11 @@ setTimeout(() => {
     if(APP_READY) renderChartsSafe(filteredItems());
   }
 }, CHART_LOAD_TIMEOUT_MS);
-setInterval(() => { if(APP_READY) updateMeta(); }, 30 * 60 * 1000);   // aba aberta por horas também detecta dado velho
+setInterval(() => {
+  if(!APP_READY) return;
+  updateMeta();
+  safeStep('visão geral', renderOverview);   // saudação e janela de 7 dias andam com o relógio
+}, 30 * 60 * 1000);   // aba aberta por horas também detecta dado velho
 
 init();
 </script>
