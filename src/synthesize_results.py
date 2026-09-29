@@ -133,6 +133,25 @@ def fetch_article_text(link: str) -> str:
 # Classificação
 # ---------------------------------------------------------------------------
 
+def _extract_classifications(parsed) -> list[dict]:
+    """Normaliza a resposta do DeepSeek (modo json_object) para lista de dicts.
+
+    Formatos aceitos: lista direta; lista dentro de uma chave (ex.: {"itens": [...]});
+    uma classificação solta (acontece quando há um único item). Qualquer entrada
+    que não seja objeto é descartada em vez de derrubar a execução.
+    """
+    if isinstance(parsed, dict) and ("primary_index" in parsed or "source_indices" in parsed or "axes" in parsed):
+        candidates = [parsed]  # classificação única, sem o array em volta
+    elif isinstance(parsed, list):
+        candidates = parsed
+    elif isinstance(parsed, dict):
+        lists = [v for v in parsed.values() if isinstance(v, list) and any(isinstance(x, dict) for x in v)]
+        candidates = lists[0] if lists else []
+    else:
+        candidates = []
+    return [c for c in candidates if isinstance(c, dict)]
+
+
 def classify_results(items: list[dict], api_key: str) -> list[dict]:
     if not items:
         return []
@@ -173,7 +192,7 @@ def classify_results(items: list[dict], api_key: str) -> list[dict]:
     raw_content = resp.json()["choices"][0]["message"]["content"]
 
     parsed = json.loads(raw_content)
-    classifications = parsed if isinstance(parsed, list) else next(iter(parsed.values()))
+    classifications = _extract_classifications(parsed)
 
     enriched = []
     for c in classifications:
