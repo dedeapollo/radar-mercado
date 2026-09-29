@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-28T17:50:23.835385+00:00",
+  "generated_at": "2026-09-29T16:10:20.426129+00:00",
   "items": [
     {
       "competitor_group": "BTG Pactual",
@@ -4744,6 +4744,28 @@
           "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNc1pFWEpwVWlWTjRicFlCNGRSQnVwX2JTblBWMkV4SlE5WVZrcHI5SFpjVnFLcFpyTTMwN242Rm1sM0p5UlRrVzJXMmNHbmJnd1d3VjBBZ0tzWlkwQzZmQ0FydU1vaUFibksybXBpYmkwQzhMMk5zVlF5UnAwT3pUaW80RWN4Umt30gGQAUFVX3lxTFBuU0swNXg1dGJUSi13ZndPUDZERDFKWTZwYjA3QXlDS3ZHdlBFRTlJeGM1a1NLaU8yYXhKYTVLclhvNHF4RnBQcE9LNk1SbUNQVkNYNjRrR3RoLVByWmhVekVJYkZTa0NRTnpxdF9va1pLajA5c21oS1dub1UtSUp4TE1mVkZDRlhwOFRGaUVzWg?oc=5"
         }
       ]
+    },
+    {
+      "competitor_group": "XP/Clear/Rico",
+      "matched_alias": "XP Investimentos",
+      "title": "Mudança da XP leva mercado a debater ‘2 com 20’ no Brasil - Valor Econômico",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPWlQxb2Yxc0ZIb3RsQ2RTOW93Y0pOcUF5UXU2UTZ1Z0IxbXhWbi1ESzZqRnBUb2JkV3J0X0xGdXdFenlyang0SjRFWi1raDA2R2RMSVV1dmpYQm9JcFJfSlZpeFJ0R2VYRTVzd3dSeXRCTFFYRllHbUdEYnl3THE5aHNvZGZHaFZVM2tzTXplR2dpUjJualBUYjdodWtKZUtxODFRMlppamJXeXI1bW9ISFc1ONIBwgFBVV95cUxPRjJCcnllM2VJazhwWkt5Qmt2cXprQ25WQWw4UGVDTE5uWjNQZXpPVUhhTGJXWjZfbHJ0RkR1cWJKUWFWM3I4d2J5LXEyc2Y5RG5tQm5pOUpfZmhYM2NSQ1RTNHFoYW9JQ2ZfSkZHc3ZhVVA3Z3g3c19HLUJ5UmJwdjJja0FmRUkwazhvVUR1VXE3R1RtSi1XRjZiQlFYT3RjbjdTRUZUbEw1TXlCbFNid1lna0ZXXzBia2IyQlo4RkFfUQ?oc=5",
+      "source": "Valor Econômico",
+      "published_at": "2026-09-29T08:00:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxPWlQxb2Yxc0ZIb3RsQ2RTOW93Y0pOcUF5UXU2UTZ1Z0IxbXhWbi1ESzZqRnBUb2JkV3J0X0xGdXdFenlyang0SjRFWi1raDA2R2RMSVV1dmpYQm9JcFJfSlZpeFJ0R2VYRTVzd3dSeXRCTFFYRllHbUdEYnl3THE5aHNvZGZHaFZVM2tzTXplR2dpUjJualBUYjdodWtKZUtxODFRMlppamJXeXI1bW9ISFc1ONIBwgFBVV95cUxPRjJCcnllM2VJazhwWkt5Qmt2cXprQ25WQWw4UGVDTE5uWjNQZXpPVUhhTGJXWjZfbHJ0RkR1cWJKUWFWM3I4d2J5LXEyc2Y5RG5tQm5pOUpfZmhYM2NSQ1RTNHFoYW9JQ2ZfSkZHc3ZhVVA3Z3g3c19HLUJ5UmJwdjJja0FmRUkwazhvVUR1VXE3R1RtSi1XRjZiQlFYT3RjbjdTRUZUbEw1TXlCbFNid1lna0ZXXzBia2IyQlo4RkFfUQ?oc=5\" target=\"_blank\">Mudança da XP leva mercado a debater ‘2 com 20’ no Brasil</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Valor Econômico</font>",
+      "source_indices": [
+        1
+      ],
+      "primary_index": 1,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "PRICE",
+      "why_it_matters": "A mudança de modelo de remuneração da XP pode redefinir o padrão de taxas de performance no mercado brasileiro, pressionando concorrentes a revisar suas próprias estruturas de cobrança.",
+      "relevance": "alta",
+      "also_reported_by": []
     }
   ],
   "results": [
