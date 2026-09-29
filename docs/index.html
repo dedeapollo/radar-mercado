@@ -455,6 +455,48 @@
     font-size:12px;color:var(--gray-500);
   }
 
+  /* ---------- Concorrentes ---------- */
+  .cc-table{width:100%;border-collapse:collapse;}
+  .cc-table th{
+    text-align:left;vertical-align:bottom;
+    font-size:var(--fs-micro);font-weight:600;letter-spacing:var(--tracking-eyebrow);
+    text-transform:uppercase;color:var(--gray-700);
+    padding:0 var(--sp-4) var(--sp-3) 0;border-bottom:1px solid var(--line-strong);
+  }
+  .cc-table td{
+    vertical-align:top;padding:var(--sp-5) var(--sp-4) var(--sp-5) 0;
+    border-bottom:1px solid var(--line);font-size:14px;color:var(--gray-900);
+  }
+  .cc-table th:last-child,.cc-table td:last-child{padding-right:0;}
+  .cc-name{font-size:var(--fs-body);font-weight:600;color:var(--ink);}
+  .cc-note{display:block;margin-top:var(--sp-1);font-size:12px;color:var(--gray-700);}
+  .cc-num{font-size:20px;font-weight:500;line-height:1.2;color:var(--ink);}
+  .cc-num.is-alert{color:var(--red-ink);}
+  .cc-num.is-zero{color:var(--gray-500);}
+  .cc-moves .activity-track{margin-top:var(--sp-2);max-width:120px;}
+  .cc-muted{display:block;font-size:12px;color:var(--gray-700);margin-top:2px;}
+  .cc-last-title{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.45;color:var(--ink);}
+  .cc-status{display:inline-flex;align-items:center;gap:var(--sp-2);font-weight:500;color:var(--ink);white-space:nowrap;}
+  .cc-status::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--gray-300);flex:none;}
+  /* estável fica neutro: só a instabilidade ganha cor */
+  .cc-status.is-alert{color:var(--red-ink);}
+  .cc-status.is-alert::before{background:var(--red);}
+  .cc-sector{margin:var(--sp-5) 0 0;font-size:14px;color:var(--gray-700);}
+  .cc-sector a{color:var(--ink);}
+  .cc-sector[hidden]{display:none;}
+  @media (max-width:900px){
+    .cc-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+    .cc-table, .cc-table tbody, .cc-table tr, .cc-table td{display:block;width:100%;}
+    .cc-table tr{padding:var(--sp-5) 0;border-bottom:1px solid var(--line);}
+    .cc-table td{border:0;padding:var(--sp-1) 0;}
+    .cc-table td[data-label]{display:grid;grid-template-columns:130px minmax(0,1fr);gap:var(--sp-3);}
+    .cc-table td[data-label]::before{
+      content:attr(data-label);font-size:var(--fs-micro);font-weight:600;
+      letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--gray-700);padding-top:4px;
+    }
+    .cc-table td.cc-first{padding-bottom:var(--sp-3);}
+  }
+
   /* ---------- telas estreitas: sidebar vira gaveta ---------- */
   @media (max-width:960px){
     .sidebar{
@@ -566,7 +608,7 @@
       <ul>
         <li><a class="nav-link" href="#visao-geral" data-route="visao-geral"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3 3 7.5l9 4.5 9-4.5L12 3Z"/><path d="m3 12 9 4.5 9-4.5"/><path d="m3 16.5 9 4.5 9-4.5"/></svg><span>Visão geral</span><span class="nav-dot" aria-hidden="true"></span></a></li>
         <li><a class="nav-link" href="#sinais" data-route="sinais"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="1.6"/><path d="M8.5 8.5a5 5 0 0 0 0 7M15.5 8.5a5 5 0 0 1 0 7M5.6 5.6a9 9 0 0 0 0 12.8M18.4 5.6a9 9 0 0 1 0 12.8"/></svg><span>Sinais</span><span class="nav-dot" aria-hidden="true"></span></a></li>
-        <li><span class="nav-link is-soon" aria-disabled="true"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M9 20v-4h6v4M8 8h2M14 8h2M8 12h2M14 12h2"/></svg><span>Concorrentes</span><span class="nav-soon">em breve</span></span></li>
+        <li><a class="nav-link" href="#concorrentes" data-route="concorrentes"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M9 20v-4h6v4M8 8h2M14 8h2M8 12h2M14 12h2"/></svg><span>Concorrentes</span><span class="nav-dot" aria-hidden="true"></span></a></li>
         <li><span class="nav-link is-soon" aria-disabled="true"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4v16h16"/><path d="m7 15 4-4 3 3 5-6"/></svg><span>Estratégia</span><span class="nav-soon">em breve</span></span></li>
         <li><span class="nav-link is-soon" aria-disabled="true"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span>Histórico</span><span class="nav-soon">em breve</span></span></li>
       </ul>
@@ -697,6 +739,14 @@
   </div><!-- /#dashboard -->
       </section>
 
+      <section class="view" id="view-concorrentes" data-view="concorrentes" aria-labelledby="h-concorrentes" hidden>
+        <p class="t-eyebrow">Concorrentes</p>
+        <h1 class="t-display view-heading" id="h-concorrentes" tabindex="-1">Movimento por concorrente</h1>
+        <p class="view-sub t-muted" id="cc-sub">Atividade de cada concorrente monitorado nos últimos 30 dias, do mais ativo para o menos ativo.</p>
+        <div id="cc-list"></div>
+        <p class="cc-sector" id="cc-sector" hidden></p>
+      </section>
+
       <footer class="app-foot">
         Dados coletados de portais de notícia e fontes públicas · não é aconselhamento de investimento
       </footer>
@@ -747,6 +797,7 @@ const COLOR_DARK = "#171717";   /* Ink */
 let AXES = [];          // derivado do data.json
 let COMPETITORS = [];   // derivado do data.json
 let RAW_ITEMS = [];
+let STATUS = {};          // status_by_competitor normalizado, por nome de exibição
 let ACTIVE_AXES = new Set();
 let ACTIVE_COMPETITORS = new Set();
 let APP_READY = false;
@@ -882,6 +933,28 @@ function normalizeAll(list){
 ============================================================ */
 class LoadError extends Error {}
 
+// status_by_competitor (export_dashboard.py): situação pelo último incidente conhecido.
+// Opcional: ausente ou malformado vira {} e a coluna "Operação" mostra só o que houver.
+function normalizeStatus(raw){
+  const out = {};
+  if(!raw || typeof raw !== 'object' || Array.isArray(raw)) return out;
+  Object.entries(raw).forEach(([group, v]) => {
+    if(!v || typeof v !== 'object') return;
+    const name = competitorLabel(group);
+    if(!name) return;
+    const incidents = (Array.isArray(v.incidents) ? v.incidents : [])
+      .map(i => {
+        if(!i || typeof i !== 'object') return null;
+        const ts = typeof i.published_at === 'string' ? Date.parse(i.published_at) : NaN;
+        return isFinite(ts) ? {_ts: ts, title: text(i.title), link: safeUrl(i.link), source: text(i.source)} : null;
+      })
+      .filter(Boolean)
+      .sort((a,b) => b._ts - a._ts);
+    out[name] = {recent: text(v.status) === 'instavel_recente', incidents};
+  });
+  return out;
+}
+
 function demoItems(){
   const at = d => new Date(Date.now() - d*DAY_MS).toISOString();
   const base = [
@@ -896,7 +969,7 @@ function demoItems(){
 
 async function loadData(){
   if(DEMO){
-    return {items: demoItems(), invalid: 0, generatedAt: new Date().toISOString(), demo: true};
+    return {items: demoItems(), invalid: 0, status: {}, generatedAt: new Date().toISOString(), demo: true};
   }
 
   const ctrl = new AbortController();
@@ -924,7 +997,8 @@ async function loadData(){
     }
 
     const {items, invalid} = normalizeAll(json.items);
-    return {items, invalid, generatedAt: typeof json.generated_at === 'string' ? json.generated_at : null, demo: false};
+    return {items, invalid, status: normalizeStatus(json.status_by_competitor),
+            generatedAt: typeof json.generated_at === 'string' ? json.generated_at : null, demo: false};
   }finally{
     clearTimeout(timer);
   }
@@ -1533,6 +1607,100 @@ function renderOverviewUnavailable(){
 }
 
 /* ============================================================
+   CONCORRENTES
+   Janela de 30 dias (mesma de "Onde há mais movimento"). O grupo
+   "Setor e regulação" e itens sem grupo ficam fora da lista.
+============================================================ */
+const COMPETITOR_DAYS = 30;
+const LOW_ACTIVITY = 3;   // menos que isso em 30 dias: nota "pouca atividade"
+
+function competitorRows(){
+  const cutoff = Date.now() - COMPETITOR_DAYS * DAY_MS;
+  const names = new Set([...COMPETITORS, ...Object.keys(STATUS)]);
+  names.delete(SECTOR_GROUP);
+  names.delete(FALLBACK_GROUP);
+
+  return [...names].map(name => {
+    const all = RAW_ITEMS.filter(i => i.competitor_group === name).sort((a,b) => b._ts - a._ts);
+    const win = all.filter(i => i._ts >= cutoff);
+    const axisCount = new Map();
+    win.forEach(i => i.axes.forEach(a => axisCount.set(a, (axisCount.get(a) || 0) + 1)));
+    const topAxis = [...axisCount.entries()].sort((a,b) => b[1] - a[1] || AXES.indexOf(a[0]) - AXES.indexOf(b[0]))[0] || null;
+    const st = STATUS[name] || null;
+    return {
+      name,
+      moves: win.length,
+      signals: win.filter(i => i.daily_trigger && i.relevance === 'alta').length,
+      topAxis,
+      last: all[0] || null,
+      status: st,
+      incidents30: st ? st.incidents.filter(i => i._ts >= cutoff).length : null,
+    };
+  }).sort((a,b) => b.moves - a.moves || b.signals - a.signals || ((b.last ? b.last._ts : 0) - (a.last ? a.last._ts : 0)));
+}
+
+function statusCellHtml(r){
+  if(!r.status) return '<span class="cc-muted">Sem dados de operação</span>';
+  const label = r.status.recent
+    ? '<span class="cc-status is-alert">Instável recentemente</span>'
+    : '<span class="cc-status is-ok">Estável</span>';
+  const n = r.incidents30;
+  const note = n > 0 ? `${n} ${n === 1 ? 'incidente' : 'incidentes'} em ${COMPETITOR_DAYS} dias` : `Sem incidentes em ${COMPETITOR_DAYS} dias`;
+  return `${label}<span class="cc-muted">${escapeHtml(note)}</span>`;
+}
+
+function renderCompetitors(){
+  const box = document.getElementById('cc-list');
+  const rows = competitorRows();
+  const staleTs = staleReading();
+  document.getElementById('cc-sub').textContent = staleTs !== null
+    ? `Atividade nos últimos ${COMPETITOR_DAYS} dias · leitura desatualizada (última em ${fmtDate(staleTs)}), os números podem estar incompletos.`
+    : `Atividade de cada concorrente monitorado nos últimos ${COMPETITOR_DAYS} dias, do mais ativo para o menos ativo.`;
+
+  if(!rows.length){
+    box.innerHTML = '<p class="ov-empty">Nenhum concorrente encontrado no data.json.</p>';
+  }else{
+    const max = Math.max(1, ...rows.map(r => r.moves));
+    box.innerHTML = `
+      <table class="cc-table">
+        <caption class="visually-hidden">Concorrentes monitorados: atividade nos últimos ${COMPETITOR_DAYS} dias</caption>
+        <colgroup><col style="width:14%"><col style="width:11%"><col style="width:8%"><col style="width:15%"><col><col style="width:17%"></colgroup>
+        <thead><tr>
+          <th scope="col">Concorrente</th>
+          <th scope="col">Movimentos</th>
+          <th scope="col">Sinais</th>
+          <th scope="col">Eixo mais ativo</th>
+          <th scope="col">Último movimento</th>
+          <th scope="col">Operação</th>
+        </tr></thead>
+        <tbody>${rows.map(r => `
+          <tr>
+            <td class="cc-first"><span class="cc-name">${escapeHtml(r.name)}</span>${r.moves < LOW_ACTIVITY ? `<span class="cc-note">Pouca atividade no período</span>` : ''}</td>
+            <td class="cc-moves" data-label="Movimentos"><span><span class="cc-num${r.moves ? '' : ' is-zero'}">${r.moves}</span>
+              <div class="activity-track" aria-hidden="true"><span class="activity-bar" style="width:${Math.round(r.moves / max * 100)}%"></span></div></span></td>
+            <td data-label="Sinais"><span class="cc-num${r.signals ? '' : ' is-zero'}">${r.signals}</span></td>
+            <td data-label="Eixo mais ativo">${r.topAxis ? `<span>${escapeHtml(r.topAxis[0])}<span class="cc-muted">${r.topAxis[1]} ${r.topAxis[1] === 1 ? 'movimento' : 'movimentos'}</span></span>` : '<span class="cc-muted">—</span>'}</td>
+            <td data-label="Último movimento">${r.last ? `<span><span class="cc-last-title">${escapeHtml(displayTitle(r.last))}</span><span class="cc-muted"><time datetime="${escapeHtml(new Date(r.last._ts).toISOString())}">${escapeHtml(whenLabel(r.last._ts))}</time></span></span>` : '<span class="cc-muted">Nenhum movimento registrado</span>'}</td>
+            <td data-label="Operação"><span>${statusCellHtml(r)}</span></td>
+          </tr>`).join('')}
+        </tbody>
+      </table>`;
+  }
+
+  const sector = RAW_ITEMS.filter(i => i.competitor_group === SECTOR_GROUP && i._ts >= Date.now() - COMPETITOR_DAYS * DAY_MS).length;
+  const sec = document.getElementById('cc-sector');
+  sec.hidden = sector === 0;
+  sec.innerHTML = sector
+    ? `${escapeHtml(SECTOR_GROUP)}: ${sector} ${sector === 1 ? 'movimento' : 'movimentos'} de mercado e reguladores nos últimos ${COMPETITOR_DAYS} dias, fora da lista acima. <a href="#sinais">Ver em Sinais</a>`
+    : '';
+}
+
+function renderCompetitorsUnavailable(){
+  document.getElementById('cc-list').textContent = '';
+  document.getElementById('cc-sector').hidden = true;
+}
+
+/* ============================================================
    CABEÇALHO: atualização, dados desatualizados, avisos
 ============================================================ */
 function makeBadge(cls, msg){
@@ -1647,6 +1815,7 @@ function showLoadError(e){
   document.getElementById('filters').hidden = true;
   document.getElementById('updated-at').textContent = 'Dados indisponíveis';
   renderOverviewUnavailable();
+  renderCompetitorsUnavailable();
   setStatusDot('is-stale');
   document.getElementById('stale-flag-holder').textContent = '';
   document.getElementById('sample-flag-holder').textContent = '';
@@ -1670,7 +1839,8 @@ async function init(){
   APP_READY = false;
   showLoading();
   try{
-    const {items, invalid, generatedAt, demo} = await loadData();
+    const {items, invalid, status, generatedAt, demo} = await loadData();
+    STATUS = status || {};
 
     RAW_ITEMS = items;
     AXES = deriveAxes(items);
@@ -1692,6 +1862,7 @@ async function init(){
     document.getElementById('filters').hidden = false;
     APP_READY = true;
     safeStep('visão geral', renderOverview);
+    safeStep('concorrentes', renderCompetitors);
     render();
   }catch(e){
     showLoadError(e);
@@ -1705,6 +1876,7 @@ async function init(){
 const ROUTES = {
   'visao-geral': 'Visão geral',
   'sinais': 'Sinais',
+  'concorrentes': 'Concorrentes',
 };
 const DEFAULT_ROUTE = 'visao-geral';
 let CURRENT_ROUTE = null;
@@ -1789,6 +1961,7 @@ setInterval(() => {
   if(!APP_READY) return;
   updateMeta();
   safeStep('visão geral', renderOverview);   // saudação e janela de 7 dias andam com o relógio
+  safeStep('concorrentes', renderCompetitors);
 }, 30 * 60 * 1000);   // aba aberta por horas também detecta dado velho
 
 init();
