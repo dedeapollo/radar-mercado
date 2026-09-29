@@ -497,6 +497,35 @@
     .cc-table td.cc-first{padding-bottom:var(--sp-3);}
   }
 
+  /* ---------- Concorrente (detalhe) ---------- */
+  .cc-name a{color:var(--ink);text-decoration:none;}
+  .cc-name a:hover{text-decoration:underline;text-decoration-color:var(--gray-300);}
+  .cd-back{display:inline-block;margin-bottom:var(--sp-5);font-size:var(--fs-small);color:var(--gray-700);text-decoration:none;}
+  .cd-back:hover{color:var(--ink);text-decoration:underline;}
+  .cd-block + .cd-block{margin-top:var(--sp-8);}
+  .cd-side .cd-block + .cd-block{margin-top:var(--sp-7);}
+  .cd-more{
+    margin-top:var(--sp-4);background:none;border:1px solid var(--line-strong);border-radius:var(--radius);
+    font-family:var(--sans);font-size:var(--fs-small);font-weight:500;color:var(--ink);
+    padding:6px 12px;min-height:32px;cursor:pointer;
+  }
+  .cd-more:hover{border-color:var(--ink);}
+  .cd-more[hidden]{display:none;}
+  .cd-list-extra[hidden]{display:none;}
+  .cd-ops{margin:var(--sp-4) 0 0;}
+  .cd-inc{list-style:none;margin:var(--sp-3) 0 0;padding:0;}
+  .cd-inc li{padding:var(--sp-3) 0;border-bottom:1px solid var(--line);font-size:13.5px;line-height:1.5;color:var(--gray-900);}
+  .cd-inc time{display:block;font-size:12px;color:var(--gray-700);margin-bottom:2px;}
+  .cd-inc a{color:var(--ink);}
+  .cd-reading{margin-top:var(--sp-4);font-size:14px;line-height:1.7;color:var(--gray-900);}
+  .cd-reading p{margin:0 0 var(--sp-3);}
+  .cd-reading dl{margin:var(--sp-4) 0 0;}
+  .cd-reading dt{font-size:var(--fs-micro);font-weight:600;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--gray-700);margin-top:var(--sp-4);}
+  .cd-reading dd{margin:var(--sp-1) 0 0;}
+  .cd-reading .cd-src{font-size:12px;color:var(--gray-700);}
+  .cd-reading .cd-src a{color:var(--ink);}
+  .cd-notfound{margin-top:var(--sp-5);font-size:var(--fs-body);color:var(--gray-700);}
+
   /* ---------- telas estreitas: sidebar vira gaveta ---------- */
   @media (max-width:960px){
     .sidebar{
@@ -747,6 +776,14 @@
         <p class="cc-sector" id="cc-sector" hidden></p>
       </section>
 
+      <section class="view" id="view-concorrente" data-view="concorrente" aria-labelledby="h-concorrente" hidden>
+        <a class="cd-back" href="#concorrentes"><span aria-hidden="true">←</span> Concorrentes</a>
+        <p class="t-eyebrow">Concorrente</p>
+        <h1 class="t-display view-heading" id="h-concorrente" tabindex="-1">Carregando…</h1>
+        <p class="view-sub t-muted" id="cd-sub"></p>
+        <div id="cd-body"></div>
+      </section>
+
       <footer class="app-foot">
         Dados coletados de portais de notícia e fontes públicas · não é aconselhamento de investimento
       </footer>
@@ -797,7 +834,8 @@ const COLOR_DARK = "#171717";   /* Ink */
 let AXES = [];          // derivado do data.json
 let COMPETITORS = [];   // derivado do data.json
 let RAW_ITEMS = [];
-let STATUS = {};          // status_by_competitor normalizado, por nome de exibição
+let STATUS = {};
+let RESULTS = [];         // leituras de resultados normalizadas          // status_by_competitor normalizado, por nome de exibição
 let ACTIVE_AXES = new Set();
 let ACTIVE_COMPETITORS = new Set();
 let APP_READY = false;
@@ -933,6 +971,39 @@ function normalizeAll(list){
 ============================================================ */
 class LoadError extends Error {}
 
+// results (collect/synthesize_results.py): leitura estratégica de balanços.
+// Só texto; "não informado" e vazios são descartados. Opcional.
+function cleanText(v){
+  const t = text(v);
+  return /^n[ãa]o informad[oa]\.?$/i.test(t) ? '' : t;
+}
+function cleanList(v){
+  return (Array.isArray(v) ? v : []).map(cleanText).filter(Boolean);
+}
+function normalizeResults(raw){
+  if(!Array.isArray(raw)) return [];
+  return raw.map(r => {
+    if(!r || typeof r !== 'object') return null;
+    const ts = typeof r.published_at === 'string' ? Date.parse(r.published_at) : NaN;
+    const out = {
+      competitor: competitorLabel(r.competitor_group),
+      _ts: isFinite(ts) ? ts : 0,
+      periodo: cleanText(r.periodo),
+      title: text(r.title),
+      source: text(r.source),
+      link: safeUrl(r.link),
+      resumo: cleanText(r.resumo_estrategico),
+      leitura: cleanText(r.leitura_para_o_santander),
+      energia: cleanList(r.onde_colocam_energia),
+      movimentos: cleanList(r.movimentos_concretos),
+      fragilidades: cleanList(r.onde_deixam_a_desejar),
+      oportunidade: cleanText(r.oportunidade_para_nos),
+      postura: cleanText(r.copiar_ou_observar),
+    };
+    return (out.competitor && (out.resumo || out.leitura)) ? out : null;
+  }).filter(Boolean).sort((a,b) => b._ts - a._ts);
+}
+
 // status_by_competitor (export_dashboard.py): situação pelo último incidente conhecido.
 // Opcional: ausente ou malformado vira {} e a coluna "Operação" mostra só o que houver.
 function normalizeStatus(raw){
@@ -969,7 +1040,7 @@ function demoItems(){
 
 async function loadData(){
   if(DEMO){
-    return {items: demoItems(), invalid: 0, status: {}, generatedAt: new Date().toISOString(), demo: true};
+    return {items: demoItems(), invalid: 0, status: {}, results: [], generatedAt: new Date().toISOString(), demo: true};
   }
 
   const ctrl = new AbortController();
@@ -997,7 +1068,7 @@ async function loadData(){
     }
 
     const {items, invalid} = normalizeAll(json.items);
-    return {items, invalid, status: normalizeStatus(json.status_by_competitor),
+    return {items, invalid, status: normalizeStatus(json.status_by_competitor), results: normalizeResults(json.results),
             generatedAt: typeof json.generated_at === 'string' ? json.generated_at : null, demo: false};
   }finally{
     clearTimeout(timer);
@@ -1500,7 +1571,10 @@ function shortWhen(ts){
   return d === 'Hoje' ? TIME_FMT.format(ts) : d;
 }
 
-function moveHtml(item){
+// opts.hideCompetitor: na página de um concorrente o nome se repetiria em toda linha.
+// (map() passa o índice como 2º argumento — por isso o typeof.)
+function moveHtml(item, opts){
+  const hideComp = !!(opts && typeof opts === 'object' && opts.hideCompetitor);
   const axis = item.axes[0] || '';
   const rel = item.relevance === 'alta' ? 'Alta' : item.relevance === 'média' ? 'Média' : '';
   const url = safeUrl(item.link);
@@ -1513,7 +1587,9 @@ function moveHtml(item){
         <summary>
           <span class="move-when"><time datetime="${escapeHtml(new Date(item._ts).toISOString())}">${escapeHtml(shortWhen(item._ts))}</time></span>
           <span>
-            <span class="move-meta"><strong>${escapeHtml(item.competitor_group)}</strong>${axis ? `<span class="dot" aria-hidden="true">·</span><span class="visually-hidden">, eixo </span>${escapeHtml(axis)}` : ''}</span>
+            <span class="move-meta">${hideComp
+              ? (axis ? escapeHtml(axis) : '')
+              : `<strong>${escapeHtml(item.competitor_group)}</strong>${axis ? `<span class="dot" aria-hidden="true">·</span><span class="visually-hidden">, eixo </span>${escapeHtml(axis)}` : ''}`}</span>
             <span class="move-title">${escapeHtml(displayTitle(item))}</span>
           </span>
           <span class="move-rel${item.relevance === 'alta' ? ' is-high' : ''}">${rel ? `<span class="visually-hidden">Relevância </span>${escapeHtml(rel)}` : ''}</span>
@@ -1649,6 +1725,174 @@ function statusCellHtml(r){
   return `${label}<span class="cc-muted">${escapeHtml(note)}</span>`;
 }
 
+function competitorSlug(name){
+  return String(name).normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+
+function competitorBySlug(slug){
+  return competitorRows().find(r => competitorSlug(r.name) === slug) || null;
+}
+
+const DETAIL_LIST_INITIAL = 12;
+const moveHtmlInDetail = item => moveHtml(item, {hideCompetitor:true});
+const DETAIL_DAYS_LONG = 90;
+
+function axisRowsHtml(items){
+  const counts = new Map();
+  items.forEach(i => i.axes.forEach(a => counts.set(a, (counts.get(a) || 0) + 1)));
+  const rows = [...counts.entries()].sort((a,b) => b[1] - a[1] || AXES.indexOf(a[0]) - AXES.indexOf(b[0]));
+  if(!rows.length) return `<p class="ov-empty">Nenhum movimento nos últimos ${COMPETITOR_DAYS} dias.</p>`;
+  const max = rows[0][1];
+  return `<ul class="activity">${rows.map(([axis, n]) => `
+    <li>
+      <div class="activity-row"><span class="activity-name">${escapeHtml(axis)}</span><span class="activity-count">${n} ${n === 1 ? 'movimento' : 'movimentos'}</span></div>
+      <div class="activity-track" aria-hidden="true"><span class="activity-bar" style="width:${Math.round(n / max * 100)}%"></span></div>
+    </li>`).join('')}</ul>`;
+}
+
+function incTitle(i){
+  return i.title ? displayTitle({title: i.title, source: i.source || ''}) : 'Incidente';
+}
+
+function opsBlockHtml(r){
+  if(!r.status) return '<p class="cc-muted">Sem dados de operação para este concorrente.</p>';
+  const cutoff = Date.now() - DETAIL_DAYS_LONG * DAY_MS;
+  const incs = r.status.incidents.filter(i => i._ts >= cutoff).slice(0, 5);
+  const list = incs.length
+    ? `<ul class="cd-inc">${incs.map(i => `<li><time datetime="${escapeHtml(new Date(i._ts).toISOString())}">${escapeHtml(whenLabel(i._ts))}</time>${i.link
+        ? `<a href="${escapeHtml(i.link)}" target="_blank" rel="noopener noreferrer">${escapeHtml(incTitle(i))}<span class="visually-hidden"> (abre em nova aba)</span></a>`
+        : escapeHtml(incTitle(i))}</li>`).join('')}</ul>`
+    : `<p class="cc-muted">Nenhum incidente nos últimos ${DETAIL_DAYS_LONG} dias.</p>`;
+  return `<div class="cd-ops">${statusCellHtml(r)}</div>${list}`;
+}
+
+function readingBlockHtml(name){
+  const res = RESULTS.filter(x => x.competitor === name)[0];
+  if(!res){
+    return '<p class="cc-muted">Nenhuma leitura de resultados registrada ainda. Ela aparece aqui quando a varredura semanal de balanços trouxer um resultado deste concorrente.</p>';
+  }
+  const listDd = arr => arr.length ? `<dd>${arr.map(escapeHtml).join(' · ')}</dd>` : '';
+  const fields = [
+    res.energia.length ? `<dt>Onde colocam energia</dt>${listDd(res.energia)}` : '',
+    res.movimentos.length ? `<dt>Movimentos concretos</dt>${listDd(res.movimentos)}` : '',
+    res.fragilidades.length ? `<dt>Onde deixam a desejar</dt>${listDd(res.fragilidades)}` : '',
+    res.leitura ? `<dt>Leitura para o Santander</dt><dd>${escapeHtml(res.leitura)}</dd>` : '',
+    res.postura ? `<dt>Copiar ou observar</dt><dd>${escapeHtml(res.postura.charAt(0).toUpperCase() + res.postura.slice(1))}</dd>` : '',
+  ].join('');
+  const src = res.link
+    ? `<a href="${escapeHtml(res.link)}" target="_blank" rel="noopener noreferrer">${escapeHtml(res.source || 'Fonte')}<span class="visually-hidden"> (abre em nova aba)</span></a>`
+    : escapeHtml(res.source || '');
+  return `
+    <div class="cd-reading">
+      <p class="cd-src">${res.periodo ? `${escapeHtml(res.periodo)} · ` : ''}${res._ts ? escapeHtml(fmtDate(res._ts)) : ''}${src ? ` · ${src}` : ''}</p>
+      ${res.resumo ? `<p>${escapeHtml(res.resumo)}</p>` : ''}
+      ${fields ? `<dl>${fields}</dl>` : ''}
+    </div>`;
+}
+
+function renderCompetitorDetail(slug){
+  const h = document.getElementById('h-concorrente');
+  const sub = document.getElementById('cd-sub');
+  const body = document.getElementById('cd-body');
+  const r = competitorBySlug(slug);
+  if(!r){
+    h.textContent = 'Concorrente não encontrado';
+    sub.textContent = '';
+    body.innerHTML = '<p class="cd-notfound">Esse endereço não corresponde a nenhum concorrente monitorado. <a href="#concorrentes">Ver a lista de concorrentes</a>.</p>';
+    document.title = 'Concorrentes · TRACE';
+    return;
+  }
+  document.title = `${r.name} · Concorrentes · TRACE`;
+  h.textContent = r.name;
+
+  const now = Date.now();
+  const all = RAW_ITEMS.filter(i => i.competitor_group === r.name).sort((a,b) => b._ts - a._ts);
+  const win = all.filter(i => i._ts >= now - COMPETITOR_DAYS * DAY_MS);
+  const long = all.filter(i => i._ts >= now - DETAIL_DAYS_LONG * DAY_MS);
+  const signals = win.filter(i => i.daily_trigger && i.relevance === 'alta');
+  const staleTs = staleReading();
+  sub.textContent = staleTs !== null
+    ? `Leitura desatualizada (última em ${fmtDate(staleTs)}): os números podem estar incompletos.`
+    : `Atividade nos últimos ${COMPETITOR_DAYS} dias${r.moves < LOW_ACTIVITY ? ' · pouca atividade no período' : ''}.`;
+
+  const kpis = [
+    {label:`Movimentos · ${COMPETITOR_DAYS} dias`, value: win.length, sub: `${long.length} em ${DETAIL_DAYS_LONG} dias`},
+    {label:`Sinais · ${COMPETITOR_DAYS} dias`, value: signals.length, sub: 'gatilho diário e relevância alta'},
+    {label:'Eixo mais ativo', value: r.topAxis ? r.topAxis[0] : '—', sub: r.topAxis ? `${r.topAxis[1]} ${r.topAxis[1] === 1 ? 'movimento' : 'movimentos'}` : ''},
+    {label:'Último movimento', value: r.last ? dayLabel(r.last._ts) : '—', sub: r.last ? TIME_FMT.format(r.last._ts) : ''},
+  ];
+  const first = long.slice(0, DETAIL_LIST_INITIAL);
+  const rest = long.slice(DETAIL_LIST_INITIAL);
+
+  body.innerHTML = `
+    <section class="kpi-row" aria-label="Indicadores de ${escapeHtml(r.name)}">${kpis.map(k => `
+      <div class="kpi-card">
+        <div class="kpi-label">${escapeHtml(k.label)}</div>
+        <div class="kpi-value ${typeof k.value === 'number' ? '' : 'long'}">${escapeHtml(k.value)}</div>
+        <div class="kpi-sub">${escapeHtml(k.sub)}</div>
+      </div>`).join('')}
+    </section>
+
+    <div class="ov-grid">
+      <div>
+        <section class="cd-block" aria-labelledby="h-cd-signals">
+          <div class="ov-block-head"><div>
+            <h2 class="t-h2" id="h-cd-signals">Sinais recentes</h2>
+            <p class="ov-block-sub">Gatilho diário e relevância alta nos últimos ${COMPETITOR_DAYS} dias</p>
+          </div></div>
+          ${signals.length
+            ? `<ul class="moves">${signals.slice(0, 5).map(moveHtmlInDetail).join('')}</ul>`
+            : `<p class="ov-empty">Nenhum sinal de alta atenção nos últimos ${COMPETITOR_DAYS} dias.</p>`}
+        </section>
+
+        <section class="cd-block" aria-labelledby="h-cd-moves">
+          <div class="ov-block-head"><div>
+            <h2 class="t-h2" id="h-cd-moves">Movimentos</h2>
+            <p class="ov-block-sub">${long.length} ${long.length === 1 ? 'movimento' : 'movimentos'} nos últimos ${DETAIL_DAYS_LONG} dias</p>
+          </div></div>
+          ${long.length ? `
+            <ul class="moves">${first.map(moveHtmlInDetail).join('')}</ul>
+            ${rest.length ? `<ul class="moves cd-list-extra" id="cd-extra" hidden>${rest.map(moveHtmlInDetail).join('')}</ul>
+              <button type="button" class="cd-more" id="cd-more" aria-controls="cd-extra" aria-expanded="false">Mostrar mais ${rest.length}</button>` : ''}`
+            : `<p class="ov-empty">Nenhum movimento nos últimos ${DETAIL_DAYS_LONG} dias.</p>`}
+        </section>
+      </div>
+
+      <div class="cd-side">
+        <section class="cd-block" aria-labelledby="h-cd-axes">
+          <div class="ov-block-head"><div>
+            <h2 class="t-h2" id="h-cd-axes">Onde há mais movimento</h2>
+            <p class="ov-block-sub">Movimentos por eixo nos últimos ${COMPETITOR_DAYS} dias</p>
+          </div></div>
+          ${axisRowsHtml(win)}
+        </section>
+
+        <section class="cd-block" aria-labelledby="h-cd-ops">
+          <div class="ov-block-head"><div>
+            <h2 class="t-h2" id="h-cd-ops">Operação</h2>
+            <p class="ov-block-sub">Incidentes dos últimos ${DETAIL_DAYS_LONG} dias</p>
+          </div></div>
+          ${opsBlockHtml(r)}
+        </section>
+
+        <section class="cd-block" aria-labelledby="h-cd-reading">
+          <div class="ov-block-head"><div>
+            <h2 class="t-h2" id="h-cd-reading">Leitura de resultados</h2>
+            <p class="ov-block-sub">Última leitura estratégica de balanço</p>
+          </div></div>
+          ${readingBlockHtml(r.name)}
+        </section>
+      </div>
+    </div>`;
+
+  const more = document.getElementById('cd-more');
+  if(more) more.addEventListener('click', () => {
+    document.getElementById('cd-extra').hidden = false;
+    more.hidden = true;
+  });
+}
+
 function renderCompetitors(){
   const box = document.getElementById('cc-list');
   const rows = competitorRows();
@@ -1675,7 +1919,7 @@ function renderCompetitors(){
         </tr></thead>
         <tbody>${rows.map(r => `
           <tr>
-            <td class="cc-first"><span class="cc-name">${escapeHtml(r.name)}</span>${r.moves < LOW_ACTIVITY ? `<span class="cc-note">Pouca atividade no período</span>` : ''}</td>
+            <td class="cc-first"><span class="cc-name"><a href="#concorrentes/${escapeHtml(competitorSlug(r.name))}">${escapeHtml(r.name)}</a></span>${r.moves < LOW_ACTIVITY ? `<span class="cc-note">Pouca atividade no período</span>` : ''}</td>
             <td class="cc-moves" data-label="Movimentos"><span><span class="cc-num${r.moves ? '' : ' is-zero'}">${r.moves}</span>
               <div class="activity-track" aria-hidden="true"><span class="activity-bar" style="width:${Math.round(r.moves / max * 100)}%"></span></div></span></td>
             <td data-label="Sinais"><span class="cc-num${r.signals ? '' : ' is-zero'}">${r.signals}</span></td>
@@ -1697,6 +1941,9 @@ function renderCompetitors(){
 
 function renderCompetitorsUnavailable(){
   document.getElementById('cc-list').textContent = '';
+  document.getElementById('h-concorrente').textContent = 'Leitura indisponível';
+  document.getElementById('cd-sub').textContent = '';
+  document.getElementById('cd-body').textContent = '';
   document.getElementById('cc-sector').hidden = true;
 }
 
@@ -1839,8 +2086,9 @@ async function init(){
   APP_READY = false;
   showLoading();
   try{
-    const {items, invalid, status, generatedAt, demo} = await loadData();
+    const {items, invalid, status, results, generatedAt, demo} = await loadData();
     STATUS = status || {};
+    RESULTS = results || [];
 
     RAW_ITEMS = items;
     AXES = deriveAxes(items);
@@ -1863,6 +2111,7 @@ async function init(){
     APP_READY = true;
     safeStep('visão geral', renderOverview);
     safeStep('concorrentes', renderCompetitors);
+    applyRoute(false);   // se a URL já aponta para um concorrente, monta o detalhe
     render();
   }catch(e){
     showLoadError(e);
@@ -1881,28 +2130,34 @@ const ROUTES = {
 const DEFAULT_ROUTE = 'visao-geral';
 let CURRENT_ROUTE = null;
 
+// "#concorrentes/<slug>" abre o detalhe; slug só aceita [a-z0-9-].
 function routeFromHash(){
-  const key = decodeURIComponent(location.hash.replace(/^#/, ''));
-  return Object.prototype.hasOwnProperty.call(ROUTES, key) ? key : DEFAULT_ROUTE;
+  let key = '';
+  try{ key = decodeURIComponent(location.hash.replace(/^#/, '')); }catch(e){ key = ''; }
+  const m = key.match(/^concorrentes\/([a-z0-9-]{1,60})$/);
+  if(m) return {route:'concorrentes', view:'concorrente', param:m[1], key};
+  const route = Object.prototype.hasOwnProperty.call(ROUTES, key) ? key : DEFAULT_ROUTE;
+  return {route, view:route, param:null, key:route};
 }
 
 function applyRoute(moveFocus){
-  const route = routeFromHash();
-  const changed = route !== CURRENT_ROUTE;
-  CURRENT_ROUTE = route;
+  const {route, view, param, key} = routeFromHash();
+  const changed = key !== CURRENT_ROUTE;
+  CURRENT_ROUTE = key;
 
-  document.querySelectorAll('[data-view]').forEach(v => { v.hidden = v.dataset.view !== route; });
+  document.querySelectorAll('[data-view]').forEach(v => { v.hidden = v.dataset.view !== view; });
   document.querySelectorAll('.nav-link[data-route]').forEach(a => {
     if(a.dataset.route === route) a.setAttribute('aria-current', 'page');
     else a.removeAttribute('aria-current');
   });
   document.title = `${ROUTES[route]} · TRACE`;
+  if(param && APP_READY) safeStep('concorrente', () => renderCompetitorDetail(param));
 
   // canvas criado em aba oculta fica sem tamanho: redesenha ao entrar em Sinais
   if(changed && route === 'sinais' && APP_READY) renderChartsSafe(filteredItems());
 
   if(moveFocus && changed){
-    const h = document.getElementById('h-' + route);
+    const h = document.getElementById('h-' + view);
     if(h) h.focus({preventScroll:true});
     window.scrollTo(0, 0);
   }
@@ -1962,6 +2217,8 @@ setInterval(() => {
   updateMeta();
   safeStep('visão geral', renderOverview);   // saudação e janela de 7 dias andam com o relógio
   safeStep('concorrentes', renderCompetitors);
+  const {param} = routeFromHash();
+  if(param) safeStep('concorrente', () => renderCompetitorDetail(param));
 }, 30 * 60 * 1000);   // aba aberta por horas também detecta dado velho
 
 init();
