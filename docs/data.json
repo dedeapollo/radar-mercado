@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T14:27:51.817857+00:00",
+  "generated_at": "2026-10-04T15:00:41.075226+00:00",
   "items": [
     {
       "competitor_group": "BTG Pactual",
@@ -5151,6 +5151,28 @@
       "daily_trigger": false,
       "trigger_reason": null,
       "why_it_matters": "A Copa BTG Trader é uma competição de trading que engaja clientes e pode atrair day traders, aumentando o volume de negociações na plataforma do BTG e pressionando concorrentes a criar iniciativas similares.",
+      "relevance": "média",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "BTG Pactual procura profissionais para apoiar atendimento a assessores de alta renda - Money Times",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOYTAwLXpBZk9yQ2xDaXB2c0FFNUF2ek91aGFOa25kNk9mTVhVUXpFZGlwMktic0E1QlhLZ3VQT3lwR3BzSDBzN0lHWF9hZVFuVUxuSklkdFhXLXBhTms0VWRYSjg2RmdDZmtyYkVkdThwWmJUYk5qamFFcUVFX3N4NVR4eHhtUXNkMEp1VG13TWg1NEgzUlBpRVY0azkxZ1BCSC12WUNlUzZDR0N0VWFVUS0zU25KNUFKQTl1UGxhSFZodEU?oc=5",
+      "source": "Money Times",
+      "published_at": "2026-10-03T15:00:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxOYTAwLXpBZk9yQ2xDaXB2c0FFNUF2ek91aGFOa25kNk9mTVhVUXpFZGlwMktic0E1QlhLZ3VQT3lwR3BzSDBzN0lHWF9hZVFuVUxuSklkdFhXLXBhTms0VWRYSjg2RmdDZmtyYkVkdThwWmJUYk5qamFFcUVFX3N4NVR4eHhtUXNkMEp1VG13TWg1NEgzUlBpRVY0azkxZ1BCSC12WUNlUzZDR0N0VWFVUS0zU25KNUFKQTl1UGxhSFZodEU?oc=5\" target=\"_blank\">BTG Pactual procura profissionais para apoiar atendimento a assessores de alta renda</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Money Times</font>",
+      "source_indices": [
+        26
+      ],
+      "primary_index": 26,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "O BTG busca profissionais para apoiar assessores de alta renda, sinalizando expansão no atendimento a esse segmento. Isso pode intensificar a concorrência por clientes de wealth management, mas não é um lançamento de produto ou mudança de preço.",
       "relevance": "média",
       "also_reported_by": []
     }
