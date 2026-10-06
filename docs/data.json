@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T18:53:22.701482+00:00",
+  "generated_at": "2026-10-06T16:18:47.523383+00:00",
   "items": [
     {
       "competitor_group": "BTG Pactual",
@@ -5173,6 +5173,84 @@
       "daily_trigger": false,
       "trigger_reason": null,
       "why_it_matters": "O BTG busca profissionais para apoiar assessores de alta renda, sinalizando expansão no atendimento a esse segmento. Isso pode intensificar a concorrência por clientes de wealth management, mas não é um lançamento de produto ou mudança de preço.",
+      "relevance": "média",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "XP/Clear/Rico",
+      "matched_alias": "XP Investimentos",
+      "title": "XP vira alvo na Justiça de vítimas da Fictor por perdas fora da plataforma - Pipeline",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPMjF4d2dKSFVEVDd0OExsa2E2ck5xbmdPOWxvSXpYWVV6NE1YeXFvLVQ1QXJkdklCa09hOXdob04wR1JHYTZfclFYOEVDSHdpUHNZaUh5aDRaM2xXd05NMDFSaWhIUm1NRmx2SURpY1JsaU41alppRHJoeE9lZEhiX0FSU3FnSFg3Q2dkN1pJN3hSQ3gteTdFbHNoYmZ4aVVIaEFBWTRRUUVpWldMVVl4Vl9WaC1EZkpQaURTNXBMVTI5UDZSRWJN0gHWAUFVX3lxTE5JandvZzR0LTQyN0ZYdk16SnRubTAybndvRThtU1dwYUFLVjRacGFqWHNwU3dXa1NqbjBsSFN5QTdfM1k0cm9wN2FtMGhBMng4RmxhVE9sV2pvOHpoeHR0blhzUVdrZkRuODhMQU9YcnRfTnV5MV9lQlI2STA0czZZa2lGQndXanpnemZqOUxFeDl3RmM0Q0prSUxad2t0N3dWcVlOaVd0RXowODRva2hiMGJCUjVnamoxaFBlVmZ6N3JOWFZ4elFERXM4WWhPZVZKaU9Kd1E?oc=5",
+      "source": "Pipeline",
+      "published_at": "2026-10-06T09:00:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxPMjF4d2dKSFVEVDd0OExsa2E2ck5xbmdPOWxvSXpYWVV6NE1YeXFvLVQ1QXJkdklCa09hOXdob04wR1JHYTZfclFYOEVDSHdpUHNZaUh5aDRaM2xXd05NMDFSaWhIUm1NRmx2SURpY1JsaU41alppRHJoeE9lZEhiX0FSU3FnSFg3Q2dkN1pJN3hSQ3gteTdFbHNoYmZ4aVVIaEFBWTRRUUVpWldMVVl4Vl9WaC1EZkpQaURTNXBMVTI5UDZSRWJN0gHWAUFVX3lxTE5JandvZzR0LTQyN0ZYdk16SnRubTAybndvRThtU1dwYUFLVjRacGFqWHNwU3dXa1NqbjBsSFN5QTdfM1k0cm9wN2FtMGhBMng4RmxhVE9sV2pvOHpoeHR0blhzUVdrZkRuODhMQU9YcnRfTnV5MV9lQlI2STA0czZZa2lGQndXanpnemZqOUxFeDl3RmM0Q0prSUxad2t0N3dWcVlOaVd0RXowODRva2hiMGJCUjVnamoxaFBlVmZ6N3JOWFZ4elFERXM4WWhPZVZKaU9Kd1E?oc=5\" target=\"_blank\">XP vira alvo na Justiça de vítimas da Fictor por perdas fora da plataforma</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Pipeline</font>",
+      "source_indices": [
+        2,
+        24
+      ],
+      "primary_index": 2,
+      "axes": [
+        "Risco/Regulação"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "Ações judiciais de clientes contra a XP por perdas em produtos de terceiros (Fictor) reforçam o risco reputacional e regulatório para o modelo de assessoria e distribuição de investimentos, podendo levar a maior escrutínio sobre a responsabilidade das corretoras na indicação de produtos.",
+      "relevance": "média",
+      "also_reported_by": [
+        {
+          "source": "Painel Político",
+          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNaFFXNWdlWC0zb0p5d1kzT3N2OXBTSnlKRy1VeWR2VldxQnU4OFQ0WTZ6VC15WFRPMmdZRmJzUHlocDJaRXdQOXYwOFRhaUQ1TnhESTF2WnN3VHByMll5cEpKamhhU2RaVG5oMURhX3BFZFcwMzhIejk1U0lKV2h5N2otVW8zREVJWko0STN6b09iNENqbENiVzBtbEFOY20zXzVuWS1TOVA0czdGMEJ0OXhlTQ?oc=5"
+        }
+      ]
+    },
+    {
+      "competitor_group": "XP/Clear/Rico",
+      "matched_alias": "XP Investimentos",
+      "title": "Depois da compra da Augme, XP Asset \"azeita\" operação e mira R$ 10 bilhões em FIDCs até 2027 - NeoFeed",
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPd2d1cU04cUs2R0NFNEwzN0xWZ2IxQld1QjNBd0JJbmVWb2VDNWE1cjdDU1QzZ2d2SlR0X01ZZmhEVlZkTHVZM21vYzBCMmRkdTN4VkpYRFNOTk5zX05Vb0thbVZLR1MyZ0t1Zm1sTmViQmI2ZXlCREZMZlFKVzJQcmFHek12NWhWWWhYdXYxN2w1T0Ywd09mUU9kX1JENWdva3dwRnJVZU9pMTVpWDUzMUotV1diRkkzclNYZmxMeVJ6VHVac19ZS0N3?oc=5",
+      "source": "NeoFeed",
+      "published_at": "2026-10-06T10:56:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxPd2d1cU04cUs2R0NFNEwzN0xWZ2IxQld1QjNBd0JJbmVWb2VDNWE1cjdDU1QzZ2d2SlR0X01ZZmhEVlZkTHVZM21vYzBCMmRkdTN4VkpYRFNOTk5zX05Vb0thbVZLR1MyZ0t1Zm1sTmViQmI2ZXlCREZMZlFKVzJQcmFHek12NWhWWWhYdXYxN2w1T0Ywd09mUU9kX1JENWdva3dwRnJVZU9pMTVpWDUzMUotV1diRkkzclNYZmxMeVJ6VHVac19ZS0N3?oc=5\" target=\"_blank\">Depois da compra da Augme, XP Asset \"azeita\" operação e mira R$ 10 bilhões em FIDCs até 2027</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NeoFeed</font>",
+      "source_indices": [
+        3,
+        23
+      ],
+      "primary_index": 3,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "A meta da XP Asset de atingir R$ 10 bilhões em FIDCs até 2027, após a compra da Augme, sinaliza expansão no mercado de crédito estruturado, um segmento de produtos de investimento que pode atrair investidores institucionais e de alta renda, aumentando a concorrência para outras gestoras.",
+      "relevance": "média",
+      "also_reported_by": [
+        {
+          "source": "BPMoney",
+          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNUkgyRjYybklxbmN6U2hsVk51ekZadV9idjRYUmpRNm42emw4N003cl9BSm55ZS03ZmotNWRmX2lnZy02TE1jemJoeWdFb3o5SjJUWG1xTkgwNGtLa0xCM05VbXQ5UzUxOExXTXFKZE43VE0zSC1tbGxGaXR6UVlLRA?oc=5"
+        }
+      ]
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "PF adia depoimento de André Esteves em investigação sobre o Banco Master - Brasil 247",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQWkRpQ3ItaGhDXzB3Vk5TX0dya1RjeU1IeU9sZUZ6bEd1Uk4ycFpsc0VZNnF5d29hSnZ2bm9SOVNLdmxxejlJMW95SlJVeWl4S1Z3X0hpVFEyUHBmSDh0SlJCLVY0M1YwcU9zc3pvU2hYamVJbHRMWlBkR3VDQmZkQm5qcW1YYkVRS1dFbVNKZFBtRmdSZWIxam9rZ19XZENqOU1zWTJfaVRtcmZT?oc=5",
+      "source": "Brasil 247",
+      "published_at": "2026-10-05T18:11:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxQWkRpQ3ItaGhDXzB3Vk5TX0dya1RjeU1IeU9sZUZ6bEd1Uk4ycFpsc0VZNnF5d29hSnZ2bm9SOVNLdmxxejlJMW95SlJVeWl4S1Z3X0hpVFEyUHBmSDh0SlJCLVY0M1YwcU9zc3pvU2hYamVJbHRMWlBkR3VDQmZkQm5qcW1YYkVRS1dFbVNKZFBtRmdSZWIxam9rZ19XZENqOU1zWTJfaVRtcmZT?oc=5\" target=\"_blank\">PF adia depoimento de André Esteves em investigação sobre o Banco Master</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Brasil 247</font>",
+      "source_indices": [
+        48
+      ],
+      "primary_index": 48,
+      "axes": [
+        "Risco/Regulação"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "O adiamento do depoimento de André Esteves em investigação sobre o Banco Master mantém o BTG sob escrutínio regulatório, com potencial impacto reputacional, mas sem efeito direto no negócio de investimentos de varejo.",
       "relevance": "média",
       "also_reported_by": []
     }
