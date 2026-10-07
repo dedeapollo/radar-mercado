@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T16:18:47.523383+00:00",
+  "generated_at": "2026-10-07T17:04:34.360074+00:00",
   "items": [
     {
       "competitor_group": "BTG Pactual",
@@ -5251,6 +5251,28 @@
       "daily_trigger": false,
       "trigger_reason": null,
       "why_it_matters": "O adiamento do depoimento de André Esteves em investigação sobre o Banco Master mantém o BTG sob escrutínio regulatório, com potencial impacto reputacional, mas sem efeito direto no negócio de investimentos de varejo.",
+      "relevance": "média",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "Itaú/Íon",
+      "matched_alias": "Itaú investimentos",
+      "title": "Depois de Itaú e BTG, XP monta Fiagro de R$ 5,3 bilhões - The AgriBiz",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPNWtvMEJXd3ZxYXVDdUpBdHJTM1BIeUR4YXNIWlFBZGw3SEF6Z3JJQnFfQ1J0WXg4NXN0amFEenJlTWpITGFMQVhST2dhVEZ4cjl0UUhUUFo2MlVGSWlITm5HZlRqd0VlandQVXdfNkg3Ti0wdzdOUk9ZN3dtUnNONmJRTEJydHVfLU1RUTgwSldzRjd2cmpzWTl3?oc=5",
+      "source": "The AgriBiz",
+      "published_at": "2026-10-05T20:45:22+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxPNWtvMEJXd3ZxYXVDdUpBdHJTM1BIeUR4YXNIWlFBZGw3SEF6Z3JJQnFfQ1J0WXg4NXN0amFEenJlTWpITGFMQVhST2dhVEZ4cjl0UUhUUFo2MlVGSWlITm5HZlRqd0VlandQVXdfNkg3Ti0wdzdOUk9ZN3dtUnNONmJRTEJydHVfLU1RUTgwSldzRjd2cmpzWTl3?oc=5\" target=\"_blank\">Depois de Itaú e BTG, XP monta Fiagro de R$ 5,3 bilhões</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The AgriBiz</font>",
+      "source_indices": [
+        72
+      ],
+      "primary_index": 72,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "Montagem de Fiagro de R$ 5,3 bi pela XP após movimentos de Itaú e BTG mostra disputa por produtos de crédito do agronegócio, ampliando a oferta de alternativas de renda fixa para o investidor de varejo.",
       "relevance": "média",
       "also_reported_by": []
     }
