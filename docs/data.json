@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T15:35:43.925998+00:00",
+  "generated_at": "2026-10-11T15:59:25.802119+00:00",
   "items": [
     {
       "competitor_group": "BTG Pactual",
@@ -5460,6 +5460,28 @@
           "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOUDNXc0lNOHhFU1BlOHc4QXgxbm9PMVpkRXVDb0dRVzRwNHB6a1V2YmRtbHE2LU9mUFd2cUg1dG9ubUd3c25wcEZ3bl8wSFJvM3hFUkQ1dmI4WFZUMGs4WGYycFowZWwwSkpneFFyOFVlSW9mblhORmZLOEJNVXVCcw?oc=5"
         }
       ]
+    },
+    {
+      "competitor_group": "XP/Clear/Rico",
+      "matched_alias": "XP Investimentos",
+      "title": "XP lança Conta Menor e oferece soluções financeiras para crianças e adolescentes - Estadão",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQQ1d2YWw4SlFXOVpBczlXbG9QS3RvWTZjMURQN0NQb0I1YWNzOXZQeEVpUnpDMllnRTFEN2dRNFpfTDdTQUVqQ3FVeWd0cEJlUTM4RUFQakFCV1hvRmZOWTczUXJVUTF4NGVjLUZEdzJGSXRwQTVpeS1oeXFOYVRydUExY0xJNm55UXk4WUVzQU5KNk5CdnBqMEhuMU43SU84V2VfOHh4N1Z4TUxyTGc5YVlVbWhNV3hhUFptSzVlZC0wZlF20gHKAUFVX3lxTFBZRGRnVHVNNVVQcHdYVWg2RjNhWW1xR3pDNzBjaDdoT1MyczU3VnBTLW1VUlB2LTkxNGNKdlh0c1JFV0FJTDktYkVQT0FtNi1KbkRGeFFXbmFUMFZQeHBFa0FwVTNrMkhmUXJGSUhLdE9vVzF0OUtUSS0tVzVxTVhTUWdpb0pZZUdhV0UyZEVLd3FJNFhaMTFlLWtaY2pxZEd4SWItajJjRW1DWnk1X1NINHJuODZzWnlCMzJrWHBhT3htcHdfN3RHR0E?oc=5",
+      "source": "Estadão",
+      "published_at": "2026-10-09T12:04:10+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxQQ1d2YWw4SlFXOVpBczlXbG9QS3RvWTZjMURQN0NQb0I1YWNzOXZQeEVpUnpDMllnRTFEN2dRNFpfTDdTQUVqQ3FVeWd0cEJlUTM4RUFQakFCV1hvRmZOWTczUXJVUTF4NGVjLUZEdzJGSXRwQTVpeS1oeXFOYVRydUExY0xJNm55UXk4WUVzQU5KNk5CdnBqMEhuMU43SU84V2VfOHh4N1Z4TUxyTGc5YVlVbWhNV3hhUFptSzVlZC0wZlF20gHKAUFVX3lxTFBZRGRnVHVNNVVQcHdYVWg2RjNhWW1xR3pDNzBjaDdoT1MyczU3VnBTLW1VUlB2LTkxNGNKdlh0c1JFV0FJTDktYkVQT0FtNi1KbkRGeFFXbmFUMFZQeHBFa0FwVTNrMkhmUXJGSUhLdE9vVzF0OUtUSS0tVzVxTVhTUWdpb0pZZUdhV0UyZEVLd3FJNFhaMTFlLWtaY2pxZEd4SWItajJjRW1DWnk1X1NINHJuODZzWnlCMzJrWHBhT3htcHdfN3RHR0E?oc=5\" target=\"_blank\">XP lança Conta Menor e oferece soluções financeiras para crianças e adolescentes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Estadão</font>",
+      "source_indices": [
+        8
+      ],
+      "primary_index": 8,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "LANC",
+      "why_it_matters": "A XP entra no segmento de soluções financeiras para crianças e adolescentes, ampliando o relacionamento com a família e criando uma porta de entrada para futuros investidores. Para corretoras concorrentes, sinaliza disputa por um novo nicho de varejo e antecipa a formação de base de clientes de longo prazo.",
+      "relevance": "alta",
+      "also_reported_by": []
     }
   ],
   "results": [
@@ -5687,7 +5709,7 @@
       "incidents": []
     },
     "Nubank/NuInvest": {
-      "status": "instavel_recente",
+      "status": "estavel",
       "last_incident_at": "2026-10-07T17:21:38+00:00",
       "last_incident_title": "Nubank fora do ar? Internautas reclamam de instabilidades - O GLOBO",
       "incident_count_window": 6,
