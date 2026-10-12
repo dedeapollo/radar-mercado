@@ -1,33 +1,6 @@
 {
-  "generated_at": "2026-10-11T15:59:25.802119+00:00",
+  "generated_at": "2026-10-12T19:25:41.721298+00:00",
   "items": [
-    {
-      "competitor_group": "BTG Pactual",
-      "matched_alias": "BTG Pactual",
-      "title": "BTG conclui aquisição do HSBC Uruguai e inicia operações no país - Estadão",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPdWhlM2Z1cUpMRFR3N193R2R1SDZ0Ym00ZUJiMUd2RmVabFJmS2V2VWJ0R3BWN21LamdzZjJYTnpHMjVQVTZ3eFdfZFNxX3RWLWVWamFYRWowdTlZVDlPbk00bm16LTJ1NTdxMWliNV9OWTVFRE5NTkFnTmk4VjMzR2JtRlVtWlhGMUNhRVRISmxmSWw4VFQ2X0ljLWtYUGNVa1RDSDVZNkVlckt2Q2F3LXBnZy1wNTREUHhXTW54NNIBxAFBVV95cUxNalRmNXBUQk44aHVXUGxEOTI5Mm5VbDEyc1NobDkwOXJGZHExejJtZDR2b29RZGIyTjcxYVJ1b1F3OWk5NWw0TldJZ2taOEF1WlVUUFBzNjhxV0gta1NNdXQ3QUpHY3o0RzZLYlVHenpCR2JZNDgzbjZYbjdVSWJyVHlXOWxscnpad0UtYVdFajFhSmlsbnVrT3lZWGUtUWN6amF3TnUwX0t6ZVE3ZTBoQUc5ZlF1bU8xRzhOZGRPUjBiUkpp?oc=5",
-      "source": "Estadão",
-      "published_at": "2026-07-14T17:52:29+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxPdWhlM2Z1cUpMRFR3N193R2R1SDZ0Ym00ZUJiMUd2RmVabFJmS2V2VWJ0R3BWN21LamdzZjJYTnpHMjVQVTZ3eFdfZFNxX3RWLWVWamFYRWowdTlZVDlPbk00bm16LTJ1NTdxMWliNV9OWTVFRE5NTkFnTmk4VjMzR2JtRlVtWlhGMUNhRVRISmxmSWw4VFQ2X0ljLWtYUGNVa1RDSDVZNkVlckt2Q2F3LXBnZy1wNTREUHhXTW54NNIBxAFBVV95cUxNalRmNXBUQk44aHVXUGxEOTI5Mm5VbDEyc1NobDkwOXJGZHExejJtZDR2b29RZGIyTjcxYVJ1b1F3OWk5NWw0TldJZ2taOEF1WlVUUFBzNjhxV0gta1NNdXQ3QUpHY3o0RzZLYlVHenpCR2JZNDgzbjZYbjdVSWJyVHlXOWxscnpad0UtYVdFajFhSmlsbnVrT3lZWGUtUWN6amF3TnUwX0t6ZVE3ZTBoQUc5ZlF1bU8xRzhOZGRPUjBiUkpp?oc=5\" target=\"_blank\">BTG conclui aquisição do HSBC Uruguai e inicia operações no país</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Estadão</font>",
-      "source_indices": [
-        7
-      ],
-      "primary_index": 7,
-      "axes": [
-        "Risco/Regulação"
-      ],
-      "daily_trigger": false,
-      "why_it_matters": "Aquisição no Uruguai é expansão internacional, sem impacto direto no cliente investidor pessoa física brasileiro.",
-      "relevance": "média",
-      "also_reported_by": [
-        {
-          "source": "Exame",
-          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPdE9vTERVTWNKQWExd1dXdWh0ZmduMzE3SXQyU0M2Rk5DeVJSc2FiUkNaY0VINXFnendhendUSU5EZmZZUWdTYS0tSERjOVhTNU1JUEJMYV93T1ZxR3d4MXlWSndsdC0wdFByRGE3eW84NUZuVXEyUmw0RWRiWm42RHZRbG84NUhRS2hvSzVEeGVTWkpUcFFTMFV6RTkyc1RpaU9wVUd4RzVSUHFGenN2YWQ2eGZwMXQyZWtLQjVFcDZQYk5FYV9F?oc=5"
-        }
-      ],
-      "confirmation": "confirmado",
-      "trigger_reason": null
-    },
     {
       "competitor_group": "BTG Pactual",
       "matched_alias": "BTG Pactual",
@@ -5481,6 +5454,50 @@
       "trigger_reason": "LANC",
       "why_it_matters": "A XP entra no segmento de soluções financeiras para crianças e adolescentes, ampliando o relacionamento com a família e criando uma porta de entrada para futuros investidores. Para corretoras concorrentes, sinaliza disputa por um novo nicho de varejo e antecipa a formação de base de clientes de longo prazo.",
       "relevance": "alta",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "BTG aposta em gamificação para fidelizar clientes desde a infância - Estadão",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPdkxqN3NqeXJJUXF2VzFzNHpueUVWVjc4d2NuY1dybmNmTGdkYzExWW1TRTI5SXBNa0tfQUR4eGpieElublZQanVsd2N6WlprU05GeG9tazNaMXBoR0ZWYlh3MTRFR05nbHQ3OWFyQ2pwV2JyaUZvYVdMV0tzVVczZnNkU3VWX0tCSUFfb3dyTHFCQnQ3aVRXUXJDSjR4a2pleWVrSFlkcDhJSXJMVUtHa0JsV3JlRUZWbEhyalpjSGlFZ9IBxwFBVV95cUxQVWFabUhKZW0tQUlpcktyZXdXM29OWEw4V3NKZzNrYmVlcTlEWVhEb1E4dXVPTHI1VXVnamJwYm5RVHB4UDg0M3k5RzdPWHpMUjZGX3VQdTJsZ0haV2QxcHUtVjJoNVhpSEVQWFZMYVVOU1B3NDBvRmlBWGxEbG4wS2h6dnVUUVRZY0JScnh4cGV3VDczZ3BGRXZoRTZOU2xkR0E2QjFNWnlqTHhpSzc0OHBpUUJHSHM1dThMOU1pU0g5eU1QY3NN?oc=5",
+      "source": "Estadão",
+      "published_at": "2026-10-12T08:00:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxPdkxqN3NqeXJJUXF2VzFzNHpueUVWVjc4d2NuY1dybmNmTGdkYzExWW1TRTI5SXBNa0tfQUR4eGpieElublZQanVsd2N6WlprU05GeG9tazNaMXBoR0ZWYlh3MTRFR05nbHQ3OWFyQ2pwV2JyaUZvYVdMV0tzVVczZnNkU3VWX0tCSUFfb3dyTHFCQnQ3aVRXUXJDSjR4a2pleWVrSFlkcDhJSXJMVUtHa0JsV3JlRUZWbEhyalpjSGlFZ9IBxwFBVV95cUxQVWFabUhKZW0tQUlpcktyZXdXM29OWEw4V3NKZzNrYmVlcTlEWVhEb1E4dXVPTHI1VXVnamJwYm5RVHB4UDg0M3k5RzdPWHpMUjZGX3VQdTJsZ0haV2QxcHUtVjJoNVhpSEVQWFZMYVVOU1B3NDBvRmlBWGxEbG4wS2h6dnVUUVRZY0JScnh4cGV3VDczZ3BGRXZoRTZOU2xkR0E2QjFNWnlqTHhpSzc0OHBpUUJHSHM1dThMOU1pU0g5eU1QY3NN?oc=5\" target=\"_blank\">BTG aposta em gamificação para fidelizar clientes desde a infância</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Estadão</font>",
+      "source_indices": [
+        5
+      ],
+      "primary_index": 5,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "Gamificação do BTG voltada à fidelização desde a infância pode ampliar base futura de investidores, mas não é lançamento de produto de investimento nem altera condições de trading.",
+      "relevance": "média",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "BTG Pactual e China Southern assinam acordo para lançar ETFs entre 2 países - CNN Brasil",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNTk1KaHVHdXdvSF9kbWFSZUJ2aUxod3VHeXJ4NEs0RDlVTHJJU3d6eGdaaW4taHFiUFA0dFBmVDVRNmIxa1FhcEZhdWJibm1WWEQ5QzNtYmprTHhLZm1PemN3WE16dUQ1eFg1VS1PYzlyVTFZaXoxZXhsLUNKc09RYmlmdkxnX21SM1l2YkZ1Q0VYQVJLQmhhTDVuNWNyM3FwVHRncEpVVHd0clNnMGZUblBRVG8tZFFEeDlhOGFfOW4wa2NpTW5lVA?oc=5",
+      "source": "CNN Brasil",
+      "published_at": "2026-10-09T22:52:15+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxNTk1KaHVHdXdvSF9kbWFSZUJ2aUxod3VHeXJ4NEs0RDlVTHJJU3d6eGdaaW4taHFiUFA0dFBmVDVRNmIxa1FhcEZhdWJibm1WWEQ5QzNtYmprTHhLZm1PemN3WE16dUQ1eFg1VS1PYzlyVTFZaXoxZXhsLUNKc09RYmlmdkxnX21SM1l2YkZ1Q0VYQVJLQmhhTDVuNWNyM3FwVHRncEpVVHd0clNnMGZUblBRVG8tZFFEeDlhOGFfOW4wa2NpTW5lVA?oc=5\" target=\"_blank\">BTG Pactual e China Southern assinam acordo para lançar ETFs entre 2 países</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNN Brasil</font>",
+      "source_indices": [
+        6
+      ],
+      "primary_index": 6,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "Acordo para lançar ETFs entre Brasil e China amplia portfólio do BTG, mas é movimento institucional/asset sem impacto imediato no investidor pessoa física de varejo.",
+      "relevance": "média",
       "also_reported_by": []
     }
   ],
