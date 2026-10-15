@@ -1,61 +1,6 @@
 {
-  "generated_at": "2026-10-14T14:44:08.779775+00:00",
+  "generated_at": "2026-10-15T14:29:41.916879+00:00",
   "items": [
-    {
-      "competitor_group": "BTG Pactual",
-      "matched_alias": "BTG Pactual",
-      "title": "Com promessas de partnership, BTG desrespeita a jornada dos trabalhadores - Sindicato dos Bancários",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOMTUwX1JxbVI3dVdyTjdGOExKdnFxeTdiQkhqMzMxREsxMkY0Q1ZNbVZ0U1ZBYkdMcTAwZkRqMW1NR25fU1BPRTZrd3NGSFNNY1pxd0VpQXFzcnVtUk1HRkVrem5ZOXpBMVNLbmNEV1JVblVlWDdNdDBuUzJpaHQ3V1d1aW5JV2ZQM001UjFYVVJWS3N3RnV4MFZyV3VaY0FuamNZeWpMNUQ?oc=5",
-      "source": "Sindicato dos Bancários",
-      "published_at": "2026-07-16T20:40:00+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxOMTUwX1JxbVI3dVdyTjdGOExKdnFxeTdiQkhqMzMxREsxMkY0Q1ZNbVZ0U1ZBYkdMcTAwZkRqMW1NR25fU1BPRTZrd3NGSFNNY1pxd0VpQXFzcnVtUk1HRkVrem5ZOXpBMVNLbmNEV1JVblVlWDdNdDBuUzJpaHQ3V1d1aW5JV2ZQM001UjFYVVJWS3N3RnV4MFZyV3VaY0FuamNZeWpMNUQ?oc=5\" target=\"_blank\">Com promessas de partnership, BTG desrespeita a jornada dos trabalhadores</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Sindicato dos Bancários</font>",
-      "source_indices": [
-        16
-      ],
-      "primary_index": 16,
-      "axes": [
-        "Risco/Regulação"
-      ],
-      "daily_trigger": false,
-      "why_it_matters": "Denúncia trabalhista pode gerar risco reputacional, mas não afeta diretamente o cliente investidor.",
-      "relevance": "média",
-      "also_reported_by": [],
-      "confirmation": "especulativo",
-      "trigger_reason": null
-    },
-    {
-      "competitor_group": "XP/Clear/Rico",
-      "matched_alias": "XP Investimentos",
-      "title": "A Nomos quer dobrar de tamanho sem abandonar o trader - NeoFeed",
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPb1NhTHQ5bXJZdUxvN29QeXFmV2xUV3RuTDFaSldoeEhUWG5OWFg0alVUN2I1LVlXZEp2TU5JY0xDVzA5Q0RoMzVpQWQzdVM0Zmt5ZjNwczhOdHFsbEtfc2VyQzhHeXVxTmpKWkVLRk5sS1RiVkhYUVBhZWtoYWZSMlI0TUVvcGpseGJTUg?oc=5",
-      "source": "NeoFeed",
-      "published_at": "2026-07-17T11:19:04+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxPb1NhTHQ5bXJZdUxvN29QeXFmV2xUV3RuTDFaSldoeEhUWG5OWFg0alVUN2I1LVlXZEp2TU5JY0xDVzA5Q0RoMzVpQWQzdVM0Zmt5ZjNwczhOdHFsbEtfc2VyQzhHeXVxTmpKWkVLRk5sS1RiVkhYUVBhZWtoYWZSMlI0TUVvcGpseGJTUg?oc=5\" target=\"_blank\">A Nomos quer dobrar de tamanho sem abandonar o trader</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NeoFeed</font>",
-      "source_indices": [
-        16,
-        18,
-        19
-      ],
-      "primary_index": 16,
-      "axes": [
-        "Produtos Novos"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": false,
-      "trigger_reason": null,
-      "why_it_matters": "A Nomos, corretora focada em traders, planeja dobrar de tamanho, indicando possível aumento de concorrência no segmento de alta frequência e day trade.",
-      "relevance": "média",
-      "also_reported_by": [
-        {
-          "source": "NeoFeed",
-          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPVVRoNm9uZWhNNW5yOC1OU3ZOTmNWdW5yM2lIX01SNGhTWGtLZFhVbzJCb3pOcGR2OF9PNGtXWXZidk5BNE15NVlmRm1wMnEyRUQ5WEVwT2hEdE5BeC10U25xY0JtcnJpdWpZQlNROFc4SWhBMHZ1NjNjeHRnMFlLR054X3ZGOXVXeWswVXhHUHE?oc=5"
-        },
-        {
-          "source": "NeoFeed",
-          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPWXVfOUV0WFpIc1pLb1VsZkFUSVhvUFN2amRUUDRxNkV5U2NTbTRjT3FUYzNmeDI5NDZlRmFwSmZTdms3Rk5wVW14RXZ6ZmZwMVp4YWJudXE4ZnBzaGJJWEIzV0VjVkpWLTRfNTZHQ2dfNUdqSjUxMGdVOHpPVkhfNnhJM1ctdU5DaDh2SHg0VTQ?oc=5"
-        }
-      ]
-    },
     {
       "competitor_group": "BTG Pactual",
       "matched_alias": "BTG Pactual",
@@ -5477,6 +5422,129 @@
       "why_it_matters": "A Copa BTG Trader é uma competição de trading que atrai day traders e pode aumentar o volume de negociações na plataforma, intensificando a concorrência no segmento de RV.",
       "relevance": "média",
       "also_reported_by": []
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "BTG Pactual supera Vale e se torna terceira empresa mais valiosa da bolsa - Exame",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNY2hka3I1WDh4SzVKV09OTGtLeEE3VTB3dWZBcTQydm5YdklwejI0U2RBc3YtMUdadUhTR20tYkRsRFFSWmQ3N0FMX1JFUmpxTHlpS1VrM2IxdVVHT25pZTlaaC1RWHBSc3BGNkx3ZzBJR2t3SUhqeXlyNEhfbFlCQUt5OEVsZmExMHlTSEpuYXhOMFlVdlpJakFQaW5kZnJGMUljOG0tMlhXMXhh?oc=5",
+      "source": "Exame",
+      "published_at": "2026-10-14T16:59:16+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxNY2hka3I1WDh4SzVKV09OTGtLeEE3VTB3dWZBcTQydm5YdklwejI0U2RBc3YtMUdadUhTR20tYkRsRFFSWmQ3N0FMX1JFUmpxTHlpS1VrM2IxdVVHT25pZTlaaC1RWHBSc3BGNkx3ZzBJR2t3SUhqeXlyNEhfbFlCQUt5OEVsZmExMHlTSEpuYXhOMFlVdlpJakFQaW5kZnJGMUljOG0tMlhXMXhh?oc=5\" target=\"_blank\">BTG Pactual supera Vale e se torna terceira empresa mais valiosa da bolsa</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Exame</font>",
+      "source_indices": [
+        28,
+        34,
+        37,
+        39,
+        42,
+        63
+      ],
+      "primary_index": 34,
+      "axes": [
+        "RV/Trading"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "Marcação a mercado do BTG na B3 é resultado de mercado, não mudança de produto ou condição para o cliente investidor.",
+      "relevance": "média",
+      "also_reported_by": [
+        {
+          "source": "Seu Dinheiro",
+          "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxONTQtTjg4WEh0YUw5TFJobVUwS1JoVFpfbzNhTWVaV2pndVV0Yl9UdzEzMkpha3hCQk81M2h3YUhlSWNLa0lmMFQ0Q3ZvWi02ekp5bWZoUGhDYzJiVV8xbHk5TldLaFhZVkY1WkY5RTFtMjhGWHJDT2Z5Nkdid2EzZWVqN3RjTE9ma0E0ZGhWZHZMeGZoZm4yWGp4OGZ2T1hZaF9udDdUbVlXcVNUVnlNOUlSSWpXN19GUnJyVWxIRW5uVFdGaXozSWxKMTdRUWI5SzhtQ0xrZHMzZjZKU3Z1bXNYRFhIT0J6b2Y2QWFlNHJwZw?oc=5"
+        },
+        {
+          "source": "Investidor10",
+          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNYkxUei0tQjRfcGxOVjRxVklMeEZiTDFDZHRJX1JuSTM2bEJfd2VxWl9BRzJxcF9VMGhNRjBjUXJlS3FCR1I5TkFGWkdYSVgzbXJTdldTSWJWZUE3SFRUV296MnNrWEIxekxPSHkzSDlYbzFPdjE0OFk4YkItTzl4WDhLbG9KNEFVQ2pOZVQxaENmM3ZuTDAzQVhPekFkNTJzV2dqV0E2V0dZdGxkNXo2UmFDTUfSAboBQVVfeXFMT0NnV2pRaUd6VTVHTkxLSjNoUkliSVUzaHlZY3JhVTJiZzF2bXRqelMtZWJ3bG5NMGlDcVZDRVNaclU3Mkl1Q0ZIeGdSMWt5bUlScXVBYmRPc29VWldzc0pramhHbEMxRVpLNDB6NWV2SEdvd0RJcHR4bnQwTjNwSDFZZGFrbTlYekdOZDJMOUFyYVE3UVdZY2tYWlpaZFRPdFZFVFYtUTRocTA0Q3lQWDlGcFh0U1QxUGxB?oc=5"
+        },
+        {
+          "source": "Money Times",
+          "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQYndwQnN1QUhpam5lMU4wVFZqVVg1Y0tmVkVrSktfNENLZC1QYUJ3eWVoeVA2bGI2NWMyNEstSnZDMThJcDlZMjJJbWE0NENfSzJlM3E4Z29ocXVERmdpdGVEb2dSTkJjLTAzU3AyMXQxYnpxRjJId0N2Ylpyc2JfQXJLMExnMUtLSnVlN2tvZDVOY2pmQzdpdTNoSGxwYnl0UzF6XzkydmVibDVKS1N1cklNczUxQlZYZ1RYYXNGQjBKaERJQWZNOFB2VXIzR2xuNFNiMnhSTEtVQQ?oc=5"
+        },
+        {
+          "source": "Kinvo",
+          "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNald0Mk5LcExPejRDYmxiczJsSlFfS2RlNTRyYzB3RDZ4TFlQdjcxNGJhamx3aDVWOEJDU1NUbk56YmVDTUh5QWpzUEFMRlk4amdQMEhrbkJhdTc3QVlxR1lzSlJuNXlUMGo0UkNHTVh0bWpmWmpwX1RVTlpUNDlOSDJrUFNhaG91VC0xekYtVzZJYXI3Q3lDYXM2emFZUXIyVXBub25Gcy1LWGM5OVgzeGhZX1VhUC1DdV9seGZCaVlYYkhYMDlEU2Y1M2RzWHZp?oc=5"
+        },
+        {
+          "source": "Guia do Investidor",
+          "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNdF8yTVU1WkhoLTRCRUVXYkRMSGh5UkdIRFBkUTVZSmtZcGJsRGFySmVFaFZ6Y214NUY2eDJ2cnM2U21xb3ZYck9ydGt4SGlnU2tSbTUxOHdtSFpYYzFWdmVQQ1F6NnpxVEN1RUpfdWpYa2ctbDMzdHVhRXdsNGYzVFZ6MWxXVjdVUXNwWmlzSmRNel9kNzNQejZROXpZYkpTazYxN1VXdTdOdUI1ZHJXLV9BRTJ3dGxBMzRDcEdlRW16Mmh6NEU2WHJabnpMeHla?oc=5"
+        }
+      ]
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "Estratégia do BTG Pactual: como o gigante do atacado está dominando o varejo digital - Nord Investimentos",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPaEphSV9xOU9aZWNtTVNwR3BvQVY3UWRXVGVWQk9hSXp5dlNQY0JXVDZvMDhGQkRPbW92ZkV0QmFHT2pXczVhdzZmYjk5RDhOMmszSmthbi0wS01wT1hfa3hWVlpmNFp0R3MxcGpCQ0VaM1psNXZ3aEF0ckpOdnV4QjNaMnRjQUNMeTMwS2JYLW5WNUtTekREeC1n0gGfAUFVX3lxTFBWU0owZ0NHYm05RWtXTVBsSVYtS3dOR19VdnV0Q3VsOVdyckhQcU9FUVJKeGZVNURrZTIyelpWYjRGUUpLc1JYX0FpZ0FYZHJuc1R2cFJQb2IzcU5rbkctdzkwaExDSTVFQjBpVDRRUTAyVVFvSmFsc2drMEpwWmdzNzhmalFnSFozQ1NaMUc4SzdaSDRYeTlfeVdYdHZ4dw?oc=5",
+      "source": "Nord Investimentos",
+      "published_at": "2026-10-15T00:07:15+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxPaEphSV9xOU9aZWNtTVNwR3BvQVY3UWRXVGVWQk9hSXp5dlNQY0JXVDZvMDhGQkRPbW92ZkV0QmFHT2pXczVhdzZmYjk5RDhOMmszSmthbi0wS01wT1hfa3hWVlpmNFp0R3MxcGpCQ0VaM1psNXZ3aEF0ckpOdnV4QjNaMnRjQUNMeTMwS2JYLW5WNUtTekREeC1n0gGfAUFVX3lxTFBWU0owZ0NHYm05RWtXTVBsSVYtS3dOR19VdnV0Q3VsOVdyckhQcU9FUVJKeGZVNURrZTIyelpWYjRGUUpLc1JYX0FpZ0FYZHJuc1R2cFJQb2IzcU5rbkctdzkwaExDSTVFQjBpVDRRUTAyVVFvSmFsc2drMEpwWmdzNzhmalFnSFozQ1NaMUc4SzdaSDRYeTlfeVdYdHZ4dw?oc=5\" target=\"_blank\">Estratégia do BTG Pactual: como o gigante do atacado está dominando o varejo digital</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Nord Investimentos</font>",
+      "source_indices": [
+        38
+      ],
+      "primary_index": 38,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "Análise de estratégia de varejo digital do BTG; contexto estratégico sem anúncio de produto ou mudança de condição ao cliente.",
+      "relevance": "média",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "Nubank/NuInvest",
+      "matched_alias": "Nubank",
+      "title": "Nubank lança ferramenta de IA que promete recomendações neutras de investimento - Bloomberg Línea Brasil",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPS0c5bjkyb0Z4UVU5dWR5ekU3MFhLQk9yQXJ6emtiZVk4cndfU2FYaklQVlJhTFNXVm1OM3dVQVFnOWwwNHhuUUc1S2tQTHV5T1p1YkJnWDE4d3R3VGg2Wk9NOGNhSmRONW8yZk1mVk9fam5xdTAtdkxhMEtBcjZWM0UzdDVnaVlNQjFhaTF0aUhzNmlWUm5EUE5QUHpyejZKM0NadE5LZ3RiQksxSzNxSlRLUGVVYzRSUUYw0gHPAUFVX3lxTE9kS1ZyTkhnTk1oNG1PZ2ljZjF1STRaNjFQQjNRWHFQU0ZTZUFXVm1FM0ZpZ2lLbXFyX09nMUU4OE1nVlBTSXJjdXJXbkhkd2NRMm9tVFlOaGJwbVNScEtUQTRUTkNoOWp3VzJpa2NJNV9mcG9GdnVnQTRLaXpHY0RjSVVJM21aQzdXOEt5MzBaeERyZnJvR0V2LWJOUWVpdkxvYURjTDJUUUpRMDU3Q0NSLXM3ZXNUMmdkQkRwMFBTYi1xd0ZZUmhIaXR5MmxrNA?oc=5",
+      "source": "Bloomberg Línea Brasil",
+      "published_at": "2026-10-15T13:07:55+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxPS0c5bjkyb0Z4UVU5dWR5ekU3MFhLQk9yQXJ6emtiZVk4cndfU2FYaklQVlJhTFNXVm1OM3dVQVFnOWwwNHhuUUc1S2tQTHV5T1p1YkJnWDE4d3R3VGg2Wk9NOGNhSmRONW8yZk1mVk9fam5xdTAtdkxhMEtBcjZWM0UzdDVnaVlNQjFhaTF0aUhzNmlWUm5EUE5QUHpyejZKM0NadE5LZ3RiQksxSzNxSlRLUGVVYzRSUUYw0gHPAUFVX3lxTE9kS1ZyTkhnTk1oNG1PZ2ljZjF1STRaNjFQQjNRWHFQU0ZTZUFXVm1FM0ZpZ2lLbXFyX09nMUU4OE1nVlBTSXJjdXJXbkhkd2NRMm9tVFlOaGJwbVNScEtUQTRUTkNoOWp3VzJpa2NJNV9mcG9GdnVnQTRLaXpHY0RjSVVJM21aQzdXOEt5MzBaeERyZnJvR0V2LWJOUWVpdkxvYURjTDJUUUpRMDU3Q0NSLXM3ZXNUMmdkQkRwMFBTYi1xd0ZZUmhIaXR5MmxrNA?oc=5\" target=\"_blank\">Nubank lança ferramenta de IA que promete recomendações neutras de investimento</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg Línea Brasil</font>",
+      "source_indices": [
+        79,
+        81
+      ],
+      "primary_index": 79,
+      "axes": [
+        "Produtos Novos",
+        "Tecnologia"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "LANC",
+      "why_it_matters": "Ferramenta de IA com recomendações de investimento dentro do app do Nubank amplia a oferta de produtos de investimento ao cliente pessoa física e pressiona concorrentes de varejo.",
+      "relevance": "alta",
+      "also_reported_by": [
+        {
+          "source": "EuQueroInvestir",
+          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNdWRJMUxhZE81UEVSVW1zeTVVQmhTMWdBWjRiT0ZQLVRSdTUyc0NVUnpybkxfQWRkclJqdlc4eGhHMExKOEhpQW9zaFgwM1cwWUxoZzd0dWJPRHpkcjVKcEhmcWNMY0NTZE1zQ0N4YWlWZHBhbUZ2dXBMenJ2ZzJMdnUtb2F0bXVBMFRtcF9OS3d4Y3dqbU9mWERxWGRfbkFRMExaVnE5ZUtlOEJM?oc=5"
+        }
+      ]
+    },
+    {
+      "competitor_group": "XP/Clear/Rico",
+      "matched_alias": "XP Investimentos",
+      "title": "XP Investimentos FORA DO AR HOJE: serviços apresentam instabilidade nesta quinta, dia 15 de outubro de 2026 - Portal de Camaquã",
+      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQY2xqTGFIN2hsUFl0b1RJMlhVUzBJUWEzamV6dGg1RFNSN29wb0hubUdxVnJ2MldwWk5xc0R5VVRfX1hGNFYtbXFSeEMwc1pDa1pOX29FektUZm9FMmFpSnZfOFRJcjBlak1YTmFCWUZCbmtyWmtLWm9MR2xCaWNEME9VYlhLUktpbjlGZEJhQVhzVTFVazNmeDEwRXludHJTajI2U2V0dDdsQWFRVFQ2N3pSV0F4OFN2Q281OUpUaVZweDdNXzhkRkM4SjlaUFc1eEZjUTJnMUZkZzFFRXVsVDFRMVNZSGFLOUpySy1mNjM5aEE?oc=5",
+      "source": "Portal de Camaquã",
+      "published_at": "2026-10-15T03:26:29+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi8wFBVV95cUxQY2xqTGFIN2hsUFl0b1RJMlhVUzBJUWEzamV6dGg1RFNSN29wb0hubUdxVnJ2MldwWk5xc0R5VVRfX1hGNFYtbXFSeEMwc1pDa1pOX29FektUZm9FMmFpSnZfOFRJcjBlak1YTmFCWUZCbmtyWmtLWm9MR2xCaWNEME9VYlhLUktpbjlGZEJhQVhzVTFVazNmeDEwRXludHJTajI2U2V0dDdsQWFRVFQ2N3pSV0F4OFN2Q281OUpUaVZweDdNXzhkRkM4SjlaUFc1eEZjUTJnMUZkZzFFRXVsVDFRMVNZSGFLOUpySy1mNjM5aEE?oc=5\" target=\"_blank\">XP Investimentos FORA DO AR HOJE: serviços apresentam instabilidade nesta quinta, dia 15 de outubro de 2026</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Portal de Camaquã</font>",
+      "channel": "incident",
+      "source_indices": [
+        82
+      ],
+      "primary_index": 82,
+      "axes": [
+        "Tecnologia",
+        "RV/Trading"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "INC",
+      "why_it_matters": "Instabilidade nos serviços da XP afeta diretamente a negociação e a experiência do cliente investidor, abrindo janela para concorrentes captarem insatisfeitos.",
+      "relevance": "alta",
+      "also_reported_by": []
     }
   ],
   "results": [
@@ -5559,11 +5627,22 @@
   ],
   "status_by_competitor": {
     "XP/Clear/Rico": {
-      "status": "estavel",
-      "last_incident_at": "2026-09-12T13:11:11.746216+00:00",
-      "last_incident_title": "XP (app principal): pico de reclamações de mau funcionamento na Play Store (5 avaliações negativas citando indisponibilidade em 48h)",
-      "incident_count_window": 3,
+      "status": "instavel_recente",
+      "last_incident_at": "2026-10-15T03:26:29+00:00",
+      "last_incident_title": "XP Investimentos FORA DO AR HOJE: serviços apresentam instabilidade nesta quinta, dia 15 de outubro de 2026 - Portal de Camaquã",
+      "incident_count_window": 4,
       "incidents": [
+        {
+          "published_at": "2026-10-15T03:26:29+00:00",
+          "title": "XP Investimentos FORA DO AR HOJE: serviços apresentam instabilidade nesta quinta, dia 15 de outubro de 2026 - Portal de Camaquã",
+          "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQY2xqTGFIN2hsUFl0b1RJMlhVUzBJUWEzamV6dGg1RFNSN29wb0hubUdxVnJ2MldwWk5xc0R5VVRfX1hGNFYtbXFSeEMwc1pDa1pOX29FektUZm9FMmFpSnZfOFRJcjBlak1YTmFCWUZCbmtyWmtLWm9MR2xCaWNEME9VYlhLUktpbjlGZEJhQVhzVTFVazNmeDEwRXludHJTajI2U2V0dDdsQWFRVFQ2N3pSV0F4OFN2Q281OUpUaVZweDdNXzhkRkM4SjlaUFc1eEZjUTJnMUZkZzFFRXVsVDFRMVNZSGFLOUpySy1mNjM5aEE?oc=5",
+          "source": "Portal de Camaquã",
+          "why_it_matters": "Instabilidade nos serviços da XP afeta diretamente a negociação e a experiência do cliente investidor, abrindo janela para concorrentes captarem insatisfeitos.",
+          "axes": [
+            "Tecnologia",
+            "RV/Trading"
+          ]
+        },
         {
           "published_at": "2026-09-12T13:11:11.746216+00:00",
           "title": "XP (app principal): pico de reclamações de mau funcionamento na Play Store (5 avaliações negativas citando indisponibilidade em 48h)",
