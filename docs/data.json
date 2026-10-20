@@ -1,66 +1,6 @@
 {
-  "generated_at": "2026-10-19T16:39:48.436950+00:00",
+  "generated_at": "2026-10-20T14:32:13.845397+00:00",
   "items": [
-    {
-      "competitor_group": "XP/Clear/Rico",
-      "matched_alias": "XP Investimentos",
-      "title": "XP estreia em credenciamento e lança cartão PJ com até 1,2% de ‘investback’ - Valor Econômico",
-      "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNRFhZanA4OERHN3pHZFVjaGRLUFoyLUVWSW5lRUF0VTZpUHFPTTdYNVlLeksyUEY1WUo0UjExQU1OQkU0a3ExcDhtNHJOMFMzaWRiS0RybkQ4YlJLQ0lnNlR4b0RQb2g3V1pQbko4LUdPYTQzcFgzR1VlR09jVWpGb2dydHJkeHA3em9ibFoxTHk5T055RmZRU3FJdWZmeXY0SlVlb3VEaE94bUxGaXJwanZFM25hUURLU2JOeHRUSHlJNVBBNHZaZVZSLVBiYm1jdnpCbXRCZUhHYkJMdHfSAewBQVVfeXFMUHFWZGUzaXlLVW91Uzd4dnV2NkRCeHJoTUZ0VVAxTEJqSmpOenM3Y1RPbUt1cDBlZDhVb3hnTjJpSm1yQXZYUjZBUTZheUZ0Z2RXUnlmS1pINGlLYWgxeWdKdV9uLTNzNVdRWVlNS0RGOVJUbVJBOGN6djM1RnhOZUJ2ZWRwTlctM05fTEFvTElNT3FqVW1ZS014V2QzNEZENU9NbzMtUW12c1RKcm1FZVpqeXotVGZSbTVYYlZOaFpqNElGbTI2bmYyQnhsVnoySUdoMUZfdVJHRFdTc2h5THNZN3hES1UxRkU4VVI?oc=5",
-      "source": "Valor Econômico",
-      "published_at": "2026-07-21T19:41:21+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi3gFBVV95cUxNRFhZanA4OERHN3pHZFVjaGRLUFoyLUVWSW5lRUF0VTZpUHFPTTdYNVlLeksyUEY1WUo0UjExQU1OQkU0a3ExcDhtNHJOMFMzaWRiS0RybkQ4YlJLQ0lnNlR4b0RQb2g3V1pQbko4LUdPYTQzcFgzR1VlR09jVWpGb2dydHJkeHA3em9ibFoxTHk5T055RmZRU3FJdWZmeXY0SlVlb3VEaE94bUxGaXJwanZFM25hUURLU2JOeHRUSHlJNVBBNHZaZVZSLVBiYm1jdnpCbXRCZUhHYkJMdHfSAewBQVVfeXFMUHFWZGUzaXlLVW91Uzd4dnV2NkRCeHJoTUZ0VVAxTEJqSmpOenM3Y1RPbUt1cDBlZDhVb3hnTjJpSm1yQXZYUjZBUTZheUZ0Z2RXUnlmS1pINGlLYWgxeWdKdV9uLTNzNVdRWVlNS0RGOVJUbVJBOGN6djM1RnhOZUJ2ZWRwTlctM05fTEFvTElNT3FqVW1ZS014V2QzNEZENU9NbzMtUW12c1RKcm1FZVpqeXotVGZSbTVYYlZOaFpqNElGbTI2bmYyQnhsVnoySUdoMUZfdVJHRFdTc2h5THNZN3hES1UxRkU4VVI?oc=5\" target=\"_blank\">XP estreia em credenciamento e lança cartão PJ com até 1,2% de ‘investback’</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Valor Econômico</font>",
-      "source_indices": [
-        0,
-        5,
-        8,
-        20
-      ],
-      "primary_index": 8,
-      "axes": [
-        "Produtos Novos"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": true,
-      "trigger_reason": "LANC",
-      "why_it_matters": "XP entra no credenciamento e lança cartão PJ com investback, ampliando ecossistema para PMEs e competindo diretamente com maquininhas de bancos e fintechs, o que pode reter e atrair clientes investidores pessoa física que também são empresários.",
-      "relevance": "alta",
-      "also_reported_by": [
-        {
-          "source": "InfoMoney",
-          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNVGI1cEw3TVloZExUQ19SUDVGSkZqenFpUllQLS1MODJEU3NFVm1WWWFkTVpOWWZ3WkN3TU9CMDlFaFp0dThHUDJWaFN0MnlVS1diOHdaVnZwdWVOcm4tSXh4NHduclBuajRuYWFLYTVvOURGSHlSMlZSdC1wckppUHRvV1lsWFVfalVRckhrVWhOVDRJUC1Tbjg2VEJSeHhVdUZkVkZWZHNqamRLWkHSAbMBQVVfeXFMTlhlYmRSZTlLMTdzQ05Dd1dmU01RODFaNGc3OTZKcnhfdU9POXpqOEdfYXNCdWZ3SllqVldnb0ViRm1VUnZQZjRqbHUydDdzZ194OHdFR0t1NHBQQUZXTGxlc3V4bVRVQWE1WkNaWE9tcVk4Wnp6WXVaSFpUQWdJejJVVDROOVh2SHVZc1Z0cG5LVDF0MjFPR1FaalFlWmR5MHZwRTJwbXgtTFExLVkzSElCekU?oc=5"
-        },
-        {
-          "source": "Seu Dinheiro",
-          "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPM1N4dWJPVUx6STdhMGxaQkN3Y1AtUjhFcUhRcHpsZktFYTU4b0NSTHJ6X0ZlenFHYUNTTkFGX2VhdFhTMmk3Wm5fZE5qaWhJYmRWVlFxaHlaWno0a3VTdWU0U3lTeUZzMmMwMUdlVllfX2J4YzBKWlhiS040YUlRb1huR0xNZHpHRlFROUYzZmdpV0JDYXRSdlltLVBTbDNoc3VxakQ4akhiZkNYa0RNeUplWUZSZTBWU09GX3lIbzFSNE4tbnA0WDRDdENpZ0ZJdkN2RXdZVUswSk0?oc=5"
-        },
-        {
-          "source": "Money Times",
-          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPSmMteXVTMDJLTWRNMmFheHVrNEZ2SlBMekxmV3pIZ1U0NGNKbE9IRkFjdkppTmxTZVE4TzlJTVFJYUcwYjRFRjdTVlA2cGdhYWpBc2FxWFNrLVNIUHlYYjh1eDR5UjNXdVR1WXplZjhUX2E5SzFYTVZMNDZ5ZUJ1Skd2cmJ5cm1mWnUxLXYzS2M3c3lJWFhjOTUyU09KM2FCUWhz?oc=5"
-        }
-      ]
-    },
-    {
-      "competitor_group": "BTG Pactual",
-      "matched_alias": "BTG Pactual",
-      "title": "BTG Pactual atinge 6% da Méliuz (CASH3) - Visno Invest",
-      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB4Q0FBNXZDdE81VmZzUU1obEZVdVFzeG4yT3JvV2tUV2ZOaVJTWU1fcDVuckpIdHc4bXVRUzNaU3FiMFA1UnA4dEN5TnhYcDE1aF9hTU5VX3dNaUJOVVQ4TVhnVE10YlRKcHBTMjg0S2FWNmZ6cG1ZOHlLMENCQVE?oc=5",
-      "source": "Visno Invest",
-      "published_at": "2026-07-22T12:02:00+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTFB4Q0FBNXZDdE81VmZzUU1obEZVdVFzeG4yT3JvV2tUV2ZOaVJTWU1fcDVuckpIdHc4bXVRUzNaU3FiMFA1UnA4dEN5TnhYcDE1aF9hTU5VX3dNaUJOVVQ4TVhnVE10YlRKcHBTMjg0S2FWNmZ6cG1ZOHlLMENCQVE?oc=5\" target=\"_blank\">BTG Pactual atinge 6% da Méliuz (CASH3)</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Visno Invest</font>",
-      "source_indices": [
-        87
-      ],
-      "primary_index": 87,
-      "axes": [
-        "Tecnologia"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": false,
-      "trigger_reason": null,
-      "why_it_matters": "BTG atinge 6% da Méliuz, movimento de atacado sem impacto direto no cliente investidor pessoa física.",
-      "relevance": "média",
-      "also_reported_by": []
-    },
     {
       "competitor_group": "BTG Pactual",
       "matched_alias": "BTG Pactual",
