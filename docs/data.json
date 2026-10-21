@@ -1,161 +1,6 @@
 {
-  "generated_at": "2026-10-20T14:32:13.845397+00:00",
+  "generated_at": "2026-10-21T14:43:13.316243+00:00",
   "items": [
-    {
-      "competitor_group": "BTG Pactual",
-      "matched_alias": "BTG Pactual",
-      "title": "BTG lança ‘Brazil: Follow the Money’ e destaca oportunidades na Bolsa brasileira - Estadão",
-      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOZ1NIaDBhR2RBUWJlZ0VnTlFCbzN4VFYtcTY4N0R6X0lWekpybW1EbjNYd3lZQ1dJd0pLSjVGRXZFaktMQ2IzbGxTZFlIMGtxQjN4dEtKaF9YYWVyc1lJVzNUc1M5VVdjYUhndkg0N0F0WW8wbkFLNkJoOUlwTWlQS3hVdEM2TU1CdVhkTFctbTNWb2tOVjljR1RLdHVIS0UzXzN3TnFLcTNrVXlxd0RVQ1FFT2F6TndDYlJGNGdJZ3VveHprOERRU3pXcVd1UlkzbkHSAdcBQVVfeXFMTTRCXzhLZjI5QTJOcl94d1FZdGdZWjVyTDNCY3ZvTmF1czFyNFVER1FHNHpPeDBpaWlkQzQ2eUJOeFR4YTZXc1ZrT2Y2S0ItZ1d1Y19zdEdFNm9MWk1qamVrdmtWTzhTU0d4TWx3a204Mnp0TVBDU1BLY1BVOF9LUTBxZFpKcFhrdDNtRGFMNGlhVThJSVEzR2h0RDVEa3EySFRMeGJrbGtFV1dqZ3k4UlhWY3lwZG5hT2NyZzZ0WWdFVGZjUGwycUxPQ3ZjVFBGSUxfOHhZNkU?oc=5",
-      "source": "Estadão",
-      "published_at": "2026-07-22T15:24:59+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxOZ1NIaDBhR2RBUWJlZ0VnTlFCbzN4VFYtcTY4N0R6X0lWekpybW1EbjNYd3lZQ1dJd0pLSjVGRXZFaktMQ2IzbGxTZFlIMGtxQjN4dEtKaF9YYWVyc1lJVzNUc1M5VVdjYUhndkg0N0F0WW8wbkFLNkJoOUlwTWlQS3hVdEM2TU1CdVhkTFctbTNWb2tOVjljR1RLdHVIS0UzXzN3TnFLcTNrVXlxd0RVQ1FFT2F6TndDYlJGNGdJZ3VveHprOERRU3pXcVd1UlkzbkHSAdcBQVVfeXFMTTRCXzhLZjI5QTJOcl94d1FZdGdZWjVyTDNCY3ZvTmF1czFyNFVER1FHNHpPeDBpaWlkQzQ2eUJOeFR4YTZXc1ZrT2Y2S0ItZ1d1Y19zdEdFNm9MWk1qamVrdmtWTzhTU0d4TWx3a204Mnp0TVBDU1BLY1BVOF9LUTBxZFpKcFhrdDNtRGFMNGlhVThJSVEzR2h0RDVEa3EySFRMeGJrbGtFV1dqZ3k4UlhWY3lwZG5hT2NyZzZ0WWdFVGZjUGwycUxPQ3ZjVFBGSUxfOHhZNkU?oc=5\" target=\"_blank\">BTG lança ‘Brazil: Follow the Money’ e destaca oportunidades na Bolsa brasileira</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Estadão</font>",
-      "source_indices": [
-        68
-      ],
-      "primary_index": 68,
-      "axes": [
-        "Tecnologia"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": false,
-      "trigger_reason": null,
-      "why_it_matters": "BTG lança relatório 'Brazil: Follow the Money', mas é conteúdo de research, sem impacto direto em produto ou serviço.",
-      "relevance": "média",
-      "also_reported_by": []
-    },
-    {
-      "competitor_group": "XP/Clear/Rico",
-      "matched_alias": "XP Investimentos",
-      "title": "CVM aceita acordo e Benchimol e XP vão pagar R$ 1,485 milhão para encerrar processo - Valor Econômico",
-      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOQTBhU3RFeHRydk8xbUI0ZFJTLURhNkdybkxoN21pb1ZmdFl4MkZSZldRZHV1eEhVQmhXNHRDM3dneFlPUE1qblItblItQm1XaWVXSzdic2tkUDdKZWdPU2NCV1pYaXFGREZmaUZHcVdQWlVwam0wQVlCaE9lbTRzazJTelYzN2pmSW1lTmFUZmpPcmFLbGtRNk15R21xcHN0Zm9vc2N3a3ZyMmxrQnQwcUcxM1RoaDJqWHpoNFAtdi1xOFBfclN0WWtJUjMzanZMMk9V0gHiAUFVX3lxTE9KRG0tTnUzNjhoU3JvYlNfUnNoMll4eFBXajhaT0paTnNzQWVwQVZRY2RFVDctQTZPRVg5VEdMYnR6RUVDVlZ0T1hhd0owUDR1N1YxdFJ3RzVEZzVZSzJtZzhCeUFNUWlic05hNWR5RXRkRVB0WkRPZG0teWJycHpMV3FNZnRBX0x2a3JjNmgzRk5ManJEV05NbDhLS0ptRG9OTFZZREs5UWI3anRUYzhHYTJTNmg5cE5iOC1pN1RWRlZPQmdaWEVzUE9ZVXdvWldSWWpid3RZaUZGaDE4UFRQaWc?oc=5",
-      "source": "Valor Econômico",
-      "published_at": "2026-07-22T16:47:15+00:00",
-      "summary": "<ol><li><a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxOQTBhU3RFeHRydk8xbUI0ZFJTLURhNkdybkxoN21pb1ZmdFl4MkZSZldRZHV1eEhVQmhXNHRDM3dneFlPUE1qblItblItQm1XaWVXSzdic2tkUDdKZWdPU2NCV1pYaXFGREZmaUZHcVdQWlVwam0wQVlCaE9lbTRzazJTelYzN2pmSW1lTmFUZmpPcmFLbGtRNk15R21xcHN0Zm9vc2N3a3ZyMmxrQnQwcUcxM1RoaDJqWHpoNFAtdi1xOFBfclN0WWtJUjMzanZMMk9V0gHiAUFVX3lxTE9KRG0tTnUzNjhoU3JvYlNfUnNoMll4eFBXajhaT0paTnNzQWVwQVZRY2RFVDctQTZPRVg5VEdMYnR6RUVDVlZ0T1hhd0owUDR1N1YxdFJ3RzVEZzVZSzJtZzhCeUFNUWlic05hNWR5RXRkRVB0WkRPZG0teWJycHpMV3FNZnRBX0x2a3JjNmgzRk5ManJEV05NbDhLS0ptRG9OTFZZREs5UWI3anRUYzhHYTJTNmg5cE5iOC1pN1RWRlZPQmdaWEVzUE9ZVXdvWldSWWpid3RZaUZGaDE4UFRQaWc?oc=5\" target=\"_blank\">CVM aceita acordo e Benchimol e XP vão pagar R$ 1,485 milhão para encerrar processo</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Valor Econômico</font></li><li><a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxNUktOZ3Vfam9VSmZsR3J2VUcwWnhrMklOWGlHamIyRkZiYTFGTXVZdlE1UlhKeTdSUFRXNktDZmNUOEJEU0owdzg3c3c3SU81Z2Q0cEZrMjJvRXZGTzVtWXM0bzNtdzNMRU43MkxxbEVyMGtxcDloQUtibG10bVU3QjdGSi1EbkFIb2JpTTB2MmowMUVFa2xKaktHOGltZ0Jx?oc=5\" target=\"_blank\">CVM aceita acordo de R$ 1,4 milhão com XP e Benchimol</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Capital Aberto</font></li><li><a href=\"https://news.google.com/rss/articles/CBMi-wFBVV95cUxNUTdrRGd0NTBndkctaEVOeEVOSUtDMzBBMU52ZDRXQVFiUHpIYXJJVkVWSV9pdW5Gejd4cW5NWDZ2Wkc2OFprS05tWS1ua0M5WVFkZ29yUTR0U3hZb0tIMUo2S2JmeEdqOHJpS3gxSlJ5NGQ2b0k5WWFHU2h1anR3czBqNXZpcTVaQjVxRDdMRWgzUkh0QnFhUUx0TWhTQm42QTYyZGdtUFd0UmhvdmFrU2ppbnppTkNZQjRwMGdlWHkzaDhIM3cyb3N4SWJYeTJyeDI1U3ZiTktMeUJzTTV4N2FRano4T3pkWlpPX1Q0Rm1OLXhHcXZWelJGTdIBigJBVV95cUxQUzNkWXdfYjg4OEtIWC0wdW1mTWtMQU5qVFpRWEE4UFVROTN4ZEZNN0dsU3JIWWx6X25lVy1MNFdGUlBSLWlmS0tlX3J0a2F1ZlpJeE5xcDZSUmRHT05IUFhoaWU1bGZGWDVMRVdYeVljVEZrRTJBSTBQTE9UZE5GQ09rUGM0bU44NUNJRDMxMWc5UGhIem1reGszX0dNVUtZOE02NGNWdTNEb20tZ0dEUEJjWkNsTjZTcEJSLXJPOVdIeDA3U0hCVXhMY2x3LWk5Zm9WVHVLVWVsbnFSRi1JZkZvQjdSTTJ5UVkyTWpCM2xsRlNJZHpyRWQ3TnRKNWg5WjZSRFZkTGc1dw?oc=5\" target=\"_blank\">XP e Benchimol pagam R$ 1,5 milhão para encerrar processo na CVM e ressarcem investidora lesada por ex-assessor</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">O GLOBO</font></li></ol>",
-      "source_indices": [
-        0,
-        20,
-        21,
-        24,
-        27,
-        28
-      ],
-      "primary_index": 0,
-      "axes": [
-        "Risco/Regulação"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": true,
-      "trigger_reason": "REG",
-      "why_it_matters": "Acordo da XP com a CVM por R$ 1,5 milhão sinaliza risco regulatório no modelo de agentes autônomos, podendo gerar desconfiança entre investidores pessoa física.",
-      "relevance": "alta",
-      "also_reported_by": [
-        {
-          "source": "Poder360",
-          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9NR3kyZjU1cEpZTlJWNk9QaTQ2MUpGS3ZrcnhXNjhRWjB1bkVISzdPb1E3SURsc0U1MmN2bnB3VGZ4Tmg1WnFYUktySV9FMU0?oc=5"
-        },
-        {
-          "source": "Estadão",
-          "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNNGdidFdSek9NcFNlN3VzQVF3WlU3RlpxR180RUlHbC1pUXNlMV92TjdJNXVXM0NsZ3UxTm1MNDVrYmkxWUFmRS0zaS1lV2FaVDNMWWE1RENheUVXeUd1eXBQTjE5NW1qdVhTdmowSFdLSHJlZjJ5NXREMW1YQjF0bWZ1LUJwaDk5dGtfcVVfNldoNS1qYThaa0dkV0ZJV2hfZGNrZF9ZUWowUHVacmt5QlFGTktsN19JTndqbGNuWXgyYlhKNGFXcmFTY1VfbWZU0gHWAUFVX3lxTE1maUtkd1NxWWRnZGpTVXAtTllBOFlNYVIzVENzeHRvNy1leXQ3bHZ1S2llc0lkVG1mdlVJaEVBam9NZlZOWnp5N1ZYMG14WEtqa0R1R1VEUFY0SG9IUnVCRHBfZmM2SnIzekFiT3BRVFF1QWRZNV9YczZTLTFSVk5xRldCSVI5MDhZazVLNkdRWWFjb05odTJjRHAxcWRRTDNIUkxtUXlOalJ0c3UwSlR1ZXVuX3RfdTRKYXNCUWk1TWQ0X1EwZFNPSG1LVU5mbU90TnhDbmc?oc=5"
-        },
-        {
-          "source": "Revista Oeste",
-          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQcXk0ZVBYMVZIOTJQS2pmQ0VWdFdHazRmN3VBUzVpOEwzSVNjUnpvMUZxSG1IdzFyT2RNa1pjQmxXd09NYUtoTXFjcVJwVjVkR0l5enVyNEJhNHpQREJCZG81MEtTRGRGWERfb2lBa2dET2hhUmZ4bEFTWkJVelFIaHFEUUV6RjdYQkZSSVdnVmI3WkNsUEpRakNrbE5pYlNIWFV4N0hQOEhDbVhKMFR5YVNEdUg?oc=5"
-        },
-        {
-          "source": "Terra",
-          "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPRWxCQUlCZmVyeXNnVVBjVFRSVXJDTEhhZVRzZVdIaHpiODItLUp2Z1JkUmthZkZwVDVTdE95ZU1LWG5GbnktbVg3Q3dPYjBIcHZqdEpGbkRxV3N3TGp2eG9oZnRpOTZLV0QxNmR2R196Y0c0Wi1mbnNQRnl6ckZaLXNtNkNTUHJFd3IwaVU2cEdhNW5aRmRCakFvWHp1eGF0dlowVXAtYlU2VDVjYVI4YjhRSGpuTWpvN1RIZ3Raa3QtT0FJcWZTUEY1akJSbWpjNWFWOXRncURuNmNiRnRKNjFkY1hVbmZDclNuQXJGQTdRTE9MaVkwWko1aw?oc=5"
-        },
-        {
-          "source": "Brasil 247",
-          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQVkpJRHAtV3FkYnlSZUFyY1puWlFtdlNzVlhOUTRuVTNaZW9VWlpnUWlPM3ZZcXFDWksweHRXcnhKc3U3VG8wRUlPd2QySm1LUzA5V0VZb3pNQm5uNmswWGNhMlRndEVDYjRORUtLa2hpd3kyelNLYU41TDh4WWNvY1BreGVRbDU3M1AtaUcwRmk?oc=5"
-        }
-      ]
-    },
-    {
-      "competitor_group": "BTG Pactual",
-      "matched_alias": "BTG Pactual",
-      "title": "O movimento do BTG Pactual para avançar no mercado americano - BrazilCham",
-      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOYUZwVmRCY2toLTlUMExrOEpSakhkeTM0V2dqQU00OUJUYjFQTXlmV01jWU9tdWswcXdrY3IyMzdMaGxkLVBUODJpQjl5MlRyVlZhUHJsaFB4SnJMc1pQQnc2dDk1NTBWSjU1TjN6alVORVBIUEEzQUxId3NNcVB2UC1nQnVDM2c2b0RKcTBaSDZMZ192b2tITFBR?oc=5",
-      "source": "BrazilCham",
-      "published_at": "2026-07-22T20:18:18+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxOYUZwVmRCY2toLTlUMExrOEpSakhkeTM0V2dqQU00OUJUYjFQTXlmV01jWU9tdWswcXdrY3IyMzdMaGxkLVBUODJpQjl5MlRyVlZhUHJsaFB4SnJMc1pQQnc2dDk1NTBWSjU1TjN6alVORVBIUEEzQUxId3NNcVB2UC1nQnVDM2c2b0RKcTBaSDZMZ192b2tITFBR?oc=5\" target=\"_blank\">O movimento do BTG Pactual para avançar no mercado americano</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BrazilCham</font>",
-      "source_indices": [
-        69
-      ],
-      "primary_index": 69,
-      "axes": [
-        "Tecnologia"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": false,
-      "trigger_reason": null,
-      "why_it_matters": "Movimento do BTG no mercado americano, sem impacto direto no cliente investidor pessoa física no Brasil.",
-      "relevance": "média",
-      "also_reported_by": []
-    },
-    {
-      "competitor_group": "BTG Pactual",
-      "matched_alias": "BTG Pactual",
-      "title": "BTG Pactual passa a controlar 18,76% das ações da Light após aumento de capital - Gazeta do Povo",
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQQ2d4c29GWnIwYkZTMFB2cFpGbi1SSy1Edm01cXRfQUpjZUVWR3JBbU1aaC11cUVqVU42MERuT0RxMXFpX0JfeUtUaElVaUdRdkVjZzhGdlBCMngzQ2ZkcVJTSFJ1UnZWazU3aFJqZ3FBc0wzNkNOTy1pMXQtYzI4S2JhRXhiczNsdGRjTEx1ZjBDRzdZaDBCU25VYTV1TGRaeUhiTlF1aXVUMjNzc011TjBvNlpubUVsd2h3Yg?oc=5",
-      "source": "Gazeta do Povo",
-      "published_at": "2026-07-23T13:23:00+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxQQ2d4c29GWnIwYkZTMFB2cFpGbi1SSy1Edm01cXRfQUpjZUVWR3JBbU1aaC11cUVqVU42MERuT0RxMXFpX0JfeUtUaElVaUdRdkVjZzhGdlBCMngzQ2ZkcVJTSFJ1UnZWazU3aFJqZ3FBc0wzNkNOTy1pMXQtYzI4S2JhRXhiczNsdGRjTEx1ZjBDRzdZaDBCU25VYTV1TGRaeUhiTlF1aXVUMjNzc011TjBvNlpubUVsd2h3Yg?oc=5\" target=\"_blank\">BTG Pactual passa a controlar 18,76% das ações da Light após aumento de capital</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Gazeta do Povo</font>",
-      "source_indices": [
-        52,
-        53,
-        54,
-        62,
-        74,
-        77,
-        80,
-        83,
-        86
-      ],
-      "primary_index": 52,
-      "axes": [
-        "Risco/Regulação"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": false,
-      "trigger_reason": null,
-      "why_it_matters": "BTG aumenta participação na Light, mas é movimento de atacado, sem impacto direto no cliente investidor pessoa física.",
-      "relevance": "média",
-      "also_reported_by": [
-        {
-          "source": "MegaWhat",
-          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOS3R3YUV4bzQ1cXlLQUtETHNmd3B6aXA2ZndzS3JXWTgxNVowWU9UMTU1R3gyZEN6SXRqOHk3a3hLZEswMWVlZjFmcWhzVG1fY2J0YWZDT181RjkwZzFqX0c5WFcxdXNYWTFPS3NwdTJ3TVZTTFRGcURIZHJBMDNxNzBpeDk3RXVwdDJydDVVZ3VVN21ISEQxOU9uQ1hfTnZyNW1rNVNYYUFiRnExQm9JQQ?oc=5"
-        },
-        {
-          "source": "Poder360",
-          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1SOXZYY0xrbF9IWG9zQjZJQlM1bmZ0T1VLMGxTbTJMN09lYmk2WS1aQWpHb05vMXNPTlB6VHV5amZEUndLNTJuaGlVR0ppd2s?oc=5"
-        },
-        {
-          "source": "Agência iNFRA",
-          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOeWJ4U200UnZHY2Y4ak9Fdkd3b1JDS0d1NXlleG9xMU1LVUlwQ2daWWIwZlNONDZCZWRyRW1QMHRCY1I4cWRsWG1ZU3BlcGNxZVIzZkhQemV0OXJEQ2c0SGZGcnp2M1djMVNQZ1psVmJxbHZQaDRQUEZybzNnbHBWYUVjZEl3Y0U?oc=5"
-        },
-        {
-          "source": "TradingView",
-          "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE8tNWFtN21laWJBWG1sbXBHbVBTcVRPVjdlN3YyOVJNejJuam4xRC1XOWxOazRUMHJab0JiSTFIWGJObkZHYjBoQm9LYmM3ZmpuV0RjR1U1RGV3bVBZa1R0UVpySnZKeEExSUpLRTdzOF8yaHNVMU5F?oc=5"
-        },
-        {
-          "source": "Cenário Energia",
-          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxONjhXOVk2YnBtTFBMQS1QYnl3MVNYbDNIbktYREJCTlJQUFNQV3d5NHBIX2s0UlVpcnZKekxTcDgxLTV3d004Um1xZXM2VERrZTBmRmcyRGsxMVFaNHZwT1BVYmNhRzIyWWZ6akNhTkNzUV9zYmNTVkVvTXFVd1BsWGpUdGhEQUNzZXFCTXpRa19UTnpqQmxkdFJFbTRIZFM5YzUwclM4c2RORC1ZR0RqV2lfaXBWLWNqeHlHTQ?oc=5"
-        },
-        {
-          "source": "Tribuna do Paraná",
-          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNYVFxWWthNWxsNnZxMG5GWkdpYkNwVTMwSXdRYUpQcU1OSlBGT0NhV0tDVGREZENGRWxmYTVjZ3VQeEFOanRial9VbUdvemo5YlFsS3RBLTgtYTg2cjVUYndyN213LVpPa28tdkxtazNQeGR5eURybUE1bF9aNVlJakJ5TS1RSGR5a1B0NGJ1ZlZDLWpEdDdsQjY4dHFxWVBBejNtLW82RjdDSWJw0gGyAUFVX3lxTE5uZVVNMUZOeUVJcGJLOXYxMGM4OElvSElOYTdGZXVPVFU1N0hEMzY2SkVvQmpManJmUzdWQjBLMTRfMEcwR25tMzhJdGFnczhuOVBkOEtYZ0pES09oS3MxaU4tbnhaemlrVnJkeXJQYk13ZVhJb3JLeWpIcWpyMVI3YzEyRmNjb0pxQ2FCRzZ1Z3REZ3k5bDVvNmJiTVg2S0k2NDFPLUVBd2ZQcDd0ZGJ5cmc?oc=5"
-        },
-        {
-          "source": "Visno Invest",
-          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBPbllNWHVmd2dWeDZ3SU9kdVNSdVo3emIwbkdEcVd3SEJJR1dPYWlZU1ZuYmNfbnJxakNNdE5tWlpTYjdUalpneG5CRE1DdzVTRFJNU29kVkE2b0lDVjY1d1ZlMTh6VXZLejh5d1NGZXdNQkVWajdaQjNHeldXTkU?oc=5"
-        },
-        {
-          "source": "redeutv.com.br",
-          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNd2dkemR3M201ai1iajg1N19IYm5qU0R5SFFvSFRCMkxKOWdUZDZ3VzlqVWxyWTRBVkFZdTBsRDJMWXFFNE4xd2loWVhjaTlUTVQxYVJxZVVCM0ZxQ09HN1JYTmwzNzZvcjQ3cUFxeHFSc2w2TUlmUnhRNFg3Sm44OXZtX0hpRnJ3TXVtN3pvZmN0WlVNbmN6V2xVSUVEb1d1R3c?oc=5"
-        }
-      ]
-    },
     {
       "competitor_group": "XP/Clear/Rico",
       "matched_alias": "XP Investimentos",
@@ -5319,6 +5164,85 @@
         {
           "source": "Money Report",
           "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQVzQ3alY1bHRvU2lvN210ZXBZYkpwOEI0Uk5sUTJ3V1N3RDZiXzUyQUh1Rm9uYWlWakV2blZDTHE5MWpiOWdQRTJmX2laQ2VnV1V2Snp0OGZybGtpOFBzTTlTNXZfcTFrQzBfcG1SVDMtbVNBYVJXS2hZX2k4Qm9laEVIUHIxY1JVbkR4LWtUQi1SU094RENCSmxRV0tyYTdZUnZMbXpBaklTYmhsZ0Q1MF9mQ1JNQQ?oc=5"
+        }
+      ]
+    },
+    {
+      "competitor_group": "XP/Clear/Rico",
+      "matched_alias": "XP Investimentos",
+      "title": "TJ-SP condena XP a ressarcir investidor que aplicou em COE ligado à Ambipar; cabe recurso - Valor Econômico",
+      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQemhqV0V0QlYySnptUWF0MDlNSkEzeDZSNGlPQUl4UThnYnplTDVvUnZEODdvQU5VNV9UUThFSmJ5Q0twd3JlNE5RSFNVS1hNUTVjVFVwVnFNeUU3RGdibTk4UnBkNkdvR3NfQ3JzYkhOaEhXQlRwOGlyd0tWa05XWnJNcmMtRU1sOWE5WG1IeHlLeTRMenpjRjFlaFdzZFAtQjRoYTc4RHljN3FRR1Vhd1hCLXZqc2tMZVoxMWlrbmVUSUtYRFpRNXNscTQ0ZWRIeTJBd1VjaC1pWXZaenJj0gHuAUFVX3lxTFB6T0VjU1pIRGhndDhhamM3V2tfU1JLcVJzdDN1Mkx4azlhUXRZeEwwa2p4V3VIQ2ZUM29fMjFiRk5ESDJRbFRUcUhFNUFpeGp6TEVzSURzNHRZR0IzaW1IYlFfX1BUUzJ1OGlidmVLanVkSHFWNXpQRVo3TzB2RGRubjA0T0ZIbFFSZFVLT2EwSVl2V1JmVXRYbFZVWGFzc2MtVS1MZjJQMndPZ3AyVHo2X1lMZHFIZGJhamlqTk1xbVFPaEFOZ0pWajlQRXN0REpCOU9IRExsU2F5OERadkQwaFRHVkNaN0tUU19SUVE?oc=5",
+      "source": "Valor Econômico",
+      "published_at": "2026-10-20T23:58:55+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi3wFBVV95cUxQemhqV0V0QlYySnptUWF0MDlNSkEzeDZSNGlPQUl4UThnYnplTDVvUnZEODdvQU5VNV9UUThFSmJ5Q0twd3JlNE5RSFNVS1hNUTVjVFVwVnFNeUU3RGdibTk4UnBkNkdvR3NfQ3JzYkhOaEhXQlRwOGlyd0tWa05XWnJNcmMtRU1sOWE5WG1IeHlLeTRMenpjRjFlaFdzZFAtQjRoYTc4RHljN3FRR1Vhd1hCLXZqc2tMZVoxMWlrbmVUSUtYRFpRNXNscTQ0ZWRIeTJBd1VjaC1pWXZaenJj0gHuAUFVX3lxTFB6T0VjU1pIRGhndDhhamM3V2tfU1JLcVJzdDN1Mkx4azlhUXRZeEwwa2p4V3VIQ2ZUM29fMjFiRk5ESDJRbFRUcUhFNUFpeGp6TEVzSURzNHRZR0IzaW1IYlFfX1BUUzJ1OGlidmVLanVkSHFWNXpQRVo3TzB2RGRubjA0T0ZIbFFSZFVLT2EwSVl2V1JmVXRYbFZVWGFzc2MtVS1MZjJQMndPZ3AyVHo2X1lMZHFIZGJhamlqTk1xbVFPaEFOZ0pWajlQRXN0REpCOU9IRExsU2F5OERadkQwaFRHVkNaN0tUU19SUVE?oc=5\" target=\"_blank\">TJ-SP condena XP a ressarcir investidor que aplicou em COE ligado à Ambipar; cabe recurso</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Valor Econômico</font>",
+      "source_indices": [
+        3,
+        8
+      ],
+      "primary_index": 3,
+      "axes": [
+        "Risco/Regulação"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "Condenação judicial da XP em caso de COE ligado à Ambipar cria precedente de risco reputacional e jurídico na distribuição de produtos estruturados, tema sensível para concorrentes que vendem COEs ao varejo.",
+      "relevance": "média",
+      "also_reported_by": [
+        {
+          "source": "UOL Economia",
+          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPWHFQRm40ZjR6ZlE3X2JFRHh2bFZyakY4VGdJNzVfc01hWXh6T2JIc3FCaVd6SkVCa0I4VjBNYWt0dnRYWUtybURXUW1KeWVqSF9NdndERHh5QU1qMzRjdTc4TWFvX3g4UHY4Uk5XLVg5Y3VMcnNfNWJ1cERjR2JxdE5CUWpYLTE0VWdGYS00dVZvWk1WZUN2ZFBibWhHOFItOXFRWEdCdVBRcDFKY1ZXWEo4blY?oc=5"
+        }
+      ]
+    },
+    {
+      "competitor_group": "Nubank/NuInvest",
+      "matched_alias": "Nubank",
+      "title": "Nubank lança IA que recomenda investimentos - StartSe",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNdkhoS0dTWWNkZHBUOEI0SXlWemRGcjZiNHJXeFVMXzduOFpIck96OG4tMGpSWTlxR1BfNHl4ZGZ0ZkxBUVFVYmtPcGppSWVNRG0yM2dOWHhtTGhkSVVYMExkd2hrWFAyZ2VBZWU1MUtyUks1cUlTNmRvY2VDV2REcg?oc=5",
+      "source": "StartSe",
+      "published_at": "2026-10-21T12:02:28+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxNdkhoS0dTWWNkZHBUOEI0SXlWemRGcjZiNHJXeFVMXzduOFpIck96OG4tMGpSWTlxR1BfNHl4ZGZ0ZkxBUVFVYmtPcGppSWVNRG0yM2dOWHhtTGhkSVVYMExkd2hrWFAyZ2VBZWU1MUtyUks1cUlTNmRvY2VDV2REcg?oc=5\" target=\"_blank\">Nubank lança IA que recomenda investimentos</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">StartSe</font>",
+      "source_indices": [
+        75
+      ],
+      "primary_index": 75,
+      "axes": [
+        "Produtos Novos",
+        "Tecnologia"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "LANC",
+      "why_it_matters": "Nubank lança IA de recomendação de investimentos dentro do app, ampliando a oferta de renda variável/produtos para o investidor pessoa física e pressionando corretoras tradicionais em CX e aquisição.",
+      "relevance": "alta",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "BTG Pactual oferece cartões de crédito Gold e Platinum a partir de R$ 3 mil investidos - Money Times",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPb0d6TmFTUmJmaS12a1RzRzduQ2hkNk03N0twdTczbkp5czJGOGVUNjNwYjRKbk1iTVNLM1d1dEtQalFoUFdEN01KRnhkS3BicWZOWURQS0xQVU0wRGp4LWlVcV9TdWs0c2FTaFZBUlEycDN0ZGtlREkyT1FvbnlUa2k5cXE4dXlwcXZZZ3dzWVVoTWN2VDdKZ2xLVTE0SXN5dzRIRjZKRHEteG82VUJyeG9JUE12ekhzV0RDUW5n?oc=5",
+      "source": "Money Times",
+      "published_at": "2026-10-20T17:59:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxPb0d6TmFTUmJmaS12a1RzRzduQ2hkNk03N0twdTczbkp5czJGOGVUNjNwYjRKbk1iTVNLM1d1dEtQalFoUFdEN01KRnhkS3BicWZOWURQS0xQVU0wRGp4LWlVcV9TdWs0c2FTaFZBUlEycDN0ZGtlREkyT1FvbnlUa2k5cXE4dXlwcXZZZ3dzWVVoTWN2VDdKZ2xLVTE0SXN5dzRIRjZKRHEteG82VUJyeG9JUE12ekhzV0RDUW5n?oc=5\" target=\"_blank\">BTG Pactual oferece cartões de crédito Gold e Platinum a partir de R$ 3 mil investidos</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Money Times</font>",
+      "source_indices": [
+        43,
+        46
+      ],
+      "primary_index": 43,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "BTG vincula cartões Gold e Platinum a um piso de investimento, usando o cartão como isca para captar e reter patrimônio no varejo — movimento de cross-sell competitivo, mas não é lançamento de produto de investimento.",
+      "relevance": "média",
+      "also_reported_by": [
+        {
+          "source": "Money Report",
+          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNa1Jsa05zanRpZ1BXcU1lakVSZURJVlRqWjNVUkM4b01NUHNXb3h2dFZ5MFIybkItTHp6QVprUHFiaGd3M056eXJWdXBNU0l5OWhabEZtcUVPQW14NmlXVHFYZjZVN3ZsUnUtcGJnTHl2SVJkLXU2UmswVnk1dGJLY3BaNWhLY3M0dS16bVBMM3ZwMWp3aGE0QURSMUo4c1B2Q05TdEFEREtQQWdXU2dNU1hpbXZyUQ?oc=5"
         }
       ]
     }
