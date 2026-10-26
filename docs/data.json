@@ -1,56 +1,6 @@
 {
-  "generated_at": "2026-10-25T13:59:20.547778+00:00",
+  "generated_at": "2026-10-26T16:20:18.105164+00:00",
   "items": [
-    {
-      "competitor_group": "XP/Clear/Rico",
-      "matched_alias": "XP Investimentos",
-      "title": "XP pediu que gestoras não falassem sobre ETFs durante a Expert XP - Estadão",
-      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPOXVRUVp1NmtwWkRGZWd5OHU5UmJDaWxpYlEyS3pjOHF2Y1c5b3Z1a1dVaFFhakFudzA0Qm0zRHdLa3BEQWx0TmNnS0RRQW9aS0M4TVBUaUFHTWh0WlZaVWZSYWZjNnltRHp0YVJpUUJ0U1FKbDI0aE1KTEFrNVFLdzlDT3dFbTRoOWtsM2hRTHNXUGFTMVZtVUtDaW9mUm1wZ2tZTkI1QUxSc3I0Z1ZtWF85OEpOQnZ6X0ZNdE1pZ1k4WUF10gHKAUFVX3lxTE00UG5QSlphZUtXaWdGLURsU3IyRnNXMEV2VVpUYnpFMjlOQXpUTmJpMU5MTkE3eFBaWm5kaDZia2RBQ1VXQ1NXTXNoNDdKMjlVWEcxbWhFanRvM2Q3UFJBeEo1c3VRWF9MU3h3TDBZMEt2eGxZLS1BalI4d2l0a2V1c1JKd0JsemwxVUxwSGt5dHUwakRLb2x2eHZ5em9DVXBXYk95dVhsY0pSOWIyR1NQRG5vclVzTnZBRVluVmt4U3c2SUd5bzNjeVE?oc=5",
-      "source": "Estadão",
-      "published_at": "2026-07-27T17:03:11+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxPOXVRUVp1NmtwWkRGZWd5OHU5UmJDaWxpYlEyS3pjOHF2Y1c5b3Z1a1dVaFFhakFudzA0Qm0zRHdLa3BEQWx0TmNnS0RRQW9aS0M4TVBUaUFHTWh0WlZaVWZSYWZjNnltRHp0YVJpUUJ0U1FKbDI0aE1KTEFrNVFLdzlDT3dFbTRoOWtsM2hRTHNXUGFTMVZtVUtDaW9mUm1wZ2tZTkI1QUxSc3I0Z1ZtWF85OEpOQnZ6X0ZNdE1pZ1k4WUF10gHKAUFVX3lxTE00UG5QSlphZUtXaWdGLURsU3IyRnNXMEV2VVpUYnpFMjlOQXpUTmJpMU5MTkE3eFBaWm5kaDZia2RBQ1VXQ1NXTXNoNDdKMjlVWEcxbWhFanRvM2Q3UFJBeEo1c3VRWF9MU3h3TDBZMEt2eGxZLS1BalI4d2l0a2V1c1JKd0JsemwxVUxwSGt5dHUwakRLb2x2eHZ5em9DVXBXYk95dVhsY0pSOWIyR1NQRG5vclVzTnZBRVluVmt4U3c2SUd5bzNjeVE?oc=5\" target=\"_blank\">XP pediu que gestoras não falassem sobre ETFs durante a Expert XP</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Estadão</font>",
-      "source_indices": [
-        5
-      ],
-      "primary_index": 5,
-      "axes": [
-        "Risco/Regulação"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": false,
-      "trigger_reason": null,
-      "why_it_matters": "XP pedindo que gestoras não falem sobre ETFs durante seu evento pode indicar receio de canibalização de produtos próprios ou tentativa de controlar narrativa, o que pode gerar desgaste com parceiros.",
-      "relevance": "média",
-      "also_reported_by": []
-    },
-    {
-      "competitor_group": "Nubank/NuInvest",
-      "matched_alias": "Nubank",
-      "title": "A nova aposta do Nubank (ROXO34) para crescer na média renda: vem aí o Croma, acima do roxinho e com cara de Ultravioleta - Seu Dinheiro",
-      "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNa2xtUFFWZUxsZ2t1bVE4dHJNUXB5VHpTb2w1UTNjLVhVdEp2WkNVVGdReVdRNGk2YVQwWXNOWmxaVXU4MEMwNzNOSW82cm91ZjMteTNQa1A4V05hcVlvYmt3cWNJZWh2YlQzSDJXR0FlM1d3b2VJYVY2S29vMVd2QTI4UlFGNVRyZ0NXYy0yeEhadjUybEN0aC0xb2F6bXF4NldxWVNfOVRxQ3dod3JaNEhXYVZ4R2ZubV9JUGc1ZjJpOEp6WGhMS1Flajl6N3AtYU1tQUtmUGppWXZkazJvcDl3Q0l4Q1p0YllaaTEtRVlIdGJnaFVHUQ?oc=5",
-      "source": "Seu Dinheiro",
-      "published_at": "2026-07-28T16:06:02+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi-AFBVV95cUxNa2xtUFFWZUxsZ2t1bVE4dHJNUXB5VHpTb2w1UTNjLVhVdEp2WkNVVGdReVdRNGk2YVQwWXNOWmxaVXU4MEMwNzNOSW82cm91ZjMteTNQa1A4V05hcVlvYmt3cWNJZWh2YlQzSDJXR0FlM1d3b2VJYVY2S29vMVd2QTI4UlFGNVRyZ0NXYy0yeEhadjUybEN0aC0xb2F6bXF4NldxWVNfOVRxQ3dod3JaNEhXYVZ4R2ZubV9JUGc1ZjJpOEp6WGhMS1Flajl6N3AtYU1tQUtmUGppWXZkazJvcDl3Q0l4Q1p0YllaaTEtRVlIdGJnaFVHUQ?oc=5\" target=\"_blank\">A nova aposta do Nubank (ROXO34) para crescer na média renda: vem aí o Croma, acima do roxinho e com cara de Ultravioleta</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seu Dinheiro</font>",
-      "source_indices": [
-        79,
-        80
-      ],
-      "primary_index": 80,
-      "axes": [
-        "Produtos Novos"
-      ],
-      "confirmation": "especulativo",
-      "daily_trigger": false,
-      "trigger_reason": null,
-      "why_it_matters": "O Nubank planeja lançar o 'Croma', um novo segmento para média renda, o que pode expandir sua base de clientes investidores e pressionar concorrentes no varejo.",
-      "relevance": "média",
-      "also_reported_by": [
-        {
-          "source": "InvestNews",
-          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNXzFsMDBnWjhXU0lLak02ZGxKWVlwYncxM1E5VnUwLXZ5RENNZ1FVNXJaVUhycHRia0Z4SlJTNDBxQUpUbWRpdVRrOVp4VkQxMlN0X0dEYVVvMVNjZExFTnkyZlZPODdiVTJTX2ZJSFZlb1JRQWxHT0JJeFhtM2hvaWpIclltQdIBhgFBVV95cUxNXzFsMDBnWjhXU0lLak02ZGxKWVlwYncxM1E5VnUwLXZ5RENNZ1FVNXJaVUhycHRia0Z4SlJTNDBxQUpUbWRpdVRrOVp4VkQxMlN0X0dEYVVvMVNjZExFTnkyZlZPODdiVTJTX2ZJSFZlb1JRQWxHT0JJeFhtM2hvaWpIclltQQ?oc=5"
-        }
-      ]
-    },
     {
       "competitor_group": "BTG Pactual",
       "matched_alias": "BTG Pactual",
@@ -5236,9 +5186,168 @@
           "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOS21IcXd3YmpqVnp4aE1zd1pUZVEzdnJUNUhqc3NFNzR1ckRTNU53VWlzWE1wN0pVR0pFNXNCSGsyT2p3elFqN0xkR3l3U214SDRvN0xOTzZqSU5jYnVkM2g1cU5qV0JlU3dzbnY2Tmt2MnFfbENMUjZxLS1VcmRLb0YxalFJV1lsaTRjZkE5QlZ3RXE5TUhoQU5kalNuUU9sR0EyblBoWTVLdjRWZ2dn?oc=5"
         }
       ]
+    },
+    {
+      "competitor_group": "XP/Clear/Rico",
+      "matched_alias": "XP Investimentos",
+      "title": "Aplicativos de bancos e corretoras têm instabilidade em meio à turbulência nos mercados - G1",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNS3F3eFhTN2RKVVZ5SUdHS2FMVXBNLXVERHh6S3Nkd3dheU4tNjN5cWdXWW4yejhkNGRaZk5vVmpvUTc2MnBBdlpYSzljdEF4NmNPOEhQMHptaTFBUHJHSXpRdExTT3EzU21iWVhoQ1NsWTc1eWNPM0Y5QXpCM2xvS0N5TXFHZ9IBlAFBVV95cUxOY2ctVkx6SUIyX2tiZkZUWG1XWXlmQnFrX1BaOVNweEx5MnU4bEUxMF9BN2YwVHFadjZrSlhKX0owTXBNR0VSYndCZlJfTkxZWEEyelFUSnNYUFNmZnZieUc5UUFvR2dkTDV3QkNxVnltcGhRWVlXSDZIR0VLdEhaT2Q4ZDZabzEtbDYtUU10aGpMZWFh?oc=5",
+      "source": "G1",
+      "published_at": "2026-10-26T14:06:04+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxNS3F3eFhTN2RKVVZ5SUdHS2FMVXBNLXVERHh6S3Nkd3dheU4tNjN5cWdXWW4yejhkNGRaZk5vVmpvUTc2MnBBdlpYSzljdEF4NmNPOEhQMHptaTFBUHJHSXpRdExTT3EzU21iWVhoQ1NsWTc1eWNPM0Y5QXpCM2xvS0N5TXFHZ9IBlAFBVV95cUxOY2ctVkx6SUIyX2tiZkZUWG1XWXlmQnFrX1BaOVNweEx5MnU4bEUxMF9BN2YwVHFadjZrSlhKX0owTXBNR0VSYndCZlJfTkxZWEEyelFUSnNYUFNmZnZieUc5UUFvR2dkTDV3QkNxVnltcGhRWVlXSDZIR0VLdEhaT2Q4ZDZabzEtbDYtUU10aGpMZWFh?oc=5\" target=\"_blank\">Aplicativos de bancos e corretoras têm instabilidade em meio à turbulência nos mercados</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">G1</font>",
+      "source_indices": [
+        7,
+        19,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72
+      ],
+      "primary_index": 7,
+      "axes": [
+        "Tecnologia",
+        "RV/Trading"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "INC",
+      "why_it_matters": "Instabilidade generalizada em apps de bancos e corretoras, incluindo XP, Rico e BTG, em dia de forte turbulência pós-eleição — afeta execução de ordens e confiança do investidor PF justamente no pregão mais crítico.",
+      "relevance": "alta",
+      "also_reported_by": [
+        {
+          "source": "avozdocampo",
+          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPdURUQnZFRWI1RnRBVXh5eFFCa2JNYTFoV0lnS1FhNDc0d0ZKSDgzMTE4eFFaM1FPcFI5eDZJSHVJVkphS0s2OGVSd2FhbmlwRkdTdm1WTUk5ZFdrQnplMTVRT0NQbWdTbGwzOE9xWlAySWxpcEhZVlljSTh0MHVycmxRbDE4U0V6UDVCa0gtR1ZVUkw4YmpEN2w0dzYxbVhncVE?oc=5"
+        },
+        {
+          "source": "G1",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNS3F3eFhTN2RKVVZ5SUdHS2FMVXBNLXVERHh6S3Nkd3dheU4tNjN5cWdXWW4yejhkNGRaZk5vVmpvUTc2MnBBdlpYSzljdEF4NmNPOEhQMHptaTFBUHJHSXpRdExTT3EzU21iWVhoQ1NsWTc1eWNPM0Y5QXpCM2xvS0N5TXFHZ9IBlAFBVV95cUxOY2ctVkx6SUIyX2tiZkZUWG1XWXlmQnFrX1BaOVNweEx5MnU4bEUxMF9BN2YwVHFadjZrSlhKX0owTXBNR0VSYndCZlJfTkxZWEEyelFUSnNYUFNmZnZieUc5UUFvR2dkTDV3QkNxVnltcGhRWVlXSDZIR0VLdEhaT2Q4ZDZabzEtbDYtUU10aGpMZWFh?oc=5"
+        },
+        {
+          "source": "Olhar Digital",
+          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQX0YwNDAwVGRfX3lHa2FZTTBpdEZyMEZDSFdwZW8teUw0NjJSVVNJR0x6MXA3UFV5NXdGQy1iX1BQNElZdHZZRWd3TDFCZFRTMGN6bHh0UkVBYmJKcEpHanJYLXZnVTRBMWxMWkJjMEh3V2tLNWJGTkpZcHhXZm44c3NOT3dYZVZrQ21Dbm9oRm5xbTJkUGxqcFNSc3dBSDFSZWhGb0FPblhUSWc0MThv?oc=5"
+        },
+        {
+          "source": "avozdocampo",
+          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPdURUQnZFRWI1RnRBVXh5eFFCa2JNYTFoV0lnS1FhNDc0d0ZKSDgzMTE4eFFaM1FPcFI5eDZJSHVJVkphS0s2OGVSd2FhbmlwRkdTdm1WTUk5ZFdrQnplMTVRT0NQbWdTbGwzOE9xWlAySWxpcEhZVlljSTh0MHVycmxRbDE4U0V6UDVCa0gtR1ZVUkw4YmpEN2w0dzYxbVhncVE?oc=5"
+        },
+        {
+          "source": "TudoCelular.com",
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOMWxrci1VYlFUeFZkUFpBeEdNTXRHdFZUWUhUSnlyc3ZNcWJlQ1V4cXBzZkRleHdFU1JUa2dNa0g3VXVVUVB5Q0RTeDRxZXZOQ1NHcnJrZWlTY0NncHE4VEZRM3lhSnZ3bjNxYWt4aUNUQkFKa2lVT2o2NXRjOVhpS2pmZks4bWR3WVgxRVk3OVJRa05OajJWWTZyV2M5TEpa?oc=5"
+        },
+        {
+          "source": "Francês News",
+          "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNZHduWWFsNktKYldlNjc1WFdZV1cwcGpNUVgtTGFLaWJ5WGg5eGlpMDhscGtBc0VQMFVPNmdtR21QbjNhaDFwVU5WNWNuSDBOLTdsckNQVjFiTmFIYllXSHJONVF1RUY5YkxWTU0tOTBWRi1qSEhnaXF3eTRhVkp3ak02cjdWc29QQmhHazUwVUNjMjhVY2ZpVlVMQ1FBT0Q2cGpmcEJkZFB5QzFpMERoWmYwQUxFY2tuelNpd3FfaldFTTNWaHc2djhqNExWZDk2R21Law?oc=5"
+        },
+        {
+          "source": "Portal de Camaquã",
+          "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPY21PUzRkZndzeHNFc1U4Q2Y2MVpMM0RVbkk1Q3JEWWlKTWdZQWpBT3hrdDdxZ1FyM2poOWpycjF2VWNyRkEwTVAxc1NBSlVrMXh3RUNabkRBQVpLZDVwcnRkLWJ3c3I1WTd2MWN3eHFMQ3o3NWJHbTI4UWNOZTZ4aDI0SWZvTEtxM0VfeDhRTXpna2V4cDRJX2xpb1k3YVNIeHFrdEh1SmJral9zUWpMaXNtUU0zS3pxekQ5TFRYSXpCd29kYXZXZUFMYlpsRndheS1kUlJSUld1RndCbDFzUEhod3NJMG9RS2dnTUdlcU9uQlFi?oc=5"
+        },
+        {
+          "source": "Portal de Camaquã",
+          "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNUEp2M0F1WW1kanNJeDVON1hISnNBb1RiRVR5eTFKZ0dkNXRaUmlVT3dKc18xNTA5ZERrRDVHOFFjWnFlSlp2WmR6WlRvMDdVVmREakV1YXJwTS1yUzZ3eDdUWE5sWXFNOG85ZFdUSDVkaVI4bEk0YzFEa2cxT3ZzZjZhTFlUSG9GQUdZc1prakZVYWtaX3U2ck05eVU4eDYtTVVPVXRNdHM3dndodlFMM1ZyVEF4QnVkUzRTS2dzMmRKSjh5TEM4UDdmUWZGTnpfNThBLUZDS0lndHpZUEY2NUJRbkY?oc=5"
+        },
+        {
+          "source": "G1",
+          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOY2ctVkx6SUIyX2tiZkZUWG1XWXlmQnFrX1BaOVNweEx5MnU4bEUxMF9BN2YwVHFadjZrSlhKX0owTXBNR0VSYndCZlJfTkxZWEEyelFUSnNYUFNmZnZieUc5UUFvR2dkTDV3QkNxVnltcGhRWVlXSDZIR0VLdEhaT2Q4ZDZabzEtbDYtUU10aGpMZWFh0gGUAUFVX3lxTE5jZy1WTHpJQjJfa2JmRlRYbVdZeWZCcWtfUFo5U3B4THkydThsRTEwX0E3ZjBUcVp2NmtKWEpfSjBNcE1HRVJid0JmUl9OTFlYQTJ6UVRKc1hQU2ZmdmJ5RzlRQW9HZ2RMNXdCQ3FWeW1waFFZWVdINkhHRUt0SFpPZDhkNlpvMS1sNi1RTXRoakxlYWE?oc=5"
+        }
+      ]
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "Cézar Feitoza: BTG comprou R$ 13 bi de carteiras do BRB após crise do Master - UOL Notícias",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNSGlJakRhWEU1SkI1RG5VQkNHelNZazhqOVJBblphYVAxYWdlTllad09zRzVWRmhIZVBmc0F4V1phZGJENGdNN0ViN3V5cWFmNU5GWXN4U2xzTGxJcXRQUEtBbkRVVDVkR25DR29ldTV4UjViYmd5bTBzZ2xmZElhR1lrbDlsWThUQ0NWWjVOWXVoMlVtUmpZS3pyaUFOTUZuMldCY3lsX2E2R3dOLWkta25OazQ3MmpxQmVudTh5X2FaNFU?oc=5",
+      "source": "UOL Notícias",
+      "published_at": "2026-10-23T21:23:03+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxNSGlJakRhWEU1SkI1RG5VQkNHelNZazhqOVJBblphYVAxYWdlTllad09zRzVWRmhIZVBmc0F4V1phZGJENGdNN0ViN3V5cWFmNU5GWXN4U2xzTGxJcXRQUEtBbkRVVDVkR25DR29ldTV4UjViYmd5bTBzZ2xmZElhR1lrbDlsWThUQ0NWWjVOWXVoMlVtUmpZS3pyaUFOTUZuMldCY3lsX2E2R3dOLWkta25OazQ3MmpxQmVudTh5X2FaNFU?oc=5\" target=\"_blank\">Cézar Feitoza: BTG comprou R$ 13 bi de carteiras do BRB após crise do Master</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">UOL Notícias</font>",
+      "source_indices": [
+        29
+      ],
+      "primary_index": 29,
+      "axes": [
+        "RV/Trading"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "Compra de carteiras de crédito do BRB é operação de atacado/crédito corporativo, sem tocar o cliente investidor de varejo.",
+      "relevance": "média",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "Itaú/Íon",
+      "matched_alias": "Itaú investimentos",
+      "title": "Itaú anuncia aquisição da NeoSpace por R$ 2,925 bilhões e amplia investimento em IA fundacional - Valor Econômico",
+      "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOSDR3bzQyVVhRWjFnUzlMX1BrSFpLNW5WRHBTcURvVVYtR0E3QUxudS1TQmVpM2MtV005OHZnTDNMTVNDT25NRHpsS04zYUZrQ0J5dmY0TUF4QXJqNldqTkhBUy04TXJZaGhhM2Vyd3ZkcFpIN0haUE9PNG5hRjBXNUFMWjJuWVJaQWtvSjFFVktWOGxHUEhqQWttV3lscmJtWktmWXBGTFR0RnNpLXQyWEVhdnZ0cUFnTGV4czFmYmRoajJmWGJqaHh4Q0JjM2tpT2lobXJsUV9RcVBhVGFDMtIB7wFBVV95cUxOMktrS0tvVzFTb0h4cXJPUEVxVzZqcXNnaXdNWTdvZktMWHRGWXpPWkxBc3l3WXdzTDl4N1pIZmdVTHp6VDFJS2NjTmlkY3pjcDd0OFRmcHZCLUZVV2MzTU15ZE1uV1F2ekZ4c25pVDNqMndJNWtLTjkzTTlBQUg2eFBENDVDVHYxWTBLZko1c1lFUDZ4cDZnSkJqWURISlZ0bWFzQ0JScWxGRkYxODFOdF91ajdNZFJtT3hWLWhRQmFvQVNuM1ZUVXVoX3FWa1RGMTNGbDJITGVfZGpqaFY0MjhoekN2d2JRZXFzMElxdw?oc=5",
+      "source": "Valor Econômico",
+      "published_at": "2026-10-26T11:04:22+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi4AFBVV95cUxOSDR3bzQyVVhRWjFnUzlMX1BrSFpLNW5WRHBTcURvVVYtR0E3QUxudS1TQmVpM2MtV005OHZnTDNMTVNDT25NRHpsS04zYUZrQ0J5dmY0TUF4QXJqNldqTkhBUy04TXJZaGhhM2Vyd3ZkcFpIN0haUE9PNG5hRjBXNUFMWjJuWVJaQWtvSjFFVktWOGxHUEhqQWttV3lscmJtWktmWXBGTFR0RnNpLXQyWEVhdnZ0cUFnTGV4czFmYmRoajJmWGJqaHh4Q0JjM2tpT2lobXJsUV9RcVBhVGFDMtIB7wFBVV95cUxOMktrS0tvVzFTb0h4cXJPUEVxVzZqcXNnaXdNWTdvZktMWHRGWXpPWkxBc3l3WXdzTDl4N1pIZmdVTHp6VDFJS2NjTmlkY3pjcDd0OFRmcHZCLUZVV2MzTU15ZE1uV1F2ekZ4c25pVDNqMndJNWtLTjkzTTlBQUg2eFBENDVDVHYxWTBLZko1c1lFUDZ4cDZnSkJqWURISlZ0bWFzQ0JScWxGRkYxODFOdF91ajdNZFJtT3hWLWhRQmFvQVNuM1ZUVXVoX3FWa1RGMTNGbDJITGVfZGpqaFY0MjhoekN2d2JRZXFzMElxdw?oc=5\" target=\"_blank\">Itaú anuncia aquisição da NeoSpace por R$ 2,925 bilhões e amplia investimento em IA fundacional</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Valor Econômico</font>",
+      "source_indices": [
+        58,
+        59
+      ],
+      "primary_index": 58,
+      "axes": [
+        "Tecnologia"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "MA",
+      "why_it_matters": "Aquisição de startup de IA fundacional sinaliza investimento pesado do Itaú em tecnologia, com potencial de transbordar para personalização e experiência do investidor no Íon.",
+      "relevance": "alta",
+      "also_reported_by": [
+        {
+          "source": "InvestNews",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQdEtFMXIzS0R3X2c5TGx6b2JIS3FmS1lVXzB5ejR1YjE1Wlp6dWFqa2l0VmxWQlJCX1NGYmkzUjBsUTlRam1aTW9iVUJaeG10VVBDcEJhbXp2Vnc5blhsYjYtVUpqb3UwV0tlRzdoNjk2VWY0aG1GRXVZWnlQaGtETTItYjR5NnEzTGU5cV9hQm_SAZYBQVVfeXFMTzF4MHdqVm9OYVJfbDhBdUUyNzFzSVZrTDVyM25UX0RVbHlsSFJFUmp4T3RwcFVPd1lpa2VjYlJ1cl9nSjBhdWh4R0pXOWZKUkVyNzI3b1ZQV2JUYVZTWG9hTnlENzhCeUx5S29kT0pLVS1RUWNtc1Nlc1VBbTgzRE5YVU5EY25TSXZFME9jYXFCUWZBemVR?oc=5"
+        }
+      ]
     }
   ],
   "results": [
+    {
+      "competitor_group": "Bradesco/Ágora",
+      "title": "Bradesco reporta lucro de R$ 7,1 bi no 3º trimestre, mas inadimplência e macro travam crescimento - BlockTrends",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNb2R0WjR1cGZOZWVtRjRHcjd3OWdETTVTVTQ0U3BqSlpoN3l0N0dUa0Q1TDNxNjg5SE5GTjNBaFE5dmVxNTRKN3hENTIzMmtrZ0hkckpVa2FaZHFqVmlFcGE1TEE2Nzk4U2hMbHlnLW9saENzUW5IeDF0eFVsc09DYkNUMXI?oc=5",
+      "source": "BlockTrends",
+      "published_at": "2026-10-24T12:32:26+00:00",
+      "channel": "results",
+      "also_reported_by": [],
+      "periodo": "3T26",
+      "resumo_estrategico": "O material trata do resultado consolidado do Bradesco (lucro de R$ 7,1 bi), com foco em inadimplência e cenário macro travando o crescimento. Não há qualquer menção à Ágora, à plataforma de investimentos, captação ou share de varejo de investimentos.",
+      "onde_colocam_energia": [],
+      "movimentos_concretos": [],
+      "onde_deixam_a_desejar": [],
+      "oportunidade_para_nos": "nenhuma clara",
+      "copiar_ou_observar": "ignorar",
+      "leitura_para_o_santander": "Sem dados do recorte Ágora/investimentos, não é possível extrair implicação competitiva para a corretora Santander; monitorar a próxima divulgação com detalhamento do segmento.",
+      "eixos": [
+        "Risco/Regulação"
+      ]
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "title": "SpaceX salta 10% após balanço, mas duas linhas do resultado servem para manter investidores 'com os pés no chão', diz BTG - Seu Dinheiro",
+      "link": "https://news.google.com/rss/articles/CBMilAJBVV95cUxPT0QzeGkydTRwNXRtY0pwM21QeVAxV3E2dzZMQmJPcmdCRzg1X2VPS05DVUZENVpMdzc0NHkyYWlBLUZhMzJESndGZ3N5b1ZjeEtJcjVYbzZEV1hONGdod2xteUlZSllUaDUtQm9hZzdlbG5EWkxqWXJWOE5jVUV2UHgxSjR0UVpkcjJyWlBiQTVFTE55eHBhRUFycG5WZEhYMDNNcGtFMUVab0E5RnRab2NhRmlFYjczbnpTbVdWWnBfLTRHTzVjMFlUR3U0UGtyUkR5ZkhjVkNwb0dTYjhrV1dRSlZGZVVCMnlQQXNFNXNxOHVzbXlFb3ZtdW1YTEtzdnJ3WjJnNk56M1ZFdzNXRzU2ZG4?oc=5",
+      "source": "Seu Dinheiro",
+      "published_at": "2026-10-21T14:17:44+00:00",
+      "channel": "results",
+      "also_reported_by": [],
+      "periodo": "não informado",
+      "resumo_estrategico": "O item é apenas uma análise de research do BTG sobre a SpaceX, sem qualquer relação com a divulgação de resultados do próprio BTG ou com o negócio de investimentos/corretora de varejo. Não há informação sobre captação, plataforma, produtos ou share de varejo.",
+      "onde_colocam_energia": [],
+      "movimentos_concretos": [],
+      "onde_deixam_a_desejar": [],
+      "oportunidade_para_nos": "nenhuma clara",
+      "copiar_ou_observar": "ignorar",
+      "leitura_para_o_santander": "Conteúdo de research de terceiros sobre empresa externa; nada acionável para a corretora Santander no recorte de investimentos.",
+      "eixos": [
+        "RV/Trading"
+      ]
+    },
     {
       "competitor_group": "XP/Clear/Rico",
       "title": "Wells Fargo (WFC): Crescimento do balanço não compensa fraqueza da receita – 3T26 - XP Investimentos",
@@ -5338,11 +5447,22 @@
   ],
   "status_by_competitor": {
     "XP/Clear/Rico": {
-      "status": "estavel",
-      "last_incident_at": "2026-10-15T03:26:29+00:00",
-      "last_incident_title": "XP Investimentos FORA DO AR HOJE: serviços apresentam instabilidade nesta quinta, dia 15 de outubro de 2026 - Portal de Camaquã",
-      "incident_count_window": 4,
+      "status": "instavel_recente",
+      "last_incident_at": "2026-10-26T14:06:04+00:00",
+      "last_incident_title": "Aplicativos de bancos e corretoras têm instabilidade em meio à turbulência nos mercados - G1",
+      "incident_count_window": 5,
       "incidents": [
+        {
+          "published_at": "2026-10-26T14:06:04+00:00",
+          "title": "Aplicativos de bancos e corretoras têm instabilidade em meio à turbulência nos mercados - G1",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNS3F3eFhTN2RKVVZ5SUdHS2FMVXBNLXVERHh6S3Nkd3dheU4tNjN5cWdXWW4yejhkNGRaZk5vVmpvUTc2MnBBdlpYSzljdEF4NmNPOEhQMHptaTFBUHJHSXpRdExTT3EzU21iWVhoQ1NsWTc1eWNPM0Y5QXpCM2xvS0N5TXFHZ9IBlAFBVV95cUxOY2ctVkx6SUIyX2tiZkZUWG1XWXlmQnFrX1BaOVNweEx5MnU4bEUxMF9BN2YwVHFadjZrSlhKX0owTXBNR0VSYndCZlJfTkxZWEEyelFUSnNYUFNmZnZieUc5UUFvR2dkTDV3QkNxVnltcGhRWVlXSDZIR0VLdEhaT2Q4ZDZabzEtbDYtUU10aGpMZWFh?oc=5",
+          "source": "G1",
+          "why_it_matters": "Instabilidade generalizada em apps de bancos e corretoras, incluindo XP, Rico e BTG, em dia de forte turbulência pós-eleição — afeta execução de ordens e confiança do investidor PF justamente no pregão mais crítico.",
+          "axes": [
+            "Tecnologia",
+            "RV/Trading"
+          ]
+        },
         {
           "published_at": "2026-10-15T03:26:29+00:00",
           "title": "XP Investimentos FORA DO AR HOJE: serviços apresentam instabilidade nesta quinta, dia 15 de outubro de 2026 - Portal de Camaquã",
