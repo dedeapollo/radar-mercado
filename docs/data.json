@@ -1,28 +1,6 @@
 {
-  "generated_at": "2026-10-26T16:20:18.105164+00:00",
+  "generated_at": "2026-10-27T15:34:47.616104+00:00",
   "items": [
-    {
-      "competitor_group": "BTG Pactual",
-      "matched_alias": "BTG Pactual",
-      "title": "FI-Infra do BTG migra para a B3 e amplia oferta de fundos atrelados ao CDI - moneytimes.com.br",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOT3RfLVEzbU9udExHaEZmbFlka1RnMHIwZnMwQXY3Ty12TkpYZk03TGFyb0VuSm1ybUNIMUdWSThDOEFsMzl1NllybjVvTEk2c3BwSU9jX0hHbXF5RG04WTJZME92VW9FNW1TcEl6QWl1WEptMEVDOUNKTHFWck9NeGdsOXA3c2FJUEk1cDh6LUpJcUJiaWplZ1dvZkN0dEU5TzFDc3JRSWdQSmR0VWNz?oc=5",
-      "source": "moneytimes.com.br",
-      "published_at": "2026-07-29T13:36:00+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOT3RfLVEzbU9udExHaEZmbFlka1RnMHIwZnMwQXY3Ty12TkpYZk03TGFyb0VuSm1ybUNIMUdWSThDOEFsMzl1NllybjVvTEk2c3BwSU9jX0hHbXF5RG04WTJZME92VW9FNW1TcEl6QWl1WEptMEVDOUNKTHFWck9NeGdsOXA3c2FJUEk1cDh6LUpJcUJiaWplZ1dvZkN0dEU5TzFDc3JRSWdQSmR0VWNz?oc=5\" target=\"_blank\">FI-Infra do BTG migra para a B3 e amplia oferta de fundos atrelados ao CDI</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">moneytimes.com.br</font>",
-      "source_indices": [
-        44
-      ],
-      "primary_index": 44,
-      "axes": [
-        "Produtos Novos"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": true,
-      "trigger_reason": "LANC",
-      "why_it_matters": "A migração do FI-Infra do BTG para a B3 amplia a oferta de fundos atrelados ao CDI, atraindo investidores de varejo que buscam produtos de renda fixa com liquidez e tributação favorável.",
-      "relevance": "alta",
-      "also_reported_by": []
-    },
     {
       "competitor_group": "Nubank/NuInvest",
       "matched_alias": "Nubank",
@@ -5305,6 +5283,28 @@
           "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQdEtFMXIzS0R3X2c5TGx6b2JIS3FmS1lVXzB5ejR1YjE1Wlp6dWFqa2l0VmxWQlJCX1NGYmkzUjBsUTlRam1aTW9iVUJaeG10VVBDcEJhbXp2Vnc5blhsYjYtVUpqb3UwV0tlRzdoNjk2VWY0aG1GRXVZWnlQaGtETTItYjR5NnEzTGU5cV9hQm_SAZYBQVVfeXFMTzF4MHdqVm9OYVJfbDhBdUUyNzFzSVZrTDVyM25UX0RVbHlsSFJFUmp4T3RwcFVPd1lpa2VjYlJ1cl9nSjBhdWh4R0pXOWZKUkVyNzI3b1ZQV2JUYVZTWG9hTnlENzhCeUx5S29kT0pLVS1RUWNtc1Nlc1VBbTgzRE5YVU5EY25TSXZFME9jYXFCUWZBemVR?oc=5"
         }
       ]
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "SIR Investimentos amplia atuação no Nordeste com parceria com o BTG Pactual - Paraíba Business",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPZ3k2dEJIUXZVSVczSGUwNV9DTHhFbmFFaGtLM1VPamFFOEhPVDdhS3o2RVBVUVJNYWp0SFRCSkR3SjlxNWUyaUY0SGV4ZnZ5b0tfaEFXY3N0NXlPV1ltSDMzX0NjY01pNjNOT3JQa1BXYUFaeXExazhLY21PNkR3eXdyTks3MWVNWVRHekhaRm5SZEgweEttNnJFVWRsRXBXMmdneFBfMEFoVW8?oc=5",
+      "source": "Paraíba Business",
+      "published_at": "2026-10-27T10:00:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxPZ3k2dEJIUXZVSVczSGUwNV9DTHhFbmFFaGtLM1VPamFFOEhPVDdhS3o2RVBVUVJNYWp0SFRCSkR3SjlxNWUyaUY0SGV4ZnZ5b0tfaEFXY3N0NXlPV1ltSDMzX0NjY01pNjNOT3JQa1BXYUFaeXExazhLY21PNkR3eXdyTks3MWVNWVRHekhaRm5SZEgweEttNnJFVWRsRXBXMmdneFBfMEFoVW8?oc=5\" target=\"_blank\">SIR Investimentos amplia atuação no Nordeste com parceria com o BTG Pactual</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Paraíba Business</font>",
+      "source_indices": [
+        39
+      ],
+      "primary_index": 39,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "Parceria regional de escritório de investimentos com o BTG amplia a rede de distribuição de varejo do concorrente no Nordeste, pressionando a captação de corretoras locais.",
+      "relevance": "média",
+      "also_reported_by": []
     }
   ],
   "results": [
