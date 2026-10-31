@@ -1,30 +1,6 @@
 {
-  "generated_at": "2026-10-30T16:17:45.615889+00:00",
+  "generated_at": "2026-10-31T15:31:10.476385+00:00",
   "items": [
-    {
-      "competitor_group": "XP/Clear/Rico",
-      "matched_alias": "Clear (novo app)",
-      "title": "Clear (novo app): pico de reclamações de mau funcionamento na Play Store (5 avaliações negativas citando indisponibilidade em 48h)",
-      "link": "https://play.google.com/store/apps/details?id=br.com.xpinc.clear.app.android&hl=pt_BR&gl=BR",
-      "source": "Google Play (reviews)",
-      "published_at": "2026-08-02T11:08:52.886174+00:00",
-      "summary": "16 avaliações de 1-2 estrelas na janela, 5 delas citando problemas de funcionamento. Amostras: \"não abre!!!!!\" | \"Aplicativo não funciona após atualização!!! E agora não estou mais conseguindo investir e ficando n…\" | \"erro atualização\"",
-      "channel": "incident",
-      "source_indices": [
-        51
-      ],
-      "primary_index": 51,
-      "axes": [
-        "Tecnologia",
-        "RV/Trading"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": true,
-      "trigger_reason": "INC",
-      "why_it_matters": "Pico de reclamações sobre mau funcionamento do app Clear, afetando negociação de clientes.",
-      "relevance": "alta",
-      "also_reported_by": []
-    },
     {
       "competitor_group": "BTG Pactual",
       "matched_alias": "BTG Pactual",
@@ -5321,6 +5297,57 @@
           "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOUEo5eXlTWnUyekpESnF2ckJtYlFGQjZJTUoyZVdfdllnR3FtS1d1Qm5vVFE0cmNPQkttN3M1RlBLMThDZUJSQ0oyOEUwb2NKVC1iUXFHWVhoTC1kVWNfN21kb25RMDRHd1lyblRnd2pPUHR5YWNKRTZWX1ZxdjJ3RFlISzJxdG8tc3V1Z0dlMVdBQ0RGc2szZk0yNTlRSFJlMy1Jd1d2aTdCWkJ1S3lXelVYYXEyNURpSkJUaEd5ekEyTnF5ZVE?oc=5"
         }
       ]
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "BTG Pactual lança conta para holdings investirem no exterior - EuQueroInvestir",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOWk83UVlCc3J6MTROY0M3THk5S1BuemZ1V3lOaWkyQS1LVmNTOFdSWEFMNHQ4SE05Zjl0Z0pUVmNrSnNIOEh4R1RDdGQySXU0cVlXWDBNcFUtNmNWRXBNN2FSN2x3MGpDcnpnVXNxaVpEa1pSQlFROTg4aHJIOENWdWxPZXd5eVE?oc=5",
+      "source": "EuQueroInvestir",
+      "published_at": "2026-10-30T22:00:57+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxOWk83UVlCc3J6MTROY0M3THk5S1BuemZ1V3lOaWkyQS1LVmNTOFdSWEFMNHQ4SE05Zjl0Z0pUVmNrSnNIOEh4R1RDdGQySXU0cVlXWDBNcFUtNmNWRXBNN2FSN2x3MGpDcnpnVXNxaVpEa1pSQlFROTg4aHJIOENWdWxPZXd5eVE?oc=5\" target=\"_blank\">BTG Pactual lança conta para holdings investirem no exterior</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">EuQueroInvestir</font>",
+      "source_indices": [
+        28,
+        33
+      ],
+      "primary_index": 33,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "LANC",
+      "why_it_matters": "O BTG amplia sua conta internacional com estrutura para holdings investirem no exterior, um produto que atrai o cliente de alta renda e pressiona a oferta de investimento offshore das demais corretoras.",
+      "relevance": "alta",
+      "also_reported_by": [
+        {
+          "source": "O GLOBO",
+          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNRGtHWmpfa1VFZ3h0XzZFRlNqUWc1bjBtU09JRVNOSU1iZkV3RWZ4SXd1OUFlaWtmWlZPQmlCa3FWUW5VUlJGZUpXRWw2b19aYWpiN0dSTU84aTlwbkNpWWk1elo4cVVfT1RqTTR6cG4wai1Nb0xaRzZ3Szc2Zjg4NlIxM3U1VEEtYVlmSmtsQzlQWmdNV3ZucGN5VVZ2bmJXbXpFRXJQVnR6bmN0NXNCX2h2bFBRbWN5VWVqVE9XSFpSOGx4RTJMS3EwMNIB2gFBVV95cUxNUmQtVEozUDdLWi13U3dGR2k1Z01Iam1SR1QzX2VWZkxOV0VQSWFRZE9vYVlhanFIZXJBUFVzSDNBRHBOOUJYeTYxand4WE0zRkdxZ2xwazl0MGRlZmJmRmRtczhfSVNvNFJlcG1fdm55VnRZRURCb3JVaEJpSkNuaUVfT1VvRG16UFBQNU5GQnk3SllyZ3djcGItdGxrNWlpN0ZLLTh3RXBWQjEwYkRpeGQ2Q2ZDNFNfYnJDbmZZMlh4SEE2TG1lM0IyTFZnVUR2YnZuVjNiSkFZQQ?oc=5"
+        }
+      ]
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "BTG protocola pedido ao BC para operar cripto de maneira regulada - Exame",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQbENOTlhEaWdmb05aLU5mOHJUMzhNRjR3SGpMTHhxZFRKWlVRV25hQXlmdnZOcm1HNGtxU25KMEZQb0Rfa3laRG52MEowWk9NMVV5OTRLSWxCSkVmdmctU1JyRFJhdmVmSElFcmtzejIwVlNOS2FOdUFwRG5jaFZWcnJ0NkU4V2NocUFKbUxQSm9Gd0MyU0dmal9xNFc2VjA5VXc?oc=5",
+      "source": "Exame",
+      "published_at": "2026-10-30T20:40:04+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxQbENOTlhEaWdmb05aLU5mOHJUMzhNRjR3SGpMTHhxZFRKWlVRV25hQXlmdnZOcm1HNGtxU25KMEZQb0Rfa3laRG52MEowWk9NMVV5OTRLSWxCSkVmdmctU1JyRFJhdmVmSElFcmtzejIwVlNOS2FOdUFwRG5jaFZWcnJ0NkU4V2NocUFKbUxQSm9Gd0MyU0dmal9xNFc2VjA5VXc?oc=5\" target=\"_blank\">BTG protocola pedido ao BC para operar cripto de maneira regulada</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Exame</font>",
+      "source_indices": [
+        46
+      ],
+      "primary_index": 46,
+      "axes": [
+        "Produtos Novos",
+        "Risco/Regulação"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "LANC",
+      "why_it_matters": "O pedido do BTG ao BC para operar cripto de forma regulada sinaliza entrada estruturada em um segmento de varejo em expansão, ampliando a concorrência por clientes interessados em ativos digitais.",
+      "relevance": "alta",
+      "also_reported_by": []
     }
   ],
   "results": [
