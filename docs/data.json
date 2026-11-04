@@ -1,117 +1,6 @@
 {
-  "generated_at": "2026-11-03T17:23:45.111524+00:00",
+  "generated_at": "2026-11-04T17:37:28.587496+00:00",
   "items": [
-    {
-      "competitor_group": "BTG Pactual",
-      "matched_alias": "BTG Pactual",
-      "title": "Painel S.A.: BTG Pactual e Jockey Club podem firmar parceria para injetar R$ 250 milhões no hipódromo - Folha de S.Paulo",
-      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPVFdpcmhkSWoyN2FkVVQzQzl0SnJTQ2tQd2JrU2daZnhybTBITVpXbFQwWkdLOU9TMjYzVkkwaEpRNklDaHJPSndmekdoRWpreGRKZUhBUnJvaEFvOVg4WVRMSG4yaDliOTJ2WUlzTzFqXzE2djBtdXV2OXhkZ1hJcm1XNFNJZzJUa1pEdWFQWTk1ZUwyNmppRkNDalE2OWNNTklZOXQxRUNrbkktanZBbTI4OVM5R0NLS0pNQmNnOFJ0YnBMVDhPNW5kT1dvQV9Lc1BjVHpPSW1FRmY3UXZ6UVB3?oc=5",
-      "source": "Folha de S.Paulo",
-      "published_at": "2026-08-06T00:00:00+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi4gFBVV95cUxPVFdpcmhkSWoyN2FkVVQzQzl0SnJTQ2tQd2JrU2daZnhybTBITVpXbFQwWkdLOU9TMjYzVkkwaEpRNklDaHJPSndmekdoRWpreGRKZUhBUnJvaEFvOVg4WVRMSG4yaDliOTJ2WUlzTzFqXzE2djBtdXV2OXhkZ1hJcm1XNFNJZzJUa1pEdWFQWTk1ZUwyNmppRkNDalE2OWNNTklZOXQxRUNrbkktanZBbTI4OVM5R0NLS0pNQmNnOFJ0YnBMVDhPNW5kT1dvQV9Lc1BjVHpPSW1FRmY3UXZ6UVB3?oc=5\" target=\"_blank\">Painel S.A.: BTG Pactual e Jockey Club podem firmar parceria para injetar R$ 250 milhões no hipódromo</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Folha de S.Paulo</font>",
-      "source_indices": [
-        60
-      ],
-      "primary_index": 60,
-      "axes": [
-        "Produtos Novos"
-      ],
-      "confirmation": "especulativo",
-      "daily_trigger": false,
-      "trigger_reason": null,
-      "why_it_matters": "Uma possível parceria do BTG com o Jockey Club para injetar R$ 250 milhões pode abrir novas frentes de negócio, mas ainda é especulativa e não afeta diretamente o cliente investidor.",
-      "relevance": "média",
-      "also_reported_by": []
-    },
-    {
-      "competitor_group": "XP/Clear/Rico",
-      "matched_alias": "XP Investimentos",
-      "title": "XP e Samsung firmam parceria para pré-venda de novos Galaxy a partir de 6 de agosto - InfoMoney",
-      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQeHZEOVlVa05nOThkRXQ2TnV1aDhwT2RUNGdudmdGa3RJbDhkYjBjd2xSdmRBcUJOUTRrNG0yZTNmRFNIWlkzSExPZVkyLTRIVlRJVVd5MUx5QmtPVUdqU2tBZmpzb25JZm5Yd2RmOXUxa0s5TnZiRmFwU3EwaGRyMlJBX1h2V3lnbFpBendsQ3pmMUIwZzB0aVNKZXp6cE1uT0ptYmJsOEdGSy1GQVpMZnhuakJsVVhIbEJvc0RRQ0hnblprZ2cxQWFzdjZRWERTU3B5eDQ1RGJWaDZU0gHiAUFVX3lxTE41WGc0QkhpMEJEYjkxWVpIaWRWd2tvc3A0MWhoMmxDOGQ5dFhGLUd2Sm55cTlDZEk1QWhLREh3YnQ2LTZwVnVITE1Bb1kzMzcwVUI4ZUNsS05SOU9sVm1nVHpkUG4yeWM0dEZldHBBTWdqSVBhY1Q0SmlKN0piY0d5LUdXX243VVVRZVM3dzV2OE0xVmgtcHhudmZHVDlrTTlWb0tXeFpxaTZyWGgzdVFiVml2cVRQblJ3NlBucFBCWVI5RFVVMURwcTVMYXVjSnFnVG9zX0w5WnI2UXltcTFtMUE?oc=5",
-      "source": "InfoMoney",
-      "published_at": "2026-08-06T14:11:00+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi3AFBVV95cUxQeHZEOVlVa05nOThkRXQ2TnV1aDhwT2RUNGdudmdGa3RJbDhkYjBjd2xSdmRBcUJOUTRrNG0yZTNmRFNIWlkzSExPZVkyLTRIVlRJVVd5MUx5QmtPVUdqU2tBZmpzb25JZm5Yd2RmOXUxa0s5TnZiRmFwU3EwaGRyMlJBX1h2V3lnbFpBendsQ3pmMUIwZzB0aVNKZXp6cE1uT0ptYmJsOEdGSy1GQVpMZnhuakJsVVhIbEJvc0RRQ0hnblprZ2cxQWFzdjZRWERTU3B5eDQ1RGJWaDZU0gHiAUFVX3lxTE41WGc0QkhpMEJEYjkxWVpIaWRWd2tvc3A0MWhoMmxDOGQ5dFhGLUd2Sm55cTlDZEk1QWhLREh3YnQ2LTZwVnVITE1Bb1kzMzcwVUI4ZUNsS05SOU9sVm1nVHpkUG4yeWM0dEZldHBBTWdqSVBhY1Q0SmlKN0piY0d5LUdXX243VVVRZVM3dzV2OE0xVmgtcHhudmZHVDlrTTlWb0tXeFpxaTZyWGgzdVFiVml2cVRQblJ3NlBucFBCWVI5RFVVMURwcTVMYXVjSnFnVG9zX0w5WnI2UXltcTFtMUE?oc=5\" target=\"_blank\">XP e Samsung firmam parceria para pré-venda de novos Galaxy a partir de 6 de agosto</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">InfoMoney</font>",
-      "source_indices": [
-        53
-      ],
-      "primary_index": 53,
-      "axes": [
-        "Produtos Novos"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": true,
-      "trigger_reason": "LANC",
-      "why_it_matters": "A parceria da XP com a Samsung para pré-venda de smartphones pode atrair novos clientes e aumentar o engajamento, pressionando as demais corretoras a buscarem parcerias semelhantes.",
-      "relevance": "alta",
-      "also_reported_by": []
-    },
-    {
-      "competitor_group": "BTG Pactual",
-      "matched_alias": "BTG Pactual",
-      "title": "Com meta de CDI + 1,25% e isento de IR: BTG lança FI-Infra na B3 - ISTOÉ DINHEIRO",
-      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQS0dwN3EtZTNNYnFSQmNLSEJsaF9oZlduQ240SExBSUgzRzBRam42VW03YUVnTDRJanEyM1hRWlhEb3ZzOUZLZ2NUWnpkSU5ETGx1SzQ0dTZRTnVVY2VSeGdMR0t5bTNsc3FialkyUGVVenFkNHhZQTdnVzJaLUhxRnRMNDd4TjZHZjE3VF9wTFlpZw?oc=5",
-      "source": "ISTOÉ DINHEIRO",
-      "published_at": "2026-08-06T13:21:18+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxQS0dwN3EtZTNNYnFSQmNLSEJsaF9oZlduQ240SExBSUgzRzBRam42VW03YUVnTDRJanEyM1hRWlhEb3ZzOUZLZ2NUWnpkSU5ETGx1SzQ0dTZRTnVVY2VSeGdMR0t5bTNsc3FialkyUGVVenFkNHhZQTdnVzJaLUhxRnRMNDd4TjZHZjE3VF9wTFlpZw?oc=5\" target=\"_blank\">Com meta de CDI + 1,25% e isento de IR: BTG lança FI-Infra na B3</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ISTOÉ DINHEIRO</font>",
-      "source_indices": [
-        65
-      ],
-      "primary_index": 65,
-      "axes": [
-        "Produtos Novos"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": true,
-      "trigger_reason": "LANC",
-      "why_it_matters": "O lançamento de um FI-Infra pelo BTG com meta de CDI+1,25% e isenção de IR amplia a oferta de produtos de renda fixa para o varejo, aumentando a competição por clientes investidores.",
-      "relevance": "alta",
-      "also_reported_by": []
-    },
-    {
-      "competitor_group": "BTG Pactual",
-      "matched_alias": "BTG Pactual",
-      "title": "BTG Pactual Empresas lança Simulador de Crédito Empresarial; conheça a ferramenta gratuita - Money Times",
-      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNMG41ZXNrX0Rfc3JMVGNlMVJ0NzA4blFNLXYzV0lfTjdmc1p1YkR6MVJkZ1BtMUdjcVJDV1o4TVFFcjFkSEJ4enZiOWY5OGswWjdGRGtpMTlBNW1XTG9WMlRTV3hmcVh0X2dKZDNSVUd2aGlxdFpZdDJPVU5SMFg5MXlRWkxvS0ZYTVp0R01rODRSUzlyNU1Oc082SXNPdi1LVDVBUEx4Wk9qWk1KYnczNHlHMXNMSW1KLVVveTFWb21lMnZNbHdIWmxn?oc=5",
-      "source": "Money Times",
-      "published_at": "2026-08-06T14:00:00+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxNMG41ZXNrX0Rfc3JMVGNlMVJ0NzA4blFNLXYzV0lfTjdmc1p1YkR6MVJkZ1BtMUdjcVJDV1o4TVFFcjFkSEJ4enZiOWY5OGswWjdGRGtpMTlBNW1XTG9WMlRTV3hmcVh0X2dKZDNSVUd2aGlxdFpZdDJPVU5SMFg5MXlRWkxvS0ZYTVp0R01rODRSUzlyNU1Oc082SXNPdi1LVDVBUEx4Wk9qWk1KYnczNHlHMXNMSW1KLVVveTFWb21lMnZNbHdIWmxn?oc=5\" target=\"_blank\">BTG Pactual Empresas lança Simulador de Crédito Empresarial; conheça a ferramenta gratuita</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Money Times</font>",
-      "source_indices": [
-        69
-      ],
-      "primary_index": 69,
-      "axes": [
-        "Produtos Novos"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": true,
-      "trigger_reason": "LANC",
-      "why_it_matters": "O lançamento do Simulador de Crédito Empresarial pelo BTG Pactual Empresas pode atrair PMEs para sua plataforma, aumentando a base de clientes e a receita potencial.",
-      "relevance": "alta",
-      "also_reported_by": []
-    },
-    {
-      "competitor_group": "Itaú/Íon",
-      "matched_alias": "Itaú investimentos",
-      "title": "K3 traz líderes do Itaú e Safra e agrega R$ 3 bi em custódia; “movimento disruptivo” - InfoMoney",
-      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNbHdYVmNvUlBwUzFVOS00Rm5KLXZuTnNxY0hpeHpMeS1iVWVnLVh3Q1VoSHA1Q2pRNFBPLU5vc0N1VkNTNHZNZlRFZkdqMWhPb0ZEUm9nTjFlRlVXX0pyR2x0eU5sVl83OUVYcTVuckk2c1EwQXBwdG9ySVhwSUVnYnQtOHVlMjhjMEtUZ1VHRGZXcGxJTHdMbWNuaWVKd2JEeUpCRDdIZTZPVnFrOFlHeVRReDVPNVZmR1HSAb8BQVVfeXFMTXF1OXEyOTJWVktqMF9nWTVfY2Raeko1MlpkblVJWGxpdEItcnlsSDE1LUY1NWNCc2hHLVg4VVpkRnl1MnFMTk1YTDQxanI2OVBhRUdMT2hJdU9tbUZuQnNQMmpBTkxlc0w2WjNqNVc0MVZDbGNLOXlKX3dGT21ZOXpHRGJhNVlZSGExVVltbGlickdaeTZ6alJGVWdSc1ZDLTRuVTJBMjFoWnppX0xxVGsyajhnaVdQUEFjM0NrbnM?oc=5",
-      "source": "InfoMoney",
-      "published_at": "2026-08-06T15:00:00+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxNbHdYVmNvUlBwUzFVOS00Rm5KLXZuTnNxY0hpeHpMeS1iVWVnLVh3Q1VoSHA1Q2pRNFBPLU5vc0N1VkNTNHZNZlRFZkdqMWhPb0ZEUm9nTjFlRlVXX0pyR2x0eU5sVl83OUVYcTVuckk2c1EwQXBwdG9ySVhwSUVnYnQtOHVlMjhjMEtUZ1VHRGZXcGxJTHdMbWNuaWVKd2JEeUpCRDdIZTZPVnFrOFlHeVRReDVPNVZmR1HSAb8BQVVfeXFMTXF1OXEyOTJWVktqMF9nWTVfY2Raeko1MlpkblVJWGxpdEItcnlsSDE1LUY1NWNCc2hHLVg4VVpkRnl1MnFMTk1YTDQxanI2OVBhRUdMT2hJdU9tbUZuQnNQMmpBTkxlc0w2WjNqNVc0MVZDbGNLOXlKX3dGT21ZOXpHRGJhNVlZSGExVVltbGlickdaeTZ6alJGVWdSc1ZDLTRuVTJBMjFoWnppX0xxVGsyajhnaVdQUEFjM0NrbnM?oc=5\" target=\"_blank\">K3 traz líderes do Itaú e Safra e agrega R$ 3 bi em custódia; “movimento disruptivo”</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">InfoMoney</font>",
-      "source_indices": [
-        106
-      ],
-      "primary_index": 106,
-      "axes": [
-        "Produtos Novos",
-        "Risco/Regulação"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": true,
-      "trigger_reason": "LANC",
-      "why_it_matters": "A entrada da K3, com líderes do Itaú e Safra, no mercado de custódia com R$ 3 bi pode intensificar a concorrência e forçar as corretoras a inovarem em serviços e tecnologia.",
-      "relevance": "alta",
-      "also_reported_by": []
-    },
     {
       "competitor_group": "XP/Clear/Rico",
       "matched_alias": "XP Investimentos",
@@ -201,28 +90,6 @@
           "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNS04weXNBSmhKakh3NXFBV0pWWHU3X2N6eDVVSlFqaTloRmtMT3EtNWYyODlWd3p4NHF2d0ZZWWhtUUI0cElRXzNjNkNXMU5HRmRHblFQTUtXMWh6MnNBTi1FcGxob3pPanF5VzhVNzF5ZWJFVTdJelAwZEo2ekJGSXFUV3JLTG1fQmNoZUk5T2t3alRhUHFaV3ZxRXBzc09CcFlVMFJuWjY2VjhDUEdBX09Na1BQdTRibXJUaENJYWdYakRqVmRYVl8yZEVFd1B4?oc=5"
         }
       ]
-    },
-    {
-      "competitor_group": "Nubank/NuInvest",
-      "matched_alias": "Nubank",
-      "title": "Nubank (ROXO34) abre escritórios em SP, Rio e Campinas - Investidor10",
-      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQak93a3dZYV9QR0NqU1pEdkZweG1jMXM3SW1VNFl3SW84TEZuLVVveFhYMWw5S2JCRGt4SEpoa1JaS2p0RVlyUURVRXFHSjF3SThMZXIxR0pRamRIQUpXNk4yY3RCZHJBbmRnMU5Edkw2bEw1ekRtYnRRN1hjSjJEYU1LNlZRRzdBMU1lX19la253YTI1MTRwY1NhWGtLOGh6VUHSAaIBQVVfeXFMUGpPd2t3WWFfUEdDalNaRHZGcHhtYzFzN0ltVTRZd0lvOExGbi1Vb3hYWDFsOUtiQkRreEhKaGtSWktqdEVZclFEVUVxR0oxd0k4TGVyMUdKUWpkSEFKVzZOMmN0QmRyQW5kZzFORHZMNmxMNXpEbWJ0UTdYY0oyRGFNSzZWUUc3QTFNZV9fZWtud2EyNTE0cGNTYVhrSzhoelVB?oc=5",
-      "source": "Investidor10",
-      "published_at": "2026-08-06T15:03:33+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxQak93a3dZYV9QR0NqU1pEdkZweG1jMXM3SW1VNFl3SW84TEZuLVVveFhYMWw5S2JCRGt4SEpoa1JaS2p0RVlyUURVRXFHSjF3SThMZXIxR0pRamRIQUpXNk4yY3RCZHJBbmRnMU5Edkw2bEw1ekRtYnRRN1hjSjJEYU1LNlZRRzdBMU1lX19la253YTI1MTRwY1NhWGtLOGh6VUHSAaIBQVVfeXFMUGpPd2t3WWFfUEdDalNaRHZGcHhtYzFzN0ltVTRZd0lvOExGbi1Vb3hYWDFsOUtiQkRreEhKaGtSWktqdEVZclFEVUVxR0oxd0k4TGVyMUdKUWpkSEFKVzZOMmN0QmRyQW5kZzFORHZMNmxMNXpEbWJ0UTdYY0oyRGFNSzZWUUc3QTFNZV9fZWtud2EyNTE0cGNTYVhrSzhoelVB?oc=5\" target=\"_blank\">Nubank (ROXO34) abre escritórios em SP, Rio e Campinas</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Investidor10</font>",
-      "source_indices": [
-        121
-      ],
-      "primary_index": 121,
-      "axes": [
-        "Produtos Novos"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": true,
-      "trigger_reason": "MA",
-      "why_it_matters": "O Nubank está abrindo escritórios físicos em SP, Rio e Campinas, sinalizando uma expansão para o atendimento presencial. Isso pode atrair um público que prefere atendimento humano, pressionando as corretoras tradicionais a repensarem suas estratégias de relacionamento.",
-      "relevance": "alta",
-      "also_reported_by": []
     },
     {
       "competitor_group": "XP/Clear/Rico",
@@ -5235,6 +5102,78 @@
           "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNZTU0ckNmZ3pSX2hHeFB5UDRHWW9LamFxOXh1UDd1SUNtcElrWHYxQkpQV1J0ZjFVaWZaTXhmQW9KeHprYnIzVlNYTF9GUzZXc0hvb1VPZTg3Z0JBVUhHaENtV1ktN1Qxams1OENCckNmYW53M3M4VnE5NFRsNjdNOWdxcGlsSHBzdDRGbmdFWGt4d0I4S2RiMEpzbEE5eUdZNExJQWowMGpRSTlPNU93UlR1cHo2NWNvWEoyRE1RSlB2dnJJSUZUWGJxS3g?oc=5"
         }
       ]
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "Pix com pontos? BTG Pactual flexibiliza resgate de benefícios do Programa de Fidelidade em transações financeiras - Money Times",
+      "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOVUJ1cEJLYlhydWJkMFpOWmQ4TnVHSURhWjJ2VlZaeHlmRVI3QXFmbjNpVDNSLV82UmRFRnUzUnBOZUMzY2VRczBLdEFsVVhVcUFJOENkV1RpLU9zLXR1NFJ1dm1Dc0k4azJnQUdpY05scy1wUDd6XzdqZmRLelpheFNXb0tUYUs1R3BlREdXUjk1TkN6SWpEeVBwVjhCR0NRVThEQ1RjdGxtLTNjaWV3N0dKOXZZODJOa2x2SnpFY3JVQjltbWFiTElxN1NBWUw1c3dxYW4xYTh3ZW4tbmVUWWlGZEU2bkZz?oc=5",
+      "source": "Money Times",
+      "published_at": "2026-11-04T13:00:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi6AFBVV95cUxOVUJ1cEJLYlhydWJkMFpOWmQ4TnVHSURhWjJ2VlZaeHlmRVI3QXFmbjNpVDNSLV82UmRFRnUzUnBOZUMzY2VRczBLdEFsVVhVcUFJOENkV1RpLU9zLXR1NFJ1dm1Dc0k4azJnQUdpY05scy1wUDd6XzdqZmRLelpheFNXb0tUYUs1R3BlREdXUjk1TkN6SWpEeVBwVjhCR0NRVThEQ1RjdGxtLTNjaWV3N0dKOXZZODJOa2x2SnpFY3JVQjltbWFiTElxN1NBWUw1c3dxYW4xYTh3ZW4tbmVUWWlGZEU2bkZz?oc=5\" target=\"_blank\">Pix com pontos? BTG Pactual flexibiliza resgate de benefícios do Programa de Fidelidade em transações financeiras</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Money Times</font>",
+      "source_indices": [
+        61,
+        72
+      ],
+      "primary_index": 61,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "LANC",
+      "why_it_matters": "O BTG passa a permitir resgate de pontos/cashback em transações financeiras via Pix, ampliando o uso do programa de fidelidade como ferramenta de engajamento e retenção de clientes investidores.",
+      "relevance": "alta",
+      "also_reported_by": [
+        {
+          "source": "Kinvo",
+          "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOUF8wNTA2NUp3VWt0RUFrSXlBRW45bVhIU1ZreVRwWGhncUp3cEFNM1FNR2pKR2hMT3dqXzd4a3M2dkctbXJNTWl3enJGcjVWN0tZNWt6LWRoTGhMQXhiOHB0WWdIYS15RnVkdld1Z0tWRm1CREVfSWx6TWdVak13MEZNYzJuX3QxUTdNN2FYQ0ZqMEltbGUtUWw0LTY5VEpCNzRTUVYtVUQ2ZTM4WmhrOVM3cVJpYXExb1ktVjM5UXBVdGZfS0E0ZlFRa3ExNXVsbGlrcnhB?oc=5"
+        }
+      ]
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "BTG negocia compra do BRB em operação articulada com o Governo Federal - Bnews",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQcGlseExzMTBmTTBZRmtsRWdnZFI2TmRqX2VfdjFzdXg3Wmc4Mkw0bGRRdUIwT1M3RkItVnR0NWNhTzl4OFQ3Mkt3V2Z5bUlkbzlyR0dxUlFQMTFicWo4NVA5WmdYcXFxUEw1T1lmQms2ajlQNTA1YXN2Vmc3LWN0Rm8weUxKRlBMWTZRcEVWWTQxaENITnlQOFkxeTc1X0hLMVpyejh0SzlPckNISmVUUFRHZXlrU0ZUNGfSAb8BQVVfeXFMTmVzSnIzMjJvNFVfRDByUzVNcVNoUzd6SkpJRDJqcjBxeEN2OEx4R215cTVEQUdrMkFDMEJsVDY3ZmVvX3pxN0l6d0ZFSllBd2NLSHliUW1jRGJaamNsalZ5WkFHd21rXzk2X1RrbEdRbGczS2R3YWVPby1HeUstcmZoSXVfdHZXbDFDNHVYbDQ1cEJzczVxTi1NLUhZLUQ4V3JsZzBSeGhvMXhMWWNNSmRQQVdONjZ0OExPMmVHSG8?oc=5",
+      "source": "Bnews",
+      "published_at": "2026-11-03T22:15:26+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxQcGlseExzMTBmTTBZRmtsRWdnZFI2TmRqX2VfdjFzdXg3Wmc4Mkw0bGRRdUIwT1M3RkItVnR0NWNhTzl4OFQ3Mkt3V2Z5bUlkbzlyR0dxUlFQMTFicWo4NVA5WmdYcXFxUEw1T1lmQms2ajlQNTA1YXN2Vmc3LWN0Rm8weUxKRlBMWTZRcEVWWTQxaENITnlQOFkxeTc1X0hLMVpyejh0SzlPckNISmVUUFRHZXlrU0ZUNGfSAb8BQVVfeXFMTmVzSnIzMjJvNFVfRDByUzVNcVNoUzd6SkpJRDJqcjBxeEN2OEx4R215cTVEQUdrMkFDMEJsVDY3ZmVvX3pxN0l6d0ZFSllBd2NLSHliUW1jRGJaamNsalZ5WkFHd21rXzk2X1RrbEdRbGczS2R3YWVPby1HeUstcmZoSXVfdHZXbDFDNHVYbDQ1cEJzczVxTi1NLUhZLUQ4V3JsZzBSeGhvMXhMWWNNSmRQQVdONjZ0OExPMmVHSG8?oc=5\" target=\"_blank\">BTG negocia compra do BRB em operação articulada com o Governo Federal</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bnews</font>",
+      "source_indices": [
+        59
+      ],
+      "primary_index": 59,
+      "axes": [
+        "Risco/Regulação"
+      ],
+      "confirmation": "especulativo",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "Se confirmada, a compra do BRB pelo BTG ampliaria a base de varejo e a capilaridade regional do banco, mas o fato é de atacado/M&A e ainda especulativo.",
+      "relevance": "média",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "Genial",
+      "matched_alias": "Genial Investimentos",
+      "title": "Itaú BBA cria mesa de crédito privado e contrata time que trabalhou na Genial - Bloomberg Linea Brasil",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNWkRMXzR0Vm5mdkhEN1BGbUVkd2tsOWtWVFdMcGZWVzBOa2oyMWw0UjJVRmNrME90NC1SNVY5SjVlcFNETGNpM0lKTGVKRklwUG1ManBheWt6MUFwaGhWLTZqNV9ZV2k3ME9VVTlab0h3TGZ1b2NSdmF4b2x2ZDV2Y0JpXzRBc09XeWt4WUdfZjJMeXpaZ094eUI3em0xZDFlZ1BxTFNXR0l4Z0xfSWU5c3FpOGFOanNfX0o3eS1EU3LSAdQBQVVfeXFMTncweTFkSnZ1bHZpMVRENFRTQ0lxUTdISEEyenpIX2R4YnBOa1o2S1pvRlFpejZYYnZSd0tTZldfTUlsLUxibE1RRm5faDBkbHB3b1ZPdFVJbFBHNUc3UlY3YmRiOUpWTWJrOUpiV0c0dnh4cUVpYVJiVHFLOWJsR1ZtNkQ0OFdUaVFNX3dSUHlwTV9Qekg4Q09OWTlLYlctQU9SS1NzZUdsakpBSXNvd1Rabm1CSnlkZWZ6bHZ0V1ZPZ1BsWnhPWkxvNC1oOVlJeUgwRS0?oc=5",
+      "source": "Bloomberg Linea Brasil",
+      "published_at": "2026-11-03T20:32:04+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxNWkRMXzR0Vm5mdkhEN1BGbUVkd2tsOWtWVFdMcGZWVzBOa2oyMWw0UjJVRmNrME90NC1SNVY5SjVlcFNETGNpM0lKTGVKRklwUG1ManBheWt6MUFwaGhWLTZqNV9ZV2k3ME9VVTlab0h3TGZ1b2NSdmF4b2x2ZDV2Y0JpXzRBc09XeWt4WUdfZjJMeXpaZ094eUI3em0xZDFlZ1BxTFNXR0l4Z0xfSWU5c3FpOGFOanNfX0o3eS1EU3LSAdQBQVVfeXFMTncweTFkSnZ1bHZpMVRENFRTQ0lxUTdISEEyenpIX2R4YnBOa1o2S1pvRlFpejZYYnZSd0tTZldfTUlsLUxibE1RRm5faDBkbHB3b1ZPdFVJbFBHNUc3UlY3YmRiOUpWTWJrOUpiV0c0dnh4cUVpYVJiVHFLOWJsR1ZtNkQ0OFdUaVFNX3dSUHlwTV9Qekg4Q09OWTlLYlctQU9SS1NzZUdsakpBSXNvd1Rabm1CSnlkZWZ6bHZ0V1ZPZ1BsWnhPWkxvNC1oOVlJeUgwRS0?oc=5\" target=\"_blank\">Itaú BBA cria mesa de crédito privado e contrata time que trabalhou na Genial</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg Linea Brasil</font>",
+      "source_indices": [
+        97
+      ],
+      "primary_index": 97,
+      "axes": [
+        "Risco/Regulação"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "O Itaú BBA monta mesa de crédito privado contratando time da Genial — movimento de atacado que sinaliza disputa por talentos, mas não toca o cliente investidor de varejo.",
+      "relevance": "média",
+      "also_reported_by": []
     }
   ],
   "results": [
