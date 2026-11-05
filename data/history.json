@@ -6600,5 +6600,27 @@
     "why_it_matters": "O Itaú BBA monta mesa de crédito privado contratando time da Genial — movimento de atacado que sinaliza disputa por talentos, mas não toca o cliente investidor de varejo.",
     "relevance": "média",
     "also_reported_by": []
+  },
+  {
+    "competitor_group": "XP/Clear/Rico",
+    "matched_alias": "XP Investimentos",
+    "title": "XP passa a cobrar anuidade do cartão XP Visa Infinite Private - Pontos pra Voar",
+    "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNREFjczNCYlJ5c0tCT2tzcFBmOVpQTHRPVTdCZnpULWF6WEVBMkV5OW1WTk5sRWlyMUZjUzdmZ3VKLThyRTZHZWVET3NoVE5aMks3aE5najRWR2VKeTJaUnZBNEI0cWJWUjJqTFN3U0N0Skd0bDBvNUs4cS1PaW5nYWVydTh1SHdRRWp5TFZndHEtQQ?oc=5",
+    "source": "Pontos pra Voar",
+    "published_at": "2026-11-05T11:00:35+00:00",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxNREFjczNCYlJ5c0tCT2tzcFBmOVpQTHRPVTdCZnpULWF6WEVBMkV5OW1WTk5sRWlyMUZjUzdmZ3VKLThyRTZHZWVET3NoVE5aMks3aE5najRWR2VKeTJaUnZBNEI0cWJWUjJqTFN3U0N0Skd0bDBvNUs4cS1PaW5nYWVydTh1SHdRRWp5TFZndHEtQQ?oc=5\" target=\"_blank\">XP passa a cobrar anuidade do cartão XP Visa Infinite Private</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Pontos pra Voar</font>",
+    "source_indices": [
+      9
+    ],
+    "primary_index": 9,
+    "axes": [
+      "Produtos Novos"
+    ],
+    "confirmation": "confirmado",
+    "daily_trigger": true,
+    "trigger_reason": "PRICE",
+    "why_it_matters": "A XP passa a cobrar anuidade de um cartão premium, alterando o custo de um benefício usado para atrair e reter clientes de alta renda — sinal de mudança de pricing que pode abrir espaço para concorrentes com isenção.",
+    "relevance": "alta",
+    "also_reported_by": []
   }
 ]
