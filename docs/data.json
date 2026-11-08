@@ -1,28 +1,6 @@
 {
-  "generated_at": "2026-11-07T15:57:31.554945+00:00",
+  "generated_at": "2026-11-08T16:23:56.945578+00:00",
   "items": [
-    {
-      "competitor_group": "XP/Clear/Rico",
-      "matched_alias": "XP Investimentos",
-      "title": "XP Asset muda e passa a cobrar 1% com 30% em fundo macro - Valor Econômico",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPNGJMRS02anBZOTJTQlI2MXNVdEY3VzRFWEdOOVFpbWdQVDZrdlV4dkN0cW0xTmQzWHVac0hpX0ZMWV9UMUZoajRXa08wd3JQQTJjV0MyZm1sOTVCYjZNbC1EMDVCck9ZTERXNmZJSy0tMzN0WDhGbWZyOXFsbl9NU2VBUThocUJrNzRuUE1BcURiLWF3Rm9OYW5qU2tQdmkwREJla3RXLW1oVzZJZVNBX0p30gHAAUFVX3lxTE55SGJLVF9ieE9NdUxncE50WGttZE5KbzdMaHBHcUtUeHV6bGFwT3p2RWFWOENPeHBGUE9oamFhRnF2WFdCOWw5UUg2aEFlUjNCZVNnTnNXWW5Va3UxTnhNUXl5VnA3cFE1OVRPQlZNd2pqTTlDNjNXZ0pvYjVzWlpnUTV0MG9qT1FPS3RDR2wyZFlHWmJCeC04RDAzbEJRcHZZNnA1ekFtMUxXNC1GY3FDVlJPY2otdDdobkEzcE5SMg?oc=5",
-      "source": "Valor Econômico",
-      "published_at": "2026-08-10T08:02:38+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPNGJMRS02anBZOTJTQlI2MXNVdEY3VzRFWEdOOVFpbWdQVDZrdlV4dkN0cW0xTmQzWHVac0hpX0ZMWV9UMUZoajRXa08wd3JQQTJjV0MyZm1sOTVCYjZNbC1EMDVCck9ZTERXNmZJSy0tMzN0WDhGbWZyOXFsbl9NU2VBUThocUJrNzRuUE1BcURiLWF3Rm9OYW5qU2tQdmkwREJla3RXLW1oVzZJZVNBX0p30gHAAUFVX3lxTE55SGJLVF9ieE9NdUxncE50WGttZE5KbzdMaHBHcUtUeHV6bGFwT3p2RWFWOENPeHBGUE9oamFhRnF2WFdCOWw5UUg2aEFlUjNCZVNnTnNXWW5Va3UxTnhNUXl5VnA3cFE1OVRPQlZNd2pqTTlDNjNXZ0pvYjVzWlpnUTV0MG9qT1FPS3RDR2wyZFlHWmJCeC04RDAzbEJRcHZZNnA1ekFtMUxXNC1GY3FDVlJPY2otdDdobkEzcE5SMg?oc=5\" target=\"_blank\">XP Asset muda e passa a cobrar 1% com 30% em fundo macro</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Valor Econômico</font>",
-      "source_indices": [
-        0
-      ],
-      "primary_index": 0,
-      "axes": [
-        "Produtos Novos"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": true,
-      "trigger_reason": "PRICE",
-      "why_it_matters": "Mudança na estrutura de taxas de um fundo da XP Asset pode sinalizar reprecificação de produtos para o cliente investidor, afetando a competitividade da corretora.",
-      "relevance": "alta",
-      "also_reported_by": []
-    },
     {
       "competitor_group": "BTG Pactual",
       "matched_alias": "BTG Pactual",
@@ -5219,6 +5197,28 @@
           "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQWHh1bDRyenp3NWVXVFRyejdBb0FFczhHdXpVa3RKQTlUNGlaZjBPendYWVlEUnNHMnNROWhwdGprQnlXSjNPMzhQLWpJTnZxaU5ybFJka2xrX2hvYTRGSXRaelVlUXVUaE5sOTdfUzItMEJPZnlJSUpsU2pCRnlYRlRwc190Y3dtVWU1MURfVQ?oc=5"
         }
       ]
+    },
+    {
+      "competitor_group": "Genial",
+      "matched_alias": "Genial Investimentos",
+      "title": "Transação bilionária entre Genial e BTG está bem encaminhada - O GLOBO",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOZ0pLVkZjUjhDZkxLeUlrMDh2NmF2UFdCa0JpWFg3Z1J2NHc4bEJtYVJDRExEc2dGNUFNZkRrNHNEbGtMY1h6T3lfS2ZfNTRlM3A5a3h4YWpYQ2VDSE5QbmhsekZuWmx4ZTBZdXQ5MS1mS0FScjFzT1dQSFpPRmI3dGVqbUVLSnFOUHlncVpwV255YnFhX1BCaGNEYUptTDQ5bjl6TGZIRHRMSzdsRU44MUh4ZEludTZXV0RfWlRoUk3SAc8BQVVfeXFMTnlGaVpmaEZnWk9reUViOEZlNmVhdHVqT1FaNUFyTjIzVXcyeGNUTG5QNHdFbkRNNndrVC1SZDZ6VWtKNzlTU0VHTGYzTGhwekNjaXpON3ZHaGVERXZvNU9BUWVxZWdmbEVKUXAzX0JkOURUU0tCZ2hUZlp2aDU3SGVXNkp0NGZTNnkwU3Y3SWFib1l0a25yeXUwdm50TWpLM2NQY1NoZERYZVdKd0JQN3dVTnVUTmg3RU9HdUY3TjNib2I5REJERjFZNlFBU2x3?oc=5",
+      "source": "O GLOBO",
+      "published_at": "2026-11-08T09:40:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxOZ0pLVkZjUjhDZkxLeUlrMDh2NmF2UFdCa0JpWFg3Z1J2NHc4bEJtYVJDRExEc2dGNUFNZkRrNHNEbGtMY1h6T3lfS2ZfNTRlM3A5a3h4YWpYQ2VDSE5QbmhsekZuWmx4ZTBZdXQ5MS1mS0FScjFzT1dQSFpPRmI3dGVqbUVLSnFOUHlncVpwV255YnFhX1BCaGNEYUptTDQ5bjl6TGZIRHRMSzdsRU44MUh4ZEludTZXV0RfWlRoUk3SAc8BQVVfeXFMTnlGaVpmaEZnWk9reUViOEZlNmVhdHVqT1FaNUFyTjIzVXcyeGNUTG5QNHdFbkRNNndrVC1SZDZ6VWtKNzlTU0VHTGYzTGhwekNjaXpON3ZHaGVERXZvNU9BUWVxZWdmbEVKUXAzX0JkOURUU0tCZ2hUZlp2aDU3SGVXNkp0NGZTNnkwU3Y3SWFib1l0a25yeXUwdm50TWpLM2NQY1NoZERYZVdKd0JQN3dVTnVUTmg3RU9HdUY3TjNib2I5REJERjFZNlFBU2x3?oc=5\" target=\"_blank\">Transação bilionária entre Genial e BTG está bem encaminhada</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">O GLOBO</font>",
+      "source_indices": [
+        45
+      ],
+      "primary_index": 45,
+      "axes": [
+        "Risco/Regulação"
+      ],
+      "confirmation": "especulativo",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "Consolidação entre Genial e BTG, se confirmada, redesenha o mapa de corretoras independentes e pode afetar a base de clientes e a oferta de produtos da Genial. Ainda é negociação em andamento, sem fato consumado.",
+      "relevance": "média",
+      "also_reported_by": []
     }
   ],
   "results": [
