@@ -6790,5 +6790,81 @@
     "why_it_matters": "Consolidação entre Genial e BTG, se confirmada, redesenha o mapa de corretoras independentes e pode afetar a base de clientes e a oferta de produtos da Genial. Ainda é negociação em andamento, sem fato consumado.",
     "relevance": "média",
     "also_reported_by": []
+  },
+  {
+    "competitor_group": "Nubank/NuInvest",
+    "matched_alias": "Nubank",
+    "title": "Nubank normaliza operações com criptomoedas após falha em fornecedor externo - InfoMoney",
+    "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNbWtZVUlhTkFMclpWMjB1TW5QVGNsb2NNQm9kQ1JfU1RKbUc1Rk9YTFFMVlBSUVBueEE3OEkwY1FDdUNxVHl3N1huMGpYUkZDaUVoRWNfdzVoMnZENEk2ZGh1a0Y2NzZwa1FGbzY2T1VYdnN3WVEzdWVSOW92VTlhRmNNdHVzNG5jQmpnYVh3VU1nTjJV0gGaAUFVX3lxTFBJZHRoY1Vud1M0OTJSRnV5QU5EV1VFQ3FmZDNqYWRJb2E5N28zY1Jyb01iSHlzUTBhQTVWb29BeHZPOWctZVVjMVVQRGlETVEwMDZBbmtmQUUweXVyLWJDVGtGTGg5Y3Zud0ZlOXExUERwa1E1VTdRUFVUMy0xWmpyMG1jODhlUFZXVlNrVlF6TUNFeXlqVXJOeXc?oc=5",
+    "source": "InfoMoney",
+    "published_at": "2026-11-07T14:15:24+00:00",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxNbWtZVUlhTkFMclpWMjB1TW5QVGNsb2NNQm9kQ1JfU1RKbUc1Rk9YTFFMVlBSUVBueEE3OEkwY1FDdUNxVHl3N1huMGpYUkZDaUVoRWNfdzVoMnZENEk2ZGh1a0Y2NzZwa1FGbzY2T1VYdnN3WVEzdWVSOW92VTlhRmNNdHVzNG5jQmpnYVh3VU1nTjJV0gGaAUFVX3lxTFBJZHRoY1Vud1M0OTJSRnV5QU5EV1VFQ3FmZDNqYWRJb2E5N28zY1Jyb01iSHlzUTBhQTVWb29BeHZPOWctZVVjMVVQRGlETVEwMDZBbmtmQUUweXVyLWJDVGtGTGg5Y3Zud0ZlOXExUERwa1E1VTdRUFVUMy0xWmpyMG1jODhlUFZXVlNrVlF6TUNFeXlqVXJOeXc?oc=5\" target=\"_blank\">Nubank normaliza operações com criptomoedas após falha em fornecedor externo</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">InfoMoney</font>",
+    "source_indices": [
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53
+    ],
+    "primary_index": 47,
+    "axes": [
+      "Tecnologia",
+      "RV/Trading"
+    ],
+    "confirmation": "confirmado",
+    "daily_trigger": true,
+    "trigger_reason": "INC",
+    "why_it_matters": "Falha em fornecedor externo derrubou saques e depósitos de cripto no Nubank, expondo dependência de terceiros na área de investimentos e abrindo espaço para concorrentes com infraestrutura própria.",
+    "relevance": "alta",
+    "also_reported_by": [
+      {
+        "source": "SpaceMoney",
+        "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOYmw2dVBCTl9iUkdveHVRU2JXSVNpN1ZNcm5Ka0ROUlV3RFVVOVJrVzlwcmNzVkFTMWdLTE91M3lWN1F1NXpDaW9iT0pBclRUV2gtRWVVZ09vV1NMdlM0NUtOaUpPd3Z4U3VQMHBDR1Z0Q1M0c3E4VDRubXluZFJSckpabGszcmJrTzZoVzZuTERPWDkyam5xb2lWc0NVY2VC?oc=5"
+      },
+      {
+        "source": "Paraíba Business",
+        "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQdWtwVDhBSnc3SENvN0IwTkd0cHFGTU4xZkFkOWN1SXBIblJyWFlTbG9oUDQ4N3UxUHAzTGw0bUFGZXZPd1RxOURQbkNmTzFSbDRvekRvTGFpRUFmQTJvbmllMkpkWXA3OXpXeHBxdDRtVlo2MC1Xc210WVBtMFdVbUFnbzFtUHdLV1JSUkR4emtvMVNtel95bkVIaHpHT0t0N19VTTJXYzZ6NVNFanRZ?oc=5"
+      },
+      {
+        "source": "ativovirtual.com.br",
+        "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNdDBDV2xDZGdRU2lIVnlHcmlCc010T3I4bzkxT2ZPZEI5cHlhaW9TR3hsOGNmZHBqR3B4a3FmbHc5eElPaGZKb2xGd19tS2RKZ2Y5WHFvVzBZc3RFaDVkOHV3VTlKM0RuWEVsbzNidmY5SjU3X2dVQ0NHREtoU1c0TnhzQnJadTZ6alBzNzFwcldDWGlrVlNQYUo5M0JWSmtMY1dsdDQwNFNURDEtcUw5QmpMTW1tQ3VaaDlwVQ?oc=5"
+      },
+      {
+        "source": "Portal do Bitcoin",
+        "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOZnpmWW1NTmgzYWZ5X3NKTV9vVlhsNHROSXpla1JCTFZlQ0VmOUpRcFE3MkNCMjZYUnNFMnVjcGRWMlAybjFxSkF6Q3ZoQWVsVmplaEJ6b1pyZEZvQ2hIeHhOLW1JOXh1STg4ZEVsc3UyLWpxaTdIbnhCSzAwRl94VWNUYWRrak5IYTdBWGptN3pQdDZiUTZUbWJQSmZfQjVVeVp6MW9aVHV1dV96TmdDbExjcERFaHBoNmdYdkVFVXdieTdqN2fSAcsBQVVfeXFMTjJidnVXXzkzaFNwTW5JNlY1Q01pZUtQd1oxLXJDdGc2NDZfWXh4cWZxY2s0YlJldDd1WFdaUmdUYjlCTENLRm93NUVNTnkyTDNXTTVuc01EX2ktRUhyWWo4OWdRMVpldmhnSXFkRjU3VlVZSGlDbFZ4Vmp3OEp3WU9KY1VSR1hIcmVCamVnVUJ2bmRYQ25MWjJheTFFLWVob2M2bUdYNHItRWY1QWZzOWJZSWFyUFlWdDl1WWNETnRxUWlCQ29SdmtMdVk?oc=5"
+      },
+      {
+        "source": "O Cafezinho",
+        "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeTA0YWozdzNjUktwaHZfMUtJQXNidjNDb0hjSTJFOHdHWm8ycVRRLTNvR0cyamtYbHVYb083bjVsTFVMVzd4TlpYc1U0R2h2NmhDWnhwRm1QZWc4OS00a040NHJEQVpBaXhuQ2lIS0JNc0szbjZJU2hnWUc2LVBoSHAxb00zRVBFVnRNaERsMUJvLUVkQlNhZ0ZmSUVKb2Q3Yi1pQUFCMVhQQdIBrwFBVV95cUxOUk1DbjE2UkNocndZM1dHdHRqWG5zbGlLMTVwMk02eXJRYkZkU1dCel9iUUhieS1vaTZLN19DUnk0MExZV3A1TmNLWHA0YTU3RVIwbzQ1QVpFRXN1SzNOaHZlcERsRmxsQ0JBRHExMWxDTjIyVk91Sk5JRFNiS2d2aE8td20xYjZVSlowWkotdTlrUVJudzZQNkJHU0x6QmtnMHpnVGgybmx1RldiY2Jj?oc=5"
+      },
+      {
+        "source": "Plantão Brasil",
+        "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQdm01aXYwRl8tTlE0QXN3QmNtRHhIaFQ3UnBNc05GRWctV1JYWDZJZGFpNlZ5ZnNGbWUxZ3JsWnNlY3J1aElXUkk5MG9YdG9VdzNHeENKeUMtb2dxZmQxVmFMek9tQXpyYWhRMGw2SkRURlBDVGNLYk43eVlEWHNDUG5aV3VxTVBQRWhJdTFtX0ZDckozR1U5ZVplaGF3VGZhMm13U0hnS1VMa1V3QXJTcS1KNzNYZHRmZHJTdQ?oc=5"
+      }
+    ]
+  },
+  {
+    "competitor_group": "BTG Pactual",
+    "matched_alias": "BTG Pactual",
+    "title": "Nova rota: BTG Pactual amplia plataforma para investir no exterior por meio de holdings patrimoniais - Prensa Mercosur",
+    "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxON01CMWdtYWhjR29FM2hpU2pibWZndmFwVVMwT3hBbFpRTVJKQWlwbGJUTU5Ga2hGVlVTWVlKb3hHeE9LVm02bjAxUmdTeThjQnh1UG5NQjVWQThlV3ZNdEdEazNEYWJLbTV1MEMxS2FiRG04S0liSmlXdzJyOWZIUGo1aGFES0ZjSGtzaVNtdlVwcTA5VGN0YWhuT2p4ZDh2U2dsNHVPcXFDTFJkZW5IZTBfUnJEYVprUWs5SVkyeWJuYXU3Wnp3THVBZFpkMHdOWmxLQg?oc=5",
+    "source": "Prensa Mercosur",
+    "published_at": "2026-11-08T21:26:15+00:00",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMi1AFBVV95cUxON01CMWdtYWhjR29FM2hpU2pibWZndmFwVVMwT3hBbFpRTVJKQWlwbGJUTU5Ga2hGVlVTWVlKb3hHeE9LVm02bjAxUmdTeThjQnh1UG5NQjVWQThlV3ZNdEdEazNEYWJLbTV1MEMxS2FiRG04S0liSmlXdzJyOWZIUGo1aGFES0ZjSGtzaVNtdlVwcTA5VGN0YWhuT2p4ZDh2U2dsNHVPcXFDTFJkZW5IZTBfUnJEYVprUWs5SVkyeWJuYXU3Wnp3THVBZFpkMHdOWmxLQg?oc=5\" target=\"_blank\">Nova rota: BTG Pactual amplia plataforma para investir no exterior por meio de holdings patrimoniais</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Prensa Mercosur</font>",
+    "source_indices": [
+      40
+    ],
+    "primary_index": 40,
+    "axes": [
+      "Produtos Novos"
+    ],
+    "confirmation": "confirmado",
+    "daily_trigger": false,
+    "trigger_reason": null,
+    "why_it_matters": "Ampliação da plataforma internacional via holdings patrimoniais reforça a oferta de investimento no exterior do BTG, segmento disputado com XP e demais corretoras.",
+    "relevance": "média",
+    "also_reported_by": []
   }
 ]

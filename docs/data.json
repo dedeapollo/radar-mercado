@@ -1,138 +1,6 @@
 {
-  "generated_at": "2026-11-08T16:23:56.945578+00:00",
+  "generated_at": "2026-11-09T20:13:08.353560+00:00",
   "items": [
-    {
-      "competitor_group": "BTG Pactual",
-      "matched_alias": "BTG Pactual",
-      "title": "BTG Pactual tem lucro líquido ajustado de R$ 5,1 bi no 2º trimestre de 2026, alta de 23% em 12 meses - Estadão",
-      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPZFpBUDlMZ0VVdWlDczNla3Z4X2l0b1QzdTk3NHFKVDgwcmo2NUFiYmVxVVRJQkZQTncxeWhrNmg4WS1Ed0VLR0FNSUdtRkM5OFVmY25abzVLOXl0SFFXZ0x0b193R085QjhaMUF3STZoTE1ULXFvTGFDWmxKTTdKMXgwa1hBX19VX0s3OHJGVkhXRWFrZzBVQXpXbHJXbWRNWHpLQkttbzdTR2ZpM1FSbUFzVWprajJSTGFPc3dpQlNiUEVSeldtbi16Zm5tQmNt0gHWAUFVX3lxTE1FQ2o1UUdiWXlscF9IblZqeDVPM1Zhdy15bE9OSk5mMzFxbk9aYnZDUXZrUnRGNHRyb0xmaUp4R1lYa084czFhSEpLZjd6UGFtb2JKcG52dnBjYldJb2tTTXAxUm1CdHpXc3dJbHlQNEJLNUl1WXBNbXdNQ0RBc0w1MDlXMkF1T0Vvd3FWeFhpcDhHT1VkZWRCNXZ6b1JSSUtvdVR5bWU3XzRTY1NXTzJuZGtUbzgxakN3MU9ZU2FPSHJDYUVFZnZ3TUQwZm5QOTBIakpjWHc?oc=5",
-      "source": "Estadão",
-      "published_at": "2026-08-11T09:58:02+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi0AFBVV95cUxPZFpBUDlMZ0VVdWlDczNla3Z4X2l0b1QzdTk3NHFKVDgwcmo2NUFiYmVxVVRJQkZQTncxeWhrNmg4WS1Ed0VLR0FNSUdtRkM5OFVmY25abzVLOXl0SFFXZ0x0b193R085QjhaMUF3STZoTE1ULXFvTGFDWmxKTTdKMXgwa1hBX19VX0s3OHJGVkhXRWFrZzBVQXpXbHJXbWRNWHpLQkttbzdTR2ZpM1FSbUFzVWprajJSTGFPc3dpQlNiUEVSeldtbi16Zm5tQmNt0gHWAUFVX3lxTE1FQ2o1UUdiWXlscF9IblZqeDVPM1Zhdy15bE9OSk5mMzFxbk9aYnZDUXZrUnRGNHRyb0xmaUp4R1lYa084czFhSEpLZjd6UGFtb2JKcG52dnBjYldJb2tTTXAxUm1CdHpXc3dJbHlQNEJLNUl1WXBNbXdNQ0RBc0w1MDlXMkF1T0Vvd3FWeFhpcDhHT1VkZWRCNXZ6b1JSSUtvdVR5bWU3XzRTY1NXTzJuZGtUbzgxakN3MU9ZU2FPSHJDYUVFZnZ3TUQwZm5QOTBIakpjWHc?oc=5\" target=\"_blank\">BTG Pactual tem lucro líquido ajustado de R$ 5,1 bi no 2º trimestre de 2026, alta de 23% em 12 meses</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Estadão</font>",
-      "source_indices": [
-        21,
-        22,
-        23,
-        28,
-        29,
-        30,
-        31,
-        33,
-        35,
-        36,
-        37,
-        39,
-        41,
-        43
-      ],
-      "primary_index": 28,
-      "axes": [
-        "Risco/Regulação"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": false,
-      "trigger_reason": null,
-      "why_it_matters": "Resultados recordes do BTG indicam força competitiva, mas não mudam diretamente a oferta ao cliente investidor pessoa física.",
-      "relevance": "média",
-      "also_reported_by": [
-        {
-          "source": "UOL Economia",
-          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNc0pSWVNacjlBRndaWW43Z2dNNXNVRmdTR2MwdDFnLS1jU0c5ZWktdzdWSW9HNXBMWGE0S2NJV1NXbGhObHZscFZ4Z1plVWgyNUd4RmpzNHNGX0hlS0NzM1l6OUVob0RPYmRqRHNDUGJVcXlUV1R4ekhiWVQyWXRIcXpNbHY5UQ?oc=5"
-        },
-        {
-          "source": "Valor Econômico",
-          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQaDdTemJURkNFNm5CcHRuRWUxcVpWejFxQ3RTaTh0c0NoUEZ5YkE2SXZCN2dRTjFDY2NzZjN2VXVsQThNUGl6b1BtVFVodzRnLW41N0lSaFhVTURmNDlhTHJLdFVZM3dDTWYwNE1xVG84d0xZRGlkc2h4Y0tCRGV0MW9pbkM2TWF5TGtSQ0JfOExPYTAzR0htWHJoQVJBdHpJaDltZ3UwUWV1bWpPZTB0SFBwS1VPOFliM3fSAcgBQVVfeXFMUFpWb2lhT0QtQXQwV1Z3UlN5bk1TMVg2c1pTTFFMMS0wUlNOOFVJb0k4YVRRYlRlam1rRXhBc2tvZE1mQ3p1bmNZNnc1OHBocTZHd2hYejRod2pZcnB3azA4VG1tZ3c1Mk13Z0RzZlkwcFNOWFIzOWFPVFFiNFhvYlZMRzFjNUZUbHNBOF83NEJXT3JDYlJvMUNIY09SdjRCcTB5Q1pHQlpfZ185Nnd1VUFJT3p5dHUtd3Rma2lRQTctQk40S3FtalU?oc=5"
-        },
-        {
-          "source": "InfoMoney",
-          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNN1REemF0b2VyR1V1cDlaMVJTQjRycG9oa0V1cjBjM1Myb3R0R1kwM2FGTndQc0FCSUt6R3R6YkxrX3YxRjZaZm5UZ2VmbFU0dGdYSlJmUy1DbW51NUFuN3pDNHJXZlJMMmwwR1ppUFNndFZJajQxTWhxQUtXNW1UOTIyT1NYZ1NxUV9QMVNVWnlaVDZm0gGaAUFVX3lxTE5FM0M0SnQ2Wm96MDJXV2RVU3p4clpHRjk5U1hBaUlmTGVTM3V6V1RxMDU1TmJ4bkI1ZGNUX3Jna3BZb0d3TTFrQUZUUVJEdDlCOUhlYTRmeVhRY2dCTFBsOFBDZEtseVdkdnlPUTliS1ctLUMwOEtOajN0Z2MtNVBGOTgtdlQ3bGw2US05c1I0Q0VIZUN1azQ3S1E?oc=5"
-        },
-        {
-          "source": "NeoFeed",
-          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOZFI5Q0ZkVW02bDRuV1BPYWRkYTlGcVRQMUR1LXhnZzVROUgwOGtuMjJfclU0UHVhRnJPVWxZZTZTbkZ2QmVHQ296cUxzenVKb3cyaVdxdWp4S05GalU2R0cwbnlxemxobGVOTTdDOV9yMHlWazg2WFdXZzBnd0dPWHR3OFE4THZOb29TM2hmeWpFZkNwRlI2NkRRWDF6NHZUWjlnYUUyak9kRlhRMTFhSXBn?oc=5"
-        },
-        {
-          "source": "Seu Dinheiro",
-          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPQ2loZklBY2tqRXdFUlNMQjNaVlFlUkpqWWlmX0lod3M4NTFzbHNSb3hXME9HS0dST3U2TnhLamlTNkFDaTN6RmZtV19PNFI4SUlXOThLaWgtY3ZZLUJ1T3lMdmpEYy1VWHRKSUNMT1lEME1RWGlfVlVPZTBDMnA1RzZTSFp2Rk9mSm9rQ3FRWkg2UE9zUXBWOFJmcHMwNHlnTE5manpR?oc=5"
-        },
-        {
-          "source": "Poder360",
-          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPYlo0ZndScW1CaVRVcTQ1Z0NDUXFKdmVKQ3JTUy13UFdJYmF6Qm5xMVVnd2gxZHk1YVdqRkxDbms0QjBiajJPZUNVTXdiMHo2TjlEd1A4UkVXVTROUGMyT1VMbXdkaFA5dURXdTN3cXZ6bjVvaXRUME5MX1BLU1ZZYWtwaEUtTDJ1b2drQjR5TzFYZHg0?oc=5"
-        },
-        {
-          "source": "Money Report",
-          "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOUkpQZjJNaEtQdE53d2lQVXpxTWNpYVEyMTUxZHVENVNSVmhrNDNodVZvcmd3UEIxZFVhUW1MNHRzVmtxM2NNbzhaUUFSSFZIbmxwcEI3S281WUxLNjl1U3lxb1drV3VWWmRYZ1JYbFNkV2ozYmotNWg3cnZnNGlWV2RqUzhiM2x2OFJOdUtONjR5eWpSdzQyM25VMTFZMU9zVWo0UTQ5NHo0c0lKWWwyUmlfZUxwQTRJcFgzVUp1NA?oc=5"
-        },
-        {
-          "source": "Money Times",
-          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNLXU3bUhhSFkzOXgtZkc4Y3N6cGVGQXlkLUVqaHQ4Vi1FVDRQVVdKM3FQNG5MMjZmZXNsWEJZXzBGa29Ea0N2aE9SNThuR2t4bFlFS0ZHX3FjYnotQW9HbWMzSDJ2QThLMUQ0ZWpTcklEYlR6d1RXb0J3YzZlR3EwcTdHQmwxYUFURVpJYTVfalYxYWFtMmxEVUhObUMwd1U?oc=5"
-        },
-        {
-          "source": "TradingView",
-          "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5EU21tVTB1NXFkXzJNQnozbFlrU090OVU5cW1rT3Nzc09PZU5rZVhqX0VxS1RDbkNrUWdlS0gzdER0S0x5YzQ2RV84WlhoTlUycFppaUl1Mk9aWUJGRFFHQ2NhYjc0d044WXMxcGJydG81MEZRMlJR?oc=5"
-        },
-        {
-          "source": "Exame",
-          "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUU8wRkhkWkw2Wm8xTXNnWVRfQUQxangxM0J1VFdZdVBoYkZLRnJGd1UtcHMzQXlPZHE0MmFQM1c2dWZZeHAwZmt6ekRLZnE1TThiODJJNHNnWEpfTUYxU3NzOFY0c2dXblhTNElRVFkxc3l4MWVuZzd3N1YxV2VBNkJhcGdnOFNMZWZxX3Nxa1cyOEFkd19neTZwMHpRY255Qjg1bkNjWjQ?oc=5"
-        },
-        {
-          "source": "Brasil 247",
-          "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOTVdkS0M2dWtEZVY5ZXFSRE5nRGlHVlB1T1FZZ0ZvUjVJclpHcEEwdXV0RDdmZ28xNTZSTWRxbEV4cFRUWW1fWVpkN1FUQ3MzWnVjbU5vM2Ixbmx4UHYwc2JwcEo1TFQ3ZEFMZVVRaUYyNFZYWDZYemQteEcyUWh4eWEySm9YUUNlODgxSlVpTUgwNmRoZlJ5YXdYUEdqdnFLaG8yQm1zaV9nVHQ5NTdOUmozaDRrTXBMNTNjS0hyUzc1d2VPOEc0UVV3dVp4eHV5ZUVoblBVQQ?oc=5"
-        },
-        {
-          "source": "Visno Invest",
-          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPN1Ryck1VUXNDc3ZkYUdRT1JoYXJ4M0Y5N3VNaTZxRDQ1X0ZsNEpuSEEtbnJuSldubGwtb0syWERIVVZoSE1FR1llZU5SbUxFbUh5THIxdjZrWldZbXJjbHY3ZWRFTk9Ld0VhRzlBZTJvRXFoVHVoZnJWMXNoVDctbWRJT09JTHkxSDk1all0VFFIVTZqLU1wMlhLQUpKcWoz?oc=5"
-        },
-        {
-          "source": "UOL Economia",
-          "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPT0dRUXJXT2Eyd1lBOVZFcV9WUkIxejcxYXhHM3NJMWtaNEFGaHp4LXllRmJ1dVRVS0UyRG9lRVEwMWYyTksta1B4Njg4TXg2YzllVUpQNGlUdFhIRjVKU25OOWd1ZnY2RnZ3cXpRMWpPbGtxeDZQdzlpRU1taFBiMnl5S1p5dGtYNmdBSlFjMWp0UXdsZVZmUWl4RVhrLVV2WE9GVW5KbzVyVVVaWWYxS3laSE5pRXZaV0JyaEQ2SGVmSDBkS0lxakYwUWJjdmZxX3NXX09DYy13TFNLU2xvazllUTBBMzZW?oc=5"
-        }
-      ]
-    },
-    {
-      "competitor_group": "Genial",
-      "matched_alias": "Genial Investimentos",
-      "title": "Genial leva guerra pelo cliente de alta renda até o pedágio - VEJA",
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPOWNyMTJPNzA5Zks1LVVVOEUya0kya2xYcV9nQ0xucjVzMnZRQmZlTmNiTDBRS2JXMHVkTGhmLXlNWTFNNzFIWnFITHVjeGpXcGJFakU1ZEQwWkZiM1ZzRFRUdzVob0JtVGZiaV9qRnpfTERJWFAzNDR0UDVMbzF5enRGZzQ1endGOTl1TkdUWUV4aGFaT2plWkVGRQ?oc=5",
-      "source": "VEJA",
-      "published_at": "2026-08-10T16:30:41+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxPOWNyMTJPNzA5Zks1LVVVOEUya0kya2xYcV9nQ0xucjVzMnZRQmZlTmNiTDBRS2JXMHVkTGhmLXlNWTFNNzFIWnFITHVjeGpXcGJFakU1ZEQwWkZiM1ZzRFRUdzVob0JtVGZiaV9qRnpfTERJWFAzNDR0UDVMbzF5enRGZzQ1endGOTl1TkdUWUV4aGFaT2plWkVGRQ?oc=5\" target=\"_blank\">Genial leva guerra pelo cliente de alta renda até o pedágio</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">VEJA</font>",
-      "source_indices": [
-        68
-      ],
-      "primary_index": 68,
-      "axes": [
-        "Produtos Novos"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": false,
-      "trigger_reason": null,
-      "why_it_matters": "A Genial está expandindo sua atuação para o segmento de alta renda, o que pode intensificar a concorrência por clientes nesse nicho.",
-      "relevance": "média",
-      "also_reported_by": []
-    },
-    {
-      "competitor_group": "XP/Clear/Rico",
-      "matched_alias": "XP Investimentos",
-      "title": "Lisandro Lopez deixa comando de marketing da XP - BPMoney",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNRzNTdXB4THRpTGlVYUlBNTlsS2NXd2RLYWVldUxYdGJGaEhLSFkwdzJTM0xHb2QyVExUX2h1bFdyVW9BT2s2QlRXV3BocUxQc1JXQkN5RVRmX2JSUnhTRFR4YjVtWnc1WWZwTzdvalhRczlHZjM3bUVmZk5tbWlxNkJnRjFadw?oc=5",
-      "source": "BPMoney",
-      "published_at": "2026-08-11T19:41:45+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxNRzNTdXB4THRpTGlVYUlBNTlsS2NXd2RLYWVldUxYdGJGaEhLSFkwdzJTM0xHb2QyVExUX2h1bFdyVW9BT2s2QlRXV3BocUxQc1JXQkN5RVRmX2JSUnhTRFR4YjVtWnc1WWZwTzdvalhRczlHZjM3bUVmZk5tbWlxNkJnRjFadw?oc=5\" target=\"_blank\">Lisandro Lopez deixa comando de marketing da XP</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BPMoney</font>",
-      "source_indices": [
-        32
-      ],
-      "primary_index": 32,
-      "axes": [
-        "Risco/Regulação"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": false,
-      "trigger_reason": null,
-      "why_it_matters": "A saída do diretor de marketing da XP pode indicar mudanças estratégicas na comunicação e posicionamento da marca, afetando a percepção do cliente investidor.",
-      "relevance": "média",
-      "also_reported_by": []
-    },
     {
       "competitor_group": "BTG Pactual",
       "matched_alias": "BTG Pactual",
@@ -158,66 +26,6 @@
     {
       "competitor_group": "BTG Pactual",
       "matched_alias": "BTG Pactual",
-      "title": "Lojas Renner contrata BTG pactual como formador de mercado para impulsionar liquidez na B3 - ADVFN",
-      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPS1pjOGhjNENlYmlXOFNiWnJ1a0FURkIwaUxUZHlLdGp6aF9vNElxTDdLQnNUdnc4UE5FazB3Ql9MV0wya3Q5WXNFWGNfbHhPY0lDOFdnR19RMGhtbVNWUGpXT0d0YVZ0clh0ekExYkNrbm1ZcERTNldLWnd5dERjODF3RFRGODBBMVdPYjkxN2Joalo5THFsdWY2SlJta2gxa3JmU1RfVF9oVHQ0d3lodEkwamR6R044LUdkLXEtR19sWFBi?oc=5",
-      "source": "ADVFN",
-      "published_at": "2026-08-11T13:36:44+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxPS1pjOGhjNENlYmlXOFNiWnJ1a0FURkIwaUxUZHlLdGp6aF9vNElxTDdLQnNUdnc4UE5FazB3Ql9MV0wya3Q5WXNFWGNfbHhPY0lDOFdnR19RMGhtbVNWUGpXT0d0YVZ0clh0ekExYkNrbm1ZcERTNldLWnd5dERjODF3RFRGODBBMVdPYjkxN2Joalo5THFsdWY2SlJta2gxa3JmU1RfVF9oVHQ0d3lodEkwamR6R044LUdkLXEtR19sWFBi?oc=5\" target=\"_blank\">Lojas Renner contrata BTG pactual como formador de mercado para impulsionar liquidez na B3</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ADVFN</font>",
-      "source_indices": [
-        44,
-        85,
-        107,
-        111
-      ],
-      "primary_index": 44,
-      "axes": [
-        "RV/Trading"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": false,
-      "trigger_reason": null,
-      "why_it_matters": "A contratação do BTG como formador de mercado pela Lojas Renner é uma operação de trading que não afeta diretamente o cliente investidor pessoa física, mas indica atuação no mercado de RV.",
-      "relevance": "média",
-      "also_reported_by": [
-        {
-          "source": "Clube FII News",
-          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQVi13OVhuSjE1c2llTU85cHNqYVBUZ3p0cHlQVWg4TnBfUElXRGpqT2JDbWg2T01jUjNCbDRfUE5wWjRlQWhnQjRBSl9xLWFIZXlTZnhRMGRzNzR2UjZXem16bzBmdnpzbTFiaFZMbkZhQnEyNTJrZ1BaSkJGd293UWlJaDVDSUpVRk5ESDdBMkhlVXJLbG9mSWt3?oc=5"
-        },
-        {
-          "source": "BPMoney",
-          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNU2J3SmczS0tsWWFzVmJhWmY2eVJEQ2p1Y3Q4MVdsUTNBSExzeWgxYm14dFVoQUFmamJSaUJtLWp1ZU4xbWZJZlh5b0pCWUEyR1gyd3I4ajM0RWZOYWF4V2p4am02Mkx2ZE9tVG1OTi1HRlJxUGsweFduR2ZodW16Uy1EUEc4emMxdWZpbnd1cjlJT1d6NXhsLW5LSFA?oc=5"
-        },
-        {
-          "source": "financenews.com.br",
-          "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQTVdUVkZNcjNURUdJMU54aElTOTNJUEp1NTJNOWF6NUtzSGktdTlsOE9uOU1FV3Z2VmNsOVUzN0tIcGhYdDQ2QkkwTHV5WlVVX3p3NGhscW9pQnF4QTNsUG5Wa1hkVHZCUzlfdEZGWTh3RjltLTc4bzFsQWhjamI1NmFXZVBCNVVwTVV2aDc5cnEzeU5aUWR0WWxNYlN4OGpjUDdTMDZ3dGJrWmVFeHdjbXh2N2Y1cTd6OFJyRW5yc1lqR0RkZUczbDlB?oc=5"
-        }
-      ]
-    },
-    {
-      "competitor_group": "BTG Pactual",
-      "matched_alias": "BTG Pactual",
-      "title": "BTG Pactual promove 2ª edição da Copa BTG Trader, com prêmio de R$ 1 milhão; veja como se preparar - Bora Investir",
-      "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxPUG4xYTZzLVVReXdFSHBPYy1IbWxXY0l3NFA4NVpGZ2taMkxBZDlMZTlqeWpsQnNCeDgtYjdaQ0ZVT3lvOUNQYVYxeXBaTFRydGRMMU9zWWxJSHZYSHFMbHFsT1ZqWmY4UDJMOWluRDQ3eHpWOVV2aEtDMkJiaUZpY0k2UWVMdlU1b2xqcUFYN2ZzNS1hME96RksyZnl2RE5odUFfbGl2enM0QUZSdzl1Tm9RQy10MGVRT3JVal92TnI4WmJXMlBtdG11cVBTZ0FFNVJEUE9PYWN1NGdSS0taakRFUjBEWUhKbmcwQVZDYnJpdWhOV2FxWHZvLXhHei1vOE40OHZn?oc=5",
-      "source": "Bora Investir",
-      "published_at": "2026-08-10T17:29:00+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMihgJBVV95cUxPUG4xYTZzLVVReXdFSHBPYy1IbWxXY0l3NFA4NVpGZ2taMkxBZDlMZTlqeWpsQnNCeDgtYjdaQ0ZVT3lvOUNQYVYxeXBaTFRydGRMMU9zWWxJSHZYSHFMbHFsT1ZqWmY4UDJMOWluRDQ3eHpWOVV2aEtDMkJiaUZpY0k2UWVMdlU1b2xqcUFYN2ZzNS1hME96RksyZnl2RE5odUFfbGl2enM0QUZSdzl1Tm9RQy10MGVRT3JVal92TnI4WmJXMlBtdG11cVBTZ0FFNVJEUE9PYWN1NGdSS0taakRFUjBEWUhKbmcwQVZDYnJpdWhOV2FxWHZvLXhHei1vOE40OHZn?oc=5\" target=\"_blank\">BTG Pactual promove 2ª edição da Copa BTG Trader, com prêmio de R$ 1 milhão; veja como se preparar</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bora Investir</font>",
-      "source_indices": [
-        54
-      ],
-      "primary_index": 54,
-      "axes": [
-        "RV/Trading"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": false,
-      "trigger_reason": null,
-      "why_it_matters": "A Copa BTG Trader é uma competição de trading que pode atrair e engajar clientes investidores, mas não representa uma mudança concreta de produto ou preço.",
-      "relevance": "média",
-      "also_reported_by": []
-    },
-    {
-      "competitor_group": "BTG Pactual",
-      "matched_alias": "BTG Pactual",
       "title": "Ministro dá 10 dias para Master, BTG Pactual e Acura prestarem informações sobre fundos - issoenoticia.com.br",
       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQY2NBcm9PNHEya2szcmI4YWw1NFA2M3M1eTdwYmh5ay1TcGtQOHhqUkUxVFR5YWtrSHJTQUJnUGczYTJ3YlVVM0ZNa3NuQnhBZzZzaEEzdnplR0xqbEY3bm1jMU8tZnBqTVZKYTdLQXZYWkF6NkNHZTI2eVVCcUhsSGNDUmlxTEstY1pzdDhTYVFzQW9qRmdqa2dYc3pyeWRpQ2pucjJkVVFSbGRGTU5lTU1hUVNIUQ?oc=5",
       "source": "issoenoticia.com.br",
@@ -234,96 +42,6 @@
       "daily_trigger": false,
       "trigger_reason": null,
       "why_it_matters": "A solicitação de informações sobre fundos pelo ministro pode gerar riscos regulatórios para o BTG, mas não é um fato que toque diretamente o cliente investidor.",
-      "relevance": "média",
-      "also_reported_by": []
-    },
-    {
-      "competitor_group": "Bradesco/Ágora",
-      "matched_alias": "Ágora investimentos",
-      "title": "Tempo real: Ibovespa cai mais de 2% com piora de blue chips e 'risco Brasil'; dólar sobe a R$ 5,16 - Money Times",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOOWxPQmxBVU91dEJEUmVrUnlRaHd3eVhZZDNOY0l2QUNGeFFOMm4xNzB3Umt4TEw3eERaejV0TFVxSG0yd2pEbE1aaklqOEJSemM4OVlackFmc3pCc1Voc2lod0NDY0ZzZ1RLN01yT0U4dVdGdlUxbmJKTWMwWlRqdVRHOVpLbGlyNzJ2T2pYZ0R1OUF0U05HYVVJSmRpQQ?oc=5",
-      "source": "Money Times",
-      "published_at": "2026-08-11T12:27:10+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxOOWxPQmxBVU91dEJEUmVrUnlRaHd3eVhZZDNOY0l2QUNGeFFOMm4xNzB3Umt4TEw3eERaejV0TFVxSG0yd2pEbE1aaklqOEJSemM4OVlackFmc3pCc1Voc2lod0NDY0ZzZ1RLN01yT0U4dVdGdlUxbmJKTWMwWlRqdVRHOVpLbGlyNzJ2T2pYZ0R1OUF0U05HYVVJSmRpQQ?oc=5\" target=\"_blank\">Tempo real: Ibovespa cai mais de 2% com piora de blue chips e 'risco Brasil'; dólar sobe a R$ 5,16</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Money Times</font>",
-      "channel": "incident",
-      "source_indices": [
-        125
-      ],
-      "primary_index": 125,
-      "axes": [
-        "Tecnologia"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": true,
-      "trigger_reason": "INC",
-      "why_it_matters": "A queda do Ibovespa em mais de 2% pode indicar um incidente de mercado, mas não há evidência de indisponibilidade de plataforma ou falha de execução específica do concorrente.",
-      "relevance": "alta",
-      "also_reported_by": []
-    },
-    {
-      "competitor_group": "XP/Clear/Rico",
-      "matched_alias": "XP Investimentos",
-      "title": "O novo copiloto dos assessores de investimentos - Metrópoles",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE54Qng0WFdIREhmRzZ4Snl4S1dkeE9WNVB3WW5aWU1kWEtnVHZCdjlHNlo1eVhxenFtbXhlN1ozdkJmTWppdzBLOTV3WFZ2ams2bXJZS0ctOVR5S0JVNl9FRzdLcGk5QUh6aGc?oc=5",
-      "source": "Metrópoles",
-      "published_at": "2026-08-11T13:55:00+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE54Qng0WFdIREhmRzZ4Snl4S1dkeE9WNVB3WW5aWU1kWEtnVHZCdjlHNlo1eVhxenFtbXhlN1ozdkJmTWppdzBLOTV3WFZ2ams2bXJZS0ctOVR5S0JVNl9FRzdLcGk5QUh6aGc?oc=5\" target=\"_blank\">O novo copiloto dos assessores de investimentos</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Metrópoles</font>",
-      "source_indices": [
-        4
-      ],
-      "primary_index": 4,
-      "axes": [
-        "Tecnologia",
-        "Produtos Novos"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": true,
-      "trigger_reason": "LANC",
-      "why_it_matters": "A XP está lançando uma ferramenta de IA para assessores, o que pode aumentar a eficiência e a qualidade do serviço, pressionando concorrentes a investirem em tecnologia similar.",
-      "relevance": "alta",
-      "also_reported_by": []
-    },
-    {
-      "competitor_group": "XP/Clear/Rico",
-      "matched_alias": "XP Investimentos",
-      "title": "Inove Investimentos incorpora Nauta e amplia presença no Rio de Janeiro - InfoMoney",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQNWJ1M3QwdE56cjdfdUhQS0pza3ZIZ2lVTDBtUWNaX1U0VzZ4N3JlM3lOb2ZSeG92SGpxY2puQWw0ekdXcDFWRkltQlBpUEI2ZFZacWhqS1QtRDhxQmZsOWE2MHVuRXBwLUlSMW4xU3ctcklpS2lBb09PUjNMY0ZNUTlBZmhzbnNHbFpmRndPNTc3ejZ4UjFzMi1kUDlhNDc5Uk44TkVrZmJrOWZsV0HSAbMBQVVfeXFMT0FaSmNoeE0yVVhOTkRzNm9JMzBJMGZxd1VvZFYtV1dkd0dGRU5hYVQtUkl1NS1oZ3FFQ192QzczTzFCLWd6QlBWWUQyQUR5NWcwbjFObzVKalYxdThKaWFjcnlncktnVmEtVXRiZmk0dTV2Rms2czJTVGMyNjVnb3ctbVEzOWtyaVdJOGJCTlZUMHZBU3l6dGZkVXl0MkNoSWo4OTJwSndhRUttUWcwTjkyWW8?oc=5",
-      "source": "InfoMoney",
-      "published_at": "2026-08-11T12:32:22+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxQNWJ1M3QwdE56cjdfdUhQS0pza3ZIZ2lVTDBtUWNaX1U0VzZ4N3JlM3lOb2ZSeG92SGpxY2puQWw0ekdXcDFWRkltQlBpUEI2ZFZacWhqS1QtRDhxQmZsOWE2MHVuRXBwLUlSMW4xU3ctcklpS2lBb09PUjNMY0ZNUTlBZmhzbnNHbFpmRndPNTc3ejZ4UjFzMi1kUDlhNDc5Uk44TkVrZmJrOWZsV0HSAbMBQVVfeXFMT0FaSmNoeE0yVVhOTkRzNm9JMzBJMGZxd1VvZFYtV1dkd0dGRU5hYVQtUkl1NS1oZ3FFQ192QzczTzFCLWd6QlBWWUQyQUR5NWcwbjFObzVKalYxdThKaWFjcnlncktnVmEtVXRiZmk0dTV2Rms2czJTVGMyNjVnb3ctbVEzOWtyaVdJOGJCTlZUMHZBU3l6dGZkVXl0MkNoSWo4OTJwSndhRUttUWcwTjkyWW8?oc=5\" target=\"_blank\">Inove Investimentos incorpora Nauta e amplia presença no Rio de Janeiro</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">InfoMoney</font>",
-      "source_indices": [
-        8
-      ],
-      "primary_index": 8,
-      "axes": [
-        "Produtos Novos"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": true,
-      "trigger_reason": "MA",
-      "why_it_matters": "A incorporação da Nauta pela Inove, uma assessoria ligada à XP, fortalece a rede de distribuição da XP no Rio de Janeiro, aumentando a competição por clientes de alta renda.",
-      "relevance": "alta",
-      "also_reported_by": []
-    },
-    {
-      "competitor_group": "BTG Pactual",
-      "matched_alias": "BTG Pactual",
-      "title": "Exclusivo: BTG compra créditos de 2W e Rio Alto por 2% do valor; cotistas estimam perdas de R$ 1,7 bilhão - Valor Econômico",
-      "link": "https://news.google.com/rss/articles/CBMijgJBVV95cUxOeVUzZGtuVzVpR0ZJelBUQWplZDZIYmJfd3JadFZDdDVwYTdPYlZYOUQ2c3h5SU1peEpzRnVpYUdreURYU2NvT3dnMjN4eGFpLTE5TDNEYnNvX2g2UGRNVFRjalJ3RE1MN3JQQXR0SkZLMkt1cHlTdnB3dGJ2UElUM0RFM1MtbzhzTnJmeTZOSVFrcXpQUEtTYktWT0gzbVc4T1RMeGw5S3VKdDBBSXVOTjl5R0lveDFXRTZBRG9ETXpmZUxqSTZ5TDQtcDhfOVc4ME10RktFZzNzT0dQN3Y0SDZFNzJNQ0hWZElWT0tTSmZ5bzBVVkkzVXdsd2xkcm8zbTNlVnhWUDJFUGVWbWfSAZwCQVVfeXFMTmQtajZDVnpoNFFPQTlXcjl2ZnRDV0w3bTEyLTNGcXBQcEZlLWdMV2daMkdrRlo3aUxpTjkzclBMQjFwaTFNYWZodDZLRlcyMUZzSWtrOGd0XzlkWVN6NGRIZ0pWM1ozNTlSQ2xubGtfREZQT2dhZUNUaE52Z3hrVWhmOEhhUjdRWUZKMzV3eXVFbkpBVzdPTHlQY0ljaVdZaEgyZ2REYlA3TW1PRVVLZlc5ZDBPeHNGTkhUTmpRWDRXR2lobXktV0IzYjJoWWVucm42ZjBMNk1TeGdnbzFnaXdteHlEU0k0SnNjLWU2bjVhNEVabWxrMGNJUlBpLXhzUnFscFhuVzZiZ1NYbFVKSmlHcmx6clpRWFpPbWY?oc=5",
-      "source": "Valor Econômico",
-      "published_at": "2026-08-11T15:35:16+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMijgJBVV95cUxOeVUzZGtuVzVpR0ZJelBUQWplZDZIYmJfd3JadFZDdDVwYTdPYlZYOUQ2c3h5SU1peEpzRnVpYUdreURYU2NvT3dnMjN4eGFpLTE5TDNEYnNvX2g2UGRNVFRjalJ3RE1MN3JQQXR0SkZLMkt1cHlTdnB3dGJ2UElUM0RFM1MtbzhzTnJmeTZOSVFrcXpQUEtTYktWT0gzbVc4T1RMeGw5S3VKdDBBSXVOTjl5R0lveDFXRTZBRG9ETXpmZUxqSTZ5TDQtcDhfOVc4ME10RktFZzNzT0dQN3Y0SDZFNzJNQ0hWZElWT0tTSmZ5bzBVVkkzVXdsd2xkcm8zbTNlVnhWUDJFUGVWbWfSAZwCQVVfeXFMTmQtajZDVnpoNFFPQTlXcjl2ZnRDV0w3bTEyLTNGcXBQcEZlLWdMV2daMkdrRlo3aUxpTjkzclBMQjFwaTFNYWZodDZLRlcyMUZzSWtrOGd0XzlkWVN6NGRIZ0pWM1ozNTlSQ2xubGtfREZQT2dhZUNUaE52Z3hrVWhmOEhhUjdRWUZKMzV3eXVFbkpBVzdPTHlQY0ljaVdZaEgyZ2REYlA3TW1PRVVLZlc5ZDBPeHNGTkhUTmpRWDRXR2lobXktV0IzYjJoWWVucm42ZjBMNk1TeGdnbzFnaXdteHlEU0k0SnNjLWU2bjVhNEVabWxrMGNJUlBpLXhzUnFscFhuVzZiZ1NYbFVKSmlHcmx6clpRWFpPbWY?oc=5\" target=\"_blank\">Exclusivo: BTG compra créditos de 2W e Rio Alto por 2% do valor; cotistas estimam perdas de R$ 1,7 bilhão</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Valor Econômico</font>",
-      "source_indices": [
-        39
-      ],
-      "primary_index": 39,
-      "axes": [
-        "Risco/Regulação"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": false,
-      "trigger_reason": null,
-      "why_it_matters": "A compra de créditos da 2W e Rio Alto pelo BTG a preço baixo pode gerar perdas para cotistas de fundos, afetando a confiança na gestão de ativos do BTG e atraindo atenção regulatória.",
       "relevance": "média",
       "also_reported_by": []
     },
@@ -480,28 +198,6 @@
       "trigger_reason": "LANC",
       "why_it_matters": "O novo FI-Infra do BTG oferece retorno potencial acima do CDI e isenção de IR, atraindo investidores de varejo em busca de renda e diversificação.",
       "relevance": "alta",
-      "also_reported_by": []
-    },
-    {
-      "competitor_group": "BTG Pactual",
-      "matched_alias": "BTG Pactual",
-      "title": "BTG (BPAC11) acelera no crédito ao consumidor, mas não quer virar banco de varejo, diz CFO - Seu Dinheiro",
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQZzVGRUVBSzNieEVMdDJYZC0wTlZXN1ZxcjJyaEU2eGZsbElhZVVoXzBIcWRBUy1UdFRxRU91QnF1eXZvaVdMSnBLbU5vanBIeWhKY0daR1R2R2JGWjMxRXBvaTlITUhUeEo0a1hBN01WMWF2Rmw0QzBVN1NYQXUwb0Vxai1La3dOeW9aTnVNVVFtV3RlQW54djQ0T0dMZHV0cnV2X1Y1NkR2cF92TXN2ZXU0RGtOeW0xVGRtbFo0QTFKaFFnSU1FTlZ0V0ozTlk?oc=5",
-      "source": "Seu Dinheiro",
-      "published_at": "2026-08-11T19:36:51+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxQZzVGRUVBSzNieEVMdDJYZC0wTlZXN1ZxcjJyaEU2eGZsbElhZVVoXzBIcWRBUy1UdFRxRU91QnF1eXZvaVdMSnBLbU5vanBIeWhKY0daR1R2R2JGWjMxRXBvaTlITUhUeEo0a1hBN01WMWF2Rmw0QzBVN1NYQXUwb0Vxai1La3dOeW9aTnVNVVFtV3RlQW54djQ0T0dMZHV0cnV2X1Y1NkR2cF92TXN2ZXU0RGtOeW0xVGRtbFo0QTFKaFFnSU1FTlZ0V0ozTlk?oc=5\" target=\"_blank\">BTG (BPAC11) acelera no crédito ao consumidor, mas não quer virar banco de varejo, diz CFO</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seu Dinheiro</font>",
-      "source_indices": [
-        80
-      ],
-      "primary_index": 80,
-      "axes": [
-        "Produtos Novos"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": false,
-      "trigger_reason": null,
-      "why_it_matters": "A aceleração no crédito ao consumidor pelo BTG, sem virar banco de varejo, pode aumentar a competição por clientes de investimento, mas não é uma mudança de produto para o investidor.",
-      "relevance": "média",
       "also_reported_by": []
     },
     {
@@ -5219,6 +4915,82 @@
       "why_it_matters": "Consolidação entre Genial e BTG, se confirmada, redesenha o mapa de corretoras independentes e pode afetar a base de clientes e a oferta de produtos da Genial. Ainda é negociação em andamento, sem fato consumado.",
       "relevance": "média",
       "also_reported_by": []
+    },
+    {
+      "competitor_group": "Nubank/NuInvest",
+      "matched_alias": "Nubank",
+      "title": "Nubank normaliza operações com criptomoedas após falha em fornecedor externo - InfoMoney",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNbWtZVUlhTkFMclpWMjB1TW5QVGNsb2NNQm9kQ1JfU1RKbUc1Rk9YTFFMVlBSUVBueEE3OEkwY1FDdUNxVHl3N1huMGpYUkZDaUVoRWNfdzVoMnZENEk2ZGh1a0Y2NzZwa1FGbzY2T1VYdnN3WVEzdWVSOW92VTlhRmNNdHVzNG5jQmpnYVh3VU1nTjJV0gGaAUFVX3lxTFBJZHRoY1Vud1M0OTJSRnV5QU5EV1VFQ3FmZDNqYWRJb2E5N28zY1Jyb01iSHlzUTBhQTVWb29BeHZPOWctZVVjMVVQRGlETVEwMDZBbmtmQUUweXVyLWJDVGtGTGg5Y3Zud0ZlOXExUERwa1E1VTdRUFVUMy0xWmpyMG1jODhlUFZXVlNrVlF6TUNFeXlqVXJOeXc?oc=5",
+      "source": "InfoMoney",
+      "published_at": "2026-11-07T14:15:24+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxNbWtZVUlhTkFMclpWMjB1TW5QVGNsb2NNQm9kQ1JfU1RKbUc1Rk9YTFFMVlBSUVBueEE3OEkwY1FDdUNxVHl3N1huMGpYUkZDaUVoRWNfdzVoMnZENEk2ZGh1a0Y2NzZwa1FGbzY2T1VYdnN3WVEzdWVSOW92VTlhRmNNdHVzNG5jQmpnYVh3VU1nTjJV0gGaAUFVX3lxTFBJZHRoY1Vud1M0OTJSRnV5QU5EV1VFQ3FmZDNqYWRJb2E5N28zY1Jyb01iSHlzUTBhQTVWb29BeHZPOWctZVVjMVVQRGlETVEwMDZBbmtmQUUweXVyLWJDVGtGTGg5Y3Zud0ZlOXExUERwa1E1VTdRUFVUMy0xWmpyMG1jODhlUFZXVlNrVlF6TUNFeXlqVXJOeXc?oc=5\" target=\"_blank\">Nubank normaliza operações com criptomoedas após falha em fornecedor externo</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">InfoMoney</font>",
+      "source_indices": [
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "primary_index": 47,
+      "axes": [
+        "Tecnologia",
+        "RV/Trading"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "INC",
+      "why_it_matters": "Falha em fornecedor externo derrubou saques e depósitos de cripto no Nubank, expondo dependência de terceiros na área de investimentos e abrindo espaço para concorrentes com infraestrutura própria.",
+      "relevance": "alta",
+      "also_reported_by": [
+        {
+          "source": "SpaceMoney",
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOYmw2dVBCTl9iUkdveHVRU2JXSVNpN1ZNcm5Ka0ROUlV3RFVVOVJrVzlwcmNzVkFTMWdLTE91M3lWN1F1NXpDaW9iT0pBclRUV2gtRWVVZ09vV1NMdlM0NUtOaUpPd3Z4U3VQMHBDR1Z0Q1M0c3E4VDRubXluZFJSckpabGszcmJrTzZoVzZuTERPWDkyam5xb2lWc0NVY2VC?oc=5"
+        },
+        {
+          "source": "Paraíba Business",
+          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQdWtwVDhBSnc3SENvN0IwTkd0cHFGTU4xZkFkOWN1SXBIblJyWFlTbG9oUDQ4N3UxUHAzTGw0bUFGZXZPd1RxOURQbkNmTzFSbDRvekRvTGFpRUFmQTJvbmllMkpkWXA3OXpXeHBxdDRtVlo2MC1Xc210WVBtMFdVbUFnbzFtUHdLV1JSUkR4emtvMVNtel95bkVIaHpHT0t0N19VTTJXYzZ6NVNFanRZ?oc=5"
+        },
+        {
+          "source": "ativovirtual.com.br",
+          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNdDBDV2xDZGdRU2lIVnlHcmlCc010T3I4bzkxT2ZPZEI5cHlhaW9TR3hsOGNmZHBqR3B4a3FmbHc5eElPaGZKb2xGd19tS2RKZ2Y5WHFvVzBZc3RFaDVkOHV3VTlKM0RuWEVsbzNidmY5SjU3X2dVQ0NHREtoU1c0TnhzQnJadTZ6alBzNzFwcldDWGlrVlNQYUo5M0JWSmtMY1dsdDQwNFNURDEtcUw5QmpMTW1tQ3VaaDlwVQ?oc=5"
+        },
+        {
+          "source": "Portal do Bitcoin",
+          "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOZnpmWW1NTmgzYWZ5X3NKTV9vVlhsNHROSXpla1JCTFZlQ0VmOUpRcFE3MkNCMjZYUnNFMnVjcGRWMlAybjFxSkF6Q3ZoQWVsVmplaEJ6b1pyZEZvQ2hIeHhOLW1JOXh1STg4ZEVsc3UyLWpxaTdIbnhCSzAwRl94VWNUYWRrak5IYTdBWGptN3pQdDZiUTZUbWJQSmZfQjVVeVp6MW9aVHV1dV96TmdDbExjcERFaHBoNmdYdkVFVXdieTdqN2fSAcsBQVVfeXFMTjJidnVXXzkzaFNwTW5JNlY1Q01pZUtQd1oxLXJDdGc2NDZfWXh4cWZxY2s0YlJldDd1WFdaUmdUYjlCTENLRm93NUVNTnkyTDNXTTVuc01EX2ktRUhyWWo4OWdRMVpldmhnSXFkRjU3VlVZSGlDbFZ4Vmp3OEp3WU9KY1VSR1hIcmVCamVnVUJ2bmRYQ25MWjJheTFFLWVob2M2bUdYNHItRWY1QWZzOWJZSWFyUFlWdDl1WWNETnRxUWlCQ29SdmtMdVk?oc=5"
+        },
+        {
+          "source": "O Cafezinho",
+          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeTA0YWozdzNjUktwaHZfMUtJQXNidjNDb0hjSTJFOHdHWm8ycVRRLTNvR0cyamtYbHVYb083bjVsTFVMVzd4TlpYc1U0R2h2NmhDWnhwRm1QZWc4OS00a040NHJEQVpBaXhuQ2lIS0JNc0szbjZJU2hnWUc2LVBoSHAxb00zRVBFVnRNaERsMUJvLUVkQlNhZ0ZmSUVKb2Q3Yi1pQUFCMVhQQdIBrwFBVV95cUxOUk1DbjE2UkNocndZM1dHdHRqWG5zbGlLMTVwMk02eXJRYkZkU1dCel9iUUhieS1vaTZLN19DUnk0MExZV3A1TmNLWHA0YTU3RVIwbzQ1QVpFRXN1SzNOaHZlcERsRmxsQ0JBRHExMWxDTjIyVk91Sk5JRFNiS2d2aE8td20xYjZVSlowWkotdTlrUVJudzZQNkJHU0x6QmtnMHpnVGgybmx1RldiY2Jj?oc=5"
+        },
+        {
+          "source": "Plantão Brasil",
+          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQdm01aXYwRl8tTlE0QXN3QmNtRHhIaFQ3UnBNc05GRWctV1JYWDZJZGFpNlZ5ZnNGbWUxZ3JsWnNlY3J1aElXUkk5MG9YdG9VdzNHeENKeUMtb2dxZmQxVmFMek9tQXpyYWhRMGw2SkRURlBDVGNLYk43eVlEWHNDUG5aV3VxTVBQRWhJdTFtX0ZDckozR1U5ZVplaGF3VGZhMm13U0hnS1VMa1V3QXJTcS1KNzNYZHRmZHJTdQ?oc=5"
+        }
+      ]
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "Nova rota: BTG Pactual amplia plataforma para investir no exterior por meio de holdings patrimoniais - Prensa Mercosur",
+      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxON01CMWdtYWhjR29FM2hpU2pibWZndmFwVVMwT3hBbFpRTVJKQWlwbGJUTU5Ga2hGVlVTWVlKb3hHeE9LVm02bjAxUmdTeThjQnh1UG5NQjVWQThlV3ZNdEdEazNEYWJLbTV1MEMxS2FiRG04S0liSmlXdzJyOWZIUGo1aGFES0ZjSGtzaVNtdlVwcTA5VGN0YWhuT2p4ZDh2U2dsNHVPcXFDTFJkZW5IZTBfUnJEYVprUWs5SVkyeWJuYXU3Wnp3THVBZFpkMHdOWmxLQg?oc=5",
+      "source": "Prensa Mercosur",
+      "published_at": "2026-11-08T21:26:15+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi1AFBVV95cUxON01CMWdtYWhjR29FM2hpU2pibWZndmFwVVMwT3hBbFpRTVJKQWlwbGJUTU5Ga2hGVlVTWVlKb3hHeE9LVm02bjAxUmdTeThjQnh1UG5NQjVWQThlV3ZNdEdEazNEYWJLbTV1MEMxS2FiRG04S0liSmlXdzJyOWZIUGo1aGFES0ZjSGtzaVNtdlVwcTA5VGN0YWhuT2p4ZDh2U2dsNHVPcXFDTFJkZW5IZTBfUnJEYVprUWs5SVkyeWJuYXU3Wnp3THVBZFpkMHdOWmxLQg?oc=5\" target=\"_blank\">Nova rota: BTG Pactual amplia plataforma para investir no exterior por meio de holdings patrimoniais</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Prensa Mercosur</font>",
+      "source_indices": [
+        40
+      ],
+      "primary_index": 40,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "Ampliação da plataforma internacional via holdings patrimoniais reforça a oferta de investimento no exterior do BTG, segmento disputado com XP e demais corretoras.",
+      "relevance": "média",
+      "also_reported_by": []
     }
   ],
   "results": [
@@ -5529,10 +5301,21 @@
     },
     "Nubank/NuInvest": {
       "status": "instavel_recente",
-      "last_incident_at": "2026-11-06T15:53:50+00:00",
-      "last_incident_title": "Nubank suspende saques de criptomoedas; banco aponta falha externa - UOL Economia",
-      "incident_count_window": 7,
+      "last_incident_at": "2026-11-07T14:15:24+00:00",
+      "last_incident_title": "Nubank normaliza operações com criptomoedas após falha em fornecedor externo - InfoMoney",
+      "incident_count_window": 8,
       "incidents": [
+        {
+          "published_at": "2026-11-07T14:15:24+00:00",
+          "title": "Nubank normaliza operações com criptomoedas após falha em fornecedor externo - InfoMoney",
+          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNbWtZVUlhTkFMclpWMjB1TW5QVGNsb2NNQm9kQ1JfU1RKbUc1Rk9YTFFMVlBSUVBueEE3OEkwY1FDdUNxVHl3N1huMGpYUkZDaUVoRWNfdzVoMnZENEk2ZGh1a0Y2NzZwa1FGbzY2T1VYdnN3WVEzdWVSOW92VTlhRmNNdHVzNG5jQmpnYVh3VU1nTjJV0gGaAUFVX3lxTFBJZHRoY1Vud1M0OTJSRnV5QU5EV1VFQ3FmZDNqYWRJb2E5N28zY1Jyb01iSHlzUTBhQTVWb29BeHZPOWctZVVjMVVQRGlETVEwMDZBbmtmQUUweXVyLWJDVGtGTGg5Y3Zud0ZlOXExUERwa1E1VTdRUFVUMy0xWmpyMG1jODhlUFZXVlNrVlF6TUNFeXlqVXJOeXc?oc=5",
+          "source": "InfoMoney",
+          "why_it_matters": "Falha em fornecedor externo derrubou saques e depósitos de cripto no Nubank, expondo dependência de terceiros na área de investimentos e abrindo espaço para concorrentes com infraestrutura própria.",
+          "axes": [
+            "Tecnologia",
+            "RV/Trading"
+          ]
+        },
         {
           "published_at": "2026-11-06T15:53:50+00:00",
           "title": "Nubank suspende saques de criptomoedas; banco aponta falha externa - UOL Economia",
