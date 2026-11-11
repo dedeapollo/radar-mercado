@@ -32,7 +32,7 @@ DEEPSEEK_API_URL = "https://api.deepseek.com/chat/completions"
 def item_html(item: dict) -> str:
     return f"""
     <div style="margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid #eee;">
-      <strong>[{item['competitor_group']}] {item['title']}</strong><br>
+      <strong>{item['title']}</strong><br>
       <span style="color:#555;">{item['why_it_matters']}</span><br>
       <a href="{item['link']}">{item['source']}</a> · {item['published_at'][:10]}
     </div>
