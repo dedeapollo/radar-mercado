@@ -1,98 +1,6 @@
 {
-  "generated_at": "2026-11-10T17:20:03.135404+00:00",
+  "generated_at": "2026-11-11T17:30:05.568924+00:00",
   "items": [
-    {
-      "competitor_group": "BTG Pactual",
-      "matched_alias": "BTG Pactual",
-      "title": "BTG tem acordo encaminhado para assumir operação do Nubank Parque, estádio do Palmeiras - Estadão",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNSzJMQmJhRXNZclhtT203TmEyempuQmN0ME5LbjgyVzVacEhlZGxTXzNLaXlCdmN2cG5TVGZMa0R1SFUta2JOTU5nZFBFNUpOMk84RmtDYjVHNDZtWmZFb21Vb05md2pHaGVETTV2VHRETU9LUXFjSUJ5UTBNb0EtanhFZ2JYSFJCd1R3TFJiRGtCeVc5c2dORE96cTV0UnRVZm9KVmxrSno2QVlINjdHUlpUaFhGemttaVlB0gHAAUFVX3lxTE4tcTY5dTRLYTZCRkhWc0cwZkpnc0VaNTNqNlhrS0l2djNfa3ZjWWY0d0VIaWpSRHJya2J4Z3RrUTFHSVpBaUpraEs3SGxfTmR2dmRPaC1fckZaaEs0ODE4VnFQbjFqQ25sc2ZFOFdtZmhFOTFIa25wdHFpOG1NdGQ0NlhZbWJSNlVGdlBGQXZaX1VmTjJ5LU5KUFROdUJ4eE02Wjh0V1FpeVdXeml3MDhFWXFndkJpcS02aFlmeEROZw?oc=5",
-      "source": "Estadão",
-      "published_at": "2026-08-12T18:35:00+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxNSzJMQmJhRXNZclhtT203TmEyempuQmN0ME5LbjgyVzVacEhlZGxTXzNLaXlCdmN2cG5TVGZMa0R1SFUta2JOTU5nZFBFNUpOMk84RmtDYjVHNDZtWmZFb21Vb05md2pHaGVETTV2VHRETU9LUXFjSUJ5UTBNb0EtanhFZ2JYSFJCd1R3TFJiRGtCeVc5c2dORE96cTV0UnRVZm9KVmxrSno2QVlINjdHUlpUaFhGemttaVlB0gHAAUFVX3lxTE4tcTY5dTRLYTZCRkhWc0cwZkpnc0VaNTNqNlhrS0l2djNfa3ZjWWY0d0VIaWpSRHJya2J4Z3RrUTFHSVpBaUpraEs3SGxfTmR2dmRPaC1fckZaaEs0ODE4VnFQbjFqQ25sc2ZFOFdtZmhFOTFIa25wdHFpOG1NdGQ0NlhZbWJSNlVGdlBGQXZaX1VmTjJ5LU5KUFROdUJ4eE02Wjh0V1FpeVdXeml3MDhFWXFndkJpcS02aFlmeEROZw?oc=5\" target=\"_blank\">BTG tem acordo encaminhado para assumir operação do Nubank Parque, estádio do Palmeiras</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Estadão</font>",
-      "source_indices": [
-        43,
-        44,
-        45,
-        93,
-        101,
-        133
-      ],
-      "primary_index": 43,
-      "axes": [
-        "Produtos Novos"
-      ],
-      "confirmation": "especulativo",
-      "daily_trigger": false,
-      "trigger_reason": null,
-      "why_it_matters": "Se confirmado, o BTG assumirá a operação do estádio do Palmeiras, um ativo de alto perfil que pode gerar receitas e reforçar a marca, mas não impacta diretamente o cliente investidor.",
-      "relevance": "média",
-      "also_reported_by": [
-        {
-          "source": "VEJA",
-          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNemM4ZnB1NjFkWFVoOF9sZDl6V1dSUlFwVkJpRWE0QjI5LXpFbFNtelNYWWhYSkcwY29zeHBGeFgwUklhMTU5Y0RsOWE5Q0ExU2lPTjlDZnZVRk0waHB0RVB2ZTR5bS02QzR4OE1WbU9OYUY1VDg0OXQ1WjhJQkxuMjFUQ0l0TzJlSnlVMzlmZTE3UndQTWlSNHN0VDByNU5yMkF4S0RvalNvZC1mTm4zY01NLUUxV3M?oc=5"
-        },
-        {
-          "source": "Poder360",
-          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQQnZrcDRZdUFJWUFwMzI4MmlKeGh2SVRVOUZFell2ZkVkUmU5MHRtZ0h4VjZIQVFacVhiQWdhTmVFMmRmbFNYdzI4RjdOTFZJUWE1NHFoTUM5WllRQUlCT0JPU0dnakkzRHJIZXY2ZGhTUGJabXZBd1g5Q0REYWEwM0hVcWN5NmM3c09leUtlMU9FREZjZXJGWmNiQ3hhYjFnbFNIa3RKUTlFN2dD?oc=5"
-        },
-        {
-          "source": "Terra",
-          "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQcXRybVJvNFUtQ3ZqYm03dldBYXhIMnhETVJwa0VUbEF1c1JWRUVhYkVuV0N2T1BlWVVoNFY5eG1sVXRQTVdUMzB0dmJLNFM3MTl5cVV3WGVXNWFNWEtSQ1hVbHpTWXRweVFOZTZQUzY0VVVuRXdjQjBuazNBSWg2QnJRaXdySzZrUW1keEFtSlMtVFRpTmNadTNtM1hTWm5oVVVRNlNpdC1Rb3laX0d3dUFrbVpZekNscnpqcXl5NXNha0hsSVplNVE4c054T1dtVHNzVFo5eXJBTFdtakVrVw?oc=5"
-        },
-        {
-          "source": "Bacana News",
-          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPQzhiVkNHRkFoUlBWckJLdUdYaDBkdVVveTk3SGp1WUtCNjJmWGdaRjE2QzM4cno1QmdudXc1T25wVlhLTlN0bF9KdmNyNlFFUDVpYmNUNzB3cHVnWWxoVUEtSHZzc0ZfYmV3OWE4VWs5WnU4Z0oxdTBraHpYV1phZTNibUZGV1FVemwwcjJRTllISUdVc3NWdUhtRzlZMDlHMGtkUDhrVW1MbW81?oc=5"
-        },
-        {
-          "source": "EuQueroInvestir",
-          "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5MX3ZKY0NRM1ExYVFSRTZ2TjYtRUhVVzFWcmMtZldBa2ZhUi1ZaTBHWDNVcHhPU0RkQzhHQWlvYk5tSVhrTkNWckoxOWJSMFh0MWE1bmNZLWdpa2N4MGdoMVhnckkyc3Y3WEZHYVJVbnJCSVJUeEFvZQ?oc=5"
-        }
-      ]
-    },
-    {
-      "competitor_group": "BTG Pactual",
-      "matched_alias": "BTG Pactual",
-      "title": "BTG Asset lista novo FI-Infra na bolsa, com retorno potencial acima do CDI e isenção de IR; saiba mais - Seu Dinheiro",
-      "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOY3BsX1dHckc2MWlEUEhORnV3cFBFWElRaE1pUWdjYVhqYWF0WWlfLUFxXzY2VGNMSm5lZUdvMXFsRTgwZHJCUnZhVVFsR0tGRHRmZWZjNnppTWJTZGhDUnRxdVduZ1NEMWRCN016eW0yRWpuS2hKM2JWSlR2SGV4SGFYZ3lSdDk2UHUxZU5oa3N2Y2dzdW4wOWQwd2NtNVdvb0I1UTJlSFFLZENwbG55Y2NZaEdGVzNnRkl6X3RmZDVkOU1Kd0FRcWFQaUNNamZOaXBJdll2Y0dlV0NhVGxpdTBYZ2E0N1BT?oc=5",
-      "source": "Seu Dinheiro",
-      "published_at": "2026-08-12T17:35:24+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi6AFBVV95cUxOY3BsX1dHckc2MWlEUEhORnV3cFBFWElRaE1pUWdjYVhqYWF0WWlfLUFxXzY2VGNMSm5lZUdvMXFsRTgwZHJCUnZhVVFsR0tGRHRmZWZjNnppTWJTZGhDUnRxdVduZ1NEMWRCN016eW0yRWpuS2hKM2JWSlR2SGV4SGFYZ3lSdDk2UHUxZU5oa3N2Y2dzdW4wOWQwd2NtNVdvb0I1UTJlSFFLZENwbG55Y2NZaEdGVzNnRkl6X3RmZDVkOU1Kd0FRcWFQaUNNamZOaXBJdll2Y0dlV0NhVGxpdTBYZ2E0N1BT?oc=5\" target=\"_blank\">BTG Asset lista novo FI-Infra na bolsa, com retorno potencial acima do CDI e isenção de IR; saiba mais</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seu Dinheiro</font>",
-      "source_indices": [
-        75
-      ],
-      "primary_index": 75,
-      "axes": [
-        "Produtos Novos"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": true,
-      "trigger_reason": "LANC",
-      "why_it_matters": "O novo FI-Infra do BTG oferece retorno potencial acima do CDI e isenção de IR, atraindo investidores de varejo em busca de renda e diversificação.",
-      "relevance": "alta",
-      "also_reported_by": []
-    },
-    {
-      "competitor_group": "Genial",
-      "matched_alias": "Genial Investimentos",
-      "title": "Banco Central multa Banco Genial em R$ 21,6 milhões e determina inabilitação do CEO - JOTA Info",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNUnVvaGtLOGpJTkQzTXI1b2VFcXFMWEZaVkh1Ymp6Yk5xUnlWbTliZWdMTUZMRFloeHRPdnZxNFo2YTZMR1ZDalNkMDM5WVVNdGxQQ2ZhQVRFWF9od1Yya1BELXRGeHZmWlNwRk5WTlVvUkpOVmh6dVprS2RKaXQwdmZvdkVZNW1nODkyY2ItajVhSHFudW5lWXV1ZlVhS3Jqd3JyVDNYNXh3c3ZEMVlxd0ticw?oc=5",
-      "source": "JOTA Info",
-      "published_at": "2026-08-12T18:18:24+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxNUnVvaGtLOGpJTkQzTXI1b2VFcXFMWEZaVkh1Ymp6Yk5xUnlWbTliZWdMTUZMRFloeHRPdnZxNFo2YTZMR1ZDalNkMDM5WVVNdGxQQ2ZhQVRFWF9od1Yya1BELXRGeHZmWlNwRk5WTlVvUkpOVmh6dVprS2RKaXQwdmZvdkVZNW1nODkyY2ItajVhSHFudW5lWXV1ZlVhS3Jqd3JyVDNYNXh3c3ZEMVlxd0ticw?oc=5\" target=\"_blank\">Banco Central multa Banco Genial em R$ 21,6 milhões e determina inabilitação do CEO</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">JOTA Info</font>",
-      "source_indices": [
-        123
-      ],
-      "primary_index": 123,
-      "axes": [
-        "Risco/Regulação"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": true,
-      "trigger_reason": "REG",
-      "why_it_matters": "A multa do Banco Central e a inabilitação do CEO da Genial são um risco reputacional grave, podendo afetar a confiança dos clientes e a operação da corretora.",
-      "relevance": "alta",
-      "also_reported_by": []
-    },
     {
       "competitor_group": "Nubank/NuInvest",
       "matched_alias": "Nubank",
@@ -112,28 +20,6 @@
       "daily_trigger": true,
       "trigger_reason": "LANC",
       "why_it_matters": "Lançamento de fundo ligado ao Tesouro Selic pelo Nubank amplia sua oferta de investimentos de renda fixa, atraindo clientes conservadores e aumentando a concorrência no varejo.",
-      "relevance": "alta",
-      "also_reported_by": []
-    },
-    {
-      "competitor_group": "BTG Pactual",
-      "matched_alias": "BTG Pactual",
-      "title": "Seneca compra do BTG o Banco Nacional de Investimentos e prepara estreia no crédito - VEJA",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNTW9TNHNraFFlMzRxRTFPbW1KLXc4c2pWVVc1UndZeUl4dmxHMVpQU2oyMDVLd2tfV2xfdVRWTTJONVZTdDNXMzBXVk1haEtvWFR4cXhURFdDV09NY0ptSzJEVUNIZmNoT2ZzazhKQXR0SXpORDdFOW81b01zVjA3ZTR5eFZxdUE1YWVjQjhsRWhsZExhS2c4WVR2NDVQUkRYaG1KbGpsUnZyVnVrY1VDZ1VPc1ZPc29TVUVn?oc=5",
-      "source": "VEJA",
-      "published_at": "2026-08-13T15:09:59+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxNTW9TNHNraFFlMzRxRTFPbW1KLXc4c2pWVVc1UndZeUl4dmxHMVpQU2oyMDVLd2tfV2xfdVRWTTJONVZTdDNXMzBXVk1haEtvWFR4cXhURFdDV09NY0ptSzJEVUNIZmNoT2ZzazhKQXR0SXpORDdFOW81b01zVjA3ZTR5eFZxdUE1YWVjQjhsRWhsZExhS2c4WVR2NDVQUkRYaG1KbGpsUnZyVnVrY1VDZ1VPc1ZPc29TVUVn?oc=5\" target=\"_blank\">Seneca compra do BTG o Banco Nacional de Investimentos e prepara estreia no crédito</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">VEJA</font>",
-      "source_indices": [
-        49
-      ],
-      "primary_index": 49,
-      "axes": [
-        "Produtos Novos"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": true,
-      "trigger_reason": "MA",
-      "why_it_matters": "A venda do Banco Nacional de Investimentos pelo BTG pode indicar uma reestruturação de seus negócios, mas o impacto para o cliente investidor de varejo é indireto.",
       "relevance": "alta",
       "also_reported_by": []
     },
@@ -4912,6 +4798,58 @@
           "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQUzEyLVlpTUVVdjFCNkREbDA1ZFBidXRlYm85dkstVUJSM2tYMnJHVFE2dFQ0dmtSUUQ3VVU1bk9FZ2N2RzI1NzRud2hHUlRXS3JyTW1JOG16UkY5cUUyUVNBSmNsMG93WE1rZG9UOTRweFpwbmd6TWxhZ1U0YVVEajdZbFRMUFFyME1RdlR1VHpmaGZlaXFnOHRqck1xSmxaRmNPeDVxbG91R2R2cklj?oc=5"
         }
       ]
+    },
+    {
+      "competitor_group": "XP/Clear/Rico",
+      "matched_alias": "XP Investimentos",
+      "title": "Black XP oferece cashback da taxa de corretagem paga ao investir em ETFs da XP Asset - InfoMoney",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNazY4UmF6em1zMVJURWljVzFVSktvbjVibXdwWDBlaEJCcWpRakl4Zk5LWUU4MS1nbUpYLVhHU1R6bGZaYUlvcEE3Y0g2Y3ExZHNpbXRQT2RYeW5KSUlQUjNiaWZRY3FkTlE2aHI5b2lPaFpXYmNtZlhZT2loR2dON0lhSV9oN3A4ZzJWdWRWU2s4Qjk5RG9KVXpBQ0lneWRjM2psdkVnYUQ5T1dsd0xRVERWZjFHOUE2aENzWUotdm5YVGNtbTk40gHMAUFVX3lxTE5WOXN2Z2c4XzY5Q3N1WTYyd2dHamxrVlhUdEsxSVFUTVVvRGItQnIxZFlmeDJEU3czaFZ1WnBXdnpnWkRZeHp5U01kTnEzdzlGeDdQTTdhTW9YLVBESXl4ZmNyR015SDVfWlc1MC1fR1FTSXVmekl5VVpIelZWWjFRNGgyNnlmYXc3MHdrclB2MWR0dElWOUJVUzluQ3lkZTNnUGpDNl84QUVYd21CVmxfOVFpT1FWOHF3UzBTRm5ZejdhOGhwcWgxUlJEZw?oc=5",
+      "source": "InfoMoney",
+      "published_at": "2026-11-11T13:00:00+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxNazY4UmF6em1zMVJURWljVzFVSktvbjVibXdwWDBlaEJCcWpRakl4Zk5LWUU4MS1nbUpYLVhHU1R6bGZaYUlvcEE3Y0g2Y3ExZHNpbXRQT2RYeW5KSUlQUjNiaWZRY3FkTlE2aHI5b2lPaFpXYmNtZlhZT2loR2dON0lhSV9oN3A4ZzJWdWRWU2s4Qjk5RG9KVXpBQ0lneWRjM2psdkVnYUQ5T1dsd0xRVERWZjFHOUE2aENzWUotdm5YVGNtbTk40gHMAUFVX3lxTE5WOXN2Z2c4XzY5Q3N1WTYyd2dHamxrVlhUdEsxSVFUTVVvRGItQnIxZFlmeDJEU3czaFZ1WnBXdnpnWkRZeHp5U01kTnEzdzlGeDdQTTdhTW9YLVBESXl4ZmNyR015SDVfWlc1MC1fR1FTSXVmekl5VVpIelZWWjFRNGgyNnlmYXc3MHdrclB2MWR0dElWOUJVUzluQ3lkZTNnUGpDNl84QUVYd21CVmxfOVFpT1FWOHF3UzBTRm5ZejdhOGhwcWgxUlJEZw?oc=5\" target=\"_blank\">Black XP oferece cashback da taxa de corretagem paga ao investir em ETFs da XP Asset</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">InfoMoney</font>",
+      "source_indices": [
+        7
+      ],
+      "primary_index": 7,
+      "axes": [
+        "RV/Trading",
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "PRICE",
+      "why_it_matters": "Cashback da corretagem em ETFs da própria gestora é uma alavanca de pricing que reduz o custo efetivo de trading e pressiona a competitividade de outras corretoras no segmento de ETFs.",
+      "relevance": "alta",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "BTG Pactual fora do ar hoje? Serviços apresentam instabilidade nesta quarta, dia 11 de novembro - Portal de Camaquã",
+      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNOGFNSEs0WU9OY2gzenY4cW0xLU9zMFRUY29yUUJLTmw5d2NjRG5UaUZ0U1l5MjB2N1ozOVFZSGhxTERwSnhWb01CbGhHVERiTzNVSWlud0VYLXotbUt1ekNWdGlkaEFrOThQZHVNR0txakMtT3dzYlNuSDNTbUxydUhHcEcyOXB6b2VSMm5sQmcxYlE4Z0pVR1c1Wk9SQzlVMjlUVFZsb0p6Si1UTjlibGtIN1BleFRvZy1LQVQ5VmV2R0hkX3QxVG1OUm1TWFpfX0JWZE14V2JlQ0xzYkI1YWZIOA?oc=5",
+      "source": "Portal de Camaquã",
+      "published_at": "2026-11-11T10:28:26+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi4wFBVV95cUxNOGFNSEs0WU9OY2gzenY4cW0xLU9zMFRUY29yUUJLTmw5d2NjRG5UaUZ0U1l5MjB2N1ozOVFZSGhxTERwSnhWb01CbGhHVERiTzNVSWlud0VYLXotbUt1ekNWdGlkaEFrOThQZHVNR0txakMtT3dzYlNuSDNTbUxydUhHcEcyOXB6b2VSMm5sQmcxYlE4Z0pVR1c1Wk9SQzlVMjlUVFZsb0p6Si1UTjlibGtIN1BleFRvZy1LQVQ5VmV2R0hkX3QxVG1OUm1TWFpfX0JWZE14V2JlQ0xzYkI1YWZIOA?oc=5\" target=\"_blank\">BTG Pactual fora do ar hoje? Serviços apresentam instabilidade nesta quarta, dia 11 de novembro</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Portal de Camaquã</font>",
+      "source_indices": [
+        64,
+        91
+      ],
+      "primary_index": 64,
+      "axes": [
+        "Tecnologia",
+        "RV/Trading"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "INC",
+      "why_it_matters": "Instabilidade nos serviços do BTG em dia de pregão pode afetar execução de ordens e a confiança do cliente investidor, abrindo espaço para concorrentes.",
+      "relevance": "alta",
+      "also_reported_by": [
+        {
+          "source": "Portal de Camaquã",
+          "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNOGFNSEs0WU9OY2gzenY4cW0xLU9zMFRUY29yUUJLTmw5d2NjRG5UaUZ0U1l5MjB2N1ozOVFZSGhxTERwSnhWb01CbGhHVERiTzNVSWlud0VYLXotbUt1ekNWdGlkaEFrOThQZHVNR0txakMtT3dzYlNuSDNTbUxydUhHcEcyOXB6b2VSMm5sQmcxYlE4Z0pVR1c1Wk9SQzlVMjlUVFZsb0p6Si1UTjlibGtIN1BleFRvZy1LQVQ5VmV2R0hkX3QxVG1OUm1TWFpfX0JWZE14V2JlQ0xzYkI1YWZIOA?oc=5"
+        }
+      ]
     }
   ],
   "results": [
@@ -5117,11 +5055,22 @@
       ]
     },
     "BTG Pactual": {
-      "status": "estavel",
-      "last_incident_at": "2026-09-18T20:42:44+00:00",
-      "last_incident_title": "Aplicativo do BTG Pactual Empresas fica fora do ar e clientes inundam web de reclamações - ND Mais",
-      "incident_count_window": 4,
+      "status": "instavel_recente",
+      "last_incident_at": "2026-11-11T10:28:26+00:00",
+      "last_incident_title": "BTG Pactual fora do ar hoje? Serviços apresentam instabilidade nesta quarta, dia 11 de novembro - Portal de Camaquã",
+      "incident_count_window": 5,
       "incidents": [
+        {
+          "published_at": "2026-11-11T10:28:26+00:00",
+          "title": "BTG Pactual fora do ar hoje? Serviços apresentam instabilidade nesta quarta, dia 11 de novembro - Portal de Camaquã",
+          "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNOGFNSEs0WU9OY2gzenY4cW0xLU9zMFRUY29yUUJLTmw5d2NjRG5UaUZ0U1l5MjB2N1ozOVFZSGhxTERwSnhWb01CbGhHVERiTzNVSWlud0VYLXotbUt1ekNWdGlkaEFrOThQZHVNR0txakMtT3dzYlNuSDNTbUxydUhHcEcyOXB6b2VSMm5sQmcxYlE4Z0pVR1c1Wk9SQzlVMjlUVFZsb0p6Si1UTjlibGtIN1BleFRvZy1LQVQ5VmV2R0hkX3QxVG1OUm1TWFpfX0JWZE14V2JlQ0xzYkI1YWZIOA?oc=5",
+          "source": "Portal de Camaquã",
+          "why_it_matters": "Instabilidade nos serviços do BTG em dia de pregão pode afetar execução de ordens e a confiança do cliente investidor, abrindo espaço para concorrentes.",
+          "axes": [
+            "Tecnologia",
+            "RV/Trading"
+          ]
+        },
         {
           "published_at": "2026-09-18T20:42:44+00:00",
           "title": "Aplicativo do BTG Pactual Empresas fica fora do ar e clientes inundam web de reclamações - ND Mais",
