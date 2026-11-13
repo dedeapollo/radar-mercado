@@ -1,156 +1,6 @@
 {
-  "generated_at": "2026-11-12T17:46:22.890068+00:00",
+  "generated_at": "2026-11-13T17:24:41.971132+00:00",
   "items": [
-    {
-      "competitor_group": "Nubank/NuInvest",
-      "matched_alias": "Nubank",
-      "title": "Nubank fora do ar? Internautas reclamam de falhas em acesso - O GLOBO",
-      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxObk5qaG5ncmd4SndzMi1MUjc5ak9wdE84R3N6VGpVcGxlOGZBeFlJUHdQNHRjcmI1UVRKa3hDWnZ4cVc4Y0xqcE1VOENzQUNEdC03ZEZzU3VsZ2JiWTdpTXF5RUZISUo3Zkd5bVpBanJUN0J2SlhFcERkWXRmaGZiT0RtWGpyemhNcXlEeXJ0aXgzV0hnR0pGS2x6aDl5bzJrZTVIM2ZVcW1HbTF5clVuXzV3NDZIcS1zU3JtQm5B0gHMAUFVX3lxTE9QQUN6dVBPbGdPbzhKSlI5QXBlOHdvZmJQdTIyZ2FzdWY2MU1kaEdONWcybF9MekJVVWdHWW5BYVl3M1BqUUYydFV2OWZJZWwxRlVpYWNIMEZkRFR2S0lob2wtVlR4Umowd2Qzd0dYb1FxSWYybV9JaWktdnBRdDZyMVRNQl9ONUJjYTBNZF9VX0JhdS1qU0R3Y1BkZmU4QU4wWm42VWh3bm1vWXBCc0tpa282bElucVVJNUdQVXNXeUlBOHFLUVNSbE9ueA?oc=5",
-      "source": "O GLOBO",
-      "published_at": "2026-08-14T21:16:01+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxObk5qaG5ncmd4SndzMi1MUjc5ak9wdE84R3N6VGpVcGxlOGZBeFlJUHdQNHRjcmI1UVRKa3hDWnZ4cVc4Y0xqcE1VOENzQUNEdC03ZEZzU3VsZ2JiWTdpTXF5RUZISUo3Zkd5bVpBanJUN0J2SlhFcERkWXRmaGZiT0RtWGpyemhNcXlEeXJ0aXgzV0hnR0pGS2x6aDl5bzJrZTVIM2ZVcW1HbTF5clVuXzV3NDZIcS1zU3JtQm5B0gHMAUFVX3lxTE9QQUN6dVBPbGdPbzhKSlI5QXBlOHdvZmJQdTIyZ2FzdWY2MU1kaEdONWcybF9MekJVVWdHWW5BYVl3M1BqUUYydFV2OWZJZWwxRlVpYWNIMEZkRFR2S0lob2wtVlR4Umowd2Qzd0dYb1FxSWYybV9JaWktdnBRdDZyMVRNQl9ONUJjYTBNZF9VX0JhdS1qU0R3Y1BkZmU4QU4wWm42VWh3bm1vWXBCc0tpa282bElucVVJNUdQVXNXeUlBOHFLUVNSbE9ueA?oc=5\" target=\"_blank\">Nubank fora do ar? Internautas reclamam de falhas em acesso</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">O GLOBO</font>",
-      "channel": "incident",
-      "source_indices": [
-        123,
-        124,
-        125,
-        126,
-        127,
-        128,
-        129,
-        130,
-        131
-      ],
-      "primary_index": 123,
-      "axes": [
-        "Tecnologia"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": true,
-      "trigger_reason": "INC",
-      "why_it_matters": "A instabilidade no app do Nubank afeta a confiança dos clientes, mas o impacto é limitado à área de investimentos, que é o nosso foco.",
-      "relevance": "alta",
-      "also_reported_by": [
-        {
-          "source": "tmc.com.br",
-          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxORW1EOEFRY1h0UjVpMzB4SFh6M05hREFCNDdPN2g3Yno5aldsR1hxbUtJUXc5UDJKcXphemhSNWtCclZUWEQ4NVpod2swRWw3bjZjNTNVZmlGOXBIYjNiVk5nTkc2aWFNSlA0RW1aNnY1bG4wSUs5Z2s0TG9iR1AwZ2RNdw?oc=5"
-        },
-        {
-          "source": "Metrópoles",
-          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPbU8xcDdtRms3anZDZDlLeFI2ZGJSZjdSbEVERHZ4ekFDTTczSE1aNDAzY3NlVjlacm1JQ3lKSXNtRWx4YllIVF93TExDQ3JVX2tJeDBwWjg0cGd4N0JoSmY0OXVQckNCWFMxekk3WHAxMVROamNtZ2swUFdDUG9PeFIwOG9meGc2OGZHbXdXa2wzWlBGb3E3RlFHWmJRVndr?oc=5"
-        },
-        {
-          "source": "Tribuna do Planalto",
-          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPS1dyOWptaUphZGJ0WDZmMXR3S3dIQmdvTXlvcHJEeTdnbWMzaU5TcUxZclpBRE4wVU80OXZ4Qmg3Z1RPODd5aE8yYWpZSHVYRDIyQnhTeV9rVmllV1Z2WF9sQ2pjalhwQVhUZHJSbWl3UmdKaEw5Vm4wN25McFJlVDU5aS1RZ3FaMGR4YUl2ZWFlckVSc1VpWjJhMURKdFB5QjFoUUs4YXdDN0w3VTEwc01JRHI4bW8?oc=5"
-        },
-        {
-          "source": "Midiamax",
-          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQbzUwMjZxVHhPdDJtVVRNRDQ1YmpKOE1SUGFmNllZMXNpLXZGQ0lud2M2azg0aGpHTV9RXzNkZ1Q4RmtEalNta3lMQXgzM003WFl5RjZZbnF6MGhrTXlzaXM1SkZvOEVjcUY3ZTlkdGlBQ1dPUTVZTU8wM3A1eWQ5NUU3N1ZTc1hIZFpMZjUxaHZOT29UVWN5eER5U245Q3d1YW85bHBpVThYckVC?oc=5"
-        },
-        {
-          "source": "Tecnoblog",
-          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNUEN1WWc1RzF3TnRrTkp0UzB1NjhpbFNGLWJSUjk0T3dNX1pIM1Y0dEE0TW8zeV80ZGEzWmtXY0JlZ29lSnRKM0NLTEItV1RfY3AwcHBnaHB0QzVtSGFmVjlqVmVNVTdzM1J5Mmcxb1k5OUNFNkZaa1p6V1hGSUUxMnR4WWI3aURUZUt5d3ZB?oc=5"
-        },
-        {
-          "source": "Diário do Nordeste",
-          "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxObUw5Ri0ycW9ubXNlUGFjSWpMN1VGU2I1bVFZbVYtYXVJR1FQek9pUms4OEtfS3lOX1Y2eTJaOVhsS19PcXFMd0NaMmJ4SjdQTVZEZmVYdVdKV2kzcGNzUlJNLTJhSUtoTk03cXlYMlZzRjh4YjhTZ3Z2OGg2NnhQbU9KNXphM3MyNEp3RjgxSU5ZbzhLeVZYTHJtNWhLQ0MyMEt1dlNRckhZc3N5Ry1UNGJxSW5MVTQwT2wzLWJXejZHUVFVNzFQQnlOR1ZMTldRaTF2V2U1NA?oc=5"
-        },
-        {
-          "source": "BPMoney",
-          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPb1B6QjR2aC1zLWlFOGpWby1QRUNjek9jd0REZ3NRRm5YT0tNbm56TkpVRUxZQ3A5TzZsMzNsdW42Y2xabWJmdkk0STUwV1drMVg1ZU9TdlQ4SEgwOFJFYXVaMF9tbm9neDI4Q2IyVkZmcEtXdGJrRGV6a1dzLWt4a2p5aWRCZlFCY2Z2aHJ2czQyc2N3TGt3eXN4OHVXUjVQNTdrdUlR?oc=5"
-        },
-        {
-          "source": "Enfoco",
-          "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5VSWQyUVVMU25SYTNoZUhzSWVOSWpWR3JoTjJEMG16RVVtT3p0dzJvNUltXzkybjRMVXNSZVkwZVp0STRKOVpsNFhuN1U0QkNmVU13cXVxT1V5eXgzZWkxZTU5bUlObmZ3YjhBVEliQ0xKc3NZZWVLU21R?oc=5"
-        }
-      ]
-    },
-    {
-      "competitor_group": "BTG Pactual",
-      "matched_alias": "BTG Pactual",
-      "title": "Possibilidade de renda recorrente isenta de IR: BTG Asset lança FI-Infra para investidores que buscam mais previsibilidade - Empiricus",
-      "link": "https://news.google.com/rss/articles/CBMikAJBVV95cUxNTTBHZFNFZHZ3Z1lEX2Q5UERjTzktRzgtSU1ONXBQQ2FzX3p6SGdxRDRNa2s0UzVndUUtUzBCM05hX1JybzdHQ211Vl85TUJsb3A1c3ZENHVONjFPbjJ4YWRyQnZGN3BrcjZEYVZvR2ZlUEZhd0FHbktKMVhpdEttWm5rQzJLa2o4R21jUXZLTzJkRFJOYTFrdHJDenlJajF5X0ZCdGpCZ0w5UU55NEx1bElxMFI4czdYUDJHcVhkU0psSE14eDFkdjRfVVJkcFdQTGxLMmpXU193MXFuSUF6YkIzVDZNRWJvRW91ZThESEdwVWlkSmFFYkVReFFRMl9WX0ZINHlFeU1EemtoZVJRYQ?oc=5",
-      "source": "Empiricus",
-      "published_at": "2026-08-15T12:00:00+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMikAJBVV95cUxNTTBHZFNFZHZ3Z1lEX2Q5UERjTzktRzgtSU1ONXBQQ2FzX3p6SGdxRDRNa2s0UzVndUUtUzBCM05hX1JybzdHQ211Vl85TUJsb3A1c3ZENHVONjFPbjJ4YWRyQnZGN3BrcjZEYVZvR2ZlUEZhd0FHbktKMVhpdEttWm5rQzJLa2o4R21jUXZLTzJkRFJOYTFrdHJDenlJajF5X0ZCdGpCZ0w5UU55NEx1bElxMFI4czdYUDJHcVhkU0psSE14eDFkdjRfVVJkcFdQTGxLMmpXU193MXFuSUF6YkIzVDZNRWJvRW91ZThESEdwVWlkSmFFYkVReFFRMl9WX0ZINHlFeU1EemtoZVJRYQ?oc=5\" target=\"_blank\">Possibilidade de renda recorrente isenta de IR: BTG Asset lança FI-Infra para investidores que buscam mais previsibilidade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Empiricus</font>",
-      "source_indices": [
-        26,
-        41
-      ],
-      "primary_index": 26,
-      "axes": [
-        "Produtos Novos"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": true,
-      "trigger_reason": "LANC",
-      "why_it_matters": "O lançamento de um FI-Infra pelo BTG amplia a oferta de produtos de renda fixa isentos de IR, pressionando as demais corretoras a acompanhar em termos de portfólio e taxas.",
-      "relevance": "alta",
-      "also_reported_by": [
-        {
-          "source": "Money Times",
-          "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOdmo5d0VzbnEzZ3dJV0lsR3VWX1hKaXZ5d2N2N0pYVlpPYXAyMk9RUGxWdWoxWmdlNmxpR19LdFBOb09VZGJQSlB2d1RZMENLUVA5cWNJLWZ2N0dGT21XMTUyYWpSMG94NGt3d1R6Q1Rzd1JLeDNUOFN4aVljbWhKbllRbm9UMDNvdnkyTjNBOF83cUJkTnF5cUNCNm5IdGlXTm9walUtMjJwbmpQVFA4ZDdQdjBudkNBQUFGa3dqeUtiZmU2WlFLRFZlQjBsX3kxMk1TajJZRnZ0dw?oc=5"
-        }
-      ]
-    },
-    {
-      "competitor_group": "Genial",
-      "matched_alias": "Genial Investimentos",
-      "title": "Multa do BC, CEO afastado e bloqueio de contas: a crise do Genial Investimentos - Metrópoles",
-      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPdkRXdlJyVXczSG5zX2NVMTVaQ3dhQzhfZ1FmYnlMMFo0Wl9Fcy0zZEVVTE1BY3dnY29DYmgwRlk3aTRlYm9XMC1OT2NoWTFMNDIyaTRkYV9JMDB5YkxHdU1Tc3J0X1JKZF9lUjBSSHZ0UnRwdE5panEzaWZNMlpHX21RZm1GRUhKYWVxM1NPQURKX2lvbXVZNDhSUWFpWkFxbXBKTVJOa2REclZ0eUtPM05CcHoxZ0M1QkYyOTFCNmhyc084NXpmY2RWZ3A?oc=5",
-      "source": "Metrópoles",
-      "published_at": "2026-08-14T20:53:00+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxPdkRXdlJyVXczSG5zX2NVMTVaQ3dhQzhfZ1FmYnlMMFo0Wl9Fcy0zZEVVTE1BY3dnY29DYmgwRlk3aTRlYm9XMC1OT2NoWTFMNDIyaTRkYV9JMDB5YkxHdU1Tc3J0X1JKZF9lUjBSSHZ0UnRwdE5panEzaWZNMlpHX21RZm1GRUhKYWVxM1NPQURKX2lvbXVZNDhSUWFpWkFxbXBKTVJOa2REclZ0eUtPM05CcHoxZ0M1QkYyOTFCNmhyc084NXpmY2RWZ3A?oc=5\" target=\"_blank\">Multa do BC, CEO afastado e bloqueio de contas: a crise do Genial Investimentos</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Metrópoles</font>",
-      "source_indices": [
-        46,
-        47,
-        48,
-        49,
-        50,
-        52,
-        54,
-        55
-      ],
-      "primary_index": 46,
-      "axes": [
-        "Risco/Regulação"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": true,
-      "trigger_reason": "REG",
-      "why_it_matters": "A multa do Banco Central e a inabilitação do CEO do Genial geram risco reputacional e podem afetar a confiança dos clientes, abrindo espaço para concorrentes capturarem investidores.",
-      "relevance": "alta",
-      "also_reported_by": [
-        {
-          "source": "O Bastidor",
-          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBPUGI5bWZWbG05blpJTGUxS05nR2RuRnFBbnc0RDAxQ1hybUNHRHVuYzI2VmVuaEJpdDIwV1lDOWtrRGttemNuYVVCZjU0cFZvTmtoSFE5RjJFbktSbVlN?oc=5"
-        },
-        {
-          "source": "Times Brasil | CNBC",
-          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxObk5feHkwUF8yV3M3MzdfYXJ6R0tYMVBMMDROTlBjVXh2c1pqRXdfTDY4Q2hicVllMWJnTWZqckxRSDgwajdiS28temlrbTduaEpnWUlES0pZUXBFdkoxMW01dThEZEE2dHN4VV9HbTJFWk1BYU1hVHFuWVZRTVM5ZXNpZWxlVFQ0SXFxZDBIT3V2MHNnSzhzNUlLaUtONTQ?oc=5"
-        },
-        {
-          "source": "ADVFN",
-          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPMW9fLVFOOV9QQVNidVE2NHpqaWdSeUJPY2ZMY01uZkRyYl8yQUhYLTdneWQyc19ad1ZDLTZTVFBDMVlobmV1TURobFA4YXkwTjdjc2Z4S1Z5ZXZvT2tLTmdQT1ZpWlo5VGo4NWhXVzNZOFNkOHlKYWdPeEVNSEFTelpqazZ5Y1ZHOE5hTjA5WFBiWFQ3TTQtdEN0Y1gzTHdhaUxId09JYl9kWGJva2FtS245eEZucG8?oc=5"
-        },
-        {
-          "source": "O Brasilianista",
-          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRjZkSVNicGtGcDdoaGNOTEx0R2FQMzN2WDVsdGVlQ2ZIZTVyRVRuMUZxdEJzVG12Qmd2SUJONS1NckNfWUlBNGNzUWpNZmsxRktTZkE0QndkVWZwQ3BQSUFwWEE2S0taalJERjRoNFNzUmh5UXlmbGdRUGU4TmpzUzdFbkZ2Zw?oc=5"
-        },
-        {
-          "source": "Times Brasil | CNBC",
-          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOUU1heTVreXZXTHJBTU5CWi1jMHZQM1Nzcnprc0RPcWJyRjVLd2pRbWwxNnNGVmdoVnZNSTdTdTgxV21WdzEwWF82U0xmWUdQQ3h5Z3Nrc3dDV2gwaDY0RnI3VnZuSDhCUW42MXVFQm95WXdYU2hwWXljYXFxY25Td1VfT0pLZThITUdxM0w3WmZXT3hTZkZXLQ?oc=5"
-        },
-        {
-          "source": "Metrópoles",
-          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOOU5xQnl2MDA1aXl2MkI0MUVwRjRvTFhKR0U2TFNaVDh6djVYWVhxdFM5TDlVaFBEWnh5Mll0dlFFczZMa1hybXN5bGZ0N2huTnlfUFFOZEhQMFNPMnhTQk0tTlJUTkt4UmwxaW5sTkltWE9ZUHZfaXo1aFdGckdZQ3YxNmlaWjN4aHFldGU4Qm9GNk5RT25NaGRIZXgyc21kdDFGZGI1dFpIYUc0VnNFUQ?oc=5"
-        },
-        {
-          "source": "BPMoney",
-          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNWDVId2tRM2o3aGRpSmRjQWc0ejFZSVVmVTUzcU56X0E2aENVaEpKbUZDcFJzQjlxOS11d3BXQldPSUNyUzFBOVNkaDEtamhtUGppd0oxSHNhVU1ySVdkZkpFNEM4WUlUWkhWOW9kQXZIVjNJZXRCd2psTGlmZEpVSWZ3Q3g1Q0NvbEpCakItaF9JWHpvWjdkaGNoZw?oc=5"
-        }
-      ]
-    },
     {
       "competitor_group": "XP/Clear/Rico",
       "matched_alias": "XP Investimentos",
@@ -4956,6 +4806,85 @@
           "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPS1VTZWRsQnRYWkVzcGtGN01aN0RqR3U0cUFiSEtCSmdSeE1hWmlpOF9pVUxjbWFSZ0M1V3dHMDRFaHRsREVfZjhXMkFWamxOX1VfTDJPcWdDamxKVmMyNmM3Zk5pV3ZpQ292Z0RlYk9LZkpDRDZzRDhoOVY4Z1hJS29paTFUczFZWm1FbjJlV3BFV0U3dVpfbUVuc1A0T0xneWpzMlMtZ3hBZ2Y3UG9aM0NhRE9iVXI3Y3RBWlRVMzRNZTNQV3djWHk0SDNndlJPWUJ2a1NMUXNvLUJwNXRrbldkMGhjOV9OM3M0a0g0QQ?oc=5"
         }
       ]
+    },
+    {
+      "competitor_group": "Itaú/Íon",
+      "matched_alias": "Itaú investimentos",
+      "title": "Itaú entra na disputa por escritórios de assessores de investimento - VEJA",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQYU41TnJtSzhnREJBTHVqS0FuLWJFSDBHQTIweldxMGFCVlpOVjJKMUZsQ2Q3Und1WUpsaVNPMjhfOVVvRkZBU2RRVTdsM01HTXpsSVU3NG5CbWJiTjlNVGY0VEd1cFVCdkM5Uy0xUHRUWkpOOWRiLXFwZ01KVVFNSXVEMHJlU2t0ak5LRVNKWGFvbk1lSUlmTE1oZFBrX3ZFQnNGTERZRV9pY3RsbEhxXzVzNnRxeVdN?oc=5",
+      "source": "VEJA",
+      "published_at": "2026-11-10T19:30:17+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxQYU41TnJtSzhnREJBTHVqS0FuLWJFSDBHQTIweldxMGFCVlpOVjJKMUZsQ2Q3Und1WUpsaVNPMjhfOVVvRkZBU2RRVTdsM01HTXpsSVU3NG5CbWJiTjlNVGY0VEd1cFVCdkM5Uy0xUHRUWkpOOWRiLXFwZ01KVVFNSXVEMHJlU2t0ak5LRVNKWGFvbk1lSUlmTE1oZFBrX3ZFQnNGTERZRV9pY3RsbEhxXzVzNnRxeVdN?oc=5\" target=\"_blank\">Itaú entra na disputa por escritórios de assessores de investimento</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">VEJA</font>",
+      "source_indices": [
+        41,
+        114
+      ],
+      "primary_index": 114,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "Itaú entrando no modelo B2B de assessorias de investimento amplia a disputa por escritórios de assessoria, pressionando a rede de parceiros de XP, BTG e demais concorrentes.",
+      "relevance": "média",
+      "also_reported_by": [
+        {
+          "source": "BPMoney",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQUnpobFBwNVFIRU10bWc3RkE5WVBmVURKbUI2M1NYV29tWlZIWWhtbko4ZzBnbGtJZElrWGlIck5SSDE3VEJPZHRTYXlXUW1XbFJFbWRQN0ZEVFV6dXJuVWtGYVVRUDYwUFo4T3hxc1JZRlEyRzR5MWFyY0Ixa2dIeWNocEhuLU9VU2JMU1ZJVnRjR0lIS1NwamlWdw?oc=5"
+        }
+      ]
+    },
+    {
+      "competitor_group": "Nubank/NuInvest",
+      "matched_alias": "Nubank",
+      "title": "Nubank mira clientes mais ricos com uma nova aposta em investimentos - Estadão",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPN09TZmZ2WG12OGpzMm9CbU1fVWF5Mk1TODEwV0kyRTZ1amdkWHNLcmFWQW9tZXdTR21fTmlZYVdLNktNcXJDbVFhUkExWUZ0bkhfM2l6VjdDbWpVX0FkRm5PYVVNRWNMNlU0RzJXdDJEc0hBN3NLLTB2S1UwYzFQUUJUaW10Z1BSZHRjWnZXRWVKZDI2V3duMXpNaUJ0dUtMTE9rbHB1X2pMRUE5ejZ1NVhraURpM21peGhHTzI3YzlnOFlH0gHKAUFVX3lxTFB5a0hKQnRqY3liQ3M0LW5ibnY2dFNrNlVHS2JXbWRhemlkN2VFSTZaNlBmR0FLWUdtakZwYkFmckZnWmQ1SF9XbkZyY1dEWEozb0dkWWtUOUNQNkY1cDY3Vi04b3kyMUdPQkF0MGpiLTdjZTF3dXAtY2VabDc2cmxNQm1lWUk2RWlieVotWnlfZnlKU3I5eVJpNnQyMHptQW4tTHplYkFmZ3VPbkx1NmlXQlFpVVVNVUlOck1sZDAxd2pnaFN4MHRQYXc?oc=5",
+      "source": "Estadão",
+      "published_at": "2026-11-10T18:14:52+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxPN09TZmZ2WG12OGpzMm9CbU1fVWF5Mk1TODEwV0kyRTZ1amdkWHNLcmFWQW9tZXdTR21fTmlZYVdLNktNcXJDbVFhUkExWUZ0bkhfM2l6VjdDbWpVX0FkRm5PYVVNRWNMNlU0RzJXdDJEc0hBN3NLLTB2S1UwYzFQUUJUaW10Z1BSZHRjWnZXRWVKZDI2V3duMXpNaUJ0dUtMTE9rbHB1X2pMRUE5ejZ1NVhraURpM21peGhHTzI3YzlnOFlH0gHKAUFVX3lxTFB5a0hKQnRqY3liQ3M0LW5ibnY2dFNrNlVHS2JXbWRhemlkN2VFSTZaNlBmR0FLWUdtakZwYkFmckZnWmQ1SF9XbkZyY1dEWEozb0dkWWtUOUNQNkY1cDY3Vi04b3kyMUdPQkF0MGpiLTdjZTF3dXAtY2VabDc2cmxNQm1lWUk2RWlieVotWnlfZnlKU3I5eVJpNnQyMHptQW4tTHplYkFmZ3VPbkx1NmlXQlFpVVVNVUlOck1sZDAxd2pnaFN4MHRQYXc?oc=5\" target=\"_blank\">Nubank mira clientes mais ricos com uma nova aposta em investimentos</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Estadão</font>",
+      "source_indices": [
+        132
+      ],
+      "primary_index": 132,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "Nubank mirando clientes mais ricos com nova aposta em investimentos sinaliza movimento de subida de faixa no varejo, pressionando corretoras tradicionais na disputa por patrimônio.",
+      "relevance": "média",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "Nubank/NuInvest",
+      "matched_alias": "Nubank",
+      "title": "NUBANK FORA DO AR HOJE? Serviços apresentam instabilidade nesta quinta, dia 12 de novembro de 2026 - Portal de Camaquã",
+      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOaE1aZ0E5REEyZGVVUnJ3dTh2WE1qXzFhN2NLaWRGSlQ5SzZBZmY5NEtLT3RNVjlmVUxKTEQ5bVU2UVpkalZ3dHkzUGpJSEFWVmZTclNRd3YtMmxiZFQyNkFjVWRBSk4yQUt2cjZXZkN5em5wUUU4OGlYRVp3cDNwZWRZRFRKU3Etc0x4TkcyQTdIaG9TWE1hLTNVZEh2TVhFb2ZwdE1PTTZBUG56T3B1QW9hYkg4V2ZleGhkcFRIOWNwbGkzLXZvc015clRRLVl5aGtWMjQ2N2hfelNjdjB3X1JqSDg5TUk?oc=5",
+      "source": "Portal de Camaquã",
+      "published_at": "2026-11-12T23:49:23+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi5wFBVV95cUxOaE1aZ0E5REEyZGVVUnJ3dTh2WE1qXzFhN2NLaWRGSlQ5SzZBZmY5NEtLT3RNVjlmVUxKTEQ5bVU2UVpkalZ3dHkzUGpJSEFWVmZTclNRd3YtMmxiZFQyNkFjVWRBSk4yQUt2cjZXZkN5em5wUUU4OGlYRVp3cDNwZWRZRFRKU3Etc0x4TkcyQTdIaG9TWE1hLTNVZEh2TVhFb2ZwdE1PTTZBUG56T3B1QW9hYkg4V2ZleGhkcFRIOWNwbGkzLXZvc015clRRLVl5aGtWMjQ2N2hfelNjdjB3X1JqSDg5TUk?oc=5\" target=\"_blank\">NUBANK FORA DO AR HOJE? Serviços apresentam instabilidade nesta quinta, dia 12 de novembro de 2026</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Portal de Camaquã</font>",
+      "channel": "incident",
+      "source_indices": [
+        139,
+        140
+      ],
+      "primary_index": 139,
+      "axes": [
+        "Tecnologia"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": true,
+      "trigger_reason": "INC",
+      "why_it_matters": "Instabilidade nos serviços do Nubank atinge o app onde ficam os investimentos; incidente atual reforça percepção de risco operacional e pode empurrar clientes para concorrentes.",
+      "relevance": "alta",
+      "also_reported_by": [
+        {
+          "source": "Rede Onda Digital",
+          "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE8xaHZCSkxsRVlwazJDM1h6SVIyQ1FHQmh6VHRJeHl0LTRRam5hZ09KZG4wbEtkRVRGTUx6TUZWUlByamhUQmVLR0tUNEVJXzNiczNVN1BqaV9SeE54UkI5V0J2SldUdFlRSEJJMnlFYUg0Zw?oc=5"
+        }
+      ]
     }
   ],
   "results": [
@@ -5276,11 +5205,21 @@
       "incidents": []
     },
     "Nubank/NuInvest": {
-      "status": "estavel",
-      "last_incident_at": "2026-11-07T14:15:24+00:00",
-      "last_incident_title": "Nubank normaliza operações com criptomoedas após falha em fornecedor externo - InfoMoney",
-      "incident_count_window": 8,
+      "status": "instavel_recente",
+      "last_incident_at": "2026-11-12T23:49:23+00:00",
+      "last_incident_title": "NUBANK FORA DO AR HOJE? Serviços apresentam instabilidade nesta quinta, dia 12 de novembro de 2026 - Portal de Camaquã",
+      "incident_count_window": 9,
       "incidents": [
+        {
+          "published_at": "2026-11-12T23:49:23+00:00",
+          "title": "NUBANK FORA DO AR HOJE? Serviços apresentam instabilidade nesta quinta, dia 12 de novembro de 2026 - Portal de Camaquã",
+          "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOaE1aZ0E5REEyZGVVUnJ3dTh2WE1qXzFhN2NLaWRGSlQ5SzZBZmY5NEtLT3RNVjlmVUxKTEQ5bVU2UVpkalZ3dHkzUGpJSEFWVmZTclNRd3YtMmxiZFQyNkFjVWRBSk4yQUt2cjZXZkN5em5wUUU4OGlYRVp3cDNwZWRZRFRKU3Etc0x4TkcyQTdIaG9TWE1hLTNVZEh2TVhFb2ZwdE1PTTZBUG56T3B1QW9hYkg4V2ZleGhkcFRIOWNwbGkzLXZvc015clRRLVl5aGtWMjQ2N2hfelNjdjB3X1JqSDg5TUk?oc=5",
+          "source": "Portal de Camaquã",
+          "why_it_matters": "Instabilidade nos serviços do Nubank atinge o app onde ficam os investimentos; incidente atual reforça percepção de risco operacional e pode empurrar clientes para concorrentes.",
+          "axes": [
+            "Tecnologia"
+          ]
+        },
         {
           "published_at": "2026-11-07T14:15:24+00:00",
           "title": "Nubank normaliza operações com criptomoedas após falha em fornecedor externo - InfoMoney",
