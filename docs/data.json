@@ -1,34 +1,6 @@
 {
-  "generated_at": "2026-11-19T18:42:18.750678+00:00",
+  "generated_at": "2026-11-20T18:03:49.382588+00:00",
   "items": [
-    {
-      "competitor_group": "BTG Pactual",
-      "matched_alias": "BTG Pactual",
-      "title": "Em meio à queda do Ibovespa em agosto, traders se preparam para buscar R$ 1 milhão na Copa BTG Trader - Money Times",
-      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNWWpqYWwta01GanA0NzFmRHROVFl5ZzFCTDN6RHJFZ2FuVlU5cEVpdEdvblZDa2ZremtGb0ZHbllIV29ZeXpnQ3VyRlRmSVY1bGo1Zjdzc1JvdFUyTWpHdXMtbDNhNlpJX0Z0Sk1vSU96T2dpcEFsc0loMWU5WG1JdUFhVkFsbFNOM0otWkVaVFNQMHNoeFo4a2lSQ3VabG40YlgtTldFMkpjdHY1MzlaQ0RSaU9Vc1N2MG1rRUNsRlQ3S1pkQUZjMWNIN090SURKdVZuTTNKTQ?oc=5",
-      "source": "Money Times",
-      "published_at": "2026-08-22T12:00:00+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxNWWpqYWwta01GanA0NzFmRHROVFl5ZzFCTDN6RHJFZ2FuVlU5cEVpdEdvblZDa2ZremtGb0ZHbllIV29ZeXpnQ3VyRlRmSVY1bGo1Zjdzc1JvdFUyTWpHdXMtbDNhNlpJX0Z0Sk1vSU96T2dpcEFsc0loMWU5WG1JdUFhVkFsbFNOM0otWkVaVFNQMHNoeFo4a2lSQ3VabG40YlgtTldFMkpjdHY1MzlaQ0RSaU9Vc1N2MG1rRUNsRlQ3S1pkQUZjMWNIN090SURKdVZuTTNKTQ?oc=5\" target=\"_blank\">Em meio à queda do Ibovespa em agosto, traders se preparam para buscar R$ 1 milhão na Copa BTG Trader</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Money Times</font>",
-      "source_indices": [
-        21,
-        43
-      ],
-      "primary_index": 43,
-      "axes": [
-        "RV/Trading"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": false,
-      "trigger_reason": null,
-      "why_it_matters": "A Copa BTG Trader é uma competição de trading que pode engajar traders e aumentar a base de usuários da plataforma, mas não representa mudança estrutural de produto.",
-      "relevance": "média",
-      "also_reported_by": [
-        {
-          "source": "SpaceMoney",
-          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNZG9sOFRHQ2loeW1jTWNiclZOTVkyQmVTN04zY1dtYXpwWTdBTmRrMEFrVkVkVkxlZzNnRlVtOXBvVlRtbDJsNXZsMGJxWkd3NnZmV1B0TmxTaDdZOWNsM1U0ZGhMZWxsY0syWTNrdXFQRGJrdGpvemttb1IwMk5wX0dOY182ZFE?oc=5"
-        }
-      ]
-    },
     {
       "competitor_group": "BTG Pactual",
       "matched_alias": "BTG Pactual",
@@ -4947,6 +4919,76 @@
       "why_it_matters": "Ressalvas em fundo administrado pelo BTG são risco reputacional de gestão, mas não alteram condições de trading do varejo.",
       "relevance": "média",
       "also_reported_by": []
+    },
+    {
+      "competitor_group": "XP/Clear/Rico",
+      "matched_alias": "XP Investimentos",
+      "title": "XP Asset aposta em ETFs e internacionalização para crescer, diz CEO - CNN Brasil",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQZG5uNFJRQk9NbUN2YmZuWWRzYzlFZGNPZFBJc2xfWjVsR1NJTnBPUFFrb0ZuQy1XWm5uQ1pObU5vdzF0Mi1CU2lEejN3emt6VTFQU1NBbXkxNUFOMXpQQ1pQbVZET0FYLXdEemVBc3VXQWo2VldUMDhkem5IdUdQS2Y0QktXblZQNzd5RWRvaGJzVDhybFNuY1Z5MFRTZ05lZWwyNnNkTmtPMFRLYlBRbTRCMFdvRTBPRFJYNQ?oc=5",
+      "source": "CNN Brasil",
+      "published_at": "2026-11-20T13:00:26+00:00",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxQZG5uNFJRQk9NbUN2YmZuWWRzYzlFZGNPZFBJc2xfWjVsR1NJTnBPUFFrb0ZuQy1XWm5uQ1pObU5vdzF0Mi1CU2lEejN3emt6VTFQU1NBbXkxNUFOMXpQQ1pQbVZET0FYLXdEemVBc3VXQWo2VldUMDhkem5IdUdQS2Y0QktXblZQNzd5RWRvaGJzVDhybFNuY1Z5MFRTZ05lZWwyNnNkTmtPMFRLYlBRbTRCMFdvRTBPRFJYNQ?oc=5\" target=\"_blank\">XP Asset aposta em ETFs e internacionalização para crescer, diz CEO</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNN Brasil</font>",
+      "source_indices": [
+        4
+      ],
+      "primary_index": 4,
+      "axes": [
+        "Produtos Novos"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "Sinaliza que a XP Asset vai pressionar o mercado de ETFs e de investimento internacional, segmentos em que a concorrência de varejo disputa o cliente pessoa física.",
+      "relevance": "média",
+      "also_reported_by": []
+    },
+    {
+      "competitor_group": "BTG Pactual",
+      "matched_alias": "BTG Pactual",
+      "title": "Sem garantia para perdas, BTG desistiu de comprar Master, diz Esteves - UOL Notícias",
+      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNSjcySnV6SmlWek5iUlJ6S183ekItaHFyZXluZUszLUhualltcHNld0JYT0ZDb1gzd0RXeTdveEJja2EzQnVsdmlZQUE1aDNZQXJ3UEYwRXBBVkJhc09tWG45eXhvb01Sc2hfSG5GMVVhYTZQdVlUQjhHT2RSVmRtVnBXOVNXbHV5QXRjWndlV3BLNXZReVlxN0h2UUhGRDVBQkNhd2RUcHdFU2FHRVVVc0RUSFMwd2ZsWDV4ZGZ3azRDV1luQm0wZXB4NTNyeDlqMURZ?oc=5",
+      "source": "UOL Notícias",
+      "published_at": "2026-11-19T23:02:39+00:00",
+      "summary": "<ol><li><a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxNSjcySnV6SmlWek5iUlJ6S183ekItaHFyZXluZUszLUhualltcHNld0JYT0ZDb1gzd0RXeTdveEJja2EzQnVsdmlZQUE1aDNZQXJ3UEYwRXBBVkJhc09tWG45eXhvb01Sc2hfSG5GMVVhYTZQdVlUQjhHT2RSVmRtVnBXOVNXbHV5QXRjWndlV3BLNXZReVlxN0h2UUhGRDVBQkNhd2RUcHdFU2FHRVVVc0RUSFMwd2ZsWDV4ZGZ3azRDV1luQm0wZXB4NTNyeDlqMURZ?oc=5\" target=\"_blank\">Sem garantia para perdas, BTG desistiu de comprar Master, diz Esteves</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">UOL Notícias</font></li><li><a href=\"https://news.google.com/rss/articles/CBMi4AFBVV95cUxOd3FfaE40TFh6ckRXMnRhNG9QR3Y5a3B3blhWdFAwemxSSHNlSzVTdjVMdDM4SDhjVnlGUjVvNVhLdFlxaUh1dk52Xy1sZTZUTnJxYzJZSnA2el9tQ0phRWQxQ3JUaEstNm40RWdCZTh3bXB2RGVuQ0d4alNaQ2s3RWtzUURyN1BlR3pieWhhem9TNmlyMGdvdG5hdTBoSTYyR2VjREZzQkJIVVVnenFZbzMxZFo0VjVZUHYwb1pLRk8yNHdKZExORmdZTnpiNGtaMURtZkdXaVJhZ3dvRVVsdNIB7wFBVV95cUxQV3gyUmJ1dTBrV1g3eUpsTXpFSmE4Z1puenhTQWMzMGIwekFvNDN0S0l3UnlIY0tVd0tfT1pwU3RaNG9SYm9NbUtoZG5KV0VqZWxMMWlhTk1RdmpPbDFPczJBU294TW1RNUZCQjQ2cmhhX3VWTmI0R3lQSnl5SjljTEU3U2xtMmgtVk4tZzhjeUY2S01fdkx2S19xMWdSNWdMenFCNTZTMDdvd1UwQ1ZsWHpxbGZkcVRWdXd3UVR2OHo0MF82Q2tZdXl6d2lheFhMUjk5bHg0eHlySjVnZ3B6aWlJVUxOd2MzVjBYa2JkSQ?oc=5\" target=\"_blank\">Campos Neto diz à PF que BTG levantou ‘inconsistências’ em operações do Master em reunião em 2024</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Valor Econômico</font></li><li><a href=\"https://news.google.com/rss/articles/CBMi4AFBVV95cUxOZ3R3RVBPa3JpVW5GNEt5UnFGNjQ3SVdjVXJSU3FaMHNERnlxdDcxWmZxaTdUQXRfYnA4YVgwOFhfLU5yTHJLRF9MU0VvOG1NS08yQmZPcXJhWHVXR3gwOU9KaWJHNi1paWpOUVBSOExPRnowZFJMVlJPeXpHN3NRQXVqSlFUWU5CVENlVHZZb0NHZ0RzRGRDMlpnQmhkRkF3SFhLaFVEYm1ONFhBZmFmWGhtQV9WcmNiUWx5amtjMDkzN2dNcndSc2lmWnBjVnJaaHdpTHdKa01aclV5Wm5ZV9IB7wFBVV95cUxQUG9nQUtxeDBTT1A0WG1aYlRjYkM2LVBySFUxTWdPVnptc3FJT05mQ2p1WFFsOURHLXNfNmxRR2x5WW1oNm5NUTh6RldyOWRmZmhycmpPUkdVT3RlREw5OGVXMDFkY0JiLWZwdkZpdXI0bm9MTDZjSUdUdlFRMVQzSlBUMWU1SDU0UGdqTFZlVElESEFxTWpreDZqVkdNRXRLY2VuZTRvdEhFUkItZTd6SFY1emRmeVpPVlhtRHc1NkVwalU1LWdwcjUyY2ctSk52V1JlcjBTeHBXUThvSllUcEJzd1VCeXNiN2NHc3VCSQ?oc=5\" target=\"_blank\">BTG desistiu de 'solução de mercado' para o Master e BC foi alertado sobre dúvidas, diz Esteves</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Valor Econômico</font></li><li><a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxQUDZmY0JsMzk0VzZEcHllMVlVbFp1b2xUcTM4OTdaTHlxaXh2S19pQVBtTzhaSVprM2Y5R3psd0cwZTQ2RnV3V1dnbEVJTFlua2lQUF9YNGFVU0I3ck51eDJmSGtPQ2Z1VHFJNURYMFhtVmhheTEwdWVQOWc1TDFST1ZfR0Roa3JLYko3NGdTYXdULXV6X0QxNHNIY2Z4QThKMnQwLTVaZDQtcWZ0QUVfSTNkNFFkN3JmS3kzTGpmWnpyclpkb2pGM21R0gHPAUFVX3lxTE1RRU50dmtrQ3pZaHFLMHhrSmtKcTRlS0RkbXVJUG84RFltTjUyUnZ5MDc1RXJxQ21KSHpveGdEWFN2TnNweWlnZ3c1N0ZXeGpmVFR3TUNtOEt1QlpUZ2J5b1AwTkVaS0wzUlFibWtNTjltWjFSMnNsT3llX2oxYnhMZk1sZzRsVWl2OWFwdGszb2t5V2Z6R3dDdnVsdkdXaUplRWh6Q3FqNVhJZVowVGY2NkQ5c3JMRl9QRGh3NktLTE9yUDU4cVBhaTZlWFZ1TQ?oc=5\" target=\"_blank\">André Esteves depõe à PF: ‘Master era um banco muito pequeno, inexpressivo’</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Estadão</font></li><li><a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxNazBuRXhBVnZBSDhpYVNBS1YxUlE2eW5EQlo2UTJxTXlpTURLSEFXazM5Z2dqSVdrckxQVTJuRDFQRFRkMG9KbWJzeGNXelBSU2taNzRfTTVZd3ZyMVRFcGR1WGpOZk5LUDFFdWpFcWRwVzZJelA5LUJVbW5DbEFFT1V0X1ltUlRLZjFjUXJ0UE5fdURSaFprY3UtYUxLQUFNY1E?oc=5\" target=\"_blank\">BTG achava Master “inexpressivo”, mas temia rombo sistêmico</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">SBT News</font></li><li><a href=\"https://news.google.com/rss/articles/CBMi7AFBVV95cUxNb1ljRV9yQ3hHTGFuVjgxU1NQcWY0b0VZUHNXNkpJSFRQOGdQSzM2VnNOM3BDQWJtZDFjYjVMOFdNeGpvSldXbk9SRXBfYnlMRjQ3TFczeEhKaGtaRWZwal9mWHhkUVpBZElqSkZpa3FJOTdsSkg5RmdRaWJwbV9iM3JLVVF1NjZQalRfOXhBbHh6U2h3TFdCMnh1d3hac3hyTDRla1J1WHpOZE5qSWo5TEFia0d3YnVkNDYtS21SUTV4aGFwRXJTRk1vQnpCMDB4SUtzRUdxOVJqTHR2TEdQU1hPVmlFSVVvaHB3Q9IB8gFBVV95cUxQYzZDZ0luTDVzd1F0WmotNjVmcDZvWEwydVBUWXJYUVBKS0o2RVdTREpTM2VtVWtqRGlXUWVXUjZ5WUNpazd3RzJGUWl1YzFlMWg3N0piczVpRW1TVGVYSzFfREMwSXdPd2RGVDl0dUNQWGVLaGo5eV9yN1VJVlEtVWV4dUpMVVFFOG1GNHpuN3dIUEdIZHNNNy1DSXh1NmJucFRFZmxyNUw2X056RUVJTlZDYzlQMU0wZmtIOUl0SWowMzRHOW9TaVFVZ2RyY3Z3Yy1oTG1YdUFwd1RjUzBpZjVsQ29LN1dIODhNSGlleWUxdw?oc=5\" target=\"_blank\">Campos Neto diz que Esteves, do BTG, levantou suspeitas sobre Master, mas diretor do BC as descartou</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Estadão</font></li><li><a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxQb2FXN0JxbkVtdzBSUVhnWGgzSTBkcFhZUnNxX3FPdDU2bHAtOGwyOFZOZ0Uxa2RfWWd5Ynl1dGVmcnlwRl9US2pDeFF4Uk1xTzhxbUJQdmtMaVdZREJ3YXowWEFmb3dWMlZzZEw4dEhxR1NqYW5UYUpnNXJRTFVwT0FtRmdQZTRtSVptNTVmY0dvdm5tamkwOXBNbUZ4SkwtTUtPdWNwZUJ5TWkzMldYY19NaTV1dGNQRm1HMDRZTkdCNUsydGc?oc=5\" target=\"_blank\">Esteves diz à PF que BTG desistiu de comprar Master por falta de garantias.</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Metrópoles</font></li></ol>",
+      "source_indices": [
+        28,
+        32,
+        36,
+        37,
+        47,
+        49
+      ],
+      "primary_index": 28,
+      "axes": [
+        "Risco/Regulação"
+      ],
+      "confirmation": "confirmado",
+      "daily_trigger": false,
+      "trigger_reason": null,
+      "why_it_matters": "Depoimentos sobre a desistência da compra do Master expõem o BTG a desgaste reputacional, mas não alteram produto, preço ou operação para o investidor pessoa física.",
+      "relevance": "média",
+      "also_reported_by": [
+        {
+          "source": "Instagram",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBSLVpEUTRmVDFCaXowdXBlcGdpU2pDeGtlSUdaZFZ3M0RkckUzN0g2NjdpSmxDX1dHWXMzZ1BSTkNfclFhb1M4cXVDdmhDWDdNUS00Rmxn?oc=5"
+        },
+        {
+          "source": "Acia Araçatuba",
+          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPWEdzQTNGb3BpX3JiZmoxcldoMWJfQ0F0YWJwOWxHa0RhLW1WeXh1S1M5d3lWQnJfR3FiSXVBSjBqWjRGV1NjcjN1YkRRSUVLalg5amdqRE0zTGhiTDJDZzRQU29OMXExdFBjWnNDaGFQM1FkRFJQcEx4Zkh0a3ZmS0U4WkQ?oc=5"
+        },
+        {
+          "source": "Revista Oeste",
+          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPY1g1U0EtOTNFUnVXNGRGMmF4eGFRMl9NdDdBaWFJSjFxNEJyVmNnbUhhWUtvX3FydkZzN0NzTHhVaC0xY1NXZ181U2xlY0ZIelVFdTR4Z3pmeE1DXzVhUlFaSklmV1hWRngyWWlKZVFTQVY2WWlMVXkyNE9RanJkOVlSbnFGYXlJa2xBeG1Ra0pqRXlhRzZvYW1vRGpZWU9PRGRDVmF3?oc=5"
+        },
+        {
+          "source": "Tribuna do Sertão",
+          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPNWh2OXFjN0c0UmNtZmpjUFBCRU9pMGk4SG9nNkVDZ2FJTWd0ZGJXWTNTTHVfYU9IQ1lmcHQwazJQaXhadUhkajRUeVlObWxXTWZGYmQxS3pBMWU2S2FlNXFhOGZDYkE5Mjh5anFLM2g4T0tjamlmTnpwVkRtbThXVi1jZnpreUFCUHp2YWY3UVVZU2pKZl92XzVpbTVkS2tMSktLMmxRNDVJa19sQVc1cS03VjlMdHNZeE1wblpUZ1RJWWRwZHRBYnNJUQ?oc=5"
+        },
+        {
+          "source": "Tribuna do Sertão",
+          "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNWEMwcENLS0I3akxZTVNlSmRrY0ZFUjNtMDBhNlVhVzFrT2xKelBHcUUxMGdtbzJRMHRGUmFuMTl3UEFkT3ZMclVVUTRjOGpQNG41MHJvYkVLMzZheU55V2I2Zi1SWVNOS1BBS0M4WTJpcDVibWd4U19UMzdCd1MtdzRzNjNHVWlKTkVUUHEwV0I2OWR1UHlSa1l5SHVjMFdMaXZGSlc1dFRfb3lZN3I1bXhMMF9zMkh6bVczbkIyU3pPM3A4X2x2Zl9zYUJKZmpOZkR4cjM2UF9yODB3dGRJTnRzRQ?oc=5"
+        }
+      ]
     }
   ],
   "results": [
@@ -5172,7 +5214,7 @@
       ]
     },
     "BTG Pactual": {
-      "status": "instavel_recente",
+      "status": "estavel",
       "last_incident_at": "2026-11-17T15:04:39+00:00",
       "last_incident_title": "BTG caiu? App sofre com instabilidade que dificulta operações nesta terça-feira (17) - Estadão",
       "incident_count_window": 6,
