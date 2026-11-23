@@ -1,28 +1,6 @@
 {
-  "generated_at": "2026-11-22T17:27:12.928491+00:00",
+  "generated_at": "2026-11-23T21:45:44.032410+00:00",
   "items": [
-    {
-      "competitor_group": "XP/Clear/Rico",
-      "matched_alias": "XP Investimentos",
-      "title": "Empresas controladas pela XP vão se fundir - Estadão",
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQejdPbmdSNHVmWmJFTEdxTUxHUDdnV1FXNWtWMWktdjRVY085MXR0YUFtNVpxaDFHckJZRTk2WHlGa2VKTHZMX1NkeDBlNllsMURzZWJienhJRnBwOHF0TXNNVFg5Q3pJNVg0cDFwM2w3aUMzOVRZMFpnRjd5VTNIMklHM3FhZmJZUTVFcUpxbDlCNnpIbHdwN0MxNNIBoAFBVV95cUxPUHJxNk1mS2pSc0liQ3A1VEN4VkRDRUJ4czZUQVRiRGZMcll4YnFLUVlYUDN0N21hUEFkNmg2VlZTVTk2cFR1LWxkRWZ6cmxJbGowbi1RN0ZtcHpTc0RmejNiOTFfbk5zcnpqTlE4WXhNLUE2aWdvWVp4UHFHMmJBQTZFVFpGd09fUHZSaEpJejJyZ2h3RlhRZVZnaXB6TUFo?oc=5",
-      "source": "Estadão",
-      "published_at": "2026-08-25T00:59:00+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxQejdPbmdSNHVmWmJFTEdxTUxHUDdnV1FXNWtWMWktdjRVY085MXR0YUFtNVpxaDFHckJZRTk2WHlGa2VKTHZMX1NkeDBlNllsMURzZWJienhJRnBwOHF0TXNNVFg5Q3pJNVg0cDFwM2w3aUMzOVRZMFpnRjd5VTNIMklHM3FhZmJZUTVFcUpxbDlCNnpIbHdwN0MxNNIBoAFBVV95cUxPUHJxNk1mS2pSc0liQ3A1VEN4VkRDRUJ4czZUQVRiRGZMcll4YnFLUVlYUDN0N21hUEFkNmg2VlZTVTk2cFR1LWxkRWZ6cmxJbGowbi1RN0ZtcHpTc0RmejNiOTFfbk5zcnpqTlE4WXhNLUE2aWdvWVp4UHFHMmJBQTZFVFpGd09fUHZSaEpJejJyZ2h3RlhRZVZnaXB6TUFo?oc=5\" target=\"_blank\">Empresas controladas pela XP vão se fundir</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Estadão</font>",
-      "source_indices": [
-        12
-      ],
-      "primary_index": 12,
-      "axes": [
-        "Produtos Novos"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": true,
-      "trigger_reason": "MA",
-      "why_it_matters": "A fusão de empresas controladas pela XP pode consolidar operações e criar sinergias, potencialmente alterando a estrutura competitiva no mercado de investimentos.",
-      "relevance": "alta",
-      "also_reported_by": []
-    },
     {
       "competitor_group": "XP/Clear/Rico",
       "matched_alias": "XP Investimentos",
@@ -92,34 +70,6 @@
     {
       "competitor_group": "BTG Pactual",
       "matched_alias": "BTG Pactual",
-      "title": "Relação predatória: BTG terceiriza e explora bancários, e Sindicato protesta - Sindicato dos Bancários",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPNDR0VzNuVElQcm03V2hyTDY1eU9yLWJtSXlIYm16VWNkSEVaVmZOZ3NXU3g3dHE4c3ZTZ21EcVJnS0FtSFpoNzlLVVcwUFFHRDJoV3lmZXFVdGVldmtaWEE1UGVhT0tOSzFqMDhvWVByM1A4TlpTTjJTX0JQWXRXUmFadnJmeFZtQXFOeTRCWXh6ZE9CUkFlTTFWSlpvYmFNWW5BZ09hdjk2eGpxNWc?oc=5",
-      "source": "Sindicato dos Bancários",
-      "published_at": "2026-08-25T19:55:00+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxPNDR0VzNuVElQcm03V2hyTDY1eU9yLWJtSXlIYm16VWNkSEVaVmZOZ3NXU3g3dHE4c3ZTZ21EcVJnS0FtSFpoNzlLVVcwUFFHRDJoV3lmZXFVdGVldmtaWEE1UGVhT0tOSzFqMDhvWVByM1A4TlpTTjJTX0JQWXRXUmFadnJmeFZtQXFOeTRCWXh6ZE9CUkFlTTFWSlpvYmFNWW5BZ09hdjk2eGpxNWc?oc=5\" target=\"_blank\">Relação predatória: BTG terceiriza e explora bancários, e Sindicato protesta</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Sindicato dos Bancários</font>",
-      "source_indices": [
-        35,
-        49
-      ],
-      "primary_index": 35,
-      "axes": [
-        "Risco/Regulação"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": false,
-      "trigger_reason": null,
-      "why_it_matters": "Protestos de sindicato contra práticas trabalhistas do BTG podem gerar risco reputacional, mas não afetam diretamente o cliente investidor.",
-      "relevance": "média",
-      "also_reported_by": [
-        {
-          "source": "Sindicato dos Bancários",
-          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQZ2gtcjR6RVVOc18tTFE0amNPLTRNSndKa2FLZS1ZdjNyQ3lzcjZCcXFudl95Zl9rc1kxT0NTMUlCMnptUmRNVGwtNGVtOUVCYUJ5WGpoaTVrSUhlYUhrTFVoNmNreExweWZObTZoYWJSQThmRkVKTnRpS2toVXdoN1VxN1VLdGx6QWZ5ZjdFeUk2a3Z3bklhcTgxLTcwUDZ6UTBNZ2pIaw?oc=5"
-        }
-      ]
-    },
-    {
-      "competitor_group": "BTG Pactual",
-      "matched_alias": "BTG Pactual",
       "title": "Crise na Apex: BTG quer mudar gestor de fundo que tem ações do Shopping Vitória - A Gazeta",
       "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQckxTNFQ1NHZoUjU3ZERWNnVmN3JIRGU0cGpYUURDUnBoVTBleEFsbXEzX2lZQ05PQ1VpN3NMeWhYeUVoQmIzTGpKM04xdkZXN1VBR2dkaEQxSlVEYU5MMXdxQ3BiVEhGcmE1WDBldGl4by1YbHRTbG83M1dNcHkzeHZrQ01WdVJJRXZCWVl2MnRmZHkzYnpGWDFtVWtEQ05LWXpiZTdaRjNwbVdHYU9jeWFpVVFmaFlRcUlXbHJnRWpKTjhpN0Fr?oc=5",
       "source": "A Gazeta",
@@ -149,95 +99,6 @@
           "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1pUjR2Z3ctT1pKVVBIQzdsYll2ZUNkeDJqbnpCb0F4MGFNZHlmb2dQSXJWaVNCbXNJeVQ3RTJtdXlpbUN3VDBWdlVNWU1UQ2V6OGlRU3NfQ2Y2NkU2czMxakN1VWoxb0Y4NVdIS0lxaw?oc=5"
         }
       ]
-    },
-    {
-      "competitor_group": "BTG Pactual",
-      "matched_alias": "BTG Pactual",
-      "title": "BTG Pactual desembarca no Uruguai após concluir compra do HSBC por US$ 211 mi - Investidor10",
-      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOQ3BBM1RhWVZzQ1VZeEw3cmpJRmJpSWdjTHdvLTRwM3poUU8xdDZ2a0JSOWE4aGpaMV9RamJmdGdZei1Dc0htd2xZbDJ1ODUwWTNWMFcxOGF2d3hJWkNjclJnemF5VmgxWGhyTjJ2d3duN3FXUm04ZlJQLVNVNDJWZ3NhZHFNUm40S2hMdE9Ba3FLNzlidlJLRlI2VGFTS0hEZmlfNWQwb28tcHRSbV9xaTJjaHF5SVYwUFQ2UXBB0gHDAUFVX3lxTFBRQXg5STNXZEtEblp0MHdydkV4NWlsdVRUQWZRMkZ6ekd6RDFmUDM1ejdhSEFhTUV5MkdNdXMzNXFSQjBoUUlzRkt1T3JrZDBqa3lDQ0s1ZklNM1dGeW1XbWJyXzBDaDVPTXJBWXBQMFVYcDRzUU1iOFlKZV9TZmJrdjlyZUpzSFh6LVoyNXpTd3U4QzczWlNmX1plY2taUnJnbW04dFV5REQzRERUcUxpdnp6WjUyOVdYV2VWVTgzbzhEOA?oc=5",
-      "source": "Investidor10",
-      "published_at": "2026-08-25T07:00:00+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxOQ3BBM1RhWVZzQ1VZeEw3cmpJRmJpSWdjTHdvLTRwM3poUU8xdDZ2a0JSOWE4aGpaMV9RamJmdGdZei1Dc0htd2xZbDJ1ODUwWTNWMFcxOGF2d3hJWkNjclJnemF5VmgxWGhyTjJ2d3duN3FXUm04ZlJQLVNVNDJWZ3NhZHFNUm40S2hMdE9Ba3FLNzlidlJLRlI2VGFTS0hEZmlfNWQwb28tcHRSbV9xaTJjaHF5SVYwUFQ2UXBB0gHDAUFVX3lxTFBRQXg5STNXZEtEblp0MHdydkV4NWlsdVRUQWZRMkZ6ekd6RDFmUDM1ejdhSEFhTUV5MkdNdXMzNXFSQjBoUUlzRkt1T3JrZDBqa3lDQ0s1ZklNM1dGeW1XbWJyXzBDaDVPTXJBWXBQMFVYcDRzUU1iOFlKZV9TZmJrdjlyZUpzSFh6LVoyNXpTd3U4QzczWlNmX1plY2taUnJnbW04dFV5REQzRERUcUxpdnp6WjUyOVdYV2VWVTgzbzhEOA?oc=5\" target=\"_blank\">BTG Pactual desembarca no Uruguai após concluir compra do HSBC por US$ 211 mi</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Investidor10</font>",
-      "source_indices": [
-        42
-      ],
-      "primary_index": 42,
-      "axes": [
-        "Produtos Novos"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": true,
-      "trigger_reason": "MA",
-      "why_it_matters": "A conclusão da aquisição do HSBC Uruguai pelo BTG é uma entrada em novo mercado, o que pode ter impacto estratégico, mas não afeta diretamente o cliente PF no Brasil.",
-      "relevance": "alta",
-      "also_reported_by": []
-    },
-    {
-      "competitor_group": "BTG Pactual",
-      "matched_alias": "BTG Pactual",
-      "title": "Pix do BTG Pactual (BPAC11) fora do ar? Banco é alvo de hackers - Investidor10",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOQ3I0Zjl2WXFNY1JibnI5UlVQbVBCNFF0c2RLVzNVNHgzVWhLRVZSYVV4alRQcG1hNHZoYllhNFRMOXVkZlNWZktiN2tDN0pCc2VPUHU5Ym1FNG9wRDFxMGctY1hSNWdvd0xxd2NtZ2F1amZiSl9kVHhkUnNQWGJ1M0U1UW5qMVFyaXNYXzNNVlZpYUtuc2didUNKVmdKZXBvRUlvZU15alDSAa4BQVVfeXFMT21oaV9JTXFOckh3UUQySGhEc3BjVTliRVRlVUkxdVpwd0Q2RmNfVG1xMmQyNFVNenlublpQaTZmTTRXbEpCSHJNc0dTQ1lzM3Z6QWdlb0xmQ1NUWUFTYUMtcDdrMTlvdmRwcmxsSEVNNmQ5OVVmTVlrcFFWQUVXQzRrLWRxaHFsbjl4TVlZOU1zNlVWLUJwQUtCVFJLTlltSTVhU3RRamF5Q25seDNB?oc=5",
-      "source": "Investidor10",
-      "published_at": "2026-08-25T07:00:00+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxOQ3I0Zjl2WXFNY1JibnI5UlVQbVBCNFF0c2RLVzNVNHgzVWhLRVZSYVV4alRQcG1hNHZoYllhNFRMOXVkZlNWZktiN2tDN0pCc2VPUHU5Ym1FNG9wRDFxMGctY1hSNWdvd0xxd2NtZ2F1amZiSl9kVHhkUnNQWGJ1M0U1UW5qMVFyaXNYXzNNVlZpYUtuc2didUNKVmdKZXBvRUlvZU15alDSAa4BQVVfeXFMT21oaV9JTXFOckh3UUQySGhEc3BjVTliRVRlVUkxdVpwd0Q2RmNfVG1xMmQyNFVNenlublpQaTZmTTRXbEpCSHJNc0dTQ1lzM3Z6QWdlb0xmQ1NUWUFTYUMtcDdrMTlvdmRwcmxsSEVNNmQ5OVVmTVlrcFFWQUVXQzRrLWRxaHFsbjl4TVlZOU1zNlVWLUJwQUtCVFJLTlltSTVhU3RRamF5Q25seDNB?oc=5\" target=\"_blank\">Pix do BTG Pactual (BPAC11) fora do ar? Banco é alvo de hackers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Investidor10</font>",
-      "source_indices": [
-        43
-      ],
-      "primary_index": 43,
-      "axes": [
-        "Tecnologia",
-        "Risco/Regulação"
-      ],
-      "confirmation": "especulativo",
-      "daily_trigger": false,
-      "trigger_reason": null,
-      "why_it_matters": "Notícia sobre possível ataque de hackers ao Pix do BTG é especulativa e não confirmada, mas pode gerar preocupação sobre a segurança da plataforma.",
-      "relevance": "média",
-      "also_reported_by": []
-    },
-    {
-      "competitor_group": "BTG Pactual",
-      "matched_alias": "BTG Pactual",
-      "title": "BTG Pactual (BPAC11) negocia compra do Banco Digimais, de Edir Macedo - Investidor10",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQSU5pRGFsWmV6VEpTZ3ZGS0psUDA4bjJLT09TWGVaNWQtSS1NZEQwMmNEbmZqVmRfSi1JalNJelJVOWJySDhtMDItSUpadDZtT2ZxajFZMWVEdF9BREc3Rm5RZXowLUhNbGpXOVpJQjRhbGI4QlhOSl81M3BDX1NSa2J0WkNkaHd0SlFkNF9fUUhXREZUZVg1a2ozeXZ5UmltUVJ1Qi1LU01CekJLWjFwY9IBtgFBVV95cUxPU241d2RRamVBNElMVWYxLUN5WElNMzRxVmk2QWNMRTIzX2VFRGQ5aVBubVlFUm15MGlsY2hEbW9yVjQ5LWFoN2tiWDMzNEZWMi1RRmE2LXhoc2VRMktnWHZKWWR2Tmw1VEY0V0JIS25jVEY2QzJnNFJLUEFhRWUwaTQtRVVjNFFXWUd3MGI2ZXBuYm1PeUM4Q3BSZEpTOVljVUxTUi1VWGVaeFNhYzhhcUhFbWdyQQ?oc=5",
-      "source": "Investidor10",
-      "published_at": "2026-08-25T07:00:00+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxQSU5pRGFsWmV6VEpTZ3ZGS0psUDA4bjJLT09TWGVaNWQtSS1NZEQwMmNEbmZqVmRfSi1JalNJelJVOWJySDhtMDItSUpadDZtT2ZxajFZMWVEdF9BREc3Rm5RZXowLUhNbGpXOVpJQjRhbGI4QlhOSl81M3BDX1NSa2J0WkNkaHd0SlFkNF9fUUhXREZUZVg1a2ozeXZ5UmltUVJ1Qi1LU01CekJLWjFwY9IBtgFBVV95cUxPU241d2RRamVBNElMVWYxLUN5WElNMzRxVmk2QWNMRTIzX2VFRGQ5aVBubVlFUm15MGlsY2hEbW9yVjQ5LWFoN2tiWDMzNEZWMi1RRmE2LXhoc2VRMktnWHZKWWR2Tmw1VEY0V0JIS25jVEY2QzJnNFJLUEFhRWUwaTQtRVVjNFFXWUd3MGI2ZXBuYm1PeUM4Q3BSZEpTOVljVUxTUi1VWGVaeFNhYzhhcUhFbWdyQQ?oc=5\" target=\"_blank\">BTG Pactual (BPAC11) negocia compra do Banco Digimais, de Edir Macedo</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Investidor10</font>",
-      "source_indices": [
-        47
-      ],
-      "primary_index": 47,
-      "axes": [
-        "Produtos Novos"
-      ],
-      "confirmation": "especulativo",
-      "daily_trigger": false,
-      "trigger_reason": null,
-      "why_it_matters": "Negociação para compra do Banco Digimais pelo BTG é especulativa e, se confirmada, pode ter impacto estratégico, mas não afeta diretamente o cliente PF.",
-      "relevance": "média",
-      "also_reported_by": []
-    },
-    {
-      "competitor_group": "Nubank/NuInvest",
-      "matched_alias": "Nubank",
-      "title": "Nubank (ROXO34) lucra US$ 871 milhões, mas decepciona Wall Street e ações caem - Investidor10",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQZzZMZHhjSjUwT2FEMzJjWjgwTUp3cTZmVjlBdmx2ek1QYkZ1dXozUGk1R191Q2FvZnV0OFM3XzNvNElxOUdZSmo1dGdpTEdvNXRCaUJBbzRGcmlOQXNPVDJQc1ItVm5tZ0M1T3NXOHFTSWJkRW43eENhb1NMT0RoaHhQMzF4UGgtOElfbERXOVFERVlYRU1Demxxb0gzU0lUNWNYcHkzUmk1aVhBSkZSMWdKUlk4RXI4WDlJ0gHAAUFVX3lxTFBSZ041OTVQWktXVDdFTUlPeHJIcVdBQ0tFQTBoRkZoeHhQNGViTGpyckM0T21vMUxtZHlsU05tSDFaeHItaGFHMGRwakIxWGFnNlBVdmJSQWZwcGRYcEh6VlR6NENsMTFMcWdUNHhEanNmMDNuT0ptUlNCOTQ5SndySmNXN2RlNEk4QlExLVBUNHBtX013QnhldnVfU2d4amxVb1p0MVpGaFNzbVdtN0JBNzRONFQzMVVCNjNzdGJKdQ?oc=5",
-      "source": "Investidor10",
-      "published_at": "2026-08-25T07:00:00+00:00",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxQZzZMZHhjSjUwT2FEMzJjWjgwTUp3cTZmVjlBdmx2ek1QYkZ1dXozUGk1R191Q2FvZnV0OFM3XzNvNElxOUdZSmo1dGdpTEdvNXRCaUJBbzRGcmlOQXNPVDJQc1ItVm5tZ0M1T3NXOHFTSWJkRW43eENhb1NMT0RoaHhQMzF4UGgtOElfbERXOVFERVlYRU1Demxxb0gzU0lUNWNYcHkzUmk1aVhBSkZSMWdKUlk4RXI4WDlJ0gHAAUFVX3lxTFBSZ041OTVQWktXVDdFTUlPeHJIcVdBQ0tFQTBoRkZoeHhQNGViTGpyckM0T21vMUxtZHlsU05tSDFaeHItaGFHMGRwakIxWGFnNlBVdmJSQWZwcGRYcEh6VlR6NENsMTFMcWdUNHhEanNmMDNuT0ptUlNCOTQ5SndySmNXN2RlNEk4QlExLVBUNHBtX013QnhldnVfU2d4amxVb1p0MVpGaFNzbVdtN0JBNzRONFQzMVVCNjNzdGJKdQ?oc=5\" target=\"_blank\">Nubank (ROXO34) lucra US$ 871 milhões, mas decepciona Wall Street e ações caem</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Investidor10</font>",
-      "source_indices": [
-        71
-      ],
-      "primary_index": 71,
-      "axes": [
-        "Risco/Regulação"
-      ],
-      "confirmation": "confirmado",
-      "daily_trigger": false,
-      "trigger_reason": null,
-      "why_it_matters": "Resultados do Nubank decepcionam Wall Street, mas não afetam diretamente o cliente investidor no Brasil.",
-      "relevance": "média",
-      "also_reported_by": []
     },
     {
       "competitor_group": "Nubank/NuInvest",
@@ -4947,6 +4808,49 @@
     }
   ],
   "results": [
+    {
+      "competitor_group": "XP/Clear/Rico",
+      "title": "XP cresce lucro e receita no 3º trimestre, com R$ 2,2 trilhões de ativos de clientes - InfoMoney",
+      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQVWdqX1FyZEFQaUw2bF9TT2wyd1k0bW01U04xelNLci1ZbjBfUmhrM2lpM1hTZ0VlZHlmOEM4bG1BdjdVeERqck82ZGtSd3dpYzJid1ZfazJfVTJ5TFd2bmZvSHN3VHNpcDNLSGhQOWVJMldreXpwb0tVSnp0aEo2UjdpRTkwMVdwLW1qZ1FKRTjSAZYBQVVfeXFMTjRUVnJ6azFEU2REN0U0R295aUo4djdFM05IdFlWZlJab0tFNDlfaFhsQS1zTXJJU01ZR2lQay1TM2FWZlBFRjNMa2VRS25uZGZqYUNGbjdZZTFBSEJlMTd0ZGYwZXlEck8zaGZrQndQOTVLOWlhNVhnRW84TXh2OUQwZ0h2dFdxV2hZTGkwdXZGRFBCYzhR?oc=5",
+      "source": "InfoMoney",
+      "published_at": "2026-11-16T21:03:11+00:00",
+      "channel": "results",
+      "also_reported_by": [
+        {
+          "source": "CNN Brasil",
+          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOeW1NamRaZ3l1NlE0cDlMbjdvSmFrUE1BZ2FMY1RpV3doNHBSbWpWcXdlTnVBenBhOGNYelRjeVh6enRWYWNWTkM0RzJYd2NUNVRQdm5KeHlzYS1PaGhuOGFiZFE2bHJGUE1Jcy1oVW44a3k5SmtVRlM3bVlObVNSWVd6RmZuRnJFMGh3R1JOOHBQQWFjcXZZd0JqQVlZV2k1LU93enRrRW40TEE?oc=5"
+        },
+        {
+          "source": "ativovirtual.com.br",
+          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNcnlxSTN0b0ZHeUVreUFtbUNRemhObXktQ05IS05mdXNCa2FJMFY4X2pxbkhRYmJnRjlVcWFfZU5TWkp6Mm9scUNreDdvbVByWXpJYldZeV84alI3TXdzLUZ4Z2ZkcmJoV0tKQXJ3Z3FXQnc5b1lHWmMzcnJrLUE0LU9SMzBjeEIyZFVhY2hDWDZZbE1FdGhsWlhjNWhwUGw4eHhlX1FnTzZIdVpBLUVQOWdwTnNuVVg2U1Z1Ng?oc=5"
+        },
+        {
+          "source": "BPMoney",
+          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNUkhMOHBrMFFLWjlCV3lSUWppeXZUaW4wYUlmOWlQbDF3TG43anFjc3R6V1BrM0lPSWRma0lVTVVzOTVCemtjT2RidzhVaTg2bUJ5a0xxa2h4VDB5LUZpejcwY0hQRzNjM3RJNVpLY3RqLXBUdmRtYVItNS1oV2lXODMwVjZvemFlaDBFT1FzcnVvV0FsTjFKbGdn?oc=5"
+        }
+      ],
+      "periodo": "3T26",
+      "resumo_estrategico": "A XP reportou crescimento de lucro e receita no 3T26, com lucro de R$ 1,38 bilhão (+4%), sustentado por R$ 2,2 trilhões em ativos de clientes. O foco segue em escala de ativos sob custódia e rentabilidade, mantendo a corretora de varejo como core do negócio. O material disponível é majoritariamente manchete, sem detalhamento de captação líquida ou take rate.",
+      "onde_colocam_energia": [
+        "crescimento de ativos de clientes (AUC)",
+        "rentabilidade/lucro",
+        "escala da plataforma de varejo"
+      ],
+      "movimentos_concretos": [
+        "não informado"
+      ],
+      "onde_deixam_a_desejar": [
+        "material sem detalhamento de captação líquida (NNM)",
+        "sem dados de take rate ou número de assessores",
+        "crescimento de lucro modesto (+4%) pode sinalizar desaceleração de margem"
+      ],
+      "oportunidade_para_nos": "Crescimento de lucro modesto e ausência de dados de captação abrem espaço para o Santander disputar fluxo de novos investidores com proposta de assessoria e produtos.",
+      "copiar_ou_observar": "observar",
+      "leitura_para_o_santander": "A XP mantém liderança em ativos, mas o ritmo de lucro (+4%) sugere acomodação — oportunidade de o Santander atacar captação de varejo com diferenciais de atendimento e produtos.",
+      "eixos": [
+        "RV/Trading"
+      ]
+    },
     {
       "competitor_group": "Nubank/NuInvest",
       "title": "Nubank (ROXO34) lucra mais de US$ 1 bilhão; mas outro número chama atenção no balanço - Acionista.com.br",
