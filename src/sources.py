@@ -13,7 +13,7 @@ perspectiva do Santander.
 COMPETITOR_GROUPS = {
     "XP/Clear/Rico": ["XP Investimentos", "Clear corretora", "Rico investimentos"],
     "BTG Pactual": ["BTG Pactual", "BTG Trends"],
-    "Itaú/Íon": ["Itaú investimentos", "Íon Itaú"],
+    "Itaú/Íon": ["Itaú", "Íon Itaú"],
     "Bradesco/Ágora": ["Ágora investimentos", "Bradesco corretora"],
     "Genial": ["Genial Investimentos"],
     # Nubank entra pelo recorte de INVESTIMENTOS. A marca "NuInvest" foi
@@ -37,6 +37,20 @@ NEWS_GROUP_QUALIFIERS = {
         "investimentos", "corretora", "renda variável", "renda fixa",
         "ações", "home broker", "plataforma de investimentos", "day trade",
         "tesouro direto", "fundos", "bolsa", "investir",
+    ],
+    # Itaú é banco de varejo completo — a imprensa não cobre o "Itaú"
+    # de forma phrase-locked a uma marca de investimento (diferente de
+    # XP/BTG/Genial, onde o alias já É o negócio). Sem qualificador, o
+    # alias-base "Itaú" afogaria em ruído de crédito/seguros/atacado. Os
+    # termos abaixo cobrem tanto o recorte de investimentos/Íon quanto
+    # plataforma/tecnologia (mesmos termos de AXIS_KEYWORDS["Tecnologia"]),
+    # pra capturar lançamentos como o do "ia.i" que não citam "investimentos".
+    "Itaú/Íon": [
+        "investimentos", "corretora", "renda variável", "renda fixa",
+        "ações", "home broker", "plataforma de investimentos",
+        "tesouro direto", "fundos", "bolsa", "investir", "Íon",
+        "inteligência artificial", "plataforma", "aplicativo",
+        "consultor financeiro",
     ],
 }
 
